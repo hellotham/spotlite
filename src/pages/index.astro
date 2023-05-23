@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+const blogEntries = await getCollection('blog')
+---
+
+<Layout title="Welcome to Astro Base">
+  <main class="prose font-sans">
+    <div class="i-logos-astro h-24 w-48"></div>
+    <h1>Welcome to Astro Base</h1>
+    <p>This is a minimal Astro starter with Typescript, UnoCSS and Iconify.</p>
+    <ul>
+      {
+        blogEntries.map((blogPostEntry) => (
+          <li>
+            <a href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
+            <time datetime={blogPostEntry.data.pubDate.toISOString()}>
+              {blogPostEntry.data.pubDate.toDateString()}
+            </time>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
