@@ -1,25 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { getCollection } from 'astro:content'
-const blogEntries = await getCollection('blog')
+import Layout from '../layouts/layout.astro'
+import Hero from '../components/hero.astro'
+import ImageCards from '../components/imagecards.astro'
+import ArticleList from '../components/articlelist.astro'
+import CTAForm from '../components/ctaform.astro'
+import Work from '../components/work.astro'
+
+const title = 'Chris Tham - Personal Web Site'
+const description = 'artist, consultant, cyclist, designer, musician, photographer, world traveller'
 ---
 
-<Layout title="Welcome to Astro Base">
-  <main class="prose font-sans">
-    <div class="i-logos-astro h-24 w-48"></div>
-    <h1>Welcome to Astro Base</h1>
-    <p>This is a minimal Astro starter with Typescript, UnoCSS and Iconify.</p>
-    <ul>
-      {
-        blogEntries.map((blogPostEntry) => (
-          <li>
-            <a href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
-            <time datetime={blogPostEntry.data.pubDate.toISOString()}>
-              {blogPostEntry.data.pubDate.toDateString()}
-            </time>
-          </li>
-        ))
-      }
-    </ul>
-  </main>
+<Layout {title} {description} home={true}>
+  <Hero />
+  <ImageCards />
+  <div class="mt-24 sm:px-8 md:mt-28">
+    <div class="mx-auto max-w-7xl lg:px-8">
+      <div class="relative px-4 sm:px-8 lg:px-12">
+        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+          <div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+            <ArticleList />
+            <div class="space-y-10 lg:pl-16 xl:pl-24">
+              <CTAForm />
+              <Work />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

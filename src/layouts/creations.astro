@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/layout.astro'
+
+interface Props {
+  frontmatter: {
+    title: string
+    description: string
+    list: {
+      section: string
+      items: {
+        item: string
+        description: string
+        parent: string
+        action: string
+        link: string
+      }[]
+    }[]
+  }
+}
+
+const { frontmatter } = Astro.props
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <div class="mt-16 sm:mt-32 sm:px-8">
+    <div class="mx-auto max-w-7xl lg:px-8">
+      <div class="relative px-4 sm:px-8 lg:px-12">
+        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+          <header class="max-w-2xl">
+            <h1
+              class="text-4xl font-bold tracking-tight text-pink-800 dark:text-pink-100 sm:text-5xl"
+            >
+              {frontmatter.description}
+            </h1><div class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+              <slot />
+            </div>
+          </header><div class="mt-16 sm:mt-20">
+            <div class="space-y-20">
+              {
+                frontmatter.list.map((section) => (
+                  <section
+                    aria-labelledby=":R6l6:"
+                    class="md:border-l md:border-pink-100 md:pl-6 md:dark:border-pink-700/40"
+                  >
+                    <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
+                      <h2
+                        id=":R6l6:"
+                        class="text-sm font-semibold text-zinc-800 dark:text-zinc-100"
+                      >
+                        {section.section}
+                      </h2>
+                      <div class="md:col-span-3">
+                        <div class="space-y-16">
+                          {section.items.map((item) => (
+                            <article class="group relative flex flex-col items-start">
+                              <h3 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                                <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-pink-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-pink-800/50 sm:-inset-x-6 sm:rounded-2xl" />
+                                <a href={item.link}>
+                                  <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
+                                  <span class="relative z-10">{item.item}</span>
+                                </a>
+                              </h3>
+                              <p class="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500">
+                                <span
+                                  class="absolute inset-y-0 left-0 flex items-center"
+                                  aria-hidden="true"
+                                >
+                                  <span class="h-4 w-0.5 rounded-full bg-pink-200 dark:bg-pink-500" />
+                                </span>
+                                {item.parent}
+                              </p>
+                              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                {item.description}
+                              </p>
+                              <div
+                                aria-hidden="true"
+                                class="relative z-10 mt-4 flex items-center text-sm font-medium text-purple-500"
+                              >
+                                {item.action}
+                                <span class="i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current" />
+                              </div>
+                            </article>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

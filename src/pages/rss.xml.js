@@ -2,12 +2,12 @@ import rss from '@astrojs/rss'
 import { getCollection } from 'astro:content'
 
 export async function get(context) {
-  const blog = await getCollection('blog')
+  const article = await getCollection('article')
   return rss({
-    title: 'Astro Base',
-    description: 'Minimal Astro starter',
+    title: 'Spotlite',
+    description: 'Personal Web Site',
     site: context.site,
-    items: blog.map((post) => ({
+    items: article.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,

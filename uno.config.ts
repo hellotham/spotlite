@@ -22,5 +22,13 @@ export default defineConfig({
     presetForms(),
     presetTypography()
   ],
-  safelist: []
+  safelist: [
+    'rotate-2',
+    '-rotate-2',
+    'i-logos-twitter',
+    'i-logos-facebook',
+    'i-logos-instagram-icon',
+    'i-logos-github-icon',
+    'i-logos-linkedin-icon',
+  ]
 })

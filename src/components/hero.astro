@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content'
+
+let social = await getCollection('social')
+social = social.sort((a, b) => a.data.order - b.data.order)
+---
+
+<div class="mt-9 sm:px-8">
+  <div class="mx-auto max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="max-w-2xl">
+          <h1
+            class="text-4xl font-bold tracking-tight text-pink-800 dark:text-pink-100 sm:text-5xl"
+          >
+            artist, consultant, cyclist, designer, musician, photographer, world traveller
+          </h1>
+          <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            I’m Chris Tham, an outrageous actualiser based in Sydney. I’m the founder and Junior
+            Janitor of Hello Tham, a boutique management consulting company.
+          </p>
+          <div class="mt-6 flex gap-6">
+            {
+              social.map((item) => (
+                <a
+                  class="group -m-1 p-1"
+                  aria-label={'Follow on ' + item.data.title}
+                  href={item.data.link}
+                >
+                  <span
+                    class:list={[
+                      'h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300',
+                      item.data.icon
+                    ]}
+                  />
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

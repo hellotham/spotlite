@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content'
+
+let menu = await getCollection('menu')
+menu = menu.sort((a, b) => a.data.order - b.data.order)
+const current = Astro.url.pathname
+---
+
+<ul
+  class="mx-2 flex justify-center gap-x-2 rounded-full bg-white/90 px-3 text-base text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10"
+>
+  {
+    menu.map((item) => (
+      <li>
+        <a
+          class:list={[
+            'relative block px-3 py-2 transition',
+            current == item.data.link
+              ? 'text-purple-500 dark:text-purple-400'
+              : 'hover:text-purple-500 dark:hover:text-purple-400'
+          ]}
+          href={item.data.link}
+        >
+          {item.data.title}
+          {current == item.data.link && (
+            <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-purple-500/0 via-purple-500/40 to-purple-500/0 dark:from-purple-400/0 dark:via-purple-400/40 dark:to-purple-400/0" />
+          )}
+        </a>
+      </li>
+    ))
+  }
+</ul>
