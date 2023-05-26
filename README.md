@@ -49,23 +49,23 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
-├── public/
+├── astro.config.mjs          # Astro configuration file 
+├── public/                   # Location of static assets
 │   └── favicon.svg
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
+│   ├── assets/               # Location of dynamic assets (eg. images)
+│   │   └── screenshot.png
+│   ├── components/           # Astro components
+│   │   └── header.astro
+│   ├── content/              # Location of content (markdown, data and images)
+│   │   └── config.ts
+│   ├── layouts/              # Location of layouts for pages
 │   │   └── Layout.astro
-│   └── pages/
+│   └── pages/                # Location of pages
 │       └── index.astro
-└── package.json
+├── package.json
+└── uno.config.ts             # UnoCSS configuration file
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
