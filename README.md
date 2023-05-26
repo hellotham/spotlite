@@ -1,6 +1,6 @@
 # Spotlite - Personal Web Site Astro Starter
 
-![screenshot](https://github.com/ChristineTham/spotlite/raw/master/src/assets/screenshot.png)
+![screenshot](https://github.com/ChristineTham/spotlite/blob/main/src/assets/screenshot.png?raw=true)
 
 Spotlite is a beautiful personal website template built with Astro and UnoCSS, inspired by
 a similar sounding template from the Tailwind CSS team. Best of all, it's open
