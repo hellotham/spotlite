@@ -1,12 +1,12 @@
 # Spotlite - Personal Web Site Astro Starter
 
-![screenshot](https://github.com/ChristineTham/spotlite/blob/main/src/assets/screenshot.png?raw=true)
+![screenshot](https://github.com/hellotham/spotlite/blob/main/src/assets/screenshot.png?raw=true)
 
 Spotlite is a beautiful personal website template built with Astro and UnoCSS, inspired by
 a similar sounding template from the Tailwind CSS team. Best of all, it's open
 source (MIT licence) so feel free to use and modify it!
 
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ChristineTham/spotlite&utm_medium=social&utm_source=github)
+[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hellotham/spotlite&utm_medium=social&utm_source=github)
 
 
 It uses the following technologies:
