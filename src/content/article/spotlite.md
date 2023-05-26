@@ -4,6 +4,8 @@ pubDate: 2023-05-25
 description: An elegant, clean and surprisingly feature full personal web site template written in Astro, Alpine, UnoCSS and Iconify.
 ---
 
+![screenshot](../../assets/screenshot.png)
+
 Spotlite is a beautiful personal website template built with Astro and UnoCSS, inspired by
 a similar sounding template from the Tailwind CSS team. Best of all, it's open
 source (MIT licence) so feel free to use and modify it!
