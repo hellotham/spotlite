@@ -43,15 +43,6 @@ It’s production-ready and easy to customize, making it the perfect starting po
 
 It's also simple to deploy on Netlify or similar.
 
-Uses:
-
-- [Typescript](https://www.typescriptlang.org/)
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
-- [UnoCSS](https://unocss.dev/)
-- `@astrojs/sitemap` and `@astrojs/rss` preintegrated
-- Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
-
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
