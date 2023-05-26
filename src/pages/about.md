@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/About.astro
+layout: ../layouts/about.astro
 title: About - Spencer Sharp
 description: Hello world :-) My name is Chris Tham.
 ---
