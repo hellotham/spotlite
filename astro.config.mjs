@@ -9,7 +9,7 @@ export default defineConfig({
   experimental: {
     assets: true
   },
-  site: 'https://spotlite.netlify.app',
+  site: 'https://astro-spotlite.netlify.app',
   integrations: [UnoCSS({
     injectReset: true
   }), sitemap(), alpinejs()]
