@@ -43,7 +43,7 @@ list:
           Original MIDI file downloaded from Chris Franke web site, reorchestrated using EWQL Gold and Logic Pro X.
         action: Listen
         link: https://soundcloud.com/chris-tham/b5theme?si=4ddcbb2c8da844d0b37c08f26e0ef899&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
-      - item: "久石譲：いのちの名前 (Joe Hisaishi: The Name of Life) - Instrumental version - (revoiced)"
+      - item: '久石譲：いのちの名前 (Joe Hisaishi: The Name of Life) - Instrumental version - (revoiced)'
         parent: Soundcloud
         description: >
           From the movie: Spirited Away.

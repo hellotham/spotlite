@@ -3,7 +3,9 @@ import Layout from '../layouts/layout.astro'
 import { getCollection } from 'astro:content'
 
 let articles = await getCollection('article')
-articles = articles.sort((a, b) => +b.data.pubDate - +a.data.pubDate)
+articles = articles.sort((a, b) =>
+  a.data.pubDate && b.data.pubDate ? +b.data.pubDate - +a.data.pubDate : 0
+)
 
 const title = 'Articles - Chris Tham'
 const description =
@@ -17,7 +19,7 @@ const description =
         <div class="mx-auto max-w-2xl lg:max-w-5xl">
           <header class="max-w-2xl">
             <h1
-              class="text-4xl font-bold tracking-tight text-pink-800 dark:text-pink-100 sm:text-5xl"
+              class="text-4xl font-bold tracking-tight text-pink-800 sm:text-5xl dark:text-pink-100"
             >
               Writing on Life, the Universe and Everything.
             </h1><p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
@@ -30,20 +32,22 @@ const description =
                   articles.map((article) => (
                     <article class="md:grid md:grid-cols-4 md:items-baseline">
                       <div class="group relative flex flex-col items-start md:col-span-3">
-                        <time
-                          class="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500 md:hidden"
-                          datetime={article.data.pubDate.toISOString()}
-                        >
-                          <span
-                            class="absolute inset-y-0 left-0 flex items-center"
-                            aria-hidden="true"
+                        {article.data.pubDate && (
+                          <time
+                            class="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 md:hidden dark:text-zinc-500"
+                            datetime={article.data.pubDate.toISOString()}
                           >
-                            <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                          </span>
-                          {article.data.pubDate.toDateString()}
-                        </time>
+                            <span
+                              class="absolute inset-y-0 left-0 flex items-center"
+                              aria-hidden="true"
+                            >
+                              <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
+                            </span>
+                            {article.data.pubDate.toDateString()}
+                          </time>
+                        )}
                         <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-                          <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-pink-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-pink-800/50 sm:-inset-x-6 sm:rounded-2xl" />
+                          <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-pink-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-pink-800/50" />
                           <a href={'/article/' + article.slug}>
                             <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
                             <span class="relative z-10">{article.data.title}</span>
@@ -60,12 +64,14 @@ const description =
                           <span class="i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current" />
                         </div>
                       </div>
-                      <time
-                        class="relative z-10 order-first mb-3 mt-1 flex hidden items-center text-sm text-zinc-400 dark:text-zinc-500 md:block"
-                        datetime={article.data.pubDate.toISOString()}
-                      >
-                        {article.data.pubDate.toDateString()}
-                      </time>
+                      {article.data.pubDate && (
+                        <time
+                          class="relative z-10 order-first mb-3 mt-1 flex hidden items-center text-sm text-zinc-400 md:block dark:text-zinc-500"
+                          datetime={article.data.pubDate.toISOString()}
+                        >
+                          {article.data.pubDate.toDateString()}
+                        </time>
+                      )}
                     </article>
                   ))
                 }

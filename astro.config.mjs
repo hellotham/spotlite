@@ -6,9 +6,6 @@ import alpinejs from "@astrojs/alpinejs"
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    assets: true
-  },
   site: 'https://astro-spotlite.netlify.app',
   integrations: [UnoCSS({
     injectReset: true

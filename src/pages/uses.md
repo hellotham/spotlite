@@ -19,7 +19,7 @@ list:
           original keyboard factory in Lexington.
       - item: LaCie 5big Thunderbolt 2
         description: >
-          Thunderbolt attached RAID array with 5x8TB disks. 
+          Thunderbolt attached RAID array with 5x8TB disks.
       - item: Komplete Audio 6
         description: >
           Native Instruments's premium 6 channel audio interface - 4 analog in/out, 2 digital in/out, 2 headphone out, and MIDI in/out.
