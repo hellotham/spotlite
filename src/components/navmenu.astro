@@ -23,7 +23,7 @@ const current = Astro.url.pathname
         >
           {item.data.title}
           {current == item.data.link && (
-            <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-purple-500/0 via-purple-500/40 to-purple-500/0 dark:from-purple-400/0 dark:via-purple-400/40 dark:to-purple-400/0" />
+            <span class="absolute inset-x-1 h-px from-purple-500/0 via-purple-500/40 to-purple-500/0 bg-gradient-to-r -bottom-px dark:from-purple-400/0 dark:via-purple-400/40 dark:to-purple-400/0" />
           )}
         </a>
       </li>

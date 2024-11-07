@@ -7,11 +7,11 @@ social = social.sort((a, b) => a.data.order - b.data.order)
 
 <div class="mt-9 sm:px-8">
   <div class="mx-auto max-w-7xl lg:px-8">
-    <div class="relative px-4 sm:px-8 lg:px-12">
+    <div class="relative px-4 lg:px-12 sm:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-5xl">
         <div class="max-w-2xl">
           <h1
-            class="text-4xl font-bold tracking-tight text-pink-800 sm:text-5xl dark:text-pink-100"
+            class="text-4xl text-pink-800 font-bold tracking-tight sm:text-5xl dark:text-pink-100"
           >
             artist, consultant, cyclist, designer, musician, photographer, world traveller
           </h1>
@@ -23,7 +23,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
             {
               social.map((item) => (
                 <a
-                  class="group -m-1 p-1"
+                  class="group p-1 -m-1"
                   aria-label={'Follow on ' + item.data.title}
                   href={item.data.link}
                 >

@@ -20,9 +20,9 @@ social = social.sort((a, b) => a.data.order - b.data.order)
 <Layout title={frontmatter.title} description={frontmatter.description}>
   <div class="mt-16 sm:mt-32 sm:px-8">
     <div class="mx-auto max-w-7xl lg:px-8">
-      <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="relative px-4 lg:px-12 sm:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-5xl">
-          <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+          <div class="grid grid-cols-1 gap-y-16 lg:grid-rows-[auto_1fr] lg:grid-cols-2 lg:gap-y-12">
             <div class="lg:pl-20">
               <div class="max-w-xs px-2.5 lg:max-w-none">
                 <Image
@@ -35,11 +35,11 @@ social = social.sort((a, b) => a.data.order - b.data.order)
               </div>
             </div><div class="lg:order-first lg:row-span-2">
               <h1
-                class="text-4xl font-bold tracking-tight text-pink-800 sm:text-5xl dark:text-pink-100"
+                class="text-4xl text-pink-800 font-bold tracking-tight sm:text-5xl dark:text-pink-100"
               >
                 {frontmatter.description}
               </h1>
-              <div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+              <div class="mt-6 text-base text-zinc-600 space-y-7 dark:text-zinc-400">
                 <slot />
               </div>
             </div>
@@ -49,7 +49,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                   social.map((item) => (
                     <li class="mt-4 flex">
                       <a
-                        class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                        class="group flex text-sm text-zinc-800 font-medium transition dark:text-zinc-200 hover:text-teal-500 dark:hover:text-teal-500"
                         href={item.data.link}
                       >
                         <span
@@ -65,7 +65,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 }
                 <li class="mt-8 flex border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
                   <a
-                    class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                    class="group flex text-sm text-zinc-800 font-medium transition dark:text-zinc-200 hover:text-teal-500 dark:hover:text-teal-500"
                     href="mailto:chris@christham.net"
                   >
                     <span

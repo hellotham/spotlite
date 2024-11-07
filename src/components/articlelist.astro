@@ -22,10 +22,10 @@ articles = articles.sort((a, b) =>
             {article.data.pubDate.toDateString()}
           </time>
         )}
-        <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-          <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-pink-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-pink-800/50" />
+        <h2 class="text-base text-zinc-800 font-semibold tracking-tight dark:text-zinc-100">
+          <div class="absolute z-0 scale-95 bg-pink-100 opacity-0 transition -inset-x-4 -inset-y-6 group-hover:scale-100 sm:rounded-2xl dark:bg-pink-800/50 group-hover:opacity-100 sm:-inset-x-6" />
           <a href={'/article/' + article.slug}>
-            <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
+            <span class="absolute z-20 -inset-x-4 -inset-y-6 sm:rounded-2xl sm:-inset-x-6" />
             <span class="relative z-10">{article.data.title}</span>
           </a>
           <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
@@ -33,7 +33,7 @@ articles = articles.sort((a, b) =>
           </p>
           <div
             aria-hidden="true"
-            class="relative z-10 mt-4 flex items-center text-sm font-medium text-purple-500"
+            class="relative z-10 mt-4 flex items-center text-sm text-purple-500 font-medium"
           >
             Read article
             <span class="i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current" />

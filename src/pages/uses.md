@@ -5,6 +5,9 @@ description: Things I use and love.
 list:
   - section: Computing
     items:
+      - item: 2023 MacBook Pro
+        description: >
+          Portable AI workhorse, with M3 Max, 128GB memory, 2TB SSD.
       - item: 2023 Mac Studio
         description: >
           Latest toy, with 64GB memory, 2TB SSD, together with an OWC ThunderBay 4 mini with 4x8TB SSDs.
