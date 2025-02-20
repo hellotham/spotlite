@@ -7,36 +7,36 @@ articles = articles.sort((a, b) =>
 )
 ---
 
-<div class="flex flex-col gap-16">
+<div class='flex flex-col gap-16'>
   {
     articles.map((article) => (
-      <article class="group relative flex flex-col items-start">
+      <article class='group relative flex flex-col items-start'>
         {article.data.pubDate && (
           <time
-            class="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500"
+            class='relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500'
             datetime={article.data.pubDate.toISOString()}
           >
-            <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
-              <span class="h-4 w-0.5 rounded-full bg-purple-200 dark:bg-purple-500" />
+            <span class='absolute inset-y-0 left-0 flex items-center' aria-hidden='true'>
+              <span class='h-4 w-0.5 rounded-full bg-purple-200 dark:bg-purple-500' />
             </span>
             {article.data.pubDate.toDateString()}
           </time>
         )}
-        <h2 class="text-base text-zinc-800 font-semibold tracking-tight dark:text-zinc-100">
-          <div class="absolute z-0 scale-95 bg-pink-100 opacity-0 transition -inset-x-4 -inset-y-6 group-hover:scale-100 sm:rounded-2xl dark:bg-pink-800/50 group-hover:opacity-100 sm:-inset-x-6" />
-          <a href={'/article/' + article.slug}>
-            <span class="absolute z-20 -inset-x-4 -inset-y-6 sm:rounded-2xl sm:-inset-x-6" />
-            <span class="relative z-10">{article.data.title}</span>
+        <h2 class='text-base text-zinc-800 font-semibold tracking-tight dark:text-zinc-100'>
+          <div class='absolute z-0 scale-95 bg-pink-100 opacity-0 transition -inset-x-4 -inset-y-6 group-hover:scale-100 sm:rounded-2xl dark:bg-pink-800/50 group-hover:opacity-100 sm:-inset-x-6' />
+          <a href={'/article/' + article.id}>
+            <span class='absolute z-20 -inset-x-4 -inset-y-6 sm:rounded-2xl sm:-inset-x-6' />
+            <span class='relative z-10'>{article.data.title}</span>
           </a>
-          <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <p class='relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400'>
             {article.data.description}
           </p>
           <div
-            aria-hidden="true"
-            class="relative z-10 mt-4 flex items-center text-sm text-purple-500 font-medium"
+            aria-hidden='true'
+            class='relative z-10 mt-4 flex items-center text-sm text-purple-500 font-medium'
           >
             Read article
-            <span class="i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current" />
+            <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />
           </div>
         </h2>
       </article>

@@ -3,6 +3,21 @@ layout: ../layouts/uses.astro
 title: Uses - Chris Tham
 description: Things I use and love.
 list:
+  - section: Apps
+    items:
+      - item: LM Studio
+        description: >
+          Discover, download, and run local LLMs.
+      - item: Obsidian
+        description: >
+          Obsidian is the private and flexible writing app that adapts to the way you think.
+      - item: Visual Studio Code
+        description: >
+          Visual Studio Code is a streamlined code editor with support for development operations
+          like debugging, task running, and version control.
+      - item: Zed
+        description: >
+          Zed is a next-generation code editor designed for high-performance collaboration with humans and AI.
   - section: Computing
     items:
       - item: 2023 MacBook Pro
@@ -10,8 +25,8 @@ list:
           Portable AI workhorse, with M3 Max, 128GB memory, 2TB SSD.
       - item: 2023 Mac Studio
         description: >
-          Latest toy, with 64GB memory, 2TB SSD, together with an OWC ThunderBay 4 mini with 4x8TB SSDs.
-      - item: 2013 Mac Pro
+          Main Computer, with 64GB memory, 2TB SSD, together with an OWC ThunderBay 4 mini with 4x8TB SSDs ands OWC miniStack.
+      - item: 2013 Mac Pro [deprecated]
         description: >
           At one stage Apple's most powerful Mac, with 12 cores and 64GB memory,
           and twin AMD FirePro D700 GPUs. An iconic design, sometimes referred
@@ -23,7 +38,7 @@ list:
         description: >
           IBM's classic keyboard, manufactured by a company that took over IBM's
           original keyboard factory in Lexington.
-      - item: LaCie 5big Thunderbolt 2
+      - item: LaCie 5big Thunderbolt 2 [deprecated]
         description: >
           Thunderbolt attached RAID array with 5x8TB disks.
       - item: Komplete Audio 6

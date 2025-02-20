@@ -22,62 +22,62 @@ const { frontmatter } = Astro.props
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
-  <div class="mt-16 sm:mt-32 sm:px-8">
-    <div class="mx-auto max-w-7xl lg:px-8">
-      <div class="relative px-4 lg:px-12 sm:px-8">
-        <div class="mx-auto max-w-2xl lg:max-w-5xl">
-          <header class="max-w-2xl">
+  <div class='mt-16 sm:mt-32 sm:px-8'>
+    <div class='mx-auto max-w-7xl lg:px-8'>
+      <div class='relative px-4 lg:px-12 sm:px-8'>
+        <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+          <header class='max-w-2xl'>
             <h1
-              class="text-4xl text-pink-800 font-bold tracking-tight sm:text-5xl dark:text-pink-100"
+              class='text-4xl text-pink-800 font-bold tracking-tight sm:text-5xl dark:text-pink-100'
             >
               {frontmatter.description}
-            </h1><div class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            </h1><div class='mt-6 text-base text-zinc-600 dark:text-zinc-400'>
               <slot />
             </div>
-          </header><div class="mt-16 sm:mt-20">
-            <div class="space-y-20">
+          </header><div class='mt-16 sm:mt-20'>
+            <div class='space-y-20'>
               {
                 frontmatter.list.map((section) => (
                   <section
-                    aria-labelledby=":R6l6:"
-                    class="md:border-l md:border-pink-100 md:pl-6 md:dark:border-pink-700/40"
+                    aria-labelledby=':R6l6:'
+                    class='md:border-l md:border-pink-100 md:pl-6 md:dark:border-pink-700/40'
                   >
-                    <div class="grid grid-cols-1 max-w-3xl items-baseline gap-y-8 md:grid-cols-4">
+                    <div class='grid grid-cols-1 max-w-3xl items-baseline gap-y-8 md:grid-cols-4'>
                       <h2
-                        id=":R6l6:"
-                        class="text-sm text-zinc-800 font-semibold dark:text-zinc-100"
+                        id=':R6l6:'
+                        class='text-sm text-zinc-800 font-semibold dark:text-zinc-100'
                       >
                         {section.section}
                       </h2>
-                      <div class="md:col-span-3">
-                        <div class="space-y-16">
+                      <div class='md:col-span-3'>
+                        <div class='space-y-16'>
                           {section.items.map((item) => (
-                            <article class="group relative flex flex-col items-start">
-                              <h3 class="text-base text-zinc-800 font-semibold tracking-tight dark:text-zinc-100">
-                                <div class="absolute z-0 scale-95 bg-pink-50 opacity-0 transition -inset-x-4 -inset-y-6 group-hover:scale-100 sm:rounded-2xl dark:bg-pink-800/50 group-hover:opacity-100 sm:-inset-x-6" />
+                            <article class='group relative flex flex-col items-start'>
+                              <h3 class='text-base text-zinc-800 font-semibold tracking-tight dark:text-zinc-100'>
+                                <div class='absolute z-0 scale-95 bg-pink-50 opacity-0 transition -inset-x-4 -inset-y-6 group-hover:scale-100 sm:rounded-2xl dark:bg-pink-800/50 group-hover:opacity-100 sm:-inset-x-6' />
                                 <a href={item.link}>
-                                  <span class="absolute z-20 -inset-x-4 -inset-y-6 sm:rounded-2xl sm:-inset-x-6" />
-                                  <span class="relative z-10">{item.item}</span>
+                                  <span class='absolute z-20 -inset-x-4 -inset-y-6 sm:rounded-2xl sm:-inset-x-6' />
+                                  <span class='relative z-10'>{item.item}</span>
                                 </a>
                               </h3>
-                              <p class="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500">
+                              <p class='relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500'>
                                 <span
-                                  class="absolute inset-y-0 left-0 flex items-center"
-                                  aria-hidden="true"
+                                  class='absolute inset-y-0 left-0 flex items-center'
+                                  aria-hidden='true'
                                 >
-                                  <span class="h-4 w-0.5 rounded-full bg-pink-200 dark:bg-pink-500" />
+                                  <span class='h-4 w-0.5 rounded-full bg-pink-200 dark:bg-pink-500' />
                                 </span>
                                 {item.parent}
                               </p>
-                              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                              <p class='relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400'>
                                 {item.description}
                               </p>
                               <div
-                                aria-hidden="true"
-                                class="relative z-10 mt-4 flex items-center text-sm text-purple-500 font-medium"
+                                aria-hidden='true'
+                                class='relative z-10 mt-4 flex items-center text-sm text-purple-500 font-medium'
                               >
                                 {item.action}
-                                <span class="i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current" />
+                                <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />
                               </div>
                             </article>
                           ))}

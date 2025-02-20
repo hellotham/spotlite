@@ -5,25 +5,25 @@ let social = await getCollection('social')
 social = social.sort((a, b) => a.data.order - b.data.order)
 ---
 
-<div class="mt-9 sm:px-8">
-  <div class="mx-auto max-w-7xl lg:px-8">
-    <div class="relative px-4 lg:px-12 sm:px-8">
-      <div class="mx-auto max-w-2xl lg:max-w-5xl">
-        <div class="max-w-2xl">
+<div class='mt-9 sm:px-8'>
+  <div class='mx-auto max-w-7xl lg:px-8'>
+    <div class='relative px-4 lg:px-12 sm:px-8'>
+      <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+        <div class='max-w-2xl'>
           <h1
-            class="text-4xl text-pink-800 font-bold tracking-tight sm:text-5xl dark:text-pink-100"
+            class='text-4xl text-pink-800 font-bold tracking-tight sm:text-5xl dark:text-pink-100'
           >
             artist, consultant, cyclist, designer, musician, photographer, world traveller
           </h1>
-          <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          <p class='mt-6 text-base text-zinc-600 dark:text-zinc-400'>
             I’m Chris Tham, an outrageous actualiser based in Sydney. I’m the founder and Junior
             Janitor of Hello Tham, a boutique management consulting company.
           </p>
-          <div class="mt-6 flex gap-6">
+          <div class='mt-6 flex gap-6'>
             {
               social.map((item) => (
                 <a
-                  class="group p-1 -m-1"
+                  class='group p-1 -m-1'
                   aria-label={'Follow on ' + item.data.title}
                   href={item.data.link}
                 >

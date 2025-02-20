@@ -13,20 +13,20 @@ const { title, description, home = false } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta http-equiv='x-ua-compatible' content='ie=edge' />
+    <meta name='viewport' content='width=device-width,initial-scale=1' />
+    <link rel='icon' href='/favicon.ico' sizes='any' />
+    <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+    <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+    <link rel='manifest' href='/site.webmanifest' />
+    <link rel='sitemap' href='/sitemap-index.xml' />
+    <link rel='alternate' type='application/rss+xml' title='RSS' href='/rss.xml' />
+    <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
-    <meta name="description" content={description} />
+    <meta name='description' content={description} />
     <script is:inline>
       if (
         localStorage.theme === 'dark' ||
@@ -45,18 +45,18 @@ const { title, description, home = false } = Astro.props
   </head>
   <body>
     <div
-      class="h-full flex flex-col bg-pink-50 font-sans dark:bg-black"
+      class='h-full flex flex-col bg-pink-50 font-sans dark:bg-black'
       style={`--content-offset: ${home ? '116' : '0'}px;`}
     >
-      <div class="fixed inset-0 flex justify-center sm:px-8">
-        <div class="max-w-7xl w-full flex lg:px-8">
-          <div class="w-full bg-white ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20">
+      <div class='fixed inset-0 flex justify-center sm:px-8'>
+        <div class='max-w-7xl w-full flex lg:px-8'>
+          <div class='w-full bg-white ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20'>
           </div>
         </div>
       </div>
-      <div class="relative">
+      <div class='relative'>
         {home ? <HeaderHome /> : <Header />}
-        <div style="height:var(--content-offset)"></div>
+        <div style='height:var(--content-offset)'></div>
         <main>
           <slot />
         </main>

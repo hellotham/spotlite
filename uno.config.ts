@@ -1,11 +1,5 @@
 // uno.config.ts
-import {
-  defineConfig,
-  presetIcons,
-  presetAttributify,
-  presetTypography,
-  presetUno
-} from 'unocss'
+import { defineConfig, presetIcons, presetAttributify, presetTypography, presetUno } from 'unocss'
 import { presetForms } from '@julr/unocss-preset-forms'
 
 export default defineConfig({
@@ -29,6 +23,6 @@ export default defineConfig({
     'i-logos-facebook',
     'i-logos-instagram-icon',
     'i-logos-github-icon',
-    'i-logos-linkedin-icon',
+    'i-logos-linkedin-icon'
   ]
 })
