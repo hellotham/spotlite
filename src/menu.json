@@ -1,0 +1,32 @@
+[
+  {
+    "id": "about",
+    "order": 10,
+    "title": "About",
+    "link": "/about"
+  },
+  {
+    "id": "articles",
+    "order": 20,
+    "title": "Articles",
+    "link": "/articles"
+  },
+  {
+    "id": "projects",
+    "order": 30,
+    "title": "Projects",
+    "link": "/projects"
+  },
+  {
+    "id": "creations",
+    "order": 40,
+    "title": "Creations",
+    "link": "/creations"
+  },
+  {
+    "id": "uses",
+    "order": 50,
+    "title": "Uses",
+    "link": "/uses"
+  }
+]

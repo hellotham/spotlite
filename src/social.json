@@ -1,0 +1,26 @@
+[
+  {
+    "id": "facebook",
+    "title": "Facebook",
+    "link": "https://www.facebook.com/chris1tham",
+    "icon": "i-logos-facebook"
+  },
+  {
+    "id": "github",
+    "title": "Github",
+    "link": "https://github.com/ChristineTham",
+    "icon": "i-logos-github-icon"
+  },
+  {
+    "id": "instagram",
+    "title": "Instagram",
+    "link": "https://www.instagram.com/chris1tham",
+    "icon": "i-logos-instagram-icon"
+  },
+  {
+    "id": "linkedIn",
+    "title": "LinkedIn",
+    "link": "https://www.linkedin.com/in/christham",
+    "icon": "i-logos-linkedin-icon"
+  }
+]

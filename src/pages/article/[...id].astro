@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getCollection, render } from 'astro:content'
+import Layout from '../../layouts/layout.astro'
+
+// 1. Generate a new path for every collection article
+export async function getStaticPaths() {
+  const articles = await getCollection('article')
+  return articles.map((article) => ({
+    params: { id: article.id },
+    props: { article }
+  }))
+}
+
+// 2. When it's time to render, you can get the article directly from the prop
+interface Props {
+  article: CollectionEntry<'article'>
+}
+const { article } = Astro.props
+const { Content } = await render(article)
+---
+
+<Layout title={article.data.title || ''} description={article.data.description!}>
+  <div class='mt-16 lg:mt-32 sm:px-8'>
+    <div class='mx-auto max-w-7xl lg:px-8'>
+      <div class='relative px-4 lg:px-12 sm:px-8'>
+        <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+          <div class='xl:relative'>
+            <div class='mx-auto max-w-2xl'>
+              <button
+                onclick='window.history.back()'
+                type='button'
+                aria-label='Go back to articles'
+                class='group mb-8 h-10 w-10 flex items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition lg:absolute xl:left-0 lg:mb-0 xl:mt-0 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 lg:-left-5 xl:-top-1.5 lg:-mt-2 dark:hover:border-zinc-700 dark:hover:ring-white/20'
+                ><span
+                  class='i-heroicons-arrow-left h-4 w-4 stroke-zinc-500 transition dark:stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400'
+                ></span></button
+              >
+              <article>
+                <header class='flex flex-col'>
+                  <h1
+                    class='mt-6 text-4xl text-zinc-800 font-bold tracking-tight sm:text-5xl dark:text-zinc-100'
+                  >
+                    {article.data.title}
+                  </h1>
+                  {
+                    article.data.pubDate && (
+                      <time
+                        datetime={article.data.pubDate.toISOString()}
+                        class='order-first flex items-center text-base text-zinc-400 dark:text-zinc-500'
+                      >
+                        <>
+                          <span class='h-4 w-0.5 rounded-full bg-pink-200 dark:bg-pink-500' />
+                          <span class='ml-3'>{article.data.pubDate.toDateString()}</span>
+                        </>
+                      </time>
+                    )
+                  }
+                </header>
+                <p class='mt-2 text-sm text-zinc-600 italic dark:text-zinc-400'>
+                  {article.data.description}
+                </p>
+                <div class='mt-8 prose prose-zinc dark:prose-invert'>
+                  <Content />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
