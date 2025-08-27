@@ -20,26 +20,26 @@ social = social.sort((a, b) => a.data.order - b.data.order)
 <Layout title={frontmatter.title} description={frontmatter.description}>
   <div class='mt-16 sm:mt-32 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
-      <div class='relative px-4 lg:px-12 sm:px-8'>
+      <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
-          <div class='grid grid-cols-1 gap-y-16 lg:grid-rows-[auto_1fr] lg:grid-cols-2 lg:gap-y-12'>
+          <div class='gap-y-16 grid grid-cols-1 lg:gap-y-12 lg:grid-rows-[auto_1fr] lg:grid-cols-2'>
             <div class='lg:pl-20'>
-              <div class='max-w-xs px-2.5 lg:max-w-none'>
+              <div class='px-2.5 max-w-xs lg:max-w-none'>
                 <Image
                   alt={'Profile photo'}
                   width={800}
-                  class='aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800'
+                  class='rounded-2xl bg-zinc-100 aspect-square rotate-3 object-cover dark:bg-zinc-800'
                   style='color:transparent'
                   src={Profile}
                 />
               </div>
-            </div><div class='lg:order-first lg:row-span-2'>
+            </div><div class='lg:row-span-2 lg:order-first'>
               <h1
-                class='text-4xl text-pink-800 font-bold tracking-tight sm:text-5xl dark:text-pink-100'
+                class='text-4xl text-pink-800 tracking-tight font-bold sm:text-5xl dark:text-pink-100'
               >
                 {frontmatter.description}
               </h1>
-              <div class='mt-6 text-base text-zinc-600 space-y-7 dark:text-zinc-400'>
+              <div class='text-base text-zinc-600 mt-6 space-y-7 dark:text-zinc-400'>
                 <slot />
               </div>
             </div>
@@ -49,7 +49,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                   social.map((item) => (
                     <li class='mt-4 flex'>
                       <a
-                        class='group flex text-sm text-zinc-800 font-medium transition dark:text-zinc-200 hover:text-teal-500 dark:hover:text-teal-500'
+                        class='group text-sm text-zinc-800 font-medium flex transition dark:text-zinc-200 hover:text-teal-500 dark:hover:text-teal-500'
                         href={item.data.link}
                       >
                         <span
@@ -63,13 +63,13 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                     </li>
                   ))
                 }
-                <li class='mt-8 flex border-t border-zinc-100 pt-8 dark:border-zinc-700/40'>
+                <li class='mt-8 pt-8 border-t border-zinc-100 flex dark:border-zinc-700/40'>
                   <a
-                    class='group flex text-sm text-zinc-800 font-medium transition dark:text-zinc-200 hover:text-teal-500 dark:hover:text-teal-500'
+                    class='group text-sm text-zinc-800 font-medium flex transition dark:text-zinc-200 hover:text-teal-500 dark:hover:text-teal-500'
                     href='mailto:chris@christham.net'
                   >
                     <span
-                      class='i-heroicons-envelope-solid h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500'
+                      class='i-heroicons-envelope-solid flex-none h-6 w-6 transition fill-zinc-500 group-hover:fill-teal-500'
                     ></span><span class='ml-4'>chris@christham.net</span></a
                   >
                 </li>

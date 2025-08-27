@@ -1,9 +1,13 @@
 // uno.config.ts
-import { defineConfig, presetIcons, presetAttributify, presetTypography, presetUno } from 'unocss'
-import { presetForms } from '@julr/unocss-preset-forms'
+import { defineConfig, presetIcons, presetTypography, presetWind4 } from 'unocss'
 
 export default defineConfig({
   presets: [
+    presetWind4({
+      preflights: {
+        reset: true
+      }
+    }),
     presetIcons({
       extraProperties: {
         display: 'inline-block',
@@ -11,9 +15,6 @@ export default defineConfig({
         // ...
       }
     }),
-    presetAttributify(), // required when using attributify mode
-    presetUno(), // required
-    presetForms(),
     presetTypography()
   ],
   safelist: [

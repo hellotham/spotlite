@@ -11,7 +11,7 @@ const rotates = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 ---
 
 <div class='mt-16 sm:mt-20'>
-  <div class='flex justify-center gap-5 overflow-hidden py-4 -my-4 sm:gap-8'>
+  <div class='py-4 flex gap-5 justify-center overflow-hidden -my-4 sm:gap-8'>
     {
       cards.map((card, i) => (
         <div
@@ -21,7 +21,7 @@ const rotates = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
           ]}
         >
           <Image
-            class='absolute inset-0 h-full w-full object-cover'
+            class='h-full w-full inset-0 absolute object-cover'
             style='color:transparent'
             src={card}
             alt='Card'

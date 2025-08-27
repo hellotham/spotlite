@@ -23,7 +23,7 @@ const { Content } = await render(article)
 <Layout title={article.data.title || ''} description={article.data.description!}>
   <div class='mt-16 lg:mt-32 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
-      <div class='relative px-4 lg:px-12 sm:px-8'>
+      <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
           <div class='xl:relative'>
             <div class='mx-auto max-w-2xl'>
@@ -31,15 +31,15 @@ const { Content } = await render(article)
                 onclick='window.history.back()'
                 type='button'
                 aria-label='Go back to articles'
-                class='group mb-8 h-10 w-10 flex items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition lg:absolute xl:left-0 lg:mb-0 xl:mt-0 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 lg:-left-5 xl:-top-1.5 lg:-mt-2 dark:hover:border-zinc-700 dark:hover:ring-white/20'
+                class='group mb-8 rounded-full bg-white flex h-10 w-10 ring-1 ring-zinc-900/5 shadow-md shadow-zinc-800/5 transition items-center justify-center lg:mb-0 xl:mt-0 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 xl:left-0 lg:absolute lg:-mt-2 dark:hover:border-zinc-700 dark:hover:ring-white/20 lg:-left-5 xl:-top-1.5'
                 ><span
-                  class='i-heroicons-arrow-left h-4 w-4 stroke-zinc-500 transition dark:stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400'
+                  class='i-heroicons-arrow-left h-4 w-4 transition stroke-zinc-500 dark:stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400'
                 ></span></button
               >
               <article>
                 <header class='flex flex-col'>
                   <h1
-                    class='mt-6 text-4xl text-zinc-800 font-bold tracking-tight sm:text-5xl dark:text-zinc-100'
+                    class='text-4xl text-zinc-800 tracking-tight font-bold mt-6 sm:text-5xl dark:text-zinc-100'
                   >
                     {article.data.title}
                   </h1>
@@ -47,17 +47,17 @@ const { Content } = await render(article)
                     article.data.pubDate && (
                       <time
                         datetime={article.data.pubDate.toISOString()}
-                        class='order-first flex items-center text-base text-zinc-400 dark:text-zinc-500'
+                        class='text-base text-zinc-400 flex items-center order-first dark:text-zinc-500'
                       >
                         <>
-                          <span class='h-4 w-0.5 rounded-full bg-pink-200 dark:bg-pink-500' />
+                          <span class='rounded-full bg-pink-200 h-4 w-0.5 dark:bg-pink-500' />
                           <span class='ml-3'>{article.data.pubDate.toDateString()}</span>
                         </>
                       </time>
                     )
                   }
                 </header>
-                <p class='mt-2 text-sm text-zinc-600 italic dark:text-zinc-400'>
+                <p class='text-sm text-zinc-600 mt-2 italic dark:text-zinc-400'>
                   {article.data.description}
                 </p>
                 <div class='mt-8 prose prose-zinc dark:prose-invert'>

@@ -10,30 +10,30 @@ articles = articles.sort((a, b) =>
 <div class='flex flex-col gap-16'>
   {
     articles.map((article) => (
-      <article class='group relative flex flex-col items-start'>
+      <article class='group flex flex-col items-start relative'>
         {article.data.pubDate && (
           <time
-            class='relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500'
+            class='text-sm text-zinc-400 mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-zinc-500'
             datetime={article.data.pubDate.toISOString()}
           >
-            <span class='absolute inset-y-0 left-0 flex items-center' aria-hidden='true'>
-              <span class='h-4 w-0.5 rounded-full bg-purple-200 dark:bg-purple-500' />
+            <span class='flex items-center inset-y-0 left-0 absolute' aria-hidden='true'>
+              <span class='rounded-full bg-purple-200 h-4 w-0.5 dark:bg-purple-500' />
             </span>
             {article.data.pubDate.toDateString()}
           </time>
         )}
-        <h2 class='text-base text-zinc-800 font-semibold tracking-tight dark:text-zinc-100'>
-          <div class='absolute z-0 scale-95 bg-pink-100 opacity-0 transition -inset-x-4 -inset-y-6 group-hover:scale-100 sm:rounded-2xl dark:bg-pink-800/50 group-hover:opacity-100 sm:-inset-x-6' />
+        <h2 class='text-base text-zinc-800 tracking-tight font-semibold dark:text-zinc-100'>
+          <div class='bg-pink-100 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-pink-800/50 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
           <a href={'/article/' + article.id}>
-            <span class='absolute z-20 -inset-x-4 -inset-y-6 sm:rounded-2xl sm:-inset-x-6' />
+            <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
             <span class='relative z-10'>{article.data.title}</span>
           </a>
-          <p class='relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400'>
+          <p class='text-sm text-zinc-600 mt-2 relative z-10 dark:text-zinc-400'>
             {article.data.description}
           </p>
           <div
             aria-hidden='true'
-            class='relative z-10 mt-4 flex items-center text-sm text-purple-500 font-medium'
+            class='text-sm text-purple-500 font-medium mt-4 flex items-center relative z-10'
           >
             Read article
             <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />

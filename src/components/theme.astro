@@ -8,14 +8,14 @@
       type='button'
       x-on:click='themeOpen = !themeOpen'
       aria-label='Toggle dark mode'
-      class='group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20'
+      class='group px-3 py-2 rounded-full bg-white/90 ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 transition backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20'
       ><svg
         viewBox='0 0 24 24'
         stroke-width='1.5'
         stroke-linecap='round'
         stroke-linejoin='round'
         aria-hidden='true'
-        class='h-6 w-6 fill-zinc-100 stroke-zinc-500 transition dark:hidden [@media(prefers-color-scheme:dark)]:fill-purple-50 group-hover:fill-zinc-200 [@media(prefers-color-scheme:dark)]:stroke-purple-500 group-hover:stroke-zinc-700 [@media(prefers-color-scheme:dark)]:group-hover:fill-purple-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-purple-600'
+        class='h-6 w-6 transition fill-zinc-100 stroke-zinc-500 dark:hidden [@media(prefers-color-scheme:dark)]:fill-purple-50 group-hover:fill-zinc-200 [@media(prefers-color-scheme:dark)]:stroke-purple-500 group-hover:stroke-zinc-700 [@media(prefers-color-scheme:dark)]:group-hover:fill-purple-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-purple-600'
         ><path
           d='M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z'
         ></path><path
@@ -24,7 +24,7 @@
       ><svg
         viewBox='0 0 24 24'
         aria-hidden='true'
-        class='hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media_not_(prefers-color-scheme:dark)]:fill-purple-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-purple-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400'
+        class='h-6 w-6 hidden transition fill-zinc-700 stroke-zinc-500 dark:block [@media_not_(prefers-color-scheme:dark)]:fill-purple-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-purple-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400'
         ><path
           d='M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z'
           stroke-width='1.5'
@@ -42,14 +42,14 @@
     x-transition:leave='transition ease-in duration-75'
     x-transition:leave-start='transform opacity-100 scale-100'
     x-transition:leave-end='transform opacity-0 scale-95'
-    class='pointer-events-auto absolute top-10 z-20 mt-1 max-h-56 w-60 overflow-auto rounded-lg rounded-md bg-white/90 px-3 py-1 text-base text-zinc-800 font-medium shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10'
+    class='text-base text-zinc-800 font-medium mt-1 px-3 py-1 rounded-lg rounded-md bg-white/90 max-h-56 w-60 pointer-events-auto ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 top-10 absolute z-20 overflow-auto backdrop-blur dark:text-zinc-200 dark:bg-zinc-800/90 dark:ring-white/10'
     tabindex='-1'
     role='listbox'
     aria-labelledby='listbox-label'
     aria-activedescendant='listbox-option-3'
   >
     <li
-      class='relative cursor-default select-none py-2 pl-2 pr-4 hover:text-purple-500 dark:hover:text-purple-400'
+      class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-purple-500 dark:hover:text-purple-400'
       id='listbox-option-0'
       role='option'
       x-bind:aria-selected='localStorage.theme ? false : true'
@@ -64,14 +64,14 @@
       </div>
       <span
         x-show='!localStorage.theme'
-        class='absolute inset-y-0 right-0 flex items-center pr-4 text-green'
+        class='text-green pr-4 flex items-center inset-y-0 right-0 absolute'
       >
         <span class='i-heroicons-check h-5 w-5'></span>
         <span class='sr-only'>(selected)</span>
       </span>
     </li>
     <li
-      class='relative cursor-default select-none py-2 pl-2 pr-4 hover:text-purple-500 dark:hover:text-purple-400'
+      class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-purple-500 dark:hover:text-purple-400'
       id='listbox-option-0'
       role='option'
       x-bind:aria-selected="localStorage.theme == 'light'"
@@ -87,14 +87,14 @@
       </div>
       <span
         x-show="localStorage.theme == 'light'"
-        class='absolute inset-y-0 right-0 flex items-center pr-4 text-green'
+        class='text-green pr-4 flex items-center inset-y-0 right-0 absolute'
       >
         <span class='i-heroicons-check h-5 w-5'></span>
         <span class='sr-only'>(selected)</span>
       </span>
     </li>
     <li
-      class='relative cursor-default select-none py-2 pl-2 pr-4 hover:text-purple-500 dark:hover:text-purple-400'
+      class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-purple-500 dark:hover:text-purple-400'
       id='listbox-option-0'
       role='option'
       x-bind:aria-selected="localStorage.theme == 'dark'"
@@ -110,7 +110,7 @@
       </div>
       <span
         x-show="localStorage.theme == 'dark'"
-        class='absolute inset-y-0 right-0 flex items-center pr-4 text-green'
+        class='text-green pr-4 flex items-center inset-y-0 right-0 absolute'
       >
         <span class='i-heroicons-check h-5 w-5'></span>
         <span class='sr-only'>(selected)</span>

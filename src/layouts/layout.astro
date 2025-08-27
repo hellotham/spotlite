@@ -45,12 +45,12 @@ const { title, description, home = false } = Astro.props
   </head>
   <body>
     <div
-      class='h-full flex flex-col bg-pink-50 font-sans dark:bg-black'
+      class='font-sans bg-pink-50 flex flex-col h-full dark:bg-black'
       style={`--content-offset: ${home ? '116' : '0'}px;`}
     >
-      <div class='fixed inset-0 flex justify-center sm:px-8'>
-        <div class='max-w-7xl w-full flex lg:px-8'>
-          <div class='w-full bg-white ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20'>
+      <div class='flex inset-0 justify-center fixed sm:px-8'>
+        <div class='flex max-w-7xl w-full lg:px-8'>
+          <div class='bg-white w-full ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20'>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import NavMenu from './navmenu.astro'
 <div x-data='{ isOpen: false }' class='flex flex-1 justify-end md:justify-center'>
   <div class='pointer-events-auto md:hidden'>
     <button
-      class='group dark:hover:purple-200 flex items-center rounded-full bg-white/90 px-4 py-2 text-sm text-zinc-800 font-medium shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 hover:text-purple-600 dark:ring-white/10 dark:hover:ring-white/20'
+      class='group dark:hover:purple-200 text-sm text-zinc-800 font-medium px-4 py-2 rounded-full bg-white/90 flex ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 items-center backdrop-blur dark:text-zinc-200 hover:text-purple-600 dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20'
       type='button'
       x-on:click='isOpen = !isOpen'
       aria-expanded='false'
@@ -23,12 +23,12 @@ import NavMenu from './navmenu.astro'
     x-transition:leave='transition ease-in duration-75 transform'
     x-transition:leave-start='opacity-100 scale-100'
     x-transition:leave-end='opacity-0 scale-95'
-    class='pointer-events-auto absolute inset-x-0 top-12 z-50'
+    class='pointer-events-auto inset-x-0 top-12 absolute z-50'
     id='mobile-menu'
   >
     <NavMenu />
   </div>
-  <nav class='pointer-events-auto hidden md:block'>
+  <nav class='hidden pointer-events-auto md:block'>
     <NavMenu />
   </nav>
 </div>
