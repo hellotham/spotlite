@@ -1,12 +1,11 @@
 # Spotlite - Astro Personal Web Site Template
 
-Spotlite is a modern, production-ready personal website template built with **Astro**, **Alpine.js**, and **UnoCSS**. It is designed to be highly performant, easy to customise, and simple to deploy on platforms like Netlify.
+Spotlite is a modern, production-ready personal website template built with **Astro** and **UnoCSS**. It is designed to be highly performant, easy to customise, and simple to deploy on platforms like Netlify.
 
 ## 🛠 Tech Stack
 
 - **Framework:** [Astro](https://astro.build) (using Content Layer API)
 - **Styling:** [UnoCSS](https://unocss.dev/) with Wind4, Typography, and Icons presets
-- **Interactivity:** [Alpine.js](https://alpinejs.dev/)
 - **Type Safety:** [TypeScript](https://www.typescriptlang.org/)
 - **Linting & Formatting:** [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 - **Image Processing:** [Sharp](https://sharp.pixelplumbing.com/)

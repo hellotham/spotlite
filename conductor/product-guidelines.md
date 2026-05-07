@@ -10,7 +10,7 @@
 
 ## User Experience (UX) & Performance
 - **Accessibility (A11y):** Ensure all components use semantic HTML and meet WCAG AA standards for contrast and keyboard navigability.
-- **Performance Optimized:** Minimise JavaScript payloads (using Alpine.js only where necessary) and focus on fast Core Web Vitals (LCP, FID, CLS).
+- **Performance Optimized:** Minimise JavaScript payloads and focus on fast Core Web Vitals (LCP, FID, CLS).
 - **Content Discoverability:** Structure the site with intuitive navigation and clear calls-to-action (CTAs) to guide visitors toward key portfolio items and contact information.
 
 ## Technical Content Handling

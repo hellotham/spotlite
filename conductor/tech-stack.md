@@ -9,8 +9,6 @@
     - `presetWind4`: For utility classes.
     - `presetTypography`: For styling markdown content.
     - `presetIcons`: For integrating Iconify icons.
-- **Alpine.js:** A lightweight JavaScript framework used for client-side interactivity.
-
 ## Infrastructure & Tools
 - **Netlify:** The deployment and hosting platform, configured for Static Site Generation (SSG).
 - **Sharp:** High-performance image processing library used by Astro for optimized assets.
