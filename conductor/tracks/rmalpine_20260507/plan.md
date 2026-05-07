@@ -6,10 +6,10 @@
 - [x] Task: Update project documentation (`README.md`, `GEMINI.md`, `conductor/product.md`, `conductor/product-guidelines.md`, `conductor/tech-stack.md`) (c62d5ca)
 - [x] Task: Conductor - User Manual Verification 'Project Cleanup' (Protocol in workflow.md)
 
-## Phase 2: Refactor Mobile Menu
+## Phase 2: Refactor Mobile Menu [checkpoint: caa75c1]
 - [x] Task: Refactor `src/components/header.astro` to use standard JS for mobile menu (2d70410)
 - [x] Task: Refactor `src/components/navbar.astro` to use standard JS for mobile menu (a657a9f)
-- [ ] Task: Conductor - User Manual Verification 'Refactor Mobile Menu' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Refactor Mobile Menu' (Protocol in workflow.md)
 
 ## Phase 3: Refactor Theme Switcher
 - [ ] Task: Refactor `src/components/theme.astro` to use standard JS for theme switching
