@@ -2,12 +2,12 @@
 import NavMenu from './navmenu.astro'
 ---
 
-<div x-data='{ isOpen: false }' class='flex flex-1 justify-end md:justify-center'>
+<div class='flex flex-1 justify-end md:justify-center'>
   <div class='pointer-events-auto md:hidden'>
     <button
+      id='mobile-menu-button'
       class='group dark:hover:purple-200 text-sm text-zinc-800 font-medium px-4 py-2 rounded-full bg-white/90 flex ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 items-center backdrop-blur dark:text-zinc-200 hover:text-purple-600 dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20'
       type='button'
-      x-on:click='isOpen = !isOpen'
       aria-expanded='false'
     >
       Menu
@@ -15,16 +15,8 @@ import NavMenu from './navmenu.astro'
     </button>
   </div>
   <div
-    x-show='isOpen'
-    x-cloak
-    x-transition:enter='transition ease-out duration-100 transform'
-    x-transition:enter-start='opacity-0 scale-95'
-    x-transition:enter-end='opacity-100 scale-100'
-    x-transition:leave='transition ease-in duration-75 transform'
-    x-transition:leave-start='opacity-100 scale-100'
-    x-transition:leave-end='opacity-0 scale-95'
-    class='pointer-events-auto inset-x-0 top-12 absolute z-50'
     id='mobile-menu'
+    class='hidden pointer-events-auto inset-x-0 top-12 absolute z-50'
   >
     <NavMenu />
   </div>
@@ -32,3 +24,31 @@ import NavMenu from './navmenu.astro'
     <NavMenu />
   </nav>
 </div>
+
+<script>
+  const button = document.getElementById('mobile-menu-button')
+  const menu = document.getElementById('mobile-menu')
+
+  if (button && menu) {
+    button.addEventListener('click', () => {
+      const isOpen = menu.classList.contains('hidden')
+      if (isOpen) {
+        menu.classList.remove('hidden')
+        button.setAttribute('aria-expanded', 'true')
+      } else {
+        menu.classList.add('hidden')
+        button.setAttribute('aria-expanded', 'false')
+      }
+    })
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+      const isClickInside =
+        button.contains(event.target as Node) || menu.contains(event.target as Node)
+      if (!isClickInside && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden')
+        button.setAttribute('aria-expanded', 'false')
+      }
+    })
+  }
+</script>
