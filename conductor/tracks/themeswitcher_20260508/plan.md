@@ -1,10 +1,10 @@
 # Implementation Plan: Refactor Theme Switcher
 
-## Phase 1: Test Coverage and Setup
+## Phase 1: Test Coverage and Setup [checkpoint: 6c9cbb5]
 - [x] Task: Analyze testing environment and establish baseline tests. (e70f6c1)
     - [x] Analyze `package.json` to determine the existing testing framework (e.g., Vitest, Playwright).
     - [x] Write failing test(s) to verify dynamic class toggling on `document.documentElement` and `localStorage` updates without page reload.
-- [ ] Task: Conductor - User Manual Verification 'Test Coverage and Setup' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Test Coverage and Setup' (Protocol in workflow.md) (6c9cbb5)
 
 ## Phase 2: Refactor Theme Logic and Layout
 - [ ] Task: Clean up `src/layouts/layout.astro`.
