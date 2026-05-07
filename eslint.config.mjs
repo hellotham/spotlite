@@ -4,6 +4,7 @@ import js from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import astro from 'eslint-plugin-astro'
 import unocss from '@unocss/eslint-config/flat'
+import eslintConfigPrettier from 'eslint-config-prettier'
 
 // parsers
 const tsParser = tseslint.parser
@@ -48,5 +49,6 @@ export default defineConfig([
   // Ignore patterns
   {
     ignores: ['dist/**', '**/*.d.ts', '.github/']
-  }
+  },
+  eslintConfigPrettier
 ])
