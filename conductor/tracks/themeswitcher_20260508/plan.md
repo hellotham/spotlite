@@ -7,9 +7,9 @@
 - [x] Task: Conductor - User Manual Verification 'Test Coverage and Setup' (Protocol in workflow.md) (6c9cbb5)
 
 ## Phase 2: Refactor Theme Logic and Layout
-- [ ] Task: Clean up `src/layouts/layout.astro`.
-    - [ ] Remove legacy `[x-cloak]` inline styles.
-    - [ ] Ensure the FOUC inline script is perfectly synced with the expected logic.
+- [x] Task: Clean up `src/layouts/layout.astro`. (92788c8)
+    - [x] Remove legacy `[x-cloak]` inline styles.
+    - [x] Ensure the FOUC inline script is perfectly synced with the expected logic.
 - [ ] Task: Refactor `src/components/theme.astro` JavaScript logic.
     - [ ] Remove `window.location.reload()` from click event listeners.
     - [ ] Refactor `updateUI` to dynamically add/remove the `dark` class on `document.documentElement` based on the selected theme or system preference.
