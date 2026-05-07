@@ -4,12 +4,12 @@
 - [x] Task: Review existing Astro configuration (`astro.config.mjs`) and meta components.
 - [x] Task: Conductor - User Manual Verification 'Setup and Configuration' (Protocol in workflow.md)
 
-## Phase 2: Meta Tags & OpenGraph
+## Phase 2: Meta Tags & OpenGraph [checkpoint: da4f41c]
 - [x] Task: Write tests to verify presence and uniqueness of `<title>` and `<meta name="description">` on core page templates.
 - [x] Task: Implement dynamic `<title>` and `<meta name="description">` across `src/layouts/Layout.astro` and page components.
 - [x] Task: Write tests for OpenGraph (`og:*`) and Twitter Card tags with fallback images.
 - [x] Task: Implement OpenGraph and Twitter Card tags in global templates.
-- [ ] Task: Conductor - User Manual Verification 'Meta Tags & OpenGraph' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Meta Tags & OpenGraph' (Protocol in workflow.md)
 
 ## Phase 3: Advanced Structured Data (JSON-LD)
 - [ ] Task: Write tests for `WebSite` and `Person` JSON-LD schema generation on Global Pages.
