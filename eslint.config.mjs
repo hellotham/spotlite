@@ -45,7 +45,10 @@ export default defineConfig([
       '@typescript-eslint/no-explicit-any': 'off' // you may want this as it can get annoying
     }
   },
-  unocss,
+  {
+    files: ['**/*.{astro,html,js,jsx,ts,tsx}'],
+    ...unocss
+  },
   // Ignore patterns
   {
     ignores: ['dist/**', '**/*.d.ts', '.github/']
