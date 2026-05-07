@@ -1,7 +1,7 @@
 ---
 title: 'Spotlite: A Personal Web Site Astro starter'
 pubDate: 2023-05-25
-description: An elegant, clean and surprisingly feature full personal web site template written in Astro, Alpine, UnoCSS and Iconify.
+description: An elegant, clean and surprisingly feature full personal web site template written in Astro, UnoCSS and Iconify.
 ---
 
 ![screenshot](../../assets/screenshot.png)
@@ -15,7 +15,6 @@ source (MIT licence) so feel free to use and modify it!
 It uses the following technologies:
 
 - [Astro](https://astro.build)
-- [Alpine.js](<https://[astro.build](https://alpinejs.dev/)>)
 - [Typescript](https://www.typescriptlang.org/)
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
