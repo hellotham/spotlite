@@ -12,7 +12,7 @@
 ## Infrastructure & Tools
 - **Netlify:** The deployment and hosting platform, configured for Static Site Generation (SSG).
 - **Sharp:** High-performance image processing library used by Astro for optimized assets.
-- **ESLint & Prettier:** For maintaining code quality and consistent formatting.
+- **ESLint & Prettier:** For maintaining code quality and consistent formatting. Configured with strict accessibility rules (`jsx-a11y`) and optimized UnoCSS linting.
 
 ## Content Management
 - **Astro Content Layer:** Manages structured content from Markdown (`src/content/`) and JSON (`src/*.json`) files.
