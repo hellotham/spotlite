@@ -2,7 +2,7 @@
 
 ## Phase 1: Project Cleanup
 - [x] Task: Remove Alpine.js integration from `astro.config.mjs` (e98aa3e)
-- [ ] Task: Remove Alpine.js dependencies from `package.json`
+- [x] Task: Remove Alpine.js dependencies from `package.json` (00d354d)
 - [ ] Task: Update project documentation (`README.md`, `GEMINI.md`, `conductor/product.md`, `conductor/product-guidelines.md`, `conductor/tech-stack.md`)
 - [ ] Task: Conductor - User Manual Verification 'Project Cleanup' (Protocol in workflow.md)
 
