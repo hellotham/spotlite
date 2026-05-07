@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content'
+import { defineCollection } from 'astro:content'
+import { z } from 'astro/zod'
 import { rssSchema } from '@astrojs/rss'
 import { glob, file } from 'astro/loaders'
 
@@ -13,7 +14,7 @@ const project = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      link: z.string().url(),
+      link: z.url(),
       image: image(),
       featured: z.boolean().optional()
     })
