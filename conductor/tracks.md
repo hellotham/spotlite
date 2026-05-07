@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: review and optimise SEO in project**
+- [~] **Track: review and optimise SEO in project**
 *Link: [./tracks/seo_optimization_20260508/](./tracks/seo_optimization_20260508/)*
