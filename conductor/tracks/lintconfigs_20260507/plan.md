@@ -13,6 +13,6 @@
 - [x] Task: Conductor - User Manual Verification 'Configure Environment Plugins' (Protocol in workflow.md) (e30ca09)
 
 ## Phase 3: Final Lint and Formatting Check
-- [ ] Task: Run `pnpm run lint:eslint` and resolve any newly surfaced code quality errors
-- [ ] Task: Run `pnpm run lint:prettier` to ensure the codebase is properly formatted
+- [x] Task: Run `pnpm run lint:eslint` and resolve any newly surfaced code quality errors (0410a0b)
+- [~] Task: Run `pnpm run lint:prettier` to ensure the codebase is properly formatted
 - [ ] Task: Conductor - User Manual Verification 'Final Lint and Formatting Check' (Protocol in workflow.md)
