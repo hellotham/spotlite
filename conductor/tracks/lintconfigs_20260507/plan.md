@@ -7,8 +7,8 @@
 - [x] Task: Conductor - User Manual Verification 'Separation of Prettier and ESLint' (Protocol in workflow.md) (f56a604)
 
 ## Phase 2: Configure Environment Plugins
-- [ ] Task: Verify and optimize `eslint-plugin-astro` configuration in `eslint.config.mjs`
-- [ ] Task: Verify and optimize `@unocss/eslint-config` configuration in `eslint.config.mjs`
+- [x] Task: Verify and optimize `eslint-plugin-astro` configuration in `eslint.config.mjs` (4f158de)
+- [x] Task: Verify and optimize `@unocss/eslint-config` configuration in `eslint.config.mjs` (778c147)
 - [ ] Task: Verify and optimize `eslint-plugin-jsx-a11y` configuration in `eslint.config.mjs`
 - [ ] Task: Conductor - User Manual Verification 'Configure Environment Plugins' (Protocol in workflow.md)
 
