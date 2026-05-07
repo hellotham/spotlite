@@ -7,7 +7,7 @@
 - [x] Task: Conductor - User Manual Verification 'Project Cleanup' (Protocol in workflow.md)
 
 ## Phase 2: Refactor Mobile Menu
-- [ ] Task: Refactor `src/components/header.astro` to use standard JS for mobile menu
+- [x] Task: Refactor `src/components/header.astro` to use standard JS for mobile menu (2d70410)
 - [ ] Task: Refactor `src/components/navbar.astro` to use standard JS for mobile menu
 - [ ] Task: Conductor - User Manual Verification 'Refactor Mobile Menu' (Protocol in workflow.md)
 
