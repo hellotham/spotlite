@@ -3,7 +3,6 @@ import globals from 'globals'
 import js from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import astro from 'eslint-plugin-astro'
-import prettier from 'eslint-plugin-prettier'
 import unocss from '@unocss/eslint-config/flat'
 
 // parsers
@@ -24,17 +23,6 @@ export default defineConfig([
   // Base configs
   js.configs.recommended,
   tseslint.configs.recommended,
-
-  // Prettier config
-  {
-    plugins: {
-      prettier: prettier
-    },
-    rules: {
-      // disable warnings, since prettier should format on save
-      'prettier/prettier': 'off'
-    }
-  },
 
   // astro setup with a11y
   astro.configs.recommended,
