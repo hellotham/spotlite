@@ -33,12 +33,12 @@ It features:
 Spotlite uses all the latest and greatest features in Astro (>2.5.0) including:
 
 - optimised assets
-- dala and content collections
+- data and content collections
 - endpoints
 - sitemap
 - RSS
 
-It’s production-ready and easy to customize, making it the perfect starting point for your own personal website.
+It’s production-ready and easy to customise, making it the perfect starting point for your own personal website.
 
 It's also simple to deploy on Netlify or similar.
 
