@@ -1,10 +1,10 @@
 # Implementation Plan - Review and Optimize ESLint/Prettier Configs
 
-## Phase 1: Separation of Prettier and ESLint
-- [ ] Task: Uninstall `eslint-plugin-prettier` to stop formatting issues from surfacing as lint errors
-- [ ] Task: Install `eslint-config-prettier` to disable ESLint rules that conflict with Prettier
-- [ ] Task: Update `eslint.config.mjs` to implement the separation
-- [ ] Task: Conductor - User Manual Verification 'Separation of Prettier and ESLint' (Protocol in workflow.md)
+## Phase 1: Separation of Prettier and ESLint [checkpoint: f56a604]
+- [x] Task: Uninstall `eslint-plugin-prettier` to stop formatting issues from surfacing as lint errors (c65ed97)
+- [x] Task: Install `eslint-config-prettier` to disable ESLint rules that conflict with Prettier (027088d)
+- [x] Task: Update `eslint.config.mjs` to implement the separation (0e9c482)
+- [x] Task: Conductor - User Manual Verification 'Separation of Prettier and ESLint' (Protocol in workflow.md) (f56a604)
 
 ## Phase 2: Configure Environment Plugins
 - [ ] Task: Verify and optimize `eslint-plugin-astro` configuration in `eslint.config.mjs`
