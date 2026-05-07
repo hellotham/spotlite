@@ -15,6 +15,6 @@
 - [x] Task: Refactor `src/components/theme.astro` to use standard JS for theme switching (58ae703)
 - [x] Task: Conductor - User Manual Verification 'Refactor Theme Switcher' (Protocol in workflow.md)
 
-## Phase 4: Final Verification
+## Phase 4: Final Verification [checkpoint: abfbbef]
 - [x] Task: Perform final site-wide verification and cleanup (ad0d6e0)
-- [ ] Task: Conductor - User Manual Verification 'Final Verification' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Final Verification' (Protocol in workflow.md)
