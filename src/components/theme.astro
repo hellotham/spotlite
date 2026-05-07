@@ -8,6 +8,7 @@
       type='button'
       id='theme-toggle-button'
       aria-label='Toggle dark mode'
+      aria-expanded='false'
       class='group px-3 py-2 rounded-full bg-white/90 ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 transition backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20'
       ><svg
         viewBox='0 0 24 24'
@@ -136,8 +137,23 @@
     }
   }
 
+  const updateTheme = () => {
+    const theme = localStorage.theme
+    if (
+      theme === 'dark' ||
+      (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    updateUI()
+  }
+
   if (button && menu) {
     button.addEventListener('click', () => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true'
+      button.setAttribute('aria-expanded', (!isExpanded).toString())
       menu.classList.toggle('hidden')
       updateUI()
     })
@@ -147,23 +163,36 @@
         button.contains(event.target as Node) || menu.contains(event.target as Node)
       if (!isClickInside && !menu.classList.contains('hidden')) {
         menu.classList.add('hidden')
+        button.setAttribute('aria-expanded', 'false')
       }
     })
   }
 
   autoBtn?.addEventListener('click', () => {
     localStorage.removeItem('theme')
-    window.location.reload()
+    updateTheme()
+    menu?.classList.add('hidden')
+    button?.setAttribute('aria-expanded', 'false')
   })
 
   lightBtn?.addEventListener('click', () => {
     localStorage.theme = 'light'
-    window.location.reload()
+    updateTheme()
+    menu?.classList.add('hidden')
+    button?.setAttribute('aria-expanded', 'false')
   })
 
   darkBtn?.addEventListener('click', () => {
     localStorage.theme = 'dark'
-    window.location.reload()
+    updateTheme()
+    menu?.classList.add('hidden')
+    button?.setAttribute('aria-expanded', 'false')
+  })
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (!localStorage.theme) {
+      updateTheme()
+    }
   })
 
   // Initial UI state
