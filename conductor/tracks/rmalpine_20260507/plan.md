@@ -8,7 +8,7 @@
 
 ## Phase 2: Refactor Mobile Menu
 - [x] Task: Refactor `src/components/header.astro` to use standard JS for mobile menu (2d70410)
-- [ ] Task: Refactor `src/components/navbar.astro` to use standard JS for mobile menu
+- [x] Task: Refactor `src/components/navbar.astro` to use standard JS for mobile menu (a657a9f)
 - [ ] Task: Conductor - User Manual Verification 'Refactor Mobile Menu' (Protocol in workflow.md)
 
 ## Phase 3: Refactor Theme Switcher
