@@ -2,11 +2,11 @@
 /* eslint-disable astro/jsx-a11y/role-has-required-aria-props */
 ---
 
-<div class='flex justify-end md:flex-1' x-data='{ themeOpen: false }'>
+<div class='flex justify-end md:flex-1'>
   <div class='pointer-events-auto'>
     <button
       type='button'
-      x-on:click='themeOpen = !themeOpen'
+      id='theme-toggle-button'
       aria-label='Toggle dark mode'
       class='group px-3 py-2 rounded-full bg-white/90 ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 transition backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20'
       ><svg
@@ -34,15 +34,8 @@
     >
   </div>
   <ul
-    x-show='themeOpen'
-    x-cloak
-    x-transition:enter='transition ease-out duration-100'
-    x-transition:enter-start='transform opacity-0 scale-95'
-    x-transition:enter-end='transform opacity-100 scale-100'
-    x-transition:leave='transition ease-in duration-75'
-    x-transition:leave-start='transform opacity-100 scale-100'
-    x-transition:leave-end='transform opacity-0 scale-95'
-    class='text-base text-zinc-800 font-medium mt-1 px-3 py-1 rounded-lg rounded-md bg-white/90 max-h-56 w-60 pointer-events-auto ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 top-10 absolute z-20 overflow-auto backdrop-blur dark:text-zinc-200 dark:bg-zinc-800/90 dark:ring-white/10'
+    id='theme-menu'
+    class='hidden text-base text-zinc-800 font-medium mt-1 px-3 py-1 rounded-lg rounded-md bg-white/90 max-h-56 w-60 pointer-events-auto ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 top-10 absolute z-20 overflow-auto backdrop-blur dark:text-zinc-200 dark:bg-zinc-800/90 dark:ring-white/10'
     tabindex='-1'
     role='listbox'
     aria-labelledby='listbox-label'
@@ -50,21 +43,16 @@
   >
     <li
       class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-purple-500 dark:hover:text-purple-400'
-      id='listbox-option-0'
+      id='theme-auto'
       role='option'
-      x-bind:aria-selected='localStorage.theme ? false : true'
-      x-on:click="localStorage.removeItem('theme'); window.location.reload()"
     >
-      <div
-        class='flex items-center'
-        x-bind:class="localStorage.theme ? 'font-normal' : 'font-semibold text-purple-500'"
-      >
+      <div id='theme-auto-div' class='flex items-center'>
         <span class='i-heroicons-star h-6 w-6'></span>
         <span class='ml-1 block truncate'>Auto</span>
       </div>
       <span
-        x-show='!localStorage.theme'
-        class='text-green pr-4 flex items-center inset-y-0 right-0 absolute'
+        id='theme-auto-check'
+        class='hidden text-green pr-4 flex items-center inset-y-0 right-0 absolute'
       >
         <span class='i-heroicons-check h-5 w-5'></span>
         <span class='sr-only'>(selected)</span>
@@ -72,22 +60,16 @@
     </li>
     <li
       class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-purple-500 dark:hover:text-purple-400'
-      id='listbox-option-0'
+      id='theme-light'
       role='option'
-      x-bind:aria-selected="localStorage.theme == 'light'"
-      x-on:click="localStorage.theme = 'light'; window.location.reload()"
     >
       <div class='flex items-center'>
         <span class='i-heroicons-sun h-6 w-6'></span>
-        <span
-          class='ml-1 block truncate'
-          x-bind:class="localStorage.theme == 'light' ? 'font-semibold text-purple-500' : 'font-normal'"
-          >Light</span
-        >
+        <span id='theme-light-span' class='ml-1 block truncate'>Light</span>
       </div>
       <span
-        x-show="localStorage.theme == 'light'"
-        class='text-green pr-4 flex items-center inset-y-0 right-0 absolute'
+        id='theme-light-check'
+        class='hidden text-green pr-4 flex items-center inset-y-0 right-0 absolute'
       >
         <span class='i-heroicons-check h-5 w-5'></span>
         <span class='sr-only'>(selected)</span>
@@ -95,22 +77,16 @@
     </li>
     <li
       class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-purple-500 dark:hover:text-purple-400'
-      id='listbox-option-0'
+      id='theme-dark'
       role='option'
-      x-bind:aria-selected="localStorage.theme == 'dark'"
-      x-on:click="localStorage.theme = 'dark'; window.location.reload()"
     >
       <div class='flex items-center'>
         <span class='i-heroicons-moon-solid h-6 w-6'></span>
-        <span
-          class='ml-1 block truncate'
-          x-bind:class="localStorage.theme == 'dark' ? 'font-semibold text-purple-500' : 'font-normal'"
-          >Dark</span
-        >
+        <span id='theme-dark-span' class='ml-1 block truncate'>Dark</span>
       </div>
       <span
-        x-show="localStorage.theme == 'dark'"
-        class='text-green pr-4 flex items-center inset-y-0 right-0 absolute'
+        id='theme-dark-check'
+        class='hidden text-green pr-4 flex items-center inset-y-0 right-0 absolute'
       >
         <span class='i-heroicons-check h-5 w-5'></span>
         <span class='sr-only'>(selected)</span>
@@ -118,3 +94,72 @@
     </li>
   </ul>
 </div>
+
+<script>
+  const button = document.getElementById('theme-toggle-button')
+  const menu = document.getElementById('theme-menu')
+  const autoBtn = document.getElementById('theme-auto')
+  const lightBtn = document.getElementById('theme-light')
+  const darkBtn = document.getElementById('theme-dark')
+
+  const updateUI = () => {
+    const theme = localStorage.theme
+    const autoCheck = document.getElementById('theme-auto-check')
+    const lightCheck = document.getElementById('theme-light-check')
+    const darkCheck = document.getElementById('theme-dark-check')
+    const autoDiv = document.getElementById('theme-auto-div')
+    const lightSpan = document.getElementById('theme-light-span')
+    const darkSpan = document.getElementById('theme-dark-span')
+
+    if (autoCheck && lightCheck && darkCheck && autoDiv && lightSpan && darkSpan) {
+      autoCheck.classList.toggle('hidden', !!theme)
+      lightCheck.classList.toggle('hidden', theme !== 'light')
+      darkCheck.classList.toggle('hidden', theme !== 'dark')
+
+      autoDiv.classList.toggle('font-semibold', !theme)
+      autoDiv.classList.toggle('text-purple-500', !theme)
+      autoDiv.classList.toggle('font-normal', !!theme)
+
+      lightSpan.classList.toggle('font-semibold', theme === 'light')
+      lightSpan.classList.toggle('text-purple-500', theme === 'light')
+      lightSpan.classList.toggle('font-normal', theme !== 'light')
+
+      darkSpan.classList.toggle('font-semibold', theme === 'dark')
+      darkSpan.classList.toggle('text-purple-500', theme === 'dark')
+      darkSpan.classList.toggle('font-normal', theme !== 'dark')
+    }
+  }
+
+  if (button && menu) {
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden')
+      updateUI()
+    })
+
+    document.addEventListener('click', (event) => {
+      const isClickInside =
+        button.contains(event.target as Node) || menu.contains(event.target as Node)
+      if (!isClickInside && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden')
+      }
+    })
+  }
+
+  autoBtn?.addEventListener('click', () => {
+    localStorage.removeItem('theme')
+    window.location.reload()
+  })
+
+  lightBtn?.addEventListener('click', () => {
+    localStorage.theme = 'light'
+    window.location.reload()
+  })
+
+  darkBtn?.addEventListener('click', () => {
+    localStorage.theme = 'dark'
+    window.location.reload()
+  })
+
+  // Initial UI state
+  updateUI()
+</script>
