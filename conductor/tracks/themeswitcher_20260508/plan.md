@@ -10,9 +10,9 @@
 - [x] Task: Clean up `src/layouts/layout.astro`. (92788c8)
     - [x] Remove legacy `[x-cloak]` inline styles.
     - [x] Ensure the FOUC inline script is perfectly synced with the expected logic.
-- [ ] Task: Refactor `src/components/theme.astro` JavaScript logic.
-    - [ ] Remove `window.location.reload()` from click event listeners.
-    - [ ] Refactor `updateUI` to dynamically add/remove the `dark` class on `document.documentElement` based on the selected theme or system preference.
-    - [ ] Add a `window.matchMedia('(prefers-color-scheme: dark)')` listener to handle system theme changes dynamically when the "Auto" setting is active.
-    - [ ] Ensure ARIA attributes (`aria-selected`, `aria-expanded` on the menu) correctly reflect the active state and toggle status.
+- [x] Task: Refactor `src/components/theme.astro` JavaScript logic. (b9ec7bd)
+    - [x] Remove `window.location.reload()` from click event listeners.
+    - [x] Refactor `updateUI` to dynamically add/remove the `dark` class on `document.documentElement` based on the selected theme or system preference.
+    - [x] Add a `window.matchMedia('(prefers-color-scheme: dark)')` listener to handle system theme changes dynamically when the "Auto" setting is active.
+    - [x] Ensure ARIA attributes (`aria-selected`, `aria-expanded` on the menu) correctly reflect the active state and toggle status.
 - [ ] Task: Conductor - User Manual Verification 'Refactor Theme Logic and Layout' (Protocol in workflow.md)
