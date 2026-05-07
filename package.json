@@ -32,6 +32,7 @@
     "@typescript-eslint/parser": "^8.59.2",
     "@unocss/eslint-config": "^66.6.8",
     "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "prettier": "^3.8.3",
