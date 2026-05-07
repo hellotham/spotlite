@@ -12,7 +12,7 @@
 - [x] Task: Conductor - User Manual Verification 'Refactor Mobile Menu' (Protocol in workflow.md)
 
 ## Phase 3: Refactor Theme Switcher
-- [ ] Task: Refactor `src/components/theme.astro` to use standard JS for theme switching
+- [x] Task: Refactor `src/components/theme.astro` to use standard JS for theme switching (58ae703)
 - [ ] Task: Conductor - User Manual Verification 'Refactor Theme Switcher' (Protocol in workflow.md)
 
 ## Phase 4: Final Verification
