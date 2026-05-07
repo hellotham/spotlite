@@ -9,6 +9,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
     "lint:prettier": "prettier --write  \"src/**/*.{js,jsx,ts,tsx,md,astro}\"",
     "lint:eslint": "eslint --fix \"src/**/*.{js,ts,jsx,tsx,md,astro}\"",
@@ -28,18 +31,22 @@
     "@astrojs/check": "^0.9.9",
     "@eslint/js": "^10.0.1",
     "@eslint/markdown": "^8.0.1",
+    "@testing-library/dom": "^10.4.1",
     "@types/node": "^25.6.0",
     "@typescript-eslint/parser": "^8.59.2",
     "@unocss/eslint-config": "^66.6.8",
+    "@vitest/coverage-v8": "^4.1.5",
     "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "jsdom": "^29.1.1",
     "prettier": "^3.8.3",
     "prettier-config-standard": "^7.0.0",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.2"
+    "typescript-eslint": "^8.59.2",
+    "vitest": "^4.1.5"
   },
   "packageManager": "pnpm@10.18.0+sha512.e804f889f1cecc40d572db084eec3e4881739f8dec69c0ff10d2d1beff9a4e309383ba27b5b750059d7f4c149535b6cd0d2cb1ed3aeb739239a4284a68f40cfa"
 }
