@@ -8,12 +8,104 @@ export interface Props {
   description: string
   image?: string
   article?: boolean
+  pubDate?: Date
+  itemPage?: boolean
   home?: boolean
 }
 
-const { title, description, image = '/screenshot.png', article = false, home = false } = Astro.props
+const {
+  title,
+  description,
+  image = '/screenshot.png',
+  article = false,
+  pubDate,
+  itemPage = false,
+  home = false
+} = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const socialImageURL = new URL(image, Astro.site)
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Chris Tham',
+  url: Astro.site,
+  description: 'Chris Tham - Personal Web Site and Portfolio'
+}
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Chris Tham',
+  url: Astro.site,
+  image: socialImageURL,
+  sameAs: [
+    'https://www.facebook.com/chris1tham',
+    'https://github.com/ChristineTham',
+    'https://www.instagram.com/chris1tham',
+    'https://www.linkedin.com/in/christham'
+  ],
+  jobTitle: 'Consultant, Artist, Photographer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Self-employed'
+  }
+}
+
+let articleSchema = {}
+if (article) {
+  articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description: description,
+    image: socialImageURL,
+    datePublished: pubDate?.toISOString(),
+    author: {
+      '@type': 'Person',
+      name: 'Chris Tham'
+    }
+  }
+}
+
+let itemPageSchema = {}
+if (itemPage) {
+  itemPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemPage',
+    name: title,
+    description: description,
+    image: socialImageURL
+  }
+}
+
+const breadcrumbList = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: Astro.url.pathname
+    .split('/')
+    .filter((path) => path !== '')
+    .reduce(
+      (acc, path, index, array) => {
+        const url = new URL('/' + array.slice(0, index + 1).join('/') + '/', Astro.site)
+        acc.push({
+          '@type': 'ListItem',
+          position: index + 2,
+          name: path.charAt(0).toUpperCase() + path.slice(1),
+          item: url.href
+        })
+        return acc
+      },
+      [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: Astro.site?.href
+        }
+      ]
+    )
+}
 ---
 
 <!doctype html>
@@ -41,6 +133,15 @@ const socialImageURL = new URL(image, Astro.site)
     <meta name='twitter:title' content={title} />
     <meta name='twitter:description' content={description} />
     <meta name='twitter:image' content={socialImageURL} />
+    <script type='application/ld+json' set:html={JSON.stringify(websiteSchema)} />
+    <script type='application/ld+json' set:html={JSON.stringify(personSchema)} />
+    {article && <script type='application/ld+json' set:html={JSON.stringify(articleSchema)} />}
+    {itemPage && <script type='application/ld+json' set:html={JSON.stringify(itemPageSchema)} />}
+    {
+      Astro.url.pathname !== '/' && (
+        <script type='application/ld+json' set:html={JSON.stringify(breadcrumbList)} />
+      )
+    }
     <script is:inline>
       if (
         localStorage.theme === 'dark' ||

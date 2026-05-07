@@ -20,7 +20,12 @@ const { article } = Astro.props
 const { Content } = await render(article)
 ---
 
-<Layout title={article.data.title || ''} description={article.data.description!} article={true}>
+<Layout
+  title={article.data.title || ''}
+  description={article.data.description!}
+  article={true}
+  pubDate={article.data.pubDate}
+>
   <div class='mt-16 lg:mt-32 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>

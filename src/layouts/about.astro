@@ -17,7 +17,7 @@ let social = await getCollection('social')
 social = social.sort((a, b) => a.data.order - b.data.order)
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description}>
+<Layout title={frontmatter.title} description={frontmatter.description} itemPage={true}>
   <div class='mt-16 sm:mt-32 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
