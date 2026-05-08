@@ -7,7 +7,7 @@ const current = Astro.url.pathname
 ---
 
 <ul
-  class='text-base text-zinc-800 mx-2 px-3 rounded-full bg-white/90 flex gap-x-2 ring-1 ring-zinc-900/5 shadow-lg shadow-zinc-800/5 justify-center backdrop-blur dark:text-zinc-200 dark:bg-zinc-800/90 dark:ring-white/10'
+  class='text-base text-blackBeauty mx-2 px-3 rounded-full bg-sugarSwizzle/90 flex gap-x-2 ring-1 ring-opalGray/20 shadow-md justify-center backdrop-blur dark:text-sugarSwizzle dark:bg-blackBeauty/90 dark:ring-opalGray/20'
 >
   {
     menu.map((item) => (
@@ -16,14 +16,14 @@ const current = Astro.url.pathname
           class:list={[
             'relative block px-3 py-2 transition',
             current == item.data.link
-              ? 'text-purple-500 dark:text-purple-400'
-              : 'hover:text-purple-500 dark:hover:text-purple-400'
+              ? 'text-morningGlory'
+              : 'hover:text-morningGlory'
           ]}
           href={item.data.link}
         >
           {item.data.title}
           {current == item.data.link && (
-            <span class='h-px inset-x-1 absolute from-purple-500/0 to-purple-500/0 via-purple-500/40 bg-gradient-to-r -bottom-px dark:from-purple-400/0 dark:to-purple-400/0 dark:via-purple-400/40' />
+            <span class='h-px inset-x-1 absolute from-morningGlory/0 to-morningGlory/0 via-morningGlory/40 bg-gradient-to-r -bottom-px' />
           )}
         </a>
       </li>
