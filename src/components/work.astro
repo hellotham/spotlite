@@ -34,6 +34,7 @@ work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
                 src={job.data.image}
                 alt={job.data.company}
                 width={64}
+                loading='lazy'
                 class='h-8 w-8 object-cover'
               />
             </div>
