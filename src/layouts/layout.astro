@@ -2,7 +2,7 @@
 import HeaderHome from '../components/headerhome.astro'
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 
 export interface Props {
   title: string
@@ -161,7 +161,7 @@ const breadcrumbList = {
         document.documentElement.classList.remove('dark')
       }
     </script>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <div
