@@ -16,11 +16,11 @@
 - [x] Task: Conductor - User Manual Verification 'Layout Components Alignment' (5cce269)
 
 ## Phase 3: UI Components Alignment
-- [ ] Task: Align Content Components
-    - [ ] Sub-task: Update `src/components/articlelist.astro` styling (cards, shadows, border radius).
-    - [ ] Sub-task: Update `src/components/imagecards.astro` styling.
-    - [ ] Sub-task: Update `src/components/ctaform.astro` styling (inputs, buttons, focus states).
-    - [ ] Sub-task: Update `src/components/hero.astro` and `work.astro` typography and spacing.
+- [x] Task: Align Content Components (1660f22)
+    - [x] Sub-task: Update `src/components/articlelist.astro` styling (cards, shadows, border radius).
+    - [x] Sub-task: Update `src/components/imagecards.astro` styling.
+    - [x] Sub-task: Update `src/components/ctaform.astro` styling (inputs, buttons, focus states).
+    - [x] Sub-task: Update `src/components/hero.astro` and `work.astro` typography and spacing.
 - [ ] Task: Conductor - User Manual Verification 'UI Components Alignment' (Protocol in workflow.md)
 
 ## Phase 4: Page Level Alignment
