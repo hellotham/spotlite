@@ -24,9 +24,9 @@
 - [x] Task: Conductor - User Manual Verification 'UI Components Alignment' (f1f4196)
 
 ## Phase 4: Page Level Alignment
-- [ ] Task: Align Main Pages
-    - [ ] Sub-task: Review and adjust `src/pages/index.astro`, `about.md`, `creations.md`, `uses.md`.
-    - [ ] Sub-task: Review and adjust `src/pages/projects.astro`, `articles.astro`.
+- [x] Task: Align Main Pages (6371a7b)
+    - [x] Sub-task: Review and adjust `src/pages/index.astro`, `about.md`, `creations.md`, `uses.md`.
+    - [x] Sub-task: Review and adjust `src/pages/projects.astro`, `articles.astro`.
 - [ ] Task: Align Dynamic Routes
     - [ ] Sub-task: Review `src/pages/article/[...id].astro` for markdown typography alignment (`presetTypography` usage).
 - [ ] Task: Conductor - User Manual Verification 'Page Level Alignment' (Protocol in workflow.md)
