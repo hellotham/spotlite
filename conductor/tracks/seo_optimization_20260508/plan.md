@@ -24,8 +24,8 @@
 ## Phase 4: Sitemap & Robots
 - [x] Task: Write tests/verification for the presence of `@astrojs/sitemap` integration and correct XML output. [checkpoint: e7cee8f]
 - [x] Task: Ensure `@astrojs/sitemap` is integrated in `astro.config.mjs` and optimize settings. [checkpoint: 54e93b2]
-- [ ] Task: Write tests to ensure `robots.txt` is generated correctly.
-- [ ] Task: Implement or verify a `robots.txt` that points to the dynamic `sitemap-index.xml`.
+- [x] Task: Write tests to ensure `robots.txt` is generated correctly. [checkpoint: ec64251]
+- [x] Task: Implement or verify a `robots.txt` that points to the dynamic `sitemap-index.xml`. [checkpoint: ec64251]
 - [ ] Task: Conductor - User Manual Verification 'Sitemap & Robots' (Protocol in workflow.md)
 
 ## Phase 5: Core Web Vitals & Performance
