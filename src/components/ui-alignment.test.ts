@@ -33,4 +33,11 @@ describe('UI Alignment', () => {
     expect(content).toContain('ring-opalGray')
     expect(content).toContain('text-blackBeauty')
   })
+
+  it('[...id].astro should use Rosely palette colors', () => {
+    const content = fs.readFileSync('src/pages/article/[...id].astro', 'utf-8')
+    expect(content).toContain('text-blackBeauty')
+    expect(content).toContain('bg-sugarSwizzle')
+    expect(content).toContain('bg-barelyPink')
+  })
 })
