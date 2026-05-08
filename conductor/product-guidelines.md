@@ -11,6 +11,7 @@
 ## User Experience (UX) & Performance
 - **Accessibility (A11y):** Ensure all components use semantic HTML and meet WCAG AA standards for contrast and keyboard navigability.
 - **Performance Optimized:** Minimise JavaScript payloads and focus on fast Core Web Vitals (LCP, FID, CLS).
+- **Search Engine Ready:** Every page MUST include dynamic meta tags and structured data (JSON-LD) to ensure maximum visibility and rich search results.
 - **Content Discoverability:** Structure the site with intuitive navigation and clear calls-to-action (CTAs) to guide visitors toward key portfolio items and contact information.
 
 ## Technical Content Handling
