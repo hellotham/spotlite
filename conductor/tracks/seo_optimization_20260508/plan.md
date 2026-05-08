@@ -11,7 +11,7 @@
 - [x] Task: Implement OpenGraph and Twitter Card tags in global templates.
 - [x] Task: Conductor - User Manual Verification 'Meta Tags & OpenGraph' (Protocol in workflow.md)
 
-## Phase 3: Advanced Structured Data (JSON-LD)
+## Phase 3: Advanced Structured Data (JSON-LD) [checkpoint: 21def5c]
 - [x] Task: Write tests for `WebSite` and `Person` JSON-LD schema generation on Global Pages.
 - [x] Task: Implement `WebSite` and `Person` schema for global templates.
 - [x] Task: Write tests for `Article` / `BlogPosting` schema on Article pages.
@@ -19,7 +19,7 @@
 - [x] Task: Write tests for `ItemPage` schema on Projects/Work pages.
 - [x] Task: Implement `ItemPage` schema for `src/content/project/` and `src/content/work/`.
 - [x] Task: Write tests and implement `BreadcrumbList` schema across all sub-pages.
-- [x] Task: Conductor - User Manual Verification 'Advanced Structured Data (JSON-LD)' (Protocol in workflow.md) [checkpoint: ]
+- [x] Task: Conductor - User Manual Verification 'Advanced Structured Data (JSON-LD)' (Protocol in workflow.md) [checkpoint: d96b9e3]
 
 ## Phase 4: Sitemap & Robots
 - [ ] Task: Write tests/verification for the presence of `@astrojs/sitemap` integration and correct XML output.
