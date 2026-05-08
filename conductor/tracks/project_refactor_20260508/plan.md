@@ -10,14 +10,14 @@
     - [x] Uninstall unused packages and clean up `pnpm-lock.yaml`.
 - [x] Task: Conductor - User Manual Verification 'Dependency Audit and Update' (Protocol in workflow.md) (752eab7)
 
-## Phase 2: TypeScript Strictness
-- [ ] Task: Audit and Fix Type Errors
-    - [ ] Run `tsc --noEmit` to identify all current TypeScript errors.
-    - [ ] Resolve explicit type errors across `src/components`, `src/pages`, and `src/layouts`.
-    - [ ] Replace `any` types with proper interfaces or generic types where applicable.
-- [ ] Task: Enhance Content Layer Typings
-    - [ ] Review `src/content.config.ts` to ensure collection schemas are strict and comprehensive.
-- [ ] Task: Conductor - User Manual Verification 'TypeScript Strictness' (Protocol in workflow.md)
+## Phase 2: TypeScript Strictness [checkpoint: 33418e2]
+- [x] Task: Audit and Fix Type Errors (33418e2)
+    - [x] Run `tsc --noEmit` to identify all current TypeScript errors.
+    - [x] Resolve explicit type errors across `src/components`, `src/pages`, and `src/layouts`.
+    - [x] Replace `any` types with proper interfaces or generic types where applicable.
+- [x] Task: Enhance Content Layer Typings (33418e2)
+    - [x] Review `src/content.config.ts` to ensure collection schemas are strict and comprehensive.
+- [x] Task: Conductor - User Manual Verification 'TypeScript Strictness' (Protocol in workflow.md) (60820ed)
 
 ## Phase 3: Code Quality and Linting
 - [ ] Task: Resolve ESLint Warnings and Errors

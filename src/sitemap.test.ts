@@ -7,7 +7,9 @@ import config from '../astro.config.mjs'
 describe('Sitemap Integration', () => {
   it('should have sitemap integration in astro.config.mjs', () => {
     const integrations = config.integrations || []
-    const hasSitemap = integrations.some((i: any) => i.name === '@astrojs/sitemap')
+    const hasSitemap = integrations.some(
+      (i) => i && typeof i === 'object' && 'name' in i && i.name === '@astrojs/sitemap'
+    )
     expect(hasSitemap).toBe(true)
   })
 

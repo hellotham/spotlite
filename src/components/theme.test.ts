@@ -34,19 +34,22 @@ describe('Theme Switcher (Refactored)', () => {
 
     localStorage.clear()
     document.documentElement.className = ''
-    
+
     // Mock location.reload
     vi.stubGlobal('location', { reload: vi.fn() })
-    
+
     // Mock matchMedia
-    vi.stubGlobal('matchMedia', vi.fn().mockImplementation(query => ({
-      matches: false,
-      media: query,
-      onchange: null,
-      addEventListener: vi.fn(),
-      removeEventListener: vi.fn(),
-      dispatchEvent: vi.fn(),
-    })))
+    vi.stubGlobal(
+      'matchMedia',
+      vi.fn().mockImplementation((query) => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+        dispatchEvent: vi.fn()
+      }))
+    )
 
     // Simulation of the new refactored logic
     const updateUI = () => {
@@ -58,7 +61,10 @@ describe('Theme Switcher (Refactored)', () => {
 
     const updateTheme = () => {
       const theme = localStorage.theme
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      if (
+        theme === 'dark' ||
+        (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
         document.documentElement.classList.add('dark')
       } else {
         document.documentElement.classList.remove('dark')
@@ -127,8 +133,8 @@ describe('Theme Switcher (Refactored)', () => {
       onchange: null,
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
-      dispatchEvent: vi.fn(),
-    } as any)
+      dispatchEvent: vi.fn()
+    } as unknown as MediaQueryList)
 
     fireEvent.click(autoBtn)
     expect(localStorage.theme).toBeUndefined()

@@ -5,9 +5,15 @@ describe('SEO Meta Tags', () => {
     document.head.innerHTML = ''
   })
 
-  const renderMeta = (title: string, description: string, ogImage?: string, article?: boolean, itemPage?: boolean) => {
+  const renderMeta = (
+    title: string,
+    description: string,
+    ogImage?: string,
+    article?: boolean,
+    itemPage?: boolean
+  ) => {
     document.title = title
-    
+
     const metaDesc = document.createElement('meta')
     metaDesc.name = 'description'
     metaDesc.content = description
@@ -80,12 +86,12 @@ describe('SEO Meta Tags', () => {
 
   it('should have OpenGraph tags', () => {
     renderMeta('Test Title', 'Test Description', '/og-image.png')
-    
+
     const ogTitle = document.querySelector('meta[property="og:title"]')
     const ogDesc = document.querySelector('meta[property="og:description"]')
     const ogType = document.querySelector('meta[property="og:type"]')
     const ogImg = document.querySelector('meta[property="og:image"]')
-    
+
     expect(ogTitle?.getAttribute('content')).toBe('Test Title')
     expect(ogDesc?.getAttribute('content')).toBe('Test Description')
     expect(ogType?.getAttribute('content')).toBe('website')
@@ -103,7 +109,11 @@ describe('SEO Meta Tags', () => {
       const scripts = document.querySelectorAll('script[type="application/ld+json"]')
       for (const script of scripts) {
         const json = JSON.parse(script.innerHTML)
-        if (json['@type'] === type || (Array.isArray(json['@graph']) && json['@graph'].some((item: any) => item['@type'] === type))) {
+        if (
+          json['@type'] === type ||
+          (Array.isArray(json['@graph']) &&
+            json['@graph'].some((item: { '@type'?: string }) => item['@type'] === type))
+        ) {
           return json
         }
       }
@@ -114,7 +124,7 @@ describe('SEO Meta Tags', () => {
       renderMeta('Test', 'Test')
       const website = findJsonLd('WebSite')
       const person = findJsonLd('Person')
-      
+
       expect(website).not.toBeNull()
       expect(person).not.toBeNull()
     })
