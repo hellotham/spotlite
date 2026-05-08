@@ -19,13 +19,13 @@
     - [x] Review `src/content.config.ts` to ensure collection schemas are strict and comprehensive.
 - [x] Task: Conductor - User Manual Verification 'TypeScript Strictness' (Protocol in workflow.md) (60820ed)
 
-## Phase 3: Code Quality and Linting
-- [ ] Task: Resolve ESLint Warnings and Errors
-    - [ ] Run `pnpm run lint:eslint` to identify code quality issues.
-    - [ ] Fix unused variables, missing return types, and accessibility (`jsx-a11y`) warnings.
-- [ ] Task: Enforce Formatting
-    - [ ] Run `pnpm run lint:prettier` to ensure consistent code style across all files.
-- [ ] Task: Conductor - User Manual Verification 'Code Quality and Linting' (Protocol in workflow.md)
+## Phase 3: Code Quality and Linting [checkpoint: e511a3e]
+- [x] Task: Resolve ESLint Warnings and Errors (46ce1c8)
+    - [x] Run `pnpm run lint:eslint` to identify code quality issues.
+    - [x] Fix unused variables, missing return types, and accessibility (`jsx-a11y`) warnings.
+- [x] Task: Enforce Formatting (46ce1c8)
+    - [x] Run `pnpm run lint:prettier` to ensure consistent code style across all files.
+- [x] Task: Conductor - User Manual Verification 'Code Quality and Linting' (Protocol in workflow.md) (46ce1c8)
 
 ## Phase 4: UnoCSS Styling Consolidation
 - [ ] Task: Audit Utility Class Usage
