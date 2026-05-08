@@ -1,13 +1,13 @@
 # Implementation Plan: Project Refactor & Tech Stack Alignment
 
 ## Phase 1: Dependency Audit and Update
-- [ ] Task: Audit and Update npm packages
-    - [ ] Run `pnpm outdated` to identify packages that need updating.
-    - [ ] Update Astro, UnoCSS, and other core dependencies to their latest compatible versions.
-    - [ ] Run `pnpm install` and verify project builds successfully.
-- [ ] Task: Remove Unused Dependencies
-    - [ ] Audit `package.json` for dependencies that are no longer used in the codebase.
-    - [ ] Uninstall unused packages and clean up `pnpm-lock.yaml`.
+- [x] Task: Audit and Update npm packages (f594208)
+    - [x] Run `pnpm outdated` to identify packages that need updating.
+    - [x] Update Astro, UnoCSS, and other core dependencies to their latest compatible versions.
+    - [x] Run `pnpm install` and verify project builds successfully.
+- [x] Task: Remove Unused Dependencies (f594208)
+    - [x] Audit `package.json` for dependencies that are no longer used in the codebase.
+    - [x] Uninstall unused packages and clean up `pnpm-lock.yaml`.
 - [ ] Task: Conductor - User Manual Verification 'Dependency Audit and Update' (Protocol in workflow.md)
 
 ## Phase 2: TypeScript Strictness
