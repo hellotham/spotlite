@@ -8,11 +8,11 @@
 - [x] Task: Conductor - User Manual Verification 'Setup and Configuration Review' (497a06b)
 
 ## Phase 2: Layout Components Alignment
-- [ ] Task: Align Header and Footer
-    - [ ] Sub-task: Update `src/components/header.astro` and `headerhome.astro` to use Rosely colors and typography.
-    - [ ] Sub-task: Update `src/components/footer.astro` spacing, colors, and fonts.
-- [ ] Task: Align Navigation
-    - [ ] Sub-task: Update `src/components/navbar.astro` and `navmenu.astro` styling (borders, interactive states).
+- [x] Task: Align Header and Footer (c85c529)
+    - [x] Sub-task: Update `src/components/header.astro` and `headerhome.astro` to use Rosely colors and typography.
+    - [x] Sub-task: Update `src/components/footer.astro` spacing, colors, and fonts.
+- [x] Task: Align Navigation (c85c529)
+    - [x] Sub-task: Update `src/components/navbar.astro` and `navmenu.astro` styling (borders, interactive states).
 - [ ] Task: Conductor - User Manual Verification 'Layout Components Alignment' (Protocol in workflow.md)
 
 ## Phase 3: UI Components Alignment
