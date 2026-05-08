@@ -36,11 +36,11 @@ social = social.sort((a, b) => a.data.order - b.data.order)
               </div>
             </div><div class='lg:row-span-2 lg:order-first'>
               <h1
-                class='text-4xl text-pink-800 tracking-tight font-bold sm:text-5xl dark:text-pink-100'
+                class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
               >
                 {frontmatter.description}
               </h1>
-              <div class='text-base text-zinc-600 mt-6 space-y-7 dark:text-zinc-400'>
+              <div class='text-base text-graniteGray mt-6 space-y-7 dark:text-opalGray'>
                 <slot />
               </div>
             </div>
@@ -50,12 +50,12 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                   social.map((item) => (
                     <li class='mt-4 flex'>
                       <a
-                        class='group text-sm text-zinc-800 font-medium flex transition dark:text-zinc-200 hover:text-teal-500 dark:hover:text-teal-500'
+                        class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-morningGlory dark:hover:text-morningGlory'
                         href={item.data.link}
                       >
                         <span
                           class:list={[
-                            'h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500',
+                            'h-6 w-6 flex-none fill-graniteGray transition group-hover:fill-morningGlory dark:fill-opalGray dark:group-hover:fill-morningGlory',
                             item.data.icon
                           ]}
                         />
@@ -64,13 +64,13 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                     </li>
                   ))
                 }
-                <li class='mt-8 pt-8 border-t border-zinc-100 flex dark:border-zinc-700/40'>
+                <li class='mt-8 pt-8 border-t border-border flex dark:border-border/40'>
                   <a
-                    class='group text-sm text-zinc-800 font-medium flex transition dark:text-zinc-200 hover:text-teal-500 dark:hover:text-teal-500'
+                    class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-morningGlory dark:hover:text-morningGlory'
                     href='mailto:chris@christham.net'
                   >
                     <span
-                      class='i-heroicons-envelope-solid flex-none h-6 w-6 transition fill-zinc-500 group-hover:fill-teal-500'
+                      class='i-heroicons-envelope-solid flex-none h-6 w-6 transition fill-graniteGray group-hover:fill-morningGlory dark:fill-opalGray dark:group-hover:fill-morningGlory'
                     ></span><span class='ml-4'>chris@christham.net</span></a
                   >
                 </li>

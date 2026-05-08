@@ -25,10 +25,10 @@ const { frontmatter } = Astro.props
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
           <header class='max-w-2xl'>
             <h1
-              class='text-4xl text-pink-800 tracking-tight font-bold sm:text-5xl dark:text-pink-100'
+              class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
             >
               {frontmatter.description}
-            </h1><div class='text-base text-zinc-600 mt-6 dark:text-zinc-400'>
+            </h1><div class='text-base text-graniteGray mt-6 dark:text-opalGray'>
               <slot />
             </div>
           </header><div class='mt-16 sm:mt-20'>
@@ -37,13 +37,13 @@ const { frontmatter } = Astro.props
                 frontmatter.list.map((section) => (
                   <section
                     aria-labelledby=':R6l6:'
-                    class='md:pl-6 md:border-l md:border-pink-100 md:dark:border-pink-700/40'
+                    class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'
                   >
                     <div class='gap-y-8 grid grid-cols-1 max-w-3xl items-baseline md:grid-cols-4'>
                       <>
                         <h2
                           id=':R6l6:'
-                          class='text-sm text-zinc-800 font-semibold dark:text-zinc-100'
+                          class='text-sm text-blackBeauty font-semibold dark:text-sugarSwizzle'
                         >
                           {section.section}
                         </h2>
@@ -51,10 +51,10 @@ const { frontmatter } = Astro.props
                           <ul class='space-y-16'>
                             {section.items.map((item) => (
                               <li class='group flex flex-col items-start relative'>
-                                <h3 class='text-base text-zinc-800 tracking-tight font-semibold dark:text-zinc-100'>
+                                <h3 class='text-base text-blackBeauty tracking-tight font-semibold dark:text-sugarSwizzle'>
                                   {item.item}
                                 </h3>
-                                <p class='text-sm text-zinc-600 mt-2 relative z-10 dark:text-zinc-400'>
+                                <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
                                   {item.description}
                                 </p>
                               </li>
