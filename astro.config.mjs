@@ -5,5 +5,11 @@ import sitemap from '@astrojs/sitemap'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://astro-spotlite.netlify.app',
-  integrations: [UnoCSS(), sitemap()]
+  integrations: [
+    UnoCSS(),
+    sitemap({
+      filter: (page) => page !== 'https://astro-spotlite.netlify.app/404/'
+    })
+  ]
+
 })
