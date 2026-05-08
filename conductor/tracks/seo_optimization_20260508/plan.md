@@ -30,6 +30,6 @@
 
 ## Phase 5: Core Web Vitals & Performance
 - [x] Task: Audit current image implementations across content and component files. [checkpoint: fad955b]
-- [ ] Task: Refactor images to use Astro's `<Image>` or `<Picture>` components with `sharp` processing and lazy loading (`loading="lazy"`).
-- [ ] Task: Run local Lighthouse audit to verify Performance and SEO scores (90+).
-- [ ] Task: Conductor - User Manual Verification 'Core Web Vitals & Performance' (Protocol in workflow.md)
+- [x] Task: Refactor images to use Astro's `<Image>` or `<Picture>` components with `sharp` processing and lazy loading (`loading="lazy"`). [checkpoint: cbb28e3]
+- [x] Task: Run local Lighthouse audit to verify Performance and SEO scores (90+). [checkpoint: cbb28e3]
+- [x] Task: Conductor - User Manual Verification 'Core Web Vitals & Performance' (Protocol in workflow.md) [checkpoint: ]
