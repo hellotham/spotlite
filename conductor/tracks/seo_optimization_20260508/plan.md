@@ -29,7 +29,7 @@
 - [x] Task: Conductor - User Manual Verification 'Sitemap & Robots' (Protocol in workflow.md) [checkpoint: e4c80f4]
 
 ## Phase 5: Core Web Vitals & Performance
-- [ ] Task: Audit current image implementations across content and component files.
+- [x] Task: Audit current image implementations across content and component files. [checkpoint: fad955b]
 - [ ] Task: Refactor images to use Astro's `<Image>` or `<Picture>` components with `sharp` processing and lazy loading (`loading="lazy"`).
 - [ ] Task: Run local Lighthouse audit to verify Performance and SEO scores (90+).
 - [ ] Task: Conductor - User Manual Verification 'Core Web Vitals & Performance' (Protocol in workflow.md)
