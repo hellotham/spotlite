@@ -1,6 +1,7 @@
 # Technology Stack
 
 ## Core Framework & Language
+- **pnpm:** The package manager used for dependency management.
 - **Astro:** The primary web framework used for building the static site, leveraging the Content Layer API for data management.
 - **TypeScript:** Used throughout the project for static type-checking and improved developer experience.
 

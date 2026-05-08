@@ -4,6 +4,7 @@ Spotlite is a modern, production-ready personal website template built with **As
 
 ## 🛠 Tech Stack
 
+- **Package Manager:** [pnpm](https://pnpm.io/)]
 - **Framework:** [Astro](https://astro.build) (using Content Layer API)
 - **Styling:** [UnoCSS](https://unocss.dev/) with Wind4, Typography, and Icons presets
 - **Type Safety:** [TypeScript](https://www.typescriptlang.org/)
