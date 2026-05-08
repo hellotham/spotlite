@@ -23,10 +23,10 @@
     - [x] Sub-task: Update `src/components/hero.astro` and `work.astro` typography and spacing.
 - [x] Task: Conductor - User Manual Verification 'UI Components Alignment' (f1f4196)
 
-## Phase 4: Page Level Alignment
+## Phase 4: Page Level Alignment [checkpoint: b77de5b]
 - [x] Task: Align Main Pages (6371a7b)
     - [x] Sub-task: Review and adjust `src/pages/index.astro`, `about.md`, `creations.md`, `uses.md`.
     - [x] Sub-task: Review and adjust `src/pages/projects.astro`, `articles.astro`.
 - [x] Task: Align Dynamic Routes (85baf0b)
     - [x] Sub-task: Review `src/pages/article/[...id].astro` for markdown typography alignment (`presetTypography` usage).
-- [ ] Task: Conductor - User Manual Verification 'Page Level Alignment' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Page Level Alignment' (b77de5b)
