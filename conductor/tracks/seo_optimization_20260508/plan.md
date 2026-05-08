@@ -21,12 +21,12 @@
 - [x] Task: Write tests and implement `BreadcrumbList` schema across all sub-pages.
 - [x] Task: Conductor - User Manual Verification 'Advanced Structured Data (JSON-LD)' (Protocol in workflow.md) [checkpoint: d96b9e3]
 
-## Phase 4: Sitemap & Robots
+## Phase 4: Sitemap & Robots [checkpoint: a574df0]
 - [x] Task: Write tests/verification for the presence of `@astrojs/sitemap` integration and correct XML output. [checkpoint: e7cee8f]
 - [x] Task: Ensure `@astrojs/sitemap` is integrated in `astro.config.mjs` and optimize settings. [checkpoint: 54e93b2]
 - [x] Task: Write tests to ensure `robots.txt` is generated correctly. [checkpoint: ec64251]
 - [x] Task: Implement or verify a `robots.txt` that points to the dynamic `sitemap-index.xml`. [checkpoint: ec64251]
-- [x] Task: Conductor - User Manual Verification 'Sitemap & Robots' (Protocol in workflow.md) [checkpoint: ]
+- [x] Task: Conductor - User Manual Verification 'Sitemap & Robots' (Protocol in workflow.md) [checkpoint: e4c80f4]
 
 ## Phase 5: Core Web Vitals & Performance
 - [ ] Task: Audit current image implementations across content and component files.
