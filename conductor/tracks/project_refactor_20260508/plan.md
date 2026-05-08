@@ -11,11 +11,11 @@
 - [x] Task: Conductor - User Manual Verification 'Dependency Audit and Update' (Protocol in workflow.md) (752eab7)
 
 ## Phase 2: TypeScript Strictness [checkpoint: 33418e2]
-- [x] Task: Audit and Fix Type Errors (33418e2)
+- [x] Task: Audit and Fix Type Errors (ab7fc74)
     - [x] Run `tsc --noEmit` to identify all current TypeScript errors.
     - [x] Resolve explicit type errors across `src/components`, `src/pages`, and `src/layouts`.
     - [x] Replace `any` types with proper interfaces or generic types where applicable.
-- [x] Task: Enhance Content Layer Typings (33418e2)
+- [x] Task: Enhance Content Layer Typings (ab7fc74)
     - [x] Review `src/content.config.ts` to ensure collection schemas are strict and comprehensive.
 - [x] Task: Conductor - User Manual Verification 'TypeScript Strictness' (Protocol in workflow.md) (60820ed)
 
