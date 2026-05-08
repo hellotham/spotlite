@@ -26,7 +26,7 @@
 - [x] Task: Ensure `@astrojs/sitemap` is integrated in `astro.config.mjs` and optimize settings. [checkpoint: 54e93b2]
 - [x] Task: Write tests to ensure `robots.txt` is generated correctly. [checkpoint: ec64251]
 - [x] Task: Implement or verify a `robots.txt` that points to the dynamic `sitemap-index.xml`. [checkpoint: ec64251]
-- [ ] Task: Conductor - User Manual Verification 'Sitemap & Robots' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Sitemap & Robots' (Protocol in workflow.md) [checkpoint: ]
 
 ## Phase 5: Core Web Vitals & Performance
 - [ ] Task: Audit current image implementations across content and component files.
