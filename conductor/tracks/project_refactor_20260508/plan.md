@@ -10,7 +10,7 @@
     - [x] Uninstall unused packages and clean up `pnpm-lock.yaml`.
 - [x] Task: Conductor - User Manual Verification 'Dependency Audit and Update' (Protocol in workflow.md) (752eab7)
 
-## Phase 2: TypeScript Strictness [checkpoint: 33418e2]
+## Phase 2: TypeScript Strictness [checkpoint: 91c88cb]
 - [x] Task: Audit and Fix Type Errors (ab7fc74)
     - [x] Run `tsc --noEmit` to identify all current TypeScript errors.
     - [x] Resolve explicit type errors across `src/components`, `src/pages`, and `src/layouts`.
