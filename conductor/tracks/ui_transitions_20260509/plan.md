@@ -1,9 +1,9 @@
 # Implementation Plan: UI Transitions and Animations
 
-## Phase 1: Astro View Transitions Setup
+## Phase 1: Astro View Transitions Setup [checkpoint: df9d8e6]
 - [x] Task: Add `<ViewTransitions />` component to the main layout. 2f767a7
     - [ ] Update `src/layouts/layout.astro` to import and include `<ViewTransitions />` in the `<head>`.
-- [ ] Task: Conductor - User Manual Verification 'Astro View Transitions Setup' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Astro View Transitions Setup' (Protocol in workflow.md)
 
 ## Phase 2: UnoCSS Animation Configuration & Base Utilities
 - [ ] Task: Configure global animation rules and `prefers-reduced-motion`.
