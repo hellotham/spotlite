@@ -10,6 +10,9 @@
     - `presetWind4`: For utility classes.
     - `presetTypography`: For styling markdown content.
     - `presetIcons`: For integrating Iconify icons.
+    - `presetWebFonts`: For loading Google Fonts (Noto Sans, Noto Serif, Noto Sans Mono).
+
+- **Rosely Design System:** A warm, low-contrast design system used for consistent styling across the site.
 ## Infrastructure & Tools
 - **Netlify:** The deployment and hosting platform, configured for Static Site Generation (SSG).
 - **@astrojs/sitemap:** Automatically generates XML sitemaps for improved search engine indexing.

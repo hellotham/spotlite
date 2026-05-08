@@ -5,7 +5,7 @@
 - **Clarity and Tone:** Maintain a professional yet accessible tone that conveys expertise while ensuring information is easy to digest for recruiters and developers alike.
 
 ## Visual Design & Aesthetic
-- **Clean & Minimalist:** The user interface should prioritise clarity and focus. Use a "less is more" approach with high whitespace, crisp typography, and a limited, purposeful colour palette.
+- **Clean & Minimalist (Rosely System):** The user interface should prioritise clarity and focus using the **Rosely design system**. It features a warm, low-contrast palette (Pinks, Greys, Purples) designed for eye comfort and a serene beauty. Use a "less is more" approach with high whitespace, crisp typography, and a limited, purposeful colour palette.
 - **Utility-First:** Leverage UnoCSS utility classes to maintain a consistent design system that avoids unnecessary decorative elements.
 
 ## User Experience (UX) & Performance
