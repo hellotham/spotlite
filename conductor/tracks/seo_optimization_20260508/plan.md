@@ -12,14 +12,14 @@
 - [x] Task: Conductor - User Manual Verification 'Meta Tags & OpenGraph' (Protocol in workflow.md)
 
 ## Phase 3: Advanced Structured Data (JSON-LD)
-- [ ] Task: Write tests for `WebSite` and `Person` JSON-LD schema generation on Global Pages.
-- [ ] Task: Implement `WebSite` and `Person` schema for global templates.
-- [ ] Task: Write tests for `Article` / `BlogPosting` schema on Article pages.
-- [ ] Task: Implement `Article` schema for `src/content/article/`.
-- [ ] Task: Write tests for `ItemPage` schema on Projects/Work pages.
-- [ ] Task: Implement `ItemPage` schema for `src/content/project/` and `src/content/work/`.
-- [ ] Task: Write tests and implement `BreadcrumbList` schema across all sub-pages.
-- [ ] Task: Conductor - User Manual Verification 'Advanced Structured Data (JSON-LD)' (Protocol in workflow.md)
+- [x] Task: Write tests for `WebSite` and `Person` JSON-LD schema generation on Global Pages.
+- [x] Task: Implement `WebSite` and `Person` schema for global templates.
+- [x] Task: Write tests for `Article` / `BlogPosting` schema on Article pages.
+- [x] Task: Implement `Article` schema for `src/content/article/`.
+- [x] Task: Write tests for `ItemPage` schema on Projects/Work pages.
+- [x] Task: Implement `ItemPage` schema for `src/content/project/` and `src/content/work/`.
+- [x] Task: Write tests and implement `BreadcrumbList` schema across all sub-pages.
+- [x] Task: Conductor - User Manual Verification 'Advanced Structured Data (JSON-LD)' (Protocol in workflow.md) [checkpoint: ]
 
 ## Phase 4: Sitemap & Robots
 - [ ] Task: Write tests/verification for the presence of `@astrojs/sitemap` integration and correct XML output.
