@@ -35,10 +35,10 @@
     - [x] Ensure all colors, fonts, and spacing utilities strictly reference the configured Rosely Design System tokens in `uno.config.ts`.
 - [x] Task: Conductor - User Manual Verification 'UnoCSS Styling Consolidation' (Protocol in workflow.md) (49c2695)
 
-## Phase 5: Structural Cleanup
-- [ ] Task: Reorganize Components
-    - [ ] Audit `src/components` to identify components that should be grouped or broken down.
-    - [ ] Ensure consistent naming conventions for files and component functions.
-- [ ] Task: Remove Dead Code
-    - [ ] Delete any orphaned components, layouts, or utility functions that are no longer referenced in the project.
-- [ ] Task: Conductor - User Manual Verification 'Structural Cleanup' (Protocol in workflow.md)
+## Phase 5: Structural Cleanup [checkpoint: 748daa4]
+- [x] Task: Reorganize Components (49c2695)
+    - [x] Audit `src/components` to identify components that should be grouped or broken down.
+    - [x] Ensure consistent naming conventions for files and component functions.
+- [x] Task: Remove Dead Code (49c2695)
+    - [x] Delete any orphaned components, layouts, or utility functions that are no longer referenced in the project.
+- [x] Task: Conductor - User Manual Verification 'Structural Cleanup' (Protocol in workflow.md) (42a3b42)
