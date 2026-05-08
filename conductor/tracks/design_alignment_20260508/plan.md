@@ -27,6 +27,6 @@
 - [x] Task: Align Main Pages (6371a7b)
     - [x] Sub-task: Review and adjust `src/pages/index.astro`, `about.md`, `creations.md`, `uses.md`.
     - [x] Sub-task: Review and adjust `src/pages/projects.astro`, `articles.astro`.
-- [ ] Task: Align Dynamic Routes
-    - [ ] Sub-task: Review `src/pages/article/[...id].astro` for markdown typography alignment (`presetTypography` usage).
+- [x] Task: Align Dynamic Routes (85baf0b)
+    - [x] Sub-task: Review `src/pages/article/[...id].astro` for markdown typography alignment (`presetTypography` usage).
 - [ ] Task: Conductor - User Manual Verification 'Page Level Alignment' (Protocol in workflow.md)
