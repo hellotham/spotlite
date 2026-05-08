@@ -7,13 +7,13 @@
     - [x] Verify border radius and shadow defaults match DESIGN.md.
 - [x] Task: Conductor - User Manual Verification 'Setup and Configuration Review' (497a06b)
 
-## Phase 2: Layout Components Alignment
+## Phase 2: Layout Components Alignment [checkpoint: 5cce269]
 - [x] Task: Align Header and Footer (c85c529)
     - [x] Sub-task: Update `src/components/header.astro` and `headerhome.astro` to use Rosely colors and typography.
     - [x] Sub-task: Update `src/components/footer.astro` spacing, colors, and fonts.
 - [x] Task: Align Navigation (c85c529)
     - [x] Sub-task: Update `src/components/navbar.astro` and `navmenu.astro` styling (borders, interactive states).
-- [ ] Task: Conductor - User Manual Verification 'Layout Components Alignment' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Layout Components Alignment' (5cce269)
 
 ## Phase 3: UI Components Alignment
 - [ ] Task: Align Content Components
