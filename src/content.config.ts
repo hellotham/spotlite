@@ -45,8 +45,9 @@ const social = defineCollection({
   loader: file('src/social.json', { parser: (text) => JSON.parse(text) }),
   schema: z.object({
     id: z.string(),
+    order: z.number(),
     title: z.string(),
-    link: z.string().url(),
+    link: z.string(),
     icon: z.string()
   })
 })

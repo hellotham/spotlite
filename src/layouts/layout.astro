@@ -133,13 +133,21 @@ const breadcrumbList = {
     <meta name='twitter:title' content={title} />
     <meta name='twitter:description' content={description} />
     <meta name='twitter:image' content={socialImageURL} />
-    <script type='application/ld+json' set:html={JSON.stringify(websiteSchema)} />
-    <script type='application/ld+json' set:html={JSON.stringify(personSchema)} />
-    {article && <script type='application/ld+json' set:html={JSON.stringify(articleSchema)} />}
-    {itemPage && <script type='application/ld+json' set:html={JSON.stringify(itemPageSchema)} />}
+    <script is:inline type='application/ld+json' set:html={JSON.stringify(websiteSchema)} />
+    <script is:inline type='application/ld+json' set:html={JSON.stringify(personSchema)} />
+    {
+      article && (
+        <script is:inline type='application/ld+json' set:html={JSON.stringify(articleSchema)} />
+      )
+    }
+    {
+      itemPage && (
+        <script is:inline type='application/ld+json' set:html={JSON.stringify(itemPageSchema)} />
+      )
+    }
     {
       Astro.url.pathname !== '/' && (
-        <script type='application/ld+json' set:html={JSON.stringify(breadcrumbList)} />
+        <script is:inline type='application/ld+json' set:html={JSON.stringify(breadcrumbList)} />
       )
     }
     <script is:inline>
