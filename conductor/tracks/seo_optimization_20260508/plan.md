@@ -22,7 +22,7 @@
 - [x] Task: Conductor - User Manual Verification 'Advanced Structured Data (JSON-LD)' (Protocol in workflow.md) [checkpoint: d96b9e3]
 
 ## Phase 4: Sitemap & Robots
-- [ ] Task: Write tests/verification for the presence of `@astrojs/sitemap` integration and correct XML output.
+- [x] Task: Write tests/verification for the presence of `@astrojs/sitemap` integration and correct XML output. [checkpoint: e7cee8f]
 - [ ] Task: Ensure `@astrojs/sitemap` is integrated in `astro.config.mjs` and optimize settings.
 - [ ] Task: Write tests to ensure `robots.txt` is generated correctly.
 - [ ] Task: Implement or verify a `robots.txt` that points to the dynamic `sitemap-index.xml`.
