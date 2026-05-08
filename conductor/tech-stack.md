@@ -3,7 +3,7 @@
 ## Core Framework & Language
 - **pnpm:** The package manager used for dependency management.
 - **Astro:** The primary web framework used for building the static site, leveraging the Content Layer API for data management.
-- **TypeScript:** Used throughout the project for static type-checking and improved developer experience.
+- **TypeScript:** Used throughout the project for static type-checking and improved developer experience. Configured with strict rules and enforced across components, layouts, and tests.
 
 ## Styling & UI
 - **UnoCSS:** A utility-first CSS engine used for styling, configured with the following presets:
@@ -21,4 +21,4 @@
 - **Vitest:** The primary testing framework for unit and component testing. Configured with `jsdom` for DOM manipulation tests and `v8` for code coverage.
 
 ## Content Management
-- **Astro Content Layer:** Manages structured content from Markdown (`src/content/`) and JSON (`src/*.json`) files.
+- **Astro Content Layer:** Manages structured content from Markdown (`src/content/`) and JSON (`src/*.json`) files, with strict Zod schemas for all collections.
