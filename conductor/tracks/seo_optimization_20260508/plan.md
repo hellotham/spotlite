@@ -28,8 +28,8 @@
 - [x] Task: Implement or verify a `robots.txt` that points to the dynamic `sitemap-index.xml`. [checkpoint: ec64251]
 - [x] Task: Conductor - User Manual Verification 'Sitemap & Robots' (Protocol in workflow.md) [checkpoint: e4c80f4]
 
-## Phase 5: Core Web Vitals & Performance
+## Phase 5: Core Web Vitals & Performance [checkpoint: e945d0a]
 - [x] Task: Audit current image implementations across content and component files. [checkpoint: fad955b]
 - [x] Task: Refactor images to use Astro's `<Image>` or `<Picture>` components with `sharp` processing and lazy loading (`loading="lazy"`). [checkpoint: cbb28e3]
 - [x] Task: Run local Lighthouse audit to verify Performance and SEO scores (90+). [checkpoint: cbb28e3]
-- [x] Task: Conductor - User Manual Verification 'Core Web Vitals & Performance' (Protocol in workflow.md) [checkpoint: ]
+- [x] Task: Conductor - User Manual Verification 'Core Web Vitals & Performance' (Protocol in workflow.md) [checkpoint: 4286fb6]
