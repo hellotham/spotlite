@@ -1,7 +1,7 @@
 # Implementation Plan: UI Transitions and Animations
 
 ## Phase 1: Astro View Transitions Setup
-- [ ] Task: Add `<ViewTransitions />` component to the main layout.
+- [x] Task: Add `<ViewTransitions />` component to the main layout. 51f65ed
     - [ ] Update `src/layouts/layout.astro` to import and include `<ViewTransitions />` in the `<head>`.
 - [ ] Task: Conductor - User Manual Verification 'Astro View Transitions Setup' (Protocol in workflow.md)
 
