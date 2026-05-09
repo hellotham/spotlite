@@ -2,10 +2,10 @@
 
 ## Phase 1: Layout Updates
 
-- [ ] Task: Update `about.astro` layout
-    - [ ] Write/update failing test to verify `about.astro` description and markdown prose rendering
-    - [ ] Update `src/layouts/about.astro` to render `description` from frontmatter and wrap `<slot />` in `<article class="prose">`
-    - [ ] Verify test passes
+- [x] Task: Update `about.astro` layout 445701e
+    - [x] Write/update failing test to verify `about.astro` description and markdown prose rendering
+    - [x] Update `src/layouts/about.astro` to render `description` from frontmatter and wrap `<slot />` in `<article class="prose">`
+    - [x] Verify test passes
 - [ ] Task: Update `articles.astro` layout
     - [ ] Write/update failing test to verify `articles.astro` description and markdown prose rendering
     - [ ] Update `src/layouts/articles.astro` to render `description` from frontmatter and wrap `<slot />` in `<article class="prose">`
