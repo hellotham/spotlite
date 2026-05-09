@@ -14,7 +14,7 @@ const current = Astro.url.pathname
       <li>
         <a
           class:list={[
-            'relative block px-3 py-2 transition',
+            'relative block px-3 py-2 transition-colors duration-200',
             current == item.data.link ? 'text-morningGlory' : 'hover:text-morningGlory'
           ]}
           href={item.data.link}
