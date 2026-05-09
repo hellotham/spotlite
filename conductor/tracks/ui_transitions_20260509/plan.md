@@ -14,7 +14,7 @@
 ## Phase 3: Interaction Feedback (Hover/Focus States)
 - [x] Task: Enhance button and link hover/focus states. 6ef32c9
     - [ ] Review navigation components (`src/components/navbar.astro`, `src/components/navmenu.astro`) and apply UnoCSS transition classes (e.g., `transition-colors duration-200 ease-in-out`).
-- [ ] Task: Enhance interactive cards.
+- [x] Task: Enhance interactive cards. 6d5b285
     - [ ] Review `src/components/articlelist.astro`, `src/components/imagecards.astro`, `src/components/work.astro`.
     - [ ] Add subtle transform/shadow transitions on hover (e.g., `transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`).
 - [ ] Task: Conductor - User Manual Verification 'Interaction Feedback (Hover/Focus States)' (Protocol in workflow.md)
