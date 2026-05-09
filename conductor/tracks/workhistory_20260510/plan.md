@@ -1,6 +1,6 @@
 # Implementation Plan: Work History Feature
 
-## Phase 1: Navigation and Routing Updates
+## Phase 1: Navigation and Routing Updates [checkpoint: 0b11343]
 - [x] Task: Add "Work" to main navigation f629b0d
     - [x] Update `src/menu.json` to include a "Work" item, linking to `/work`.
     - [x] Position the new item immediately after "Articles".
@@ -8,7 +8,7 @@
     - [x] Create a layout for individual work items (e.g., `src/layouts/work.astro` if needed, or reuse an existing layout).
     - [x] Create dynamic route file (e.g., `src/pages/work/[...page].astro` or similar, depending on existing routing patterns).
     - [x] Implement `getStaticPaths` to generate routes based on the `work` collection.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Navigation and Routing Updates' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Navigation and Routing Updates' (Protocol in workflow.md) 0b11343
 
 ## Phase 2: Work History Page Implementation
 - [ ] Task: Write tests for Work History list page
