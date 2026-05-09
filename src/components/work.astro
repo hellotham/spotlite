@@ -29,7 +29,7 @@ work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
         <li>
           <a
             href={'/work/' + job.id}
-            class='group flex gap-4 p-2 -m-2 rounded-xl transition hover:bg-heavenlyPink/50 dark:hover:bg-grapeade/30 focus-ring'
+            class='group p-2 rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
           >
             <div class='mt-1 rounded-full flex flex-none h-10 w-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
               <Image
@@ -43,7 +43,7 @@ work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
             </div>
             <dl class='flex flex-auto flex-wrap gap-x-2'>
               <dt class='sr-only'>Company</dt>
-              <dd class='text-sm text-primary font-medium flex-none w-full group-hover:text-accent transition'>
+              <dd class='text-sm text-primary font-medium flex-none w-full transition group-hover:text-accent'>
                 {job.data.company}
               </dd>
               <dt class='sr-only'>Role</dt>

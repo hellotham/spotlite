@@ -1,8 +1,0 @@
-{
-  "track_id": "workhistory_20260510",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-05-10T08:14:00Z",
-  "updated_at": "2026-05-10T08:14:00Z",
-  "description": "change @src/components/work.astro so that the list items are clickable buttons that open into work pages (similar to article pages but uses the work collection). Also create a Work navigation menu item that opens into a page with work history."
-}

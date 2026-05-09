@@ -31,13 +31,8 @@ const work = await getCollection('work')
               work.map((item) => (
                 <article class='md:grid md:grid-cols-4 md:items-baseline'>
                   <div class='group flex flex-col items-start relative md:col-span-3'>
-                    <time
-                      class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray md:hidden'
-                    >
-                      <span
-                        class='flex items-center inset-y-0 left-0 absolute'
-                        aria-hidden='true'
-                      >
+                    <time class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray md:hidden'>
+                      <span class='flex items-center inset-y-0 left-0 absolute' aria-hidden='true'>
                         <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
                       </span>
                       {item.data.datespan}
@@ -53,7 +48,7 @@ const work = await getCollection('work')
                       {item.data.company}
                     </p>
                     <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
-                      {item.body.split('\n')[0].replace(/^#+\s+/, '')}
+                      {item.body?.split('\n')[0].replace(/^#+\s+/, '') ?? ''}
                     </p>
                     <div
                       aria-hidden='true'
@@ -63,9 +58,7 @@ const work = await getCollection('work')
                       <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />
                     </div>
                   </div>
-                  <time
-                    class='text-sm text-graniteGray mb-3 mt-1 flex hidden items-center order-first relative z-10 dark:text-opalGray md:block'
-                  >
+                  <time class='text-sm text-graniteGray mb-3 mt-1 flex hidden items-center order-first relative z-10 dark:text-opalGray md:block'>
                     {item.data.datespan}
                   </time>
                 </article>
