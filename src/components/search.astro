@@ -27,7 +27,9 @@
       placeholder='Search articles, pages, and projects'
       class='text-sm input-base mt-2 w-full'
     />
-    <p data-search-status class='text-xs text-secondary mt-2'>Type at least 2 characters.</p>
+    <p data-search-status aria-live='polite' role='status' class='text-xs text-secondary mt-2'>
+      Type at least 2 characters.
+    </p>
     <ul data-search-results class='mt-3 max-h-84 overflow-auto space-y-2'></ul>
   </div>
 </div>

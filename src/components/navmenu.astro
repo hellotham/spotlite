@@ -16,6 +16,7 @@ const current = Astro.url.pathname
             current == item.data.link ? 'text-accent' : 'hover-accent'
           ]}
           href={item.data.link}
+          aria-current={current == item.data.link ? 'page' : undefined}
         >
           {item.data.title}
           {current == item.data.link && (
