@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest'
 import fs from 'fs'
 import path from 'path'
 
-describe('creations.astro layout', () => {
-  const layoutPath = path.resolve(__dirname, './creations.astro')
+describe('uses.astro layout', () => {
+  const layoutPath = path.resolve(__dirname, './uses.astro')
   const content = fs.readFileSync(layoutPath, 'utf-8')
 
   it('should display the description from frontmatter', () => {
