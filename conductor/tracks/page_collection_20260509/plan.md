@@ -17,15 +17,15 @@
     - [x] Create `src/layouts/ProjectsLayout.astro`. Move the collection fetching and list rendering logic here.
 - [x] Task: Conductor - User Manual Verification 'Create Dynamic Route & Layouts' (Protocol in workflow.md) (7aa6661)
 
-## Phase 3: Migrate Content Files
-- [ ] Task: Migrate static markdown pages.
-    - [ ] Move `src/pages/about.md` to `src/content/page/about.md` and update frontmatter (add `layout: ../layouts/about.astro` or similar).
-    - [ ] Move `src/pages/creations.md` to `src/content/page/creations.md` and update frontmatter.
-    - [ ] Move `src/pages/uses.md` to `src/content/page/uses.md` and update frontmatter.
-- [ ] Task: Migrate list pages.
-    - [ ] Delete `src/pages/articles.astro` and create `src/content/page/articles.md` with `layout: ../layouts/ArticlesLayout.astro` (or correct path).
-    - [ ] Delete `src/pages/projects.astro` and create `src/content/page/projects.md` with `layout: ../layouts/ProjectsLayout.astro` (or correct path).
-- [ ] Task: Conductor - User Manual Verification 'Migrate Content Files' (Protocol in workflow.md)
+## Phase 3: Migrate Content Files [checkpoint: d9d3f8e]
+- [x] Task: Migrate static markdown pages. (575929f)
+    - [x] Move `src/pages/about.md` to `src/content/page/about.md` and update frontmatter (add `layout: ../layouts/about.astro` or similar).
+    - [x] Move `src/pages/creations.md` to `src/content/page/creations.md` and update frontmatter.
+    - [x] Move `src/pages/uses.md` to `src/content/page/uses.md` and update frontmatter.
+- [x] Task: Migrate list pages. (575929f)
+    - [x] Delete `src/pages/articles.astro` and create `src/content/page/articles.md` with `layout: ../layouts/ArticlesLayout.astro` (or correct path).
+    - [x] Delete `src/pages/projects.astro` and create `src/content/page/projects.md` with `layout: ../layouts/ProjectsLayout.astro` (or correct path).
+- [x] Task: Conductor - User Manual Verification 'Migrate Content Files' (Protocol in workflow.md) (d9d3f8e)
 
 ## Phase 4: Cleanup and Verification
 - [ ] Task: Run type checks and linter (`pnpm run lint`).
