@@ -11,9 +11,13 @@ const description = 'artist, consultant, cyclist, designer, musician, photograph
 ---
 
 <Layout {title} {description} home={true}>
-  <Hero />
-  <ImageCards />
-  <div class='mt-24 md:mt-28 sm:px-8'>
+  <div class='animate-fade-in-up'>
+    <Hero />
+  </div>
+  <div class='animate-fade-in-up [animation-delay:200ms]'>
+    <ImageCards />
+  </div>
+  <div class='mt-24 md:mt-28 sm:px-8 animate-fade-in-up [animation-delay:400ms]'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
