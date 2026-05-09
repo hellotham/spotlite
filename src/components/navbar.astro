@@ -14,7 +14,10 @@ import NavMenu from './navmenu.astro'
       <span class='i-heroicons-chevron-down ml-3 h-4 w-4'></span>
     </button>
   </div>
-  <div id='mobile-menu' class='hidden pointer-events-auto inset-x-0 top-12 absolute z-50'>
+  <div
+    id='mobile-menu'
+    class='pointer-events-none opacity-0 scale-95 transition-all duration-300 ease-in-out inset-x-0 top-12 absolute z-50'
+  >
     <NavMenu />
   </div>
   <nav class='hidden pointer-events-auto md:block'>
@@ -28,12 +31,14 @@ import NavMenu from './navmenu.astro'
 
   if (button && menu) {
     button.addEventListener('click', () => {
-      const isOpen = menu.classList.contains('hidden')
+      const isOpen = menu.classList.contains('opacity-0')
       if (isOpen) {
-        menu.classList.remove('hidden')
+        menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none')
+        menu.classList.add('opacity-100', 'scale-100', 'pointer-events-auto')
         button.setAttribute('aria-expanded', 'true')
       } else {
-        menu.classList.add('hidden')
+        menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
+        menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
         button.setAttribute('aria-expanded', 'false')
       }
     })
@@ -42,8 +47,9 @@ import NavMenu from './navmenu.astro'
     document.addEventListener('click', (event) => {
       const isClickInside =
         button.contains(event.target as Node) || menu.contains(event.target as Node)
-      if (!isClickInside && !menu.classList.contains('hidden')) {
-        menu.classList.add('hidden')
+      if (!isClickInside && !menu.classList.contains('opacity-0')) {
+        menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
+        menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
         button.setAttribute('aria-expanded', 'false')
       }
     })
