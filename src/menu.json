@@ -12,6 +12,12 @@
     "link": "/articles"
   },
   {
+    "id": "work",
+    "order": 25,
+    "title": "Work",
+    "link": "/work"
+  },
+  {
     "id": "projects",
     "order": 30,
     "title": "Projects",
