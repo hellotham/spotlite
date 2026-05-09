@@ -26,8 +26,11 @@ work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
   <ol class='mt-6 space-y-4'>
     {
       work.map((job) => (
-        <li class='flex gap-4'>
-          <>
+        <li>
+          <a
+            href={'/work/' + job.id}
+            class='group flex gap-4 p-2 -m-2 rounded-xl transition hover:bg-heavenlyPink/50 dark:hover:bg-grapeade/30 focus-ring'
+          >
             <div class='mt-1 rounded-full flex flex-none h-10 w-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
               <Image
                 src={job.data.image}
@@ -39,18 +42,18 @@ work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
               />
             </div>
             <dl class='flex flex-auto flex-wrap gap-x-2'>
-              <dd class='text-sm text-primary font-medium flex-none w-full'>{job.data.company}</dd>
+              <dt class='sr-only'>Company</dt>
+              <dd class='text-sm text-primary font-medium flex-none w-full group-hover:text-accent transition'>
+                {job.data.company}
+              </dd>
               <dt class='sr-only'>Role</dt>
               <dd class='text-xs text-secondary'>{job.data.role}</dd>
               <dt class='sr-only'>Date</dt>
-              <>
-                <dt class='sr-only'>Company</dt>
-                <dd class='text-xs text-secondary ml-auto' aria-label={job.data.datespan}>
-                  {job.data.datespan}
-                </dd>
-              </>
+              <dd class='text-xs text-secondary ml-auto' aria-label={job.data.datespan}>
+                {job.data.datespan}
+              </dd>
             </dl>
-          </>
+          </a>
         </li>
       ))
     }
