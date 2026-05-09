@@ -57,7 +57,6 @@ const page = defineCollection({
   schema: z
     .object({
       title: z.string(),
-      heading: z.string().optional(),
       description: z.string().optional(),
       draft: z.boolean().optional().default(false),
       layout: z.string(),

@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/creations.astro
-title: Creations - Chris Tham
-description: Things I have created.
+title: Things I have created.
+description: I love creating all sorts of things. Here is a selection of music and videos that I have made.
 list:
   - section: Music
     items:
@@ -85,5 +85,4 @@ list:
         link: https://vimeo.com/98192987
 ---
 
-I love creating all sorts of things. Here is a selection of music and videos
-that I have made.
+This page gathers a selection of orchestral and electronic music I have composed, arranged, produced, and shared, including studio work, live-inspired experiments, and personal creative milestones.

@@ -4,7 +4,7 @@ import { getCollection, render } from 'astro:content'
 export async function getStaticPaths() {
   const pages = await getCollection('page')
   return pages.map((page) => ({
-    params: { slug: page.id },
+    params: { page: page.id },
     props: { page }
   }))
 }
@@ -14,9 +14,9 @@ const { Content } = await render(page)
 
 const layouts = import.meta.glob('../layouts/*.astro')
 const layoutPath = page.data.layout
-const LayoutComponent = ((await layouts[layoutPath]()) as any).default
+const Layout = ((await layouts[layoutPath]()) as any).default
 ---
 
-<LayoutComponent frontmatter={page.data}>
+<Layout frontmatter={page.data}>
   <Content />
-</LayoutComponent>
+</Layout>
