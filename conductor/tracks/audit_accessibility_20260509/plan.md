@@ -1,7 +1,7 @@
 # Implementation Plan: Audit and improve site accessibility
 
 ## Phase 1: Automated Auditing and Static Analysis
-- [ ] Task: Configure and run accessibility audits
+- [~] Task: Configure and run accessibility audits
     - [ ] Run Lighthouse or Axe audit on the generated static site
     - [ ] Document identified issues in a tracking list
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Automated Auditing and Static Analysis' (Protocol in workflow.md)
