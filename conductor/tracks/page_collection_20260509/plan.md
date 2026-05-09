@@ -27,8 +27,8 @@
     - [x] Delete `src/pages/projects.astro` and create `src/content/page/projects.md` with `layout: ../layouts/ProjectsLayout.astro` (or correct path).
 - [x] Task: Conductor - User Manual Verification 'Migrate Content Files' (Protocol in workflow.md) (d9d3f8e)
 
-## Phase 4: Cleanup and Verification
-- [ ] Task: Run type checks and linter (`pnpm run lint`).
-- [ ] Task: Run unit tests.
-- [ ] Task: Verify the local build works (`pnpm run build`).
-- [ ] Task: Conductor - User Manual Verification 'Cleanup and Verification' (Protocol in workflow.md)
+## Phase 4: Cleanup and Verification [checkpoint: d08a7ed]
+- [x] Task: Run type checks and linter (`pnpm run lint`). (9cade71)
+- [x] Task: Run unit tests. (ac8041d)
+- [x] Task: Verify the local build works (`pnpm run build`). (9cade71)
+- [x] Task: Conductor - User Manual Verification 'Cleanup and Verification' (Protocol in workflow.md) (d08a7ed)
