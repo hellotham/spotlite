@@ -1,9 +1,9 @@
 # Implementation Plan: Work History Feature
 
 ## Phase 1: Navigation and Routing Updates
-- [ ] Task: Add "Work" to main navigation
-    - [ ] Update `src/menu.json` to include a "Work" item, linking to `/work`.
-    - [ ] Position the new item immediately after "Articles".
+- [x] Task: Add "Work" to main navigation f629b0d
+    - [x] Update `src/menu.json` to include a "Work" item, linking to `/work`.
+    - [x] Position the new item immediately after "Articles".
 - [ ] Task: Set up dynamic routing for individual work pages
     - [ ] Create a layout for individual work items (e.g., `src/layouts/work.astro` if needed, or reuse an existing layout).
     - [ ] Create dynamic route file (e.g., `src/pages/work/[...page].astro` or similar, depending on existing routing patterns).
