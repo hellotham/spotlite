@@ -1,0 +1,274 @@
+<div class='pointer-events-auto relative' data-pagefind-search>
+  <button
+    type='button'
+    data-search-toggle
+    aria-label='Open site search'
+    aria-controls='site-search-panel'
+    aria-expanded='false'
+    class='group px-3 py-2 rounded-full glass-hover focus-ring'
+  >
+    <span
+      aria-hidden='true'
+      class='i-heroicons-magnifying-glass text-primary h-6 w-6 transition group-hover:text-morningGlory'
+    ></span>
+  </button>
+
+  <div
+    id='site-search-panel'
+    data-search-panel
+    class='text-primary mt-2 p-3 rounded-2xl glass w-[min(90vw,28rem)] hidden shadow-lg right-0 top-10 absolute z-60'
+  >
+    <label for='site-search-input' class='text-sm font-semibold'>Search site</label>
+    <input
+      id='site-search-input'
+      data-search-input
+      type='search'
+      autocomplete='off'
+      placeholder='Search articles, pages, and projects'
+      class='text-sm input-base mt-2 w-full'
+    />
+    <p data-search-status class='text-xs text-secondary mt-2'>Type at least 2 characters.</p>
+    <ul data-search-results class='mt-3 max-h-84 overflow-auto space-y-2'></ul>
+  </div>
+</div>
+
+<script>
+  type SearchEntry = {
+    url: string
+    title: string
+    excerpt: string
+    content?: string
+    keywords?: string[]
+  }
+
+  type PagefindEntry = {
+    url: string
+    excerpt?: string
+    meta?: {
+      title?: string
+    }
+  }
+
+  type PagefindSearchResult = {
+    data: () => Promise<PagefindEntry>
+  }
+
+  type PagefindResponse = {
+    results: PagefindSearchResult[]
+  }
+
+  type PagefindModule = {
+    search: (query: string) => Promise<PagefindResponse>
+  }
+
+  let pagefindModulePromise: Promise<PagefindModule> | null = null
+  let fallbackIndexPromise: Promise<SearchEntry[]> | null = null
+  const runtimeImport = new Function('path', 'return import(path)') as (
+    path: string
+  ) => Promise<unknown>
+
+  const loadPagefind = async () => {
+    if (!pagefindModulePromise) {
+      pagefindModulePromise = runtimeImport('/pagefind/pagefind.js').then((moduleValue) => {
+        const module = moduleValue as PagefindModule
+        if (typeof module.search !== 'function') {
+          throw new Error('Invalid Pagefind module')
+        }
+        return module
+      })
+    }
+    return pagefindModulePromise
+  }
+
+  const loadFallbackIndex = async () => {
+    if (!fallbackIndexPromise) {
+      fallbackIndexPromise = fetch('/api/search.json')
+        .then(async (response) => {
+          if (!response.ok) {
+            throw new Error('Fallback index request failed')
+          }
+          return response.json()
+        })
+        .then((payload: { items?: SearchEntry[] }) => payload.items || [])
+    }
+
+    return fallbackIndexPromise
+  }
+
+  const initPagefindSearch = () => {
+    const root = document.querySelector<HTMLElement>('[data-pagefind-search]')
+    if (!root || root.dataset.searchInitialized === 'true') return
+
+    const toggle = root.querySelector<HTMLButtonElement>('[data-search-toggle]')
+    const panel = root.querySelector<HTMLElement>('[data-search-panel]')
+    const input = root.querySelector<HTMLInputElement>('[data-search-input]')
+    const status = root.querySelector<HTMLElement>('[data-search-status]')
+    const list = root.querySelector<HTMLElement>('[data-search-results]')
+
+    if (!toggle || !panel || !input || !status || !list) return
+
+    let debounceTimer: ReturnType<typeof setTimeout> | undefined
+
+    const closePanel = () => {
+      panel.classList.add('hidden')
+      toggle.setAttribute('aria-expanded', 'false')
+    }
+
+    const openPanel = () => {
+      panel.classList.remove('hidden')
+      toggle.setAttribute('aria-expanded', 'true')
+      input.focus()
+    }
+
+    const renderMessage = (message: string) => {
+      status.textContent = message
+      list.replaceChildren()
+    }
+
+    const createResultItem = (url: string, title: string, excerpt: string) => {
+      const li = document.createElement('li')
+      const link = document.createElement('a')
+      const titleEl = document.createElement('p')
+      const excerptEl = document.createElement('p')
+
+      link.href = url
+      link.className =
+        'block rounded-xl px-3 py-2 surface-subtle hover:bg-morningGlory/10 transition border border-opalGray/15'
+
+      titleEl.className = 'text-sm font-semibold text-primary'
+      titleEl.textContent = title
+
+      excerptEl.className = 'mt-1 text-xs text-secondary leading-relaxed'
+      excerptEl.textContent = excerpt
+
+      link.append(titleEl, excerptEl)
+      li.append(link)
+      return li
+    }
+
+    const scoreFallbackEntry = (entry: SearchEntry, terms: string[]) => {
+      const title = entry.title.toLowerCase()
+      const excerpt = entry.excerpt.toLowerCase()
+      const content = (entry.content || '').toLowerCase()
+      const keywords = (entry.keywords || []).join(' ').toLowerCase()
+      const haystack = `${title} ${excerpt} ${content} ${keywords} ${entry.url.toLowerCase()}`
+
+      let score = 0
+      for (const term of terms) {
+        if (!haystack.includes(term)) {
+          return 0
+        }
+
+        if (title.startsWith(term)) score += 6
+        if (title.includes(term)) score += 5
+        if (keywords.includes(term)) score += 3
+        if (excerpt.includes(term)) score += 2
+        if (content.includes(term)) score += 1
+        if (entry.url.toLowerCase().includes(term)) score += 1
+      }
+
+      return score
+    }
+
+    const runFallbackSearch = async (query: string) => {
+      const index = await loadFallbackIndex()
+      const terms = query.toLowerCase().split(/\s+/).filter(Boolean)
+
+      const matches = index
+        .map((entry) => ({ entry, score: scoreFallbackEntry(entry, terms) }))
+        .filter((result) => result.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 8)
+
+      if (matches.length === 0) {
+        renderMessage('No matches found.')
+        return
+      }
+
+      status.textContent = `${matches.length} match${matches.length === 1 ? '' : 'es'}`
+      list.replaceChildren(
+        ...matches.map((result) =>
+          createResultItem(result.entry.url, result.entry.title, result.entry.excerpt)
+        )
+      )
+    }
+
+    const runSearch = async (query: string) => {
+      if (query.length < 2) {
+        renderMessage('Type at least 2 characters.')
+        return
+      }
+
+      renderMessage('Searching...')
+
+      try {
+        const pagefind = await loadPagefind()
+        const result = await pagefind.search(query)
+
+        if (!result || result.results.length === 0) {
+          renderMessage('No matches found.')
+          return
+        }
+
+        const entries = await Promise.all(
+          result.results.slice(0, 8).map((item: PagefindSearchResult) => item.data())
+        )
+
+        status.textContent = `${result.results.length} match${result.results.length === 1 ? '' : 'es'}`
+        list.replaceChildren(
+          ...entries.map((entry) =>
+            createResultItem(entry.url, entry.meta?.title || 'Untitled', entry.excerpt || '')
+          )
+        )
+      } catch {
+        try {
+          await runFallbackSearch(query)
+        } catch {
+          renderMessage('Search unavailable. Run pnpm build to generate Pagefind data.')
+        }
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+      if (panel.classList.contains('hidden')) {
+        openPanel()
+      } else {
+        closePanel()
+      }
+    })
+
+    input.addEventListener('input', () => {
+      const value = input.value.trim()
+      if (debounceTimer) {
+        clearTimeout(debounceTimer)
+      }
+
+      debounceTimer = setTimeout(() => {
+        runSearch(value)
+      }, 180)
+    })
+
+    document.addEventListener('click', (event) => {
+      const target = event.target
+      if (!(target instanceof Node)) return
+      if (!root.contains(target)) {
+        closePanel()
+      }
+    })
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closePanel()
+      }
+    })
+
+    list.addEventListener('click', () => {
+      closePanel()
+    })
+
+    root.dataset.searchInitialized = 'true'
+  }
+
+  initPagefindSearch()
+  document.addEventListener('astro:page-load', initPagefindSearch)
+</script>

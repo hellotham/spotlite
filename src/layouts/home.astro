@@ -3,6 +3,7 @@ import Layout from '../layouts/layout.astro'
 import { Image } from 'astro:assets'
 import Avatar from '../assets/me/avatar.jpg'
 import Navbar from '../components/navbar.astro'
+import Search from '../components/search.astro'
 import Theme from '../components/theme.astro'
 import { getCollection } from 'astro:content'
 import ImageCards from '../components/imagecards.astro'
@@ -24,6 +25,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
           <header class='py-6 flex items-center justify-between z-50'>
             <div class='flex flex-1'></div>
             <Navbar />
+            <Search />
             <Theme />
           </header>
 

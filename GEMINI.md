@@ -4,12 +4,13 @@ Spotlite is a modern, production-ready personal website template built with **As
 
 ## 🛠 Tech Stack
 
-- **Package Manager:** [pnpm](https://pnpm.io/)]
+- **Package Manager:** [pnpm](https://pnpm.io/)
 - **Framework:** [Astro](https://astro.build) (using Content Layer API)
 - **Styling:** [UnoCSS](https://unocss.dev/) with Wind4, Typography, and Icons presets
 - **Type Safety:** [TypeScript](https://www.typescriptlang.org/)
 - **Linting & Formatting:** [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 - **Image Processing:** [Sharp](https://sharp.pixelplumbing.com/)
+- **Search Indexing:** [Pagefind](https://pagefind.app/) for static full-site search
 
 ## 🚀 Key Commands
 
@@ -17,7 +18,8 @@ Spotlite is a modern, production-ready personal website template built with **As
 | :--- | :--- |
 | `pnpm install` | Install dependencies |
 | `pnpm run dev` | Start local development server (default: `localhost:4321`) |
-| `pnpm run build` | Build the production site to `./dist/` |
+| `pnpm run build` | Build the production site and generate Pagefind assets in `./dist/pagefind/` |
+| `pnpm run search:index` | Run Pagefind indexing against `./dist/` |
 | `pnpm run preview` | Preview the production build locally |
 | `pnpm run lint` | Run both Prettier and ESLint checks with auto-fixes |
 | `pnpm run lint:prettier` | Format files with Prettier |
@@ -33,6 +35,8 @@ Spotlite is a modern, production-ready personal website template built with **As
 - `src/assets/`: Dynamic assets processed by Astro (images).
 - `public/`: Static assets served directly from the root.
 - `src/content.config.ts`: Defines schemas and loaders for content collections.
+- `src/components/search.astro`: Header search UI and client logic.
+- `src/pages/api/search.json.ts`: Development fallback search index endpoint.
 
 ## 📝 Content Management
 
@@ -52,3 +56,8 @@ This project uses the **Astro Content Layer API** (v6+) for managing data:
 ## 🚢 Deployment
 
 The project is pre-configured for **Netlify** via `netlify.toml`. It generates a static site by default (SSG).
+
+## 🔎 Search Behavior
+
+- Production search is powered by Pagefind and generated during `pnpm run build`.
+- Local development search falls back to `/api/search.json` so search works even when `/pagefind/*` files are not present.

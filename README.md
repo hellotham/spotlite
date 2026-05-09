@@ -18,6 +18,7 @@ It uses the following technologies:
 - [UnoCSS](https://unocss.dev/)
 - `@astrojs/sitemap` and `@astrojs/rss` preintegrated
 - Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
+- [Pagefind](https://pagefind.app/) for static full-site search
 
 It features:
 
@@ -29,14 +30,17 @@ It features:
   links.
 - A Creations page showcasing linkable artefacts.
 - A Uses page providing a bragging list of products and tools used.
+- Header search with Pagefind indexing for production builds.
+- Development search fallback powered by a local JSON endpoint.
 
-Spotlite uses all the latest and greatest features in Astro (>2.5.0) including:
+Spotlite uses all the latest and greatest features in Astro (>v6) including:
 
 - optimised assets
 - data and content collections
 - endpoints
 - sitemap
 - RSS
+- static search indexing
 
 It’s production-ready and easy to customise, making it the perfect starting point for your own personal website.
 
@@ -48,22 +52,25 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
-├── astro.config.mjs          # Astro configuration file 
-├── public/                   # Location of static assets
-│   └── favicon.svg
-├── src/
-│   ├── assets/               # Location of dynamic assets (eg. images)
-│   │   └── screenshot.png
-│   ├── components/           # Astro components
-│   │   └── header.astro
-│   ├── content/              # Location of content (markdown, data and images)
-│   │   └── config.ts
-│   ├── layouts/              # Location of layouts for pages
-│   │   └── Layout.astro
-│   └── pages/                # Location of pages
-│       └── index.astro
+├── astro.config.mjs
+├── netlify.toml
 ├── package.json
-└── uno.config.ts             # UnoCSS configuration file
+├── uno.config.ts
+├── public/
+│   ├── robots.txt
+│   └── site.webmanifest
+└── src/
+  ├── components/           # UI components (header, search, nav, cards)
+  ├── content/              # Markdown collections (article, page, project, work)
+  ├── layouts/              # Page layouts
+  ├── pages/                # Routes and API endpoints
+  │   ├── [...page].astro
+  │   ├── article/[...id].astro
+  │   ├── api/search.json.ts
+  │   └── rss.xml.js
+  ├── content.config.ts
+  ├── menu.json
+  └── social.json
 ```
 
 ## 🧞 Commands
@@ -73,8 +80,14 @@ All commands are run from the root of the project, from a terminal:
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server at `localhost:3000`      |
-| `pnpm run build`           | Build your production site to `./dist/`          |
+| `pnpm run dev`             | Starts local dev server (default: `localhost:4321`) |
+| `pnpm run build`           | Builds site and generates the Pagefind index in `./dist/pagefind/` |
+| `pnpm run search:index`    | Runs Pagefind indexing against `./dist/`         |
 | `pnpm run preview`         | Preview your build locally, before deploying     |
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 🔎 Search Notes
+
+- Production and preview builds use Pagefind assets generated during `pnpm run build`.
+- During local development, search falls back to `src/pages/api/search.json.ts` so search still works without prebuilt Pagefind files.
