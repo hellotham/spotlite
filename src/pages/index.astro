@@ -20,7 +20,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
-          <header class='py-6 flex items-center justify-between z-50'>
+          <header class='flex py-6 z-50 justify-between items-center'>
             <div class='flex flex-1'></div>
             <Navbar />
             <Theme />
@@ -28,17 +28,17 @@ social = social.sort((a, b) => a.data.order - b.data.order)
 
           <div class='mt-16 animate-fade-in-up'>
             <div class='max-w-2xl'>
-              <a href='/' aria-label='Home' class='mb-8 h-32 w-32 block pointer-events-auto'>
+              <a href='/' aria-label='Home' class='block h-32 w-32 mb-8 pointer-events-auto'>
                 <Image
                   src={Avatar}
                   alt='Avatar'
                   width={256}
                   loading='eager'
-                  class='rounded-full bg-sugarSwizzle h-32 w-32 ring-1 ring-opalGray/20 shadow-md object-cover dark:bg-blackBeauty dark:ring-opalGray/20'
+                  class='rounded-full bg-sugarSwizzle h-32 w-32 object-cover ring-1 ring-opalGray/20 shadow-md dark:bg-blackBeauty dark:ring-opalGray/20'
                 />
               </a>
               <h1
-                class='text-3xl text-morningGlory tracking-tight font-bold font-serif sm:text-4xl'
+                class='text-3xl text-morningGlory tracking-tight font-serif font-bold sm:text-4xl'
               >
                 {config.title}
               </h1>

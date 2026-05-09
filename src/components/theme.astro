@@ -99,99 +99,104 @@
 </div>
 
 <script>
-  const button = document.getElementById('theme-toggle-button')
-  const menu = document.getElementById('theme-menu')
-  const autoBtn = document.getElementById('theme-auto')
-  const lightBtn = document.getElementById('theme-light')
-  const darkBtn = document.getElementById('theme-dark')
+  document.addEventListener('astro:page-load', () => {
+    const button = document.getElementById('theme-toggle-button')
+    const menu = document.getElementById('theme-menu')
+    const autoBtn = document.getElementById('theme-auto')
+    const lightBtn = document.getElementById('theme-light')
+    const darkBtn = document.getElementById('theme-dark')
 
-  const updateUI = () => {
-    const theme = localStorage.theme
-    const autoCheck = document.getElementById('theme-auto-check')
-    const lightCheck = document.getElementById('theme-light-check')
-    const darkCheck = document.getElementById('theme-dark-check')
-    const autoDiv = document.getElementById('theme-auto-div')
-    const lightSpan = document.getElementById('theme-light-span')
-    const darkSpan = document.getElementById('theme-dark-span')
+    const updateUI = () => {
+      const theme = localStorage.theme
+      const autoCheck = document.getElementById('theme-auto-check')
+      const lightCheck = document.getElementById('theme-light-check')
+      const darkCheck = document.getElementById('theme-dark-check')
+      const autoDiv = document.getElementById('theme-auto-div')
+      const lightSpan = document.getElementById('theme-light-span')
+      const darkSpan = document.getElementById('theme-dark-span')
 
-    if (autoCheck && lightCheck && darkCheck && autoDiv && lightSpan && darkSpan) {
-      autoCheck.classList.toggle('hidden', !!theme)
-      lightCheck.classList.toggle('hidden', theme !== 'light')
-      darkCheck.classList.toggle('hidden', theme !== 'dark')
+      if (autoCheck && lightCheck && darkCheck && autoDiv && lightSpan && darkSpan) {
+        autoCheck.classList.toggle('hidden', !!theme)
+        lightCheck.classList.toggle('hidden', theme !== 'light')
+        darkCheck.classList.toggle('hidden', theme !== 'dark')
 
-      autoBtn?.setAttribute('aria-selected', (!theme).toString())
-      lightBtn?.setAttribute('aria-selected', (theme === 'light').toString())
-      darkBtn?.setAttribute('aria-selected', (theme === 'dark').toString())
+        autoBtn?.setAttribute('aria-selected', (!theme).toString())
+        lightBtn?.setAttribute('aria-selected', (theme === 'light').toString())
+        darkBtn?.setAttribute('aria-selected', (theme === 'dark').toString())
 
-      autoDiv.classList.toggle('font-semibold', !theme)
-      autoDiv.classList.toggle('text-morningGlory', !theme)
-      autoDiv.classList.toggle('font-normal', !!theme)
+        autoDiv.classList.toggle('font-semibold', !theme)
+        autoDiv.classList.toggle('text-morningGlory', !theme)
+        autoDiv.classList.toggle('font-normal', !!theme)
 
-      lightSpan.classList.toggle('font-semibold', theme === 'light')
-      lightSpan.classList.toggle('text-morningGlory', theme === 'light')
-      lightSpan.classList.toggle('font-normal', theme !== 'light')
+        lightSpan.classList.toggle('font-semibold', theme === 'light')
+        lightSpan.classList.toggle('text-morningGlory', theme === 'light')
+        lightSpan.classList.toggle('font-normal', theme !== 'light')
 
-      darkSpan.classList.toggle('font-semibold', theme === 'dark')
-      darkSpan.classList.toggle('text-morningGlory', theme === 'dark')
-      darkSpan.classList.toggle('font-normal', theme !== 'dark')
+        darkSpan.classList.toggle('font-semibold', theme === 'dark')
+        darkSpan.classList.toggle('text-morningGlory', theme === 'dark')
+        darkSpan.classList.toggle('font-normal', theme !== 'dark')
+      }
     }
-  }
 
-  const updateTheme = () => {
-    const theme = localStorage.theme
-    if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-    updateUI()
-  }
-
-  if (button && menu) {
-    button.addEventListener('click', () => {
-      const isExpanded = button.getAttribute('aria-expanded') === 'true'
-      button.setAttribute('aria-expanded', (!isExpanded).toString())
-      menu.classList.toggle('hidden')
+    const updateTheme = () => {
+      const theme = localStorage.theme
+      if (
+        theme === 'dark' ||
+        (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
       updateUI()
+    }
+
+    if (button && menu) {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true'
+        button.setAttribute('aria-expanded', (!isExpanded).toString())
+        menu.classList.toggle('hidden')
+        updateUI()
+      })
+
+      document.addEventListener('click', (event) => {
+        const isClickInside =
+          button.contains(event.target as Node) || menu.contains(event.target as Node)
+        if (!isClickInside && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden')
+          button.setAttribute('aria-expanded', 'false')
+        }
+      })
+    }
+
+    autoBtn?.addEventListener('click', () => {
+      localStorage.removeItem('theme')
+      updateTheme()
+      menu?.classList.add('hidden')
+      button?.setAttribute('aria-expanded', 'false')
     })
 
-    document.addEventListener('click', (event) => {
-      const isClickInside =
-        button.contains(event.target as Node) || menu.contains(event.target as Node)
-      if (!isClickInside && !menu.classList.contains('hidden')) {
-        menu.classList.add('hidden')
-        button.setAttribute('aria-expanded', 'false')
+    lightBtn?.addEventListener('click', () => {
+      localStorage.theme = 'light'
+      updateTheme()
+      menu?.classList.add('hidden')
+      button?.setAttribute('aria-expanded', 'false')
+    })
+
+    darkBtn?.addEventListener('click', () => {
+      localStorage.theme = 'dark'
+      updateTheme()
+      menu?.classList.add('hidden')
+      button?.setAttribute('aria-expanded', 'false')
+    })
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if (!localStorage.theme) {
+        updateTheme()
       }
     })
-  }
 
-  autoBtn?.addEventListener('click', () => {
-    localStorage.removeItem('theme')
-    updateTheme()
-    menu?.classList.add('hidden')
-    button?.setAttribute('aria-expanded', 'false')
+    // Initial UI state
+    updateUI()
   })
-
-  lightBtn?.addEventListener('click', () => {
-    localStorage.theme = 'light'
-    updateTheme()
-    menu?.classList.add('hidden')
-    button?.setAttribute('aria-expanded', 'false')
-  })
-
-  darkBtn?.addEventListener('click', () => {
-    localStorage.theme = 'dark'
-    updateTheme()
-    menu?.classList.add('hidden')
-    button?.setAttribute('aria-expanded', 'false')
-  })
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (!localStorage.theme) {
-      updateTheme()
-    }
-  })
-
-  // Initial UI state
-  updateUI()
 </script>

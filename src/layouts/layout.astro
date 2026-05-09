@@ -114,6 +114,36 @@ const breadcrumbList = {
     <meta charset='UTF-8' />
     <meta http-equiv='x-ua-compatible' content='ie=edge' />
     <meta name='viewport' content='width=device-width,initial-scale=1' />
+    <script is:inline>
+      const setTheme = () => {
+        if (
+          localStorage.theme === 'dark' ||
+          (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      }
+      setTheme()
+      document.addEventListener('astro:after-swap', setTheme)
+    </script>
+    <ClientRouter />
+    <style is:global>
+      :root {
+        --bg-color: #f4eee8; /* sugarSwizzle */
+        --bg-pink: #fdf2f8; /* barelyPink/pink-50 */
+      }
+      html {
+        background-color: var(--bg-pink);
+      }
+      html.dark {
+        background-color: #000;
+      }
+      body {
+        margin: 0;
+      }
+    </style>
     <link rel='icon' href='/favicon.ico' sizes='any' />
     <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
     <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
@@ -150,33 +180,22 @@ const breadcrumbList = {
         <script is:inline type='application/ld+json' set:html={JSON.stringify(breadcrumbList)} />
       )
     }
-    <script is:inline>
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-    </script>
-    <ClientRouter />
   </head>
   <body>
-    <div class='font-sans bg-pink-50 flex flex-col h-full dark:bg-black'>
-      <div class='flex inset-0 justify-center fixed sm:px-8'>
-        <div class='flex max-w-7xl w-full lg:px-8'>
-          <div class='bg-white w-full ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20'>
-          </div>
+    <div class='flex inset-0 justify-center fixed sm:px-8 pointer-events-none'>
+      <div class='flex max-w-7xl w-full lg:px-8 pointer-events-none'>
+        <div
+          class='bg-white w-full ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20 pointer-events-none'
+        >
         </div>
       </div>
-      <div class='relative'>
-        {!home && <Header />}
-        <main>
-          <slot />
-        </main>
-        <Footer />
-      </div>
+    </div>
+    <div class='font-sans relative z-10 flex flex-col min-h-screen'>
+      {!home && <Header />}
+      <main class='flex-1'>
+        <slot />
+      </main>
+      <Footer />
     </div>
   </body>
 </html>

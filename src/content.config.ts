@@ -54,15 +54,15 @@ const social = defineCollection({
 
 const page = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/page' }),
-  schema: z
-    .object({
+  schema: ({ image }) =>
+    z.object({
       title: z.string(),
       description: z.string().optional(),
       draft: z.boolean().optional().default(false),
       layout: z.string(),
-      image: z.string().optional()
+      image: image().optional(),
+      list: z.array(z.any()).optional()
     })
-    .catchall(z.any())
 })
 
 export const collections = { article, project, work, menu, social, page }

@@ -28,16 +28,19 @@ export default defineConfig({
     },
     animation: {
       keyframes: {
-        'fade-in-up':
-          '{ from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }'
+        'fade-in-up-custom':
+          '0% { opacity: 0; transform: translateY(1rem); } 100% { opacity: 1; transform: translateY(0); }'
       },
       durations: {
-        'fade-in-up': '0.5s'
+        'fade-in-up-custom': '0.5s'
       },
       timingFns: {
-        'fade-in-up': 'ease-out'
+        'fade-in-up-custom': 'ease-out'
       }
     }
+  },
+  shortcuts: {
+    'animate-fade-in-up': 'animate-fade-in-up-custom animate-fill-forwards'
   },
   presets: [
     presetWind4({
@@ -81,6 +84,9 @@ export default defineConfig({
   safelist: [
     'rotate-2',
     '-rotate-2',
+    'animate-fade-in-up',
+    '[animation-delay:200ms]',
+    '[animation-delay:400ms]',
     'i-logos-twitter',
     'i-logos-facebook',
     'i-logos-instagram-icon',

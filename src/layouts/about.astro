@@ -8,6 +8,7 @@ interface Props {
   frontmatter: {
     title: string
     description: string
+    image: ImageMetadata
   }
 }
 
@@ -31,7 +32,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                   loading='eager'
                   class='rounded-2xl bg-zinc-100 aspect-square rotate-3 object-cover dark:bg-zinc-800'
                   style='color:transparent'
-                  src={Profile}
+                  src={frontmatter.image}
                 />
               </div>
             </div>
