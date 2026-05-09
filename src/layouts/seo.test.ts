@@ -42,13 +42,17 @@ describe('SEO Meta Tags', () => {
     }
 
     const websiteSchema = { '@type': 'WebSite', name: 'Test Site' }
-    const personSchema = { '@type': 'Person', name: 'Test Person' }
 
     const websiteScript = document.createElement('script')
     websiteScript.type = 'application/ld+json'
     websiteScript.innerHTML = JSON.stringify(websiteSchema)
     document.head.appendChild(websiteScript)
 
+    const personSchema = {
+      '@type': 'Person',
+      name: 'Test Person',
+      sameAs: ['https://facebook.com/test', 'https://github.com/test']
+    }
     const personScript = document.createElement('script')
     personScript.type = 'application/ld+json'
     personScript.innerHTML = JSON.stringify(personSchema)
@@ -127,6 +131,7 @@ describe('SEO Meta Tags', () => {
 
       expect(website).not.toBeNull()
       expect(person).not.toBeNull()
+      expect(person.sameAs).toBeDefined()
     })
 
     it('should have Article schema when article prop is true', () => {

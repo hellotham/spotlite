@@ -3,6 +3,7 @@ import HeaderHome from '../components/headerhome.astro'
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
 import { ClientRouter } from 'astro:transitions'
+import { getCollection } from 'astro:content'
 
 export interface Props {
   title: string
@@ -26,6 +27,8 @@ const {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const socialImageURL = new URL(image, Astro.site)
 
+const social = await getCollection('social')
+
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -40,12 +43,7 @@ const personSchema = {
   name: 'Chris Tham',
   url: Astro.site,
   image: socialImageURL,
-  sameAs: [
-    'https://www.facebook.com/chris1tham',
-    'https://github.com/ChristineTham',
-    'https://www.instagram.com/chris1tham',
-    'https://www.linkedin.com/in/christham'
-  ],
+  sameAs: social.map((item) => item.data.link),
   jobTitle: 'Consultant, Artist, Photographer',
   worksFor: {
     '@type': 'Organization',

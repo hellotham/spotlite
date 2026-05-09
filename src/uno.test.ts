@@ -4,15 +4,16 @@ import config from '../uno.config'
 describe('UnoCSS Configuration', () => {
   it('should have custom animations defined', () => {
     expect(config.theme?.animation).toBeDefined()
-    const animation = config.theme?.animation as any
+    const animation = config.theme?.animation as { keyframes?: Record<string, string> }
     expect(animation.keyframes?.['fade-in-up']).toBeDefined()
   })
 
   it('should have prefers-reduced-motion preflight', () => {
     expect(config.preflights).toBeDefined()
-    const preflights = config.preflights as any[]
-    const hasReducedMotion = preflights.some(p => 
-      typeof p.getCSS === 'function' && p.getCSS().includes('prefers-reduced-motion: reduce')
+    const preflights = config.preflights as { getCSS?: () => string }[]
+    const hasReducedMotion = preflights.some(
+      (p) =>
+        typeof p.getCSS === 'function' && p.getCSS?.().includes('prefers-reduced-motion: reduce')
     )
     expect(hasReducedMotion).toBe(true)
   })
