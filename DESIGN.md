@@ -52,11 +52,29 @@ High-positivity colors used for functional highlighting (Success, Error, Info, W
 
 ## 4. Component Styling & Spacing
 
-Rosely embraces a clean, modern aesthetic utilizing **shadcn/ui** and **Tailwind CSS** defaults for structure and spacing, integrated with our color palette.
+Rosely embraces a clean, modern aesthetic utilizing **UnoCSS** (Wind4 preset) for structure and spacing, integrated with our color palette.
 
-* **Spacing System:** Follows the default Tailwind CSS spacing scale (e.g., `p-4` for 1rem/16px, `gap-6` for 1.5rem/24px) to maintain a consistent and predictable rhythm.
+* **Spacing System:** Follows the standard utility-first spacing scale (e.g., `p-4` for 1rem/16px, `gap-6` for 1.5rem/24px) to maintain a consistent and predictable rhythm.
 * **Border Radius:** Components typically feature subtle rounding using `rounded-md` (0.375rem) or `rounded-lg` (0.5rem) to reflect the gentle nature of the Rosely theme, avoiding harsh, sharp corners.
 * **Borders:** Use thin, 1px borders colored with `border-border` (mapped to Opal Gray or similar neutral) for subtle separation.
 * **Shadows & Elevation:** Drop shadows should be soft and diffused (`shadow-sm` or `shadow-md`), enhancing the low-contrast ambiance without creating overwhelming visual hierarchy.
 * **Interactive States:** Hover and focus states should slightly shift the background or border color (e.g., using Morning Glory or Lupine accents) while maintaining the eye-comfortable constraint.
-* **Component Architecture:** Build accessible and composable UI blocks using Base UI primitives (via shadcn/ui), styled with Tailwind utility classes that reference Rosely's custom color variables.
+* **Component Architecture:** Build accessible and composable UI blocks styled with UnoCSS utility classes that reference Rosely's custom color variables.
+
+## 5. Motion & Animation
+
+Rosely uses motion purposefully to guide focus and add a layer of professional polish without sacrificing performance or serenity.
+
+### Page Transitions
+* **Client-Side Routing:** Utilises Astro's `ClientRouter` to provide smooth, SPA-like navigation between internal pages, maintaining visual continuity and reducing perceived load times.
+
+### Entrance Animations
+* **Subtle Arrivals:** Key UI blocks (Hero, Cards, Content Lists) use a custom `animate-fade-in-up` animation—a gentle fade-in combined with a slight 1rem upward slide—to create a dynamic yet calm entrance.
+* **Staggered Delays:** Entrance animations are often staggered (e.g., using `[animation-delay:200ms]`) to create a natural, sequential flow as page sections appear.
+
+### Interaction Feedback
+* **Smooth Transitions:** Hover and focus states for interactive elements (buttons, links, cards) use smooth CSS transitions (typically 200-300ms) for property changes like `color`, `scale`, and `box-shadow`.
+* **Tactile Transforms:** Interactive cards may use subtle transforms (e.g., `hover:-translate-y-1`) to provide a tactile sense of depth.
+
+### Motion Accessibility
+* **Reduced Motion Support:** In alignment with our serenity principle, all non-essential animations and transitions are automatically disabled or minimized when `prefers-reduced-motion: reduce` is detected, ensuring an inclusive experience for all users.
