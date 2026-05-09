@@ -11,4 +11,11 @@ describe('Page Routing Verification', () => {
     expect(content).toContain("getCollection('page')")
     expect(content).toContain('import.meta.glob')
   })
+
+  it('should have ArticlesLayout and ProjectsLayout defined', () => {
+    const articlesLayoutPath = path.resolve(__dirname, './layouts/ArticlesLayout.astro')
+    const projectsLayoutPath = path.resolve(__dirname, './layouts/ProjectsLayout.astro')
+    expect(fs.existsSync(articlesLayoutPath)).toBe(true)
+    expect(fs.existsSync(projectsLayoutPath)).toBe(true)
+  })
 })
