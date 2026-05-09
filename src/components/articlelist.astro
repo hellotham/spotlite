@@ -24,7 +24,7 @@ articles = articles.sort((a, b) =>
         )}
         <div class='bg-heavenlyPink opacity-0 scale-95 transition duration-300 ease-in-out absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
         <h2 class='text-lg text-accent tracking-tight font-semibold font-serif'>
-          <a href={'/article/' + article.id}>
+          <a href={'/article/' + article.id} class='focus-ring rounded-xl'>
             <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
             <span class='relative z-10'>{article.data.title}</span>
           </a>

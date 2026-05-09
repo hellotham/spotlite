@@ -46,3 +46,26 @@ describe('Accessibility: Semantic HTML and Landmarks', () => {
     expect(content).toContain('<section')
   })
 })
+
+describe('Accessibility: Keyboard Navigability', () => {
+  it('navbar button should have focus-ring', () => {
+    const content = readComponent('src/components/navbar.astro')
+    expect(content).toContain('focus-ring')
+  })
+
+  it('navmenu links should have focus-ring', () => {
+    const content = readComponent('src/components/navmenu.astro')
+    expect(content).toContain('focus-ring')
+  })
+
+  it('theme toggle button should have focus-ring', () => {
+    const content = readComponent('src/components/theme.astro')
+    expect(content).toContain('focus-ring')
+  })
+
+  it('ctaform input and button should have focus-ring', () => {
+    const content = readComponent('src/components/ctaform.astro')
+    expect(content).toMatch(/input[^>]*focus-ring/)
+    expect(content).toMatch(/button[^>]*focus-ring/)
+  })
+})
