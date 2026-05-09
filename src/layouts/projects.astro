@@ -26,12 +26,12 @@ const projects = await getCollection('project')
             >
               {frontmatter.title}
             </h1>
-            <p class='text-base text-graniteGray mt-6 dark:text-opalGray'>
+            <p class='text-xl italic text-morningGlory mt-6'>
               {frontmatter.description}
             </p>
-            <div class='mt-6 prose dark:prose-invert'>
+            <article class='mt-6 prose dark:prose-invert'>
               <slot />
-            </div>
+            </article>
           </header>
           <div class='mt-16 [animation-delay:200ms] animate-fade-in-up sm:mt-20'>
             <ul class='gap-x-12 gap-y-16 grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2'>
