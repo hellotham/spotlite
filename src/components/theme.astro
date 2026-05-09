@@ -127,15 +127,15 @@
         darkBtn?.setAttribute('aria-selected', (theme === 'dark').toString())
 
         autoDiv.classList.toggle('font-semibold', !theme)
-        autoDiv.classList.toggle('text-morningGlory', !theme)
+        autoDiv.classList.toggle('text-accent', !theme)
         autoDiv.classList.toggle('font-normal', !!theme)
 
         lightSpan.classList.toggle('font-semibold', theme === 'light')
-        lightSpan.classList.toggle('text-morningGlory', theme === 'light')
+        lightSpan.classList.toggle('text-accent', theme === 'light')
         lightSpan.classList.toggle('font-normal', theme !== 'light')
 
         darkSpan.classList.toggle('font-semibold', theme === 'dark')
-        darkSpan.classList.toggle('text-morningGlory', theme === 'dark')
+        darkSpan.classList.toggle('text-accent', theme === 'dark')
         darkSpan.classList.toggle('font-normal', theme !== 'dark')
       }
     }

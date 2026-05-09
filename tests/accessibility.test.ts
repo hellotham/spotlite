@@ -69,3 +69,13 @@ describe('Accessibility: Keyboard Navigability', () => {
     expect(content).toMatch(/button[^>]*focus-ring/)
   })
 })
+
+describe('Accessibility: Color Contrast', () => {
+  it('uno.config.ts should define text-accent with sufficient contrast for light mode', () => {
+    const content = readComponent('uno.config.ts')
+    // We expect text-accent to NOT use morningGlory in light mode if we want 4.5:1
+    // It should be something like 'text-accent': 'text-raspberrySorbet dark:text-morningGlory'
+    // or a new darker pink.
+    expect(content).not.toContain("'text-accent': 'text-morningGlory dark:text-morningGlory'")
+  })
+})

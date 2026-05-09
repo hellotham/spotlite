@@ -31,11 +31,11 @@ social = social.sort((a, b) => a.data.order - b.data.order)
             </div>
             <div class='lg:row-span-2 lg:order-first'>
               <h1
-                class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'
+                class='text-4xl text-accent tracking-tight font-bold font-serif sm:text-5xl'
               >
                 {frontmatter.title}
               </h1>
-              <p class='text-xl text-morningGlory mt-6 italic'>
+              <p class='text-xl text-accent mt-6 italic'>
                 {frontmatter.description}
               </p>
               <article
@@ -50,7 +50,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                   social.map((item) => (
                     <li class='mt-4 flex'>
                       <a
-                        class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-morningGlory dark:hover:text-morningGlory'
+                        class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-accent dark:hover:text-accent'
                         href={item.data.link}
                       >
                         <span
@@ -66,7 +66,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 }
                 <li class='mt-8 pt-8 border-t border-border flex dark:border-border/40'>
                   <a
-                    class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-morningGlory dark:hover:text-morningGlory'
+                    class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-accent dark:hover:text-accent'
                     href='mailto:chris@christham.net'
                   >
                     <span

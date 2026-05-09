@@ -20,6 +20,7 @@ export default defineConfig({
       lavenderFog: '#D2C4D6',
       // Rosely palette - Colourful
       raspberrySorbet: '#d2386c',
+      morningGloryDark: '#c02d5a', // Darker pink for light mode text contrast
       spearmint: '#64bfa4',
       aquarius: '#3CADD4',
       meadowlark: '#eada4f',
@@ -39,7 +40,7 @@ export default defineConfig({
     // Text colors
     'text-primary': 'text-blackBeauty dark:text-sugarSwizzle',
     'text-secondary': 'text-graniteGray dark:text-opalGray',
-    'text-accent': 'text-morningGlory dark:text-morningGlory',
+    'text-accent': 'text-morningGloryDark dark:text-morningGlory',
     'text-muted': 'text-opalGray dark:text-graniteGray',
     
     // Border colors
@@ -49,7 +50,7 @@ export default defineConfig({
     'btn-base': 'px-3 py-2 rounded-md font-medium transition inline-flex items-center justify-center gap-2',
     'btn-primary': 'btn-base text-sugarSwizzle bg-blackBeauty dark:bg-grapeade hover:bg-grapeade dark:hover:bg-grapeade/80 active:text-sugarSwizzle/70',
     'btn-secondary': 'btn-base text-primary border border-primary hover:bg-morningGlory/10',
-    'btn-ghost': 'btn-base text-primary hover:text-morningGlory',
+    'btn-ghost': 'btn-base text-primary hover:text-accent',
     'btn-sm': 'btn-base text-xs px-2 py-1',
     
     // Input styles
@@ -65,7 +66,7 @@ export default defineConfig({
     'surface-subtle': 'bg-sugarSwizzle/50 dark:bg-blackBeauty/50',
     
     // Interactive states
-    'hover-accent': 'hover:text-morningGlory dark:hover:text-morningGlory transition',
+    'hover-accent': 'hover:text-accent transition',
     'focus-ring': 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-morningGlory focus-visible:ring-offset-2 dark:focus-visible:ring-offset-blackBeauty',
   },
   presets: [

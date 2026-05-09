@@ -27,14 +27,14 @@ const creationsList = frontmatter.list as Array<{
                       class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'
                     >
                       <div class='gap-y-8 grid grid-cols-1 items-baseline md:grid-cols-4'>
-                        <h2 id=':R6l6:' class='text-sm text-morningGlory font-semibold font-serif'>
+                        <h2 id=':R6l6:' class='text-sm text-accent font-semibold font-serif'>
                           {section.section}
                         </h2>
                         <div class='md:col-span-3'>
                           <div class='space-y-16'>
                             {section.items.map((item: any) => (
                               <article class='group flex flex-col items-start relative'>
-                                <h3 class='text-base text-morningGlory tracking-tight font-semibold font-serif'>
+                                <h3 class='text-base text-accent tracking-tight font-semibold font-serif'>
                                   <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
                                   <a href={item.link}>
                                     <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
@@ -55,7 +55,7 @@ const creationsList = frontmatter.list as Array<{
                                 </p>
                                 <div
                                   aria-hidden='true'
-                                  class='text-sm text-morningGlory font-medium mt-4 flex items-center relative z-10'
+                                  class='text-sm text-accent font-medium mt-4 flex items-center relative z-10'
                                 >
                                   {item.action}
                                   <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />

@@ -21,7 +21,7 @@ let projects = await getCollection('project')
           {
             projects.map((site) => (
               <li class='group flex flex-col items-start relative'>
-                <h2 class='text-base text-morningGlory font-semibold font-serif mt-6'>
+                <h2 class='text-base text-accent font-semibold font-serif mt-6'>
                   <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
                   <a href={site.data.link}>
                     <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
@@ -41,7 +41,7 @@ let projects = await getCollection('project')
                     src={site.data.image}
                   />
                 </div>
-                <p class='text-sm text-graniteGray font-medium mt-6 flex transition relative z-10 dark:text-sugarSwizzle group-hover:text-morningGlory'>
+                <p class='text-sm text-graniteGray font-medium mt-6 flex transition relative z-10 dark:text-sugarSwizzle group-hover:text-accent'>
                   <span class='i-heroicons-link-solid flex-none h-6 w-6' />
                   <span class='ml-2'>{site.data.link}</span>
                 </p>
