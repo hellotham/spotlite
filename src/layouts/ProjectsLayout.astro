@@ -1,0 +1,70 @@
+---
+import Layout from './layout.astro'
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
+
+interface Props {
+  frontmatter: {
+    title: string
+    description: string
+  }
+}
+
+const { frontmatter } = Astro.props
+
+const projects = await getCollection('project')
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description} itemPage={true}>
+  <div class='mt-16 sm:mt-32 sm:px-8'>
+    <div class='mx-auto max-w-7xl lg:px-8'>
+      <div class='px-4 relative lg:px-12 sm:px-8'>
+        <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+          <header class='max-w-2xl animate-fade-in-up'>
+            <slot />
+          </header>
+          <div class='mt-16 [animation-delay:200ms] animate-fade-in-up sm:mt-20'>
+            <ul class='gap-x-12 gap-y-16 grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2'>
+              {
+                projects.map((site) => (
+                  <li class='group flex flex-col items-start relative'>
+                    <h2 class='text-base text-blackBeauty font-semibold mt-6 dark:text-sugarSwizzle'>
+                      <>
+                        <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                        <a href={site.data.link}>
+                          <>
+                            <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                            <span class='relative z-10'>{site.data.title}</span>
+                          </>
+                        </a>
+                      </>
+                    </h2>
+                    <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
+                      {site.data.description}
+                    </p>
+                    <>
+                      <div class='p-2 bg-sugarSwizzle h-36 ring-1 ring-opalGray/20 shadow-md relative z-10 dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
+                        <Image
+                          alt={site.data.title}
+                          height={256}
+                          loading='lazy'
+                          class='h-32 w-auto'
+                          style='color:transparent'
+                          src={site.data.image}
+                        />
+                      </div>
+                      <p class='text-sm text-graniteGray font-medium mt-6 flex transition relative z-10 dark:text-sugarSwizzle group-hover:text-morningGlory'>
+                        <span class='flex-non i-heroicons-link-solid h-6 w-6' />
+                        <span class='ml-2'>{site.data.link}</span>
+                      </p>
+                    </>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
