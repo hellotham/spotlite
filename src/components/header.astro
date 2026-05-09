@@ -6,7 +6,7 @@ import Theme from './theme.astro'
 import Container from './container.astro'
 ---
 
-<header class='pointer-events-none relative z-50 flex flex-col h-16'>
+<header class='flex flex-col h-16 pointer-events-none relative z-50'>
   <div class='pt-6 top-0'>
     <Container fullWidth={true}>
       <div class='flex gap-4 relative'>
@@ -19,6 +19,7 @@ import Container from './container.astro'
                 src={Avatar}
                 alt='Avatar'
                 width={128}
+                height={128}
                 loading='eager'
                 class='rounded-full bg-sugarSwizzle h-9 w-9 object-cover dark:bg-blackBeauty'
               /></a

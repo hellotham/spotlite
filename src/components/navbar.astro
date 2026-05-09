@@ -47,7 +47,8 @@ import NavMenu from './navmenu.astro'
 
     // Close menu when clicking outside.
     document.addEventListener('click', (event) => {
-      const isClickInside = button.contains(event.target as Node) || menu.contains(event.target as Node)
+      const isClickInside =
+        button.contains(event.target as Node) || menu.contains(event.target as Node)
       if (!isClickInside && !menu.classList.contains('opacity-0')) {
         menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
         menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')

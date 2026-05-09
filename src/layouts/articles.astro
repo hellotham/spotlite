@@ -30,13 +30,16 @@ articles = articles.sort((a, b) =>
                         class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray md:hidden'
                         datetime={article.data.pubDate.toISOString()}
                       >
-                        <span class='flex items-center inset-y-0 left-0 absolute' aria-hidden='true'>
+                        <span
+                          class='flex items-center inset-y-0 left-0 absolute'
+                          aria-hidden='true'
+                        >
                           <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
                         </span>
                         {article.data.pubDate.toDateString()}
                       </time>
                     )}
-                    <h2 class='text-base text-morningGlory tracking-tight font-serif font-semibold'>
+                    <h2 class='text-base text-morningGlory tracking-tight font-semibold font-serif'>
                       <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
                       <a href={'/article/' + article.id}>
                         <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />

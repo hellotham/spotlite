@@ -3,14 +3,13 @@ import { getCollection } from 'astro:content'
 import Container from './container.astro'
 
 const menu = await getCollection('menu')
-const social = await getCollection('social')
 
 const year = new Date().getFullYear()
 ---
 
 <footer class='mt-32 flex-none'>
   <Container fullWidth={true}>
-    <div class='border-t border-border pt-10 pb-16 dark:border-border/40'>
+    <div class='pb-16 pt-10 border-t border-border dark:border-border/40'>
       <div class='flex flex-col gap-6 items-center justify-between md:flex-row'>
         <div
           class='text-sm text-blackBeauty font-medium flex flex-wrap gap-x-6 gap-y-1 dark:text-sugarSwizzle'

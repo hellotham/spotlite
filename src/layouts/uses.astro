@@ -23,14 +23,14 @@ const { frontmatter } = Astro.props
                       class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'
                     >
                       <div class='gap-y-8 grid grid-cols-1 items-baseline md:grid-cols-4'>
-                        <h2 id=':R6l6:' class='text-sm text-morningGlory font-serif font-semibold'>
+                        <h2 id=':R6l6:' class='text-sm text-morningGlory font-semibold font-serif'>
                           {section.section}
                         </h2>
                         <div class='md:col-span-3'>
                           <ul class='space-y-16'>
                             {section.items.map((item) => (
                               <li class='group flex flex-col items-start relative'>
-                                <h3 class='text-base text-morningGlory tracking-tight font-serif font-semibold'>
+                                <h3 class='text-base text-morningGlory tracking-tight font-semibold font-serif'>
                                   {item.item}
                                 </h3>
                                 <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>

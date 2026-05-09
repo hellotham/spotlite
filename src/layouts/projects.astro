@@ -14,7 +14,7 @@ projects = projects.sort((a, b) => a.data.order - b.data.order)
 <Layout title={frontmatter.title} description={frontmatter.description} itemPage={true}>
   <Container class='mt-16 sm:mt-32'>
     <div class='mx-auto max-w-2xl lg:max-w-5xl'>
-      <PageContent {frontmatter} class='animate-fade-in-up'>
+      <PageContent {frontmatter}>
         <slot />
       </PageContent>
       <div class='mt-16 [animation-delay:200ms] animate-fade-in-up sm:mt-20'>
@@ -22,7 +22,7 @@ projects = projects.sort((a, b) => a.data.order - b.data.order)
           {
             projects.map((site) => (
               <li class='group flex flex-col items-start relative'>
-                <h2 class='text-base text-morningGlory font-serif font-semibold mt-6'>
+                <h2 class='text-base text-morningGlory font-semibold font-serif mt-6'>
                   <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
                   <a href={site.data.link}>
                     <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />

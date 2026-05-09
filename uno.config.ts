@@ -1,4 +1,4 @@
-import { defineConfig, presetIcons, presetTypography, presetWebFonts, presetWind4 } from 'unocss'
+import { defineConfig, presetIcons, presetTypography, presetWind4 } from 'unocss'
 
 export default defineConfig({
   theme: {
@@ -40,15 +40,7 @@ export default defineConfig({
         'vertical-align': 'middle'
       }
     }),
-    presetTypography(),
-    presetWebFonts({
-      provider: 'google',
-      fonts: {
-        sans: 'Noto Sans',
-        serif: 'Noto Serif',
-        mono: 'Noto Sans Mono'
-      }
-    })
+    presetTypography()
   ],
   preflights: [
     {

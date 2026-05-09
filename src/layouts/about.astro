@@ -20,6 +20,8 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 <Image
                   alt='Profile photo'
                   width={800}
+                  height={800}
+                  fit='cover'
                   loading='eager'
                   class='rounded-2xl bg-sugarSwizzle aspect-square rotate-3 object-cover dark:bg-blackBeauty'
                   style='color:transparent'
@@ -28,13 +30,17 @@ social = social.sort((a, b) => a.data.order - b.data.order)
               </div>
             </div>
             <div class='lg:row-span-2 lg:order-first'>
-              <h1 class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'>
+              <h1
+                class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'
+              >
                 {frontmatter.title}
               </h1>
               <p class='text-xl text-morningGlory mt-6 italic'>
                 {frontmatter.description}
               </p>
-              <article class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'>
+              <article
+                class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'
+              >
                 <slot />
               </article>
             </div>
@@ -63,13 +69,14 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                     class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-morningGlory dark:hover:text-morningGlory'
                     href='mailto:chris@christham.net'
                   >
-                    <span class='i-heroicons-envelope-solid flex-none h-6 w-6 transition fill-graniteGray dark:fill-opalGray group-hover:fill-morningGlory dark:group-hover:fill-morningGlory' />
+                    <span
+                      class='i-heroicons-envelope-solid flex-none h-6 w-6 transition fill-graniteGray dark:fill-opalGray group-hover:fill-morningGlory dark:group-hover:fill-morningGlory'
+                    ></span>
                     <span class='ml-4'>chris@christham.net</span>
                   </a>
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>

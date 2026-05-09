@@ -161,7 +161,8 @@
     })
 
     document.addEventListener('click', (event) => {
-      const isClickInside = button.contains(event.target as Node) || menu.contains(event.target as Node)
+      const isClickInside =
+        button.contains(event.target as Node) || menu.contains(event.target as Node)
       if (!isClickInside && !menu.classList.contains('hidden')) {
         menu.classList.add('hidden')
         button.setAttribute('aria-expanded', 'false')
