@@ -5,6 +5,8 @@ import Footer from '../components/footer.astro'
 import { ClientRouter } from 'astro:transitions'
 import { getCollection } from 'astro:content'
 
+import config from '../config.json' with { type: 'json' }
+
 export interface Props {
   title: string
   description: string
@@ -32,22 +34,22 @@ const social = await getCollection('social')
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Chris Tham',
+  name: config.name,
   url: Astro.site,
-  description: 'Chris Tham - Personal Web Site and Portfolio'
+  description: config.description
 }
 
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Chris Tham',
+  name: config.name,
   url: Astro.site,
   image: socialImageURL,
   sameAs: social.map((item) => item.data.link),
-  jobTitle: 'Consultant, Artist, Photographer',
+  jobTitle: config.title,
   worksFor: {
     '@type': 'Organization',
-    name: 'Self-employed'
+    name: config.organization
   }
 }
 
@@ -62,7 +64,7 @@ if (article) {
     datePublished: pubDate?.toISOString(),
     author: {
       '@type': 'Person',
-      name: 'Chris Tham'
+      name: config.name
     }
   }
 }

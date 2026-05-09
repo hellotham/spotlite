@@ -4,6 +4,7 @@ import Layout from '../layouts/layout.astro'
 interface Props {
   frontmatter: {
     title: string
+    heading?: string
     description: string
     list: {
       section: string
@@ -27,7 +28,7 @@ const { frontmatter } = Astro.props
             <h1
               class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
             >
-              {frontmatter.description}
+              {frontmatter.heading || frontmatter.description}
             </h1><div class='text-base text-graniteGray mt-6 dark:text-opalGray'>
               <slot />
             </div>

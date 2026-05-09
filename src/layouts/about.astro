@@ -7,6 +7,7 @@ import { getCollection } from 'astro:content'
 interface Props {
   frontmatter: {
     title: string
+    heading?: string
     description: string
   }
 }
@@ -38,7 +39,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
               <h1
                 class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
               >
-                {frontmatter.description}
+                {frontmatter.heading || frontmatter.description}
               </h1>
               <div class='text-base text-graniteGray mt-6 space-y-7 dark:text-opalGray'>
                 <slot />
