@@ -7,15 +7,15 @@
 - [x] Task: Create `src/content/page/` directory. (2145bc7)
 - [x] Task: Conductor - User Manual Verification 'Define `page` Collection' (Protocol in workflow.md) (c5c511f)
 
-## Phase 2: Create Dynamic Route & Layouts
-- [ ] Task: Create `src/pages/[...slug].astro` (or `[page].astro`) for dynamic routing.
-    - [ ] Implement `getStaticPaths` to query the `page` collection.
-    - [ ] Implement logic to dynamically resolve and render the component specified in the `layout` frontmatter property.
-    - [ ] Add unit test to verify routing logic (if applicable/testable in Vitest).
-- [ ] Task: Extract layout logic from `articles.astro` and `projects.astro`.
-    - [ ] Create `src/layouts/ArticlesLayout.astro`. Move the collection fetching and list rendering logic here.
-    - [ ] Create `src/layouts/ProjectsLayout.astro`. Move the collection fetching and list rendering logic here.
-- [ ] Task: Conductor - User Manual Verification 'Create Dynamic Route & Layouts' (Protocol in workflow.md)
+## Phase 2: Create Dynamic Route & Layouts [checkpoint: 7aa6661]
+- [x] Task: Create `src/pages/[...slug].astro` (or `[page].astro`) for dynamic routing. (a1d3c96)
+    - [x] Implement `getStaticPaths` to query the `page` collection.
+    - [x] Implement logic to dynamically resolve and render the component specified in the `layout` frontmatter property.
+    - [x] Add unit test to verify routing logic (if applicable/testable in Vitest).
+- [x] Task: Extract layout logic from `articles.astro` and `projects.astro`. (a1d3c96)
+    - [x] Create `src/layouts/ArticlesLayout.astro`. Move the collection fetching and list rendering logic here.
+    - [x] Create `src/layouts/ProjectsLayout.astro`. Move the collection fetching and list rendering logic here.
+- [x] Task: Conductor - User Manual Verification 'Create Dynamic Route & Layouts' (Protocol in workflow.md) (7aa6661)
 
 ## Phase 3: Migrate Content Files
 - [ ] Task: Migrate static markdown pages.
