@@ -31,9 +31,13 @@ const { frontmatter } = Astro.props
               class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
             >
               {frontmatter.title}
-            </h1><div class='text-base text-graniteGray mt-6 dark:text-opalGray'>
+            </h1>
+            <p class='text-xl italic text-morningGlory mt-6'>
+              {frontmatter.description}
+            </p>
+            <article class='text-base text-graniteGray mt-6 prose dark:text-opalGray'>
               <slot />
-            </div>
+            </article>
           </header><div class='mt-16 sm:mt-20'>
             <div class='space-y-20'>
               {
