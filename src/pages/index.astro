@@ -1,22 +1,84 @@
 ---
 import Layout from '../layouts/layout.astro'
-import Hero from '../components/hero.astro'
+import { Image } from 'astro:assets'
+import Avatar from '../assets/me/avatar.jpg'
+import Navbar from '../components/navbar.astro'
+import Theme from '../components/theme.astro'
+import { getCollection } from 'astro:content'
 import ImageCards from '../components/imagecards.astro'
 import ArticleList from '../components/articlelist.astro'
 import CTAForm from '../components/ctaform.astro'
 import Work from '../components/work.astro'
+import config from '../config.json' with { type: 'json' }
 
-const title = 'Chris Tham - Personal Web Site'
-const description = 'artist, consultant, cyclist, designer, musician, photographer, world traveller'
+let social = await getCollection('social')
+social = social.sort((a, b) => a.data.order - b.data.order)
 ---
 
-<Layout {title} {description} home={true}>
-  <div class='animate-fade-in-up'>
-    <Hero />
+<Layout title={config.name} description={config.title} home={true}>
+  <div class='sm:px-8'>
+    <div class='mx-auto max-w-7xl lg:px-8'>
+      <div class='px-4 relative lg:px-12 sm:px-8'>
+        <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+          <header class='py-6 flex items-center justify-between z-50'>
+            <div class='flex flex-1'></div>
+            <Navbar />
+            <Theme />
+          </header>
+
+          <div class='mt-16 animate-fade-in-up'>
+            <div class='max-w-2xl'>
+              <a href='/' aria-label='Home' class='mb-8 h-32 w-32 block pointer-events-auto'>
+                <Image
+                  src={Avatar}
+                  alt='Avatar'
+                  width={256}
+                  loading='eager'
+                  class='rounded-full bg-sugarSwizzle h-32 w-32 ring-1 ring-opalGray/20 shadow-md object-cover dark:bg-blackBeauty dark:ring-opalGray/20'
+                />
+              </a>
+              <h1
+                class='text-3xl text-morningGlory tracking-tight font-bold font-serif sm:text-4xl'
+              >
+                {config.title}
+              </h1>
+              <p class='text-base text-graniteGray mt-6 dark:text-opalGray'>
+                I’m Chris Tham, an outrageous actualiser based in Sydney. I’m the founder and Junior
+                Janitor of Hello Tham, a boutique management consulting company.
+              </p>
+              <p class='text-base text-graniteGray mt-6 dark:text-opalGray'>
+                This website has been built using a design system called
+                <a href='https://rosely.hellotham.com/'>Rosely</a>.
+              </p>
+              <div class='mt-6 flex gap-6'>
+                {
+                  social.map((item) => (
+                    <a
+                      class='group p-1 -m-1'
+                      aria-label={'Follow on ' + item.data.title}
+                      href={item.data.link}
+                    >
+                      <span
+                        class:list={[
+                          'h-6 w-6 fill-graniteGray transition group-hover:fill-morningGlory dark:fill-opalGray dark:group-hover:fill-morningGlory',
+                          item.data.icon
+                        ]}
+                      />
+                    </a>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div class='[animation-delay:200ms] animate-fade-in-up'>
     <ImageCards />
   </div>
+
   <div class='mt-24 [animation-delay:400ms] animate-fade-in-up md:mt-28 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>

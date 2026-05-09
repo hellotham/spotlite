@@ -4,7 +4,6 @@ import fs from 'node:fs'
 describe('UI Alignment', () => {
   it('articlelist.astro should use Rosely palette colors', () => {
     const content = fs.readFileSync('src/components/articlelist.astro', 'utf-8')
-    expect(content).toContain('text-blackBeauty')
     expect(content).toContain('text-morningGlory')
     expect(content).toContain('bg-heavenlyPink')
   })
@@ -18,25 +17,25 @@ describe('UI Alignment', () => {
   it('ctaform.astro should use Rosely palette colors', () => {
     const content = fs.readFileSync('src/components/ctaform.astro', 'utf-8')
     expect(content).toContain('bg-sugarSwizzle')
-    expect(content).toContain('text-blackBeauty')
+    expect(content).toContain('text-morningGlory')
     expect(content).toContain('focus:ring-morningGlory')
   })
 
-  it('hero.astro should use Rosely palette colors', () => {
-    const content = fs.readFileSync('src/components/hero.astro', 'utf-8')
-    expect(content).toContain('text-blackBeauty')
+  it('index.astro should use Rosely palette colors in hero section', () => {
+    const content = fs.readFileSync('src/pages/index.astro', 'utf-8')
+    expect(content).toContain('text-morningGlory')
     expect(content).toContain('text-graniteGray')
   })
 
   it('work.astro should use Rosely palette colors', () => {
     const content = fs.readFileSync('src/components/work.astro', 'utf-8')
     expect(content).toContain('ring-opalGray')
-    expect(content).toContain('text-blackBeauty')
+    expect(content).toContain('text-morningGlory')
   })
 
   it('[...id].astro should use Rosely palette colors', () => {
     const content = fs.readFileSync('src/pages/article/[...id].astro', 'utf-8')
-    expect(content).toContain('text-blackBeauty')
+    expect(content).toContain('text-morningGlory')
     expect(content).toContain('bg-sugarSwizzle')
     expect(content).toContain('bg-barelyPink')
   })

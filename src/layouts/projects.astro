@@ -21,9 +21,7 @@ const projects = await getCollection('project')
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
           <header class='max-w-2xl animate-fade-in-up'>
-            <h1
-              class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
-            >
+            <h1 class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'>
               {frontmatter.title}
             </h1>
             <p class='text-xl text-morningGlory mt-6 italic'>
@@ -38,7 +36,7 @@ const projects = await getCollection('project')
               {
                 projects.map((site) => (
                   <li class='group flex flex-col items-start relative'>
-                    <h2 class='text-base text-blackBeauty font-semibold mt-6 dark:text-sugarSwizzle'>
+                    <h2 class='text-base text-morningGlory font-semibold font-serif mt-6'>
                       <>
                         <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
                         <a href={site.data.link}>

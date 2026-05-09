@@ -37,14 +37,14 @@ social = social.sort((a, b) => a.data.order - b.data.order)
             </div>
             <div class='lg:row-span-2 lg:order-first'>
               <h1
-                class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
+                class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'
               >
                 {frontmatter.title}
               </h1>
-              <p class='text-xl italic text-morningGlory mt-6'>
+              <p class='text-xl text-morningGlory mt-6 italic'>
                 {frontmatter.description}
               </p>
-              <article class='text-base text-graniteGray mt-6 space-y-7 dark:text-opalGray prose'>
+              <article class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray'>
                 <slot />
               </article>
             </div>

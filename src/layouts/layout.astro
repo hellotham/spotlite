@@ -1,5 +1,4 @@
 ---
-import HeaderHome from '../components/headerhome.astro'
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
 import { ClientRouter } from 'astro:transitions'
@@ -164,10 +163,7 @@ const breadcrumbList = {
     <ClientRouter />
   </head>
   <body>
-    <div
-      class='font-sans bg-pink-50 flex flex-col h-full dark:bg-black'
-      style={`--content-offset: ${home ? '116' : '0'}px;`}
-    >
+    <div class='font-sans bg-pink-50 flex flex-col h-full dark:bg-black'>
       <div class='flex inset-0 justify-center fixed sm:px-8'>
         <div class='flex max-w-7xl w-full lg:px-8'>
           <div class='bg-white w-full ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20'>
@@ -175,8 +171,7 @@ const breadcrumbList = {
         </div>
       </div>
       <div class='relative'>
-        {home ? <HeaderHome /> : <Header />}
-        <div style='height:var(--content-offset)'></div>
+        {!home && <Header />}
         <main>
           <slot />
         </main>

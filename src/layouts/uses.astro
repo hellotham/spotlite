@@ -24,9 +24,7 @@ const { frontmatter } = Astro.props
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
           <header class='max-w-2xl'>
-            <h1
-              class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
-            >
+            <h1 class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'>
               {frontmatter.title}
             </h1>
             <p class='text-xl text-morningGlory mt-6 italic'>
@@ -45,17 +43,14 @@ const { frontmatter } = Astro.props
                   >
                     <div class='gap-y-8 grid grid-cols-1 max-w-3xl items-baseline md:grid-cols-4'>
                       <>
-                        <h2
-                          id=':R6l6:'
-                          class='text-sm text-blackBeauty font-semibold dark:text-sugarSwizzle'
-                        >
+                        <h2 id=':R6l6:' class='text-sm text-morningGlory font-semibold font-serif'>
                           {section.section}
                         </h2>
                         <div class='md:col-span-3'>
                           <ul class='space-y-16'>
                             {section.items.map((item) => (
                               <li class='group flex flex-col items-start relative'>
-                                <h3 class='text-base text-blackBeauty tracking-tight font-semibold dark:text-sugarSwizzle'>
+                                <h3 class='text-base text-morningGlory tracking-tight font-semibold font-serif'>
                                   {item.item}
                                 </h3>
                                 <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>

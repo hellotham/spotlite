@@ -8,8 +8,8 @@ describe('Layout Alignment', () => {
     expect(content).toContain('ring-opalGray')
   })
 
-  it('headerhome.astro should use Rosely palette colors', () => {
-    const content = fs.readFileSync('src/components/headerhome.astro', 'utf-8')
+  it('index.astro should use Rosely palette colors in header', () => {
+    const content = fs.readFileSync('src/pages/index.astro', 'utf-8')
     expect(content).toContain('bg-sugarSwizzle')
     expect(content).toContain('ring-opalGray')
   })

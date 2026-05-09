@@ -47,7 +47,7 @@ High-positivity colors used for functional highlighting (Success, Error, Info, W
 ## 3. Typography Rules
 
 * **Primary Font Family:** "Noto Sans", sans-serif. Chosen for its clean, modern, and highly readable character.
-* **Serif Font Family:** "Noto Serif", serif. Used for headings and emphasis.
+* **Serif Font Family:** "Noto Serif", serif. Used for headings and emphasis. Headings should be colored with **Morning Glory (#ec809e)** to provide a vibrant yet serene hierarchy.
 * **Monospace Font Family:** "Noto Sans Mono", monospace. Used for technical data, code snippets, and terminal interfaces.
 
 ## 4. Component Styling & Spacing
