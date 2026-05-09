@@ -1,0 +1,8 @@
+{
+  "track_id": "page_collection_20260509",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-05-09T00:00:00Z",
+  "updated_at": "2026-05-09T00:00:00Z",
+  "description": "Create page collection, migrate static pages, and refactor articles/projects list pages to use layouts."
+}
