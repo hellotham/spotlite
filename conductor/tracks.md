@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [~] **Track: Audit and improve site accessibility**
+- [x] **Track: Audit and improve site accessibility**
   *Link: [./tracks/audit_accessibility_20260509/](./tracks/audit_accessibility_20260509/)*
