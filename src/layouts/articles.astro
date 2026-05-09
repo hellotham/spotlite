@@ -28,12 +28,12 @@ articles = articles.sort((a, b) =>
             >
               {frontmatter.title}
             </h1>
-            <p class='text-xl italic text-morningGlory mt-6'>
+            <p class='text-xl text-morningGlory mt-6 italic'>
               {frontmatter.description}
             </p>
-            <article class='mt-6 prose dark:prose-invert'>
+            <div class='mt-6 max-w-none prose dark:prose-invert'>
               <slot />
-            </article>
+            </div>
           </header>
           <div class='mt-16 sm:mt-20'>
             <div class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'>

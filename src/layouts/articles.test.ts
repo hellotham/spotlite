@@ -16,10 +16,10 @@ describe('articles.astro layout', () => {
     expect(content).toContain('text-morningGlory')
   })
 
-  it('should wrap markdown content in an article with prose class', () => {
-    expect(content).toContain('<article')
+  it('should wrap markdown content in a div with prose class', () => {
+    expect(content).toContain('<div')
     expect(content).toContain('prose')
     expect(content).toContain('<slot />')
-    expect(content).toContain('</article>')
+    expect(content).toContain('</div>')
   })
 })

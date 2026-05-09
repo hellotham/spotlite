@@ -26,12 +26,12 @@ const projects = await getCollection('project')
             >
               {frontmatter.title}
             </h1>
-            <p class='text-xl italic text-morningGlory mt-6'>
+            <p class='text-xl text-morningGlory mt-6 italic'>
               {frontmatter.description}
             </p>
-            <article class='mt-6 prose dark:prose-invert'>
+            <div class='mt-6 max-w-none prose dark:prose-invert'>
               <slot />
-            </article>
+            </div>
           </header>
           <div class='mt-16 [animation-delay:200ms] animate-fade-in-up sm:mt-20'>
             <ul class='gap-x-12 gap-y-16 grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2'>
@@ -64,7 +64,7 @@ const projects = await getCollection('project')
                         />
                       </div>
                       <p class='text-sm text-graniteGray font-medium mt-6 flex transition relative z-10 dark:text-sugarSwizzle group-hover:text-morningGlory'>
-                        <span class='flex-non i-heroicons-link-solid h-6 w-6' />
+                        <span class='i-heroicons-link-solid flex-none h-6 w-6' />
                         <span class='ml-2'>{site.data.link}</span>
                       </p>
                     </>
