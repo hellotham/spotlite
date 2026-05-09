@@ -1,0 +1,8 @@
+{
+  "track_id": "layout_updates_20260509",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-05-09T00:00:00Z",
+  "updated_at": "2026-05-09T00:00:00Z",
+  "description": "change logic of layout pages in @src/layouts/ so that they show the frontmatter description and markdown content. The description should be shown in italics in a bigger font and accent color whilst the markdown content should be displayed using typography prose class."
+}
