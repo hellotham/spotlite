@@ -11,11 +11,13 @@ import CTAForm from '../components/ctaform.astro'
 import Work from '../components/work.astro'
 import config from '../config.json' with { type: 'json' }
 
+const { frontmatter } = Astro.props
+
 let social = await getCollection('social')
 social = social.sort((a, b) => a.data.order - b.data.order)
 ---
 
-<Layout title={config.name} description={config.title} home={true}>
+<Layout title={frontmatter.title} description={frontmatter.description} home={true}>
   <div class='sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
@@ -42,17 +44,12 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 <h1
                   class='text-3xl text-morningGlory tracking-tight font-bold font-serif sm:text-4xl'
                 >
-                  {config.title}
+                  {frontmatter.description}
                 </h1>
               </div>
-              <p class='text-base text-graniteGray mt-6 dark:text-opalGray'>
-                I’m Chris Tham, an outrageous actualiser based in Sydney. I’m the founder and Junior
-                Janitor of Hello Tham, a boutique management consulting company.
-              </p>
-              <p class='text-base text-graniteGray mt-6 dark:text-opalGray'>
-                This website has been built using a design system called
-                <a href='https://rosely.hellotham.com/'>Rosely</a>.
-              </p>
+              <div class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'>
+                <slot />
+              </div>
               <div class='mt-6 flex gap-6'>
                 {
                   social.map((item) => (
