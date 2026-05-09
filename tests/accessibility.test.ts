@@ -27,3 +27,22 @@ describe('Accessibility: ARIA attributes', () => {
     expect(content).toMatch(/role=['"]status['"]/)
   })
 })
+
+describe('Accessibility: Semantic HTML and Landmarks', () => {
+  it('layout should have a lang attribute on html', () => {
+    const content = readComponent('src/layouts/layout.astro')
+    expect(content).toContain('lang=\'en\'')
+  })
+
+  it('pagecontent should not wrap main content slot in header', () => {
+    const content = readComponent('src/components/pagecontent.astro')
+    // Ensure no header element contains the slot
+    expect(content).not.toMatch(/<header>(?:(?!<\/header>)[\s\S])*<slot \/>/)
+  })
+
+  it('home layout should use semantic sections for main blocks', () => {
+    const content = readComponent('src/layouts/home.astro')
+    // Expect at least some sections to be used for the grid content
+    expect(content).toContain('<section')
+  })
+})

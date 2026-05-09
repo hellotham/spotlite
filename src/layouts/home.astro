@@ -87,10 +87,16 @@ social = social.sort((a, b) => a.data.order - b.data.order)
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
           <div class='mx-auto gap-y-20 grid grid-cols-1 max-w-xl lg:grid-cols-2 lg:max-w-none'>
-            <ArticleList />
+            <section aria-label='Latest articles'>
+              <ArticleList />
+            </section>
             <div class='space-y-10 lg:pl-16 xl:pl-24'>
-              <CTAForm />
-              <Work />
+              <section aria-label='Newsletter subscription'>
+                <CTAForm />
+              </section>
+              <section aria-label='Work history'>
+                <Work />
+              </section>
             </div>
           </div>
         </div>

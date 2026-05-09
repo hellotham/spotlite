@@ -18,66 +18,68 @@ const featuredImageHeight =
     : 800
 ---
 
-<header>
-  {
-    frontmatter.image ? (
-      <div class='px-4 relative lg:px-12 sm:px-8'>
-        <div class='mx-auto max-w-2xl lg:max-w-5xl'>
-          <div class='gap-y-16 grid grid-cols-1 lg:gap-y-12 lg:grid-rows-[auto_1fr] lg:grid-cols-2'>
-            <div class='lg:pl-20'>
-              <div class='px-2.5 max-w-xs lg:max-w-none' data-pswp-gallery>
-                <a
-                  href={featuredImageSrc}
-                  data-pswp-width={featuredImageWidth}
-                  data-pswp-height={featuredImageHeight}
-                  aria-label='Open featured image in lightbox'
-                  class='group block cursor-zoom-in relative'
+<div class='px-4 relative lg:px-12 sm:px-8'>
+  <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+    {
+      frontmatter.image ? (
+        <div class='gap-y-16 grid grid-cols-1 lg:gap-y-12 lg:grid-rows-[auto_1fr] lg:grid-cols-2'>
+          <header class='lg:pl-20'>
+            <div class='px-2.5 max-w-xs lg:max-w-none' data-pswp-gallery>
+              <a
+                href={featuredImageSrc}
+                data-pswp-width={featuredImageWidth}
+                data-pswp-height={featuredImageHeight}
+                aria-label='Open featured image in lightbox'
+                class='group block cursor-zoom-in relative'
+              >
+                <Image
+                  alt='Featured image'
+                  width={800}
+                  height={800}
+                  fit='cover'
+                  loading='eager'
+                  class='rounded-2xl bg-sugarSwizzle aspect-square rotate-3 transition duration-300 ease-out object-cover dark:bg-blackBeauty group-hover:scale-105'
+                  style='color:transparent'
+                  src={frontmatter.image}
+                />
+                <span
+                  aria-hidden='true'
+                  class='text-xs text-primary font-semibold px-2 py-1 rounded-full glass opacity-0 transition bottom-3 right-3 absolute group-hover:opacity-100'
                 >
-                  <Image
-                    alt='Featured image'
-                    width={800}
-                    height={800}
-                    fit='cover'
-                    loading='eager'
-                    class='rounded-2xl bg-sugarSwizzle aspect-square rotate-3 transition duration-300 ease-out object-cover dark:bg-blackBeauty group-hover:scale-105'
-                    style='color:transparent'
-                    src={frontmatter.image}
-                  />
-                  <span
-                    aria-hidden='true'
-                    class='text-xs text-primary font-semibold px-2 py-1 rounded-full glass opacity-0 transition bottom-3 right-3 absolute group-hover:opacity-100'
-                  >
-                    <span class='i-heroicons-magnifying-glass-plus mr-1 align-middle h-4 w-4 inline-block' />
-                    <span class='align-middle'>Zoom</span>
-                  </span>
-                </a>
-              </div>
+                  <span class='i-heroicons-magnifying-glass-plus mr-1 align-middle h-4 w-4 inline-block' />
+                  <span class='align-middle'>Zoom</span>
+                </span>
+              </a>
             </div>
-            <div class='lg:row-span-2 lg:order-first'>
+          </header>
+          <div class='lg:row-span-2 lg:order-first'>
+            <header>
               <h1 class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'>
                 {frontmatter.title}
               </h1>
               <p class='text-xl text-morningGlory mt-6 italic'>{frontmatter.description}</p>
-              <article class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'>
-                <slot />
-              </article>
-            </div>
+            </header>
+            <article class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'>
+              <slot />
+            </article>
           </div>
         </div>
-      </div>
-    ) : (
-      <>
-        <h1 class='text-4xl text-accent tracking-tight font-bold font-serif sm:text-5xl'>
-          {frontmatter.title}
-        </h1>
-        <p class='text-xl text-accent mt-6 italic'>{frontmatter.description}</p>
-        <div class='mt-6 max-w-none prose dark:prose-invert'>
-          <slot />
-        </div>
-      </>
-    )
-  }
-</header>
+      ) : (
+        <>
+          <header>
+            <h1 class='text-4xl text-accent tracking-tight font-bold font-serif sm:text-5xl'>
+              {frontmatter.title}
+            </h1>
+            <p class='text-xl text-accent mt-6 italic'>{frontmatter.description}</p>
+          </header>
+          <div class='mt-6 max-w-none prose dark:prose-invert'>
+            <slot />
+          </div>
+        </>
+      )
+    }
+  </div>
+</div>
 
 <script>
   let lightboxModulePromise: Promise<typeof import('photoswipe/lightbox')> | undefined
