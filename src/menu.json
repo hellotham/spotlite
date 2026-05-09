@@ -1,9 +1,9 @@
 [
   {
-    "id": "about",
+    "id": "superpowers",
     "order": 10,
-    "title": "About",
-    "link": "/about"
+    "title": "Superpowers",
+    "link": "/superpowers"
   },
   {
     "id": "articles",
