@@ -35,6 +35,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                   src={Profile}
                 />
               </div>
+            </div>
             <div class='lg:row-span-2 lg:order-first'>
               <h1
                 class='text-4xl text-blackBeauty tracking-tight font-bold sm:text-5xl dark:text-sugarSwizzle'
@@ -44,7 +45,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
               <p class='text-xl italic text-morningGlory mt-6'>
                 {frontmatter.description}
               </p>
-              <article class='text-base text-graniteGray mt-6 prose dark:text-opalGray'>
+              <article class='text-base text-graniteGray mt-6 space-y-7 dark:text-opalGray prose'>
                 <slot />
               </article>
             </div>
