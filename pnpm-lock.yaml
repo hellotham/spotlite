@@ -17,9 +17,9 @@ importers:
       '@iconify-json/heroicons':
         specifier: ^1.2.3
         version: 1.2.3
-      '@iconify-json/logos':
-        specifier: ^1.2.11
-        version: 1.2.11
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.81
+        version: 1.2.81
       '@unocss/astro':
         specifier: ^66.6.8
         version: 66.6.8(vite@7.3.3(@types/node@25.6.2)(jiti@2.7.0)(yaml@2.8.4))
@@ -505,8 +505,8 @@ packages:
   '@iconify-json/heroicons@1.2.3':
     resolution: {integrity: sha512-n+vmCEgTesRsOpp5AB5ILB6srsgsYK+bieoQBNlafvoEhjVXLq8nIGN4B0v/s4DUfa0dOrjwE/cKJgIKdJXOEg==}
 
-  '@iconify-json/logos@1.2.11':
-    resolution: {integrity: sha512-fOo4pGEatuyuCFNL+cwquYMa2Im0oJHRHV7lt/Qqs5Ode/lPImHCQcfTtPzZj7qYMPb/h8YHN3TG54uEowrjNQ==}
+  '@iconify-json/simple-icons@1.2.81':
+    resolution: {integrity: sha512-Utjw4sPtoVdbpAQAkC4O0cYpt4ehQZYr6aFHhmvdeW8mQwkINyAe0ogTPqNptSSKogZ2lfgXM8zpuhO961Wnng==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -3910,7 +3910,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/logos@1.2.11':
+  '@iconify-json/simple-icons@1.2.81':
     dependencies:
       '@iconify/types': 2.0.0
 

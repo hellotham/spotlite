@@ -106,10 +106,10 @@ export default defineConfig({
     'animate-fade-in-up',
     '[animation-delay:200ms]',
     '[animation-delay:400ms]',
-    'i-logos-twitter',
-    'i-logos-facebook',
-    'i-logos-instagram-icon',
-    'i-logos-github-icon',
-    'i-logos-linkedin-icon'
+    'i-simple-icons-x',
+    'i-simple-icons-facebook',
+    'i-simple-icons-instagram',
+    'i-simple-icons-github',
+    'i-simple-icons-linkedin'
   ]
 })

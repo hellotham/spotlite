@@ -4,27 +4,27 @@
     "order": 10,
     "title": "Facebook",
     "link": "https://www.facebook.com/chris1tham",
-    "icon": "i-logos-facebook"
+    "icon": "i-simple-icons-facebook"
   },
   {
     "id": "github",
     "order": 20,
     "title": "Github",
     "link": "https://github.com/ChristineTham",
-    "icon": "i-logos-github-icon"
+    "icon": "i-simple-icons-github"
   },
   {
     "id": "instagram",
     "order": 30,
     "title": "Instagram",
     "link": "https://www.instagram.com/chris1tham",
-    "icon": "i-logos-instagram-icon"
+    "icon": "i-simple-icons-instagram"
   },
   {
     "id": "linkedIn",
     "order": 40,
     "title": "LinkedIn",
     "link": "https://www.linkedin.com/in/christham",
-    "icon": "i-logos-linkedin-icon"
+    "icon": "i-simple-icons-linkedin"
   }
 ]
