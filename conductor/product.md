@@ -9,6 +9,7 @@ Spotlite is a highly performant, production-ready personal website and portfolio
 
 ## Key Features & Value Proposition
 - **Portfolio & Resume First:** Emphasizes professional career achievements, past work, and detailed project case studies to attract career opportunities.
+- **Inclusive & Accessible:** Engineered to meet WCAG 2.1 AA standards, ensuring a professional experience for all users through semantic HTML, high-contrast text, and robust keyboard support.
 - **Template Distribution:** Designed as a clean, open-source (MIT licensed) starting point, featuring pre-configured integrations like UnoCSS, Sitemap, and RSS.
 - **SEO Optimized:** Built-in support for dynamic meta tags, social sharing (OpenGraph/Twitter), and advanced JSON-LD structured data (Person, WebSite, Article, Breadcrumbs).
 - **Interactive & Fluid UX:** Enhanced with Astro ClientRouter for smooth, SPA-like navigation and subtle entrance animations to provide a polished and modern professional experience.

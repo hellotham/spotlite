@@ -12,6 +12,7 @@
     - `presetIcons`: For integrating Iconify icons.
     - `presetWebFonts`: For loading Google Fonts (Noto Sans, Noto Serif, Noto Sans Mono).
     - **Custom Animations:** Tailored 'fade-in-up' entrance animations for a refined UI experience.
+    - **Accessible Shortcuts:** Custom `focus-ring` and semantic `text-accent` utility classes for WCAG compliance.
 - **PhotoSwipe:** Modern lightbox library used for click-to-zoom galleries in image cards and featured page images.
 
 - **Rosely Design System:** A warm, low-contrast design system used for consistent styling across the site.
