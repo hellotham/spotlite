@@ -25,6 +25,18 @@ export default defineConfig({
       meadowlark: '#eada4f',
       // Functional mappings
       border: '#a49e9e' // Opal Gray
+    },
+    animation: {
+      keyframes: {
+        'fade-in-up':
+          '{ from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }'
+      },
+      durations: {
+        'fade-in-up': '0.5s'
+      },
+      timingFns: {
+        'fade-in-up': 'ease-out'
+      }
     }
   },
   presets: [
@@ -48,6 +60,23 @@ export default defineConfig({
         mono: 'Noto Sans Mono'
       }
     })
+  ],
+  preflights: [
+    {
+      getCSS: () => `
+        @media (prefers-reduced-motion: reduce) {
+          *, ::before, ::after {
+            animation-delay: -1ms !important;
+            animation-duration: 1ms !important;
+            animation-iteration-count: 1 !important;
+            background-attachment: initial !important;
+            scroll-behavior: auto !important;
+            transition-duration: 0s !important;
+            transition-delay: 0s !important;
+          }
+        }
+      `
+    }
   ],
   safelist: [
     'rotate-2',
