@@ -1,11 +1,11 @@
 # Implementation Plan: Page Collection Migration
 
-## Phase 1: Define `page` Collection
-- [ ] Task: Define `page` collection schema in `src/content.config.ts`.
-    - [ ] Update imports if necessary (e.g., Zod).
-    - [ ] Define the schema with `title`, `description`, `draft`, `seo`, and `layout`.
-- [ ] Task: Create `src/content/page/` directory.
-- [ ] Task: Conductor - User Manual Verification 'Define `page` Collection' (Protocol in workflow.md)
+## Phase 1: Define `page` Collection [checkpoint: c5c511f]
+- [x] Task: Define `page` collection schema in `src/content.config.ts`. (2145bc7)
+    - [x] Update imports if necessary (e.g., Zod).
+    - [x] Define the schema with `title`, `description`, `draft`, `seo`, and `layout`.
+- [x] Task: Create `src/content/page/` directory. (2145bc7)
+- [x] Task: Conductor - User Manual Verification 'Define `page` Collection' (Protocol in workflow.md) (c5c511f)
 
 ## Phase 2: Create Dynamic Route & Layouts
 - [ ] Task: Create `src/pages/[...slug].astro` (or `[page].astro`) for dynamic routing.
