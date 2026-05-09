@@ -1,0 +1,15 @@
+---
+const { frontmatter, class: className } = Astro.props
+---
+
+<header class:list={['max-w-2xl', className]}>
+  <h1 class='text-4xl text-morningGlory tracking-tight font-serif font-bold sm:text-5xl'>
+    {frontmatter.title}
+  </h1>
+  <p class='text-xl text-morningGlory mt-6 italic'>
+    {frontmatter.description}
+  </p>
+  <div class='mt-6 max-w-none prose dark:prose-invert'>
+    <slot />
+  </div>
+</header>

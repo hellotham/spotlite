@@ -1,22 +1,6 @@
 ---
 import Layout from './layout.astro'
-
-interface Props {
-  frontmatter: {
-    title: string
-    description: string
-    list: {
-      section: string
-      items: {
-        item: string
-        description: string
-        parent: string
-        action: string
-        link: string
-      }[]
-    }[]
-  }
-}
+import PageContent from '../components/pagecontent.astro'
 
 const { frontmatter } = Astro.props
 ---
@@ -26,66 +10,61 @@ const { frontmatter } = Astro.props
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
-          <header class='max-w-2xl'>
-            <h1 class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'>
-              {frontmatter.title}
-            </h1>
-            <p class='text-xl text-morningGlory mt-6 italic'>
-              {frontmatter.description}
-            </p>
-            <div class='mt-6 max-w-none prose dark:prose-invert'>
-              <slot />
-            </div>
-          </header><div class='mt-16 sm:mt-20'>
-            <div class='space-y-20'>
-              {
-                frontmatter.list.map((section) => (
-                  <section
-                    aria-labelledby=':R6l6:'
-                    class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'
-                  >
-                    <div class='gap-y-8 grid grid-cols-1 max-w-3xl items-baseline md:grid-cols-4'>
-                      <h2 id=':R6l6:' class='text-sm text-morningGlory font-semibold font-serif'>
-                        {section.section}
-                      </h2>
-                      <div class='md:col-span-3'>
-                        <div class='space-y-16'>
-                          {section.items.map((item) => (
-                            <article class='group flex flex-col items-start relative'>
-                              <h3 class='text-base text-morningGlory tracking-tight font-semibold font-serif'>
-                                <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
-                                <a href={item.link}>
-                                  <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
-                                  <span class='relative z-10'>{item.item}</span>
-                                </a>
-                              </h3>
-                              <p class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray'>
-                                <span
-                                  class='flex items-center inset-y-0 left-0 absolute'
+          <PageContent {frontmatter}>
+            <slot />
+          </PageContent>
+          <div class='mt-16 sm:mt-20'>
+            <div class='mx-auto max-w-3xl'>
+              <div class='space-y-20'>
+                {
+                  frontmatter.list.map((section) => (
+                    <section
+                      aria-labelledby=':R6l6:'
+                      class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'
+                    >
+                      <div class='gap-y-8 grid grid-cols-1 items-baseline md:grid-cols-4'>
+                        <h2 id=':R6l6:' class='text-sm text-morningGlory font-serif font-semibold'>
+                          {section.section}
+                        </h2>
+                        <div class='md:col-span-3'>
+                          <div class='space-y-16'>
+                            {section.items.map((item) => (
+                              <article class='group flex flex-col items-start relative'>
+                                <h3 class='text-base text-morningGlory tracking-tight font-serif font-semibold'>
+                                  <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                                  <a href={item.link}>
+                                    <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                                    <span class='relative z-10'>{item.item}</span>
+                                  </a>
+                                </h3>
+                                <p class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray'>
+                                  <span
+                                    class='flex items-center inset-y-0 left-0 absolute'
+                                    aria-hidden='true'
+                                  >
+                                    <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
+                                  </span>
+                                  {item.parent}
+                                </p>
+                                <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
+                                  {item.description}
+                                </p>
+                                <div
                                   aria-hidden='true'
+                                  class='text-sm text-morningGlory font-medium mt-4 flex items-center relative z-10'
                                 >
-                                  <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
-                                </span>
-                                {item.parent}
-                              </p>
-                              <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
-                                {item.description}
-                              </p>
-                              <div
-                                aria-hidden='true'
-                                class='text-sm text-morningGlory font-medium mt-4 flex items-center relative z-10'
-                              >
-                                {item.action}
-                                <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />
-                              </div>
-                            </article>
-                          ))}
+                                  {item.action}
+                                  <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />
+                                </div>
+                              </article>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </section>
-                ))
-              }
+                    </section>
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>

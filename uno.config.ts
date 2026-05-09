@@ -25,23 +25,9 @@ export default defineConfig({
       meadowlark: '#eada4f',
       // Functional mappings
       border: '#a49e9e' // Opal Gray
-    },
-    animation: {
-      keyframes: {
-        'fade-in-up-custom':
-          '0% { opacity: 0; transform: translateY(1rem); } 100% { opacity: 1; transform: translateY(0); }'
-      },
-      durations: {
-        'fade-in-up-custom': '0.5s'
-      },
-      timingFns: {
-        'fade-in-up-custom': 'ease-out'
-      }
     }
   },
-  shortcuts: {
-    'animate-fade-in-up': 'animate-fade-in-up-custom animate-fill-forwards'
-  },
+  shortcuts: {},
   presets: [
     presetWind4({
       preflights: {

@@ -3,13 +3,15 @@ import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
 import { ClientRouter } from 'astro:transitions'
 import { getCollection } from 'astro:content'
+import type { ImageMetadata } from 'astro'
+import { getImage } from 'astro:assets'
 
 import config from '../config.json' with { type: 'json' }
 
 export interface Props {
   title: string
   description: string
-  image?: string
+  image?: string | ImageMetadata
   article?: boolean
   pubDate?: Date
   itemPage?: boolean
@@ -25,8 +27,21 @@ const {
   itemPage = false,
   home = false
 } = Astro.props
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-const socialImageURL = new URL(image, Astro.site)
+
+let socialImageURL = typeof image === 'string' ? image : '/screenshot.png'
+if (typeof image === 'object') {
+  const optimizedImage = await getImage({
+    src: itemPage && image ? image : image, // Keep optimization logic
+    width: 1200,
+    height: 630,
+    format: 'jpg'
+  })
+  socialImageURL = optimizedImage.src
+}
+
+const finalSocialImageURL = new URL(socialImageURL, Astro.site || 'https://astro-spotlite.netlify.app')
 
 const social = await getCollection('social')
 
@@ -59,7 +74,7 @@ if (article) {
     '@type': 'Article',
     headline: title,
     description: description,
-    image: socialImageURL,
+    image: finalSocialImageURL,
     datePublished: pubDate?.toISOString(),
     author: {
       '@type': 'Person',
@@ -75,7 +90,7 @@ if (itemPage) {
     '@type': 'ItemPage',
     name: title,
     description: description,
-    image: socialImageURL
+    image: finalSocialImageURL
   }
 }
 
@@ -128,20 +143,33 @@ const breadcrumbList = {
       setTheme()
       document.addEventListener('astro:after-swap', setTheme)
     </script>
-    <ClientRouter />
     <style is:global>
       :root {
-        --bg-color: #f4eee8; /* sugarSwizzle */
-        --bg-pink: #fdf2f8; /* barelyPink/pink-50 */
+        --bg-pink: #fdf2f8;
       }
       html {
         background-color: var(--bg-pink);
+        overflow-x: hidden;
       }
       html.dark {
         background-color: #000;
       }
       body {
         margin: 0;
+        font-family: 'Noto Sans', sans-serif;
+      }
+      @keyframes fade-in-up-custom {
+        from {
+          opacity: 0;
+          transform: translateY(1rem);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up-custom 0.5s ease-out forwards;
       }
     </style>
     <link rel='icon' href='/favicon.ico' sizes='any' />
@@ -157,12 +185,12 @@ const breadcrumbList = {
     <meta property='og:title' content={title} />
     <meta property='og:description' content={description} />
     <meta property='og:url' content={canonicalURL} />
-    <meta property='og:image' content={socialImageURL} />
+    <meta property='og:image' content={finalSocialImageURL} />
     <meta property='og:type' content={article ? 'article' : 'website'} />
     <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:title' content={title} />
     <meta name='twitter:description' content={description} />
-    <meta name='twitter:image' content={socialImageURL} />
+    <meta name='twitter:image' content={finalSocialImageURL} />
     <script is:inline type='application/ld+json' set:html={JSON.stringify(websiteSchema)} />
     <script is:inline type='application/ld+json' set:html={JSON.stringify(personSchema)} />
     {
@@ -180,17 +208,18 @@ const breadcrumbList = {
         <script is:inline type='application/ld+json' set:html={JSON.stringify(breadcrumbList)} />
       )
     }
+    {!import.meta.env.DEV && <ClientRouter />}
   </head>
   <body>
-    <div class='flex inset-0 justify-center fixed sm:px-8 pointer-events-none'>
-      <div class='flex max-w-7xl w-full lg:px-8 pointer-events-none'>
+    <div class='fixed inset-0 flex justify-center pointer-events-none'>
+      <div class='mx-auto max-w-7xl w-full flex pointer-events-none sm:px-8'>
         <div
-          class='bg-white w-full ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20 pointer-events-none'
+          class='mx-auto w-full bg-white ring-1 ring-pink-100 dark:bg-zinc-900 dark:ring-pink-300/20 pointer-events-none lg:px-8'
         >
         </div>
       </div>
     </div>
-    <div class='font-sans relative z-10 flex flex-col min-h-screen'>
+    <div class='relative z-10 flex flex-col min-h-screen'>
       {!home && <Header />}
       <main class='flex-1'>
         <slot />

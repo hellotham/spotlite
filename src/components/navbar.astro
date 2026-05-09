@@ -26,34 +26,38 @@ import NavMenu from './navmenu.astro'
 </div>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  const initNavbarMenu = () => {
     const button = document.getElementById('mobile-menu-button')
     const menu = document.getElementById('mobile-menu')
 
-    if (button && menu) {
-      button.addEventListener('click', () => {
-        const isOpen = menu.classList.contains('opacity-0')
-        if (isOpen) {
-          menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none')
-          menu.classList.add('opacity-100', 'scale-100', 'pointer-events-auto')
-          button.setAttribute('aria-expanded', 'true')
-        } else {
-          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
-          menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
-          button.setAttribute('aria-expanded', 'false')
-        }
-      })
+    if (!button || !menu || button.dataset.menuInitialized === 'true') return
 
-      // Close menu when clicking outside
-      document.addEventListener('click', (event) => {
-        const isClickInside =
-          button.contains(event.target as Node) || menu.contains(event.target as Node)
-        if (!isClickInside && !menu.classList.contains('opacity-0')) {
-          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
-          menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
-          button.setAttribute('aria-expanded', 'false')
-        }
-      })
-    }
-  })
+    button.addEventListener('click', () => {
+      const isOpen = menu.classList.contains('opacity-0')
+      if (isOpen) {
+        menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none')
+        menu.classList.add('opacity-100', 'scale-100', 'pointer-events-auto')
+        button.setAttribute('aria-expanded', 'true')
+      } else {
+        menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
+        menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
+        button.setAttribute('aria-expanded', 'false')
+      }
+    })
+
+    // Close menu when clicking outside.
+    document.addEventListener('click', (event) => {
+      const isClickInside = button.contains(event.target as Node) || menu.contains(event.target as Node)
+      if (!isClickInside && !menu.classList.contains('opacity-0')) {
+        menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
+        menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
+        button.setAttribute('aria-expanded', 'false')
+      }
+    })
+
+    button.dataset.menuInitialized = 'true'
+  }
+
+  initNavbarMenu()
+  document.addEventListener('astro:page-load', initNavbarMenu)
 </script>

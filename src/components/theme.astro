@@ -99,12 +99,14 @@
 </div>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  const initThemeMenu = () => {
     const button = document.getElementById('theme-toggle-button')
     const menu = document.getElementById('theme-menu')
     const autoBtn = document.getElementById('theme-auto')
     const lightBtn = document.getElementById('theme-light')
     const darkBtn = document.getElementById('theme-dark')
+
+    if (!button || !menu || button.dataset.themeInitialized === 'true') return
 
     const updateUI = () => {
       const theme = localStorage.theme
@@ -151,23 +153,20 @@
       updateUI()
     }
 
-    if (button && menu) {
-      button.addEventListener('click', () => {
-        const isExpanded = button.getAttribute('aria-expanded') === 'true'
-        button.setAttribute('aria-expanded', (!isExpanded).toString())
-        menu.classList.toggle('hidden')
-        updateUI()
-      })
+    button.addEventListener('click', () => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true'
+      button.setAttribute('aria-expanded', (!isExpanded).toString())
+      menu.classList.toggle('hidden')
+      updateUI()
+    })
 
-      document.addEventListener('click', (event) => {
-        const isClickInside =
-          button.contains(event.target as Node) || menu.contains(event.target as Node)
-        if (!isClickInside && !menu.classList.contains('hidden')) {
-          menu.classList.add('hidden')
-          button.setAttribute('aria-expanded', 'false')
-        }
-      })
-    }
+    document.addEventListener('click', (event) => {
+      const isClickInside = button.contains(event.target as Node) || menu.contains(event.target as Node)
+      if (!isClickInside && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden')
+        button.setAttribute('aria-expanded', 'false')
+      }
+    })
 
     autoBtn?.addEventListener('click', () => {
       localStorage.removeItem('theme')
@@ -198,5 +197,10 @@
 
     // Initial UI state
     updateUI()
-  })
+
+    button.dataset.themeInitialized = 'true'
+  }
+
+  initThemeMenu()
+  document.addEventListener('astro:page-load', initThemeMenu)
 </script>

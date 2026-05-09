@@ -1,38 +1,32 @@
 ---
 import { getCollection } from 'astro:content'
+import Container from './container.astro'
 
-let menu = await getCollection('menu')
-menu = menu.sort((a, b) => a.data.order - b.data.order)
+const menu = await getCollection('menu')
+const social = await getCollection('social')
+
+const year = new Date().getFullYear()
 ---
 
-<footer class='mt-32'>
-  <div class='sm:px-8'>
-    <div class='mx-auto max-w-7xl lg:px-8'>
-      <div class='pb-16 pt-10 border-t border-border dark:border-border/40'>
-        <div class='px-4 relative lg:px-12 sm:px-8'>
-          <div class='mx-auto max-w-2xl lg:max-w-5xl'>
-            <div class='flex flex-col gap-6 items-center justify-between sm:flex-row'>
-              <div
-                class='text-sm text-blackBeauty font-medium flex flex-wrap gap-x-6 gap-y-1 justify-center dark:text-sugarSwizzle'
-              >
-                {
-                  menu.map((item) => (
-                    <a
-                      class='transition hover:text-morningGlory dark:hover:text-morningGlory'
-                      href={item.data.link}
-                    >
-                      {item.data.title}
-                    </a>
-                  ))
-                }
-              </div>
-              <p class='text-sm text-graniteGray dark:text-opalGray'>
-                © {new Date().getFullYear().toString()} Chris Tham. All rights reserved.
-              </p>
-            </div>
-          </div>
+<footer class='mt-32 flex-none'>
+  <Container fullWidth={true}>
+    <div class='border-t border-border pt-10 pb-16 dark:border-border/40'>
+      <div class='flex flex-col gap-6 items-center justify-between md:flex-row'>
+        <div
+          class='text-sm text-blackBeauty font-medium flex flex-wrap gap-x-6 gap-y-1 dark:text-sugarSwizzle'
+        >
+          {
+            menu.map((item) => (
+              <a class='transition hover:text-morningGlory' href={'/' + item.id}>
+                {item.data.title}
+              </a>
+            ))
+          }
         </div>
+        <p class='text-sm text-graniteGray dark:text-opalGray'>
+          &copy; {year} Chris Tham. All rights reserved.
+        </p>
       </div>
     </div>
-  </div>
+  </Container>
 </footer>
