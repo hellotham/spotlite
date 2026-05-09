@@ -10,7 +10,7 @@
 - [x] Task: Fix missing or incorrect ARIA attributes 287397c
     - [ ] Write Tests (Verify ARIA attributes on interactive components)
     - [ ] Implement Feature (Add ARIA labels to buttons, links, and forms)
-- [ ] Task: Ensure proper semantic HTML usage
+- [x] Task: Ensure proper semantic HTML usage 8471a9d
     - [ ] Write Tests (Verify heading hierarchy and landmark elements)
     - [ ] Implement Feature (Update Astro components with correct tags)
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Semantic HTML and ARIA Implementation' (Protocol in workflow.md)
