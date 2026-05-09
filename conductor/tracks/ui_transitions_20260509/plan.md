@@ -5,11 +5,11 @@
     - [ ] Update `src/layouts/layout.astro` to import and include `<ViewTransitions />` in the `<head>`.
 - [x] Task: Conductor - User Manual Verification 'Astro View Transitions Setup' (Protocol in workflow.md)
 
-## Phase 2: UnoCSS Animation Configuration & Base Utilities
+## Phase 2: UnoCSS Animation Configuration & Base Utilities [checkpoint: b09abe5]
 - [x] Task: Configure global animation rules and `prefers-reduced-motion`. 3b8e183
     - [ ] Update `uno.config.ts` or global styles to include custom entrance animation utilities (e.g., `animate-fade-in-up`).
     - [ ] Ensure a global CSS safeguard exists to disable animations when `prefers-reduced-motion: reduce` is active.
-- [ ] Task: Conductor - User Manual Verification 'UnoCSS Animation Configuration & Base Utilities' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'UnoCSS Animation Configuration & Base Utilities' (Protocol in workflow.md)
 
 ## Phase 3: Interaction Feedback (Hover/Focus States)
 - [ ] Task: Enhance button and link hover/focus states.
