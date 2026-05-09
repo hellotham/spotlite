@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import 'photoswipe/style.css'
 import Card1 from '../assets/me/Chris (1).jpeg'
 import Card2 from '../assets/me/Mayfield Garden (7).jpeg'
 import Card3 from '../assets/me/Mercure Centro (2).jpeg'
@@ -11,7 +12,7 @@ const rotates = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 ---
 
 <div class='mt-16 sm:mt-20'>
-  <div class='py-4 flex gap-5 justify-center overflow-hidden -my-4 sm:gap-8'>
+  <div class='py-4 flex gap-5 justify-center overflow-hidden -my-4 sm:gap-8' data-pswp-gallery>
     {
       cards.map((card, i) => (
         <div
@@ -20,17 +21,70 @@ const rotates = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
             rotates[i]
           ]}
         >
-          <Image
-            class='h-full w-full inset-0 absolute object-cover'
-            style='color:transparent'
-            src={card}
-            alt='Card'
-            width={512}
-            height={512}
-            loading='lazy'
-          />
+          <a
+            href={card.src}
+            data-pswp-width={card.width}
+            data-pswp-height={card.height}
+            aria-label={`Open photo ${i + 1} in lightbox`}
+            class='group h-full w-full block cursor-zoom-in relative'
+          >
+            <Image
+              class='h-full w-full transition duration-300 ease-out inset-0 absolute object-cover group-hover:scale-105'
+              style='color:transparent'
+              src={card}
+              alt='Card'
+              width={512}
+              height={512}
+              loading='lazy'
+            />
+            <span
+              aria-hidden='true'
+              class='text-xs text-primary font-semibold px-2 py-1 rounded-full glass opacity-0 transition bottom-3 right-3 absolute group-hover:opacity-100'
+            >
+              <span class='i-heroicons-magnifying-glass-plus mr-1 align-middle h-4 w-4 inline-block' />
+              <span class='align-middle'>Zoom</span>
+            </span>
+          </a>
         </div>
       ))
     }
   </div>
 </div>
+
+<script>
+  let lightboxModulePromise: Promise<typeof import('photoswipe/lightbox')> | undefined
+
+  const loadLightboxModule = async () => {
+    if (!lightboxModulePromise) {
+      lightboxModulePromise = import('photoswipe/lightbox')
+    }
+    return lightboxModulePromise
+  }
+
+  const initPhotoSwipe = async () => {
+    const galleries = document.querySelectorAll<HTMLElement>('[data-pswp-gallery]')
+
+    if (galleries.length === 0) return
+
+    const lightboxModule = await loadLightboxModule()
+    const PhotoSwipeLightbox = lightboxModule.default
+
+    for (const gallery of galleries) {
+      if (gallery.dataset.pswpInitialized === 'true') continue
+
+      const lightbox = new PhotoSwipeLightbox({
+        gallery,
+        children: 'a[data-pswp-width][data-pswp-height]',
+        pswpModule: () => import('photoswipe')
+      })
+
+      lightbox.init()
+      gallery.dataset.pswpInitialized = 'true'
+    }
+  }
+
+  void initPhotoSwipe()
+  document.addEventListener('astro:page-load', () => {
+    void initPhotoSwipe()
+  })
+</script>

@@ -9,7 +9,9 @@ Spotlite is a modern, production-ready personal website template built with **As
 - **Styling:** [UnoCSS](https://unocss.dev/) with Wind4, Typography, and Icons presets
 - **Type Safety:** [TypeScript](https://www.typescriptlang.org/)
 - **Linting & Formatting:** [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
+- **Testing:** [Vitest](https://vitest.dev/) with `jsdom` and `v8` coverage
 - **Image Processing:** [Sharp](https://sharp.pixelplumbing.com/)
+- **Lightbox:** [PhotoSwipe](https://photoswipe.com/) for click-to-zoom image galleries
 - **Search Indexing:** [Pagefind](https://pagefind.app/) for static full-site search
 
 ## 🚀 Key Commands
@@ -21,6 +23,9 @@ Spotlite is a modern, production-ready personal website template built with **As
 | `pnpm run build` | Build the production site and generate Pagefind assets in `./dist/pagefind/` |
 | `pnpm run search:index` | Run Pagefind indexing against `./dist/` |
 | `pnpm run preview` | Preview the production build locally |
+| `pnpm run test` | Run the Vitest test suite once |
+| `pnpm run test:watch` | Run Vitest in watch mode |
+| `pnpm run test:coverage` | Run tests and generate a v8 coverage report |
 | `pnpm run lint` | Run both Prettier and ESLint checks with auto-fixes |
 | `pnpm run lint:prettier` | Format files with Prettier |
 | `pnpm run lint:eslint` | Lint and fix files with ESLint |
@@ -36,6 +41,8 @@ Spotlite is a modern, production-ready personal website template built with **As
 - `public/`: Static assets served directly from the root.
 - `src/content.config.ts`: Defines schemas and loaders for content collections.
 - `src/components/search.astro`: Header search UI and client logic.
+- `src/components/imagecards.astro`: Homepage image card gallery with PhotoSwipe lightbox.
+- `src/components/pagecontent.astro`: Featured page image with PhotoSwipe lightbox support.
 - `src/pages/api/search.json.ts`: Development fallback search index endpoint.
 
 ## 📝 Content Management

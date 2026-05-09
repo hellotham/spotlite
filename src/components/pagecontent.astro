@@ -1,6 +1,21 @@
 ---
 import { Image } from 'astro:assets'
+import 'photoswipe/style.css'
 const { frontmatter } = Astro.props
+
+const featuredImage = frontmatter.image
+const featuredImageSrc =
+  featuredImage && typeof featuredImage === 'object' && 'src' in featuredImage
+    ? featuredImage.src
+    : featuredImage
+const featuredImageWidth =
+  featuredImage && typeof featuredImage === 'object' && 'width' in featuredImage
+    ? featuredImage.width
+    : 800
+const featuredImageHeight =
+  featuredImage && typeof featuredImage === 'object' && 'height' in featuredImage
+    ? featuredImage.height
+    : 800
 ---
 
 <header>
@@ -10,17 +25,32 @@ const { frontmatter } = Astro.props
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
           <div class='gap-y-16 grid grid-cols-1 lg:gap-y-12 lg:grid-rows-[auto_1fr] lg:grid-cols-2'>
             <div class='lg:pl-20'>
-              <div class='px-2.5 max-w-xs lg:max-w-none'>
-                <Image
-                  alt='Featured image'
-                  width={800}
-                  height={800}
-                  fit='cover'
-                  loading='eager'
-                  class='rounded-2xl bg-sugarSwizzle aspect-square rotate-3 object-cover dark:bg-blackBeauty'
-                  style='color:transparent'
-                  src={frontmatter.image}
-                />
+              <div class='px-2.5 max-w-xs lg:max-w-none' data-pswp-gallery>
+                <a
+                  href={featuredImageSrc}
+                  data-pswp-width={featuredImageWidth}
+                  data-pswp-height={featuredImageHeight}
+                  aria-label='Open featured image in lightbox'
+                  class='group block cursor-zoom-in relative'
+                >
+                  <Image
+                    alt='Featured image'
+                    width={800}
+                    height={800}
+                    fit='cover'
+                    loading='eager'
+                    class='rounded-2xl bg-sugarSwizzle aspect-square rotate-3 transition duration-300 ease-out object-cover dark:bg-blackBeauty group-hover:scale-105'
+                    style='color:transparent'
+                    src={frontmatter.image}
+                  />
+                  <span
+                    aria-hidden='true'
+                    class='text-xs text-primary font-semibold px-2 py-1 rounded-full glass opacity-0 transition bottom-3 right-3 absolute group-hover:opacity-100'
+                  >
+                    <span class='i-heroicons-magnifying-glass-plus mr-1 align-middle h-4 w-4 inline-block' />
+                    <span class='align-middle'>Zoom</span>
+                  </span>
+                </a>
               </div>
             </div>
             <div class='lg:row-span-2 lg:order-first'>
@@ -48,3 +78,41 @@ const { frontmatter } = Astro.props
     )
   }
 </header>
+
+<script>
+  let lightboxModulePromise: Promise<typeof import('photoswipe/lightbox')> | undefined
+
+  const loadLightboxModule = async () => {
+    if (!lightboxModulePromise) {
+      lightboxModulePromise = import('photoswipe/lightbox')
+    }
+    return lightboxModulePromise
+  }
+
+  const initPhotoSwipe = async () => {
+    const galleries = document.querySelectorAll<HTMLElement>('[data-pswp-gallery]')
+
+    if (galleries.length === 0) return
+
+    const lightboxModule = await loadLightboxModule()
+    const PhotoSwipeLightbox = lightboxModule.default
+
+    for (const gallery of galleries) {
+      if (gallery.dataset.pswpInitialized === 'true') continue
+
+      const lightbox = new PhotoSwipeLightbox({
+        gallery,
+        children: 'a[data-pswp-width][data-pswp-height]',
+        pswpModule: () => import('photoswipe')
+      })
+
+      lightbox.init()
+      gallery.dataset.pswpInitialized = 'true'
+    }
+  }
+
+  void initPhotoSwipe()
+  document.addEventListener('astro:page-load', () => {
+    void initPhotoSwipe()
+  })
+</script>

@@ -15,10 +15,12 @@ It uses the following technologies:
 - [Typescript](https://www.typescriptlang.org/)
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
+- [Vitest](https://vitest.dev/) for unit and component testing
 - [UnoCSS](https://unocss.dev/)
 - `@astrojs/sitemap` and `@astrojs/rss` preintegrated
 - Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
 - [Pagefind](https://pagefind.app/) for static full-site search
+- [PhotoSwipe](https://photoswipe.com/) for image lightbox galleries
 
 It features:
 
@@ -32,6 +34,7 @@ It features:
 - A Uses page providing a bragging list of products and tools used.
 - Header search with Pagefind indexing for production builds.
 - Development search fallback powered by a local JSON endpoint.
+- Click-to-zoom image galleries on homepage cards and featured page images.
 
 Spotlite uses all the latest and greatest features in Astro (>v6) including:
 
@@ -84,6 +87,10 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run build`           | Builds site and generates the Pagefind index in `./dist/pagefind/` |
 | `pnpm run search:index`    | Runs Pagefind indexing against `./dist/`         |
 | `pnpm run preview`         | Preview your build locally, before deploying     |
+| `pnpm run test`            | Run Vitest test suite once                        |
+| `pnpm run test:watch`      | Run Vitest in watch mode                          |
+| `pnpm run test:coverage`   | Run tests with v8 coverage report                 |
+| `pnpm run lint`            | Run Prettier and ESLint with auto-fixes           |
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
 

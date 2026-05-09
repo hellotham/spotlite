@@ -12,10 +12,12 @@
     - `presetIcons`: For integrating Iconify icons.
     - `presetWebFonts`: For loading Google Fonts (Noto Sans, Noto Serif, Noto Sans Mono).
     - **Custom Animations:** Tailored 'fade-in-up' entrance animations for a refined UI experience.
+- **PhotoSwipe:** Modern lightbox library used for click-to-zoom galleries in image cards and featured page images.
 
 - **Rosely Design System:** A warm, low-contrast design system used for consistent styling across the site.
 ## Infrastructure & Tools
 - **Netlify:** The deployment and hosting platform, configured for Static Site Generation (SSG).
+- **Pagefind:** Static search indexing and runtime search UI integration for fast, client-side content discovery.
 - **@astrojs/sitemap:** Automatically generates XML sitemaps for improved search engine indexing.
 - **Sharp:** High-performance image processing library used by Astro for optimized assets.
 - **ESLint & Prettier:** For maintaining code quality and consistent formatting. Configured with strict accessibility rules (`jsx-a11y`) and optimized UnoCSS linting.

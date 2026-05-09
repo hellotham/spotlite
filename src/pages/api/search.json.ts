@@ -9,7 +9,7 @@ type SearchItem = {
   keywords?: string[]
 }
 
-const normalizeText = (value?: string) =>
+export const normalizeText = (value?: string) =>
   (value ?? '')
     .replace(/<[^>]*>/g, ' ')
     .replace(/```[\s\S]*?```/g, ' ')
@@ -20,18 +20,18 @@ const normalizeText = (value?: string) =>
     .replace(/\s+/g, ' ')
     .trim()
 
-const toExcerpt = (value?: string, max = 180) => {
+export const toExcerpt = (value?: string, max = 180) => {
   const normalized = normalizeText(value)
   if (normalized.length <= max) return normalized
   return `${normalized.slice(0, max).trimEnd()}...`
 }
 
-const normalizePageUrl = (id: string) => {
+export const normalizePageUrl = (id: string) => {
   const normalized = id.replace(/^\/+|\/+$/g, '').replace(/\/index$/, '')
   return normalized.length ? `/${normalized}/` : '/'
 }
 
-const normalizeArticleUrl = (id: string) => {
+export const normalizeArticleUrl = (id: string) => {
   const normalized = id.replace(/^\/+|\/+$/g, '')
   return `/article/${normalized}/`
 }
