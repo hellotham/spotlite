@@ -1,15 +1,26 @@
 ---
 interface Props {
   class?: string
+  fullWidth?: boolean
 }
 
-const { class: className } = Astro.props
+const { class: className, fullWidth = false } = Astro.props
 ---
 
-<div class:list={['sm:px-8', className]}>
-  <div class='mx-auto max-w-7xl lg:px-8'>
-    <div class='px-4 relative lg:px-12 sm:px-8'>
-      <slot />
+{
+  fullWidth ? (
+    <div class:list={['sm:px-8', className]}>
+      <div class='mx-auto max-w-full'>
+        <slot />
+      </div>
     </div>
-  </div>
-</div>
+  ) : (
+    <div class:list={['sm:px-8', className]}>
+      <div class='mx-auto max-w-7xl lg:px-8'>
+        <div class='px-4 relative lg:px-12 sm:px-8'>
+          <slot />
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -9,7 +9,6 @@ import ImageCards from '../components/imagecards.astro'
 import ArticleList from '../components/articlelist.astro'
 import CTAForm from '../components/ctaform.astro'
 import Work from '../components/work.astro'
-import config from '../config.json' with { type: 'json' }
 
 const { frontmatter } = Astro.props
 
@@ -30,8 +29,8 @@ social = social.sort((a, b) => a.data.order - b.data.order)
 
           <div class='mt-16 animate-fade-in-up'>
             <div class='max-w-2xl'>
-              <div class='flex items-center gap-6'>
-                <a href='/' aria-label='Home' class='h-32 w-32 block pointer-events-auto shrink-0'>
+              <div class='flex gap-6 items-center'>
+                <a href='/' aria-label='Home' class='shrink-0 h-32 w-32 block pointer-events-auto'>
                   <Image
                     src={Avatar}
                     alt='Avatar'
@@ -47,7 +46,9 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                   {frontmatter.description}
                 </h1>
               </div>
-              <div class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'>
+              <div
+                class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'
+              >
                 <slot />
               </div>
               <div class='mt-6 flex gap-6'>

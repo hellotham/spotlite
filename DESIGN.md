@@ -61,6 +61,63 @@ Rosely embraces a clean, modern aesthetic utilizing **UnoCSS** (Wind4 preset) fo
 * **Interactive States:** Hover and focus states should slightly shift the background or border color (e.g., using Morning Glory or Lupine accents) while maintaining the eye-comfortable constraint.
 * **Component Architecture:** Build accessible and composable UI blocks styled with UnoCSS utility classes that reference Rosely's custom color variables.
 
+### UnoCSS Shortcuts (Component Library)
+
+For consistency and maintainability, we provide semantic shortcuts that encapsulate common patterns:
+
+#### Text Colors (Built-in Dark Mode)
+- `text-primary` – Main content text (auto-adapts: blackBeauty → sugarSwizzle)
+- `text-secondary` – Muted/disabled text (graniteGray → opalGray)
+- `text-accent` – Highlighted/action text (always morningGlory)
+- `text-muted` – Placeholder/disabled state
+
+#### Surfaces & Containers
+- `surface` – Background fill (sugarSwizzle → blackBeauty in dark mode)
+- `surface-subtle` – Semi-transparent backgrounds
+- `glass` – Frosted glass effect (backdrop-blur + semi-transparent)
+- `glass-hover` – Glass with interactive hover state
+- `border-primary` – Border color with dark mode support
+
+#### Cards & Panels
+- `card` – Base card styling with border and shadow
+- `card-hover` – Interactive card with lift effect on hover
+- `card-interactive` – Clickable card with cursor pointer
+
+#### Buttons (Composable)
+- `btn-base` – Foundation button styles
+- `btn-primary` – Primary action (dark: grapeade)
+- `btn-secondary` – Secondary action
+- `btn-ghost` – Text-only button variant
+- `btn-sm` – Compact button size
+
+#### Forms
+- `input-base` – Input field with focus ring and dark mode
+
+#### Interactive Elements
+- `hover-accent` – Color shift on hover for links/text
+- `focus-ring` – Accessible focus indicator
+
+**Usage Examples:**
+```astro
+<!-- Primary button -->
+<button class='btn-primary'>Save</button>
+
+<!-- Glass panel -->
+<div class='glass p-6 rounded-lg'>Frosted content</div>
+
+<!-- Interactive card -->
+<div class='card-hover cursor-pointer'>Click me</div>
+
+<!-- Text with automatic dark mode -->
+<p class='text-secondary'>Muted content</p>
+<h1 class='text-accent'>Highlighted heading</h1>
+
+<!-- Form input -->
+<input class='input-base' type='email' />
+```
+
+These shortcuts eliminate repetitive dark mode variants and ensure design consistency across all components.
+
 ## 5. Motion & Animation
 
 Rosely uses motion purposefully to guide focus and add a layer of professional polish without sacrificing performance or serenity.

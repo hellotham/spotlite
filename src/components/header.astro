@@ -11,17 +11,15 @@ import Container from './container.astro'
     <Container fullWidth={true}>
       <div class='flex gap-4 relative'>
         <div class='flex flex-1'>
-          <div
-            class='p-0.5 rounded-full bg-sugarSwizzle/90 h-10 w-10 ring-1 ring-opalGray/20 shadow-md backdrop-blur dark:bg-blackBeauty/90 dark:ring-opalGray/20'
-          >
-            <a aria-label='Home' class='pointer-events-auto' href='/'
-              ><Image
+          <div class='p-0.5 rounded-full glass h-10 w-10'>
+            <a aria-label='Home' class='pointer-events-auto' href='/'>
+              <Image
                 src={Avatar}
                 alt='Avatar'
                 width={128}
                 height={128}
                 loading='eager'
-                class='rounded-full bg-sugarSwizzle h-9 w-9 object-cover dark:bg-blackBeauty'
+                class='rounded-full surface h-9 w-9 object-cover'
               /></a
             >
           </div>

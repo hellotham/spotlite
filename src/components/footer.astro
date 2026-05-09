@@ -11,18 +11,16 @@ const year = new Date().getFullYear()
   <Container fullWidth={true}>
     <div class='pb-16 pt-10 border-t border-border dark:border-border/40'>
       <div class='flex flex-col gap-6 items-center justify-between md:flex-row'>
-        <div
-          class='text-sm text-blackBeauty font-medium flex flex-wrap gap-x-6 gap-y-1 dark:text-sugarSwizzle'
-        >
+        <div class='text-sm text-primary font-medium flex flex-wrap gap-x-6 gap-y-1'>
           {
             menu.map((item) => (
-              <a class='transition hover:text-morningGlory' href={'/' + item.id}>
+              <a class='hover-accent' href={'/' + item.id}>
                 {item.data.title}
               </a>
             ))
           }
         </div>
-        <p class='text-sm text-graniteGray dark:text-opalGray'>
+        <p class='text-sm text-secondary'>
           &copy; {year} Chris Tham. All rights reserved.
         </p>
       </div>

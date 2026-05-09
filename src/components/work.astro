@@ -6,8 +6,8 @@ let work = await getCollection('work')
 work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
 ---
 
-<div class='p-6 border border-border rounded-2xl dark:border-border/40'>
-  <h2 class='text-lg text-morningGlory font-semibold font-serif flex'>
+<div class='p-6 card rounded-2xl'>
+  <h2 class='text-lg text-accent font-semibold font-serif flex'>
     <svg
       viewBox='0 0 24 24'
       fill='none'
@@ -18,10 +18,9 @@ work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
       class='flex-none h-6 w-6'
       ><path
         d='M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z'
-        class='fill-barelyPink stroke-graniteGray dark:fill-barelyPink/10 dark:stroke-opalGray'
-      ></path><path
+        class='stroke-secondary fill-barelyPink dark:fill-barelyPink/10'></path><path
         d='M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5'
-        class='stroke-graniteGray dark:stroke-opalGray'></path></svg
+        class='stroke-secondary'></path></svg
     ><span class='ml-3'>Work</span>
   </h2>
   <ol class='mt-6 space-y-4'>
@@ -40,18 +39,13 @@ work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
               />
             </div>
             <dl class='flex flex-auto flex-wrap gap-x-2'>
-              <dd class='text-sm text-blackBeauty font-medium flex-none w-full dark:text-sugarSwizzle'>
-                {job.data.company}
-              </dd>
+              <dd class='text-sm text-primary font-medium flex-none w-full'>{job.data.company}</dd>
               <dt class='sr-only'>Role</dt>
-              <dd class='text-xs text-graniteGray dark:text-opalGray'>{job.data.role}</dd>
+              <dd class='text-xs text-secondary'>{job.data.role}</dd>
               <dt class='sr-only'>Date</dt>
               <>
                 <dt class='sr-only'>Company</dt>
-                <dd
-                  class='text-xs text-graniteGray ml-auto dark:text-opalGray'
-                  aria-label={job.data.datespan}
-                >
+                <dd class='text-xs text-secondary ml-auto' aria-label={job.data.datespan}>
                   {job.data.datespan}
                 </dd>
               </>
@@ -61,14 +55,12 @@ work = work.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
       ))
     }
   </ol>
-  <a
-    class='group text-sm text-blackBeauty font-medium mt-6 px-3 py-2 outline-offset-2 rounded-md bg-sugarSwizzle inline-flex gap-2 w-full ring-1 ring-opalGray/20 transition duration-200 items-center justify-center active:text-blackBeauty/60 dark:text-sugarSwizzle active:bg-barelyPink dark:bg-grapeade hover:bg-barelyPink active:transition-none dark:active:text-sugarSwizzle/70 dark:hover:text-sugarSwizzle dark:active:bg-grapeade dark:hover:bg-grapeade/80'
-    href='/#'
+  <a class='btn-primary mt-6 w-full' href='/#'
     >Download CV<svg
       viewBox='0 0 16 16'
       fill='none'
       aria-hidden='true'
-      class='h-4 w-4 transition stroke-graniteGray group-active:stroke-blackBeauty dark:group-active:stroke-sugarSwizzle dark:group-hover:stroke-sugarSwizzle'
+      class='h-4 w-4 transition stroke-current'
       ><path
         d='M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5'
         stroke-width='1.5'

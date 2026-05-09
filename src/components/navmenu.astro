@@ -6,22 +6,20 @@ menu = menu.sort((a, b) => a.data.order - b.data.order)
 const current = Astro.url.pathname
 ---
 
-<ul
-  class='text-base text-blackBeauty mx-2 px-3 rounded-full bg-sugarSwizzle/90 flex gap-x-2 ring-1 ring-opalGray/20 shadow-md justify-center backdrop-blur dark:text-sugarSwizzle dark:bg-blackBeauty/90 dark:ring-opalGray/20'
->
+<ul class='text-base text-primary px-3 rounded-full glass flex gap-x-2 justify-center'>
   {
     menu.map((item) => (
       <li>
         <a
           class:list={[
             'relative block px-3 py-2 transition-colors duration-200',
-            current == item.data.link ? 'text-morningGlory' : 'hover:text-morningGlory'
+            current == item.data.link ? 'text-accent' : 'hover-accent'
           ]}
           href={item.data.link}
         >
           {item.data.title}
           {current == item.data.link && (
-            <span class='h-px inset-x-1 absolute from-morningGlory/0 to-morningGlory/0 via-morningGlory/40 bg-gradient-to-r -bottom-px' />
+            <span class='from-accent/0 to-accent/0 via-accent/40 h-px inset-x-1 absolute bg-gradient-to-r -bottom-px' />
           )}
         </a>
       </li>

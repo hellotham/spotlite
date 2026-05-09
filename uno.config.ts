@@ -23,11 +23,51 @@ export default defineConfig({
       spearmint: '#64bfa4',
       aquarius: '#3CADD4',
       meadowlark: '#eada4f',
-      // Functional mappings
-      border: '#a49e9e' // Opal Gray
+      // Semantic color mappings
+      primary: 'var(--color-primary, #27272a)',
+      secondary: 'var(--color-secondary, #615f5f)',
+      accent: 'var(--color-accent, #ec809e)',
+      muted: 'var(--color-muted, #a49e9e)',
+      border: '#a49e9e', // Opal Gray
     }
   },
-  shortcuts: {},
+  shortcuts: {
+    // Glass morphism effect
+    'glass': 'bg-sugarSwizzle/90 backdrop-blur ring-1 ring-opalGray/20 shadow-md dark:bg-blackBeauty/90 dark:ring-opalGray/20',
+    'glass-hover': 'glass hover:ring-opalGray/30 transition',
+    
+    // Text colors
+    'text-primary': 'text-blackBeauty dark:text-sugarSwizzle',
+    'text-secondary': 'text-graniteGray dark:text-opalGray',
+    'text-accent': 'text-morningGlory dark:text-morningGlory',
+    'text-muted': 'text-opalGray dark:text-graniteGray',
+    
+    // Border colors
+    'border-primary': 'border-border dark:border-border/40',
+    
+    // Button styles
+    'btn-base': 'px-3 py-2 rounded-md font-medium transition inline-flex items-center justify-center gap-2',
+    'btn-primary': 'btn-base text-sugarSwizzle bg-blackBeauty dark:bg-grapeade hover:bg-grapeade dark:hover:bg-grapeade/80 active:text-sugarSwizzle/70',
+    'btn-secondary': 'btn-base text-primary border border-primary hover:bg-morningGlory/10',
+    'btn-ghost': 'btn-base text-primary hover:text-morningGlory',
+    'btn-sm': 'btn-base text-xs px-2 py-1',
+    
+    // Input styles
+    'input-base': 'px-3 py-2 rounded-md border border-border/10 bg-sugarSwizzle dark:bg-blackBeauty/15 text-primary placeholder:text-secondary focus:outline-none focus:border-morningGlory focus:ring-4 focus:ring-morningGlory/10 transition',
+    
+    // Card styles
+    'card': 'rounded-lg border border-primary bg-white dark:bg-blackBeauty shadow-sm',
+    'card-hover': 'card hover:shadow-md hover:-translate-y-0.5 transition-all',
+    'card-interactive': 'card cursor-pointer transition hover:shadow-md hover:-translate-y-1',
+    
+    // Container styles
+    'surface': 'bg-sugarSwizzle dark:bg-blackBeauty',
+    'surface-subtle': 'bg-sugarSwizzle/50 dark:bg-blackBeauty/50',
+    
+    // Interactive states
+    'hover-accent': 'hover:text-morningGlory dark:hover:text-morningGlory transition',
+    'focus-ring': 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-morningGlory focus-visible:ring-offset-2 dark:focus-visible:ring-offset-blackBeauty',
+  },
   presets: [
     presetWind4({
       preflights: {

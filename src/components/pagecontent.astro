@@ -37,10 +37,10 @@ const { frontmatter } = Astro.props
       </div>
     ) : (
       <>
-        <h1 class='text-4xl text-morningGlory tracking-tight font-bold font-serif sm:text-5xl'>
+        <h1 class='text-4xl text-accent tracking-tight font-bold font-serif sm:text-5xl'>
           {frontmatter.title}
         </h1>
-        <p class='text-xl text-morningGlory mt-6 italic'>{frontmatter.description}</p>
+        <p class='text-xl text-accent mt-6 italic'>{frontmatter.description}</p>
         <div class='mt-6 max-w-none prose dark:prose-invert'>
           <slot />
         </div>

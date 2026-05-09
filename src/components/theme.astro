@@ -9,7 +9,7 @@
       id='theme-toggle-button'
       aria-label='Toggle dark mode'
       aria-expanded='false'
-      class='group px-3 py-2 rounded-full bg-sugarSwizzle/90 ring-1 ring-opalGray/20 shadow-md transition backdrop-blur dark:bg-blackBeauty/90 dark:ring-opalGray/20 dark:hover:ring-opalGray/30'
+      class='group px-3 py-2 rounded-full glass-hover'
       ><svg
         viewBox='0 0 24 24'
         stroke-width='1.5'
@@ -36,13 +36,13 @@
   </div>
   <div
     id='theme-menu'
-    class='text-base text-blackBeauty font-medium mt-1 px-3 py-1 rounded-md bg-sugarSwizzle/90 max-h-56 w-60 hidden pointer-events-auto ring-1 ring-opalGray/20 shadow-md top-10 absolute z-20 overflow-auto backdrop-blur dark:text-sugarSwizzle dark:bg-blackBeauty/90 dark:ring-opalGray/20'
+    class='text-base text-primary font-medium mt-1 px-3 py-1 rounded-md glass max-h-56 w-60 hidden pointer-events-auto top-10 absolute z-20 overflow-auto'
     tabindex='-1'
     role='listbox'
     aria-labelledby='theme-toggle-button'
   >
     <div
-      class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-morningGlory dark:hover:text-morningGlory'
+      class='hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
       id='theme-auto'
       role='option'
       aria-selected='false'
@@ -60,7 +60,7 @@
       </span>
     </div>
     <div
-      class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-morningGlory dark:hover:text-morningGlory'
+      class='hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
       id='theme-light'
       role='option'
       aria-selected='false'
@@ -78,7 +78,7 @@
       </span>
     </div>
     <div
-      class='py-2 pl-2 pr-4 cursor-default select-none relative hover:text-morningGlory dark:hover:text-morningGlory'
+      class='hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
       id='theme-dark'
       role='option'
       aria-selected='false'

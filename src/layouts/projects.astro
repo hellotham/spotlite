@@ -8,7 +8,6 @@ import PageContent from '../components/pagecontent.astro'
 const { frontmatter } = Astro.props
 
 let projects = await getCollection('project')
-projects = projects.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description} itemPage={true}>
