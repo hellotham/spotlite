@@ -20,7 +20,7 @@
 - [x] Task: Conductor - User Manual Verification 'Interaction Feedback (Hover/Focus States)' (Protocol in workflow.md)
 
 ## Phase 4: Component Entrance Animations
-- [ ] Task: Implement entrance animations for main content blocks.
+- [x] Task: Implement entrance animations for main content blocks. 7aca492
     - [ ] Apply entrance animation classes (defined in Phase 2) to key sections like the hero and content lists across main pages (`src/pages/index.astro`, `src/pages/projects.astro`, etc.).
 - [ ] Task: Conductor - User Manual Verification 'Component Entrance Animations' (Protocol in workflow.md)
 
