@@ -21,12 +21,12 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2: Work History Page Implementation' (Protocol in workflow.md) 128917d
 
 ## Phase 3: Component Redesign (`work.astro`)
-- [ ] Task: Write tests for interactive work cards
-    - [ ] Update component tests to verify `src/components/work.astro` renders clickable items.
-    - [ ] Ensure tests check for proper linking to `/work/[slug]` and accessibility attributes.
-- [ ] Task: Implement interactive cards in `work.astro`
-    - [ ] Refactor `src/components/work.astro`.
-    - [ ] Change list items to anchor tags (`<a>`) wrapping the content.
-    - [ ] Apply UnoCSS classes (e.g., `card-interactive`, `focus-ring`) to style them as cards.
-    - [ ] Ensure the links point to the newly created individual work pages.
+- [x] Task: Write tests for interactive work cards 44f57a4
+    - [x] Update component tests to verify `src/components/work.astro` renders clickable items.
+    - [x] Ensure tests check for proper linking to `/work/[slug]` and accessibility attributes.
+- [x] Task: Implement interactive cards in `work.astro` 44f57a4
+    - [x] Refactor `src/components/work.astro`.
+    - [x] Change list items to anchor tags (`<a>`) wrapping the content.
+    - [x] Apply UnoCSS classes (e.g., `card-interactive`, `focus-ring`) to style them as cards.
+    - [x] Ensure the links point to the newly created individual work pages.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Component Redesign (`work.astro`)' (Protocol in workflow.md)
