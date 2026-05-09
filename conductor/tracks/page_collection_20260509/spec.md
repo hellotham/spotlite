@@ -9,8 +9,8 @@ Migrate static pages and specific list pages (`articles.astro`, `projects.astro`
   - `title`: String (required)
   - `description`: String (optional)
   - `draft`: Boolean (optional, defaults to false)
-  - `seo`: SEO metadata object (optional)
   - `layout`: String (required, to specify the Astro layout component to use)
+  - `image`: String (optional, for SEO/social sharing)
 - **Dynamic Routing**: Create a `src/pages/[...slug].astro` to dynamically render entries from the `page` collection. It will resolve and render the layout specified in the frontmatter.
 - **Migration of Static Pages**: Move existing markdown files in `src/pages/` (e.g., `about.md`, `uses.md`, `creations.md`) to `src/content/page/` and update their frontmatter to match the new schema.
 - **Migration of List Pages**:

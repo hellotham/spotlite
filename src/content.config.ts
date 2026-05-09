@@ -59,13 +59,7 @@ const page = defineCollection({
     description: z.string().optional(),
     draft: z.boolean().optional().default(false),
     layout: z.string(),
-    seo: z
-      .object({
-        title: z.string().optional(),
-        description: z.string().optional(),
-        image: z.string().optional()
-      })
-      .optional()
+    image: z.string().optional()
   })
 })
 
