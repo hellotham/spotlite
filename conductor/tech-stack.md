@@ -2,15 +2,16 @@
 
 ## Core Framework & Language
 - **pnpm:** The package manager used for dependency management.
-- **Astro:** The primary web framework used for building the static site, leveraging the Content Layer API for data management.
+- **Astro:** The primary web framework used for building the static site, leveraging the Content Layer API for data management and **ClientRouter** for seamless page transitions.
 - **TypeScript:** Used throughout the project for static type-checking and improved developer experience. Configured with strict rules and enforced across components, layouts, and tests.
 
 ## Styling & UI
 - **UnoCSS:** A utility-first CSS engine used for styling, configured with the following presets:
-    - `presetWind4`: For utility classes.
+    - `presetWind4`: For utility classes and built-in animations.
     - `presetTypography`: For styling markdown content.
     - `presetIcons`: For integrating Iconify icons.
     - `presetWebFonts`: For loading Google Fonts (Noto Sans, Noto Serif, Noto Sans Mono).
+    - **Custom Animations:** Tailored 'fade-in-up' entrance animations for a refined UI experience.
 
 - **Rosely Design System:** A warm, low-contrast design system used for consistent styling across the site.
 ## Infrastructure & Tools
