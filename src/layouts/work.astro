@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from './layout.astro'
+import Container from '../components/container.astro'
+import PageContent from '../components/pagecontent.astro'
+
+const { frontmatter } = Astro.props
+
+const work = await getCollection('work')
+// Sorting work by datespan might be tricky, usually we'd want chronological.
+// For now, we'll just sort by some heuristic if we don't have a date field.
+// Actually, let's just sort by datespan string or maybe add a date field later.
+// I'll keep it simple for now.
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  itemPage={true}
+>
+  <Container class='mt-16 sm:mt-32'>
+    <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+      <PageContent {frontmatter}>
+        <slot />
+      </PageContent>
+      <div class='mt-16 sm:mt-20'>
+        <div class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'>
+          <div class='flex flex-col space-y-16'>
+            {
+              work.map((item) => (
+                <article class='md:grid md:grid-cols-4 md:items-baseline'>
+                  <div class='group flex flex-col items-start relative md:col-span-3'>
+                    <time
+                      class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray md:hidden'
+                    >
+                      <span
+                        class='flex items-center inset-y-0 left-0 absolute'
+                        aria-hidden='true'
+                      >
+                        <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
+                      </span>
+                      {item.data.datespan}
+                    </time>
+                    <h2 class='text-base text-accent tracking-tight font-semibold font-serif'>
+                      <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                      <a href={'/work/' + item.id}>
+                        <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                        <span class='relative z-10'>{item.data.role}</span>
+                      </a>
+                    </h2>
+                    <p class='text-sm text-primary font-medium mt-1 relative z-10'>
+                      {item.data.company}
+                    </p>
+                    <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
+                      {item.body.split('\n')[0].replace(/^#+\s+/, '')}
+                    </p>
+                    <div
+                      aria-hidden='true'
+                      class='text-sm text-accent font-medium mt-4 flex items-center relative z-10'
+                    >
+                      View details
+                      <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />
+                    </div>
+                  </div>
+                  <time
+                    class='text-sm text-graniteGray mb-3 mt-1 flex hidden items-center order-first relative z-10 dark:text-opalGray md:block'
+                  >
+                    {item.data.datespan}
+                  </time>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>
