@@ -10,7 +10,12 @@ const { frontmatter } = Astro.props
 let projects = await getCollection('project')
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description} itemPage={true}>
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  itemPage={true}
+>
   <Container class='mt-16 sm:mt-32'>
     <div class='mx-auto max-w-2xl lg:max-w-5xl'>
       <PageContent {frontmatter}>

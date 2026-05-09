@@ -9,7 +9,12 @@ const creationsList = frontmatter.list as Array<{
 }>
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description} itemPage={true}>
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  itemPage={true}
+>
   <div class='mt-16 sm:mt-32 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>

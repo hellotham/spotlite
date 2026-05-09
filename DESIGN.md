@@ -21,7 +21,7 @@ Used for backgrounds, text, and structural elements where neutral grounding is n
 
 The soul of the system, tempering passion with purity.
 
-* **Morning Glory (#ec809e):** Vibrant highlight or action color.
+* **Morning Glory (#ec809e):** Vibrant highlight or action color (mapped to `text-accent`).
 * **Rose Quartz (#f7caca):** The base color of Rosely; warm, gentle rose tone conveying composure.
 * **Barely Pink (#F8D7DD):** Soft background tint or secondary highlight.
 * **Heavenly Pink (#f4dede):** Ultra-soft background or subtle text accent.
@@ -47,7 +47,7 @@ High-positivity colors used for functional highlighting (Success, Error, Info, W
 ## 3. Typography Rules
 
 * **Primary Font Family:** "Noto Sans", sans-serif. Chosen for its clean, modern, and highly readable character.
-* **Serif Font Family:** "Noto Serif", serif. Used for headings and emphasis. Headings should be colored with **Morning Glory (#ec809e)** to provide a vibrant yet serene hierarchy.
+* **Serif Font Family:** "Noto Serif", serif. Used for headings and emphasis. Headings should be styled with the **`text-accent`** token (Morning Glory) to provide a vibrant yet serene hierarchy.
 * **Monospace Font Family:** "Noto Sans Mono", monospace. Used for technical data, code snippets, and terminal interfaces.
 
 ## 4. Component Styling & Spacing
@@ -58,7 +58,8 @@ Rosely embraces a clean, modern aesthetic utilizing **UnoCSS** (Wind4 preset) fo
 * **Border Radius:** Components typically feature subtle rounding using `rounded-md` (0.375rem) or `rounded-lg` (0.5rem) to reflect the gentle nature of the Rosely theme, avoiding harsh, sharp corners.
 * **Borders:** Use thin, 1px borders colored with `border-border` (mapped to Opal Gray or similar neutral) for subtle separation.
 * **Shadows & Elevation:** Drop shadows should be soft and diffused (`shadow-sm` or `shadow-md`), enhancing the low-contrast ambiance without creating overwhelming visual hierarchy.
-* **Interactive States:** Hover and focus states should slightly shift the background or border color (e.g., using Morning Glory or Lupine accents) while maintaining the eye-comfortable constraint.
+* **Interactive States:** Hover and focus states should slightly shift the background or border color (e.g., using `text-accent` or Lupine accents) while maintaining the eye-comfortable constraint.
+* **Focus Indicators:** Use the `focus-ring` shortcut for all interactive elements to ensure a highly visible, accessible focus state for keyboard users.
 * **Component Architecture:** Build accessible and composable UI blocks styled with UnoCSS utility classes that reference Rosely's custom color variables.
 
 ### UnoCSS Shortcuts (Component Library)
@@ -68,7 +69,7 @@ For consistency and maintainability, we provide semantic shortcuts that encapsul
 #### Text Colors (Built-in Dark Mode)
 - `text-primary` – Main content text (auto-adapts: blackBeauty → sugarSwizzle)
 - `text-secondary` – Muted/disabled text (graniteGray → opalGray)
-- `text-accent` – Highlighted/action text (always morningGlory)
+- `text-accent` – Highlighted/action text (morningGloryDark → morningGlory)
 - `text-muted` – Placeholder/disabled state
 
 #### Surfaces & Containers
@@ -135,3 +136,20 @@ Rosely uses motion purposefully to guide focus and add a layer of professional p
 
 ### Motion Accessibility
 * **Reduced Motion Support:** In alignment with our serenity principle, all non-essential animations and transitions are automatically disabled or minimized when `prefers-reduced-motion: reduce` is detected, ensuring an inclusive experience for all users.
+
+## 6. Accessibility Standards
+
+Rosely is committed to being an inclusive design system that meets **WCAG 2.1 Level AA** standards.
+
+### Semantic Foundation
+* **Landmark Elements:** Use appropriate HTML5 tags (`<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`) to provide structural meaning for assistive technologies.
+* **Heading Hierarchy:** Maintain a logical, nested heading structure (H1 → H2 → H3) without skipping levels, ensuring clear document outlines.
+
+### Interactive Components
+* **ARIA Implementation:** Use standard ARIA roles and attributes (`aria-label`, `aria-expanded`, `aria-current`) where native semantic elements are insufficient, particularly for complex interactive components like mobile menus and search.
+* **Keyboard Navigability:** All interactive elements must be focusable via keyboard, following a logical tab order.
+* **Focus States:** Every focusable element must utilize the `focus-ring` utility to provide a clear, high-contrast visual indicator of focus.
+
+### Color & Contrast
+* **Contrast Compliance:** While maintaining a serene "low-contrast" aesthetic, all text and interactive components are audited to meet WCAG AA contrast ratios (at least 4.5:1 for normal text and 3:1 for large text).
+* **Information without Color:** Never use color as the sole indicator of meaning or status (e.g., provide text labels or icons alongside color states for success and error messages).

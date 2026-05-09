@@ -1,7 +1,7 @@
 ---
 import Layout from './layout.astro'
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
+import PageContent from '../components/pagecontent.astro'
 
 const { frontmatter } = Astro.props
 
@@ -9,75 +9,50 @@ let social = await getCollection('social')
 social = social.sort((a, b) => a.data.order - b.data.order)
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description} itemPage={true}>
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  itemPage={true}
+>
   <div class='mt-16 sm:mt-32 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
-        <div class='mx-auto max-w-2xl lg:max-w-5xl'>
-          <div class='gap-y-16 grid grid-cols-1 lg:gap-y-12 lg:grid-rows-[auto_1fr] lg:grid-cols-2'>
-            <div class='lg:pl-20'>
-              <div class='px-2.5 max-w-xs lg:max-w-none'>
-                <Image
-                  alt='Profile photo'
-                  width={800}
-                  height={800}
-                  fit='cover'
-                  loading='eager'
-                  class='rounded-2xl bg-sugarSwizzle aspect-square rotate-3 object-cover dark:bg-blackBeauty'
-                  style='color:transparent'
-                  src={frontmatter.image}
-                />
-              </div>
-            </div>
-            <div class='lg:row-span-2 lg:order-first'>
-              <h1
-                class='text-4xl text-accent tracking-tight font-bold font-serif sm:text-5xl'
-              >
-                {frontmatter.title}
-              </h1>
-              <p class='text-xl text-accent mt-6 italic'>
-                {frontmatter.description}
-              </p>
-              <article
-                class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'
-              >
-                <slot />
-              </article>
-            </div>
-            <div class='lg:pl-20'>
-              <ul>
-                {
-                  social.map((item) => (
-                    <li class='mt-4 flex'>
-                      <a
-                        class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-accent dark:hover:text-accent'
-                        href={item.data.link}
-                      >
-                        <span
-                          class:list={[
-                            'h-6 w-6 flex-none fill-graniteGray transition group-hover:fill-morningGlory dark:fill-opalGray dark:group-hover:fill-morningGlory',
-                            item.data.icon
-                          ]}
-                        />
-                        <span class='ml-4'>Follow on {item.data.title}</span>
-                      </a>
-                    </li>
-                  ))
-                }
-                <li class='mt-8 pt-8 border-t border-border flex dark:border-border/40'>
+        <PageContent {frontmatter}>
+          <slot />
+        </PageContent>
+        <div class='lg:pl-20'>
+          <ul>
+            {
+              social.map((item) => (
+                <li class='mt-4 flex'>
                   <a
                     class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-accent dark:hover:text-accent'
-                    href='mailto:chris@christham.net'
+                    href={item.data.link}
                   >
                     <span
-                      class='i-heroicons-envelope-solid flex-none h-6 w-6 transition fill-graniteGray dark:fill-opalGray group-hover:fill-morningGlory dark:group-hover:fill-morningGlory'
-                    ></span>
-                    <span class='ml-4'>chris@christham.net</span>
+                      class:list={[
+                        'h-6 w-6 flex-none fill-graniteGray transition group-hover:fill-morningGlory dark:fill-opalGray dark:group-hover:fill-morningGlory',
+                        item.data.icon
+                      ]}
+                    />
+                    <span class='ml-4'>Follow on {item.data.title}</span>
                   </a>
                 </li>
-              </ul>
-            </div>
-          </div>
+              ))
+            }
+            <li class='mt-8 pt-8 border-t border-border flex dark:border-border/40'>
+              <a
+                class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-accent dark:hover:text-accent'
+                href='mailto:chris@christham.net'
+              >
+                <span
+                  class='i-heroicons-envelope-solid flex-none h-6 w-6 transition fill-graniteGray dark:fill-opalGray group-hover:fill-morningGlory dark:group-hover:fill-morningGlory'
+                ></span>
+                <span class='ml-4'>chris@christham.net</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

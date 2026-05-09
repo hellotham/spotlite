@@ -17,7 +17,12 @@ let social = await getCollection('social')
 social = social.sort((a, b) => a.data.order - b.data.order)
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description} home={true}>
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  home={true}
+>
   <div class='sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
@@ -42,9 +47,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                     class='rounded-full bg-sugarSwizzle h-32 w-32 ring-1 ring-opalGray/20 shadow-md object-cover dark:bg-blackBeauty dark:ring-opalGray/20'
                   />
                 </a>
-                <h1
-                  class='text-3xl text-accent tracking-tight font-bold font-serif sm:text-4xl'
-                >
+                <h1 class='text-3xl text-accent tracking-tight font-bold font-serif sm:text-4xl'>
                   {frontmatter.description}
                 </h1>
               </div>
