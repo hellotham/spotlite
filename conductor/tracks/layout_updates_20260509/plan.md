@@ -18,4 +18,8 @@
     - [x] Write/update failing test to verify `projects.astro` description and markdown prose rendering
     - [x] Update `src/layouts/projects.astro` to render `description` from frontmatter and wrap `<slot />` in `<article class="prose">`
     - [x] Verify test passes
+- [x] Task: Update `uses.astro` layout c58ad9e
+    - [x] Write/update failing test to verify `uses.astro` description and markdown prose rendering
+    - [x] Update `src/layouts/uses.astro` to render `description` from frontmatter and wrap `<slot />` in `<article class="prose">`
+    - [x] Verify test passes
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Layout Updates' (Protocol in workflow.md)
