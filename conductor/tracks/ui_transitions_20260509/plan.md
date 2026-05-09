@@ -12,7 +12,7 @@
 - [x] Task: Conductor - User Manual Verification 'UnoCSS Animation Configuration & Base Utilities' (Protocol in workflow.md)
 
 ## Phase 3: Interaction Feedback (Hover/Focus States)
-- [ ] Task: Enhance button and link hover/focus states.
+- [x] Task: Enhance button and link hover/focus states. 6ef32c9
     - [ ] Review navigation components (`src/components/navbar.astro`, `src/components/navmenu.astro`) and apply UnoCSS transition classes (e.g., `transition-colors duration-200 ease-in-out`).
 - [ ] Task: Enhance interactive cards.
     - [ ] Review `src/components/articlelist.astro`, `src/components/imagecards.astro`, `src/components/work.astro`.
