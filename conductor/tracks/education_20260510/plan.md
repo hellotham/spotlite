@@ -1,9 +1,9 @@
 # Implementation Plan: Education Collection and Layout
 
-## Phase 1: Setup Content Collection
+## Phase 1: Setup Content Collection [checkpoint: 0869963]
 - [x] Task: Define education collection schema in `src/content.config.ts` c8795e6
 - [x] Task: Create `src/content/education` directory and add sample markdown entries ca67f5a
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Setup Content Collection' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Setup Content Collection' (Protocol in workflow.md) 0869963
 
 ## Phase 2: Create Education Component for Home Page
 - [ ] Task: Write tests for `src/components/education.astro`
