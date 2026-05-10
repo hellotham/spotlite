@@ -1,7 +1,7 @@
 # Implementation Plan: Menu Collection Refactoring
 
 ## Phase 1: Migration Script and Schema Update
-- [ ] Task: Write and execute the migration script to update `page` frontmatter.
+- [x] Task: Write and execute the migration script to update `page` frontmatter. (9ce47c5)
     - [ ] Create a temporary script (e.g., `migrate-menu.js`) in the project root.
     - [ ] Read and parse `src/menu.json`.
     - [ ] Read all Markdown files in `src/content/page/`.
