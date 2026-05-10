@@ -2,9 +2,6 @@
 import Layout from '../layouts/layout.astro'
 import { Image } from 'astro:assets'
 import Avatar from '../assets/me/avatar.jpg'
-import Navbar from '../components/navbar.astro'
-import Search from '../components/search.astro'
-import Theme from '../components/theme.astro'
 import { getCollection } from 'astro:content'
 import ImageCards from '../components/imagecards.astro'
 import ArticleList from '../components/articlelist.astro'
@@ -29,15 +26,8 @@ social = social.sort((a, b) => a.data.order - b.data.order)
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
-          <header class='py-6 flex items-center justify-between z-50'>
-            <div class='flex flex-1'></div>
-            <Navbar />
-            <Search />
-            <Theme />
-          </header>
-
           <div class='mt-16 animate-fade-in-up'>
-            <div class='max-w-2xl'>
+            <div class='max-w-2xl lg:max-w-5xl'>
               <div class='flex gap-6 items-center'>
                 <a href='/' aria-label='Home' class='shrink-0 h-32 w-32 block pointer-events-auto'>
                   <Image

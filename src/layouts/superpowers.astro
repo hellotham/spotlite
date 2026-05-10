@@ -1,14 +1,9 @@
 ---
 import Layout from './layout.astro'
-import { getCollection } from 'astro:content'
 import PageContent from '../components/pagecontent.astro'
-import D3Superpowers from '../components/d3superpowers.astro'
 import Superpowers from '../components/superpowers.astro'
 
 const { frontmatter } = Astro.props
-
-let social = await getCollection('social')
-social = social.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <Layout
@@ -20,47 +15,10 @@ social = social.sort((a, b) => a.data.order - b.data.order)
   <div class='mt-16 sm:mt-32 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
-        <div class='mx-auto mb-12 gap-8 grid grid-cols-1 max-w-2xl lg:grid-cols-2 lg:max-w-5xl'>
-          <D3Superpowers />
-          <Superpowers />
-        </div>
         <PageContent {frontmatter}>
           <slot />
         </PageContent>
-
-        <div class='lg:pl-20'>
-          <ul>
-            {
-              social.map((item) => (
-                <li class='mt-4 flex'>
-                  <a
-                    class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-accent dark:hover:text-accent'
-                    href={item.data.link}
-                  >
-                    <span
-                      class:list={[
-                        'h-6 w-6 flex-none text-secondary transition group-hover:text-accent',
-                        item.data.icon
-                      ]}
-                    />
-                    <span class='ml-4'>Follow on {item.data.title}</span>
-                  </a>
-                </li>
-              ))
-            }
-            <li class='mt-8 pt-8 border-t border-border flex dark:border-border/40'>
-              <a
-                class='group text-sm text-blackBeauty font-medium flex transition dark:text-sugarSwizzle hover:text-accent dark:hover:text-accent'
-                href='mailto:chris@christham.net'
-              >
-                <span
-                  class='i-heroicons-envelope-solid text-secondary flex-none h-6 w-6 transition group-hover:text-accent'
-                ></span>
-                <span class='ml-4'>chris@christham.net</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <Superpowers />
       </div>
     </div>
   </div>

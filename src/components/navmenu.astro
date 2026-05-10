@@ -6,7 +6,9 @@ pages = pages.sort((a, b) => a.data.order - b.data.order)
 const current = Astro.url.pathname
 ---
 
-<ul class='text-base text-primary px-3 rounded-full glass flex gap-x-2 justify-center'>
+<ul
+  class='text-base text-primary px-3 rounded-2xl glass flex flex-wrap gap-2 justify-center lg:rounded-full lg:flex-nowrap'
+>
   {
     pages.map((item) => (
       <li>

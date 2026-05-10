@@ -2,7 +2,7 @@
   "name": "spotlite",
   "description": "Astro Personal Web Site Template",
   "type": "module",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "scripts": {
     "dev": "astro dev",
     "clean": "rm -rf node_modules .astro dist",

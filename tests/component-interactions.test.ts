@@ -15,7 +15,7 @@ describe('navbar interaction behavior', () => {
   beforeEach(() => {
     document.body.innerHTML = `
       <div>
-        <button id="mobile-menu-button" type="button" aria-expanded="false"></button>
+        <button id="mobile-menu-button" class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu"></button>
         <div id="mobile-menu" class="opacity-0 pointer-events-none scale-95"></div>
       </div>
     `

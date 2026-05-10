@@ -2,11 +2,11 @@
 import NavMenu from './navmenu.astro'
 ---
 
-<div class='flex flex-1 justify-end md:justify-center'>
-  <div class='pointer-events-auto md:hidden'>
+<div class='flex flex-1 items-center justify-end lg:justify-center'>
+  <div class='pointer-events-auto lg:hidden'>
     <button
       id='mobile-menu-button'
-      class='group hover-accent text-sm text-primary font-medium px-4 py-2 rounded-full glass flex items-center focus-ring'
+      class='mobile-menu-button group hover-accent text-sm text-primary font-medium px-4 py-2 rounded-full glass flex items-center focus-ring'
       type='button'
       aria-expanded='false'
       aria-controls='mobile-menu'
@@ -17,47 +17,55 @@ import NavMenu from './navmenu.astro'
   </div>
   <div
     id='mobile-menu'
-    class='opacity-0 pointer-events-none scale-95 transition-all duration-300 ease-in-out inset-x-0 top-12 absolute z-50'
+    class='opacity-0 pointer-events-none scale-95 transition-all duration-300 ease-in-out inset-x-4 top-20 absolute z-50'
   >
-    <NavMenu />
+    <div class='flex justify-center'>
+      <NavMenu />
+    </div>
   </div>
-  <nav class='hidden pointer-events-auto md:block'>
+  <nav class='hidden pointer-events-auto lg:block'>
     <NavMenu />
   </nav>
 </div>
 
 <script>
   const initNavbarMenu = () => {
-    const button = document.getElementById('mobile-menu-button')
-    const menu = document.getElementById('mobile-menu')
+    const buttons = document.querySelectorAll('.mobile-menu-button')
 
-    if (!button || !menu || button.dataset.menuInitialized === 'true') return
+    buttons.forEach((button) => {
+      if (!(button instanceof HTMLElement) || button.dataset.menuInitialized === 'true') return
 
-    button.addEventListener('click', () => {
-      const isOpen = menu.classList.contains('opacity-0')
-      if (isOpen) {
-        menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none')
-        menu.classList.add('opacity-100', 'scale-100', 'pointer-events-auto')
-        button.setAttribute('aria-expanded', 'true')
-      } else {
-        menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
-        menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
-        button.setAttribute('aria-expanded', 'false')
-      }
+      const menuId = button.getAttribute('aria-controls')
+      const menu = menuId ? document.getElementById(menuId) : null
+
+      if (!menu) return
+
+      button.addEventListener('click', () => {
+        const isOpen = menu.classList.contains('opacity-0')
+        if (isOpen) {
+          menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none')
+          menu.classList.add('opacity-100', 'scale-100', 'pointer-events-auto')
+          button.setAttribute('aria-expanded', 'true')
+        } else {
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
+          menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
+          button.setAttribute('aria-expanded', 'false')
+        }
+      })
+
+      // Close menu when clicking outside.
+      document.addEventListener('click', (event) => {
+        const isClickInside =
+          button.contains(event.target as Node) || menu.contains(event.target as Node)
+        if (!isClickInside && !menu.classList.contains('opacity-0')) {
+          menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
+          menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
+          button.setAttribute('aria-expanded', 'false')
+        }
+      })
+
+      button.dataset.menuInitialized = 'true'
     })
-
-    // Close menu when clicking outside.
-    document.addEventListener('click', (event) => {
-      const isClickInside =
-        button.contains(event.target as Node) || menu.contains(event.target as Node)
-      if (!isClickInside && !menu.classList.contains('opacity-0')) {
-        menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none')
-        menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto')
-        button.setAttribute('aria-expanded', 'false')
-      }
-    })
-
-    button.dataset.menuInitialized = 'true'
   }
 
   initNavbarMenu()

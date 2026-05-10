@@ -264,7 +264,7 @@ const breadcrumbList = {
       </div>
     </div>
     <div class='flex flex-col min-h-screen relative z-10'>
-      {!home && <Header />}
+      <Header home={home} />
       <main class='flex-1'>
         <slot />
       </main>
