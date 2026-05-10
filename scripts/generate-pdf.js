@@ -9,17 +9,34 @@ const __dirname = path.dirname(__filename)
 const rootDir = path.resolve(__dirname, '..')
 
 const pagesDir = path.join(rootDir, 'src/content/page')
+const indexFile = path.join(rootDir, 'src/pages/index.md')
+const configFile = path.join(rootDir, 'src/config.json')
 const outputPath = path.join(rootDir, 'public/cv.pdf')
 const stylesheetPath = path.join(rootDir, 'scripts/pdf-theme.css')
 
 async function generatePdf() {
   console.log('Starting PDF generation...')
 
-  // 1. Read all markdown files in src/content/page/
-  const files = fs.readdirSync(pagesDir).filter(f => f.endsWith('.md'))
-  console.log(`Found ${files.length} pages.`)
+  // 1. Read config
+  const config = JSON.parse(fs.readFileSync(configFile, 'utf8'))
+  const authorName = config.name || 'Chris Tham'
 
-  // 2. Parse and sort pages by 'order'
+  // 2. Read index.md (home page)
+  const indexContent = fs.readFileSync(indexFile, 'utf8')
+  const { data: indexData, content: indexBody } = matter(indexContent)
+  const homePage = {
+    id: 'home',
+    order: 0,
+    title: indexData.title || authorName,
+    description: indexData.description,
+    body: indexBody
+  }
+
+  // 3. Read all markdown files in src/content/page/
+  const files = fs.readdirSync(pagesDir).filter(f => f.endsWith('.md'))
+  console.log(`Found ${files.length} pages in collection.`)
+
+  // 4. Parse and sort pages by 'order'
   const pages = files.map(file => {
     const filePath = path.join(pagesDir, file)
     const content = fs.readFileSync(filePath, 'utf8')
@@ -28,21 +45,25 @@ async function generatePdf() {
       id: file.replace('.md', ''),
       order: data.order || 999,
       title: data.title,
+      description: data.description,
       body
     }
   }).sort((a, b) => a.order - b.order)
 
-  // 3. Concatenate body content
-  // We add title, description and a page break between pages
-  const combinedMarkdown = pages.map(page => {
+  // 5. Insert home page at the beginning
+  const allPages = [homePage, ...pages]
+
+  // 6. Concatenate body content
+  // We add title, description and no forced page breaks
+  const combinedMarkdown = allPages.map(page => {
     let header = `# ${page.title}\n\n`
     if (page.description) {
       header += `*${page.description}*\n\n`
     }
-    return `<!-- page: ${page.id} -->\n\n${header}${page.body}\n\n<div class="page-break"></div>`
+    return `<!-- page: ${page.id} -->\n\n${header}${page.body}`
   }).join('\n\n')
 
-  // 4. Generate PDF
+  // 7. Generate PDF
   console.log('Converting Markdown to PDF...')
   try {
     await mdToPdf(
@@ -52,7 +73,18 @@ async function generatePdf() {
         stylesheet: stylesheetPath,
         pdf_options: {
           format: 'A4',
-          margin: '20mm',
+          margin: '3cm',
+          displayHeaderFooter: true,
+          headerTemplate: `
+            <div style="font-size: 10px; width: 100%; text-align: center; font-family: 'Noto Sans', sans-serif;">
+              ${authorName}
+            </div>
+          `,
+          footerTemplate: `
+            <div style="font-size: 10px; width: 100%; text-align: center; font-family: 'Noto Sans', sans-serif;">
+              <span class="pageNumber"></span>
+            </div>
+          `,
           printBackground: true
         }
       }
