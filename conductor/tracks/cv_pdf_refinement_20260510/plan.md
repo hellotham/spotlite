@@ -6,11 +6,11 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Configuration and Styling Updates' (Protocol in workflow.md)
 
 ## Phase 2: PDF Generation Script Updates
-- [ ] Task: Update Markdown concatenation logic.
+- [x] Task: Update Markdown concatenation logic. (4d96dfe)
     - [ ] Modify `scripts/generate-pdf.js` to read and parse `src/pages/index.md` (extracting its title, description, and body).
     - [ ] Insert the parsed home page at the beginning of the `pages` array.
     - [ ] Modify the concatenation map loop to remove the `<div class="page-break"></div>`.
-- [ ] Task: Configure headers, footers, and margins.
+- [x] Task: Configure headers, footers, and margins. (4d96dfe)
     - [ ] Modify `scripts/generate-pdf.js` to read `src/config.json` and extract the `name` property.
     - [ ] Update `pdf_options` in the `mdToPdf` call to include:
         - `margin: '3cm'`
