@@ -1,7 +1,7 @@
 # Implementation Plan: CV PDF Refinement
 
 ## Phase 1: Configuration and Styling Updates
-- [ ] Task: Remove padding from PDF stylesheet.
+- [x] Task: Remove padding from PDF stylesheet. (7384c98)
     - [ ] Modify `scripts/pdf-theme.css` to remove the `padding: 20mm;` from `.markdown-body` to avoid conflicting with Puppeteer margins.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Configuration and Styling Updates' (Protocol in workflow.md)
 
