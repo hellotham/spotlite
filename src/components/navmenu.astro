@@ -18,7 +18,7 @@ const current = Astro.url.pathname
           href={`/${item.id}`}
           aria-current={current == `/${item.id}` ? 'page' : undefined}
         >
-          {item.data.title}
+          {item.data.shorttitle}
           {current == `/${item.id}` && (
             <span class='h-px inset-x-1 absolute from-accent/0 to-accent/0 via-accent/40 bg-gradient-to-r -bottom-px' />
           )}

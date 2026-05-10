@@ -48,6 +48,7 @@ const page = defineCollection({
     z.object({
       order: z.number(),
       title: z.string(),
+      shorttitle: z.string(),
       description: z.string().optional(),
       draft: z.boolean().optional().default(false),
       layout: z.string(),

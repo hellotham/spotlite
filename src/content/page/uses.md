@@ -2,6 +2,7 @@
 order: 50
 layout: ../layouts/uses.astro
 title: Things I use and love.
+shorttitle: Uses
 description: Here’s a big list of all of my favorite stuff, that I use everyday, or at least whenever I can. I love using good quality tools and equipment.
 list:
   - section: Apps

@@ -2,6 +2,7 @@
 order: 30
 layout: ../layouts/projects.astro
 title: Websites I have made.
+shorttitle: Projects
 description: I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of.
 ---
 
