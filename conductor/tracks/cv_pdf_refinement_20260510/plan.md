@@ -10,7 +10,7 @@
     - [ ] Modify `scripts/generate-pdf.js` to read and parse `src/pages/index.md` (extracting its title, description, and body).
     - [ ] Insert the parsed home page at the beginning of the `pages` array.
     - [ ] Modify the concatenation map loop to remove the `<div class="page-break"></div>`.
-- [x] Task: Configure headers, footers, and margins. (4d96dfe)
+- [x] Task: Configure headers, footers, and margins. (4f6bcc0)
     - [ ] Modify `scripts/generate-pdf.js` to read `src/config.json` and extract the `name` property.
     - [ ] Update `pdf_options` in the `mdToPdf` call to include:
         - `margin: '3cm'`
