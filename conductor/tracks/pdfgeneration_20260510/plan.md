@@ -10,7 +10,7 @@
     - [ ] Ensure all color declarations use black, white, or grayscale values.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Setup and Styling' (Protocol in workflow.md)
 
-## Phase 2: PDF Generation Script
+## Phase 2: PDF Generation Script [checkpoint: 3c7728c]
 - [x] Task: Implement the Markdown concatenation logic. (6fa8bc5)
     - [ ] Create `scripts/generate-pdf.js`.
     - [ ] Implement logic to read all `.md` files in `src/content/page/`.
