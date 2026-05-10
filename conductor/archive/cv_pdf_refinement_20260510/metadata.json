@@ -1,0 +1,8 @@
+{
+  "track_id": "cv_pdf_refinement_20260510",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-05-10T12:00:00Z",
+  "updated_at": "2026-05-10T12:00:00Z",
+  "description": "alter the generated @public/cv.pdf - add 3cm margins around the page content, do not create a new page for each page markdown content, and also create page headers and footers. The page footer should be the page number, and the page header should be name in @tsconfig.json. Also include @home.md at beginning of the pdf."
+}
