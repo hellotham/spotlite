@@ -68,7 +68,7 @@ pre code {
 
 @page {
   size: A4;
-  margin: 0;
+  margin: 3cm;
 }
 
 /* Ensure links are black and underlined for visibility in print */

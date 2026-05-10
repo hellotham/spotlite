@@ -73,7 +73,8 @@ async function generatePdf() {
         stylesheet: stylesheetPath,
         pdf_options: {
           format: 'A4',
-          margin: '3cm',
+          margin: 0,
+          preferCSSPageSize: true,
           displayHeaderFooter: true,
           headerTemplate: `
             <div style="font-size: 10px; width: 100%; text-align: center; font-family: 'Noto Sans', sans-serif;">
