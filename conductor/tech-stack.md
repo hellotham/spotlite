@@ -25,4 +25,4 @@
 - **Vitest:** The primary testing framework for unit and component testing. Configured with `jsdom` for DOM manipulation tests and `v8` for code coverage.
 
 ## Content Management
-- **Astro Content Layer:** Manages structured content from Markdown (`src/content/`) and JSON (`src/*.json`) files, with strict Zod schemas for all collections. Includes automated PDF generation using **md-to-pdf** and **gray-matter** for parsing.
+- **Astro Content Layer:** Manages structured content from Markdown (`src/content/`) and JSON (`src/*.json`) files, with strict Zod schemas for all collections. Includes automated PDF generation using **md-to-pdf** and **gray-matter** for parsing. Collections include Articles, Projects, Work, and Education.
