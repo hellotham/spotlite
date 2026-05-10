@@ -20,7 +20,7 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: PDF Generation Script Updates' (Protocol in workflow.md)
 
 ## Phase 3: Final Verification
-- [ ] Task: Run automated checks.
+- [x] Task: Run automated checks. (7ef3fdb)
     - [ ] Run `pnpm run lint` and `pnpm test` to ensure no existing tests are broken.
     - [ ] Generate the PDF manually using `pnpm run pdf` to verify execution.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Final Verification' (Protocol in workflow.md)
