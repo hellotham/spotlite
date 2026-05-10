@@ -4,7 +4,7 @@
 - [x] Task: Install `md-to-pdf` and required parsing utilities. (7581ab3)
     - [ ] Install `md-to-pdf` as a dev dependency.
     - [ ] Install `gray-matter` as a dev dependency (required for cleanly stripping frontmatter and reading the `order` property).
-- [ ] Task: Create the PDF stylesheet.
+- [x] Task: Create the PDF stylesheet. (b3cecbd)
     - [ ] Create `scripts/pdf-theme.css`.
     - [ ] Add baseline typography styles resembling the Rosely design system.
     - [ ] Ensure all color declarations use black, white, or grayscale values.
