@@ -1,8 +1,8 @@
 # Implementation Plan: Education Collection and Layout
 
 ## Phase 1: Setup Content Collection
-- [ ] Task: Define education collection schema in `src/content.config.ts`
-- [ ] Task: Create `src/content/education` directory and add sample markdown entries
+- [x] Task: Define education collection schema in `src/content.config.ts` c8795e6
+- [x] Task: Create `src/content/education` directory and add sample markdown entries ca67f5a
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Setup Content Collection' (Protocol in workflow.md)
 
 ## Phase 2: Create Education Component for Home Page
