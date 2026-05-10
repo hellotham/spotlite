@@ -63,10 +63,9 @@ describe('Accessibility: Keyboard Navigability', () => {
     expect(content).toContain('focus-ring')
   })
 
-  it('ctaform input and button should have focus-ring', () => {
+  it('ctaform link should have focus-ring', () => {
     const content = readComponent('src/components/ctaform.astro')
-    expect(content).toMatch(/input[^>]*focus-ring/)
-    expect(content).toMatch(/button[^>]*focus-ring/)
+    expect(content).toMatch(/a[^>]*focus-ring/)
   })
 })
 

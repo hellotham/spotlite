@@ -8,7 +8,6 @@ source (MIT licence) so feel free to use and modify it!
 
 [![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hellotham/spotlite&utm_medium=social&utm_source=github)
 
-
 It uses the following technologies:
 
 - [Astro](https://astro.build)
@@ -17,6 +16,7 @@ It uses the following technologies:
 - [ESLint](https://eslint.org/)
 - [Vitest](https://vitest.dev/) for unit and component testing
 - [UnoCSS](https://unocss.dev/)
+- [D3.js](https://d3js.org/) for interactive data visualisations
 - `@astrojs/sitemap` and `@astrojs/rss` preintegrated
 - Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
 - [Pagefind](https://pagefind.app/) for static full-site search
@@ -24,15 +24,17 @@ It uses the following technologies:
 
 It features:
 
-- A homepage featuring photos, links to blog articles, and a career history.
+- A homepage featuring photos, links to blog articles, career history, and interactive superpowers.
 - An About page that can be edited in Markdown and featuring a profile photo
   and social media links.
 - An Articles page linking to blog articles.
 - A Projects page showcasing a portfolio of items with descriptions, images and
   links.
+- A Superpowers page featuring interactive D3 data visualisations and detailed skill modals.
 - A Creations page showcasing linkable artefacts.
-- A Uses page providing a bragging list of products and tools used.
+- A Passions page providing a list of products and tools used.
 - Header search with Pagefind indexing for production builds.
+- Automated CV PDF generation from content collections.
 - Development search fallback powered by a local JSON endpoint.
 - Click-to-zoom image galleries on homepage cards and featured page images.
 
@@ -62,9 +64,10 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── public/
 │   ├── robots.txt
 │   └── site.webmanifest
+├── scripts/                # Utility scripts (e.g. PDF generation)
 └── src/
-  ├── components/           # UI components (header, search, nav, cards)
-  ├── content/              # Markdown collections (article, page, project, work)
+  ├── components/           # UI components (header, search, D3 charts, modals)
+  ├── content/              # Markdown collections (article, page, project, work, education)
   ├── layouts/              # Page layouts
   ├── pages/                # Routes and API endpoints
   │   ├── [...page].astro
@@ -73,7 +76,8 @@ Inside of your Astro project, you'll see the following folders and files:
   │   └── rss.xml.js
   ├── content.config.ts
   ├── menu.json
-  └── social.json
+  ├── social.json
+  └── superpowers.json
 ```
 
 ## 🧞 Commands
@@ -84,7 +88,8 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :----------------------------------------------- |
 | `pnpm install`             | Installs dependencies                            |
 | `pnpm run dev`             | Starts local dev server (default: `localhost:4321`) |
-| `pnpm run build`           | Builds site and generates the Pagefind index in `./dist/pagefind/` |
+| `pnpm run build`           | Builds site, generates PDF, and Pagefind index in `./dist/pagefind/` |
+| `pnpm run pdf`             | Manually trigger CV PDF generation               |
 | `pnpm run search:index`    | Runs Pagefind indexing against `./dist/`         |
 | `pnpm run preview`         | Preview your build locally, before deploying     |
 | `pnpm run test`            | Run Vitest test suite once                        |

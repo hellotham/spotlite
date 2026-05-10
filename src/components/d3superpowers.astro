@@ -1,0 +1,187 @@
+---
+import superpowers from '../superpowers.json'
+---
+
+<div
+  id='superpowers-container'
+  class='text-secondary min-h-[400px] w-full relative'
+  data-superpowers={JSON.stringify(superpowers)}
+>
+</div>
+<div
+  id='superpowers-tooltip'
+  class='text-sm p-4 border border-primary/30 rounded-lg bg-sugarSwizzle/90 glass max-w-xs min-w-[200px] hidden pointer-events-none shadow-xl fixed z-50 backdrop-blur-md dark:bg-blackBeauty/80'
+>
+</div>
+
+<script>
+  import * as d3 from 'd3'
+
+  interface Superpower {
+    title: string
+    description: string
+    level: number
+    comment?: string
+    code?: string
+  }
+
+  const container = document.getElementById('superpowers-container')
+  const tooltip = d3.select('#superpowers-tooltip')
+  const rawData: Superpower[] = JSON.parse(container?.getAttribute('data-superpowers') || '[]')
+
+  // Sort data alphabetically by Title
+  const data = [...rawData].sort((a, b) => a.title.localeCompare(b.title))
+
+  const renderChart = () => {
+    if (!container) return
+
+    // Clear previous content
+    container.innerHTML = ''
+
+    // Dimensions
+    const width = container.clientWidth
+    const height = Math.max(500, data.length * 35) // Dynamic height based on number of items
+    const margin = { top: 20, right: 30, bottom: 40, left: 180 } // Left margin for titles
+    const innerWidth = width - margin.left - margin.right
+    const innerHeight = height - margin.top - margin.bottom
+
+    const svg = d3
+      .select('#superpowers-container')
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height)
+      .append('g')
+      .attr('transform', `translate(${margin.left},${margin.top})`)
+
+    // Scales
+    const xScale = d3.scaleLinear().domain([0, 6]).range([0, innerWidth])
+
+    const yScale = d3
+      .scaleBand<string>()
+      .domain(data.map((d) => d.title))
+      .range([0, innerHeight])
+      .padding(0.2)
+
+    // Color Scale - Level 1 (Red) to 6 (Green) using Rosely Palette
+    // Raspberry Sorbet (#d2386c) -> Meadowlark (#eada4f) -> Spearmint (#64bfa4)
+    const colorScale = d3
+      .scaleLinear<string>()
+      .domain([1, 2, 3, 4, 5, 6])
+      .range(['#d2386c', '#DD4124', '#eada4f', '#3CADD4', '#64bfa4', '#b565a7'])
+      .interpolate(d3.interpolateHcl)
+
+    // Get color from theme or default
+    const isDark = document.documentElement.classList.contains('dark')
+    const gridColor = isDark ? '#a49e9e' : '#615f5f' // opalGray : graniteGray
+
+    // Axes
+    const xAxis = svg
+      .append('g')
+      .attr('transform', `translate(0, ${innerHeight})`)
+      .call(d3.axisBottom(xScale).ticks(6))
+
+    xAxis.selectAll('text').style('font-size', '12px').style('fill', 'currentColor')
+
+    xAxis.selectAll('line, path').style('stroke', 'currentColor')
+
+    const yAxis = svg.append('g').call(d3.axisLeft(yScale))
+
+    yAxis.selectAll('text').style('font-size', '12px').style('fill', 'currentColor')
+
+    yAxis.selectAll('line, path').style('stroke', 'currentColor')
+
+    // Grid lines
+    svg
+      .append('g')
+      .attr('class', 'grid')
+      .attr('transform', `translate(0, ${innerHeight})`)
+      .call(
+        d3
+          .axisBottom(xScale)
+          .ticks(6)
+          .tickSize(-innerHeight)
+          .tickFormat(() => '')
+      )
+      .selectAll('line')
+      .style('stroke', gridColor)
+      .style('stroke-opacity', 0.1)
+
+    // Bars
+    svg
+      .selectAll('rect')
+      .data(data)
+      .join('rect')
+      .attr('y', (d) => yScale(d.title) || 0)
+      .attr('x', 0)
+      .attr('width', (d) => xScale(d.level))
+      .attr('height', yScale.bandwidth())
+      .attr('fill', (d) => colorScale(d.level))
+      .attr('rx', 4) // Rounded corners
+      .attr('class', 'cursor-pointer transition-opacity duration-200')
+      .on('mouseover', function (event: MouseEvent, d: Superpower) {
+        d3.select(event.currentTarget as SVGRectElement).style('opacity', 0.8)
+        tooltip.classed('hidden', false)
+        tooltip.html(`
+          <div class="flex flex-col gap-1">
+            <h3 class="font-bold text-accent text-base">${d.title}</h3>
+            <p class="text-primary leading-tight">${d.description}</p>
+            <div class="mt-2 pt-2 border-t border-primary/20 flex justify-between items-center">
+              <span class="text-xs text-secondary uppercase tracking-wider">Proficiency</span>
+              <span class="font-bold text-accent">Level ${d.level}</span>
+            </div>
+            ${d.comment ? `<p class="text-xs italic text-secondary mt-1">"${d.comment}"</p>` : ''}
+          </div>
+        `)
+      })
+      .on('mousemove', function (event: MouseEvent) {
+        const x = event.clientX
+        const y = event.clientY
+        const tooltipNode = tooltip.node() as HTMLElement
+        const offset = 20
+
+        // Basic collision detection with window edges
+        let left = x + offset
+        let top = y + offset
+
+        if (tooltipNode) {
+          const rect = tooltipNode.getBoundingClientRect()
+          if (left + rect.width > window.innerWidth) {
+            left = x - rect.width - offset
+          }
+          if (top + rect.height > window.innerHeight) {
+            top = y - rect.height - offset
+          }
+        }
+
+        tooltip.style('left', `${left}px`).style('top', `${top}px`)
+      })
+      .on('mouseout', function (event: MouseEvent) {
+        d3.select(event.currentTarget as SVGRectElement).style('opacity', 1)
+        tooltip.classed('hidden', true)
+      })
+
+    // Labels inside or at the end of bars
+    svg
+      .selectAll('.label')
+      .data(data)
+      .join('text')
+      .attr('class', 'label')
+      .attr('x', (d) => xScale(d.level) + 5)
+      .attr('y', (d) => (yScale(d.title) || 0) + yScale.bandwidth() / 2 + 5)
+      .text((d) => d.level)
+      .style('font-size', '12px')
+      .style('fill', 'currentColor')
+  }
+
+  renderChart()
+
+  // Resize listener
+  window.addEventListener('resize', renderChart)
+</script>
+
+<style>
+  #superpowers-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+</style>

@@ -12,6 +12,7 @@ Spotlite is a modern, production-ready personal website template built with **As
 - **Testing:** [Vitest](https://vitest.dev/) with `jsdom` and `v8` coverage
 - **Image Processing:** [Sharp](https://sharp.pixelplumbing.com/)
 - **Lightbox:** [PhotoSwipe](https://photoswipe.com/) for click-to-zoom image galleries
+- **Visualisations:** [D3.js](https://d3js.org/) for interactive data-driven components
 - **Search Indexing:** [Pagefind](https://pagefind.app/) for static full-site search
 
 ## 🚀 Key Commands
@@ -20,7 +21,8 @@ Spotlite is a modern, production-ready personal website template built with **As
 | :--- | :--- |
 | `pnpm install` | Install dependencies |
 | `pnpm run dev` | Start local development server (default: `localhost:4321`) |
-| `pnpm run build` | Build the production site and generate Pagefind assets in `./dist/pagefind/` |
+| `pnpm run build` | Build production site, generate PDF, and Pagefind index |
+| `pnpm run pdf` | Manually generate CV PDF from content collections |
 | `pnpm run search:index` | Run Pagefind indexing against `./dist/` |
 | `pnpm run preview` | Preview the production build locally |
 | `pnpm run test` | Run the Vitest test suite once |
@@ -34,11 +36,12 @@ Spotlite is a modern, production-ready personal website template built with **As
 ## 📂 Project Structure
 
 - `src/pages/`: Contains the site's routes. Uses file-based routing.
-- `src/components/`: Reusable Astro components.
+- `src/components/`: Reusable Astro components (including D3 charts and modals).
 - `src/layouts/`: Common page structures (e.g., `Layout.astro`).
-- `src/content/`: Source files for content collections (Articles, Projects, Work history).
+- `src/content/`: Source files for content collections (Articles, Projects, Work, Education).
 - `src/assets/`: Dynamic assets processed by Astro (images).
 - `public/`: Static assets served directly from the root.
+- `scripts/`: Utility scripts (e.g., `generate-pdf.js`).
 - `src/content.config.ts`: Defines schemas and loaders for content collections.
 - `src/components/search.astro`: Header search UI and client logic.
 - `src/components/imagecards.astro`: Homepage image card gallery with PhotoSwipe lightbox.
@@ -51,14 +54,16 @@ This project uses the **Astro Content Layer API** (v6+) for managing data:
 
 - **Articles:** Managed in `src/content/article/` as Markdown files.
 - **Projects:** Managed in `src/content/project/` with Markdown and associated images.
-- **Work History:** Managed in `src/content/work/` with Markdown and images.
-- **Data Collections:** `src/menu.json` and `src/social.json` are loaded as JSON collections.
+- **Work & Education:** Timeline-based history managed in `src/content/work/` and `src/content/education/`.
+- **Data Collections:** Structured data in `src/menu.json`, `src/social.json`, and `src/superpowers.json`.
+- **PDF Generation:** Automatically generates a production CV using `scripts/generate-pdf.js` during the build process.
 
 ## 🎨 Styling Conventions
 
 - **UnoCSS:** Use utility classes directly in `.astro` components.
 - **Presets:** `presetWind4`, `presetIcons` (Iconify), and `presetTypography` are pre-configured.
 - **Custom Config:** Modifications to styling, safelisting, or theme can be made in `uno.config.ts`.
+- **Theme:** Uses the **Rosely** palette (warm, low-contrast) with Australian English lexicon.
 
 ## 🚢 Deployment
 

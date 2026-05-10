@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Autonomy",
+    "description": "The level of independence, discretion and accountability for results in your role.",
+    "code": "AUTO",
+    "level": 6,
+    "comment": "I excel at working independently and taking ownership of my work, but I also value collaboration and seek input from others when needed."
+  },
+  {
+    "title": "Influence",
+    "description": "The reach and impact of your decisions and actions, both within and outside the organisation.",
+    "code": "INFL",
+    "level": 6,
+    "comment": "I am able to influence outcomes and drive change within and beyond my immediate team by building effective relationships with stakeholders at all levels."
+  },
+  {
+    "title": "Complexity",
+    "description": "The range and intricacy of tasks and responsibilities that come with your role.",
+    "code": "COMP",
+    "level": 6,
+    "comment": "I thrive in complex environments, effectively breaking down multifaceted problems into manageable parts and developing robust solutions."
+  },
+  {
+    "title": "Knowledge",
+    "description": "The depth and breadth of understanding required to perform and influence work effectively.",
+    "code": "KNGE",
+    "level": 5,
+    "comment": "I maintain a strong professional foundation, continuously applying updated knowledge and best practices to solve complex problems."
+  },
+  {
+    "title": "Collaboration",
+    "description": "Working effectively with others, sharing resources and coordinating efforts to achieve shared objectives.",
+    "code": "COLL",
+    "level": 4,
+    "comment": "I work effectively with others by sharing resources and coordinating efforts to achieve shared objectives while valuing diverse perspectives."
+  },
+  {
+    "title": "Communication",
+    "description": "Exchanging information, ideas and insights clearly to enable mutual understanding and cooperation.",
+    "code": "COMM",
+    "level": 5,
+    "comment": "I communicate effectively both verbally and in writing, using active listening to ensure mutual understanding."
+  },
+  {
+    "title": "Improvement mindset",
+    "description": "Continuously identifying opportunities to refine work practices, processes, products, or services for greater efficiency and impact.",
+    "code": "IMPM",
+    "level": 6,
+    "comment": "I constantly seek to improve work practices and processes by challenging the status quo and proposing innovative ideas."
+  },
+  {
+    "title": "Creativity",
+    "description": "Generating and applying innovative ideas to enhance processes, solve problems and drive organisational success.",
+    "code": "CRTY",
+    "level": 6,
+    "comment": "I generate creative solutions to complex problems by thinking outside the box and taking calculated risks."
+  },
+  {
+    "title": "Decision-making",
+    "description": "Applying critical thinking to evaluate options, assess risks and select the most appropriate course of action.",
+    "code": "DECM",
+    "level": 5,
+    "comment": "I apply critical thinking to evaluate options and risks, ensuring informed decisions that account for potential consequences."
+  },
+  {
+    "title": "Digital mindset",
+    "description": "Embracing and effectively using digital tools and technologies to enhance performance and productivity.",
+    "code": "DIGI",
+    "level": 5,
+    "comment": "I am comfortable with digital tools and technologies and strive to use them effectively to enhance my performance and productivity."
+  },
+  {
+    "title": "Leadership",
+    "description": "Guiding and influencing individuals or teams to align actions with strategic goals and drive positive outcomes.",
+    "code": "LEAD",
+    "level": 4,
+    "comment": "I guide and influence others towards common goals by leading by example and inspiring peak performance."
+  },
+  {
+    "title": "Learning and development",
+    "description": "Continuously acquiring new knowledge and skills to enhance personal and organisational performance.",
+    "code": "LADV",
+    "level": 6,
+    "comment": "I am committed to continuous professional growth, actively applying new skills to improve performance and drive organisational success."
+  },
+  {
+    "title": "Planning",
+    "description": "Taking a systematic approach to organising tasks, resources and timelines to meet defined goals.",
+    "code": "PLAN",
+    "level": 3,
+    "comment": "I take a systematic approach to organising tasks and timelines, ensuring effective prioritisation and time management."
+  },
+  {
+    "title": "Problem-solving",
+    "description": "Analysing challenges, applying logical methods and developing effective solutions to overcome obstacles.",
+    "code": "PROB",
+    "level": 6,
+    "comment": "I logically analyse challenges to develop effective solutions, demonstrating persistence when tackling difficult obstacles."
+  },
+  {
+    "title": "Adaptability",
+    "description": "Adjusting to change and persisting through challenges at personal, team and organisational levels.",
+    "code": "ADAP",
+    "level": 5,
+    "comment": "I adjust to change and persist through challenges with flexibility and resilience in the face of uncertainty."
+  },
+  {
+    "title": "Security, privacy and ethics",
+    "description": "Ensuring the protection of sensitive information, upholding privacy of data and individuals, and demonstrating ethical conduct within and outside the organisation.",
+    "code": "SCPE",
+    "level": 4,
+    "comment": "I maintain the highest standards of security, privacy, and ethics while ensuring sensitive information is rigorously protected."
+  }
+]

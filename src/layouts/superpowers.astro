@@ -2,6 +2,8 @@
 import Layout from './layout.astro'
 import { getCollection } from 'astro:content'
 import PageContent from '../components/pagecontent.astro'
+import D3Superpowers from '../components/d3superpowers.astro'
+import Superpowers from '../components/superpowers.astro'
 
 const { frontmatter } = Astro.props
 
@@ -18,9 +20,14 @@ social = social.sort((a, b) => a.data.order - b.data.order)
   <div class='mt-16 sm:mt-32 sm:px-8'>
     <div class='mx-auto max-w-7xl lg:px-8'>
       <div class='px-4 relative lg:px-12 sm:px-8'>
+        <div class='mx-auto mb-12 gap-8 grid grid-cols-1 max-w-2xl lg:grid-cols-2 lg:max-w-5xl'>
+          <D3Superpowers />
+          <Superpowers />
+        </div>
         <PageContent {frontmatter}>
           <slot />
         </PageContent>
+
         <div class='lg:pl-20'>
           <ul>
             {
