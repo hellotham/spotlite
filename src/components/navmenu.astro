@@ -1,25 +1,25 @@
 ---
 import { getCollection } from 'astro:content'
 
-let menu = await getCollection('menu')
-menu = menu.sort((a, b) => a.data.order - b.data.order)
+let pages = await getCollection('page')
+pages = pages.sort((a, b) => a.data.order - b.data.order)
 const current = Astro.url.pathname
 ---
 
 <ul class='text-base text-primary px-3 rounded-full glass flex gap-x-2 justify-center'>
   {
-    menu.map((item) => (
+    pages.map((item) => (
       <li>
         <a
           class:list={[
             'relative block px-3 py-2 transition-colors duration-200 focus-ring rounded-md',
-            current == item.data.link ? 'text-accent' : 'hover-accent'
+            current == `/${item.id}` ? 'text-accent' : 'hover-accent'
           ]}
-          href={item.data.link}
-          aria-current={current == item.data.link ? 'page' : undefined}
+          href={`/${item.id}`}
+          aria-current={current == `/${item.id}` ? 'page' : undefined}
         >
           {item.data.title}
-          {current == item.data.link && (
+          {current == `/${item.id}` && (
             <span class='h-px inset-x-1 absolute from-accent/0 to-accent/0 via-accent/40 bg-gradient-to-r -bottom-px' />
           )}
         </a>
