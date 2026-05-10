@@ -5,11 +5,11 @@
 - [x] Task: Create `src/content/education` directory and add sample markdown entries ca67f5a
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Setup Content Collection' (Protocol in workflow.md) 0869963
 
-## Phase 2: Create Education Component for Home Page
-- [ ] Task: Write tests for `src/components/education.astro`
-- [ ] Task: Implement `src/components/education.astro` (similar to work component)
-- [ ] Task: Update `src/layouts/home.astro` to render `<Education />` below `<Work />`
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Create Education Component for Home Page' (Protocol in workflow.md)
+## Phase 2: Create Education Component for Home Page [checkpoint: 14686aa]
+- [x] Task: Write tests for `src/components/education.astro` 6bf7f47
+- [x] Task: Implement `src/components/education.astro` (similar to work component) 6bf7f47
+- [x] Task: Update `src/layouts/home.astro` to render `<Education />` below `<Work />` 3348a85
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Create Education Component for Home Page' (Protocol in workflow.md) 14686aa
 
 ## Phase 3: Create Dedicated Education Page & Layout
 - [ ] Task: Write tests for education page routing and layout
