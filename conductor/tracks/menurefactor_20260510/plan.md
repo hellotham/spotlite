@@ -8,7 +8,7 @@
     - [ ] Inject the corresponding `order` from the JSON into the Markdown frontmatter of each file.
     - [ ] Run the script and verify that all 6 files in `src/content/page/` have the `order` property.
     - [ ] Delete the temporary migration script.
-- [ ] Task: Update the `page` collection schema.
+- [x] Task: Update the `page` collection schema. (77a3653)
     - [ ] Modify `src/content.config.ts` to add `order: z.number()` to the `page` collection schema.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Migration Script and Schema Update' (Protocol in workflow.md)
 
