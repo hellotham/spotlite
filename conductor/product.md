@@ -15,7 +15,7 @@ Spotlite is a highly performant, production-ready personal website and portfolio
 - **SEO Optimized:** Built-in support for dynamic meta tags, social sharing (OpenGraph/Twitter), and advanced JSON-LD structured data (Person, WebSite, Article, Breadcrumbs).
 - **Interactive & Fluid UX:** Enhanced with Astro ClientRouter for smooth, SPA-like navigation and subtle entrance animations to provide a polished and modern professional experience.
 - **Content-Rich Architecture:** Leverages the Astro Content Layer API to manage Collections for Pages, Projects, Articles, Work history, and structured data (social links), with navigation structure inferred from the page collection.
-- **Automated CV Generation:** Generates a professional, black-and-white PDF version of the site's pages (CV) using `md-to-pdf` as part of the build process.
+- **Automated CV Generation:** Generates a professional, black-and-white PDF version of the site's pages (CV) using `md-to-pdf`. Features include an introduction from the home page, 3cm margins, and centered page headers and footers.
 
 ## Persona and Tone
 - **Professional & Corporate:** The design, copy, and layout will convey a clean, business-focused aesthetic that prioritizes clarity, impact, and a high degree of technical professionalism over informal or overly decorative elements.
