@@ -31,6 +31,17 @@ const work = defineCollection({
     })
 })
 
+const education = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/education' }),
+  schema: ({ image }) =>
+    z.object({
+      institution: z.string(),
+      degree: z.string(),
+      datespan: z.string(),
+      image: image()
+    })
+})
+
 const social = defineCollection({
   loader: file('src/social.json', { parser: (text) => JSON.parse(text) }),
   schema: z.object({
@@ -57,4 +68,4 @@ const page = defineCollection({
     })
 })
 
-export const collections = { article, project, work, social, page }
+export const collections = { article, project, work, education, social, page }
