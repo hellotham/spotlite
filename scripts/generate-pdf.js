@@ -33,9 +33,13 @@ async function generatePdf() {
   }).sort((a, b) => a.order - b.order)
 
   // 3. Concatenate body content
-  // We add a page break between pages
+  // We add title, description and a page break between pages
   const combinedMarkdown = pages.map(page => {
-    return `<!-- page: ${page.id} -->\n\n${page.body}\n\n<div class="page-break"></div>`
+    let header = `# ${page.title}\n\n`
+    if (page.description) {
+      header += `*${page.description}*\n\n`
+    }
+    return `<!-- page: ${page.id} -->\n\n${header}${page.body}\n\n<div class="page-break"></div>`
   }).join('\n\n')
 
   // 4. Generate PDF
