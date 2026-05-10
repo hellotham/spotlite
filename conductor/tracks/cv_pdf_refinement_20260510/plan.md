@@ -19,7 +19,7 @@
         - `footerTemplate`: An HTML string displaying the page number centered.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: PDF Generation Script Updates' (Protocol in workflow.md)
 
-## Phase 3: Final Verification
+## Phase 3: Final Verification [checkpoint: d25cc19]
 - [x] Task: Run automated checks. (7ef3fdb)
     - [ ] Run `pnpm run lint` and `pnpm test` to ensure no existing tests are broken.
     - [ ] Generate the PDF manually using `pnpm run pdf` to verify execution.
