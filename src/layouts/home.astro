@@ -27,7 +27,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
           <div class='mt-16 animate-fade-in-up'>
-            <div class='max-w-2xl lg:max-w-5xl'>
+            <div class='mx-auto max-w-2xl lg:max-w-4xl'>
               <div class='flex gap-6 items-center'>
                 <a href='/' aria-label='Home' class='shrink-0 h-32 w-32 block pointer-events-auto'>
                   <Image
@@ -44,7 +44,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 </h1>
               </div>
               <div
-                class='text-base text-graniteGray mt-6 space-y-7 prose dark:text-opalGray dark:prose-invert'
+                class='text-base text-graniteGray mx-auto mt-6 max-w-2xl space-y-7 prose dark:text-opalGray lg:max-w-4xl dark:prose-invert'
               >
                 <slot />
               </div>
