@@ -6,13 +6,20 @@ shorttitle: Superpowers
 description: AI Agents have skills. Humans have superpowers :-)
 ---
 
-- **Curiosity** — Continuously explores new ideas, asks better questions, and uncovers hidden opportunities.
-- **Empathy** — Understands what others feel, builds trust quickly, and creates stronger collaboration.
-- **Resilience** — Recovers from setbacks with clarity and momentum, turning obstacles into growth.
-- **Creativity** — Connects unrelated concepts to generate original solutions and fresh perspectives.
-- **Focus** — Prioritizes what matters most and executes with consistency despite distractions.
-- **Adaptability** — Learns fast, adjusts to change, and performs effectively in uncertain environments.
-- **Communication** — Translates complex ideas into clear messages that inspire action.
-- **Systems Thinking** — Sees patterns across people, process, and technology to solve root causes.
-- **Leadership** — Aligns teams around a shared vision and helps others do their best work.
-- **Humility** — Stays open to feedback, learns from mistakes, and improves continuously.
+| Title | Description | Short code|
+| Autonomy | The level of independence, discretion and accountability for results in your role. | AUTO |
+| Influence | The reach and impact of your decisions and actions, both within and outside the organisation. | INFL |
+| Complexity | The range and intricacy of tasks and responsibilities that come with your role. | COMP |
+| Knowledge | The depth and breadth of understanding required to perform and influence work effectively. | KNGE |
+| Collaboration | Working effectively with others, sharing resources and coordinating efforts to achieve shared objectives. | COLL |
+| Communication | Exchanging information, ideas and insights clearly to enable mutual understanding and cooperation. | COMM |
+| Improvement | mindset Continuously identifying opportunities to refine work practices, processes, products, or services for greater efficiency and impact. | IMPM |
+| Creativity | Generating and applying innovative ideas to enhance processes, solve problems and drive organisational success. | CRTY |
+| Decision-making | Applying critical thinking to evaluate options, assess risks and select the most appropriate course of action. | DECM |
+| Digital | mindset Embracing and effectively using digital tools and technologies to enhance performance and productivity. | DIGI |
+| Leadership | Guiding and influencing individuals or teams to align actions with strategic goals and drive positive outcomes. | LEAD |
+| Learning and development | Continuously acquiring new knowledge and skills to enhance personal and organisational performance. | LADV |
+| Planning | Taking a systematic approach to organising tasks, resources and timelines to meet defined goals. | PLAN |
+| Problem-solving | Analysing challenges, applying logical methods and developing effective solutions to overcome obstacles. | PROB |
+| Adaptability | Adjusting to change and persisting through challenges at personal, team and organisational levels. | ADAP |
+| Security, privacy and ethics | Ensuring the protection of sensitive information, upholding privacy of data and individuals, and demonstrating ethical conduct within and outside the organisation. | SCPE|
