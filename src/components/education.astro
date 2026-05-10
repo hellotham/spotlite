@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
+
+let education = await getCollection('education')
+education = education.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
+---
+
+<div class='p-6 card rounded-2xl'>
+  <h2 class='text-lg text-accent font-semibold font-serif flex items-center'>
+    <span class='i-heroicons-academic-cap h-6 w-6 text-secondary' aria-hidden='true'></span>
+    <span class='ml-3'>Education</span>
+  </h2>
+  <ol class='mt-6 space-y-4'>
+    {
+      education.map((item) => (
+        <li>
+          <a
+            href={'/education/' + item.id}
+            class='group p-2 rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
+          >
+            <div class='mt-1 rounded-full flex flex-none h-10 w-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
+              <Image
+                src={item.data.image}
+                alt={item.data.institution}
+                width={64}
+                height={64}
+                loading='lazy'
+                class='h-8 w-8 object-cover'
+              />
+            </div>
+            <dl class='flex flex-auto flex-wrap gap-x-2'>
+              <dt class='sr-only'>Institution</dt>
+              <dd class='text-sm text-primary font-medium flex-none w-full transition group-hover:text-accent'>
+                {item.data.institution}
+              </dd>
+              <dt class='sr-only'>Degree</dt>
+              <dd class='text-xs text-secondary'>{item.data.degree}</dd>
+              <dt class='sr-only'>Date</dt>
+              <dd class='text-xs text-secondary ml-auto' aria-label={item.data.datespan}>
+                {item.data.datespan}
+              </dd>
+            </dl>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</div>
