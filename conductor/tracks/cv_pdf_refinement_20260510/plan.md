@@ -5,7 +5,7 @@
     - [ ] Modify `scripts/pdf-theme.css` to remove the `padding: 20mm;` from `.markdown-body` to avoid conflicting with Puppeteer margins.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Configuration and Styling Updates' (Protocol in workflow.md)
 
-## Phase 2: PDF Generation Script Updates
+## Phase 2: PDF Generation Script Updates [checkpoint: bccc56a]
 - [x] Task: Update Markdown concatenation logic. (4d96dfe)
     - [ ] Modify `scripts/generate-pdf.js` to read and parse `src/pages/index.md` (extracting its title, description, and body).
     - [ ] Insert the parsed home page at the beginning of the `pages` array.
