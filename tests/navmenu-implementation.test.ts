@@ -12,7 +12,7 @@ const readComponent = (relativePath: string) => {
 }
 
 describe('NavMenu Implementation', () => {
-  it('should use the page collection instead of the menu collection', () => {
+  it('navmenu should use the page collection instead of the menu collection', () => {
     const content = readComponent('src/components/navmenu.astro')
     
     // Expect usage of 'page' collection
@@ -21,13 +21,34 @@ describe('NavMenu Implementation', () => {
     expect(content).not.toContain("getCollection('menu')")
   })
 
-  it('should sort the collection by order', () => {
+  it('navmenu should sort the collection by order', () => {
     const content = readComponent('src/components/navmenu.astro')
     expect(content).toMatch(/sort\(\(a, b\) => a\.data\.order - b\.data\.order\)/)
   })
 
-  it('should derive the href dynamically from item.id', () => {
+  it('navmenu should derive the href dynamically from item.id', () => {
     const content = readComponent('src/components/navmenu.astro')
+    expect(content).toContain('href={`/${item.id}`}')
+  })
+})
+
+describe('Footer Implementation', () => {
+  it('footer should use the page collection instead of the menu collection', () => {
+    const content = readComponent('src/components/footer.astro')
+    
+    // Expect usage of 'page' collection
+    expect(content).toContain("getCollection('page')")
+    // Expect NO usage of 'menu' collection
+    expect(content).not.toContain("getCollection('menu')")
+  })
+
+  it('footer should sort the collection by order', () => {
+    const content = readComponent('src/components/footer.astro')
+    expect(content).toMatch(/sort\(\(a, b\) => a\.data\.order - b\.data\.order\)/)
+  })
+
+  it('footer should derive the href dynamically from item.id', () => {
+    const content = readComponent('src/components/footer.astro')
     expect(content).toContain('href={`/${item.id}`}')
   })
 })
