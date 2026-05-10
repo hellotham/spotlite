@@ -27,6 +27,6 @@
 - [x] Task: Remove the `menu` collection. (81e62a9)
     - [ ] Delete `src/menu.json`.
     - [ ] Remove the `menu` collection definition and its export from `src/content.config.ts`.
-- [ ] Task: Run automated tests and linting.
+- [x] Task: Run automated tests and linting. (bf5731b)
     - [ ] Run `pnpm run check` or equivalent test/lint commands to ensure the site builds correctly and no tests are broken.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Cleanup and Verification' (Protocol in workflow.md)
