@@ -1,8 +1,0 @@
-{
-  "track_id": "pdfgeneration_20260510",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-05-10T12:28:00Z",
-  "updated_at": "2026-05-10T12:28:00Z",
-  "description": "Convert Markdown files in pages collection to PDF using md-to-pdf. Create a stylesheet and CSS file resembling current project design but black and white only no colors. file should be stored as @public/cv.pdf - output format should be a4"
-}
