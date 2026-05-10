@@ -1,0 +1,63 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getCollection, render } from 'astro:content'
+import Layout from '../../layouts/layout.astro'
+import Container from '../../components/container.astro'
+
+export async function getStaticPaths() {
+  const educationEntries = await getCollection('education')
+  return educationEntries.map((item) => ({
+    params: { id: item.id },
+    props: { item }
+  }))
+}
+
+interface Props {
+  item: CollectionEntry<'education'>
+}
+const { item } = Astro.props
+const { Content } = await render(item)
+---
+
+<Layout
+  title={`${item.data.degree} at ${item.data.institution}`}
+  description={`${item.data.degree} from ${item.data.institution} (${item.data.datespan})`}
+  itemPage={true}
+>
+  <Container class='mt-16 lg:mt-32'>
+    <div class='xl:relative'>
+      <div class='mx-auto max-w-2xl'>
+        <button
+          onclick='window.history.back()'
+          type='button'
+          aria-label='Go back'
+          class='group mb-8 rounded-full bg-sugarSwizzle flex h-10 w-10 ring-1 ring-opalGray/20 shadow-md transition items-center justify-center lg:mb-0 xl:mt-0 dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0 dark:ring-opalGray/20 xl:left-0 lg:absolute lg:-mt-2 dark:hover:border-border/70 dark:hover:ring-opalGray/30 lg:-left-5 xl:-top-1.5'
+          ><span
+            class='i-heroicons-arrow-left h-4 w-4 transition stroke-graniteGray dark:stroke-opalGray group-hover:stroke-blackBeauty dark:group-hover:stroke-sugarSwizzle'
+          ></span></button
+        >
+        <article>
+          <header class='flex flex-col'>
+            <h1 class='text-4xl text-accent tracking-tight font-bold font-serif sm:text-5xl'>
+              {item.data.degree}
+            </h1>
+            <p class='text-2xl text-primary font-medium mt-2'>
+              {item.data.institution}
+            </p>
+            <time
+              class='text-base text-graniteGray flex items-center order-first dark:text-opalGray'
+            >
+              <>
+                <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory'></span>
+                <span class='ml-3'>{item.data.datespan}</span>
+              </>
+            </time>
+          </header>
+          <div class='mt-8 prose dark:prose-invert'>
+            <Content />
+          </div>
+        </article>
+      </div>
+    </div>
+  </Container>
+</Layout>
