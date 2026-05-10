@@ -17,7 +17,7 @@
     - [ ] Change the collection query from `menu` to `page`.
     - [ ] Sort the collection by `item.data.order`.
     - [ ] Update the rendering logic to use `item.data.title` for the label and `/${item.id}` for the `href`.
-- [ ] Task: Refactor `src/components/footer.astro`.
+- [x] Task: Refactor `src/components/footer.astro`. (a6998f4)
     - [ ] Change the collection query from `menu` to `page`.
     - [ ] Sort the collection by `item.data.order`.
     - [ ] Update the rendering logic to use `item.data.title` for the label and `/${item.id}` for the `href`.
