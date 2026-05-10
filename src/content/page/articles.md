@@ -1,4 +1,5 @@
 ---
+order: 20
 layout: ../layouts/articles.astro
 title: Writing on Life, the Universe and Everything.
 description: All of my long-form thoughts on life, the universe, and everything, collected in chronological order.

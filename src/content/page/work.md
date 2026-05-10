@@ -1,4 +1,5 @@
 ---
+order: 25
 title: Work History
 description: My professional career and work experience over the years.
 layout: ../layouts/work.astro
