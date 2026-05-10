@@ -11,12 +11,12 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Setup and Styling' (Protocol in workflow.md)
 
 ## Phase 2: PDF Generation Script
-- [ ] Task: Implement the Markdown concatenation logic.
+- [x] Task: Implement the Markdown concatenation logic. (6fa8bc5)
     - [ ] Create `scripts/generate-pdf.js`.
     - [ ] Implement logic to read all `.md` files in `src/content/page/`.
     - [ ] Implement logic to parse each file with `gray-matter`, extract the `order` property, and separate the frontmatter from the body.
     - [ ] Sort the parsed files by their `order` property and concatenate their Markdown body content into a single string.
-- [ ] Task: Implement the `md-to-pdf` generation.
+- [x] Task: Implement the `md-to-pdf` generation. (6fa8bc5)
     - [ ] Import `mdToPdf` from `md-to-pdf` in `scripts/generate-pdf.js`.
     - [ ] Call `mdToPdf` with the concatenated Markdown string, linking the custom stylesheet (`scripts/pdf-theme.css`), and setting PDF options (format: A4, dest: `public/cv.pdf`).
     - [ ] Write a test in `tests/pdf-generation.test.ts` to verify the script executes successfully and creates the output file.
