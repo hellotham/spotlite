@@ -11,9 +11,9 @@
 - [x] Task: Update `src/layouts/home.astro` to render `<Education />` below `<Work />` 3348a85
 - [x] Task: Conductor - User Manual Verification 'Phase 2: Create Education Component for Home Page' (Protocol in workflow.md) 14686aa
 
-## Phase 3: Create Dedicated Education Page & Layout
-- [ ] Task: Write tests for education page routing and layout
-- [ ] Task: Implement `src/layouts/education.astro` (similar to work layout)
-- [ ] Task: Create `src/content/page/education.md` utilizing the new layout
-- [ ] Task: Implement dynamic route `src/pages/education/[id].astro`
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Create Dedicated Education Page & Layout' (Protocol in workflow.md)
+## Phase 3: Create Dedicated Education Page & Layout [checkpoint: 9939763]
+- [x] Task: Write tests for education page routing and layout 0396859
+- [x] Task: Implement `src/layouts/education.astro` (similar to work layout) 0396859
+- [x] Task: Create `src/content/page/education.md` utilizing the new layout 0396859
+- [x] Task: Implement dynamic route `src/pages/education/[id].astro` 0396859
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Create Dedicated Education Page & Layout' (Protocol in workflow.md) 9939763
