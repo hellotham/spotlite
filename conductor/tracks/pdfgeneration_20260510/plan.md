@@ -23,10 +23,10 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: PDF Generation Script' (Protocol in workflow.md)
 
 ## Phase 3: Integration and Verification
-- [ ] Task: Update `package.json` scripts.
+- [x] Task: Update `package.json` scripts. (2b71511)
     - [ ] Add `"pdf": "node scripts/generate-pdf.js"` to the `scripts` object.
     - [ ] Modify the `"build"` script to: `"pnpm run pdf && astro build && pnpm run search:index"`.
-- [ ] Task: Run automated checks and build.
+- [~] Task: Run automated checks and build.
     - [ ] Run `pnpm run lint` and `pnpm test`.
     - [ ] Run `pnpm run build` to verify the entire pipeline succeeds and `public/cv.pdf` is present.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Integration and Verification' (Protocol in workflow.md)
