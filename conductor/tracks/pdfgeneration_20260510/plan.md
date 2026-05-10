@@ -1,6 +1,6 @@
 # Implementation Plan: PDF Generation from Pages
 
-## Phase 1: Setup and Styling
+## Phase 1: Setup and Styling [checkpoint: 3101168]
 - [x] Task: Install `md-to-pdf` and required parsing utilities. (7581ab3)
     - [ ] Install `md-to-pdf` as a dev dependency.
     - [ ] Install `gray-matter` as a dev dependency (required for cleanly stripping frontmatter and reading the `order` property).
