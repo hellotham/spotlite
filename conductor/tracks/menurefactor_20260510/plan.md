@@ -23,7 +23,7 @@
     - [ ] Update the rendering logic to use `item.data.title` for the label and `/${item.id}` for the `href`.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Component Refactoring' (Protocol in workflow.md)
 
-## Phase 3: Cleanup and Verification
+## Phase 3: Cleanup and Verification [checkpoint: dbe7447]
 - [x] Task: Remove the `menu` collection. (81e62a9)
     - [ ] Delete `src/menu.json`.
     - [ ] Remove the `menu` collection definition and its export from `src/content.config.ts`.
