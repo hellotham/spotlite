@@ -22,7 +22,7 @@
     - [ ] Write a test in `tests/pdf-generation.test.ts` to verify the script executes successfully and creates the output file.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: PDF Generation Script' (Protocol in workflow.md)
 
-## Phase 3: Integration and Verification
+## Phase 3: Integration and Verification [checkpoint: dec491f]
 - [x] Task: Update `package.json` scripts. (2b71511)
     - [ ] Add `"pdf": "node scripts/generate-pdf.js"` to the `scripts` object.
     - [ ] Modify the `"build"` script to: `"pnpm run pdf && astro build && pnpm run search:index"`.
