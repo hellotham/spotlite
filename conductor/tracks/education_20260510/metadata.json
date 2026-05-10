@@ -1,0 +1,8 @@
+{
+  "track_id": "education_20260510",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-05-10T00:00:00Z",
+  "updated_at": "2026-05-10T00:00:00Z",
+  "description": "create an education collection similar to work and populate it with some sample entries. create a education.astro similar to @src/layouts/work.astro and display it on the home page"
+}
