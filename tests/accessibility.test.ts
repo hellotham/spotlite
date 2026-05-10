@@ -18,7 +18,7 @@ describe('Accessibility: ARIA attributes', () => {
 
   it('navmenu links should support aria-current', () => {
     const content = readComponent('src/components/navmenu.astro')
-    expect(content).toContain("aria-current={current == item.data.link ? 'page' : undefined}")
+    expect(content).toContain("aria-current={current == `/${item.id}` ? 'page' : undefined}")
   })
 
   it('search status should have aria-live and role', () => {
