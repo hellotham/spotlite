@@ -31,16 +31,6 @@ const work = defineCollection({
     })
 })
 
-const menu = defineCollection({
-  loader: file('src/menu.json', { parser: (text) => JSON.parse(text) }),
-  schema: z.object({
-    id: z.string(),
-    order: z.number(),
-    title: z.string(),
-    link: z.string()
-  })
-})
-
 const social = defineCollection({
   loader: file('src/social.json', { parser: (text) => JSON.parse(text) }),
   schema: z.object({
@@ -66,4 +56,4 @@ const page = defineCollection({
     })
 })
 
-export const collections = { article, project, work, menu, social, page }
+export const collections = { article, project, work, social, page }

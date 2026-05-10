@@ -25,26 +25,6 @@ const readJson = <T>(relativePath: string): T => {
 }
 
 describe('content data contracts', () => {
-  it('menu entries have valid structure, unique ids, and sorted order', () => {
-    const menu = readJson<MenuItem[]>('src/menu.json')
-
-    expect(menu.length).toBeGreaterThan(0)
-
-    const ids = new Set<string>()
-    let previousOrder = Number.NEGATIVE_INFINITY
-
-    for (const item of menu) {
-      expect(item.id).toMatch(/^[a-z0-9-]+$/)
-      expect(item.title.length).toBeGreaterThan(0)
-      expect(item.link.startsWith('/')).toBe(true)
-      expect(ids.has(item.id)).toBe(false)
-      expect(item.order).toBeGreaterThan(previousOrder)
-
-      ids.add(item.id)
-      previousOrder = item.order
-    }
-  })
-
   it('social entries include valid links and icon classes', () => {
     const social = readJson<SocialItem[]>('src/social.json')
 
