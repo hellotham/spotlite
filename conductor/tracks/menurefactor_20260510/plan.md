@@ -13,7 +13,7 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Migration Script and Schema Update' (Protocol in workflow.md)
 
 ## Phase 2: Component Refactoring
-- [ ] Task: Refactor `src/components/navmenu.astro`.
+- [x] Task: Refactor `src/components/navmenu.astro`. (a4cc298)
     - [ ] Change the collection query from `menu` to `page`.
     - [ ] Sort the collection by `item.data.order`.
     - [ ] Update the rendering logic to use `item.data.title` for the label and `/${item.id}` for the `href`.
