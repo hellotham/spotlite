@@ -1,11 +1,11 @@
 # Implementation Plan: D3 Bubble Chart Molecule Animation
 
-## Phase 0: Setup
-- [ ] Task: Activate `d3-viz` skill before beginning implementation.
-- [ ] Task: Conductor - User Manual Verification 'Phase 0: Setup' (Protocol in workflow.md)
+## Phase 0: Setup [checkpoint: 78c1902]
+- [x] Task: Activate `d3-viz` skill before beginning implementation.
+- [x] Task: Conductor - User Manual Verification 'Phase 0: Setup' (Protocol in workflow.md)
 
 ## Phase 1: Layout Transition & TDD Setup
-- [ ] Task: Update `tests/d3bubblechart-component.test.ts` to expect force simulation logic instead of static `d3.pack`.
+- [~] Task: Update `tests/d3bubblechart-component.test.ts` to expect force simulation logic instead of static `d3.pack`.
 - [ ] Task: Transition `@src/components/d3bubblechart.astro` layout logic to use `d3.forceSimulation` with `forceCollide` and `forceCenter` or `forceX/Y` to maintain a packed structure.
 - [ ] Task: Ensure initial rendering matches the previous static layout as closely as possible.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Layout Transition & TDD Setup' (Protocol in workflow.md)
