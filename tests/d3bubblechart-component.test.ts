@@ -30,7 +30,7 @@ describe('D3BubbleChart Component', () => {
     expect(content).toContain('d3.forceSimulation')
     expect(content).toContain('d3.forceManyBody')
     expect(content).toContain('d3.forceCollide')
-    expect(content).toContain('d3.forceCenter')
+    expect(content).toMatch(/d3\.force(X|Y|Center)/)
     
     // Check for responsiveness
     expect(content).toContain("window.addEventListener('resize',")

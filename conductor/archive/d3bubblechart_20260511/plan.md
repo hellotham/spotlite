@@ -17,6 +17,7 @@
 - [x] Task: Implement a word wrapping utility for SVG text labels inside bubbles.
 - [x] Task: Reduce bubble overlap by increasing collision force and iterations.
 - [x] Task: Fix inconsistent line heights in word wrap utility and apply bold/larger font styling.
+- [x] Task: Implement central pull using `forceX` and `forceY` and further tune collision for minimal overlap.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: D3 Visualization & Simulation' (Protocol in workflow.md)
 
 ## Phase 3: Tooltip & Interactivity

@@ -73,9 +73,11 @@ import superpowers from '../superpowers.json'
 
       // Simulation
       const simulation = d3.forceSimulation(nodes as any)
-        .force('center', d3.forceCenter(width / 2, height / 2))
-        .force('charge', d3.forceManyBody().strength(20))
-        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 10).iterations(4))
+        .force('x', d3.forceX(width / 2).strength(0.1))
+        .force('y', d3.forceY(height / 2).strength(0.1))
+        .force('charge', d3.forceManyBody().strength(-20))
+        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 5).iterations(5))
+        .alphaDecay(0.02)
         .on('tick', () => {
           node
             .attr('transform', (d: any) => {
