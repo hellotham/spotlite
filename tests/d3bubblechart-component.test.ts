@@ -49,5 +49,10 @@ describe('D3BubbleChart Component', () => {
     expect(content).toContain('.on(\'mouseout\'')
     expect(content).toContain('.on(\'click\'')
     expect(content).toContain('tooltip.html')
+
+    // Phase 2 (Animation & Performance): Continuous movement and pause logic
+    expect(content).toContain('simulation.alphaTarget') // Keep simulation active
+    expect(content).toContain('Math.random') // For molecule drift
+    expect(content).toContain('new IntersectionObserver') // Performance pause
   })
 })

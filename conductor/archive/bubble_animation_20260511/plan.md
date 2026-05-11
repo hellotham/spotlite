@@ -11,8 +11,8 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Layout Transition & TDD Setup' (Protocol in workflow.md)
 
 ## Phase 2: Continuous Animation & Performance
-- [~] Task: Add tests for `IntersectionObserver` logic in `tests/d3bubblechart-component.test.ts`.
-- [ ] Task: Implement continuous slow, random movement by periodically injecting small random velocities into the simulation nodes or maintaining a low `alphaTarget`.
-- [ ] Task: Implement `IntersectionObserver` to pause the simulation when off-screen and resume when on-screen.
-- [ ] Task: Verify tooltips and click events function correctly on moving bubbles.
+- [x] Task: Add tests for `IntersectionObserver` logic in `tests/d3bubblechart-component.test.ts`.
+- [x] Task: Implement continuous slow, random movement by periodically injecting small random velocities into the simulation nodes or maintaining a low `alphaTarget`.
+- [x] Task: Implement `IntersectionObserver` to pause the simulation when off-screen and resume when on-screen.
+- [x] Task: Verify tooltips and click events function correctly on moving bubbles.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Continuous Animation & Performance' (Protocol in workflow.md)
