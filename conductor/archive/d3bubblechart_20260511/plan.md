@@ -25,4 +25,4 @@
 - [x] Task: Implement hover event listeners on bubbles to adjust opacity and update/position the tooltip.
 - [x] Task: Implement click event listeners on bubbles to trigger the same modal as the list items.
 - [x] Task: Implement window resize listener to adjust SVG dimensions and re-pack.
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Tooltip & Interactivity' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Tooltip & Interactivity' (Protocol in workflow.md) [checkpoint: c240512]
