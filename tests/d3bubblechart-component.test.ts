@@ -26,21 +26,19 @@ describe('D3BubbleChart Component', () => {
     expect(content).toContain("import superpowers from '../superpowers.json'")
     expect(content).toContain('data-superpowers={JSON.stringify(superpowers)}')
     
-    // Check for simulation logic (characteristic of bubble charts)
-    expect(content).toContain('d3.forceSimulation')
-    expect(content).toContain('d3.forceManyBody')
-    expect(content).toContain('d3.forceCollide')
-    expect(content).toMatch(/d3\.force(X|Y|Center)/)
+    // Check for pack layout logic (hierarchy based)
+    expect(content).toContain('d3.pack')
+    expect(content).toContain('d3.hierarchy')
+    expect(content).toContain('root.leaves()')
     
     // Check for responsiveness
     expect(content).toContain("window.addEventListener('resize',")
 
     // Phase 2: SVG and Node generation
-    expect(content).toContain('radiusScale')
     expect(content).toMatch(/\.append\(['"]circle['"]\)/)
     expect(content).toMatch(/\.append\(['"]text['"]\)/)
     
     // Check for word wrap logic (likely using tspan)
-    expect(content).toMatch(/\.append\(['"]tspan['"]\)/)
+    expect(content).toMatch(/\.selectAll\(['"]tspan['"]\)/)
   })
 })

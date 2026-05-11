@@ -44,17 +44,16 @@ import superpowers from '../superpowers.json'
       // Dimensions
       const width = chartContainer.clientWidth
       const height = 500
+      const margin = 1
       
       const svg = d3
         .select('#bubblechart-container')
         .append('svg')
         .attr('width', width)
         .attr('height', height)
-
-      // Radius scale
-      const radiusScale = d3.scaleLinear()
-        .domain([1, 6])
-        .range([35, 75])
+        .attr('viewBox', [0, 0, width, height])
+        .attr('style', 'max-width: 100%; height: auto;')
+        .attr('text-anchor', 'middle')
 
       // Color Scale - Level 1 (Red) to 6 (Green) using Rosely Palette
       const colorScale = d3
@@ -63,83 +62,45 @@ import superpowers from '../superpowers.json'
         .range(['#d2386c', '#DD4124', '#eada4f', '#3CADD4', '#64bfa4', '#b565a7'])
         .interpolate(d3.interpolateHcl)
 
-      // Nodes for simulation
-      const nodes = data.map(d => ({
-        ...d,
-        radius: radiusScale(d.level),
-        x: width / 2,
-        y: height / 2
-      }))
+      // Create pack layout
+      const pack = d3.pack<Superpower>()
+        .size([width - margin * 2, height - margin * 2])
+        .padding(10)
 
-      // Simulation
-      const simulation = d3.forceSimulation(nodes as any)
-        .force('x', d3.forceX(width / 2).strength(0.1))
-        .force('y', d3.forceY(height / 2).strength(0.1))
-        .force('charge', d3.forceManyBody().strength(-20))
-        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 5).iterations(5))
-        .alphaDecay(0.02)
-        .on('tick', () => {
-          node
-            .attr('transform', (d: any) => {
-              // Bounding box constraints
-              d.x = Math.max(d.radius, Math.min(width - d.radius, d.x))
-              d.y = Math.max(d.radius, Math.min(height - d.radius, d.y))
-              return `translate(${d.x},${d.y})`
-            })
-        })
+      // Compute hierarchy
+      const root = pack(d3.hierarchy({ children: data } as any)
+        .sum((d: any) => d.level * d.level)) // Weight by level squared for better visual differentiation
 
+      // Place nodes
       const node = svg.append('g')
+        .attr('transform', `translate(${margin},${margin})`)
         .selectAll('g')
-        .data(nodes)
+        .data(root.leaves())
         .join('g')
-        .attr('class', 'bubble')
+        .attr('transform', (d: any) => `translate(${d.x},${d.y})`)
 
       node.append('circle')
-        .attr('r', d => d.radius)
-        .attr('fill', d => colorScale(d.level))
-        .attr('class', 'cursor-pointer transition-opacity duration-200')
+        .attr('r', (d: any) => d.r)
+        .attr('fill', (d: any) => colorScale(d.data.level))
+        .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
 
-      // Text wrapping utility
-      function wrap(text: any, width: number) {
-        text.each(function(this: SVGTextElement) {
-          const text = d3.select(this)
-          const words = text.text().split(/\s+/).reverse()
-          let word
-          let line: string[] = []
-          let lineNumber = 0
-          const lineHeight = 1.1 // ems
-          const y = text.attr('y') || 0
-          const dy = 0.3 // ems
-          let tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', dy + 'em')
-          
-          while (word = words.pop()) {
-            line.push(word)
-            tspan.text(line.join(' '))
-            if ((tspan.node()?.getComputedTextLength() || 0) > width) {
-              line.pop()
-              tspan.text(line.join(' '))
-              line = [word]
-              tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', lineHeight + 'em').text(word)
-              lineNumber++
-            }
-          }
-
-          // Center the lines vertically by adjusting the first tspan's dy
-          const totalLines = lineNumber + 1
-          const firstDy = dy - ((totalLines - 1) * lineHeight) / 2
-          text.select('tspan').attr('dy', firstDy + 'em')
-        })
-      }
-
-      node.append('text')
-        .attr('text-anchor', 'middle')
-        .attr('dy', '0.3em')
-        .text(d => d.title)
-        .style('font-size', '13px')
+      // Text wrapping logic based on guide
+      const text = node.append('text')
+        .style('font-size', (d: any) => Math.min(d.r / 3, 14) + 'px')
         .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
-        .call(wrap, 70)
+
+      text.selectAll('tspan')
+        .data((d: any) => {
+          const name = d.data.title
+          // Split by spaces
+          return name.split(/\s+/g)
+        })
+        .join('tspan')
+        .attr('x', 0)
+        .attr('y', (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
+        .text((d: any) => d)
     }
 
     renderChart()
