@@ -52,10 +52,9 @@ import superpowers from '../superpowers.json'
       // Clear previous content
       chartContainer.innerHTML = ''
 
-      // Dimensions
+      // Dimensions - height proportional to width for responsive layout
       const width = chartContainer.clientWidth
-      const height = 500
-      const margin = 1
+      const height = Math.max(380, Math.min(Math.round(width * 0.6), 620))
 
       const svg = d3
         .select('#bubblechart-container')
@@ -73,130 +72,152 @@ import superpowers from '../superpowers.json'
         .range(['#d2386c', '#DD4124', '#eada4f', '#3CADD4', '#64bfa4', '#b565a7'])
         .interpolate(d3.interpolateHcl)
 
-      // Radius scale - even smaller bubbles for maximum whitespace and freer movement
-      const radiusScale = d3.scaleLinear()
-        .domain([1, 6])
-        .range([25, 50])
+      // Compute base radius from available area so bubbles fit without crowding.
+      // Target ~30% fill factor: enough room for free Brownian motion.
+      const fillFactor = 0.30
+      const baseRadius = Math.sqrt(fillFactor * width * height / (Math.PI * data.length))
 
-      // Nodes for simulation
-      const nodes: any[] = data.map(d => ({
-        ...d,
-        radius: radiusScale(d.level),
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: 0,
-        vy: 0
-      }))
+      // Level scale: proportional size factor across the observed level range
+      const levelMin = Math.min(...data.map((d: any) => d.level))
+      const levelMax = Math.max(...data.map((d: any) => d.level))
+      const levelScale = d3.scaleLinear().domain([levelMin, levelMax]).range([0.7, 1.3])
 
-      // Brownian motion parameters
-      const brownianStrength = 0.04 // Random impulse per frame
-      const velocityDecay = 0.985 // Gentle friction - preserves momentum longer
-      const minSpeed = 0.06 // Speed floor - bubbles never stop
-      const minDistance = 0.5 // Minimum spacing between bubble edges
-      const collisionElasticity = 0.85 // Energy retention in collision
-      const maxSpeed = 0.35 // Maximum velocity magnitude
-
-      // Give each bubble a random initial velocity so they start moving immediately
-      nodes.forEach(d => {
-        const angle = Math.random() * 2 * Math.PI
-        d.vx = Math.cos(angle) * minSpeed * (1 + Math.random())
-        d.vy = Math.sin(angle) * minSpeed * (1 + Math.random())
+      // Nodes - initial positions clamped inside bounds to avoid wall-overlap conflicts
+      const nodes: any[] = data.map((d: any) => {
+        const levelFactor = levelScale(d.level)
+        const jitter = 0.88 + Math.random() * 0.24 // ±12% random size variation per bubble
+        const radius = baseRadius * levelFactor * jitter
+        return {
+          ...d,
+          radius,
+          x: radius + Math.random() * (width - radius * 2),
+          y: radius + Math.random() * (height - radius * 2),
+          vx: 0,
+          vy: 0
+        }
       })
 
-      // Manual animation loop instead of d3 forces
+      // Physics constants
+      const brownianStrength = 0.04
+      const velocityDecay = 0.985
+      const minSpeed = 0.06
+      const collisionElasticity = 0.85
+      const wallBounce = 0.88
+      const maxSpeed = 0.35
+      const GAP = 2 // minimum gap between bubble edges
+
+      // Separation-only pass: push overlapping bubbles apart (no velocity change)
+      const resolveOverlaps = (passes: number) => {
+        for (let pass = 0; pass < passes; pass++) {
+          for (let i = 0; i < nodes.length; i++) {
+            const a = nodes[i]
+            for (let j = i + 1; j < nodes.length; j++) {
+              const b = nodes[j]
+              const dx = b.x - a.x
+              const dy = b.y - a.y
+              const distSq = dx * dx + dy * dy
+              const minDist = a.radius + b.radius + GAP
+              if (distSq < minDist * minDist) {
+                const dist = Math.sqrt(distSq) || 0.01
+                const push = (minDist - dist) * 0.5
+                const nx = dx / dist
+                const ny = dy / dist
+                a.x -= nx * push
+                a.y -= ny * push
+                b.x += nx * push
+                b.y += ny * push
+              }
+            }
+            // Wall clamp after each bubble's correction
+            a.x = Math.max(a.radius, Math.min(width - a.radius, a.x))
+            a.y = Math.max(a.radius, Math.min(height - a.radius, a.y))
+          }
+        }
+      }
+
+      // Warm-up: resolve initial overlaps before animation starts
+      resolveOverlaps(60)
+
+      // Give each bubble a random initial velocity
+      nodes.forEach(d => {
+        const angle = Math.random() * 2 * Math.PI
+        d.vx = Math.cos(angle) * minSpeed * (1 + Math.random() * 0.5)
+        d.vy = Math.sin(angle) * minSpeed * (1 + Math.random() * 0.5)
+      })
+
+      // Phased animation loop - each phase completes for ALL bubbles before the next starts
       const animate = () => {
         if (!animationRunning) return
 
-        nodes.forEach((d, i) => {
-          // Apply continuous Brownian motion (random walk)
-          // Small random impulses each frame for natural motion
+        // Phase 1: Brownian impulse + friction + integrate position (all bubbles)
+        nodes.forEach(d => {
           d.vx += (Math.random() - 0.5) * brownianStrength
           d.vy += (Math.random() - 0.5) * brownianStrength
-
-          // Apply friction/damping
           d.vx *= velocityDecay
           d.vy *= velocityDecay
-
-          // Update position
           d.x += d.vx
           d.y += d.vy
+        })
 
-          // Elastic bubble-to-bubble collision detection and response
+        // Phase 2: Resolve positional overlaps (3 passes for cascading cases)
+        resolveOverlaps(3)
+
+        // Phase 3: Elastic velocity exchange for touching pairs (after positions settled)
+        for (let i = 0; i < nodes.length; i++) {
+          const a = nodes[i]
           for (let j = i + 1; j < nodes.length; j++) {
-            const other = nodes[j]
-            const dx = other.x - d.x
-            const dy = other.y - d.y
+            const b = nodes[j]
+            const dx = b.x - a.x
+            const dy = b.y - a.y
             const distSq = dx * dx + dy * dy
-            const minDistSq = (d.radius + other.radius + minDistance) ** 2
-
-            if (distSq < minDistSq) {
-              const dist = Math.sqrt(distSq)
-              const overlap = d.radius + other.radius + minDistance - dist
-
-              // Collision normal (normalized direction)
+            const minDist = a.radius + b.radius + GAP
+            if (distSq < minDist * minDist) {
+              const dist = Math.sqrt(distSq) || 0.01
               const nx = dx / dist
               const ny = dy / dist
-
-              // Push bubbles apart to prevent overlap
-              const pushDistance = overlap / 2 + 0.001
-              d.x -= nx * pushDistance
-              d.y -= ny * pushDistance
-              other.x += nx * pushDistance
-              other.y += ny * pushDistance
-
-              // Elastic collision response: exchange velocity components along collision normal
-              // Relative velocity
-              const dvx = other.vx - d.vx
-              const dvy = other.vy - d.vy
-              const dvDotN = dvx * nx + dvy * ny
-
-              // Only collide if bubbles are moving towards each other
-              if (dvDotN < 0) {
-                // For equal-mass elastic collision, swap normal components
-                const impulse = -dvDotN * collisionElasticity
-
-                d.vx += impulse * nx
-                d.vy += impulse * ny
-                other.vx -= impulse * nx
-                other.vy -= impulse * ny
+              // Normal velocity components (positive = moving toward other)
+              const v1n = a.vx * nx + a.vy * ny
+              const v2n = b.vx * nx + b.vy * ny
+              // Only exchange if a is gaining on b along the collision axis
+              if (v1n > v2n) {
+                const delta = (v1n - v2n) * collisionElasticity
+                a.vx -= delta * nx
+                a.vy -= delta * ny
+                b.vx += delta * nx
+                b.vy += delta * ny
               }
             }
           }
+        }
 
-          // Bounding box wall collisions with elastic reflection
-          const bounce = 0.92 // Coefficient of restitution
+        // Phase 4: Wall bounce - only flip if velocity is pointing INTO the wall
+        nodes.forEach(d => {
           if (d.x - d.radius < 0) {
             d.x = d.radius
-            d.vx = Math.abs(d.vx) * bounce
+            if (d.vx < 0) d.vx = -d.vx * wallBounce
           } else if (d.x + d.radius > width) {
             d.x = width - d.radius
-            d.vx = -Math.abs(d.vx) * bounce
+            if (d.vx > 0) d.vx = -d.vx * wallBounce
           }
-
           if (d.y - d.radius < 0) {
             d.y = d.radius
-            d.vy = Math.abs(d.vy) * bounce
+            if (d.vy < 0) d.vy = -d.vy * wallBounce
           } else if (d.y + d.radius > height) {
             d.y = height - d.radius
-            d.vy = -Math.abs(d.vy) * bounce
+            if (d.vy > 0) d.vy = -d.vy * wallBounce
           }
+        })
 
-          // Enforce speed bounds: never too fast, never stationary
+        // Phase 5: Speed bounds - applied last so no other phase can undo them
+        nodes.forEach(d => {
           const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy)
           if (speed > maxSpeed) {
             d.vx *= maxSpeed / speed
             d.vy *= maxSpeed / speed
           } else if (speed < minSpeed) {
-            // Bubble has stalled - restore to minimum speed in current direction
-            // If completely stopped, pick a random direction
-            const s = speed > 0 ? speed : 1
-            d.vx = (d.vx / s) * minSpeed
-            d.vy = (d.vy / s) * minSpeed
-            if (speed === 0) {
-              const angle = Math.random() * 2 * Math.PI
-              d.vx = Math.cos(angle) * minSpeed
-              d.vy = Math.sin(angle) * minSpeed
-            }
+            const s = speed > 0.001 ? speed : 0.001
+            d.vx *= minSpeed / s
+            d.vy *= minSpeed / s
           }
         })
 
@@ -286,7 +307,7 @@ import superpowers from '../superpowers.json'
       // Text wrapping logic based on guide
       const text = node
         .append('text')
-        .style('font-size', (d: any) => Math.max(8, Math.min(d.radius / 2.8, 11)) + 'px')
+        .style('font-size', (d: any) => Math.max(7, Math.min(d.radius * 0.35, 14)) + 'px')
         .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
