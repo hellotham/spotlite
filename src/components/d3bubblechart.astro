@@ -84,6 +84,72 @@ import superpowers from '../superpowers.json'
         .attr('r', (d: any) => d.r)
         .attr('fill', (d: any) => colorScale(d.data.level))
         .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
+        .on('mouseover', function (event: MouseEvent, d: any) {
+          const item = d.data
+          tooltip.classed('hidden', false)
+          tooltip.html(`
+          <div class="flex flex-col gap-1">
+            <h3 class="font-bold text-accent text-base">${item.title}</h3>
+            <p class="text-primary leading-tight">${item.description}</p>
+            <div class="mt-2 pt-2 border-t border-primary/20 flex justify-between items-center">
+              <span class="text-xs text-secondary uppercase tracking-wider">Proficiency</span>
+              <span class="font-bold text-accent">Level ${item.level}</span>
+            </div>
+            ${item.comment ? `<p class="text-xs italic text-secondary mt-1">"${item.comment}"</p>` : ''}
+          </div>
+        `)
+        })
+        .on('mousemove', function (event: MouseEvent) {
+          const x = event.clientX
+          const y = event.clientY
+          const tooltipNode = tooltip.node() as HTMLElement
+          const offset = 20
+
+          let left = x + offset
+          let top = y + offset
+
+          if (tooltipNode) {
+            const rect = tooltipNode.getBoundingClientRect()
+            if (left + rect.width > window.innerWidth) {
+              left = x - rect.width - offset
+            }
+            if (top + rect.height > window.innerHeight) {
+              top = y - rect.height - offset
+            }
+          }
+
+          tooltip.style('left', `${left}px`).style('top', `${top}px`)
+        })
+        .on('mouseout', function () {
+          tooltip.classed('hidden', true)
+        })
+        .on('click', function (event: MouseEvent, d: any) {
+          const item = d.data
+          const modal = document.getElementById('superpowers-modal') as HTMLDialogElement
+          if (!modal) return
+
+          const titleEl = document.getElementById('modal-title')
+          const descEl = document.getElementById('modal-description')
+          const levelEl = document.getElementById('modal-level')
+          const commentEl = document.getElementById('modal-comment')
+          const commentContainer = document.getElementById('modal-comment-container')
+
+          if (titleEl) titleEl.textContent = item.title || ''
+          if (descEl) descEl.textContent = item.description || ''
+          if (levelEl) levelEl.textContent = item.level.toString() || ''
+
+          if (commentEl && commentContainer) {
+            if (item.comment) {
+              commentEl.textContent = item.comment
+              commentContainer.classList.remove('hidden')
+            } else {
+              commentContainer.classList.add('hidden')
+            }
+          }
+
+          modal.showModal()
+          document.body.style.overflow = 'hidden'
+        })
 
       // Text wrapping logic based on guide
       const text = node.append('text')
@@ -95,8 +161,11 @@ import superpowers from '../superpowers.json'
       text.selectAll('tspan')
         .data((d: any) => {
           const name = d.data.title
-          // Split by spaces
-          return name.split(/\s+/g)
+          // Split by spaces or hyphens, preserving the hyphen
+          return name.split(/[\s-]/g).map((word: string, i: number, arr: string[]) => {
+            if (name.includes(`${word}-`) && i < arr.length - 1) return `${word}-`
+            return word
+          })
         })
         .join('tspan')
         .attr('x', 0)
@@ -106,7 +175,7 @@ import superpowers from '../superpowers.json'
 
     renderChart()
 
-    // Resize listener
+    // Resize listener with debouncing or simple re-render
     window.addEventListener('resize', renderChart)
 
     container.dataset.initialized = 'true'

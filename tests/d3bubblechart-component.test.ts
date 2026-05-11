@@ -40,5 +40,13 @@ describe('D3BubbleChart Component', () => {
     
     // Check for word wrap logic (likely using tspan)
     expect(content).toMatch(/\.selectAll\(['"]tspan['"]\)/)
+    expect(content).toContain('.split(/[\\s-]/g)') // Simpler check for splitting logic
+
+    // Phase 3: Interactivity
+    expect(content).toContain('.on(\'mouseover\'')
+    expect(content).toContain('.on(\'mousemove\'')
+    expect(content).toContain('.on(\'mouseout\'')
+    expect(content).toContain('.on(\'click\'')
+    expect(content).toContain('tooltip.html')
   })
 })

@@ -17,10 +17,12 @@
 - [x] Task: Implement word wrapping using the `tspan` and `names` logic from the provided guide.
 - [x] Task: Increase bubble size by reducing `d3.pack()` padding and adjusting weighting.
 - [x] Task: Introduce randomization to bubble placement (e.g., by shuffling input data).
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: D3 Visualization & Circle Packing' (Protocol in workflow.md)
+- [x] Task: Refine word wrapping to handle hyphens.
+- [x] Task: Conductor - User Manual Verification 'Phase 2: D3 Visualization & Circle Packing' (Protocol in workflow.md)
 
 ## Phase 3: Tooltip & Interactivity
-- [ ] Task: Add test to verify tooltip container structure and hidden state.
-- [ ] Task: Implement hover event listeners on bubbles to adjust opacity and update/position the tooltip.
-- [ ] Task: Implement window resize listener to restart simulation or adjust SVG dimensions.
+- [x] Task: Add test to verify tooltip container structure and hidden state.
+- [x] Task: Implement hover event listeners on bubbles to adjust opacity and update/position the tooltip.
+- [x] Task: Implement click event listeners on bubbles to trigger the same modal as the list items.
+- [x] Task: Implement window resize listener to adjust SVG dimensions and re-pack.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Tooltip & Interactivity' (Protocol in workflow.md)
