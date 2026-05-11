@@ -29,6 +29,16 @@ const timelineData = processTimelineData(workEntries, educationEntries);
     const data = JSON.parse(container.getAttribute('data-timeline') || '[]')
     console.log('Timeline data loaded and sorted:', data)
 
+    const width = container.clientWidth
+    const height = 400
+
+    const svg = d3
+      .select('#timeline-container')
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height)
+      .attr('viewBox', [0, 0, width, height])
+
     container.dataset.initialized = 'true'
   }
 
