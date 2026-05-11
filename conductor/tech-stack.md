@@ -14,7 +14,7 @@
     - **Custom Animations:** Tailored 'fade-in-up' entrance animations for a refined UI experience.
     - **Accessible Shortcuts:** Custom `focus-ring` and semantic `text-accent` utility classes for WCAG compliance.
 - **PhotoSwipe:** Modern lightbox library used for click-to-zoom galleries in image cards and featured page images.
-- **D3.js:** Interactive data visualisations (e.g. superpowers bar chart, animated packed circles) integrated with Astro components. Supports responsive resizing, custom tooltips, theme-aware styling, and continuous molecular-motion simulations with viewport-aware performance pausing via **IntersectionObserver**.
+- **D3.js:** Interactive data visualisations (e.g. adaptive career timeline, superpowers bar chart, animated packed circles) integrated with Astro components. Supports responsive resizing, custom tooltips, theme-aware styling, and continuous molecular-motion simulations with viewport-aware performance pausing via **IntersectionObserver**.
 - **Interactive Modals:** Custom modal implementation using the HTML5 `<dialog>` element for detailed data exploration.
 
 - **Rosely Design System:** A warm, low-contrast design system used for consistent styling across the site.
