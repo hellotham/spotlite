@@ -1,7 +1,8 @@
 ---
 institution: University of Sydney
 degree: Bachelor of Computer Science
-datespan: 2010 - 2013
+startyear: 2010
+endyear: 2013
 image: ./generic.png
 ---
 

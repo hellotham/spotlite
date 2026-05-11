@@ -6,6 +6,11 @@
     - [x] Add `startyear` (number), `endyear` (optional number), and `type` (enum, default 'employment'). [9e9dd9c]
 - [x] Task: Migrate existing markdown data in `src/content/work/`. [9e9dd9c]
     - [x] Update frontmatter in all files to use the new fields. [9e9dd9c]
+- [~] Task: Update `education` collection schema in `src/content.config.ts`.
+    - [ ] Remove `datespan`.
+    - [ ] Add `startyear` (number) and `endyear` (optional number).
+- [ ] Task: Migrate existing markdown data in `src/content/education/`.
+    - [ ] Update frontmatter in all files to use the new fields.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Schema & Data Migration' (Protocol in workflow.md)
 
 ## Phase 2: Component & Script Updates

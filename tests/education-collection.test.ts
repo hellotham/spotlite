@@ -26,8 +26,9 @@ describe('education collection', () => {
       
       expect(content).toMatch(/^institution:\s+/m)
       expect(content).toMatch(/^degree:\s+/m)
-      expect(content).toMatch(/^datespan:\s+/m)
+      expect(content).toMatch(/^startyear:\s+\d+$/m)
       expect(content).toMatch(/^image:\s+/m)
+      expect(content).not.toMatch(/^datespan:/m)
     }
   })
 })

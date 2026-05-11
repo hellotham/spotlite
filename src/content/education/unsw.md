@@ -1,7 +1,8 @@
 ---
 institution: UNSW Sydney
 degree: Master of Information Technology
-datespan: 2014 - 2015
+startyear: 2014
+endyear: 2015
 image: ./generic.png
 ---
 
