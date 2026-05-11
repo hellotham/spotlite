@@ -8,7 +8,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: D3 Bubble Chart Molecule Animation**
+- [~] **Track: D3 Bubble Chart Molecule Animation**
 *Link: [./archive/bubble_animation_20260511/](./archive/bubble_animation_20260511/)*
 
 ---
