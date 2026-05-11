@@ -25,112 +25,202 @@ const timelineData = processTimelineData(workEntries, educationEntries);
   const setupTimeline = () => {
     const container = document.getElementById('timeline-container')
     const tooltip = d3.select('#timeline-tooltip')
-    if (!container || container.dataset.initialized === 'true') return
+    if (!container) return
 
     const data = JSON.parse(container.getAttribute('data-timeline') || '[]')
-    console.log('Timeline data loaded and sorted:', data)
-
-    const margin = { top: 20, right: 30, bottom: 40, left: 40 }
-    const width = container.clientWidth
-    const height = 400
-    const innerWidth = width - margin.left - margin.right
-    const innerHeight = height - margin.top - margin.bottom
-
-    const svg = d3
-      .select('#timeline-container')
-      .append('svg')
-      .attr('width', width)
-      .attr('height', height)
-      .attr('viewBox', [0, 0, width, height])
-      .append('g')
-      .attr('transform', `translate(${margin.left},${margin.top})`)
-
-    const minYear = d3.min(data, (d: any) => d.startYear) as number
-    const maxYear = new Date().getFullYear()
-
-    const xScale = d3.scaleLinear()
-      .domain([minYear, maxYear])
-      .range([0, innerWidth])
-
-    const yScale = d3.scaleBand()
-      .domain(data.map((d: any) => d.title))
-      .range([0, innerHeight])
-      .padding(0.2)
-
-    const xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'))
-
+    
     const colorMap: Record<string, string> = {
       education: '#64bfa4',
       employment: '#3CADD4',
       consulting: '#b565a7'
     }
 
-    const defs = svg.append('defs')
-    Object.entries(colorMap).forEach(([type, color]) => {
-      const grad = defs.append('linearGradient')
-        .attr('id', `grad-${type}`)
-        .attr('x1', '0%')
-        .attr('x2', '100%')
+    const render = () => {
+      // Clear previous
+      container.innerHTML = ''
       
-      grad.append('stop').attr('offset', '70%').attr('stop-color', color).attr('stop-opacity', 1)
-      grad.append('stop').attr('offset', '100%').attr('stop-color', color).attr('stop-opacity', 0.2)
-    })
+      const width = container.clientWidth
+      const isVertical = width < 640
+      const height = isVertical ? Math.max(600, data.length * 40) : 400
+      
+      const margin = isVertical 
+        ? { top: 20, right: 20, bottom: 40, left: 100 }
+        : { top: 20, right: 30, bottom: 40, left: 40 }
+      
+      const innerWidth = width - margin.left - margin.right
+      const innerHeight = height - margin.top - margin.bottom
 
-    svg.append('g')
-      .attr('transform', `translate(0,${innerHeight})`)
-      .call(xAxis)
+      const svg = d3
+        .select('#timeline-container')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .attr('viewBox', [0, 0, width, height])
+        .append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`)
 
-    svg.selectAll('rect')
-      .data(data)
-      .join('rect')
-      .attr('x', (d: any) => xScale(d.startYear))
-      .attr('y', (d: any) => yScale(d.title) || 0)
-      .attr('width', (d: any) => xScale(d.endYear) - xScale(d.startYear))
-      .attr('height', yScale.bandwidth())
-      .attr('fill', (d: any) => d.isOngoing ? `url(#grad-${d.type})` : (colorMap[d.type] || '#ccc'))
-      .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
-      .on('mouseover', function (event: MouseEvent, d: any) {
-        tooltip.style('opacity', 1)
-        tooltip.html(`
-          <div class="flex flex-col gap-1">
-            <h3 class="font-bold text-accent text-base">${d.title}</h3>
-            <p class="text-primary leading-tight">${d.organization}</p>
-            <div class="mt-2 pt-2 border-t border-primary/20 flex justify-between items-center">
-              <span class="text-xs text-secondary uppercase tracking-wider">${d.type}</span>
-              <span class="font-bold text-accent">${d.startYear} - ${d.isOngoing ? 'Present' : d.endYear}</span>
-            </div>
-          </div>
-        `)
-      })
-      .on('mousemove', function (event: MouseEvent) {
-        const x = event.clientX
-        const y = event.clientY
-        const tooltipNode = tooltip.node() as HTMLElement
-        const offset = 20
+      const defs = svg.append('defs')
+      Object.entries(colorMap).forEach(([type, color]) => {
+        // Horizontal gradient
+        const hGrad = defs.append('linearGradient')
+          .attr('id', `grad-h-${type}`)
+          .attr('x1', '0%')
+          .attr('x2', '100%')
+        
+        hGrad.append('stop').attr('offset', '70%').attr('stop-color', color).attr('stop-opacity', 1)
+        hGrad.append('stop').attr('offset', '100%').attr('stop-color', color).attr('stop-opacity', 0.2)
 
-        let left = x + offset
-        let top = y + offset
-
-        if (tooltipNode) {
-          const rect = tooltipNode.getBoundingClientRect()
-          if (left + rect.width > window.innerWidth) {
-            left = x - rect.width - offset
-          }
-          if (top + rect.height > window.innerHeight) {
-            top = y - rect.height - offset
-          }
-        }
-
-        tooltip.style('left', `${left}px`).style('top', `${top}px`)
-      })
-      .on('mouseout', function () {
-        tooltip.style('opacity', 0)
-      })
-      .on('click', function (event: MouseEvent, d: any) {
-        window.location.href = d.slug
+        // Vertical gradient (for mobile)
+        const vGrad = defs.append('linearGradient')
+          .attr('id', `grad-v-${type}`)
+          .attr('x1', '0%')
+          .attr('y1', '0%')
+          .attr('x2', '0%')
+          .attr('y2', '100%')
+        
+        vGrad.append('stop').attr('offset', '70%').attr('stop-color', color).attr('stop-opacity', 1)
+        vGrad.append('stop').attr('offset', '100%').attr('stop-color', color).attr('stop-opacity', 0.2)
       })
 
-    container.dataset.initialized = 'true'
+      const minYear = d3.min(data, (d: any) => d.startYear) as number
+      const maxYear = new Date().getFullYear()
+
+      if (!isVertical) {
+        // Horizontal Layout (Desktop)
+        const xScale = d3.scaleLinear()
+          .domain([minYear, maxYear])
+          .range([0, innerWidth])
+
+        const yScale = d3.scaleBand()
+          .domain(data.map((d: any) => d.title))
+          .range([0, innerHeight])
+          .padding(0.2)
+
+        const xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'))
+        
+        svg.append('g')
+          .attr('transform', `translate(0,${innerHeight})`)
+          .call(xAxis)
+
+        svg.selectAll('rect')
+          .data(data)
+          .join('rect')
+          .attr('x', (d: any) => xScale(d.startYear))
+          .attr('y', (d: any) => yScale(d.title) || 0)
+          .attr('width', (d: any) => xScale(d.endYear) - xScale(d.startYear))
+          .attr('height', yScale.bandwidth())
+          .attr('fill', (d: any) => d.isOngoing ? `url(#grad-h-${d.type})` : (colorMap[d.type] || '#ccc'))
+          .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
+          .on('mouseover', function (event: MouseEvent, d: any) {
+            tooltip.style('opacity', 1)
+            tooltip.html(`
+              <div class="flex flex-col gap-1">
+                <h3 class="font-bold text-accent text-base">${d.title}</h3>
+                <p class="text-primary leading-tight">${d.organization}</p>
+                <div class="mt-2 pt-2 border-t border-primary/20 flex justify-between items-center">
+                  <span class="text-xs text-secondary uppercase tracking-wider">${d.type}</span>
+                  <span class="font-bold text-accent">${d.startYear} - ${d.isOngoing ? 'Present' : d.endYear}</span>
+                </div>
+              </div>
+            `)
+          })
+          .on('mousemove', function (event: MouseEvent) {
+            const x = event.clientX
+            const y = event.clientY
+            const tooltipNode = tooltip.node() as HTMLElement
+            const offset = 20
+
+            let left = x + offset
+            let top = y + offset
+
+            if (tooltipNode) {
+              const rect = tooltipNode.getBoundingClientRect()
+              if (left + rect.width > window.innerWidth) {
+                left = x - rect.width - offset
+              }
+              if (top + rect.height > window.innerHeight) {
+                top = y - rect.height - offset
+              }
+            }
+
+            tooltip.style('left', `${left}px`).style('top', `${top}px`)
+          })
+          .on('mouseout', function () {
+            tooltip.style('opacity', 0)
+          })
+          .on('click', function (event: MouseEvent, d: any) {
+            window.location.href = d.slug
+          })
+      } else {
+        // Vertical Layout (Mobile)
+        const yScale = d3.scaleLinear()
+          .domain([minYear, maxYear])
+          .range([0, innerHeight])
+
+        const xScale = d3.scaleBand()
+          .domain(data.map((d: any) => d.title))
+          .range([0, innerWidth])
+          .padding(0.2)
+
+        const yAxis = d3.axisLeft(yScale).tickFormat(d3.format('d'))
+
+        svg.append('g')
+          .call(yAxis)
+
+        svg.selectAll('rect')
+          .data(data)
+          .join('rect')
+          .attr('x', (d: any) => xScale(d.title) || 0)
+          .attr('y', (d: any) => yScale(d.startYear))
+          .attr('width', xScale.bandwidth())
+          .attr('height', (d: any) => yScale(d.endYear) - yScale(d.startYear))
+          .attr('fill', (d: any) => d.isOngoing ? `url(#grad-v-${d.type})` : (colorMap[d.type] || '#ccc'))
+          .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
+          .on('mouseover', function (event: MouseEvent, d: any) {
+            tooltip.style('opacity', 1)
+            tooltip.html(`
+              <div class="flex flex-col gap-1">
+                <h3 class="font-bold text-accent text-base">${d.title}</h3>
+                <p class="text-primary leading-tight">${d.organization}</p>
+                <div class="mt-2 pt-2 border-t border-primary/20 flex justify-between items-center">
+                  <span class="text-xs text-secondary uppercase tracking-wider">${d.type}</span>
+                  <span class="font-bold text-accent">${d.startYear} - ${d.isOngoing ? 'Present' : d.endYear}</span>
+                </div>
+              </div>
+            `)
+          })
+          .on('mousemove', function (event: MouseEvent) {
+            const x = event.clientX
+            const y = event.clientY
+            const tooltipNode = tooltip.node() as HTMLElement
+            const offset = 20
+
+            let left = x + offset
+            let top = y + offset
+
+            if (tooltipNode) {
+              const rect = tooltipNode.getBoundingClientRect()
+              if (left + rect.width > window.innerWidth) {
+                left = x - rect.width - offset
+              }
+              if (top + rect.height > window.innerHeight) {
+                top = y - rect.height - offset
+              }
+            }
+
+            tooltip.style('left', `${left}px`).style('top', `${top}px`)
+          })
+          .on('mouseout', function () {
+            tooltip.style('opacity', 0)
+          })
+          .on('click', function (event: MouseEvent, d: any) {
+            window.location.href = d.slug
+          })
+      }
+    }
+
+    render()
+    window.addEventListener('resize', render)
   }
 
   setupTimeline()

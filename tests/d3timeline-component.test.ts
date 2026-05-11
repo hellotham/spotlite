@@ -106,3 +106,16 @@ describe('D3Timeline Component - Phase 4', () => {
     expect(content).toContain('window.location.href = d.slug')
   })
 })
+
+describe('D3Timeline Component - Phase 5', () => {
+  it('should implement adaptive layout logic', () => {
+    const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
+    const content = fs.readFileSync(filePath, 'utf8')
+    
+    // Check for resize listener
+    expect(content).toContain("window.addEventListener('resize'")
+    
+    // Check for orientation switching logic (likely checking width or matchMedia)
+    expect(content).toMatch(/width\s*<\s*\d+|matchMedia/)
+  })
+})
