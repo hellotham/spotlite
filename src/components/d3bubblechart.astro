@@ -78,26 +78,30 @@ import superpowers from '../superpowers.json'
 
       // Simulation
       const simulation = d3.forceSimulation(nodes)
-        .force('x', d3.forceX(width / 2).strength(0.005)) // Extremely gentle central pull
-        .force('y', d3.forceY(height / 2).strength(0.005))
-        .force('charge', d3.forceManyBody().strength(2))
+        .force('x', d3.forceX(width / 2).strength(0.002)) // Minimal central pull to avoid clumping
+        .force('y', d3.forceY(height / 2).strength(0.002))
+        .force('charge', d3.forceManyBody().strength(1))
         .force('collide', d3.forceCollide().radius((d: any) => d.radius + 3).iterations(3))
-        .alphaTarget(0.2) // Lower alpha target for slower movement
-        .velocityDecay(0.3) // Higher decay for smoother, viscous drifting
+        .alphaTarget(0.1) // Keep simulation active
+        .velocityDecay(0) // No friction for continuous movement
         .on('tick', () => {
-          // Slower molecule-like random drift
+          // Extremely slow molecule-like random drift
           nodes.forEach(d => {
-            d.vx += (Math.random() - 0.5) * 0.04
-            d.vy += (Math.random() - 0.5) * 0.04
+            d.vx += (Math.random() - 0.5) * 0.015
+            d.vy += (Math.random() - 0.5) * 0.015
+
+            // Bounding box bounce logic
+            if (d.x <= d.radius) d.vx = Math.abs(d.vx)
+            if (d.x >= width - d.radius) d.vx = -Math.abs(d.vx)
+            if (d.y <= d.radius) d.vy = Math.abs(d.vy)
+            if (d.y >= height - d.radius) d.vy = -Math.abs(d.vy)
+
+            // Hard clamp for safety
+            d.x = Math.max(d.radius, Math.min(width - d.radius, d.x))
+            d.y = Math.max(d.radius, Math.min(height - d.radius, d.y))
           })
 
-          node
-            .attr('transform', (d: any) => {
-              // Bounding box constraints
-              d.x = Math.max(d.radius, Math.min(width - d.radius, d.x))
-              d.y = Math.max(d.radius, Math.min(height - d.radius, d.y))
-              return `translate(${d.x},${d.y})`
-            })
+          node.attr('transform', (d: any) => `translate(${d.x},${d.y})`)
         })
 
       // Performance Optimization: Pause simulation when off-screen
