@@ -6,6 +6,7 @@ import { getCollection } from 'astro:content'
 import ImageCards from '../components/imagecards.astro'
 import ArticleList from '../components/articlelist.astro'
 import CTAForm from '../components/ctaform.astro'
+import Timeline from '../components/timeline.astro'
 import Work from '../components/work.astro'
 import Education from '../components/education.astro'
 import Superpowers from '../components/superpowers.astro'
@@ -86,19 +87,22 @@ social = social.sort((a, b) => a.data.order - b.data.order)
               <section aria-label='Call to action'>
                 <CTAForm />
               </section>
-              <section aria-label='Superpowers'>
-                <Superpowers />
+              <section aria-label='Timeline'>
+                <Timeline />
               </section>
-              <section aria-label='Latest articles'>
-                <ArticleList />
-              </section>
-            </div>
-            <div class='space-y-10 lg:pl-16 xl:pl-8'>
               <section aria-label='Work history'>
                 <Work />
               </section>
               <section aria-label='Education history'>
                 <Education />
+              </section>
+            </div>
+            <div class='space-y-10 lg:pl-16 xl:pl-8'>
+              <section aria-label='Superpowers'>
+                <Superpowers />
+              </section>
+              <section aria-label='Latest articles'>
+                <ArticleList />
               </section>
             </div>
           </div>

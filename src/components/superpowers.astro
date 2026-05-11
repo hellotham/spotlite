@@ -3,6 +3,11 @@ import D3superpowers from '../components/d3superpowers.astro'
 import D3BubbleChart from '../components/d3bubblechart.astro'
 import superpowers from '../superpowers.json'
 
+interface Props {
+  showList?: boolean
+}
+
+const { showList = false } = Astro.props
 const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(b.title))
 ---
 
@@ -13,7 +18,7 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
   </h2>
   <D3BubbleChart />
   <D3superpowers />
-  <ol class='mt-6 space-y-4'>
+  {showList && <ol class='mt-6 space-y-4'>
     {
       sortedSuperpowers.map((item) => (
         <li>
@@ -42,7 +47,7 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
         </li>
       ))
     }
-  </ol>
+  </ol>}
 </div>
 
 <dialog

@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
+import D3Timeline from '../components/d3timeline.astro'
+---
+
+<div class='p-6 card rounded-2xl'>
+  <h2 class='text-lg text-accent font-semibold font-serif flex'>
+    <span class='i-heroicons-briefcase text-secondary h-6 w-6' aria-hidden='true'></span>
+    <span class='ml-3'>Timeline</span>
+  </h2>
+  <D3Timeline />
+</div>

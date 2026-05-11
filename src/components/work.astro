@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
-import D3Timeline from '../components/d3timeline.astro'
 
 let work = await getCollection('work')
 work = work.sort((a, b) => {
@@ -17,7 +16,6 @@ work = work.sort((a, b) => {
     <span class='i-heroicons-briefcase text-secondary h-6 w-6' aria-hidden='true'></span>
     <span class='ml-3'>Work</span>
   </h2>
-  <D3Timeline />
   <ol class='mt-6 space-y-4'>
     {
       work.map((job) => (
