@@ -5,9 +5,9 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 0: Setup' (Protocol in workflow.md)
 
 ## Phase 1: Component Scaffold & TDD Setup
-- [~] Task: Create `tests/d3bubblechart-component.test.ts` with basic tests for component rendering and data attribute existence.
-- [ ] Task: Create `@src/components/d3bubblechart.astro` component scaffold.
-- [ ] Task: Ensure component mounts the container div with the correct `id` and `data-superpowers` attribute.
+- [x] Task: Create `tests/d3bubblechart-component.test.ts` with basic tests for component rendering and data attribute existence.
+- [x] Task: Create `@src/components/d3bubblechart.astro` component scaffold.
+- [x] Task: Ensure component mounts the container div with the correct `id` and `data-superpowers` attribute.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Component Scaffold & TDD Setup' (Protocol in workflow.md)
 
 ## Phase 2: D3 Visualization & Simulation

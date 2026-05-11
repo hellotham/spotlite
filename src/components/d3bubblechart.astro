@@ -1,0 +1,122 @@
+---
+import superpowers from '../superpowers.json'
+---
+
+<div
+  id='bubblechart-container'
+  class='text-secondary min-h-[400px] w-full relative'
+  data-superpowers={JSON.stringify(superpowers)}
+>
+</div>
+<div
+  id='bubblechart-tooltip'
+  class='text-sm p-4 border border-primary/30 rounded-lg bg-sugarSwizzle/90 glass max-w-xs min-w-[200px] hidden pointer-events-none shadow-xl fixed z-50 backdrop-blur-md dark:bg-blackBeauty/80'
+>
+</div>
+
+<script>
+  import * as d3 from 'd3'
+
+  interface Superpower {
+    title: string
+    description: string
+    level: number
+    comment?: string
+    code?: string
+  }
+
+  const setupBubbleChart = () => {
+    const container = document.getElementById('bubblechart-container')
+    const tooltip = d3.select('#bubblechart-tooltip')
+
+    if (!container || container.dataset.initialized === 'true') return
+
+    const rawData: Superpower[] = JSON.parse(container.getAttribute('data-superpowers') || '[]')
+    const data = [...rawData]
+
+    const renderChart = () => {
+      const chartContainer = document.getElementById('bubblechart-container')
+      if (!chartContainer) return
+
+      // Clear previous content
+      chartContainer.innerHTML = ''
+
+      // Dimensions
+      const width = chartContainer.clientWidth
+      const height = 500
+      
+      const svg = d3
+        .select('#bubblechart-container')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+
+      // Radius scale
+      const radiusScale = d3.scaleLinear()
+        .domain([1, 6])
+        .range([30, 70])
+
+      // Color Scale - Level 1 (Red) to 6 (Green) using Rosely Palette
+      const colorScale = d3
+        .scaleLinear<string>()
+        .domain([1, 2, 3, 4, 5, 6])
+        .range(['#d2386c', '#DD4124', '#eada4f', '#3CADD4', '#64bfa4', '#b565a7'])
+        .interpolate(d3.interpolateHcl)
+
+      // Nodes for simulation
+      const nodes = data.map(d => ({
+        ...d,
+        radius: radiusScale(d.level),
+        x: width / 2,
+        y: height / 2
+      }))
+
+      // Simulation
+      const simulation = d3.forceSimulation(nodes as any)
+        .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('charge', d3.forceManyBody().strength(5))
+        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 2))
+        .on('tick', () => {
+          node
+            .attr('transform', (d: any) => `translate(${d.x},${d.y})`)
+        })
+
+      const node = svg.append('g')
+        .selectAll('g')
+        .data(nodes)
+        .join('g')
+        .attr('class', 'bubble')
+
+      node.append('circle')
+        .attr('r', d => d.radius)
+        .attr('fill', d => colorScale(d.level))
+        .attr('class', 'cursor-pointer transition-opacity duration-200')
+
+      node.append('text')
+        .attr('text-anchor', 'middle')
+        .attr('dy', '.3em')
+        .text(d => d.title)
+        .style('font-size', '10px')
+        .style('fill', 'white')
+        .style('pointer-events', 'none')
+    }
+
+    renderChart()
+
+    // Resize listener
+    window.addEventListener('resize', renderChart)
+
+    container.dataset.initialized = 'true'
+  }
+
+  // Initialize on page load
+  setupBubbleChart()
+  document.addEventListener('astro:page-load', setupBubbleChart)
+</script>
+
+<style>
+  #bubblechart-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
