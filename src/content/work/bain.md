@@ -1,7 +1,9 @@
 ---
 company: Bain & Company
 role: System Administrator
-datespan: 1985 - 1987
+startyear: 1985
+endyear: 1987
+type: employment
 image: ./generic.png
 ---
 

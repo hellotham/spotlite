@@ -1,7 +1,8 @@
 ---
 company: Hello Tham
 role: Junior Janitor
-datespan: 2017 - Present
+startyear: 2017
+type: employment
 image: ./hellotham.png
 ---
 

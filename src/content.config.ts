@@ -26,7 +26,9 @@ const work = defineCollection({
     z.object({
       company: z.string(),
       role: z.string(),
-      datespan: z.string(),
+      startyear: z.number(),
+      endyear: z.number().optional(),
+      type: z.enum(['employment', 'consulting']).default('employment'),
       image: image()
     })
 })

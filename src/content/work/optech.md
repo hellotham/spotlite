@@ -1,7 +1,9 @@
 ---
 company: Options Technology
 role: Systems Analyst
-datespan: 1987 - 1990
+startyear: 1987
+endyear: 1990
+type: employment
 image: ./optech.jpg
 ---
 

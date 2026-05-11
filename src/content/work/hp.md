@@ -1,7 +1,9 @@
 ---
 company: HP
 role: Senior Consultant
-datespan: 1993 - 1998
+startyear: 1993
+endyear: 1998
+type: employment
 image: ./hp.png
 ---
 

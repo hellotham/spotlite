@@ -1,7 +1,9 @@
 ---
 company: State Bank Victoria
 role: Treasury Analyst
-datespan: 1990 - 1991
+startyear: 1990
+endyear: 1991
+type: employment
 image: ./sbv.jpg
 ---
 

@@ -1,7 +1,9 @@
 ---
 company: NAB
 role: Head of Architecture
-datespan: 2005 - 2008
+startyear: 2005
+endyear: 2008
+type: employment
 image: ./nab.png
 ---
 

@@ -1,7 +1,9 @@
 ---
 company: ING
 role: Head of Strategy and Architecture
-datespan: '2008'
+startyear: 2008
+endyear: 2008
+type: employment
 image: ./ing.jpg
 ---
 

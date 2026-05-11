@@ -1,7 +1,9 @@
 ---
 company: Transport for NSW
 role: Project Lead
-datespan: 2016 - 2019
+startyear: 2016
+endyear: 2019
+type: employment
 image: ./tfnsw.jpg
 ---
 

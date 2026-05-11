@@ -1,11 +1,11 @@
 # Implementation Plan: Refactor Work Collection Dates and Type
 
 ## Phase 1: Schema & Data Migration
-- [ ] Task: Update `work` collection schema in `src/content.config.ts`.
-    - [ ] Remove `datespan`.
-    - [ ] Add `startyear` (number), `endyear` (optional number), and `type` (enum, default 'employment').
-- [ ] Task: Migrate existing markdown data in `src/content/work/`.
-    - [ ] Update frontmatter in all files to use the new fields.
+- [x] Task: Update `work` collection schema in `src/content.config.ts`.
+    - [x] Remove `datespan`.
+    - [x] Add `startyear` (number), `endyear` (optional number), and `type` (enum, default 'employment').
+- [x] Task: Migrate existing markdown data in `src/content/work/`.
+    - [x] Update frontmatter in all files to use the new fields.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Schema & Data Migration' (Protocol in workflow.md)
 
 ## Phase 2: Component & Script Updates

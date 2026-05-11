@@ -1,7 +1,9 @@
 ---
 company: Broadspectrum
 role: Management consultant
-datespan: 2011 - 2016
+startyear: 2011
+endyear: 2016
+type: consulting
 image: ./broadspectrum.png
 ---
 

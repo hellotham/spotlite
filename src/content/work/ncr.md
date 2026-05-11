@@ -1,7 +1,9 @@
 ---
 company: NCR
 role: Senior Consultant
-datespan: 1991 - 1993
+startyear: 1991
+endyear: 1993
+type: employment
 image: ./ncr.png
 ---
 

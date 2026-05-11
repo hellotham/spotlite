@@ -1,7 +1,9 @@
 ---
 company: MLC
 role: Head of Architecture
-datespan: 1998 - 2005
+startyear: 1998
+endyear: 2005
+type: employment
 image: ./mlc.png
 ---
 

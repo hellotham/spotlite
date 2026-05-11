@@ -1,7 +1,9 @@
 ---
 company: Thorogood & Associates
 role: Consultant
-datespan: '2011'
+startyear: 2011
+endyear: 2011
+type: consulting
 image: ./generic.png
 ---
 
