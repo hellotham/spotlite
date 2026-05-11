@@ -27,9 +27,9 @@ describe('D3BubbleChart Component', () => {
     expect(content).toContain('data-superpowers={JSON.stringify(superpowers)}')
     
     // Check for simulation logic (characteristic of bubble charts)
-    expect(content).toContain('d3.forceSimulation')
-    expect(content).toContain('d3.forceManyBody')
-    expect(content).toContain('d3.forceCollide')
+    expect(content).toContain('brownianStrength')
+    expect(content).toContain('resolveOverlaps')
+    expect(content).toContain('collisionElasticity')
     
     // Check for responsiveness
     expect(content).toContain("window.addEventListener('resize',")
@@ -50,7 +50,7 @@ describe('D3BubbleChart Component', () => {
     expect(content).toContain('tooltip.html')
 
     // Phase 2 (Animation & Performance): Continuous movement and pause logic
-    expect(content).toContain('simulation.alphaTarget') // Keep simulation active
+    expect(content).toContain('animationRunning')
     expect(content).toContain('Math.random') // For molecule drift
     expect(content).toContain('new IntersectionObserver') // Performance pause
   })

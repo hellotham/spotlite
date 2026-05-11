@@ -3,7 +3,12 @@ import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
 
 let education = await getCollection('education')
-education = education.sort((a, b) => b.data.datespan.localeCompare(a.data.datespan))
+education = education.sort((a, b) => {
+  const endA = a.data.endyear ?? 9999
+  const endB = b.data.endyear ?? 9999
+  if (endB !== endA) return endB - endA
+  return b.data.startyear - a.data.startyear
+})
 ---
 
 <div class='p-6 card rounded-2xl'>
@@ -37,8 +42,11 @@ education = education.sort((a, b) => b.data.datespan.localeCompare(a.data.datesp
               <dt class='sr-only'>Degree</dt>
               <dd class='text-xs text-secondary'>{item.data.degree}</dd>
               <dt class='sr-only'>Date</dt>
-              <dd class='text-xs text-secondary ml-auto' aria-label={item.data.datespan}>
-                {item.data.datespan}
+              <dd
+                class='text-xs text-secondary ml-auto'
+                aria-label={`${item.data.startyear} to ${item.data.endyear || 'Present'}`}
+              >
+                {item.data.startyear} — {item.data.endyear || 'Present'}
               </dd>
             </dl>
           </a>

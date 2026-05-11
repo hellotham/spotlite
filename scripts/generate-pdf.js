@@ -9,6 +9,8 @@ const __dirname = path.dirname(__filename)
 const rootDir = path.resolve(__dirname, '..')
 
 const pagesDir = path.join(rootDir, 'src/content/page')
+const workDir = path.join(rootDir, 'src/content/work')
+const educationDir = path.join(rootDir, 'src/content/education')
 const indexFile = path.join(rootDir, 'src/pages/index.md')
 const configFile = path.join(rootDir, 'src/config.json')
 const outputPath = path.join(rootDir, 'public/cv.pdf')
@@ -36,13 +38,57 @@ async function generatePdf() {
   const files = fs.readdirSync(pagesDir).filter(f => f.endsWith('.md'))
   console.log(`Found ${files.length} pages in collection.`)
 
-  // 4. Parse and sort pages by 'order'
+  // 4. Parse collections helper
+  const getCollectionData = (dir) => {
+    if (!fs.existsSync(dir)) return []
+    return fs.readdirSync(dir)
+      .filter(f => f.endsWith('.md'))
+      .map(file => {
+        const content = fs.readFileSync(path.join(dir, file), 'utf8')
+        return matter(content)
+      })
+  }
+
+  const workItems = getCollectionData(workDir).sort((a, b) => {
+    const endA = a.data.endyear ?? 9999
+    const endB = b.data.endyear ?? 9999
+    if (endB !== endA) return endB - endA
+    return b.data.startyear - a.data.startyear
+  })
+
+  const educationItems = getCollectionData(educationDir).sort((a, b) => {
+    const endA = a.data.endyear ?? 9999
+    const endB = b.data.endyear ?? 9999
+    if (endB !== endA) return endB - endA
+    return b.data.startyear - a.data.startyear
+  })
+
+  // 5. Parse and sort pages by 'order'
   const pages = files.map(file => {
     const filePath = path.join(pagesDir, file)
     const content = fs.readFileSync(filePath, 'utf8')
-    const { data, content: body } = matter(content)
+    let { data, content: body } = matter(content)
+    
+    const pageId = file.replace('.md', '')
+    
+    // Inject collection data if it's the work or education page
+    if (pageId === 'work' && workItems.length > 0) {
+      const workMd = workItems.map(item => {
+        const dateStr = `${item.data.startyear} — ${item.data.endyear || 'Present'}`
+        const typeStr = item.data.type === 'consulting' ? ' (Consulting)' : ''
+        return `### ${item.data.role}${typeStr}\n**${item.data.company}** | *${dateStr}*\n\n${item.content}`
+      }).join('\n\n')
+      body = body + '\n\n' + workMd
+    } else if (pageId === 'education' && educationItems.length > 0) {
+      const eduMd = educationItems.map(item => {
+        const dateStr = `${item.data.startyear} — ${item.data.endyear || 'Present'}`
+        return `### ${item.data.degree}\n**${item.data.institution}** | *${dateStr}*\n\n${item.content}`
+      }).join('\n\n')
+      body = body + '\n\n' + eduMd
+    }
+
     return {
-      id: file.replace('.md', ''),
+      id: pageId,
       order: data.order || 999,
       title: data.title,
       description: data.description,
@@ -50,7 +96,7 @@ async function generatePdf() {
     }
   }).sort((a, b) => a.order - b.order)
 
-  // 5. Insert home page at the beginning
+  // 6. Insert home page at the beginning
   const allPages = [homePage, ...pages]
 
   // 6. Concatenate body content

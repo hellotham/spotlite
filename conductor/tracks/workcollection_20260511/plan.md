@@ -14,13 +14,13 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Schema & Data Migration' (Protocol in workflow.md)
 
 ## Phase 2: Component & Script Updates
-- [ ] Task: Update UI tests for `work` collection.
-    - [ ] Modify `tests/work-component.test.ts` (and other relevant tests) to expect `startyear`, `endyear`, and `type` formatting. Run to verify failure (Red Phase).
-- [ ] Task: Update UI Components.
-    - [ ] Update `src/components/work.astro` and any related layouts to use the new schema.
-    - [ ] Render dates as `startyear - endyear` (or "Present" if `endyear` is undefined).
-    - [ ] Append the capitalized `type` to the role title.
-    - [ ] Verify tests pass (Green Phase).
-- [ ] Task: Update PDF generation scripts.
-    - [ ] Modify `scripts/generate-pdf.js` to process the new date fields and type.
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Component & Script Updates' (Protocol in workflow.md)
+- [x] Task: Update UI tests for `work` collection. [d3b9e4a]
+    - [x] Modify `tests/work-component.test.ts` (and other relevant tests) to expect `startyear`, `endyear`, and `type` formatting. Run to verify failure (Red Phase). [d3b9e4a]
+- [x] Task: Update UI Components. [d3b9e4a]
+    - [x] Update `src/components/work.astro` and any related layouts to use the new schema. [d3b9e4a]
+    - [x] Render dates as `startyear - endyear` (or "Present" if `endyear` is undefined). [d3b9e4a]
+    - [x] Append the capitalized `type` to the role title. [d3b9e4a]
+    - [x] Verify tests pass (Green Phase). [d3b9e4a]
+- [x] Task: Update PDF generation scripts. [d3b9e4a]
+    - [x] Modify `scripts/generate-pdf.js` to process the new date fields and type. [d3b9e4a]
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Component & Script Updates' (Protocol in workflow.md) [d3b9e4a]

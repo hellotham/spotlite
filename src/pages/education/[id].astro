@@ -21,7 +21,7 @@ const { Content } = await render(item)
 
 <Layout
   title={`${item.data.degree} at ${item.data.institution}`}
-  description={`${item.data.degree} from ${item.data.institution} (${item.data.datespan})`}
+  description={`${item.data.degree} from ${item.data.institution} (${item.data.startyear} — ${item.data.endyear || 'Present'})`}
   itemPage={true}
 >
   <Container class='mt-16 lg:mt-32'>
@@ -49,7 +49,7 @@ const { Content } = await render(item)
             >
               <>
                 <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory'></span>
-                <span class='ml-3'>{item.data.datespan}</span>
+                <span class='ml-3'>{item.data.startyear} — {item.data.endyear || 'Present'}</span>
               </>
             </time>
           </header>

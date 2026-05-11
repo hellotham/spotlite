@@ -7,10 +7,12 @@ import PageContent from '../components/pagecontent.astro'
 const { frontmatter } = Astro.props
 
 const work = await getCollection('work')
-// Sorting work by datespan might be tricky, usually we'd want chronological.
-// For now, we'll just sort by some heuristic if we don't have a date field.
-// Actually, let's just sort by datespan string or maybe add a date field later.
-// I'll keep it simple for now.
+const sortedWork = work.sort((a, b) => {
+  const endA = a.data.endyear ?? 9999
+  const endB = b.data.endyear ?? 9999
+  if (endB !== endA) return endB - endA
+  return b.data.startyear - a.data.startyear
+})
 ---
 
 <Layout
@@ -28,20 +30,23 @@ const work = await getCollection('work')
         <div class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'>
           <div class='flex flex-col space-y-16'>
             {
-              work.map((item) => (
+              sortedWork.map((item) => (
                 <article class='md:grid md:grid-cols-4 md:items-baseline'>
                   <div class='group flex flex-col items-start relative md:col-span-3'>
                     <time class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray md:hidden'>
                       <span class='flex items-center inset-y-0 left-0 absolute' aria-hidden='true'>
                         <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
                       </span>
-                      {item.data.datespan}
+                      {item.data.startyear} — {item.data.endyear || 'Present'}
                     </time>
                     <h2 class='text-base text-accent tracking-tight font-semibold font-serif'>
                       <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
                       <a href={'/work/' + item.id}>
                         <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
-                        <span class='relative z-10'>{item.data.role}</span>
+                        <span class='relative z-10'>
+                          {item.data.role}
+                          {item.data.type === 'consulting' && ' (Consulting)'}
+                        </span>
                       </a>
                     </h2>
                     <p class='text-sm text-primary font-medium mt-1 relative z-10'>
@@ -59,7 +64,7 @@ const work = await getCollection('work')
                     </div>
                   </div>
                   <time class='text-sm text-graniteGray mb-3 mt-1 flex hidden items-center order-first relative z-10 dark:text-opalGray md:block'>
-                    {item.data.datespan}
+                    {item.data.startyear} — {item.data.endyear || 'Present'}
                   </time>
                 </article>
               ))
