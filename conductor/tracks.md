@@ -7,7 +7,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Create D3 Bubble Chart Component**
+- [~] **Track: Create D3 Bubble Chart Component**
 *Link: [./archive/d3bubblechart_20260511/](./archive/d3bubblechart_20260511/)*
 
 ---

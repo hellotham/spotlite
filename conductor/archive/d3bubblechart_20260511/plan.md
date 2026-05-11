@@ -1,7 +1,7 @@
 # Implementation Plan: D3 Bubble Chart Component
 
 ## Phase 0: Setup
-- [ ] Task: Activate `d3-viz` skill before beginning implementation.
+- [x] Task: Activate `d3-viz` skill before beginning implementation.
 - [ ] Task: Conductor - User Manual Verification 'Phase 0: Setup' (Protocol in workflow.md)
 
 ## Phase 1: Component Scaffold & TDD Setup
