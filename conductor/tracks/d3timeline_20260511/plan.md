@@ -2,8 +2,8 @@
 
 ## Phase 1: Data Preparation & Basic Component Structure
 - [x] Task: Write failing unit test for extracting and merging `education` and `work` collections, sorting by `startYear`. b483762
-- [~] Task: Implement data extraction and sorting logic within `src/components/d3timeline.astro`.
-- [ ] Task: Write failing test to verify the basic DOM structure of the component (e.g., container `div` and `<svg>` element).
+- [x] Task: Implement data extraction and sorting logic within `src/components/d3timeline.astro`. 97a2bac
+- [~] Task: Write failing test to verify the basic DOM structure of the component (e.g., container `div` and `<svg>` element).
 - [ ] Task: Implement basic DOM structure in `src/components/d3timeline.astro`.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Data Preparation & Basic Component Structure' (Protocol in workflow.md)
 
