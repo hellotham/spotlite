@@ -74,8 +74,8 @@ import superpowers from '../superpowers.json'
       // Simulation
       const simulation = d3.forceSimulation(nodes as any)
         .force('center', d3.forceCenter(width / 2, height / 2))
-        .force('charge', d3.forceManyBody().strength(10))
-        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 5).iterations(2))
+        .force('charge', d3.forceManyBody().strength(20))
+        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 10).iterations(4))
         .on('tick', () => {
           node
             .attr('transform', (d: any) => {
@@ -106,8 +106,8 @@ import superpowers from '../superpowers.json'
           let line: string[] = []
           let lineNumber = 0
           const lineHeight = 1.1 // ems
-          const y = text.attr('y')
-          const dy = parseFloat(text.attr('dy'))
+          const y = text.attr('y') || 0
+          const dy = 0.3 // ems
           let tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', dy + 'em')
           
           while (word = words.pop()) {
@@ -117,16 +117,15 @@ import superpowers from '../superpowers.json'
               line.pop()
               tspan.text(line.join(' '))
               line = [word]
-              tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word)
+              tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', lineHeight + 'em').text(word)
+              lineNumber++
             }
           }
 
-          // Center the lines vertically
+          // Center the lines vertically by adjusting the first tspan's dy
           const totalLines = lineNumber + 1
-          const offset = (totalLines - 1) * lineHeight / 2
-          text.selectAll('tspan').attr('dy', function(this: SVGTSpanElement, d, i) {
-            return (i * lineHeight + dy - offset) + 'em'
-          })
+          const firstDy = dy - ((totalLines - 1) * lineHeight) / 2
+          text.select('tspan').attr('dy', firstDy + 'em')
         })
       }
 
@@ -134,11 +133,11 @@ import superpowers from '../superpowers.json'
         .attr('text-anchor', 'middle')
         .attr('dy', '0.3em')
         .text(d => d.title)
-        .style('font-size', '11px')
+        .style('font-size', '13px')
         .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
-        .call(wrap, 60)
+        .call(wrap, 70)
     }
 
     renderChart()

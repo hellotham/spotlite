@@ -15,6 +15,8 @@
 - [x] Task: Implement D3 force simulation with bounding box constraints to ensure bubbles stay within container.
 - [x] Task: Map bubble radius to superpower `level` and fill color to the Rosely palette.
 - [x] Task: Implement a word wrapping utility for SVG text labels inside bubbles.
+- [x] Task: Reduce bubble overlap by increasing collision force and iterations.
+- [x] Task: Fix inconsistent line heights in word wrap utility and apply bold/larger font styling.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: D3 Visualization & Simulation' (Protocol in workflow.md)
 
 ## Phase 3: Tooltip & Interactivity
