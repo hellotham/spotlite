@@ -22,11 +22,11 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 3: Styling, Colors, and Ongoing Indicators' (Protocol in workflow.md) 9ac7bbd
 
 ## Phase 4: Interactivity (Tooltips & Navigation)
-- [ ] Task: Write failing test for tooltip interaction (hover triggers tooltip display with correct data).
-- [ ] Task: Implement D3 event listeners for mouseover/mouseout to handle tooltip rendering.
-- [ ] Task: Write failing test to verify clicking a bar navigates to the correct URL (e.g., `/work/slug` or `/education/slug`).
-- [ ] Task: Implement click event listeners on bars for navigation.
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: Interactivity (Tooltips & Navigation)' (Protocol in workflow.md)
+- [x] Task: Write failing test for tooltip interaction (hover triggers tooltip display with correct data). 6c1f625
+- [x] Task: Implement D3 event listeners for mouseover/mouseout to handle tooltip rendering. 6c1f625
+- [x] Task: Write failing test to verify clicking a bar navigates to the correct URL (e.g., `/work/slug` or `/education/slug`). 6c1f625
+- [x] Task: Implement click event listeners on bars for navigation. 6c1f625
+- [~] Task: Conductor - User Manual Verification 'Phase 4: Interactivity (Tooltips & Navigation)' (Protocol in workflow.md)
 
 ## Phase 5: Responsive Design (Adaptive Layout)
 - [ ] Task: Write failing test (or configure visual regression/viewport test) to verify layout switches from horizontal to vertical on smaller viewports.
