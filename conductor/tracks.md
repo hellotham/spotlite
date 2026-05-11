@@ -6,6 +6,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [superpowers_component_20260510](./archive/superpowers_component_20260510/metadata.json): Create superpowers.astro component with list and modal. (Completed)
 - [d3bubblechart_20260511](./archive/d3bubblechart_20260511/plan.md): Create D3 Bubble Chart Component. (Completed)
 - [bubble_animation_20260511](./archive/bubble_animation_20260511/plan.md): D3 Bubble Chart Molecule Animation. (Completed)
+- [workcollection_20260511](./archive/workcollection_20260511/plan.md): Refactor Work Collection Dates and Type. (Completed)
 
 ---
 ---
@@ -15,5 +16,3 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [x] **Track: Refactor Work Collection Dates and Type**
-*Link: [./tracks/workcollection_20260511/](./tracks/workcollection_20260511/)*
