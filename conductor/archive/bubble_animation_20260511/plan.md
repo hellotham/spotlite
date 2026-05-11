@@ -25,4 +25,5 @@
 - [x] Task: Balance layout by implementing per-bubble alternating cohesion/repulsion and add a motion-guard to nudge stationary bubbles.
 - [x] Task: Implement elastic wall-bouncing and stabilize radial distribution by removing negative central forces.
 - [x] Task: Remove centering forces and implement inter-bubble randomized bouncing in the tick handler.
+- [x] Task: Implement reactive opposite-direction bouncing with random angular offsets to actively prevent coalescence.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Continuous Animation & Performance' (Protocol in workflow.md)
