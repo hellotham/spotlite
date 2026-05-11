@@ -74,34 +74,36 @@ import superpowers from '../superpowers.json'
         radius: radiusScale(d.level),
         x: Math.random() * width,
         y: Math.random() * height,
-        driftStrength: 0.04 // Uniform subtle kick strength
+        driftStrength: 0.05 // Subtle direction shift strength
       }))
 
       // Simulation
       const simulation = d3.forceSimulation(nodes)
-        .force('x', d3.forceX(width / 2).strength(0.0002)) // Negligible pull
-        .force('y', d3.forceY(height / 2).strength(0.0002))
-        .force('charge', d3.forceManyBody().strength(0.2))
-        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 3).iterations(3))
-        .alphaTarget(0.2) // Constant alpha to keep simulation active
-        .velocityDecay(0) // ZERO friction for perpetual motion
+        .force('x', d3.forceX(width / 2).strength(0.0001)) // Virtually non-existent pull
+        .force('y', d3.forceY(height / 2).strength(0.0001))
+        .force('charge', d3.forceManyBody().strength(-5)) // Negative for gentle repulsion
+        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 5).iterations(4))
+        .alphaTarget(0.2)
+        .velocityDecay(0) // Conserve momentum
         .on('tick', () => {
           nodes.forEach(d => {
-            // Brownian motion: occasional random "kicks" to sustain energy
-            if (Math.random() < 0.015) {
-              d.vx += (Math.random() - 0.5) * d.driftStrength
-              d.vy += (Math.random() - 0.5) * d.driftStrength
+            // Periodic independent direction changes
+            if (Math.random() < 0.01) { // 1% chance per tick to "flip" direction
+              const angle = Math.random() * 2 * Math.PI
+              const speed = 0.05 + Math.random() * 0.1
+              d.vx = Math.cos(angle) * speed
+              d.vy = Math.sin(angle) * speed
             }
 
-            // Cap maximum speed to keep it "slow motion"
+            // Cap maximum speed
             const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy)
-            const maxSpeed = 0.15 // Even slower
+            const maxSpeed = 0.18
             if (speed > maxSpeed) {
               d.vx *= maxSpeed / speed
               d.vy *= maxSpeed / speed
             }
 
-            // Bounding box bounce logic (conserves momentum)
+            // Bounding box bounce logic
             if (d.x <= d.radius) d.vx = Math.abs(d.vx)
             if (d.x >= width - d.radius) d.vx = -Math.abs(d.vx)
             if (d.y <= d.radius) d.vy = Math.abs(d.vy)
