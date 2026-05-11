@@ -15,9 +15,9 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2: D3 Timeline Core Visualization' (Protocol in workflow.md) 1d815b2
 
 ## Phase 3: Styling, Colors, and Ongoing Indicators
-- [ ] Task: Write failing tests checking for appropriate CSS classes or fill attributes based on entry type (education, employment, consulting).
-- [ ] Task: Implement D3 color coding logic based on entry type.
-- [ ] Task: Write failing test to verify the presence of a visual indicator (e.g., specific class or SVG gradient) on entries without an `endYear`.
+- [x] Task: Write failing tests checking for appropriate CSS classes or fill attributes based on entry type (education, employment, consulting). d960c7c
+- [x] Task: Implement D3 color coding logic based on entry type. d960c7c
+- [~] Task: Write failing test to verify the presence of a visual indicator (e.g., specific class or SVG gradient) on entries without an `endYear`.
 - [ ] Task: Implement visual indicator logic for ongoing roles.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Styling, Colors, and Ongoing Indicators' (Protocol in workflow.md)
 
