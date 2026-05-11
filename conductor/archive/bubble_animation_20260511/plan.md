@@ -23,4 +23,5 @@
 - [x] Task: Ensure perpetual motion by setting velocity decay to absolute zero and maintaining constant simulation energy (alpha).
 - [x] Task: Break bubble synchronicity by implementing periodic independent direction changes and adding gentle repulsion to prevent coalescing.
 - [x] Task: Balance layout by implementing per-bubble alternating cohesion/repulsion and add a motion-guard to nudge stationary bubbles.
+- [x] Task: Implement elastic wall-bouncing and stabilize radial distribution by removing negative central forces.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Continuous Animation & Performance' (Protocol in workflow.md)

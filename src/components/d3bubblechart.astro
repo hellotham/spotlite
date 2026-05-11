@@ -80,20 +80,20 @@ import superpowers from '../superpowers.json'
 
       // Simulation
       const simulation = d3.forceSimulation(nodes)
-        .force('x', d3.forceX(width / 2).strength((d: any) => d.forceMode === 'cohesion' ? 0.005 : -0.002))
-        .force('y', d3.forceY(height / 2).strength((d: any) => d.forceMode === 'cohesion' ? 0.005 : -0.002))
-        .force('charge', d3.forceManyBody().strength((d: any) => d.forceMode === 'repulsion' ? -10 : 2))
+        .force('x', d3.forceX(width / 2).strength((d: any) => d.forceMode === 'cohesion' ? 0.006 : 0.001))
+        .force('y', d3.forceY(height / 2).strength((d: any) => d.forceMode === 'cohesion' ? 0.006 : 0.001))
+        .force('charge', d3.forceManyBody().strength((d: any) => d.forceMode === 'repulsion' ? -8 : 1))
         .force('collide', d3.forceCollide().radius((d: any) => d.radius + 6).iterations(4))
         .alphaTarget(0.2)
         .velocityDecay(0)
         .on('tick', () => {
           nodes.forEach(d => {
-            // Randomly flip force mode periodically (approx every 10-15 seconds)
-            if (Math.random() < 0.001) {
+            // Periodic mode flipping (cohesion vs repulsion)
+            if (Math.random() < 0.0015) {
               d.forceMode = d.forceMode === 'cohesion' ? 'repulsion' : 'cohesion'
             }
 
-            // Periodic independent direction flips
+            // Brownian direction flips
             if (Math.random() < 0.008) {
               const angle = Math.random() * 2 * Math.PI
               const speed = 0.05 + Math.random() * 0.1
@@ -101,7 +101,21 @@ import superpowers from '../superpowers.json'
               d.vy = Math.sin(angle) * speed
             }
 
-            // Motion Guard: Nudge bubble if it's too slow (trapped in equilibrium)
+            // Elastic Bounding Box Bounce
+            const bounce = 0.05 // Active impulse away from wall
+            if (d.x <= d.radius) {
+              d.vx = Math.abs(d.vx) + bounce
+            } else if (d.x >= width - d.radius) {
+              d.vx = -Math.abs(d.vx) - bounce
+            }
+
+            if (d.y <= d.radius) {
+              d.vy = Math.abs(d.vy) + bounce
+            } else if (d.y >= height - d.radius) {
+              d.vy = -Math.abs(d.vy) - bounce
+            }
+
+            // Motion Guard: Nudge if nearly stationary
             const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy)
             if (speed < 0.02) {
               d.vx += (Math.random() - 0.5) * 0.1
@@ -109,17 +123,11 @@ import superpowers from '../superpowers.json'
             }
 
             // Cap maximum speed
-            const maxSpeed = 0.18
+            const maxSpeed = 0.2
             if (speed > maxSpeed) {
               d.vx *= maxSpeed / speed
               d.vy *= maxSpeed / speed
             }
-
-            // Bounding box bounce logic
-            if (d.x <= d.radius) d.vx = Math.abs(d.vx)
-            if (d.x >= width - d.radius) d.vx = -Math.abs(d.vx)
-            if (d.y <= d.radius) d.vy = Math.abs(d.vy)
-            if (d.y >= height - d.radius) d.vy = -Math.abs(d.vy)
 
             // Hard clamp
             d.x = Math.max(d.radius, Math.min(width - d.radius, d.x))
