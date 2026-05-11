@@ -63,10 +63,10 @@ import superpowers from '../superpowers.json'
         .range(['#d2386c', '#DD4124', '#eada4f', '#3CADD4', '#64bfa4', '#b565a7'])
         .interpolate(d3.interpolateHcl)
 
-      // Radius scale - smaller bubbles for freer movement
+      // Radius scale - even smaller bubbles for maximum whitespace and freer movement
       const radiusScale = d3.scaleLinear()
         .domain([1, 6])
-        .range([30, 60])
+        .range([25, 50])
 
       // Nodes for simulation
       const nodes: any[] = data.map(d => ({
@@ -78,17 +78,17 @@ import superpowers from '../superpowers.json'
 
       // Simulation
       const simulation = d3.forceSimulation(nodes)
-        .force('x', d3.forceX(width / 2).strength(0.01)) // Very gentle central pull
-        .force('y', d3.forceY(height / 2).strength(0.01))
-        .force('charge', d3.forceManyBody().strength(5))
-        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 2).iterations(3))
-        .alphaTarget(0.3) // Keep simulation active for continuous movement
-        .velocityDecay(0.1) // Lower decay for more fluid drifting
+        .force('x', d3.forceX(width / 2).strength(0.005)) // Extremely gentle central pull
+        .force('y', d3.forceY(height / 2).strength(0.005))
+        .force('charge', d3.forceManyBody().strength(2))
+        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 3).iterations(3))
+        .alphaTarget(0.2) // Lower alpha target for slower movement
+        .velocityDecay(0.3) // Higher decay for smoother, viscous drifting
         .on('tick', () => {
-          // Molecule-like random drift
+          // Slower molecule-like random drift
           nodes.forEach(d => {
-            d.vx += (Math.random() - 0.5) * 0.08
-            d.vy += (Math.random() - 0.5) * 0.08
+            d.vx += (Math.random() - 0.5) * 0.04
+            d.vy += (Math.random() - 0.5) * 0.04
           })
 
           node
@@ -195,7 +195,7 @@ import superpowers from '../superpowers.json'
       // Text wrapping logic based on guide
       const text = node
         .append('text')
-        .style('font-size', (d: any) => Math.max(9, Math.min(d.radius / 3, 12)) + 'px')
+        .style('font-size', (d: any) => Math.max(8, Math.min(d.radius / 2.8, 11)) + 'px')
         .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
