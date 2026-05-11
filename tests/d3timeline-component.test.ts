@@ -79,3 +79,31 @@ describe('D3Timeline Component - Phase 3', () => {
     expect(content).toMatch(/url\(#grad-/)
   })
 })
+
+describe('D3Timeline Component - Phase 4', () => {
+  it('should handle tooltip interaction', () => {
+    const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
+    const content = fs.readFileSync(filePath, 'utf8')
+    
+    // Check for mouse event listeners
+    expect(content).toContain(".on('mouseover'")
+    expect(content).toContain(".on('mouseout'")
+    expect(content).toContain(".on('mousemove'")
+    
+    // Check for tooltip content update
+    expect(content).toContain('tooltip.html')
+  })
+})
+
+describe('D3Timeline Component - Phase 4 Task 3', () => {
+  it('should handle navigation on click', () => {
+    const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
+    const content = fs.readFileSync(filePath, 'utf8')
+    
+    // Check for click event listener
+    expect(content).toContain(".on('click'")
+    
+    // Check for navigation logic
+    expect(content).toContain('window.location.href = d.slug')
+  })
+})

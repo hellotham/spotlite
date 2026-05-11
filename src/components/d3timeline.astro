@@ -79,6 +79,8 @@ const timelineData = processTimelineData(workEntries, educationEntries);
       .attr('transform', `translate(0,\${innerHeight})`)
       .call(xAxis)
 
+    const tooltip = d3.select('#timeline-tooltip')
+
     svg.selectAll('rect')
       .data(data)
       .join('rect')
@@ -87,6 +89,47 @@ const timelineData = processTimelineData(workEntries, educationEntries);
       .attr('width', (d: any) => xScale(d.endYear) - xScale(d.startYear))
       .attr('height', yScale.bandwidth())
       .attr('fill', (d: any) => d.isOngoing ? `url(#grad-\${d.type})` : (colorMap[d.type] || '#ccc'))
+      .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
+      .on('mouseover', function (event: MouseEvent, d: any) {
+        tooltip.classed('hidden', false)
+        tooltip.html(`
+          <div class="flex flex-col gap-1">
+            <h3 class="font-bold text-accent text-base">\${d.title}</h3>
+            <p class="text-primary leading-tight">\${d.organization}</p>
+            <div class="mt-2 pt-2 border-t border-primary/20 flex justify-between items-center">
+              <span class="text-xs text-secondary uppercase tracking-wider">\${d.type}</span>
+              <span class="font-bold text-accent">\${d.startYear} - \${d.isOngoing ? 'Present' : d.endYear}</span>
+            </div>
+          </div>
+        `)
+      })
+      .on('mousemove', function (event: MouseEvent) {
+        const x = event.clientX
+        const y = event.clientY
+        const tooltipNode = tooltip.node() as HTMLElement
+        const offset = 20
+
+        let left = x + offset
+        let top = y + offset
+
+        if (tooltipNode) {
+          const rect = tooltipNode.getBoundingClientRect()
+          if (left + rect.width > window.innerWidth) {
+            left = x - rect.width - offset
+          }
+          if (top + rect.height > window.innerHeight) {
+            top = y - rect.height - offset
+          }
+        }
+
+        tooltip.style('left', `\${left}px`).style('top', `\${top}px`)
+      })
+      .on('mouseout', function () {
+        tooltip.classed('hidden', true)
+      })
+      .on('click', function (event: MouseEvent, d: any) {
+        window.location.href = d.slug
+      })
 
     container.dataset.initialized = 'true'
   }
