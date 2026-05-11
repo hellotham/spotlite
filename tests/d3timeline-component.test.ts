@@ -90,12 +90,11 @@ describe('D3Timeline Component - Phase 4', () => {
     expect(content).toContain(".on('mouseout'")
     expect(content).toContain(".on('mousemove'")
     
-    // Check for tooltip content update
-    expect(content).toContain('tooltip.html')
+    // Check for tooltip visibility logic (opacity)
+    expect(content).toContain("tooltip.style('opacity', 1)")
+    expect(content).toContain("tooltip.style('opacity', 0)")
   })
-})
 
-describe('D3Timeline Component - Phase 4 Task 3', () => {
   it('should handle navigation on click', () => {
     const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
     const content = fs.readFileSync(filePath, 'utf8')

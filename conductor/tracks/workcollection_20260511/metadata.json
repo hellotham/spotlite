@@ -1,8 +1,0 @@
-{
-  "track_id": "workcollection_20260511",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-05-11T12:00:00Z",
-  "updated_at": "2026-05-11T12:00:00Z",
-  "description": "in work collection separate datespan into startyear and endyear and make them type number. Also include a type property which can be employment or consulting (default employment). Update existing collection entries and relevant components."
-}

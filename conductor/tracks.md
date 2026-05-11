@@ -16,5 +16,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: create a @src/components/d3timeline.astro that plots the entries from education and work collections as bars on a timeline (scale is decades) using d3-viz skill. Colour each entry by type (education, employment, consulting). sort the timeline by ascending startyear.**
+- [~] **Track: create a @src/components/d3timeline.astro that plots the entries from education and work collections as bars on a timeline (scale is decades) using d3-viz skill. Colour each entry by type (education, employment, consulting). sort the timeline by ascending startyear.**
 *Link: [./tracks/d3timeline_20260511/](./tracks/d3timeline_20260511/)*
