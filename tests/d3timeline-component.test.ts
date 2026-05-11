@@ -21,7 +21,7 @@ describe('D3Timeline Component', () => {
     // Check for D3 import
     expect(content).toContain("import * as d3 from 'd3'")
     
-    // Verify it appends an SVG (this will fail initially as we only have the container)
+    // Verify it appends an SVG
     expect(content).toMatch(/\.append\(['"]svg['"]\)/)
   })
 })
@@ -32,10 +32,24 @@ describe('D3Timeline Component - Phase 2', () => {
     const content = fs.readFileSync(filePath, 'utf8')
     
     // Check for scales
-    expect(content).toMatch(/d3\.scaleLinear\(\)/) // For years
-    expect(content).toMatch(/d3\.scaleBand\(\)/) // For tracks (y-axis)
+    expect(content).toMatch(/d3\.scaleLinear\(\)/)
+    expect(content).toMatch(/d3\.scaleBand\(\)/)
     
     // Check for axes
     expect(content).toMatch(/d3\.axisBottom/)
+  })
+
+  it('should render rect elements for timeline entries', () => {
+    const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
+    const content = fs.readFileSync(filePath, 'utf8')
+    
+    // Check for rect appending (using join or append)
+    expect(content).toMatch(/\.(append|join)\(['"]rect['"]\)/)
+    
+    // Check for attributes
+    expect(content).toMatch(/\.attr\(['"]x['"]/)
+    expect(content).toMatch(/\.attr\(['"]width['"]/)
+    expect(content).toMatch(/\.attr\(['"]y['"]/)
+    expect(content).toMatch(/\.attr\(['"]height['"]/)
   })
 })
