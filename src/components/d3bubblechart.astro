@@ -32,7 +32,8 @@ import superpowers from '../superpowers.json'
     if (!container || container.dataset.initialized === 'true') return
 
     const rawData: Superpower[] = JSON.parse(container.getAttribute('data-superpowers') || '[]')
-    const data = [...rawData]
+    // Shuffle data for randomized placement
+    const data = [...rawData].sort(() => Math.random() - 0.5)
 
     const renderChart = () => {
       const chartContainer = document.getElementById('bubblechart-container')
@@ -62,14 +63,14 @@ import superpowers from '../superpowers.json'
         .range(['#d2386c', '#DD4124', '#eada4f', '#3CADD4', '#64bfa4', '#b565a7'])
         .interpolate(d3.interpolateHcl)
 
-      // Create pack layout
+      // Create pack layout - smaller padding for bigger bubbles
       const pack = d3.pack<Superpower>()
         .size([width - margin * 2, height - margin * 2])
-        .padding(10)
+        .padding(4)
 
-      // Compute hierarchy
+      // Compute hierarchy - Weight by level for size
       const root = pack(d3.hierarchy({ children: data } as any)
-        .sum((d: any) => d.level * d.level)) // Weight by level squared for better visual differentiation
+        .sum((d: any) => Math.pow(d.level, 1.5))) 
 
       // Place nodes
       const node = svg.append('g')
@@ -86,7 +87,7 @@ import superpowers from '../superpowers.json'
 
       // Text wrapping logic based on guide
       const text = node.append('text')
-        .style('font-size', (d: any) => Math.min(d.r / 3, 14) + 'px')
+        .style('font-size', (d: any) => Math.max(10, Math.min(d.r / 2.5, 14)) + 'px')
         .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
