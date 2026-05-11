@@ -28,7 +28,7 @@
 - [x] Task: Implement click event listeners on bars for navigation. 6c1f625
 - [x] Task: Conductor - User Manual Verification 'Phase 4: Interactivity (Tooltips & Navigation)' (Protocol in workflow.md) 4b830a6
 
-## Phase 5: Responsive Design (Adaptive Layout)
+## Phase 5: Responsive Design (Adaptive Layout) [checkpoint: 7b1e386]
 - [x] Task: Write failing test (or configure visual regression/viewport test) to verify layout switches from horizontal to vertical on smaller viewports. 0fa9c63
 - [x] Task: Implement adaptive layout logic (using CSS media queries or Javascript ResizeObserver/window.matchMedia within D3). 0fa9c63
-- [~] Task: Conductor - User Manual Verification 'Phase 5: Responsive Design (Adaptive Layout)' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 5: Responsive Design (Adaptive Layout)' (Protocol in workflow.md) 7b1e386
