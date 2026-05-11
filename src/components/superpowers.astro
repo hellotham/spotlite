@@ -1,5 +1,6 @@
 ---
 import D3superpowers from '../components/d3superpowers.astro'
+import D3BubbleChart from '../components/d3bubblechart.astro'
 import superpowers from '../superpowers.json'
 
 const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(b.title))
@@ -10,6 +11,7 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
     <span class='i-heroicons-bolt text-secondary h-6 w-6' aria-hidden='true'></span>
     <span class='ml-3'>Superpowers</span>
   </h2>
+  <D3BubbleChart />
   <D3superpowers />
   <ol class='mt-6 space-y-4'>
     {
