@@ -10,9 +10,9 @@
 ## Phase 2: D3 Timeline Core Visualization
 - [x] Task: Write failing tests for D3 scale generation (x-axis for decades, y-axis for tracks). e889863
 - [x] Task: Implement D3 scales and axes within a client-side script in the Astro component. e889863
-- [~] Task: Write failing test to verify D3 renders `<rect>` elements for each timeline entry with correct relative width and position.
-- [ ] Task: Implement D3 logic to render the bars based on `startYear` and `endYear` (or current year for ongoing).
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: D3 Timeline Core Visualization' (Protocol in workflow.md)
+- [x] Task: Write failing test to verify D3 renders `<rect>` elements for each timeline entry with correct relative width and position. 64e6838
+- [x] Task: Implement D3 logic to render the bars based on `startYear` and `endYear` (or current year for ongoing). 64e6838
+- [~] Task: Conductor - User Manual Verification 'Phase 2: D3 Timeline Core Visualization' (Protocol in workflow.md)
 
 ## Phase 3: Styling, Colors, and Ongoing Indicators
 - [ ] Task: Write failing tests checking for appropriate CSS classes or fill attributes based on entry type (education, employment, consulting).
