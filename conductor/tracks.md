@@ -12,3 +12,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 ---
+
+---
+
+- [ ] **Track: Refactor Work Collection Dates and Type**
+*Link: [./tracks/workcollection_20260511/](./tracks/workcollection_20260511/)*
