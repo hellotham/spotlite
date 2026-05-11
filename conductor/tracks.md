@@ -6,6 +6,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [superpowers_component_20260510](./archive/superpowers_component_20260510/metadata.json): Create superpowers.astro component with list and modal. (Completed)
 
 ---
+
+- [ ] **Track: Create D3 Bubble Chart Component**
+*Link: [./archive/d3bubblechart_20260511/](./archive/d3bubblechart_20260511/)*
+
+---
 ---
 
 ---
