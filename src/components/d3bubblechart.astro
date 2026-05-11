@@ -79,29 +79,29 @@ import superpowers from '../superpowers.json'
 
       // Simulation
       const simulation = d3.forceSimulation(nodes)
-        .force('x', d3.forceX(width / 2).strength(0.0005)) // Near-zero central pull
-        .force('y', d3.forceY(height / 2).strength(0.0005))
-        .force('charge', d3.forceManyBody().strength(0.5))
+        .force('x', d3.forceX(width / 2).strength(0.0002)) // Negligible pull
+        .force('y', d3.forceY(height / 2).strength(0.0002))
+        .force('charge', d3.forceManyBody().strength(0.2))
         .force('collide', d3.forceCollide().radius((d: any) => d.radius + 3).iterations(3))
-        .alphaTarget(0.1) // Lower target
-        .velocityDecay(0.05) // Slight friction to keep it "viscous"
+        .alphaTarget(0.2) // Constant alpha to keep simulation active
+        .velocityDecay(0) // ZERO friction for perpetual motion
         .on('tick', () => {
           nodes.forEach(d => {
-            // Brownian motion: occasional random "kicks" rather than constant force
-            if (Math.random() < 0.02) {
+            // Brownian motion: occasional random "kicks" to sustain energy
+            if (Math.random() < 0.015) {
               d.vx += (Math.random() - 0.5) * d.driftStrength
               d.vy += (Math.random() - 0.5) * d.driftStrength
             }
 
-            // Cap maximum speed to ensure "move slightly"
+            // Cap maximum speed to keep it "slow motion"
             const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy)
-            const maxSpeed = 0.2
+            const maxSpeed = 0.15 // Even slower
             if (speed > maxSpeed) {
               d.vx *= maxSpeed / speed
               d.vy *= maxSpeed / speed
             }
 
-            // Bounding box bounce logic
+            // Bounding box bounce logic (conserves momentum)
             if (d.x <= d.radius) d.vx = Math.abs(d.vx)
             if (d.x >= width - d.radius) d.vx = -Math.abs(d.vx)
             if (d.y <= d.radius) d.vy = Math.abs(d.vy)
