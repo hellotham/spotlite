@@ -73,32 +73,43 @@ import superpowers from '../superpowers.json'
         ...d,
         radius: radiusScale(d.level),
         x: Math.random() * width,
-        y: Math.random() * height,
-        driftStrength: 0.05,
-        forceMode: Math.random() < 0.5 ? 'cohesion' : 'repulsion' // Initial random mode
+        y: Math.random() * height
       }))
 
       // Simulation
       const simulation = d3.forceSimulation(nodes)
-        .force('x', d3.forceX(width / 2).strength((d: any) => d.forceMode === 'cohesion' ? 0.006 : 0.001))
-        .force('y', d3.forceY(height / 2).strength((d: any) => d.forceMode === 'cohesion' ? 0.006 : 0.001))
-        .force('charge', d3.forceManyBody().strength((d: any) => d.forceMode === 'repulsion' ? -8 : 1))
-        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 6).iterations(4))
+        .force('charge', d3.forceManyBody().strength(0.5)) // Negligible repulsion
+        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 3).iterations(3))
         .alphaTarget(0.2)
         .velocityDecay(0)
         .on('tick', () => {
-          nodes.forEach(d => {
-            // Periodic mode flipping (cohesion vs repulsion)
-            if (Math.random() < 0.0015) {
-              d.forceMode = d.forceMode === 'cohesion' ? 'repulsion' : 'cohesion'
-            }
-
-            // Brownian direction flips
-            if (Math.random() < 0.008) {
+          nodes.forEach((d, i) => {
+            // Periodic Brownian direction flips
+            if (Math.random() < 0.005) {
               const angle = Math.random() * 2 * Math.PI
               const speed = 0.05 + Math.random() * 0.1
               d.vx = Math.cos(angle) * speed
               d.vy = Math.sin(angle) * speed
+            }
+
+            // Inter-bubble randomized bouncing
+            for (let j = i + 1; j < nodes.length; j++) {
+              const other = nodes[j]
+              const dx = other.x - d.x
+              const dy = other.y - d.y
+              const distance = Math.sqrt(dx * dx + dy * dy)
+              const minDistance = d.radius + other.radius + 4
+
+              if (distance < minDistance) {
+                // Collision detected! Randomize directions
+                const angle1 = Math.random() * 2 * Math.PI
+                const angle2 = Math.random() * 2 * Math.PI
+                const speed = 0.1
+                d.vx = Math.cos(angle1) * speed
+                d.vy = Math.sin(angle1) * speed
+                other.vx = Math.cos(angle2) * speed
+                other.vy = Math.sin(angle2) * speed
+              }
             }
 
             // Elastic Bounding Box Bounce
