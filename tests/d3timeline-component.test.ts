@@ -53,3 +53,18 @@ describe('D3Timeline Component - Phase 2', () => {
     expect(content).toMatch(/\.attr\(['"]height['"]/)
   })
 })
+
+describe('D3Timeline Component - Phase 3', () => {
+  it('should apply color coding based on entry type', () => {
+    const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
+    const content = fs.readFileSync(filePath, 'utf8')
+    
+    // Check for color mapping logic in fill attribute
+    expect(content).toMatch(/\.attr\(['"]fill['"],\s*\(d:\s*any\)\s*=>/)
+    
+    // Check for type strings being used in the component
+    expect(content).toContain('education')
+    expect(content).toContain('employment')
+    expect(content).toContain('consulting')
+  })
+})
