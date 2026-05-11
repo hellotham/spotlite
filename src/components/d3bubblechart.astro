@@ -35,9 +35,19 @@ import superpowers from '../superpowers.json'
     // Shuffle data for randomized placement
     const data = [...rawData].sort(() => Math.random() - 0.5)
 
+    let animationRunning = false
+    let animationFrameId: number | null = null
+
     const renderChart = () => {
       const chartContainer = document.getElementById('bubblechart-container')
       if (!chartContainer) return
+
+      // Stop any previous animation loop before re-rendering
+      animationRunning = false
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId)
+        animationFrameId = null
+      }
 
       // Clear previous content
       chartContainer.innerHTML = ''
@@ -73,111 +83,126 @@ import superpowers from '../superpowers.json'
         ...d,
         radius: radiusScale(d.level),
         x: Math.random() * width,
-        y: Math.random() * height
+        y: Math.random() * height,
+        vx: 0,
+        vy: 0
       }))
 
-      // Simulation
-      const simulation = d3.forceSimulation(nodes)
-        .force('charge', d3.forceManyBody().strength(0.5)) // Negligible repulsion
-        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 3).iterations(3))
-        .alphaTarget(0.2)
-        .velocityDecay(0)
-        .on('tick', () => {
-          nodes.forEach((d, i) => {
-            // Periodic Brownian direction flips
-            if (Math.random() < 0.005) {
-              const angle = Math.random() * 2 * Math.PI
-              const speed = 0.05 + Math.random() * 0.1
-              d.vx = Math.cos(angle) * speed
-              d.vy = Math.sin(angle) * speed
-            }
+      // Brownian motion parameters
+      const brownianStrength = 0.04 // Random impulse per frame
+      const velocityDecay = 0.985 // Gentle friction - preserves momentum longer
+      const minSpeed = 0.06 // Speed floor - bubbles never stop
+      const minDistance = 0.5 // Minimum spacing between bubble edges
+      const collisionElasticity = 0.85 // Energy retention in collision
+      const maxSpeed = 0.35 // Maximum velocity magnitude
 
-            // Inter-bubble reactive bouncing
-            for (let j = i + 1; j < nodes.length; j++) {
-              const other = nodes[j]
-              const dx = other.x - d.x
-              const dy = other.y - d.y
-              const distance = Math.sqrt(dx * dx + dy * dy)
-              const minDistance = d.radius + other.radius + 6
+      // Give each bubble a random initial velocity so they start moving immediately
+      nodes.forEach(d => {
+        const angle = Math.random() * 2 * Math.PI
+        d.vx = Math.cos(angle) * minSpeed * (1 + Math.random())
+        d.vy = Math.sin(angle) * minSpeed * (1 + Math.random())
+      })
 
-              if (distance < minDistance) {
-                // Collision detected! Calculate collision normal
-                const nx = dx / distance
-                const ny = dy / distance
+      // Manual animation loop instead of d3 forces
+      const animate = () => {
+        if (!animationRunning) return
 
-                // Opposite directions with random angular offset
-                const speed = 0.1
-                const randomOffset = (Math.random() - 0.5) * 0.5 // Random rotation in radians
+        nodes.forEach((d, i) => {
+          // Apply continuous Brownian motion (random walk)
+          // Small random impulses each frame for natural motion
+          d.vx += (Math.random() - 0.5) * brownianStrength
+          d.vy += (Math.random() - 0.5) * brownianStrength
 
-                // Bubble 1 moves away from bubble 2
-                const angle1 = Math.atan2(-ny, -nx) + randomOffset
-                d.vx = Math.cos(angle1) * speed
-                d.vy = Math.sin(angle1) * speed
+          // Apply friction/damping
+          d.vx *= velocityDecay
+          d.vy *= velocityDecay
 
-                // Bubble 2 moves away from bubble 1
-                const angle2 = Math.atan2(ny, nx) + randomOffset
-                other.vx = Math.cos(angle2) * speed
-                other.vy = Math.sin(angle2) * speed
+          // Update position
+          d.x += d.vx
+          d.y += d.vy
 
-                // Immediate separation to prevent sticking
-                const overlap = minDistance - distance
-                const separationX = (nx * overlap) / 2
-                const separationY = (ny * overlap) / 2
-                d.x -= separationX
-                d.y -= separationY
-                other.x += separationX
-                other.y += separationY
+          // Elastic bubble-to-bubble collision detection and response
+          for (let j = i + 1; j < nodes.length; j++) {
+            const other = nodes[j]
+            const dx = other.x - d.x
+            const dy = other.y - d.y
+            const distSq = dx * dx + dy * dy
+            const minDistSq = (d.radius + other.radius + minDistance) ** 2
+
+            if (distSq < minDistSq) {
+              const dist = Math.sqrt(distSq)
+              const overlap = d.radius + other.radius + minDistance - dist
+
+              // Collision normal (normalized direction)
+              const nx = dx / dist
+              const ny = dy / dist
+
+              // Push bubbles apart to prevent overlap
+              const pushDistance = overlap / 2 + 0.001
+              d.x -= nx * pushDistance
+              d.y -= ny * pushDistance
+              other.x += nx * pushDistance
+              other.y += ny * pushDistance
+
+              // Elastic collision response: exchange velocity components along collision normal
+              // Relative velocity
+              const dvx = other.vx - d.vx
+              const dvy = other.vy - d.vy
+              const dvDotN = dvx * nx + dvy * ny
+
+              // Only collide if bubbles are moving towards each other
+              if (dvDotN < 0) {
+                // For equal-mass elastic collision, swap normal components
+                const impulse = -dvDotN * collisionElasticity
+
+                d.vx += impulse * nx
+                d.vy += impulse * ny
+                other.vx -= impulse * nx
+                other.vy -= impulse * ny
               }
             }
+          }
 
-            // Elastic Bounding Box Bounce
-            const bounce = 0.05 // Active impulse away from wall
-            if (d.x <= d.radius) {
-              d.vx = Math.abs(d.vx) + bounce
-            } else if (d.x >= width - d.radius) {
-              d.vx = -Math.abs(d.vx) - bounce
+          // Bounding box wall collisions with elastic reflection
+          const bounce = 0.92 // Coefficient of restitution
+          if (d.x - d.radius < 0) {
+            d.x = d.radius
+            d.vx = Math.abs(d.vx) * bounce
+          } else if (d.x + d.radius > width) {
+            d.x = width - d.radius
+            d.vx = -Math.abs(d.vx) * bounce
+          }
+
+          if (d.y - d.radius < 0) {
+            d.y = d.radius
+            d.vy = Math.abs(d.vy) * bounce
+          } else if (d.y + d.radius > height) {
+            d.y = height - d.radius
+            d.vy = -Math.abs(d.vy) * bounce
+          }
+
+          // Enforce speed bounds: never too fast, never stationary
+          const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy)
+          if (speed > maxSpeed) {
+            d.vx *= maxSpeed / speed
+            d.vy *= maxSpeed / speed
+          } else if (speed < minSpeed) {
+            // Bubble has stalled - restore to minimum speed in current direction
+            // If completely stopped, pick a random direction
+            const s = speed > 0 ? speed : 1
+            d.vx = (d.vx / s) * minSpeed
+            d.vy = (d.vy / s) * minSpeed
+            if (speed === 0) {
+              const angle = Math.random() * 2 * Math.PI
+              d.vx = Math.cos(angle) * minSpeed
+              d.vy = Math.sin(angle) * minSpeed
             }
-
-            if (d.y <= d.radius) {
-              d.vy = Math.abs(d.vy) + bounce
-            } else if (d.y >= height - d.radius) {
-              d.vy = -Math.abs(d.vy) - bounce
-            }
-
-            // Motion Guard: Nudge if nearly stationary
-            const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy)
-            if (speed < 0.02) {
-              d.vx += (Math.random() - 0.5) * 0.1
-              d.vy += (Math.random() - 0.5) * 0.1
-            }
-
-            // Cap maximum speed
-            const maxSpeed = 0.2
-            if (speed > maxSpeed) {
-              d.vx *= maxSpeed / speed
-              d.vy *= maxSpeed / speed
-            }
-
-            // Hard clamp
-            d.x = Math.max(d.radius, Math.min(width - d.radius, d.x))
-            d.y = Math.max(d.radius, Math.min(height - d.radius, d.y))
-          })
-
-          node.attr('transform', (d: any) => `translate(${d.x},${d.y})`)
-        })
-
-      // Performance Optimization: Pause simulation when off-screen
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            simulation.alphaTarget(0.3).restart()
-          } else {
-            simulation.alphaTarget(0).stop()
           }
         })
-      }, { threshold: 0.1 })
 
-      observer.observe(chartContainer)
+        node.attr('transform', (d: any) => `translate(${d.x},${d.y})`)
+        animationFrameId = requestAnimationFrame(animate)
+      }
 
       // Place nodes
       const node = svg.append('g')
@@ -280,6 +305,24 @@ import superpowers from '../superpowers.json'
         .attr('x', 0)
         .attr('y', (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
         .text((d: any) => d)
+
+      // Performance Optimization: Pause animation when off-screen
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animationRunning) {
+            animationRunning = true
+            animate()
+          } else if (!entry.isIntersecting) {
+            animationRunning = false
+          }
+        })
+      }, { threshold: 0.1 })
+
+      observer.observe(chartContainer)
+
+      // Start animation
+      animationRunning = true
+      animate()
     }
 
     renderChart()
