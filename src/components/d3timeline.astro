@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import { processTimelineData } from '../utils/timeline';
+
+const workEntries = await getCollection('work');
+const educationEntries = await getCollection('education');
+const timelineData = processTimelineData(workEntries, educationEntries);
+---
+
+<div
+  id='timeline-container'
+  class='text-secondary min-h-[400px] w-full relative'
+  data-timeline={JSON.stringify(timelineData)}
+>
+</div>
+<div
+  id='timeline-tooltip'
+  class='text-sm p-4 border border-primary/30 rounded-lg bg-sugarSwizzle/90 glass max-w-xs min-w-[200px] hidden pointer-events-none shadow-xl fixed z-50 backdrop-blur-md dark:bg-blackBeauty/80'
+>
+</div>
+
+<script>
+  import * as d3 from 'd3'
+
+  const setupTimeline = () => {
+    const container = document.getElementById('timeline-container')
+    if (!container || container.dataset.initialized === 'true') return
+
+    const data = JSON.parse(container.getAttribute('data-timeline') || '[]')
+    console.log('Timeline data loaded and sorted:', data)
+
+    container.dataset.initialized = 'true'
+  }
+
+  setupTimeline()
+  document.addEventListener('astro:page-load', setupTimeline)
+</script>
+
+<style>
+  #timeline-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
