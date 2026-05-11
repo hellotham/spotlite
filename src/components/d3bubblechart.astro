@@ -46,7 +46,7 @@ import superpowers from '../superpowers.json'
       const width = chartContainer.clientWidth
       const height = 500
       const margin = 1
-      
+
       const svg = d3
         .select('#bubblechart-container')
         .append('svg')
@@ -64,23 +64,27 @@ import superpowers from '../superpowers.json'
         .interpolate(d3.interpolateHcl)
 
       // Create pack layout - smaller padding for bigger bubbles
-      const pack = d3.pack<Superpower>()
+      const pack = d3
+        .pack<Superpower>()
         .size([width - margin * 2, height - margin * 2])
         .padding(4)
 
       // Compute hierarchy - Weight by level for size
-      const root = pack(d3.hierarchy({ children: data } as any)
-        .sum((d: any) => Math.pow(d.level, 1.5))) 
+      const root = pack(
+        d3.hierarchy({ children: data } as any).sum((d: any) => Math.pow(d.level, 1.5))
+      )
 
       // Place nodes
-      const node = svg.append('g')
+      const node = svg
+        .append('g')
         .attr('transform', `translate(${margin},${margin})`)
         .selectAll('g')
         .data(root.leaves())
         .join('g')
         .attr('transform', (d: any) => `translate(${d.x},${d.y})`)
 
-      node.append('circle')
+      node
+        .append('circle')
         .attr('r', (d: any) => d.r)
         .attr('fill', (d: any) => colorScale(d.data.level))
         .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
@@ -152,13 +156,15 @@ import superpowers from '../superpowers.json'
         })
 
       // Text wrapping logic based on guide
-      const text = node.append('text')
+      const text = node
+        .append('text')
         .style('font-size', (d: any) => Math.max(10, Math.min(d.r / 2.5, 14)) + 'px')
         .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
 
-      text.selectAll('tspan')
+      text
+        .selectAll('tspan')
         .data((d: any) => {
           const name = d.data.title
           // Split by spaces or hyphens, preserving the hyphen
