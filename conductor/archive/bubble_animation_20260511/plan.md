@@ -19,4 +19,5 @@
 - [x] Task: Increase container whitespace by further reducing bubble sizes and smooth out movement by slowing down drift and tuning decay.
 - [x] Task: Implement infinite motion by removing velocity decay and adding bounce logic to bounding box constraints to keep bubbles drifting indefinitely.
 - [x] Task: Halve the movement speed and desynchronise bubbles by introducing per-node random drift factors.
+- [x] Task: Implement ultra-slow Brownian motion by using discrete, periodic random velocity changes and drastically reducing base speeds.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Continuous Animation & Performance' (Protocol in workflow.md)
