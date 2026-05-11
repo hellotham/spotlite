@@ -17,9 +17,9 @@
 ## Phase 3: Styling, Colors, and Ongoing Indicators
 - [x] Task: Write failing tests checking for appropriate CSS classes or fill attributes based on entry type (education, employment, consulting). d960c7c
 - [x] Task: Implement D3 color coding logic based on entry type. d960c7c
-- [~] Task: Write failing test to verify the presence of a visual indicator (e.g., specific class or SVG gradient) on entries without an `endYear`.
-- [ ] Task: Implement visual indicator logic for ongoing roles.
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Styling, Colors, and Ongoing Indicators' (Protocol in workflow.md)
+- [x] Task: Write failing test to verify the presence of a visual indicator (e.g., specific class or SVG gradient) on entries without an `endYear`. f3fdbbe
+- [x] Task: Implement visual indicator logic for ongoing roles. f3fdbbe
+- [~] Task: Conductor - User Manual Verification 'Phase 3: Styling, Colors, and Ongoing Indicators' (Protocol in workflow.md)
 
 ## Phase 4: Interactivity (Tooltips & Navigation)
 - [ ] Task: Write failing test for tooltip interaction (hover triggers tooltip display with correct data).
