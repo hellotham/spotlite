@@ -7,6 +7,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [d3bubblechart_20260511](./archive/d3bubblechart_20260511/plan.md): Create D3 Bubble Chart Component. (Completed)
 
 ---
+
+- [ ] **Track: D3 Bubble Chart Molecule Animation**
+*Link: [./archive/bubble_animation_20260511/](./archive/bubble_animation_20260511/)*
+
+---
 ---
 
 ---
