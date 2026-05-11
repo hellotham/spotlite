@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "clean": "rm -rf node_modules .astro coverage dist",
     "start": "astro dev",
+    "postinstall": "pnpm dlx puppeteer browsers install chrome",
     "pdf": "node scripts/generate-pdf.js",
     "build": "pnpm run pdf && astro build && pnpm run search:index",
     "test": "vitest run",
