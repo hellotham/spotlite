@@ -1,11 +1,11 @@
 # Implementation Plan: D3 Timeline Component
 
-## Phase 1: Data Preparation & Basic Component Structure
+## Phase 1: Data Preparation & Basic Component Structure [checkpoint: 8c692f0]
 - [x] Task: Write failing unit test for extracting and merging `education` and `work` collections, sorting by `startYear`. b483762
 - [x] Task: Implement data extraction and sorting logic within `src/components/d3timeline.astro`. 97a2bac
 - [x] Task: Write failing test to verify the basic DOM structure of the component (e.g., container `div` and `<svg>` element). 0ca2e07
 - [x] Task: Implement basic DOM structure in `src/components/d3timeline.astro`. 0ca2e07
-- [~] Task: Conductor - User Manual Verification 'Phase 1: Data Preparation & Basic Component Structure' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Data Preparation & Basic Component Structure' (Protocol in workflow.md) 8c692f0
 
 ## Phase 2: D3 Timeline Core Visualization
 - [ ] Task: Write failing tests for D3 scale generation (x-axis for decades, y-axis for tracks).
