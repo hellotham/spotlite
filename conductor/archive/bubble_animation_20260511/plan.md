@@ -15,4 +15,5 @@
 - [x] Task: Implement continuous slow, random movement by periodically injecting small random velocities into the simulation nodes or maintaining a low `alphaTarget`.
 - [x] Task: Implement `IntersectionObserver` to pause the simulation when off-screen and resume when on-screen.
 - [x] Task: Verify tooltips and click events function correctly on moving bubbles.
+- [x] Task: Optimise bubble sizes to be as small as possible while preventing text overflow to allow freer movement.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Continuous Animation & Performance' (Protocol in workflow.md)
