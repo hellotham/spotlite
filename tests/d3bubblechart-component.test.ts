@@ -26,10 +26,11 @@ describe('D3BubbleChart Component', () => {
     expect(content).toContain("import superpowers from '../superpowers.json'")
     expect(content).toContain('data-superpowers={JSON.stringify(superpowers)}')
     
-    // Check for pack layout logic (hierarchy based)
-    expect(content).toContain('d3.pack')
-    expect(content).toContain('d3.hierarchy')
-    expect(content).toContain('root.leaves()')
+    // Check for simulation logic (characteristic of bubble charts)
+    expect(content).toContain('d3.forceSimulation')
+    expect(content).toContain('d3.forceManyBody')
+    expect(content).toContain('d3.forceCollide')
+    expect(content).toMatch(/d3\.force(X|Y|Center)/)
     
     // Check for responsiveness
     expect(content).toContain("window.addEventListener('resize',")

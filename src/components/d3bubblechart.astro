@@ -63,33 +63,49 @@ import superpowers from '../superpowers.json'
         .range(['#d2386c', '#DD4124', '#eada4f', '#3CADD4', '#64bfa4', '#b565a7'])
         .interpolate(d3.interpolateHcl)
 
-      // Create pack layout - smaller padding for bigger bubbles
-      const pack = d3
-        .pack<Superpower>()
-        .size([width - margin * 2, height - margin * 2])
-        .padding(4)
+      // Radius scale
+      const radiusScale = d3.scaleLinear()
+        .domain([1, 6])
+        .range([35, 75])
 
-      // Compute hierarchy - Weight by level for size
-      const root = pack(
-        d3.hierarchy({ children: data } as any).sum((d: any) => Math.pow(d.level, 1.5))
-      )
+      // Nodes for simulation
+      const nodes: any[] = data.map(d => ({
+        ...d,
+        radius: radiusScale(d.level),
+        x: Math.random() * width,
+        y: Math.random() * height
+      }))
+
+      // Simulation
+      const simulation = d3.forceSimulation(nodes)
+        .force('x', d3.forceX(width / 2).strength(0.05))
+        .force('y', d3.forceY(height / 2).strength(0.05))
+        .force('charge', d3.forceManyBody().strength(5))
+        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 4).iterations(3))
+        .on('tick', () => {
+          node
+            .attr('transform', (d: any) => {
+              // Bounding box constraints
+              d.x = Math.max(d.radius, Math.min(width - d.radius, d.x))
+              d.y = Math.max(d.radius, Math.min(height - d.radius, d.y))
+              return `translate(${d.x},${d.y})`
+            })
+        })
 
       // Place nodes
-      const node = svg
-        .append('g')
-        .attr('transform', `translate(${margin},${margin})`)
+      const node = svg.append('g')
         .selectAll('g')
-        .data(root.leaves())
+        .data(nodes)
         .join('g')
-        .attr('transform', (d: any) => `translate(${d.x},${d.y})`)
+        .attr('class', 'bubble')
 
       node
         .append('circle')
-        .attr('r', (d: any) => d.r)
-        .attr('fill', (d: any) => colorScale(d.data.level))
+        .attr('r', (d: any) => d.radius)
+        .attr('fill', (d: any) => colorScale(d.level))
         .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
         .on('mouseover', function (event: MouseEvent, d: any) {
-          const item = d.data
+          const item = d
           tooltip.classed('hidden', false)
           tooltip.html(`
           <div class="flex flex-col gap-1">
@@ -128,7 +144,7 @@ import superpowers from '../superpowers.json'
           tooltip.classed('hidden', true)
         })
         .on('click', function (event: MouseEvent, d: any) {
-          const item = d.data
+          const item = d
           const modal = document.getElementById('superpowers-modal') as HTMLDialogElement
           if (!modal) return
 
@@ -158,7 +174,7 @@ import superpowers from '../superpowers.json'
       // Text wrapping logic based on guide
       const text = node
         .append('text')
-        .style('font-size', (d: any) => Math.max(10, Math.min(d.r / 2.5, 14)) + 'px')
+        .style('font-size', (d: any) => Math.max(10, Math.min(d.radius / 2.5, 14)) + 'px')
         .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
@@ -166,7 +182,7 @@ import superpowers from '../superpowers.json'
       text
         .selectAll('tspan')
         .data((d: any) => {
-          const name = d.data.title
+          const name = d.title
           // Split by spaces or hyphens, preserving the hyphen
           return name.split(/[\s-]/g).map((word: string, i: number, arr: string[]) => {
             if (name.includes(`${word}-`) && i < arr.length - 1) return `${word}-`
