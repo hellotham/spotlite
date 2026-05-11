@@ -34,5 +34,13 @@ describe('D3BubbleChart Component', () => {
     
     // Check for responsiveness
     expect(content).toContain("window.addEventListener('resize',")
+
+    // Phase 2: SVG and Node generation
+    expect(content).toContain('radiusScale')
+    expect(content).toMatch(/\.append\(['"]circle['"]\)/)
+    expect(content).toMatch(/\.append\(['"]text['"]\)/)
+    
+    // Check for word wrap logic (likely using tspan)
+    expect(content).toMatch(/\.append\(['"]tspan['"]\)/)
   })
 })

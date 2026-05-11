@@ -11,10 +11,10 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Component Scaffold & TDD Setup' (Protocol in workflow.md)
 
 ## Phase 2: D3 Visualization & Simulation
-- [ ] Task: Add test in `tests/d3bubblechart-component.test.ts` to verify SVG and D3 node generation.
-- [ ] Task: Implement D3 force simulation (center, charge, collide) in `d3bubblechart.astro`.
-- [ ] Task: Map bubble radius to superpower `level` and fill color to the Rosely palette.
-- [ ] Task: Add SVG text elements for labels inside bubbles, implementing truncation if necessary.
+- [x] Task: Add test in `tests/d3bubblechart-component.test.ts` to verify SVG and D3 node generation.
+- [x] Task: Implement D3 force simulation with bounding box constraints to ensure bubbles stay within container.
+- [x] Task: Map bubble radius to superpower `level` and fill color to the Rosely palette.
+- [x] Task: Implement a word wrapping utility for SVG text labels inside bubbles.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: D3 Visualization & Simulation' (Protocol in workflow.md)
 
 ## Phase 3: Tooltip & Interactivity

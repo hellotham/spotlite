@@ -54,7 +54,7 @@ import superpowers from '../superpowers.json'
       // Radius scale
       const radiusScale = d3.scaleLinear()
         .domain([1, 6])
-        .range([30, 70])
+        .range([35, 75])
 
       // Color Scale - Level 1 (Red) to 6 (Green) using Rosely Palette
       const colorScale = d3
@@ -74,11 +74,16 @@ import superpowers from '../superpowers.json'
       // Simulation
       const simulation = d3.forceSimulation(nodes as any)
         .force('center', d3.forceCenter(width / 2, height / 2))
-        .force('charge', d3.forceManyBody().strength(5))
-        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 2))
+        .force('charge', d3.forceManyBody().strength(10))
+        .force('collide', d3.forceCollide().radius((d: any) => d.radius + 5).iterations(2))
         .on('tick', () => {
           node
-            .attr('transform', (d: any) => `translate(${d.x},${d.y})`)
+            .attr('transform', (d: any) => {
+              // Bounding box constraints
+              d.x = Math.max(d.radius, Math.min(width - d.radius, d.x))
+              d.y = Math.max(d.radius, Math.min(height - d.radius, d.y))
+              return `translate(${d.x},${d.y})`
+            })
         })
 
       const node = svg.append('g')
@@ -92,13 +97,48 @@ import superpowers from '../superpowers.json'
         .attr('fill', d => colorScale(d.level))
         .attr('class', 'cursor-pointer transition-opacity duration-200')
 
+      // Text wrapping utility
+      function wrap(text: any, width: number) {
+        text.each(function(this: SVGTextElement) {
+          const text = d3.select(this)
+          const words = text.text().split(/\s+/).reverse()
+          let word
+          let line: string[] = []
+          let lineNumber = 0
+          const lineHeight = 1.1 // ems
+          const y = text.attr('y')
+          const dy = parseFloat(text.attr('dy'))
+          let tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', dy + 'em')
+          
+          while (word = words.pop()) {
+            line.push(word)
+            tspan.text(line.join(' '))
+            if ((tspan.node()?.getComputedTextLength() || 0) > width) {
+              line.pop()
+              tspan.text(line.join(' '))
+              line = [word]
+              tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word)
+            }
+          }
+
+          // Center the lines vertically
+          const totalLines = lineNumber + 1
+          const offset = (totalLines - 1) * lineHeight / 2
+          text.selectAll('tspan').attr('dy', function(this: SVGTSpanElement, d, i) {
+            return (i * lineHeight + dy - offset) + 'em'
+          })
+        })
+      }
+
       node.append('text')
         .attr('text-anchor', 'middle')
-        .attr('dy', '.3em')
+        .attr('dy', '0.3em')
         .text(d => d.title)
-        .style('font-size', '10px')
+        .style('font-size', '11px')
+        .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
+        .call(wrap, 60)
     }
 
     renderChart()
