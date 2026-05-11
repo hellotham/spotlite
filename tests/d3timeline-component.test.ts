@@ -25,3 +25,17 @@ describe('D3Timeline Component', () => {
     expect(content).toMatch(/\.append\(['"]svg['"]\)/)
   })
 })
+
+describe('D3Timeline Component - Phase 2', () => {
+  it('should contain D3 scale and axis logic', () => {
+    const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
+    const content = fs.readFileSync(filePath, 'utf8')
+    
+    // Check for scales
+    expect(content).toMatch(/d3\.scaleLinear\(\)/) // For years
+    expect(content).toMatch(/d3\.scaleBand\(\)/) // For tracks (y-axis)
+    
+    // Check for axes
+    expect(content).toMatch(/d3\.axisBottom/)
+  })
+})

@@ -29,8 +29,11 @@ const timelineData = processTimelineData(workEntries, educationEntries);
     const data = JSON.parse(container.getAttribute('data-timeline') || '[]')
     console.log('Timeline data loaded and sorted:', data)
 
+    const margin = { top: 20, right: 30, bottom: 40, left: 40 }
     const width = container.clientWidth
     const height = 400
+    const innerWidth = width - margin.left - margin.right
+    const innerHeight = height - margin.top - margin.bottom
 
     const svg = d3
       .select('#timeline-container')
@@ -38,6 +41,26 @@ const timelineData = processTimelineData(workEntries, educationEntries);
       .attr('width', width)
       .attr('height', height)
       .attr('viewBox', [0, 0, width, height])
+      .append('g')
+      .attr('transform', `translate(\${margin.left},\${margin.top})`)
+
+    const minYear = d3.min(data, (d: any) => d.startYear) as number
+    const maxYear = new Date().getFullYear()
+
+    const xScale = d3.scaleLinear()
+      .domain([minYear, maxYear])
+      .range([0, innerWidth])
+
+    const yScale = d3.scaleBand()
+      .domain(data.map((d: any) => d.title))
+      .range([0, innerHeight])
+      .padding(0.2)
+
+    const xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'))
+
+    svg.append('g')
+      .attr('transform', `translate(0,\${innerHeight})`)
+      .call(xAxis)
 
     container.dataset.initialized = 'true'
   }
