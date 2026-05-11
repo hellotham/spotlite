@@ -14,12 +14,12 @@
 - [x] Task: Implement D3 logic to render the bars based on `startYear` and `endYear` (or current year for ongoing). 64e6838
 - [x] Task: Conductor - User Manual Verification 'Phase 2: D3 Timeline Core Visualization' (Protocol in workflow.md) 1d815b2
 
-## Phase 3: Styling, Colors, and Ongoing Indicators
+## Phase 3: Styling, Colors, and Ongoing Indicators [checkpoint: 9ac7bbd]
 - [x] Task: Write failing tests checking for appropriate CSS classes or fill attributes based on entry type (education, employment, consulting). d960c7c
 - [x] Task: Implement D3 color coding logic based on entry type. d960c7c
 - [x] Task: Write failing test to verify the presence of a visual indicator (e.g., specific class or SVG gradient) on entries without an `endYear`. f3fdbbe
 - [x] Task: Implement visual indicator logic for ongoing roles. f3fdbbe
-- [~] Task: Conductor - User Manual Verification 'Phase 3: Styling, Colors, and Ongoing Indicators' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Styling, Colors, and Ongoing Indicators' (Protocol in workflow.md) 9ac7bbd
 
 ## Phase 4: Interactivity (Tooltips & Navigation)
 - [ ] Task: Write failing test for tooltip interaction (hover triggers tooltip display with correct data).
