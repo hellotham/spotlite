@@ -8,9 +8,9 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Data Preparation & Basic Component Structure' (Protocol in workflow.md) 8c692f0
 
 ## Phase 2: D3 Timeline Core Visualization
-- [ ] Task: Write failing tests for D3 scale generation (x-axis for decades, y-axis for tracks).
-- [ ] Task: Implement D3 scales and axes within a client-side script in the Astro component.
-- [ ] Task: Write failing test to verify D3 renders `<rect>` elements for each timeline entry with correct relative width and position.
+- [x] Task: Write failing tests for D3 scale generation (x-axis for decades, y-axis for tracks). e889863
+- [x] Task: Implement D3 scales and axes within a client-side script in the Astro component. e889863
+- [~] Task: Write failing test to verify D3 renders `<rect>` elements for each timeline entry with correct relative width and position.
 - [ ] Task: Implement D3 logic to render the bars based on `startYear` and `endYear` (or current year for ongoing).
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: D3 Timeline Core Visualization' (Protocol in workflow.md)
 
