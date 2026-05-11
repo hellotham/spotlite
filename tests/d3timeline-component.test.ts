@@ -43,7 +43,7 @@ describe('D3Timeline Component - Phase 2', () => {
     const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
     const content = fs.readFileSync(filePath, 'utf8')
     
-    // Check for rect appending (using join or append)
+    // Check for rect appending
     expect(content).toMatch(/\.(append|join)\(['"]rect['"]\)/)
     
     // Check for attributes
@@ -66,5 +66,16 @@ describe('D3Timeline Component - Phase 3', () => {
     expect(content).toContain('education')
     expect(content).toContain('employment')
     expect(content).toContain('consulting')
+  })
+
+  it('should apply a visual indicator for ongoing entries', () => {
+    const filePath = path.join(rootDir, 'src/components/d3timeline.astro')
+    const content = fs.readFileSync(filePath, 'utf8')
+    
+    // Check for isOngoing check in the script
+    expect(content).toContain('isOngoing')
+    
+    // Check for visual indicator application (e.g. gradient)
+    expect(content).toMatch(/url\(#grad-/)
   })
 })

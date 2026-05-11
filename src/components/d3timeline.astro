@@ -64,6 +64,17 @@ const timelineData = processTimelineData(workEntries, educationEntries);
       consulting: '#b565a7'
     }
 
+    const defs = svg.append('defs')
+    Object.entries(colorMap).forEach(([type, color]) => {
+      const grad = defs.append('linearGradient')
+        .attr('id', `grad-\${type}`)
+        .attr('x1', '0%')
+        .attr('x2', '100%')
+      
+      grad.append('stop').attr('offset', '70%').attr('stop-color', color).attr('stop-opacity', 1)
+      grad.append('stop').attr('offset', '100%').attr('stop-color', color).attr('stop-opacity', 0.2)
+    })
+
     svg.append('g')
       .attr('transform', `translate(0,\${innerHeight})`)
       .call(xAxis)
@@ -75,7 +86,7 @@ const timelineData = processTimelineData(workEntries, educationEntries);
       .attr('y', (d: any) => yScale(d.title) || 0)
       .attr('width', (d: any) => xScale(d.endYear) - xScale(d.startYear))
       .attr('height', yScale.bandwidth())
-      .attr('fill', (d: any) => colorMap[d.type] || '#ccc')
+      .attr('fill', (d: any) => d.isOngoing ? `url(#grad-\${d.type})` : (colorMap[d.type] || '#ccc'))
 
     container.dataset.initialized = 'true'
   }
