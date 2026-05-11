@@ -1,0 +1,8 @@
+{
+  "track_id": "d3timeline_20260511",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-05-11T12:00:00Z",
+  "updated_at": "2026-05-11T12:00:00Z",
+  "description": "create a @src/components/d3timeline.astro that plots the entries from education and work collections as bars on a timeline (scale is decades) using d3-viz skill. Colour each entry by type (education, employment, consulting). sort the timeline by ascending startyear."
+}
