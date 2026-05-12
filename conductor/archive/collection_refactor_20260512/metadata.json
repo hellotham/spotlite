@@ -1,0 +1,8 @@
+{
+  "track_id": "collection_refactor_20260512",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-05-12T12:00:00Z",
+  "updated_at": "2026-05-12T12:00:00Z",
+  "description": "Convert creations and passions lists to Astro collections"
+}

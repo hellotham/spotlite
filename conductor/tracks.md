@@ -7,11 +7,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [d3bubblechart_20260511](./archive/d3bubblechart_20260511/plan.md): Create D3 Bubble Chart Component. (Completed)
 - [bubble_animation_20260511](./archive/bubble_animation_20260511/plan.md): D3 Bubble Chart Molecule Animation. (Completed)
 - [workcollection_20260511](./archive/workcollection_20260511/plan.md): Refactor Work Collection Dates and Type. (Completed)
-
----
-
-- [x] **Track: Convert creations and passions lists to Astro collections**
-*Link: [./tracks/collection_refactor_20260512/](./tracks/collection_refactor_20260512/)*
+- [collection_refactor_20260512](./archive/collection_refactor_20260512/plan.md): Convert creations and passions lists to Astro collections. (Completed)
 
 ---
 ---
