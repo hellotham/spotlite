@@ -1,12 +1,16 @@
 ---
+import { getCollection } from 'astro:content'
 import Layout from './layout.astro'
 import PageContent from '../components/pagecontent.astro'
 
 const { frontmatter } = Astro.props
-const usesList = frontmatter.list as Array<{
-  section: string
-  items: Array<{ item: string; description: string }>
-}>
+
+const passions = await getCollection('passion')
+const sections = [...new Set(passions.map((p) => p.data.section))]
+const usesList = sections.map((section) => ({
+  section,
+  items: passions.filter((p) => p.data.section === section).map((p) => p.data)
+}))
 ---
 
 <Layout
