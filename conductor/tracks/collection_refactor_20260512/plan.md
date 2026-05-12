@@ -13,7 +13,7 @@
 - [x] Task: Conductor - User Manual Verification 'Migrate Data' (Protocol in workflow.md) 5763256
 
 ## Phase 3: Refactor Layouts
-- [ ] Task: Refactor `src/layouts/creations.astro` to use `getCollection('creation')`, grouping the results by `section` before rendering.
+- [x] Task: Refactor `src/layouts/creations.astro` to use `getCollection('creation')`, grouping the results by `section` before rendering. a24a105
 - [ ] Task: Refactor `src/layouts/passions.astro` to use `getCollection('passion')`, grouping the results by `section` before rendering.
 - [ ] Task: Write tests to ensure the layout components correctly render the data from the collections.
 - [ ] Task: Conductor - User Manual Verification 'Refactor Layouts' (Protocol in workflow.md)
