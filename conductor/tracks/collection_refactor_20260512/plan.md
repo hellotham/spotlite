@@ -15,5 +15,5 @@
 ## Phase 3: Refactor Layouts
 - [x] Task: Refactor `src/layouts/creations.astro` to use `getCollection('creation')`, grouping the results by `section` before rendering. a24a105
 - [x] Task: Refactor `src/layouts/passions.astro` to use `getCollection('passion')`, grouping the results by `section` before rendering. 34fa823
-- [ ] Task: Write tests to ensure the layout components correctly render the data from the collections.
+- [x] Task: Write tests to ensure the layout components correctly render the data from the collections. a1839b2
 - [ ] Task: Conductor - User Manual Verification 'Refactor Layouts' (Protocol in workflow.md)
