@@ -12,8 +12,8 @@
 - [x] Task: Remove the `list` array from the frontmatter of `src/content/page/creations.md` and `src/content/page/passions.md`. fc14145
 - [x] Task: Conductor - User Manual Verification 'Migrate Data' (Protocol in workflow.md) 5763256
 
-## Phase 3: Refactor Layouts
+## Phase 3: Refactor Layouts [checkpoint: fc03e0a]
 - [x] Task: Refactor `src/layouts/creations.astro` to use `getCollection('creation')`, grouping the results by `section` before rendering. a24a105
 - [x] Task: Refactor `src/layouts/passions.astro` to use `getCollection('passion')`, grouping the results by `section` before rendering. 34fa823
 - [x] Task: Write tests to ensure the layout components correctly render the data from the collections. a1839b2
-- [ ] Task: Conductor - User Manual Verification 'Refactor Layouts' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Refactor Layouts' (Protocol in workflow.md) fc03e0a
