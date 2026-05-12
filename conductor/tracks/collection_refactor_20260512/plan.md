@@ -1,7 +1,7 @@
 # Implementation Plan: Refactor Creations and Passions to Collections
 
 ## Phase 1: Define Collections
-- [ ] Task: Update `src/content.config.ts` to export schemas for `creation` and `passion` collections using `glob` loaders.
+- [x] Task: Update `src/content.config.ts` to export schemas for `creation` and `passion` collections using `glob` loaders. 02588a5
 - [ ] Task: Generate TypeScript types by running `pnpm run dev` or `pnpm astro sync`.
 - [ ] Task: Update or add tests in `tests/content-data.contracts.test.ts` to validate the new collection schemas.
 - [ ] Task: Conductor - User Manual Verification 'Define Collections' (Protocol in workflow.md)
