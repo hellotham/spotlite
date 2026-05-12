@@ -6,11 +6,11 @@
 - [x] Task: Update or add tests in `tests/content-data.contracts.test.ts` to validate the new collection schemas. 2fa505c
 - [x] Task: Conductor - User Manual Verification 'Define Collections' (Protocol in workflow.md) 041eb63
 
-## Phase 2: Migrate Data
+## Phase 2: Migrate Data [checkpoint: 5763256]
 - [x] Task: Extract items from `src/content/page/creations.md` and create individual markdown files in `src/content/creation/`. d656e1c
 - [x] Task: Extract items from `src/content/page/passions.md` and create individual markdown files in `src/content/passion/`. 53d20c1
 - [x] Task: Remove the `list` array from the frontmatter of `src/content/page/creations.md` and `src/content/page/passions.md`. fc14145
-- [ ] Task: Conductor - User Manual Verification 'Migrate Data' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Migrate Data' (Protocol in workflow.md) 5763256
 
 ## Phase 3: Refactor Layouts
 - [ ] Task: Refactor `src/layouts/creations.astro` to use `getCollection('creation')`, grouping the results by `section` before rendering.
