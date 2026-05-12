@@ -25,6 +25,14 @@ import superpowers from '../superpowers.json'
     code?: string
   }
 
+  interface SuperpowerNode extends Superpower {
+    radius: number
+    x: number
+    y: number
+    vx: number
+    vy: number
+  }
+
   const setupBubbleChart = () => {
     const container = document.getElementById('bubblechart-container')
     const tooltip = d3.select('#bubblechart-tooltip')
@@ -74,16 +82,16 @@ import superpowers from '../superpowers.json'
 
       // Compute base radius from available area so bubbles fit without crowding.
       // Target ~30% fill factor: enough room for free Brownian motion.
-      const fillFactor = 0.30
-      const baseRadius = Math.sqrt(fillFactor * width * height / (Math.PI * data.length))
+      const fillFactor = 0.3
+      const baseRadius = Math.sqrt((fillFactor * width * height) / (Math.PI * data.length))
 
       // Level scale: proportional size factor across the observed level range
-      const levelMin = Math.min(...data.map((d: any) => d.level))
-      const levelMax = Math.max(...data.map((d: any) => d.level))
+      const levelMin = Math.min(...data.map((d) => d.level))
+      const levelMax = Math.max(...data.map((d) => d.level))
       const levelScale = d3.scaleLinear().domain([levelMin, levelMax]).range([0.7, 1.3])
 
       // Nodes - initial positions clamped inside bounds to avoid wall-overlap conflicts
-      const nodes: any[] = data.map((d: any) => {
+      const nodes: SuperpowerNode[] = data.map((d) => {
         const levelFactor = levelScale(d.level)
         const jitter = 0.88 + Math.random() * 0.24 // ±12% random size variation per bubble
         const radius = baseRadius * levelFactor * jitter
@@ -139,7 +147,7 @@ import superpowers from '../superpowers.json'
       resolveOverlaps(60)
 
       // Give each bubble a random initial velocity
-      nodes.forEach(d => {
+      nodes.forEach((d) => {
         const angle = Math.random() * 2 * Math.PI
         d.vx = Math.cos(angle) * minSpeed * (1 + Math.random() * 0.5)
         d.vy = Math.sin(angle) * minSpeed * (1 + Math.random() * 0.5)
@@ -150,7 +158,7 @@ import superpowers from '../superpowers.json'
         if (!animationRunning) return
 
         // Phase 1: Brownian impulse + friction + integrate position (all bubbles)
-        nodes.forEach(d => {
+        nodes.forEach((d) => {
           d.vx += (Math.random() - 0.5) * brownianStrength
           d.vy += (Math.random() - 0.5) * brownianStrength
           d.vx *= velocityDecay
@@ -191,7 +199,7 @@ import superpowers from '../superpowers.json'
         }
 
         // Phase 4: Wall bounce - only flip if velocity is pointing INTO the wall
-        nodes.forEach(d => {
+        nodes.forEach((d) => {
           if (d.x - d.radius < 0) {
             d.x = d.radius
             if (d.vx < 0) d.vx = -d.vx * wallBounce
@@ -209,7 +217,7 @@ import superpowers from '../superpowers.json'
         })
 
         // Phase 5: Speed bounds - applied last so no other phase can undo them
-        nodes.forEach(d => {
+        nodes.forEach((d) => {
           const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy)
           if (speed > maxSpeed) {
             d.vx *= maxSpeed / speed
@@ -221,23 +229,19 @@ import superpowers from '../superpowers.json'
           }
         })
 
-        node.attr('transform', (d: any) => `translate(${d.x},${d.y})`)
+        node.attr('transform', (d) => `translate(${d.x},${d.y})`)
         animationFrameId = requestAnimationFrame(animate)
       }
 
       // Place nodes
-      const node = svg.append('g')
-        .selectAll('g')
-        .data(nodes)
-        .join('g')
-        .attr('class', 'bubble')
+      const node = svg.append('g').selectAll('g').data(nodes).join('g').attr('class', 'bubble')
 
       node
         .append('circle')
-        .attr('r', (d: any) => d.radius)
-        .attr('fill', (d: any) => colorScale(d.level))
+        .attr('r', (d) => d.radius)
+        .attr('fill', (d) => colorScale(d.level))
         .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
-        .on('mouseover', function (event: MouseEvent, d: any) {
+        .on('mouseover', function (_event: MouseEvent, d) {
           const item = d
           tooltip.classed('hidden', false)
           tooltip.html(`
@@ -276,7 +280,7 @@ import superpowers from '../superpowers.json'
         .on('mouseout', function () {
           tooltip.classed('hidden', true)
         })
-        .on('click', function (event: MouseEvent, d: any) {
+        .on('click', function (_event: MouseEvent, d) {
           const item = d
           const modal = document.getElementById('superpowers-modal') as HTMLDialogElement
           if (!modal) return
@@ -307,14 +311,14 @@ import superpowers from '../superpowers.json'
       // Text wrapping logic based on guide
       const text = node
         .append('text')
-        .style('font-size', (d: any) => Math.max(7, Math.min(d.radius * 0.35, 14)) + 'px')
+        .style('font-size', (d) => Math.max(7, Math.min(d.radius * 0.35, 14)) + 'px')
         .style('font-weight', 'bold')
         .style('fill', 'white')
         .style('pointer-events', 'none')
 
       text
         .selectAll('tspan')
-        .data((d: any) => {
+        .data((d) => {
           const name = d.title
           // Split by spaces or hyphens, preserving the hyphen
           return name.split(/[\s-]/g).map((word: string, i: number, arr: string[]) => {
@@ -324,20 +328,23 @@ import superpowers from '../superpowers.json'
         })
         .join('tspan')
         .attr('x', 0)
-        .attr('y', (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
-        .text((d: any) => d)
+        .attr('y', (_d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
+        .text((d) => d)
 
       // Performance Optimization: Pause animation when off-screen
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !animationRunning) {
-            animationRunning = true
-            animate()
-          } else if (!entry.isIntersecting) {
-            animationRunning = false
-          }
-        })
-      }, { threshold: 0.1 })
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !animationRunning) {
+              animationRunning = true
+              animate()
+            } else if (!entry.isIntersecting) {
+              animationRunning = false
+            }
+          })
+        },
+        { threshold: 0.1 }
+      )
 
       observer.observe(chartContainer)
 

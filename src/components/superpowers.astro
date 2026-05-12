@@ -18,36 +18,38 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
   </h2>
   <D3BubbleChart />
   <D3superpowers />
-  {showList && <ol class='mt-6 space-y-4'>
-    {
-      sortedSuperpowers.map((item) => (
-        <li>
-          <button
-            type='button'
-            class='superpower-trigger group p-2 text-left rounded-xl flex gap-4 w-full transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
-            data-title={item.title}
-            data-description={item.description}
-            data-level={item.level}
-            data-comment={item.comment}
-          >
-            <div class='mt-1 rounded-full flex flex-none h-10 w-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
-              <span class='i-heroicons-bolt text-secondary h-6 w-6 transition group-hover:text-accent' />
-            </div>
-            <dl class='flex flex-auto flex-wrap gap-x-2'>
-              <dt class='sr-only'>Title</dt>
-              <dd class='text-sm text-primary font-medium flex-none w-full transition group-hover:text-accent'>
-                {item.title}
-              </dd>
-              <dt class='sr-only'>Level</dt>
-              <dd class='text-xs text-secondary'>Level {item.level}</dd>
-              <dt class='sr-only'>Comment</dt>
-              <dd class='text-xs text-secondary ml-auto opacity-80 italic'>{item.comment}</dd>
-            </dl>
-          </button>
-        </li>
-      ))
-    }
-  </ol>}
+  {
+    showList && (
+      <ol class='mt-6 space-y-4'>
+        {sortedSuperpowers.map((item) => (
+          <li>
+            <button
+              type='button'
+              class='superpower-trigger group p-2 text-left rounded-xl flex gap-4 w-full transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
+              data-title={item.title}
+              data-description={item.description}
+              data-level={item.level}
+              data-comment={item.comment}
+            >
+              <div class='mt-1 rounded-full flex flex-none h-10 w-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
+                <span class='i-heroicons-bolt text-secondary h-6 w-6 transition group-hover:text-accent' />
+              </div>
+              <dl class='flex flex-auto flex-wrap gap-x-2'>
+                <dt class='sr-only'>Title</dt>
+                <dd class='text-sm text-primary font-medium flex-none w-full transition group-hover:text-accent'>
+                  {item.title}
+                </dd>
+                <dt class='sr-only'>Level</dt>
+                <dd class='text-xs text-secondary'>Level {item.level}</dd>
+                <dt class='sr-only'>Comment</dt>
+                <dd class='text-xs text-secondary ml-auto opacity-80 italic'>{item.comment}</dd>
+              </dl>
+            </button>
+          </li>
+        ))}
+      </ol>
+    )
+  }
 </div>
 
 <dialog

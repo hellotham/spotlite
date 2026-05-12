@@ -21,7 +21,7 @@ const { home = false } = Astro.props
           {
             !home && (
               <div class='p-0.5 rounded-full glass h-10 w-10 -ml-0.5'>
-                <a aria-label='Home' class='pointer-events-auto' href='/'>
+                <a aria-label='Home' class='pointer-events-auto' href={import.meta.env.BASE_URL}>
                   <Image
                     src={Avatar}
                     alt='Avatar'

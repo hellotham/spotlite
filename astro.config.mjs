@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://astro-spotlite.netlify.app',
+  base: '/spotlite/',
   fonts: [
     {
       provider: fontProviders.fontsource(),

@@ -21,7 +21,7 @@ work = work.sort((a, b) => {
       work.map((job) => (
         <li>
           <a
-            href={'/work/' + job.id}
+            href={`${import.meta.env.BASE_URL}work/${job.id}/`}
             class='group p-2 rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
           >
             <div class='mt-1 rounded-full flex flex-none h-10 w-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>

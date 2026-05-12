@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
-import { processTimelineData } from '../utils/timeline';
+import { getCollection } from 'astro:content'
+import { processTimelineData } from '../utils/timeline'
 
-const workEntries = await getCollection('work');
-const educationEntries = await getCollection('education');
-const timelineData = processTimelineData(workEntries, educationEntries);
+const workEntries = await getCollection('work')
+const educationEntries = await getCollection('education')
+const timelineData = processTimelineData(workEntries, educationEntries)
 ---
 
 <div
@@ -15,20 +15,21 @@ const timelineData = processTimelineData(workEntries, educationEntries);
 </div>
 <div
   id='timeline-tooltip'
-  class='text-sm p-4 border border-primary/30 rounded-lg bg-sugarSwizzle/90 glass max-w-xs min-w-[200px] opacity-0 pointer-events-none shadow-xl fixed z-[100] backdrop-blur-md dark:bg-blackBeauty/80 transition-opacity duration-200'
+  class='text-sm p-4 border border-primary/30 rounded-lg bg-sugarSwizzle/90 glass opacity-0 max-w-xs min-w-[200px] pointer-events-none shadow-xl transition-opacity duration-200 fixed z-[100] backdrop-blur-md dark:bg-blackBeauty/80'
 >
 </div>
 
 <script>
   import * as d3 from 'd3'
+  import type { TimelineEntry } from '../utils/timeline'
 
   const setupTimeline = () => {
     const container = document.getElementById('timeline-container')
     const tooltip = d3.select('#timeline-tooltip')
     if (!container) return
 
-    const data = JSON.parse(container.getAttribute('data-timeline') || '[]')
-    
+    const data: TimelineEntry[] = JSON.parse(container.getAttribute('data-timeline') || '[]')
+
     const colorMap: Record<string, string> = {
       education: '#64bfa4',
       employment: '#3CADD4',
@@ -38,15 +39,15 @@ const timelineData = processTimelineData(workEntries, educationEntries);
     const render = () => {
       // Clear previous
       container.innerHTML = ''
-      
+
       const width = container.clientWidth
       const isVertical = width < 640
       const height = isVertical ? Math.max(600, data.length * 40) : 400
-      
-      const margin = isVertical 
+
+      const margin = isVertical
         ? { top: 20, right: 20, bottom: 40, left: 100 }
         : { top: 20, right: 30, bottom: 40, left: 40 }
-      
+
       const innerWidth = width - margin.left - margin.right
       const innerHeight = height - margin.top - margin.bottom
 
@@ -62,56 +63,66 @@ const timelineData = processTimelineData(workEntries, educationEntries);
       const defs = svg.append('defs')
       Object.entries(colorMap).forEach(([type, color]) => {
         // Horizontal gradient
-        const hGrad = defs.append('linearGradient')
+        const hGrad = defs
+          .append('linearGradient')
           .attr('id', `grad-h-${type}`)
           .attr('x1', '0%')
           .attr('x2', '100%')
-        
+
         hGrad.append('stop').attr('offset', '70%').attr('stop-color', color).attr('stop-opacity', 1)
-        hGrad.append('stop').attr('offset', '100%').attr('stop-color', color).attr('stop-opacity', 0.2)
+        hGrad
+          .append('stop')
+          .attr('offset', '100%')
+          .attr('stop-color', color)
+          .attr('stop-opacity', 0.2)
 
         // Vertical gradient (for mobile)
-        const vGrad = defs.append('linearGradient')
+        const vGrad = defs
+          .append('linearGradient')
           .attr('id', `grad-v-${type}`)
           .attr('x1', '0%')
           .attr('y1', '0%')
           .attr('x2', '0%')
           .attr('y2', '100%')
-        
+
         vGrad.append('stop').attr('offset', '70%').attr('stop-color', color).attr('stop-opacity', 1)
-        vGrad.append('stop').attr('offset', '100%').attr('stop-color', color).attr('stop-opacity', 0.2)
+        vGrad
+          .append('stop')
+          .attr('offset', '100%')
+          .attr('stop-color', color)
+          .attr('stop-opacity', 0.2)
       })
 
-      const minYear = d3.min(data, (d: any) => d.startYear) as number
+      const minYear = (d3.min(data, (d) => d.startYear) as unknown as number) || 1900
       const maxYear = new Date().getFullYear()
 
       if (!isVertical) {
         // Horizontal Layout (Desktop)
-        const xScale = d3.scaleLinear()
-          .domain([minYear, maxYear])
-          .range([0, innerWidth])
+        const xScale = d3.scaleLinear().domain([minYear, maxYear]).range([0, innerWidth])
 
-        const yScale = d3.scaleBand()
-          .domain(data.map((d: any) => d.title))
+        const yScale = d3
+          .scaleBand<string>()
+          .domain(data.map((d) => d.title))
           .range([0, innerHeight])
           .padding(0.2)
 
         const xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'))
-        
-        svg.append('g')
-          .attr('transform', `translate(0,${innerHeight})`)
-          .call(xAxis)
 
-        svg.selectAll('rect')
+        svg.append('g').attr('transform', `translate(0,${innerHeight})`).call(xAxis)
+
+        svg
+          .selectAll('rect')
           .data(data)
           .join('rect')
-          .attr('x', (d: any) => xScale(d.startYear))
-          .attr('y', (d: any) => yScale(d.title) || 0)
-          .attr('width', (d: any) => xScale(d.endYear) - xScale(d.startYear))
+          .attr('x', (d) => xScale(d.startYear))
+          .attr('y', (d) => yScale(d.title) || 0)
+          .attr('width', (d) => xScale(d.endYear) - xScale(d.startYear))
           .attr('height', yScale.bandwidth())
-          .attr('fill', (d: any) => d.isOngoing ? `url(#grad-h-${d.type})` : (colorMap[d.type] || '#ccc'))
+          .attr('fill', (d) =>
+            d.isOngoing ? `url(#grad-h-${d.type})` : colorMap[d.type] || '#ccc'
+          )
           .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
-          .on('mouseover', function (event: MouseEvent, d: any) {
+          .on('mouseover', function (_event: MouseEvent, d) {
             tooltip.style('opacity', 1)
             tooltip.html(`
               <div class="flex flex-col gap-1">
@@ -148,35 +159,36 @@ const timelineData = processTimelineData(workEntries, educationEntries);
           .on('mouseout', function () {
             tooltip.style('opacity', 0)
           })
-          .on('click', function (event: MouseEvent, d: any) {
+          .on('click', function (_event: MouseEvent, d) {
             window.location.href = d.slug
           })
       } else {
         // Vertical Layout (Mobile)
-        const yScale = d3.scaleLinear()
-          .domain([minYear, maxYear])
-          .range([0, innerHeight])
+        const yScale = d3.scaleLinear().domain([minYear, maxYear]).range([0, innerHeight])
 
-        const xScale = d3.scaleBand()
-          .domain(data.map((d: any) => d.title))
+        const xScale = d3
+          .scaleBand<string>()
+          .domain(data.map((d) => d.title))
           .range([0, innerWidth])
           .padding(0.2)
 
         const yAxis = d3.axisLeft(yScale).tickFormat(d3.format('d'))
 
-        svg.append('g')
-          .call(yAxis)
+        svg.append('g').call(yAxis)
 
-        svg.selectAll('rect')
+        svg
+          .selectAll('rect')
           .data(data)
           .join('rect')
-          .attr('x', (d: any) => xScale(d.title) || 0)
-          .attr('y', (d: any) => yScale(d.startYear))
+          .attr('x', (d) => xScale(d.title) || 0)
+          .attr('y', (d) => yScale(d.startYear))
           .attr('width', xScale.bandwidth())
-          .attr('height', (d: any) => yScale(d.endYear) - yScale(d.startYear))
-          .attr('fill', (d: any) => d.isOngoing ? `url(#grad-v-${d.type})` : (colorMap[d.type] || '#ccc'))
+          .attr('height', (d) => yScale(d.endYear) - yScale(d.startYear))
+          .attr('fill', (d) =>
+            d.isOngoing ? `url(#grad-v-${d.type})` : colorMap[d.type] || '#ccc'
+          )
           .attr('class', 'cursor-pointer transition-opacity duration-200 hover:opacity-80')
-          .on('mouseover', function (event: MouseEvent, d: any) {
+          .on('mouseover', function (_event: MouseEvent, d) {
             tooltip.style('opacity', 1)
             tooltip.html(`
               <div class="flex flex-col gap-1">
@@ -213,7 +225,7 @@ const timelineData = processTimelineData(workEntries, educationEntries);
           .on('mouseout', function () {
             tooltip.style('opacity', 0)
           })
-          .on('click', function (event: MouseEvent, d: any) {
+          .on('click', function (_event: MouseEvent, d) {
             window.location.href = d.slug
           })
       }

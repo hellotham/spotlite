@@ -21,7 +21,7 @@ export interface Props {
 const {
   title,
   description,
-  image = '/screenshot.png',
+  image = `${import.meta.env.BASE_URL}screenshot.png`,
   article = false,
   pubDate,
   itemPage = false,
@@ -30,7 +30,7 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-let socialImageURL = typeof image === 'string' ? image : '/screenshot.png'
+let socialImageURL = typeof image === 'string' ? image : `${import.meta.env.BASE_URL}screenshot.png`
 if (typeof image === 'object') {
   const optimizedImage = await getImage({
     src: itemPage && image ? image : image, // Keep optimization logic
@@ -102,10 +102,13 @@ const breadcrumbList = {
   '@type': 'BreadcrumbList',
   itemListElement: Astro.url.pathname
     .split('/')
-    .filter((path) => path !== '')
+    .filter((path) => path !== '' && path !== import.meta.env.BASE_URL.replace(/\//g, ''))
     .reduce(
       (acc, path, index, array) => {
-        const url = new URL('/' + array.slice(0, index + 1).join('/') + '/', Astro.site)
+        const url = new URL(
+          import.meta.env.BASE_URL + array.slice(0, index + 1).join('/') + '/',
+          Astro.site
+        )
         acc.push({
           '@type': 'ListItem',
           position: index + 2,
@@ -119,7 +122,11 @@ const breadcrumbList = {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: Astro.site?.href
+          item:
+            Astro.site?.href +
+            (import.meta.env.BASE_URL.startsWith('/')
+              ? import.meta.env.BASE_URL.slice(1)
+              : import.meta.env.BASE_URL)
         }
       ]
     )
@@ -216,12 +223,17 @@ const breadcrumbList = {
         opacity: 0;
       }
     </style>
-    <link rel='icon' href='/favicon.ico' sizes='any' />
-    <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
-    <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
-    <link rel='manifest' href='/site.webmanifest' />
-    <link rel='sitemap' href='/sitemap-index.xml' />
-    <link rel='alternate' type='application/rss+xml' title='RSS' href='/rss.xml' />
+    <link rel='icon' href={`${import.meta.env.BASE_URL}favicon.ico`} sizes='any' />
+    <link rel='icon' href={`${import.meta.env.BASE_URL}favicon.svg`} type='image/svg+xml' />
+    <link rel='apple-touch-icon' href={`${import.meta.env.BASE_URL}apple-touch-icon.png`} />
+    <link rel='manifest' href={`${import.meta.env.BASE_URL}site.webmanifest`} />
+    <link rel='sitemap' href={`${import.meta.env.BASE_URL}sitemap-index.xml`} />
+    <link
+      rel='alternate'
+      type='application/rss+xml'
+      title='RSS'
+      href={`${import.meta.env.BASE_URL}rss.xml`}
+    />
     <link rel='canonical' href={canonicalURL} />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>

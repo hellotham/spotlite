@@ -13,8 +13,8 @@ export async function GET(context) {
       description: post.data.description,
       customData: post.data.customData,
       // Compute RSS link from post `id`
-      // This example assumes all posts are rendered as `/blog/[id]` routes
-      link: `/blog/${post.id}/`
+      // This example assumes all posts are rendered as `/article/[id]` routes
+      link: `${import.meta.env.BASE_URL}article/${post.id}/`
     }))
   })
 }

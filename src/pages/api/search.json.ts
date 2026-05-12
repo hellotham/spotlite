@@ -28,12 +28,12 @@ export const toExcerpt = (value?: string, max = 180) => {
 
 export const normalizePageUrl = (id: string) => {
   const normalized = id.replace(/^\/+|\/+$/g, '').replace(/\/index$/, '')
-  return normalized.length ? `/${normalized}/` : '/'
+  return normalized.length ? `${import.meta.env.BASE_URL}${normalized}/` : import.meta.env.BASE_URL
 }
 
 export const normalizeArticleUrl = (id: string) => {
   const normalized = id.replace(/^\/+|\/+$/g, '')
-  return `/article/${normalized}/`
+  return `${import.meta.env.BASE_URL}article/${normalized}/`
 }
 
 export const GET: APIRoute = async () => {
