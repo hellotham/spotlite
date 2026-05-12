@@ -71,4 +71,25 @@ const page = defineCollection({
     })
 })
 
-export const collections = { article, project, work, education, social, page }
+const creation = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/creation' }),
+  schema: z.object({
+    section: z.string(),
+    item: z.string(),
+    parent: z.string().optional(),
+    description: z.string(),
+    action: z.string().optional(),
+    link: z.string().optional()
+  })
+})
+
+const passion = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/passion' }),
+  schema: z.object({
+    section: z.string(),
+    item: z.string(),
+    description: z.string()
+  })
+})
+
+export const collections = { article, project, work, education, social, page, creation, passion }
