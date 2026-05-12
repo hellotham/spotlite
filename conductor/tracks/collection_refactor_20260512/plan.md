@@ -8,7 +8,7 @@
 
 ## Phase 2: Migrate Data
 - [x] Task: Extract items from `src/content/page/creations.md` and create individual markdown files in `src/content/creation/`. d656e1c
-- [ ] Task: Extract items from `src/content/page/passions.md` and create individual markdown files in `src/content/passion/`.
+- [x] Task: Extract items from `src/content/page/passions.md` and create individual markdown files in `src/content/passion/`. 53d20c1
 - [ ] Task: Remove the `list` array from the frontmatter of `src/content/page/creations.md` and `src/content/page/passions.md`.
 - [ ] Task: Conductor - User Manual Verification 'Migrate Data' (Protocol in workflow.md)
 
