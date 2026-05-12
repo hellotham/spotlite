@@ -30,4 +30,4 @@
 ## Content Management
 - **Astro Content Layer:** Manages structured content from Markdown (`src/content/`) and JSON (`src/*.json`) files, with strict Zod schemas for all collections.
 - **PDF Generation:** Automated CV generation from content collections using **md-to-pdf** and **gray-matter**. Integrated into the build pipeline and accessible via `pnpm run pdf`.
-- **Collections:** Includes Articles, Projects, Work history, Education history, and Superpowers (structured data).
+- **Collections:** Includes Articles, Projects, Work history, Education history, Creations, Passions, and Superpowers (structured data).
