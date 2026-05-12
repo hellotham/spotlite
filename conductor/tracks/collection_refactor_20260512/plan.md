@@ -7,7 +7,7 @@
 - [x] Task: Conductor - User Manual Verification 'Define Collections' (Protocol in workflow.md) 041eb63
 
 ## Phase 2: Migrate Data
-- [ ] Task: Extract items from `src/content/page/creations.md` and create individual markdown files in `src/content/creation/`.
+- [x] Task: Extract items from `src/content/page/creations.md` and create individual markdown files in `src/content/creation/`. d656e1c
 - [ ] Task: Extract items from `src/content/page/passions.md` and create individual markdown files in `src/content/passion/`.
 - [ ] Task: Remove the `list` array from the frontmatter of `src/content/page/creations.md` and `src/content/page/passions.md`.
 - [ ] Task: Conductor - User Manual Verification 'Migrate Data' (Protocol in workflow.md)
