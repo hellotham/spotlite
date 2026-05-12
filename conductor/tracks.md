@@ -9,6 +9,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [workcollection_20260511](./archive/workcollection_20260511/plan.md): Refactor Work Collection Dates and Type. (Completed)
 
 ---
+
+- [ ] **Track: Convert creations and passions lists to Astro collections**
+*Link: [./tracks/collection_refactor_20260512/](./tracks/collection_refactor_20260512/)*
+
+---
 ---
 
 ---
