@@ -32,8 +32,8 @@ describe('D3Timeline Component - Phase 2', () => {
     const content = fs.readFileSync(filePath, 'utf8')
     
     // Check for scales
-    expect(content).toMatch(/d3\.scaleLinear\(\)/)
-    expect(content).toMatch(/d3\.scaleBand\(\)/)
+    expect(content).toMatch(/d3\.scaleLinear\(/)
+    expect(content).toMatch(/d3\.scaleBand/)
     
     // Check for axes
     expect(content).toMatch(/d3\.axisBottom/)
@@ -60,7 +60,7 @@ describe('D3Timeline Component - Phase 3', () => {
     const content = fs.readFileSync(filePath, 'utf8')
     
     // Check for color mapping logic in fill attribute
-    expect(content).toMatch(/\.attr\(['"]fill['"],\s*\(d:\s*any\)\s*=>/)
+    expect(content).toMatch(/\.attr\(['"]fill['"],\s*\(d\)\s*=>/)
     
     // Check for type strings being used in the component
     expect(content).toContain('education')

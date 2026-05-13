@@ -21,7 +21,7 @@ const timelineData = processTimelineData(workEntries, educationEntries)
 
 <script>
   import * as d3 from 'd3'
-  import type { TimelineEntry } from '../utils/timeline'
+  import { type TimelineEntry, formatDateRange } from '../utils/timeline'
 
   const setupTimeline = () => {
     const container = document.getElementById('timeline-container')
@@ -46,7 +46,7 @@ const timelineData = processTimelineData(workEntries, educationEntries)
 
       const margin = isVertical
         ? { top: 20, right: 20, bottom: 40, left: 100 }
-        : { top: 20, right: 30, bottom: 40, left: 40 }
+        : { top: 20, right: 30, bottom: 40, left: 150 }
 
       const innerWidth = width - margin.left - margin.right
       const innerHeight = height - margin.top - margin.bottom
@@ -101,22 +101,27 @@ const timelineData = processTimelineData(workEntries, educationEntries)
         const xScale = d3.scaleLinear().domain([minYear, maxYear]).range([0, innerWidth])
 
         const yScale = d3
-          .scaleBand<string>()
-          .domain(data.map((d) => d.title))
+          .scaleBand<number>()
+          .domain(d3.range(data.length))
           .range([0, innerHeight])
           .padding(0.2)
 
         const xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'))
+        const yAxis = d3.axisLeft(yScale).tickFormat((i) => data[i].organization || data[i].title)
 
         svg.append('g').attr('transform', `translate(0,${innerHeight})`).call(xAxis)
+        svg.append('g').call(yAxis).selectAll('text').attr('class', 'text-[10px] fill-current')
 
         svg
           .selectAll('rect')
           .data(data)
           .join('rect')
           .attr('x', (d) => xScale(d.startYear))
-          .attr('y', (d) => yScale(d.title) || 0)
-          .attr('width', (d) => xScale(d.endYear) - xScale(d.startYear))
+          .attr('y', (_d, i) => yScale(i) || 0)
+          .attr('width', (d) => {
+            const end = d.startYear === d.endYear && !d.isOngoing ? d.endYear + 1 : d.endYear
+            return xScale(end) - xScale(d.startYear)
+          })
           .attr('height', yScale.bandwidth())
           .attr('fill', (d) =>
             d.isOngoing ? `url(#grad-h-${d.type})` : colorMap[d.type] || '#ccc'
@@ -130,7 +135,7 @@ const timelineData = processTimelineData(workEntries, educationEntries)
                 <p class="text-primary leading-tight">${d.organization}</p>
                 <div class="mt-2 pt-2 border-t border-primary/20 flex justify-between items-center">
                   <span class="text-xs text-secondary uppercase tracking-wider">${d.type}</span>
-                  <span class="font-bold text-accent">${d.startYear} - ${d.isOngoing ? 'Present' : d.endYear}</span>
+                  <span class="font-bold text-accent">${formatDateRange(d.startYear, d.isOngoing ? undefined : d.endYear)}</span>
                 </div>
               </div>
             `)
@@ -167,23 +172,35 @@ const timelineData = processTimelineData(workEntries, educationEntries)
         const yScale = d3.scaleLinear().domain([minYear, maxYear]).range([0, innerHeight])
 
         const xScale = d3
-          .scaleBand<string>()
-          .domain(data.map((d) => d.title))
+          .scaleBand<number>()
+          .domain(d3.range(data.length))
           .range([0, innerWidth])
           .padding(0.2)
 
         const yAxis = d3.axisLeft(yScale).tickFormat(d3.format('d'))
+        const xAxis = d3.axisBottom(xScale).tickFormat((i) => data[i].organization || data[i].title)
 
         svg.append('g').call(yAxis)
+        svg
+          .append('g')
+          .attr('transform', `translate(0,${innerHeight})`)
+          .call(xAxis)
+          .selectAll('text')
+          .attr('class', 'text-[8px] fill-current')
+          .attr('transform', 'rotate(-45)')
+          .style('text-anchor', 'end')
 
         svg
           .selectAll('rect')
           .data(data)
           .join('rect')
-          .attr('x', (d) => xScale(d.title) || 0)
+          .attr('x', (_d, i) => xScale(i) || 0)
           .attr('y', (d) => yScale(d.startYear))
           .attr('width', xScale.bandwidth())
-          .attr('height', (d) => yScale(d.endYear) - yScale(d.startYear))
+          .attr('height', (d) => {
+            const end = d.startYear === d.endYear && !d.isOngoing ? d.endYear + 1 : d.endYear
+            return yScale(end) - yScale(d.startYear)
+          })
           .attr('fill', (d) =>
             d.isOngoing ? `url(#grad-v-${d.type})` : colorMap[d.type] || '#ccc'
           )
@@ -196,7 +213,7 @@ const timelineData = processTimelineData(workEntries, educationEntries)
                 <p class="text-primary leading-tight">${d.organization}</p>
                 <div class="mt-2 pt-2 border-t border-primary/20 flex justify-between items-center">
                   <span class="text-xs text-secondary uppercase tracking-wider">${d.type}</span>
-                  <span class="font-bold text-accent">${d.startYear} - ${d.isOngoing ? 'Present' : d.endYear}</span>
+                  <span class="font-bold text-accent">${formatDateRange(d.startYear, d.isOngoing ? undefined : d.endYear)}</span>
                 </div>
               </div>
             `)

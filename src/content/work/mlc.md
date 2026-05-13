@@ -1,22 +1,15 @@
 ---
 company: MLC
-role: Head of Architecture
+role: Head of Strategy and Architecture
 startyear: 1998
-endyear: 2005
+endyear: 2004
 type: employment
 image: ./mlc.png
 ---
 
-Established the architecture function at MLC in a background of MLC re-establishing strategic control over technology from a fully outsourced IT operation (managed by IBM GSA).
-
-Oversaw the introduction of various strategic applications and technologies into MLC: including AdviserCentral, Compass, Masterkey, Siebel
-
-Established architecture governance processes, some elements of which are now used throughout NAB
-
-Consulted to the establishment of architecture governance processes at NAB’s European operations, including Clydesdale and Yorkshire Banks, and NAB’s wealth management operations in Europe.
-
-Established solution architecture role at MLC (and subsequently introduced as a standard role within NAB)
-
-Led the definition of MLC’s IT Strategy in 1999 and led the application architecture stream in the 2001 IT Strategy.
-
-Part of team defining MLC’s Enterprise Medium Term Vision, and business case for initiation of Amazon Programme ($200m spend over 2001-2002).
+- Established the architecture function at MLC, re-establishing strategic control over technology from a fully outsourced IT operation.
+- Oversaw the introduction of various strategic applications: AdviserCentral, Compass, Masterkey, Siebel.
+- Established architecture governance processes now used throughout NAB.
+- Established the solution architecture role at MLC (later introduced as a standard role within NAB).
+- Led the definition of MLC’s IT Strategy in 1999 and the application architecture stream in 2001.
+- Part of the team defining MLC’s Enterprise Medium Term Vision and business case for the $200m Amazon Programme.

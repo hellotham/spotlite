@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
+import { formatDateRange } from '../utils/timeline'
 
 let education = await getCollection('education')
 education = education.sort((a, b) => {
@@ -24,14 +25,13 @@ education = education.sort((a, b) => {
             href={`${import.meta.env.BASE_URL}education/${item.id}/`}
             class='group p-2 rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
           >
-            <div class='mt-1 rounded-full flex flex-none h-10 w-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
+            <div class='mt-1 flex flex-none w-24 h-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
               <Image
                 src={item.data.image}
                 alt={item.data.institution}
-                width={64}
                 height={64}
                 loading='lazy'
-                class='h-8 w-8 object-cover'
+                class='h-8 w-auto object-contain'
               />
             </div>
             <dl class='flex flex-auto flex-wrap gap-x-2'>
@@ -44,9 +44,9 @@ education = education.sort((a, b) => {
               <dt class='sr-only'>Date</dt>
               <dd
                 class='text-xs text-secondary ml-auto'
-                aria-label={`${item.data.startyear} to ${item.data.endyear || 'Present'}`}
+                aria-label={formatDateRange(item.data.startyear, item.data.endyear)}
               >
-                {item.data.startyear} — {item.data.endyear || 'Present'}
+                {formatDateRange(item.data.startyear, item.data.endyear)}
               </dd>
             </dl>
           </a>

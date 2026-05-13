@@ -1,11 +1,9 @@
 ---
 company: Hello Tham
-role: Junior Janitor
-startyear: 2017
+role: Principal Consultant and Director
+startyear: 2016
 type: employment
 image: ./hellotham.png
 ---
 
-I am a Junior Janitor. My job is to sweep and mop the floors, clean the bathroom, sanitise the phones, and generally keep this place clean and welcoming to clients.
-
-I am proud of what I do. I think I can help other organisations to be cleaner and more presentable.
+Provided strategic consulting services to TransportNSW and Broadspectrum.

@@ -1,14 +1,14 @@
 import { describe, it, expect } from 'vitest'
-import { processTimelineData } from '../src/utils/timeline'
+import { processTimelineData, formatDateRange } from '../src/utils/timeline'
 
 describe('Timeline Logic', () => {
   it('should merge and sort work and education entries by startYear', () => {
     const workEntries = [
-      { data: { title: 'Job B', startyear: 2020, type: 'employment' }, slug: 'job-b' },
-      { data: { title: 'Job A', startyear: 2010, type: 'consulting' }, slug: 'job-a' }
+      { id: 'job-b', data: { role: 'Job B', startyear: 2020, type: 'employment' } },
+      { id: 'job-a', data: { role: 'Job A', startyear: 2010, type: 'consulting' } }
     ]
     const educationEntries = [
-      { data: { school: 'Uni A', startyear: 2005, type: 'education' }, slug: 'uni-a' }
+      { id: 'uni-a', data: { degree: 'Uni A', startyear: 2005, type: 'education' } }
     ]
 
     // @ts-expect-error - mock data doesn't fully match CollectionEntry type
@@ -24,12 +24,26 @@ describe('Timeline Logic', () => {
 
   it('should handle missing endyear as current year', () => {
     const workEntries = [
-      { data: { title: 'Current Job', startyear: 2022, type: 'employment' }, slug: 'current' }
+      { id: 'current', data: { role: 'Current Job', startyear: 2022, type: 'employment' } }
     ]
     // @ts-expect-error - mock data doesn't fully match CollectionEntry type
     const result = processTimelineData(workEntries, [])
     const currentYear = new Date().getFullYear()
     expect(result[0].endYear).toBe(currentYear)
     expect(result[0].isOngoing).toBe(true)
+  })
+
+  describe('formatDateRange', () => {
+    it('should return just the year if start and end are the same', () => {
+      expect(formatDateRange(1994, 1994)).toBe('1994')
+    })
+
+    it('should return a range if start and end are different', () => {
+      expect(formatDateRange(1994, 1998)).toBe('1994 — 1998')
+    })
+
+    it('should return Present if end year is missing', () => {
+      expect(formatDateRange(2016)).toBe('2016 — Present')
+    })
   })
 })

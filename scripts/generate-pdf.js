@@ -16,6 +16,12 @@ const configFile = path.join(rootDir, 'src/config.json')
 const outputPath = path.join(rootDir, 'public/cv.pdf')
 const stylesheetPath = path.join(rootDir, 'scripts/pdf-theme.css')
 
+const formatDateRange = (start, end) => {
+  if (!end) return `${start} — Present`
+  if (start === end) return `${start}`
+  return `${start} — ${end}`
+}
+
 async function generatePdf() {
   console.log('Starting PDF generation...')
 
@@ -74,14 +80,14 @@ async function generatePdf() {
     // Inject collection data if it's the work or education page
     if (pageId === 'work' && workItems.length > 0) {
       const workMd = workItems.map(item => {
-        const dateStr = `${item.data.startyear} — ${item.data.endyear || 'Present'}`
+        const dateStr = formatDateRange(item.data.startyear, item.data.endyear)
         const typeStr = item.data.type === 'consulting' ? ' (Consulting)' : ''
         return `### ${item.data.role}${typeStr}\n**${item.data.company}** | *${dateStr}*\n\n${item.content}`
       }).join('\n\n')
       body = body + '\n\n' + workMd
     } else if (pageId === 'education' && educationItems.length > 0) {
       const eduMd = educationItems.map(item => {
-        const dateStr = `${item.data.startyear} — ${item.data.endyear || 'Present'}`
+        const dateStr = formatDateRange(item.data.startyear, item.data.endyear)
         return `### ${item.data.degree}\n**${item.data.institution}** | *${dateStr}*\n\n${item.content}`
       }).join('\n\n')
       body = body + '\n\n' + eduMd

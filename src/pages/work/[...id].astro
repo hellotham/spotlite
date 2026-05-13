@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content'
 import { getCollection, render } from 'astro:content'
 import Layout from '../../layouts/layout.astro'
 import Container from '../../components/container.astro'
+import { formatDateRange } from '../../utils/timeline'
 
 export async function getStaticPaths() {
   const workEntries = await getCollection('work')
@@ -21,7 +22,7 @@ const { Content } = await render(work)
 
 <Layout
   title={`${work.data.role} at ${work.data.company}`}
-  description={`${work.data.role} position at ${work.data.company} (${work.data.startyear} — ${work.data.endyear || 'Present'})`}
+  description={`${work.data.role} position at ${work.data.company} (${formatDateRange(work.data.startyear, work.data.endyear)})`}
   itemPage={true}
 >
   <Container class='mt-16 lg:mt-32'>
@@ -50,7 +51,7 @@ const { Content } = await render(work)
             >
               <>
                 <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory'></span>
-                <span class='ml-3'>{work.data.startyear} — {work.data.endyear || 'Present'}</span>
+                <span class='ml-3'>{formatDateRange(work.data.startyear, work.data.endyear)}</span>
               </>
             </time>
           </header>

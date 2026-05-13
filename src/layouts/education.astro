@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content'
 import Layout from './layout.astro'
 import Container from '../components/container.astro'
 import PageContent from '../components/pagecontent.astro'
+import { formatDateRange } from '../utils/timeline'
 
 const { frontmatter } = Astro.props
 
@@ -37,7 +38,7 @@ const sortedEducation = education.sort((a, b) => {
                       <span class='flex items-center inset-y-0 left-0 absolute' aria-hidden='true'>
                         <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
                       </span>
-                      {item.data.startyear} — {item.data.endyear || 'Present'}
+                      {formatDateRange(item.data.startyear, item.data.endyear)}
                     </time>
                     <h2 class='text-base text-accent tracking-tight font-semibold font-serif'>
                       <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
@@ -61,7 +62,7 @@ const sortedEducation = education.sort((a, b) => {
                     </div>
                   </div>
                   <time class='text-sm text-graniteGray mb-3 mt-1 flex hidden items-center order-first relative z-10 dark:text-opalGray md:block'>
-                    {item.data.startyear} — {item.data.endyear || 'Present'}
+                    {formatDateRange(item.data.startyear, item.data.endyear)}
                   </time>
                 </article>
               ))

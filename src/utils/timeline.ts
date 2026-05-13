@@ -41,3 +41,9 @@ export function processTimelineData(
 
   return [...work, ...education].sort((a, b) => a.startYear - b.startYear)
 }
+
+export function formatDateRange(startYear: number, endYear?: number) {
+  if (!endYear) return `${startYear} — Present`
+  if (startYear === endYear) return `${startYear}`
+  return `${startYear} — ${endYear}`
+}
