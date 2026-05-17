@@ -18,8 +18,52 @@ My top 3 superpowers are:
 
 ## My personality
 
+### Myer Briggs: ENFP
+
 I am a classic Myer-Briggs ENFP. According to [the Myer-Briggs Foundation](https://www.myersbriggs.org/my-mbti-personality-type/the-16-mbti-personality-types/):
 
 > Warmly enthusiastic and imaginative. See life as full of possibilities. Make connections between events and information very quickly, and confidently proceed based on the patterns they see. Want a lot of affirmation from others, and readily give appreciation and support. Spontaneous and flexible, often rely on their ability to improvise and their verbal fluency.
+
+### 16personalities: ENFP-A (Campaigner)
+
+According to [16personalities](https://www.16personalities.com/profiles/enfp-a/f/itgr7mr60):
+
+> As an ENFP (Campaigner), you are a vibrant force of enthusiasm, creativity, and idealism. Your mind is a constant whirlwind of ideas and possibilities, each more exciting than the last. You approach life with an infectious energy that draws others to you, your charisma and genuine interest in people making you a natural connector and inspirational force.
+>
+> Your curiosity knows no bounds, and you have an insatiable appetite for new experiences and perspectives. This openness, combined with your vivid imagination, allows you to see potential and opportunity where others might not. You’re not just a dreamer, though – you’re a dreamer with a mission, driven by a deep-seated desire to make the world a better place.
+
+```mermaid
+---
+displayMode: compact
+---
+gantt
+    title Campaigner (ENFP-A)
+    dateFormat  X
+    axisFormat %s
+
+    "-100" :vert, -100, -100
+    "0"    :vert, 0, 0
+    "100"  :vert, 100, 100
+
+    section Energy
+    Introverted (I) :done, -23, 0
+    Extroverted (E) :active, 0, 77
+
+    section Mind
+    Observant (S)   :done, -5, 0
+    Intuition (N)   :active, 0, 95
+
+    section Nature
+    Feeling (F)     :active, -57, 0
+    Thinking (T)    :done, 0 , 43
+
+    section Tactics
+    Prospecting (P) :active, -58, 0
+    Judging (J)     :done, 0, 42
+
+    section Identity
+    Turbulent (T)   :done, -14, 0
+    Assertive (A)   :active, 0, 86
+```
 
 ## Self evaluation against SFIA9:

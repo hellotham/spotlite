@@ -25,9 +25,12 @@
     "@astrojs/sitemap": "^3.7.2",
     "@iconify-json/heroicons": "^1.2.3",
     "@iconify-json/simple-icons": "^1.2.82",
+    "@mermaid-js/layout-elk": "^0.2.1",
     "@unocss/astro": "^66.6.8",
     "astro": "^6.3.3",
+    "astro-mermaid": "^2.0.1",
     "d3": "^7.9.0",
+    "mermaid": "^11.15.0",
     "photoswipe": "^5.4.4",
     "sharp": "^0.34.5",
     "unocss": "^66.6.8"

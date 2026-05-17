@@ -1,6 +1,7 @@
 import { defineConfig, fontProviders } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 import sitemap from '@astrojs/sitemap'
+import mermaid from 'astro-mermaid'
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,6 +28,7 @@ export default defineConfig({
     }
   ],
   integrations: [
+    mermaid(),
     UnoCSS(),
     sitemap({
       filter: (page) => page !== 'https://astro-spotlite.netlify.app/404/'

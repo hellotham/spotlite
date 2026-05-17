@@ -12,7 +12,7 @@ Spotlite is a modern, production-ready personal website template built with **As
 - **Testing:** [Vitest](https://vitest.dev/) with `jsdom` and `v8` coverage
 - **Image Processing:** [Sharp](https://sharp.pixelplumbing.com/)
 - **Lightbox:** [PhotoSwipe](https://photoswipe.com/) for click-to-zoom image galleries
-- **Visualisations:** [D3.js](https://d3js.org/) for interactive data-driven components
+- **Visualisations:** [D3.js](https://d3js.org/) for interactive data-driven components and [Mermaid](https://mermaid.js.org/) via `astro-mermaid` for diagrams
 - **Search Indexing:** [Pagefind](https://pagefind.app/) for static full-site search
 
 ## 🚀 Key Commands

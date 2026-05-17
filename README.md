@@ -17,6 +17,7 @@ It uses the following technologies:
 - [Vitest](https://vitest.dev/) for unit and component testing
 - [UnoCSS](https://unocss.dev/)
 - [D3.js](https://d3js.org/) for interactive data visualisations
+- [Mermaid](https://mermaid.js.org/) via `astro-mermaid` for diagrams
 - `@astrojs/sitemap` and `@astrojs/rss` preintegrated
 - Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
 - [Pagefind](https://pagefind.app/) for static full-site search
@@ -33,6 +34,7 @@ It features:
 - A Superpowers page featuring interactive D3 data visualisations and detailed skill modals.
 - A Creations page showcasing linkable artefacts.
 - A Passions page providing a list of products and tools used.
+- Support for diagrams and flowcharts via Mermaid.
 - Header search with Pagefind indexing for production builds.
 - Automated CV PDF generation from content collections.
 - Development search fallback powered by a local JSON endpoint.
