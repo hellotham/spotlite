@@ -66,4 +66,58 @@ gantt
     Assertive (A)   :active, 0, 86
 ```
 
-## Self evaluation against SFIA9:
+| Trait | Measure | Description |
+| :--- | :--- | :--- |
+| Energy | 77% Extraverted | Energised by social interaction and tend to openly express enthusiasm and excitement |
+| Mind | 95% Intuitive | Very imaginative and open-minded, focusing on hidden meanings and distant possibilities |
+| Nature | 57% Feeling | Value emotional expression and sensitivity, prioritising empathy, social harmony, and cooperation |
+| Tactics | 58% Prospecting | Very adaptable, easygoing and flexible, prioritising spontaneity over stability |
+| Identity | 86% Assertive | Self-assured, even-tempered, and resistant to stress, refusing to worry too much |
+
+At my core, I am driven by my values and my quest for authenticity. I have a strong sense of right and wrong, and I am not afraid to stand up for what I believe in. Ccoupled with my natural empathy, I am a powerful advocate for causes I care about.
+
+I thrive in environments that value creativity, flexibility, and human connection. My career is not just a job, but a calling – a platform where I can express myself, explore new ideas, and make a positive impact on others. I excel in roles that allow you to use your exceptional communication skills and tap into my boundless creativity.
+
+### Big Five Personality Test Results
+
+According to [Open-Source Psychometrics Project](https://openpsychometrics.org/tests/IPIP-BFFM/results.php?r=4.9,5,4.6,3.1,5#_II) my results from the IPIP Big Five Factor Markers are in the table below:
+
+![PIP Big Five Factor Markers](http://openpsychometrics.org/tests/IPIP-BFFM/BIG5-graphic.php?EXT=4.9&EST=5&AGR=4.6&CSN=3.1&IIM=5)
+
+## Gender Identity
+
+According to the [Gender Role Test](https://www.idrlabs.com/gender/test.php) I am "Casually Feminine" (average masculinity, high feminity):
+
+```mermaid
+---
+displayMode: compact
+---
+gantt
+    title Casually Feminine
+    dateFormat  X
+    axisFormat %s
+
+    "-100" :vert, -100, -100
+    "0"    :vert, 0, 0
+    "100"  :vert, 100, 100
+
+    section Gender Role
+    Masculine :done, -56, 0
+    Feminine :active, 0, 72
+```
+
+According to the [Open Sex-Role Inventory](https://openpsychometrics.org/tests/OSRI/results.php?d=TnpF-01URTQc), my results are typically feminine:
+
+```mermaid
+quadrantChart
+    title Open Sex-Role Inventory
+    x-axis Low --> Feminity
+    y-axis Low --> Masculinity
+    quadrant-1 Androgynous
+    quadrant-2 Masculine
+    quadrant-3 Undifferentiated
+    quadrant-4 Feminine
+    Me: [0.7, 0.18]
+```
+
+## Self evaluation against SFIA v9
