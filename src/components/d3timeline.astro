@@ -45,8 +45,8 @@ const timelineData = processTimelineData(workEntries, educationEntries)
       const height = isVertical ? Math.max(600, data.length * 40) : 400
 
       const margin = isVertical
-        ? { top: 20, right: 20, bottom: 40, left: 100 }
-        : { top: 20, right: 30, bottom: 40, left: 150 }
+        ? { top: 60, right: 20, bottom: 20, left: 100 }
+        : { top: 40, right: 30, bottom: 20, left: 150 }
 
       const innerWidth = width - margin.left - margin.right
       const innerHeight = height - margin.top - margin.bottom
@@ -106,10 +106,10 @@ const timelineData = processTimelineData(workEntries, educationEntries)
           .range([0, innerHeight])
           .padding(0.2)
 
-        const xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'))
+        const xAxis = d3.axisTop(xScale).tickFormat(d3.format('d'))
         const yAxis = d3.axisLeft(yScale).tickFormat((i) => data[i].organization || data[i].title)
 
-        svg.append('g').attr('transform', `translate(0,${innerHeight})`).call(xAxis)
+        svg.append('g').call(xAxis)
         svg.append('g').call(yAxis).selectAll('text').attr('class', 'text-[10px] fill-current')
 
         svg
@@ -178,17 +178,16 @@ const timelineData = processTimelineData(workEntries, educationEntries)
           .padding(0.2)
 
         const yAxis = d3.axisLeft(yScale).tickFormat(d3.format('d'))
-        const xAxis = d3.axisBottom(xScale).tickFormat((i) => data[i].organization || data[i].title)
+        const xAxis = d3.axisTop(xScale).tickFormat((i) => data[i].organization || data[i].title)
 
         svg.append('g').call(yAxis)
         svg
           .append('g')
-          .attr('transform', `translate(0,${innerHeight})`)
           .call(xAxis)
           .selectAll('text')
           .attr('class', 'text-[8px] fill-current')
           .attr('transform', 'rotate(-45)')
-          .style('text-anchor', 'end')
+          .style('text-anchor', 'start')
 
         svg
           .selectAll('rect')

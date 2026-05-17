@@ -32,11 +32,11 @@ describe('D3Timeline Component - Phase 2', () => {
     const content = fs.readFileSync(filePath, 'utf8')
     
     // Check for scales
-    expect(content).toMatch(/d3\.scaleLinear\(/)
-    expect(content).toMatch(/d3\.scaleBand/)
+    expect(content).toMatch(/d3\s*\.\s*scaleLinear/)
+    expect(content).toMatch(/d3\s*\.\s*scaleBand/)
     
     // Check for axes
-    expect(content).toMatch(/d3\.axisBottom/)
+    expect(content).toMatch(/d3\s*\.\s*axisTop/)
   })
 
   it('should render rect elements for timeline entries', () => {

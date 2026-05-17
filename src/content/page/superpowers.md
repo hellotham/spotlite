@@ -16,4 +16,12 @@ My top 3 superpowers are:
 
 - **The ability to be passionate, and be able to dive deeply and learn quickly on many topics** - I am intensely curious about many topics (including the nature and concept of how we perceive reality). I love researching, learning and absorbing everything I can about topics that interest me, ranging from philosophy, Buddhism, music, photography, investment theory, developing websites and apps, and leveraging artificial intelligence to deliver outcomes. Often my passions can be useful to organisations and other people. For example, I have participated and led many Proof of Concepts to explore new technologies and help realise benefits. I am able to pick up new skills quickly and use them to provide outcomes.
 
+## My personality
+
+I am a classic Myer-Briggs ENFP. According to [the Myer-Briggs Foundation](https://www.myersbriggs.org/my-mbti-personality-type/the-16-mbti-personality-types/):
+
+> Warmly enthusiastic and imaginative. See life as full of possibilities. Make connections between events and information very quickly, and confidently proceed based on the patterns they see. Want a lot of affirmation from others, and readily give appreciation and support. Spontaneous and flexible, often rely on their ability to improvise and their verbal fluency.
+
+
+
 ## Self evaluation against SFIA9:
