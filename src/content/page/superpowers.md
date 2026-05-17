@@ -22,6 +22,4 @@ I am a classic Myer-Briggs ENFP. According to [the Myer-Briggs Foundation](https
 
 > Warmly enthusiastic and imaginative. See life as full of possibilities. Make connections between events and information very quickly, and confidently proceed based on the patterns they see. Want a lot of affirmation from others, and readily give appreciation and support. Spontaneous and flexible, often rely on their ability to improvise and their verbal fluency.
 
-
-
 ## Self evaluation against SFIA9:

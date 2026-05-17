@@ -24,9 +24,9 @@
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@iconify-json/heroicons": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.81",
+    "@iconify-json/simple-icons": "^1.2.82",
     "@unocss/astro": "^66.6.8",
-    "astro": "^6.3.1",
+    "astro": "^6.3.3",
     "d3": "^7.9.0",
     "photoswipe": "^5.4.4",
     "sharp": "^0.34.5",
@@ -37,11 +37,11 @@
     "@eslint/js": "^10.0.1",
     "@testing-library/dom": "^10.4.1",
     "@types/d3": "^7.4.3",
-    "@types/node": "^25.6.2",
-    "@typescript-eslint/parser": "^8.59.2",
+    "@types/node": "^25.8.0",
+    "@typescript-eslint/parser": "^8.59.3",
     "@unocss/eslint-config": "^66.6.8",
-    "@vitest/coverage-v8": "^4.1.5",
-    "eslint": "^10.3.0",
+    "@vitest/coverage-v8": "^4.1.6",
+    "eslint": "^10.4.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -54,8 +54,8 @@
     "prettier-config-standard": "^7.0.0",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.2",
-    "vitest": "^4.1.5"
+    "typescript-eslint": "^8.59.3",
+    "vitest": "^4.1.6"
   },
   "packageManager": "pnpm@11.0.8+sha512.4c4097e1dd2d42372c4e7fa5a791ff28fc75a484c7ac192e64b1df0fdef17594ba982f9b4fed9adfb3c757846f565b799b2763fb3733d1de1bcb82cf46684912"
 }

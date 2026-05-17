@@ -8,6 +8,7 @@ image: ./tfnsw.jpg
 ---
 
 Provided strategic consulting services:
+
 - Developed a financial model and engaged Finance stakeholders for a business case for a multi-year investment program for a suite of Enterprise applications.
 - Led and developed a Proof of Concept of a native iOS app written in Swift authenticating via Azure AD and accessing Outlook calendar and AD details via Microsoft Graph API.
 - Led and developed a Proof of Concept demonstrating a Javascript web front end embedded in a ServiceNow portal accessing a backend OData SAP service.

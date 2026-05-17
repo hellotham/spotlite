@@ -7,5 +7,6 @@ image: ./usyd.svg
 ---
 
 Awarded:
+
 - E. Trenchard Miller Memorial Scholarship
 - University Postgraduate Research Award upon graduation

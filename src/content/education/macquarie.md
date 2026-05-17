@@ -7,5 +7,6 @@ image: ./mq.svg
 ---
 
 Awarded:
+
 - Australian Institute of Bankers Prize for Management of Financial Institutions
 - Australian Institute of Bankers "The Institute Prize" (for graduating top of class)
