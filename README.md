@@ -20,6 +20,7 @@ It uses the following technologies:
 - Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
 - [Pagefind](https://pagefind.app/) for static full-site search
 - [PhotoSwipe](https://photoswipe.com/) for image lightbox galleries
+- [Puppeteer](https://pptr.dev/) to render the CV PDFs from dedicated print routes
 
 It features:
 
@@ -34,7 +35,8 @@ It features:
 - A Passions page providing a list of products and tools used.
 - Support for diagrams and flowcharts via Mermaid.
 - Header search with Pagefind indexing for production builds.
-- Automated CV PDF generation from content collections.
+- Two print-ready CV PDFs generated from the content collections — a one-page résumé
+  and a full curriculum vitae.
 - Development search fallback powered by a local JSON endpoint.
 - Click-to-zoom image galleries on homepage cards and featured page images.
 
@@ -61,20 +63,34 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── package.json
 ├── uno.config.ts
 ├── public/
+│   ├── cv.pdf               # Generated: full CV
+│   ├── cv-onepage.pdf       # Generated: one-page résumé
+│   ├── cv-print.css         # Standalone CV stylesheet (not part of the site CSS)
 │   ├── robots.txt
 │   └── site.webmanifest
-├── scripts/                # Utility scripts (e.g. PDF generation)
+├── scripts/
+│   └── generate-pdf.js      # Renders the /cv routes to PDF with Puppeteer
 └── src/
-  ├── components/           # UI components (header, search, D3 charts, modals)
-  ├── content/              # Markdown collections (article, page, project, work, education)
-  ├── layouts/              # Page layouts
-  ├── pages/                # Routes and API endpoints
+  ├── components/            # UI components (header, search, D3 charts, modals)
+  ├── content/               # Markdown collections (article, page, project, work,
+  │                          # education, passion, creation)
+  ├── layouts/               # Page layouts, including cv.astro for the print routes
+  ├── pages/                 # Routes and API endpoints
   │   ├── [...page].astro
   │   ├── article/[...id].astro
-  │   ├── api/search.json.ts
+  │   ├── work/[...id].astro
+  │   ├── education/[id].astro
+  │   ├── cv/                # Print-only routes rendered to PDF (noindex)
+  │   │   ├── onepage.astro
+  │   │   └── full.astro
+  │   ├── api/search.json.ts # Search index used when Pagefind is unavailable
   │   └── rss.xml.js
+  ├── utils/
+  │   ├── cv.ts              # Deterministic CV curation
+  │   └── timeline.ts
   ├── content.config.ts
-  ├── menu.json
+  ├── config.json            # Site identity
+  ├── cv.json                # CV contact details, headline, summary, curation limits
   ├── social.json
   └── superpowers.json
 ```
@@ -83,22 +99,58 @@ Inside of your Astro project, you'll see the following folders and files:
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                    | Action                                                               |
-| :------------------------- | :------------------------------------------------------------------- |
-| `pnpm install`             | Installs dependencies                                                |
-| `pnpm run dev`             | Starts local dev server (default: `localhost:4321`)                  |
-| `pnpm run build`           | Builds site, generates PDF, and Pagefind index in `./dist/pagefind/` |
-| `pnpm run pdf`             | Manually trigger CV PDF generation                                   |
-| `pnpm run search:index`    | Runs Pagefind indexing against `./dist/`                             |
-| `pnpm run preview`         | Preview your build locally, before deploying                         |
-| `pnpm run test`            | Run Vitest test suite once                                           |
-| `pnpm run test:watch`      | Run Vitest in watch mode                                             |
-| `pnpm run test:coverage`   | Run tests with v8 coverage report                                    |
-| `pnpm run lint`            | Run Prettier and ESLint with auto-fixes                              |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check`                     |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                                         |
+| Command                    | Action                                                 |
+| :------------------------- | :----------------------------------------------------- |
+| `pnpm install`             | Installs dependencies                                  |
+| `pnpm run dev`             | Starts local dev server (default: `localhost:4321`)    |
+| `pnpm run build`           | Builds site and Pagefind index in `./dist/pagefind/`   |
+| `pnpm run pdf`             | Builds, then regenerates both CV PDFs into `./public/` |
+| `pnpm run search:index`    | Runs Pagefind indexing against `./dist/`               |
+| `pnpm run preview`         | Preview your build locally, before deploying           |
+| `pnpm run test`            | Run Vitest test suite once                             |
+| `pnpm run test:watch`      | Run Vitest in watch mode                               |
+| `pnpm run test:coverage`   | Run tests with v8 coverage report                      |
+| `pnpm run lint`            | Run Prettier and ESLint with auto-fixes                |
+| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check`       |
+| `pnpm run astro -- --help` | Get help using the Astro CLI                           |
+
+## 📄 CV PDFs
+
+Two documents are generated from the same content collections that drive the site, so
+there is a single source of truth — editing `src/content/work/*.md` updates both.
+
+| File                    | Contents                                                                                  |
+| :---------------------- | :---------------------------------------------------------------------------------------- |
+| `public/cv-onepage.pdf` | Profile, key achievements, most recent roles, condensed earlier career, education, skills |
+| `public/cv.pdf`         | Complete history with achievement bullets, education with awards, full competency list    |
+
+Both are single column with selectable text. Multi-column layouts and sidebars are read
+out of order by applicant tracking systems, so the design gets its structure from
+typography rather than columns.
+
+Run `pnpm run pdf` to regenerate. The one-pager measures itself and scales to fit exactly
+one page, failing loudly rather than spilling onto a second; the full CV re-renders
+slightly denser if the last page would otherwise carry only a line or two.
+
+To customise:
+
+- `src/cv.json` — contact details, professional headline, summary, key achievements, and
+  the one-pager limits (`maxRoles`, `maxBulletsPerRole`, `maxEarlierRoles`).
+- Per entry in the `work` and `education` collections: `cvPriority` to promote a role,
+  `omitFromCv` to hide one, `oneLiner` for its condensed form.
+
+Curation is deterministic — recency, seniority and those explicit flags. Nothing in the
+pipeline rewords a career fact.
+
+Preview either document in the browser at `/cv/onepage/` or `/cv/full/`. Both routes are
+`noindex` and excluded from the sitemap and search index.
 
 ## 🔎 Search Notes
 
 - Production and preview builds use Pagefind assets generated during `pnpm run build`.
-- During local development, search falls back to `src/pages/api/search.json.ts` so search still works without prebuilt Pagefind files.
+- Where Pagefind is unavailable, search falls back to `src/pages/api/search.json.ts`.
+  That endpoint must cover **every** collection Pagefind indexes from the rendered
+  pages: if one is missing, its content is silently unsearchable in that environment
+  while production works fine.
+- Use `pnpm run build`, not `astro build`. A bare `astro build` clears `dist/` without
+  regenerating `dist/pagefind/`, so search quietly drops to the fallback with no error.
