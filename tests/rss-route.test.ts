@@ -46,14 +46,17 @@ describe('RSS route', () => {
 
     expect(payload.title).toBe('Spotlite')
     expect(payload.description).toBe('Personal Web Site')
-    expect(payload.site).toBe('https://spotlite.example')
+    // The channel link is the base-prefixed home; BASE_URL is '/' under vitest.
+    expect(String(payload.site)).toBe('https://spotlite.example/')
     expect(payload.items).toEqual([
       {
         title: 'Spotlite',
         pubDate: new Date('2026-01-01'),
         description: 'Site template',
         customData: '<author>Chris</author>',
-        link: '/blog/spotlite/'
+        // Articles render at /article/[id]; the route prefixes import.meta.env.BASE_URL,
+        // which resolves to '/' under vitest.
+        link: '/article/spotlite/'
       }
     ])
   })

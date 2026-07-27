@@ -3,6 +3,7 @@ import globals from 'globals'
 import js from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import astro from 'eslint-plugin-astro'
+import markdown from '@eslint/markdown'
 import unocss from '@unocss/eslint-config/flat'
 import eslintConfigPrettier from 'eslint-config-prettier'
 
@@ -10,9 +11,29 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 const tsParser = tseslint.parser
 const astroParser = astro.parser
 
+// Every file type ESLint parses as JavaScript or TypeScript.
+const codeFiles = ['**/*.{js,mjs,cjs,jsx,ts,tsx,mts,cts,astro}']
+
 export default defineConfig([
-  // Global configuration
+  // Ignore patterns. A config object containing only `ignores` applies globally.
   {
+    ignores: [
+      'dist/**',
+      '.astro/**',
+      'coverage/**',
+      'node_modules/**',
+      'conductor/**',
+      '**/*.d.ts',
+      '.github/'
+    ]
+  },
+
+  // Base configs. These must be scoped to code files: markdown is parsed with a
+  // non-JS language below, and core rules such as `no-irregular-whitespace` throw
+  // when handed a markdown AST.
+  {
+    files: codeFiles,
+    extends: [js.configs.recommended, tseslint.configs.recommended],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -21,23 +42,17 @@ export default defineConfig([
     }
   },
 
-  // Base configs
-  js.configs.recommended,
-  tseslint.configs.recommended,
-
   // astro setup with a11y
-  astro.configs.recommended,
-  astro.configs['jsx-a11y-strict'],
   {
     files: ['**/*.astro'],
+    extends: [astro.configs.recommended, astro.configs['jsx-a11y-strict']],
     languageOptions: {
       parser: astroParser,
       parserOptions: {
         parser: tsParser,
         extraFileExtensions: ['.astro'],
         sourceType: 'module',
-        ecmaVersion: 'latest',
-        project: './tsconfig.json'
+        ecmaVersion: 'latest'
       }
     },
     rules: {
@@ -45,13 +60,29 @@ export default defineConfig([
       '@typescript-eslint/no-explicit-any': 'off' // you may want this as it can get annoying
     }
   },
+
+  // Markdown. These rules lint the prose itself (heading structure, image alt text,
+  // link targets) — what matters for a content-driven site. Setting
+  // `processor: 'markdown/markdown'` instead would lint fenced code blocks but
+  // silently disable every rule below, since the processor only ever hands ESLint
+  // the extracted code and never the document.
+  markdown.configs.recommended,
+  {
+    files: ['**/*.md'],
+    language: 'markdown/gfm',
+    languageOptions: {
+      // Content collections put YAML frontmatter in every file. Without this it is
+      // parsed as markdown body, which produces false positives.
+      frontmatter: 'yaml'
+    }
+  },
+
+  // UnoCSS class ordering only applies to files that can carry class attributes.
   {
     files: ['**/*.{astro,html,js,jsx,ts,tsx}'],
     ...unocss
   },
-  // Ignore patterns
-  {
-    ignores: ['dist/**', '**/*.d.ts', '.github/']
-  },
+
+  // Must stay last: turns off stylistic rules that conflict with Prettier.
   eslintConfigPrettier
 ])

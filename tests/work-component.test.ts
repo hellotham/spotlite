@@ -11,7 +11,7 @@ describe('Work Component', () => {
   it('work.astro component should use clickable cards', () => {
     const filePath = path.join(rootDir, 'src/components/work.astro')
     expect(fs.existsSync(filePath)).toBe(true)
-    
+
     const content = fs.readFileSync(filePath, 'utf8')
     // Check that it's no longer just an <li> with some text
     // but an <a> tag wrapping content.

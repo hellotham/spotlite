@@ -12,7 +12,7 @@ describe('Education Routing', () => {
     const filePath = path.join(rootDir, 'src/pages/education/[id].astro')
     // This will fail initially
     expect(fs.existsSync(filePath)).toBe(true)
-    
+
     const content = fs.readFileSync(filePath, 'utf8')
     expect(content).toContain('export async function getStaticPaths()')
     expect(content).toContain("getCollection('education')")

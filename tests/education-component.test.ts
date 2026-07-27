@@ -12,14 +12,14 @@ describe('Education Component', () => {
     const filePath = path.join(rootDir, 'src/components/education.astro')
     // This will fail initially
     expect(fs.existsSync(filePath)).toBe(true)
-    
+
     const content = fs.readFileSync(filePath, 'utf8')
     expect(content).toContain('<a')
     expect(content).toContain('href')
     expect(content).toContain('group')
     expect(content).toContain('transition')
     expect(content).toContain('focus-ring')
-    
+
     // Check for education specific labels
     expect(content).toContain('institution')
     expect(content).toContain('degree')

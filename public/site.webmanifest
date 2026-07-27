@@ -1,8 +1,10 @@
 {
-    "name": "Spotlite",
-    "short_name": "spotlite",
-    "icons": [
-      { "src": "/favicon-192.png", "type": "image/png", "sizes": "192x192" },
-      { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
-    ]
-  }
+  "name": "Spotlite",
+  "short_name": "spotlite",
+  "start_url": "/spotlite/",
+  "scope": "/spotlite/",
+  "icons": [
+    { "src": "/spotlite/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/spotlite/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

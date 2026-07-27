@@ -9,6 +9,8 @@
       id='theme-toggle-button'
       aria-label='Toggle dark mode'
       aria-expanded='false'
+      aria-haspopup='listbox'
+      aria-controls='theme-menu'
       class='group px-3 py-2 rounded-full glass-hover focus-ring'
       ><svg
         viewBox='0 0 24 24'
@@ -46,6 +48,7 @@
       id='theme-auto'
       role='option'
       aria-selected='false'
+      tabindex='-1'
     >
       <div id='theme-auto-div' class='flex items-center'>
         <span class='i-heroicons-star h-6 w-6'></span>
@@ -64,6 +67,7 @@
       id='theme-light'
       role='option'
       aria-selected='false'
+      tabindex='-1'
     >
       <div class='flex items-center'>
         <span class='i-heroicons-sun h-6 w-6'></span>
@@ -82,6 +86,7 @@
       id='theme-dark'
       role='option'
       aria-selected='false'
+      tabindex='-1'
     >
       <div class='flex items-center'>
         <span class='i-heroicons-moon-solid h-6 w-6'></span>
@@ -99,6 +104,17 @@
 </div>
 
 <script>
+  let listenerCleanup: AbortController | null = null
+
+  // Reading localStorage throws when cookies/site data are blocked.
+  const readStoredTheme = () => {
+    try {
+      return localStorage.getItem('theme')
+    } catch {
+      return null
+    }
+  }
+
   const initThemeMenu = () => {
     const button = document.getElementById('theme-toggle-button')
     const menu = document.getElementById('theme-menu')
@@ -109,7 +125,7 @@
     if (!button || !menu || button.dataset.themeInitialized === 'true') return
 
     const updateUI = () => {
-      const theme = localStorage.theme
+      const theme = readStoredTheme()
       const autoCheck = document.getElementById('theme-auto-check')
       const lightCheck = document.getElementById('theme-light-check')
       const darkCheck = document.getElementById('theme-dark-check')
@@ -141,7 +157,7 @@
     }
 
     const updateTheme = () => {
-      const theme = localStorage.theme
+      const theme = readStoredTheme()
       if (
         theme === 'dark' ||
         (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -153,48 +169,147 @@
       updateUI()
     }
 
-    button.addEventListener('click', () => {
-      const isExpanded = button.getAttribute('aria-expanded') === 'true'
-      button.setAttribute('aria-expanded', (!isExpanded).toString())
-      menu.classList.toggle('hidden')
+    // Document- and window-level listeners outlive this DOM, and themeInitialized
+    // lives on a button that ClientRouter replaces on every navigation.
+    listenerCleanup?.abort()
+    listenerCleanup = new AbortController()
+    const { signal } = listenerCleanup
+
+    const options = [autoBtn, lightBtn, darkBtn].filter((el): el is HTMLElement => el !== null)
+
+    const isOpen = () => !menu.classList.contains('hidden')
+
+    const closeMenu = (returnFocus = true) => {
+      if (!isOpen()) return
+      menu.classList.add('hidden')
+      button.setAttribute('aria-expanded', 'false')
+      if (returnFocus) button.focus()
+    }
+
+    const openMenu = () => {
+      menu.classList.remove('hidden')
+      button.setAttribute('aria-expanded', 'true')
       updateUI()
-    })
+      // Start on the active choice so keyboard users land where they already are.
+      const selected = options.find((el) => el.getAttribute('aria-selected') === 'true')
+      ;(selected || options[0])?.focus()
+    }
 
-    document.addEventListener('click', (event) => {
-      const isClickInside =
-        button.contains(event.target as Node) || menu.contains(event.target as Node)
-      if (!isClickInside && !menu.classList.contains('hidden')) {
-        menu.classList.add('hidden')
-        button.setAttribute('aria-expanded', 'false')
+    const applyTheme = (value: string | null) => {
+      try {
+        if (value === null) {
+          localStorage.removeItem('theme')
+        } else {
+          localStorage.setItem('theme', value)
+        }
+      } catch {
+        // Storage blocked: the theme still applies for this page view.
       }
-    })
-
-    autoBtn?.addEventListener('click', () => {
-      localStorage.removeItem('theme')
       updateTheme()
-      menu?.classList.add('hidden')
-      button?.setAttribute('aria-expanded', 'false')
+      closeMenu()
+    }
+
+    const themeForOption = (el: HTMLElement) =>
+      el === lightBtn ? 'light' : el === darkBtn ? 'dark' : null
+
+    button.addEventListener(
+      'click',
+      () => {
+        if (isOpen()) {
+          closeMenu()
+        } else {
+          openMenu()
+        }
+      },
+      { signal }
+    )
+
+    // Open on Down/Up from the button, matching the usual listbox pattern.
+    button.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+          event.preventDefault()
+          openMenu()
+        }
+      },
+      { signal }
+    )
+
+    options.forEach((option, index) => {
+      option.addEventListener('click', () => applyTheme(themeForOption(option)), { signal })
+
+      option.addEventListener(
+        'keydown',
+        (event) => {
+          switch (event.key) {
+            case 'Enter':
+            case ' ':
+              event.preventDefault()
+              applyTheme(themeForOption(option))
+              break
+            case 'ArrowDown':
+              event.preventDefault()
+              options[(index + 1) % options.length].focus()
+              break
+            case 'ArrowUp':
+              event.preventDefault()
+              options[(index - 1 + options.length) % options.length].focus()
+              break
+            case 'Home':
+              event.preventDefault()
+              options[0].focus()
+              break
+            case 'End':
+              event.preventDefault()
+              options[options.length - 1].focus()
+              break
+            case 'Escape':
+              event.preventDefault()
+              closeMenu()
+              break
+            case 'Tab':
+              // Let focus leave naturally, but do not leave an open menu behind.
+              closeMenu(false)
+              break
+          }
+        },
+        { signal }
+      )
     })
 
-    lightBtn?.addEventListener('click', () => {
-      localStorage.theme = 'light'
-      updateTheme()
-      menu?.classList.add('hidden')
-      button?.setAttribute('aria-expanded', 'false')
-    })
+    document.addEventListener(
+      'click',
+      (event) => {
+        const isClickInside =
+          button.contains(event.target as Node) || menu.contains(event.target as Node)
+        if (!isClickInside) {
+          // A click elsewhere already moved focus; do not yank it back.
+          closeMenu(false)
+        }
+      },
+      { signal }
+    )
 
-    darkBtn?.addEventListener('click', () => {
-      localStorage.theme = 'dark'
-      updateTheme()
-      menu?.classList.add('hidden')
-      button?.setAttribute('aria-expanded', 'false')
-    })
+    document.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key === 'Escape' && isOpen()) {
+          closeMenu()
+        }
+      },
+      { signal }
+    )
 
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      if (!localStorage.theme) {
-        updateTheme()
-      }
-    })
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener(
+      'change',
+      () => {
+        if (!readStoredTheme()) {
+          updateTheme()
+        }
+      },
+      { signal }
+    )
 
     // Initial UI state
     updateUI()
@@ -204,4 +319,8 @@
 
   initThemeMenu()
   document.addEventListener('astro:page-load', initThemeMenu)
+  document.addEventListener('astro:before-swap', () => {
+    listenerCleanup?.abort()
+    listenerCleanup = null
+  })
 </script>

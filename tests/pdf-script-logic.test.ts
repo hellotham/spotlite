@@ -11,7 +11,7 @@ describe('PDF Generation Script Logic', () => {
   it('should include the home page title in generate-pdf.js', () => {
     const scriptPath = path.join(rootDir, 'scripts/generate-pdf.js')
     const content = fs.readFileSync(scriptPath, 'utf8')
-    
+
     // Check that src/pages/index.md is handled
     expect(content).toContain('src/pages/index.md')
   })
@@ -19,7 +19,7 @@ describe('PDF Generation Script Logic', () => {
   it('should enable headers and footers in generate-pdf.js', () => {
     const scriptPath = path.join(rootDir, 'scripts/generate-pdf.js')
     const content = fs.readFileSync(scriptPath, 'utf8')
-    
+
     expect(content).toContain('displayHeaderFooter: true')
     expect(content).toContain('headerTemplate')
     expect(content).toContain('footerTemplate')
@@ -28,8 +28,8 @@ describe('PDF Generation Script Logic', () => {
   it('should enable CSS margins in generate-pdf.js', () => {
     const scriptPath = path.join(rootDir, 'scripts/generate-pdf.js')
     const content = fs.readFileSync(scriptPath, 'utf8')
-    
-    expect(content).toContain("preferCSSPageSize: true")
-    expect(content).toContain("margin: 0")
+
+    expect(content).toContain('preferCSSPageSize: true')
+    expect(content).toContain('margin: 0')
   })
 })

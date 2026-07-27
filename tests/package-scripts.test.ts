@@ -15,7 +15,10 @@ describe('Package Scripts', () => {
 
   it('should have an updated build script', () => {
     const pkg = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'))
-    expect(pkg.scripts.build).toContain('pnpm run pdf')
     expect(pkg.scripts.build).toContain('astro build')
+    expect(pkg.scripts.build).toContain('pnpm run search:index')
+    // PDF generation was deliberately removed from the build (see cc834b4); it needs
+    // a headless Chrome and is run on demand via `pnpm run pdf`.
+    expect(pkg.scripts.build).not.toContain('pnpm run pdf')
   })
 })

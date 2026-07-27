@@ -12,6 +12,8 @@
     children?: FlareData[]
   }
 
+  let teardown: (() => void) | null = null
+
   const setupChart = () => {
     const data: FlareData = {
       name: 'flare',
@@ -522,10 +524,19 @@
 
     window.addEventListener('resize', renderChart)
 
+    // ClientRouter replaces the container on every navigation, so dataset.initialized
+    // cannot see the previous element and setup runs again. Drop the old listener so
+    // stale closures stop re-rendering into detached DOM.
+    teardown = () => window.removeEventListener('resize', renderChart)
+
     container.dataset.initialized = 'true'
   }
 
   // Initialize on page load
   setupChart()
   document.addEventListener('astro:page-load', setupChart)
+  document.addEventListener('astro:before-swap', () => {
+    teardown?.()
+    teardown = null
+  })
 </script>

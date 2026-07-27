@@ -7,6 +7,10 @@ import type { ImageMetadata } from 'astro'
 import { Font, getImage } from 'astro:assets'
 
 import config from '../config.json' with { type: 'json' }
+// The previous default pointed at /screenshot.png in public/, which does not exist —
+// every page without its own image advertised a 404 as its social card. Import the
+// real asset so it is emitted and optimised like any other image.
+import defaultSocialImage from '../assets/screenshot.png'
 
 export interface Props {
   title: string
@@ -21,7 +25,7 @@ export interface Props {
 const {
   title,
   description,
-  image = `${import.meta.env.BASE_URL}screenshot.png`,
+  image = defaultSocialImage,
   article = false,
   pubDate,
   itemPage = false,
@@ -30,7 +34,7 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-let socialImageURL = typeof image === 'string' ? image : `${import.meta.env.BASE_URL}screenshot.png`
+let socialImageURL = typeof image === 'string' ? image : ''
 if (typeof image === 'object') {
   const optimizedImage = await getImage({
     src: itemPage && image ? image : image, // Keep optimization logic
@@ -41,10 +45,7 @@ if (typeof image === 'object') {
   socialImageURL = optimizedImage.src
 }
 
-const finalSocialImageURL = new URL(
-  socialImageURL,
-  Astro.site || 'https://astro-spotlite.netlify.app'
-)
+const finalSocialImageURL = new URL(socialImageURL, Astro.site || 'https://hellotham.com')
 
 const social = await getCollection('social')
 
@@ -97,39 +98,48 @@ if (itemPage) {
   }
 }
 
+const basePath = import.meta.env.BASE_URL
+
+// Strip the base as a prefix rather than filtering out segments that merely equal
+// its name — /spotlite/article/spotlite/ is a real URL, and filtering by name drops
+// the article's own crumb as well as the base.
+const relativePath = Astro.url.pathname.startsWith(basePath)
+  ? Astro.url.pathname.slice(basePath.length)
+  : Astro.url.pathname.replace(/^\//, '')
+const breadcrumbSegments = relativePath.split('/').filter((segment) => segment !== '')
+
+// Route segments whose listing page is named differently: entries live at
+// /article/[id] but the listing is /articles/. Anything absent maps to itself.
+const listingPage: Record<string, string> = { article: 'articles' }
+
 const breadcrumbList = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: Astro.url.pathname
-    .split('/')
-    .filter((path) => path !== '' && path !== import.meta.env.BASE_URL.replace(/\//g, ''))
-    .reduce(
-      (acc, path, index, array) => {
-        const url = new URL(
-          import.meta.env.BASE_URL + array.slice(0, index + 1).join('/') + '/',
-          Astro.site
-        )
-        acc.push({
-          '@type': 'ListItem',
-          position: index + 2,
-          name: path.charAt(0).toUpperCase() + path.slice(1),
-          item: url.href
-        })
-        return acc
-      },
-      [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item:
-            Astro.site?.href +
-            (import.meta.env.BASE_URL.startsWith('/')
-              ? import.meta.env.BASE_URL.slice(1)
-              : import.meta.env.BASE_URL)
-        }
-      ]
-    )
+  itemListElement: breadcrumbSegments.reduce(
+    (acc, segment, index, array) => {
+      // Intermediate crumbs must point at a page that exists: /article/ itself
+      // 404s, so link the listing page instead of the partial path.
+      const target =
+        index === array.length - 1
+          ? array.slice(0, index + 1).join('/')
+          : (listingPage[segment] ?? segment)
+      acc.push({
+        '@type': 'ListItem',
+        position: index + 2,
+        name: segment.charAt(0).toUpperCase() + segment.slice(1),
+        item: new URL(basePath + target + '/', Astro.site).href
+      })
+      return acc
+    },
+    [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: new URL(basePath, Astro.site).href
+      }
+    ]
+  )
 }
 ---
 
@@ -150,9 +160,19 @@ const breadcrumbList = {
     <Font cssVariable='--font-noto-sans-mono' />
     <script is:inline>
       const setTheme = () => {
+        // Touching localStorage throws outright when cookies/site data are blocked.
+        // This runs before anything else in the document, so an uncaught error here
+        // would kill theme init and every statement after it.
+        let stored
+        try {
+          stored = localStorage.getItem('theme')
+        } catch {
+          stored = null
+        }
+
         if (
-          localStorage.theme === 'dark' ||
-          (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          stored === 'dark' ||
+          (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches)
         ) {
           document.documentElement.classList.add('dark')
         } else {
@@ -260,7 +280,7 @@ const breadcrumbList = {
       )
     }
     {
-      Astro.url.pathname !== '/' && (
+      breadcrumbSegments.length > 0 && (
         <script is:inline type='application/ld+json' set:html={JSON.stringify(breadcrumbList)} />
       )
     }
@@ -277,7 +297,12 @@ const breadcrumbList = {
     </div>
     <div class='flex flex-col min-h-screen relative z-10'>
       <Header home={home} />
-      <main class='flex-1'>
+      {
+        /* Scope the search index to page content. Without this Pagefind indexes the
+      whole body, so the nav, search and theme chrome repeated on all 28 pages made
+      common words match every page. */
+      }
+      <main class='flex-1' data-pagefind-body>
         <slot />
       </main>
       <Footer />

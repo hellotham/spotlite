@@ -79,7 +79,10 @@ describe('GET /api/search.json', () => {
     }
 
     getCollectionMock.mockImplementation(
-      async (collectionName: 'article' | 'page' | 'project', filter?: (item: unknown) => boolean) => {
+      async (
+        collectionName: 'article' | 'page' | 'project',
+        filter?: (item: unknown) => boolean
+      ) => {
         const entries = dataset[collectionName]
         return typeof filter === 'function' ? entries.filter((entry) => filter(entry)) : entries
       }

@@ -23,7 +23,7 @@ describe('Work Navigation', () => {
   it('should position "work" after "articles"', () => {
     const articlesOrder = getPageOrder('articles')
     const workOrder = getPageOrder('work')
-    
+
     expect(articlesOrder).toBeLessThan(workOrder)
   })
 })

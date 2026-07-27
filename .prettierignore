@@ -1,6 +1,10 @@
 # Ignore artifacts:
 dist
 .astro
+coverage
+
+# Conductor track metadata (not project source)
+conductor
 
 # Standard
 **/.git

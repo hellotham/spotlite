@@ -66,13 +66,13 @@ gantt
     Assertive (A)   :active, 0, 86
 ```
 
-| Trait | Measure | Description |
-| :--- | :--- | :--- |
-| Energy | 77% Extraverted | Energised by social interaction and tend to openly express enthusiasm and excitement |
-| Mind | 95% Intuitive | Very imaginative and open-minded, focusing on hidden meanings and distant possibilities |
-| Nature | 57% Feeling | Value emotional expression and sensitivity, prioritising empathy, social harmony, and cooperation |
-| Tactics | 58% Prospecting | Very adaptable, easygoing and flexible, prioritising spontaneity over stability |
-| Identity | 86% Assertive | Self-assured, even-tempered, and resistant to stress, refusing to worry too much |
+| Trait    | Measure         | Description                                                                                       |
+| :------- | :-------------- | :------------------------------------------------------------------------------------------------ |
+| Energy   | 77% Extraverted | Energised by social interaction and tend to openly express enthusiasm and excitement              |
+| Mind     | 95% Intuitive   | Very imaginative and open-minded, focusing on hidden meanings and distant possibilities           |
+| Nature   | 57% Feeling     | Value emotional expression and sensitivity, prioritising empathy, social harmony, and cooperation |
+| Tactics  | 58% Prospecting | Very adaptable, easygoing and flexible, prioritising spontaneity over stability                   |
+| Identity | 86% Assertive   | Self-assured, even-tempered, and resistant to stress, refusing to worry too much                  |
 
 At my core, I am driven by my values and my quest for authenticity. I have a strong sense of right and wrong, and I am not afraid to stand up for what I believe in. Ccoupled with my natural empathy, I am a powerful advocate for causes I care about.
 

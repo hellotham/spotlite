@@ -33,6 +33,51 @@ import superpowers from '../superpowers.json'
     vy: number
   }
 
+  // WCAG relative luminance; used to choose a readable label colour per bubble.
+  const readableTextColor = (background: string) => {
+    const rgb = d3.color(background)?.rgb()
+    if (!rgb) return '#ffffff'
+    const channel = (value: number) => {
+      const v = value / 255
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)
+    }
+    const luminance = 0.2126 * channel(rgb.r) + 0.7152 * channel(rgb.g) + 0.0722 * channel(rgb.b)
+    // Contrast against white vs black, picking the stronger of the two.
+    return 1.05 / (luminance + 0.05) > (luminance + 0.05) / 0.05 ? '#ffffff' : '#000000'
+  }
+
+  let teardown: (() => void) | null = null
+
+  // Shared by the click and keyboard paths so both stay in step.
+  const openSuperpowerModal = (item: Superpower) => {
+    const modal = document.getElementById('superpowers-modal') as HTMLDialogElement
+    if (!modal) return
+
+    const titleEl = document.getElementById('modal-title')
+    const descEl = document.getElementById('modal-description')
+    const levelEl = document.getElementById('modal-level')
+    const commentEl = document.getElementById('modal-comment')
+    const commentContainer = document.getElementById('modal-comment-container')
+
+    if (titleEl) titleEl.textContent = item.title || ''
+    if (descEl) descEl.textContent = item.description || ''
+    if (levelEl) levelEl.textContent = item.level.toString() || ''
+
+    if (commentEl && commentContainer) {
+      if (item.comment) {
+        commentEl.textContent = item.comment
+        commentContainer.classList.remove('hidden')
+      } else {
+        commentContainer.classList.add('hidden')
+      }
+    }
+
+    modal.showModal()
+    document.body.style.overflow = 'hidden'
+  }
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
   const setupBubbleChart = () => {
     const container = document.getElementById('bubblechart-container')
     const tooltip = d3.select('#bubblechart-tooltip')
@@ -45,6 +90,7 @@ import superpowers from '../superpowers.json'
 
     let animationRunning = false
     let animationFrameId: number | null = null
+    let observer: IntersectionObserver | null = null
 
     const renderChart = () => {
       const chartContainer = document.getElementById('bubblechart-container')
@@ -56,6 +102,12 @@ import superpowers from '../superpowers.json'
         cancelAnimationFrame(animationFrameId)
         animationFrameId = null
       }
+
+      // renderChart is also the resize handler, so without this every resize event
+      // would leave another live observer watching the same container. Stale
+      // observers would then race to restart animation loops over detached nodes.
+      observer?.disconnect()
+      observer = null
 
       // Clear previous content
       chartContainer.innerHTML = ''
@@ -237,6 +289,17 @@ import superpowers from '../superpowers.json'
       const node = svg.append('g').selectAll('g').data(nodes).join('g').attr('class', 'bubble')
 
       node
+        .attr('tabindex', 0)
+        .attr('role', 'button')
+        .attr('aria-label', (d) => `${d.title}, level ${d.level}`)
+        .on('keydown', function (event: KeyboardEvent, d) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault()
+            openSuperpowerModal(d)
+          }
+        })
+
+      node
         .append('circle')
         .attr('r', (d) => d.radius)
         .attr('fill', (d) => colorScale(d.level))
@@ -281,31 +344,7 @@ import superpowers from '../superpowers.json'
           tooltip.classed('hidden', true)
         })
         .on('click', function (_event: MouseEvent, d) {
-          const item = d
-          const modal = document.getElementById('superpowers-modal') as HTMLDialogElement
-          if (!modal) return
-
-          const titleEl = document.getElementById('modal-title')
-          const descEl = document.getElementById('modal-description')
-          const levelEl = document.getElementById('modal-level')
-          const commentEl = document.getElementById('modal-comment')
-          const commentContainer = document.getElementById('modal-comment-container')
-
-          if (titleEl) titleEl.textContent = item.title || ''
-          if (descEl) descEl.textContent = item.description || ''
-          if (levelEl) levelEl.textContent = item.level.toString() || ''
-
-          if (commentEl && commentContainer) {
-            if (item.comment) {
-              commentEl.textContent = item.comment
-              commentContainer.classList.remove('hidden')
-            } else {
-              commentContainer.classList.add('hidden')
-            }
-          }
-
-          modal.showModal()
-          document.body.style.overflow = 'hidden'
+          openSuperpowerModal(d)
         })
 
       // Text wrapping logic based on guide
@@ -313,7 +352,7 @@ import superpowers from '../superpowers.json'
         .append('text')
         .style('font-size', (d) => Math.max(7, Math.min(d.radius * 0.35, 14)) + 'px')
         .style('font-weight', 'bold')
-        .style('fill', 'white')
+        .style('fill', (d) => readableTextColor(colorScale(d.level)))
         .style('pointer-events', 'none')
 
       text
@@ -332,7 +371,7 @@ import superpowers from '../superpowers.json'
         .text((d) => d)
 
       // Performance Optimization: Pause animation when off-screen
-      const observer = new IntersectionObserver(
+      observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting && !animationRunning) {
@@ -346,11 +385,20 @@ import superpowers from '../superpowers.json'
         { threshold: 0.1 }
       )
 
-      observer.observe(chartContainer)
+      if (!prefersReducedMotion.matches) {
+        observer.observe(chartContainer)
+      }
 
-      // Start animation
-      animationRunning = true
-      animate()
+      // Start animation, unless the user asked for reduced motion. The preflight
+      // media query only tames CSS animation and transitions, not this rAF loop, so
+      // the bubbles would otherwise drift forever regardless of the setting.
+      if (prefersReducedMotion.matches) {
+        resolveOverlaps(120)
+        node.attr('transform', (d) => `translate(${d.x},${d.y})`)
+      } else {
+        animationRunning = true
+        animate()
+      }
     }
 
     renderChart()
@@ -358,12 +406,31 @@ import superpowers from '../superpowers.json'
     // Resize listener with debouncing or simple re-render
     window.addEventListener('resize', renderChart)
 
+    // ClientRouter replaces the container on every navigation, so dataset.initialized
+    // cannot see the previous element and setup runs again. Without this teardown the
+    // old closure's resize handler and observer would survive, re-rendering into
+    // detached DOM.
+    teardown = () => {
+      animationRunning = false
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId)
+        animationFrameId = null
+      }
+      observer?.disconnect()
+      observer = null
+      window.removeEventListener('resize', renderChart)
+    }
+
     container.dataset.initialized = 'true'
   }
 
   // Initialize on page load
   setupBubbleChart()
   document.addEventListener('astro:page-load', setupBubbleChart)
+  document.addEventListener('astro:before-swap', () => {
+    teardown?.()
+    teardown = null
+  })
 </script>
 
 <style>

@@ -12,67 +12,69 @@ The Rosely palette consists of sixteen core colors divided into four functional 
 
 Used for backgrounds, text, and structural elements where neutral grounding is needed.
 
-* **Black Beauty (#27272a):** Primary dark background or deep text color.
-* **Granite Gray (#615f5f):** Secondary neutral for borders or muted text.
-* **Opal Gray (#a49e9e):** Soft neutral for secondary UI elements or placeholder text.
-* **Sugar Swizzle (#f4eee8):** Crisp, off-white for light backgrounds or high-contrast dark-mode text.
+- **Black Beauty (#27272a):** Primary dark background or deep text color.
+- **Granite Gray (#615f5f):** Secondary neutral for borders or muted text.
+- **Opal Gray (#a49e9e):** Soft neutral for secondary UI elements or placeholder text.
+- **Sugar Swizzle (#f4eee8):** Crisp, off-white for light backgrounds or high-contrast dark-mode text.
 
 ### Pinks (Gentle Romance & Warmth)
 
 The soul of the system, tempering passion with purity.
 
-* **Morning Glory (#ec809e):** Vibrant highlight or action color (mapped to `text-accent`).
-* **Rose Quartz (#f7caca):** The base color of Rosely; warm, gentle rose tone conveying composure.
-* **Barely Pink (#F8D7DD):** Soft background tint or secondary highlight.
-* **Heavenly Pink (#f4dede):** Ultra-soft background or subtle text accent.
+- **Morning Glory (#ec809e):** Vibrant highlight or action color (mapped to `text-accent`).
+- **Rose Quartz (#f7caca):** The base color of Rosely; warm, gentle rose tone conveying composure.
+- **Barely Pink (#F8D7DD):** Soft background tint or secondary highlight.
+- **Heavenly Pink (#f4dede):** Ultra-soft background or subtle text accent.
 
 ### Purples (Depth & Harmony)
 
 Used for accents, borders, and alternate backgrounds to complement the pinks.
 
-* **Grapeade (#85677b):** Dark accent for borders or strong typographic emphasis.
-* **Radiant Orchid (#b565a7):** Base accent color; a captivating harmony of fuchsia and pink.
-* **Lupine (#be9cc1):** Soft purple for secondary buttons or active states.
-* **Lavender Fog (#D2C4D6):** Muted lilac for background variations.
+- **Grapeade (#85677b):** Dark accent for borders or strong typographic emphasis.
+- **Radiant Orchid (#b565a7):** Base accent color; a captivating harmony of fuchsia and pink.
+- **Lupine (#be9cc1):** Soft purple for secondary buttons or active states.
+- **Lavender Fog (#D2C4D6):** Muted lilac for background variations.
 
 ### Colourful (Positivity & Precision)
 
 High-positivity colors used for functional highlighting (Success, Error, Info, Warning).
 
-* **Raspberry Sorbet (#d2386c):** Delectable red-pink for errors or critical alerts.
-* **Spearmint (#64bfa4):** Cool green for success states or fresh highlights.
-* **Aquarius (#3CADD4):** Periwinkle blue for links, information, or primary actions.
-* **Meadowlark (#eada4f):** Vibrant sunny yellow for warnings or cheerful accents.
+- **Raspberry Sorbet (#d2386c):** Delectable red-pink for errors or critical alerts.
+- **Spearmint (#64bfa4):** Cool green for success states or fresh highlights.
+- **Aquarius (#3CADD4):** Periwinkle blue for links, information, or primary actions.
+- **Meadowlark (#eada4f):** Vibrant sunny yellow for warnings or cheerful accents.
 
 ## 3. Typography Rules
 
-* **Primary Font Family:** "Noto Sans", sans-serif. Chosen for its clean, modern, and highly readable character.
-* **Serif Font Family:** "Noto Serif", serif. Used for headings and emphasis. Headings should be styled with the **`text-accent`** token (Morning Glory) to provide a vibrant yet serene hierarchy.
-* **Monospace Font Family:** "Noto Sans Mono", monospace. Used for technical data, code snippets, and terminal interfaces.
+- **Primary Font Family:** "Noto Sans", sans-serif. Chosen for its clean, modern, and highly readable character.
+- **Serif Font Family:** "Noto Serif", serif. Used for headings and emphasis. Headings should be styled with the **`text-accent`** token (Morning Glory) to provide a vibrant yet serene hierarchy.
+- **Monospace Font Family:** "Noto Sans Mono", monospace. Used for technical data, code snippets, and terminal interfaces.
 
 ## 4. Component Styling & Spacing
 
 Rosely embraces a clean, modern aesthetic utilizing **UnoCSS** (Wind4 preset) for structure and spacing, integrated with our color palette.
 
-* **Spacing System:** Follows the standard utility-first spacing scale (e.g., `p-4` for 1rem/16px, `gap-6` for 1.5rem/24px) to maintain a consistent and predictable rhythm.
-* **Border Radius:** Components typically feature subtle rounding using `rounded-md` (0.375rem) or `rounded-lg` (0.5rem) to reflect the gentle nature of the Rosely theme, avoiding harsh, sharp corners.
-* **Borders:** Use thin, 1px borders colored with `border-border` (mapped to Opal Gray or similar neutral) for subtle separation.
-* **Shadows & Elevation:** Drop shadows should be soft and diffused (`shadow-sm` or `shadow-md`), enhancing the low-contrast ambiance without creating overwhelming visual hierarchy.
-* **Interactive States:** Hover and focus states should slightly shift the background or border color (e.g., using `text-accent` or Lupine accents) while maintaining the eye-comfortable constraint.
-* **Focus Indicators:** Use the `focus-ring` shortcut for all interactive elements to ensure a highly visible, accessible focus state for keyboard users.
-* **Component Architecture:** Build accessible and composable UI blocks styled with UnoCSS utility classes that reference Rosely's custom color variables.
+- **Spacing System:** Follows the standard utility-first spacing scale (e.g., `p-4` for 1rem/16px, `gap-6` for 1.5rem/24px) to maintain a consistent and predictable rhythm.
+- **Border Radius:** Components typically feature subtle rounding using `rounded-md` (0.375rem) or `rounded-lg` (0.5rem) to reflect the gentle nature of the Rosely theme, avoiding harsh, sharp corners.
+- **Borders:** Use thin, 1px borders colored with `border-border` (mapped to Opal Gray or similar neutral) for subtle separation.
+- **Shadows & Elevation:** Drop shadows should be soft and diffused (`shadow-sm` or `shadow-md`), enhancing the low-contrast ambiance without creating overwhelming visual hierarchy.
+- **Interactive States:** Hover and focus states should slightly shift the background or border color (e.g., using `text-accent` or Lupine accents) while maintaining the eye-comfortable constraint.
+- **Focus Indicators:** Use the `focus-ring` shortcut for all interactive elements to ensure a highly visible, accessible focus state for keyboard users.
+- **Component Architecture:** Build accessible and composable UI blocks styled with UnoCSS utility classes that reference Rosely's custom color variables.
 
 ### UnoCSS Shortcuts (Component Library)
 
 For consistency and maintainability, we provide semantic shortcuts that encapsulate common patterns:
 
 #### Text Colors (Built-in Dark Mode)
+
 - `text-primary` – Main content text (auto-adapts: blackBeauty → sugarSwizzle)
 - `text-secondary` – Muted/disabled text (graniteGray → opalGray)
 - `text-accent` – Highlighted/action text (morningGloryDark → morningGlory)
 - `text-muted` – Placeholder/disabled state
 
 #### Surfaces & Containers
+
 - `surface` – Background fill (sugarSwizzle → blackBeauty in dark mode)
 - `surface-subtle` – Semi-transparent backgrounds
 - `glass` – Frosted glass effect (backdrop-blur + semi-transparent)
@@ -80,11 +82,13 @@ For consistency and maintainability, we provide semantic shortcuts that encapsul
 - `border-primary` – Border color with dark mode support
 
 #### Cards & Panels
+
 - `card` – Base card styling with border and shadow
 - `card-hover` – Interactive card with lift effect on hover
 - `card-interactive` – Clickable card with cursor pointer
 
 #### Buttons (Composable)
+
 - `btn-base` – Foundation button styles
 - `btn-primary` – Primary action (dark: grapeade)
 - `btn-secondary` – Secondary action
@@ -92,19 +96,22 @@ For consistency and maintainability, we provide semantic shortcuts that encapsul
 - `btn-sm` – Compact button size
 
 #### Forms
+
 - `input-base` – Input field with focus ring and dark mode
 
 #### Interactive Elements
+
 - `hover-accent` – Color shift on hover for links/text
 - `focus-ring` – Accessible focus indicator
 
 **Usage Examples:**
+
 ```astro
 <!-- Primary button -->
 <button class='btn-primary'>Save</button>
 
 <!-- Glass panel -->
-<div class='glass p-6 rounded-lg'>Frosted content</div>
+<div class='p-6 rounded-lg glass'>Frosted content</div>
 
 <!-- Interactive card -->
 <div class='card-hover cursor-pointer'>Click me</div>
@@ -124,32 +131,39 @@ These shortcuts eliminate repetitive dark mode variants and ensure design consis
 Rosely uses motion purposefully to guide focus and add a layer of professional polish without sacrificing performance or serenity.
 
 ### Page Transitions
-* **Client-Side Routing:** Utilises Astro's `ClientRouter` to provide smooth, SPA-like navigation between internal pages, maintaining visual continuity and reducing perceived load times.
+
+- **Client-Side Routing:** Utilises Astro's `ClientRouter` to provide smooth, SPA-like navigation between internal pages, maintaining visual continuity and reducing perceived load times.
 
 ### Entrance Animations
-* **Subtle Arrivals:** Key UI blocks (Hero, Cards, Content Lists) use a custom `animate-fade-in-up` animation—a gentle fade-in combined with a slight 1rem upward slide—to create a dynamic yet calm entrance.
-* **Staggered Delays:** Entrance animations are often staggered (e.g., using `[animation-delay:200ms]`) to create a natural, sequential flow as page sections appear.
+
+- **Subtle Arrivals:** Key UI blocks (Hero, Cards, Content Lists) use a custom `animate-fade-in-up` animation—a gentle fade-in combined with a slight 1rem upward slide—to create a dynamic yet calm entrance.
+- **Staggered Delays:** Entrance animations are often staggered (e.g., using `[animation-delay:200ms]`) to create a natural, sequential flow as page sections appear.
 
 ### Interaction Feedback
-* **Smooth Transitions:** Hover and focus states for interactive elements (buttons, links, cards) use smooth CSS transitions (typically 200-300ms) for property changes like `color`, `scale`, and `box-shadow`.
-* **Tactile Transforms:** Interactive cards may use subtle transforms (e.g., `hover:-translate-y-1`) to provide a tactile sense of depth.
+
+- **Smooth Transitions:** Hover and focus states for interactive elements (buttons, links, cards) use smooth CSS transitions (typically 200-300ms) for property changes like `color`, `scale`, and `box-shadow`.
+- **Tactile Transforms:** Interactive cards may use subtle transforms (e.g., `hover:-translate-y-1`) to provide a tactile sense of depth.
 
 ### Motion Accessibility
-* **Reduced Motion Support:** In alignment with our serenity principle, all non-essential animations and transitions are automatically disabled or minimized when `prefers-reduced-motion: reduce` is detected, ensuring an inclusive experience for all users.
+
+- **Reduced Motion Support:** In alignment with our serenity principle, all non-essential animations and transitions are automatically disabled or minimized when `prefers-reduced-motion: reduce` is detected, ensuring an inclusive experience for all users.
 
 ## 6. Accessibility Standards
 
 Rosely is committed to being an inclusive design system that meets **WCAG 2.1 Level AA** standards.
 
 ### Semantic Foundation
-* **Landmark Elements:** Use appropriate HTML5 tags (`<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`) to provide structural meaning for assistive technologies.
-* **Heading Hierarchy:** Maintain a logical, nested heading structure (H1 → H2 → H3) without skipping levels, ensuring clear document outlines.
+
+- **Landmark Elements:** Use appropriate HTML5 tags (`<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`) to provide structural meaning for assistive technologies.
+- **Heading Hierarchy:** Maintain a logical, nested heading structure (H1 → H2 → H3) without skipping levels, ensuring clear document outlines.
 
 ### Interactive Components
-* **ARIA Implementation:** Use standard ARIA roles and attributes (`aria-label`, `aria-expanded`, `aria-current`) where native semantic elements are insufficient, particularly for complex interactive components like mobile menus and search.
-* **Keyboard Navigability:** All interactive elements must be focusable via keyboard, following a logical tab order.
-* **Focus States:** Every focusable element must utilize the `focus-ring` utility to provide a clear, high-contrast visual indicator of focus.
+
+- **ARIA Implementation:** Use standard ARIA roles and attributes (`aria-label`, `aria-expanded`, `aria-current`) where native semantic elements are insufficient, particularly for complex interactive components like mobile menus and search.
+- **Keyboard Navigability:** All interactive elements must be focusable via keyboard, following a logical tab order.
+- **Focus States:** Every focusable element must utilize the `focus-ring` utility to provide a clear, high-contrast visual indicator of focus.
 
 ### Color & Contrast
-* **Contrast Compliance:** While maintaining a serene "low-contrast" aesthetic, all text and interactive components are audited to meet WCAG AA contrast ratios (at least 4.5:1 for normal text and 3:1 for large text).
-* **Information without Color:** Never use color as the sole indicator of meaning or status (e.g., provide text labels or icons alongside color states for success and error messages).
+
+- **Contrast Compliance:** While maintaining a serene "low-contrast" aesthetic, all text and interactive components are audited to meet WCAG AA contrast ratios (at least 4.5:1 for normal text and 3:1 for large text).
+- **Information without Color:** Never use color as the sole indicator of meaning or status (e.g., provide text labels or icons alongside color states for success and error messages).

@@ -2,7 +2,9 @@
 import { getCollection, render } from 'astro:content'
 
 export async function getStaticPaths() {
-  const pages = await getCollection('page')
+  // Honour the draft flag here too: previously only the search index filtered
+  // drafts, so a draft page still built, appeared in the nav and hit the sitemap.
+  const pages = await getCollection('page', ({ data }) => !data.draft)
   return pages.map((page) => ({
     params: { page: page.id },
     props: { page }

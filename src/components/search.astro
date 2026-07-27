@@ -71,15 +71,20 @@
 
   const loadPagefind = async () => {
     if (!pagefindModulePromise) {
-      pagefindModulePromise = runtimeImport(`${import.meta.env.BASE_URL}pagefind/pagefind.js`).then(
-        (moduleValue) => {
+      pagefindModulePromise = runtimeImport(`${import.meta.env.BASE_URL}pagefind/pagefind.js`)
+        .then((moduleValue) => {
           const module = moduleValue as PagefindModule
           if (typeof module.search !== 'function') {
             throw new Error('Invalid Pagefind module')
           }
           return module
-        }
-      )
+        })
+        // Drop the cached promise on failure, otherwise one transient error would
+        // disable search for the rest of the session.
+        .catch((error) => {
+          pagefindModulePromise = null
+          throw error
+        })
     }
     return pagefindModulePromise
   }
@@ -94,10 +99,17 @@
           return response.json()
         })
         .then((payload: { items?: SearchEntry[] }) => payload.items || [])
+        // As above: a rejected promise must not stay cached.
+        .catch((error) => {
+          fallbackIndexPromise = null
+          throw error
+        })
     }
 
     return fallbackIndexPromise
   }
+
+  let listenerCleanup: AbortController | null = null
 
   const initPagefindSearch = () => {
     const root = document.querySelector<HTMLElement>('[data-pagefind-search]')
@@ -112,8 +124,14 @@
     if (!toggle || !panel || !input || !status || !list) return
 
     let debounceTimer: ReturnType<typeof setTimeout> | undefined
+    let searchGeneration = 0
 
     const closePanel = () => {
+      // Move focus out before hiding, otherwise focus is left on a hidden element and
+      // the user's position in the page is lost.
+      if (panel.contains(document.activeElement)) {
+        toggle.focus()
+      }
       panel.classList.add('hidden')
       toggle.setAttribute('aria-expanded', 'false')
     }
@@ -143,7 +161,20 @@
       titleEl.textContent = title
 
       excerptEl.className = 'mt-1 text-xs text-secondary leading-relaxed'
-      excerptEl.textContent = excerpt
+      // Pagefind wraps matched terms in <mark>. Assigning that to textContent would
+      // print the tags literally, and innerHTML would trust the excerpt, so build the
+      // nodes by hand: everything is a text node except the <mark> elements.
+      for (const [index, part] of excerpt.split(/<\/?mark>/).entries()) {
+        if (part === '') continue
+        if (index % 2 === 1) {
+          const mark = document.createElement('mark')
+          mark.className = 'bg-morningGlory/25 text-primary rounded px-0.5'
+          mark.textContent = part
+          excerptEl.append(mark)
+        } else {
+          excerptEl.append(document.createTextNode(part))
+        }
+      }
 
       link.append(titleEl, excerptEl)
       li.append(link)
@@ -174,8 +205,9 @@
       return score
     }
 
-    const runFallbackSearch = async (query: string) => {
+    const runFallbackSearch = async (query: string, isStale: () => boolean = () => false) => {
       const index = await loadFallbackIndex()
+      if (isStale()) return
       const terms = query.toLowerCase().split(/\s+/).filter(Boolean)
 
       const matches = index
@@ -203,11 +235,18 @@
         return
       }
 
+      // Searches resolve out of order, so a slow early query could otherwise land
+      // after a later one and overwrite fresher results. Only the newest may render.
+      searchGeneration += 1
+      const generation = searchGeneration
+      const isStale = () => generation !== searchGeneration
+
       renderMessage('Searching...')
 
       try {
         const pagefind = await loadPagefind()
         const result = await pagefind.search(query)
+        if (isStale()) return
 
         if (!result || result.results.length === 0) {
           renderMessage('No matches found.')
@@ -217,6 +256,7 @@
         const entries = await Promise.all(
           result.results.slice(0, 8).map((item: PagefindSearchResult) => item.data())
         )
+        if (isStale()) return
 
         status.textContent = `${result.results.length} match${result.results.length === 1 ? '' : 'es'}`
         list.replaceChildren(
@@ -225,54 +265,81 @@
           )
         )
       } catch {
+        if (isStale()) return
         try {
-          await runFallbackSearch(query)
+          await runFallbackSearch(query, isStale)
         } catch {
+          if (isStale()) return
           renderMessage('Search unavailable. Run pnpm build to generate Pagefind data.')
         }
       }
     }
 
-    toggle.addEventListener('click', () => {
-      if (panel.classList.contains('hidden')) {
-        openPanel()
-      } else {
-        closePanel()
-      }
-    })
+    // The document-level listeners below outlive the component's own DOM, and
+    // dataset.searchInitialized lives on a root that ClientRouter replaces on every
+    // navigation. Without a signal they would accumulate one set per page visit.
+    listenerCleanup?.abort()
+    listenerCleanup = new AbortController()
+    const { signal } = listenerCleanup
 
-    input.addEventListener('input', () => {
-      const value = input.value.trim()
-      if (debounceTimer) {
-        clearTimeout(debounceTimer)
-      }
+    toggle.addEventListener(
+      'click',
+      () => {
+        if (panel.classList.contains('hidden')) {
+          openPanel()
+        } else {
+          closePanel()
+        }
+      },
+      { signal }
+    )
 
-      debounceTimer = setTimeout(() => {
-        runSearch(value)
-      }, 180)
-    })
+    input.addEventListener(
+      'input',
+      () => {
+        const value = input.value.trim()
+        if (debounceTimer) {
+          clearTimeout(debounceTimer)
+        }
 
-    document.addEventListener('click', (event) => {
-      const target = event.target
-      if (!(target instanceof Node)) return
-      if (!root.contains(target)) {
-        closePanel()
-      }
-    })
+        debounceTimer = setTimeout(() => {
+          runSearch(value)
+        }, 180)
+      },
+      { signal }
+    )
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        closePanel()
-      }
-    })
+    document.addEventListener(
+      'click',
+      (event) => {
+        const target = event.target
+        if (!(target instanceof Node)) return
+        if (!root.contains(target)) {
+          closePanel()
+        }
+      },
+      { signal }
+    )
 
-    list.addEventListener('click', () => {
-      closePanel()
-    })
+    document.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key === 'Escape') {
+          closePanel()
+        }
+      },
+      { signal }
+    )
+
+    list.addEventListener('click', () => closePanel(), { signal })
 
     root.dataset.searchInitialized = 'true'
   }
 
   initPagefindSearch()
   document.addEventListener('astro:page-load', initPagefindSearch)
+  document.addEventListener('astro:before-swap', () => {
+    listenerCleanup?.abort()
+    listenerCleanup = null
+  })
 </script>

@@ -11,7 +11,11 @@ const extractScript = (source: string) => {
   return match[1]
 }
 
-export const runAstroInlineScript = (filePath: string, win: Window) => {
+export const runAstroInlineScript = (
+  filePath: string,
+  win: Window,
+  env: Record<string, unknown> = { BASE_URL: '/' }
+) => {
   const source = readText(filePath)
   const script = extractScript(source)
 
@@ -22,6 +26,16 @@ export const runAstroInlineScript = (filePath: string, win: Window) => {
     }
   }).outputText
 
-  const run = new Function(transpiled)
-  run.call(win)
+  // `new Function` builds a classic script body, so ES module syntax is a syntax
+  // error there. Astro inline scripts are plain browser scripts, but TypeScript
+  // still emits module output, so strip it back down to a classic script.
+  const classicScript = transpiled
+    // Marker TypeScript appends to flag its output as an ES module.
+    .replace(/^\s*export\s*\{\s*\}\s*;?\s*$/gm, '')
+    // Components legitimately read `import.meta.env.BASE_URL`; route it through a
+    // parameter, since `import.meta` is only valid inside a module.
+    .replaceAll('import.meta', '__importMeta')
+
+  const run = new Function('__importMeta', classicScript)
+  run.call(win, { env })
 }

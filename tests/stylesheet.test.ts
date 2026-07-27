@@ -17,7 +17,7 @@ describe('PDF Stylesheet', () => {
     const cssPath = path.join(rootDir, 'scripts/pdf-theme.css')
     if (!fs.existsSync(cssPath)) return // Skip if file not created yet
     const content = fs.readFileSync(cssPath, 'utf8')
-    
+
     // Check for hex colors that are not #000, #fff, #eee, #f9f9f9, etc.
     // This is a simple check for common color patterns.
     const colorMatches = content.match(/#[0-9a-fA-F]{3,6}/g)

@@ -5,7 +5,7 @@ import mermaid from 'astro-mermaid'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-spotlite.netlify.app',
+  site: 'https://hellotham.com',
   base: '/spotlite/',
   fonts: [
     {
@@ -31,7 +31,7 @@ export default defineConfig({
     mermaid(),
     UnoCSS(),
     sitemap({
-      filter: (page) => page !== 'https://astro-spotlite.netlify.app/404/'
+      filter: (page) => page !== 'https://hellotham.com/spotlite/404/'
     })
   ]
 })

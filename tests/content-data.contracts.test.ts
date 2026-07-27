@@ -43,14 +43,14 @@ describe('content data contracts', () => {
 
   it('page content entries have an order property in frontmatter', () => {
     const pagesDir = path.join(rootDir, 'src/content/page')
-    const files = fs.readdirSync(pagesDir).filter(f => f.endsWith('.md'))
-    
+    const files = fs.readdirSync(pagesDir).filter((f) => f.endsWith('.md'))
+
     expect(files.length).toBeGreaterThan(0)
-    
+
     for (const file of files) {
       const filePath = path.join(pagesDir, file)
       const content = fs.readFileSync(filePath, 'utf8')
-      
+
       // Check for 'order: [number]' in the frontmatter
       const hasOrder = /^order:\s+\d+$/m.test(content)
       expect(hasOrder, `File ${file} is missing 'order' in frontmatter`).toBe(true)
@@ -72,7 +72,9 @@ describe('content data contracts', () => {
 
       expect(/^section:\s+.+$/m.test(content), `File ${file} is missing 'section'`).toBe(true)
       expect(/^item:\s+.+$/m.test(content), `File ${file} is missing 'item'`).toBe(true)
-      expect(/^description:\s+.+$/m.test(content), `File ${file} is missing 'description'`).toBe(true)
+      expect(/^description:\s+.+$/m.test(content), `File ${file} is missing 'description'`).toBe(
+        true
+      )
     }
   })
 
@@ -91,7 +93,9 @@ describe('content data contracts', () => {
 
       expect(/^section:\s+.+$/m.test(content), `File ${file} is missing 'section'`).toBe(true)
       expect(/^item:\s+.+$/m.test(content), `File ${file} is missing 'item'`).toBe(true)
-      expect(/^description:\s+.+$/m.test(content), `File ${file} is missing 'description'`).toBe(true)
+      expect(/^description:\s+.+$/m.test(content), `File ${file} is missing 'description'`).toBe(
+        true
+      )
     }
   })
 })

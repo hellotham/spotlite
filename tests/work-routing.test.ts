@@ -11,7 +11,7 @@ describe('Work Routing', () => {
   it('dynamic route file should exist and have getStaticPaths', () => {
     const filePath = path.join(rootDir, 'src/pages/work/[...id].astro')
     expect(fs.existsSync(filePath)).toBe(true)
-    
+
     const content = fs.readFileSync(filePath, 'utf8')
     expect(content).toContain('export async function getStaticPaths()')
     expect(content).toContain("getCollection('work')")

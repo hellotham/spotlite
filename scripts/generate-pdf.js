@@ -13,7 +13,9 @@ const workDir = path.join(rootDir, 'src/content/work')
 const educationDir = path.join(rootDir, 'src/content/education')
 const indexFile = path.join(rootDir, 'src/pages/index.md')
 const configFile = path.join(rootDir, 'src/config.json')
-const outputPath = path.join(rootDir, 'public/cv.pdf')
+// Overridable so tests can generate to a scratch location instead of overwriting the
+// tracked public/cv.pdf.
+const outputPath = process.env.CV_PDF_OUTPUT || path.join(rootDir, 'public/cv.pdf')
 const stylesheetPath = path.join(rootDir, 'scripts/pdf-theme.css')
 
 const formatDateRange = (start, end) => {
@@ -41,15 +43,16 @@ async function generatePdf() {
   }
 
   // 3. Read all markdown files in src/content/page/
-  const files = fs.readdirSync(pagesDir).filter(f => f.endsWith('.md'))
+  const files = fs.readdirSync(pagesDir).filter((f) => f.endsWith('.md'))
   console.log(`Found ${files.length} pages in collection.`)
 
   // 4. Parse collections helper
   const getCollectionData = (dir) => {
     if (!fs.existsSync(dir)) return []
-    return fs.readdirSync(dir)
-      .filter(f => f.endsWith('.md'))
-      .map(file => {
+    return fs
+      .readdirSync(dir)
+      .filter((f) => f.endsWith('.md'))
+      .map((file) => {
         const content = fs.readFileSync(path.join(dir, file), 'utf8')
         return matter(content)
       })
@@ -70,50 +73,58 @@ async function generatePdf() {
   })
 
   // 5. Parse and sort pages by 'order'
-  const pages = files.map(file => {
-    const filePath = path.join(pagesDir, file)
-    const content = fs.readFileSync(filePath, 'utf8')
-    let { data, content: body } = matter(content)
-    
-    const pageId = file.replace('.md', '')
-    
-    // Inject collection data if it's the work or education page
-    if (pageId === 'work' && workItems.length > 0) {
-      const workMd = workItems.map(item => {
-        const dateStr = formatDateRange(item.data.startyear, item.data.endyear)
-        const typeStr = item.data.type === 'consulting' ? ' (Consulting)' : ''
-        return `### ${item.data.role}${typeStr}\n**${item.data.company}** | *${dateStr}*\n\n${item.content}`
-      }).join('\n\n')
-      body = body + '\n\n' + workMd
-    } else if (pageId === 'education' && educationItems.length > 0) {
-      const eduMd = educationItems.map(item => {
-        const dateStr = formatDateRange(item.data.startyear, item.data.endyear)
-        return `### ${item.data.degree}\n**${item.data.institution}** | *${dateStr}*\n\n${item.content}`
-      }).join('\n\n')
-      body = body + '\n\n' + eduMd
-    }
+  const pages = files
+    .map((file) => {
+      const filePath = path.join(pagesDir, file)
+      const content = fs.readFileSync(filePath, 'utf8')
+      let { data, content: body } = matter(content)
 
-    return {
-      id: pageId,
-      order: data.order || 999,
-      title: data.title,
-      description: data.description,
-      body
-    }
-  }).sort((a, b) => a.order - b.order)
+      const pageId = file.replace('.md', '')
+
+      // Inject collection data if it's the work or education page
+      if (pageId === 'work' && workItems.length > 0) {
+        const workMd = workItems
+          .map((item) => {
+            const dateStr = formatDateRange(item.data.startyear, item.data.endyear)
+            const typeStr = item.data.type === 'consulting' ? ' (Consulting)' : ''
+            return `### ${item.data.role}${typeStr}\n**${item.data.company}** | *${dateStr}*\n\n${item.content}`
+          })
+          .join('\n\n')
+        body = body + '\n\n' + workMd
+      } else if (pageId === 'education' && educationItems.length > 0) {
+        const eduMd = educationItems
+          .map((item) => {
+            const dateStr = formatDateRange(item.data.startyear, item.data.endyear)
+            return `### ${item.data.degree}\n**${item.data.institution}** | *${dateStr}*\n\n${item.content}`
+          })
+          .join('\n\n')
+        body = body + '\n\n' + eduMd
+      }
+
+      return {
+        id: pageId,
+        order: data.order || 999,
+        title: data.title,
+        description: data.description,
+        body
+      }
+    })
+    .sort((a, b) => a.order - b.order)
 
   // 6. Insert home page at the beginning
   const allPages = [homePage, ...pages]
 
   // 6. Concatenate body content
   // We add title, description and no forced page breaks
-  const combinedMarkdown = allPages.map(page => {
-    let header = `# ${page.title}\n\n`
-    if (page.description) {
-      header += `*${page.description}*\n\n`
-    }
-    return `<!-- page: ${page.id} -->\n\n${header}${page.body}`
-  }).join('\n\n')
+  const combinedMarkdown = allPages
+    .map((page) => {
+      let header = `# ${page.title}\n\n`
+      if (page.description) {
+        header += `*${page.description}*\n\n`
+      }
+      return `<!-- page: ${page.id} -->\n\n${header}${page.body}`
+    })
+    .join('\n\n')
 
   // 7. Generate PDF
   console.log('Converting Markdown to PDF...')

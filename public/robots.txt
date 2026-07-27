@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://astro-spotlite.netlify.app/sitemap-index.xml
+Sitemap: https://hellotham.com/spotlite/sitemap-index.xml

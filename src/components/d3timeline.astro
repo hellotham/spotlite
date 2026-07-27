@@ -23,10 +23,14 @@ const timelineData = processTimelineData(workEntries, educationEntries)
   import * as d3 from 'd3'
   import { type TimelineEntry, formatDateRange } from '../utils/timeline'
 
+  let teardown: (() => void) | null = null
+
   const setupTimeline = () => {
     const container = document.getElementById('timeline-container')
     const tooltip = d3.select('#timeline-tooltip')
-    if (!container) return
+    // astro:page-load also fires on the initial load, so without this guard the
+    // module-scope call below renders the timeline twice on every page view.
+    if (!container || container.dataset.initialized === 'true') return
 
     const data: TimelineEntry[] = JSON.parse(container.getAttribute('data-timeline') || '[]')
 
@@ -98,7 +102,10 @@ const timelineData = processTimelineData(workEntries, educationEntries)
 
       if (!isVertical) {
         // Horizontal Layout (Desktop)
-        const xScale = d3.scaleLinear().domain([minYear, maxYear]).range([0, innerWidth])
+        const xScale = d3
+          .scaleLinear()
+          .domain([minYear, maxYear + 1])
+          .range([0, innerWidth])
 
         const yScale = d3
           .scaleBand<number>()
@@ -119,7 +126,10 @@ const timelineData = processTimelineData(workEntries, educationEntries)
           .attr('x', (d) => xScale(d.startYear))
           .attr('y', (_d, i) => yScale(i) || 0)
           .attr('width', (d) => {
-            const end = d.startYear === d.endYear && !d.isOngoing ? d.endYear + 1 : d.endYear
+            // Widen any degenerate range. Ongoing entries get endYear forced to the
+            // current year, so an ongoing entry starting this year would otherwise
+            // render with zero width and become invisible and unclickable.
+            const end = d.startYear === d.endYear ? d.endYear + 1 : d.endYear
             return xScale(end) - xScale(d.startYear)
           })
           .attr('height', yScale.bandwidth())
@@ -167,9 +177,26 @@ const timelineData = processTimelineData(workEntries, educationEntries)
           .on('click', function (_event: MouseEvent, d) {
             window.location.href = d.slug
           })
+          // Bars navigate on click, so they must be reachable and activatable by
+          // keyboard too, and carry their own accessible name.
+          .attr('tabindex', 0)
+          .attr('role', 'link')
+          .attr('aria-label', (d) => {
+            const range = formatDateRange(d.startYear, d.isOngoing ? undefined : d.endYear)
+            return `${d.title}, ${d.organization}, ${range}`
+          })
+          .on('keydown', function (event: KeyboardEvent, d) {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault()
+              window.location.href = d.slug
+            }
+          })
       } else {
         // Vertical Layout (Mobile)
-        const yScale = d3.scaleLinear().domain([minYear, maxYear]).range([0, innerHeight])
+        const yScale = d3
+          .scaleLinear()
+          .domain([minYear, maxYear + 1])
+          .range([0, innerHeight])
 
         const xScale = d3
           .scaleBand<number>()
@@ -197,7 +224,10 @@ const timelineData = processTimelineData(workEntries, educationEntries)
           .attr('y', (d) => yScale(d.startYear))
           .attr('width', xScale.bandwidth())
           .attr('height', (d) => {
-            const end = d.startYear === d.endYear && !d.isOngoing ? d.endYear + 1 : d.endYear
+            // Widen any degenerate range. Ongoing entries get endYear forced to the
+            // current year, so an ongoing entry starting this year would otherwise
+            // render with zero width and become invisible and unclickable.
+            const end = d.startYear === d.endYear ? d.endYear + 1 : d.endYear
             return yScale(end) - yScale(d.startYear)
           })
           .attr('fill', (d) =>
@@ -244,15 +274,40 @@ const timelineData = processTimelineData(workEntries, educationEntries)
           .on('click', function (_event: MouseEvent, d) {
             window.location.href = d.slug
           })
+          // Bars navigate on click, so they must be reachable and activatable by
+          // keyboard too, and carry their own accessible name.
+          .attr('tabindex', 0)
+          .attr('role', 'link')
+          .attr('aria-label', (d) => {
+            const range = formatDateRange(d.startYear, d.isOngoing ? undefined : d.endYear)
+            return `${d.title}, ${d.organization}, ${range}`
+          })
+          .on('keydown', function (event: KeyboardEvent, d) {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault()
+              window.location.href = d.slug
+            }
+          })
       }
     }
 
     render()
     window.addEventListener('resize', render)
+
+    // ClientRouter replaces the container on every navigation, so dataset.initialized
+    // cannot see the previous element and setup runs again. Drop the old listener so
+    // stale closures stop re-rendering into detached DOM.
+    teardown = () => window.removeEventListener('resize', render)
+
+    container.dataset.initialized = 'true'
   }
 
   setupTimeline()
   document.addEventListener('astro:page-load', setupTimeline)
+  document.addEventListener('astro:before-swap', () => {
+    teardown?.()
+    teardown = null
+  })
 </script>
 
 <style>

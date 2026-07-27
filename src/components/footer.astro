@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content'
 import Container from './container.astro'
 
-let pages = await getCollection('page')
+let pages = await getCollection('page', ({ data }) => !data.draft)
 pages = pages.sort((a, b) => a.data.order - b.data.order)
 
 const year = new Date().getFullYear()

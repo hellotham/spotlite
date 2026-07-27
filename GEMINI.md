@@ -1,6 +1,6 @@
 # Spotlite - Astro Personal Web Site Template
 
-Spotlite is a modern, production-ready personal website template built with **Astro** and **UnoCSS**. It is designed to be highly performant, easy to customise, and simple to deploy on platforms like Netlify.
+Spotlite is a modern, production-ready personal website template built with **Astro** and **UnoCSS**. It is designed to be highly performant, easy to customise, and simple to deploy as a static site.
 
 ## 🛠 Tech Stack
 
@@ -17,21 +17,21 @@ Spotlite is a modern, production-ready personal website template built with **As
 
 ## 🚀 Key Commands
 
-| Command | Action |
-| :--- | :--- |
-| `pnpm install` | Install dependencies |
-| `pnpm run dev` | Start local development server (default: `localhost:4321`) |
-| `pnpm run build` | Build production site, generate PDF, and Pagefind index |
-| `pnpm run pdf` | Manually generate CV PDF from content collections |
-| `pnpm run search:index` | Run Pagefind indexing against `./dist/` |
-| `pnpm run preview` | Preview the production build locally |
-| `pnpm run test` | Run the Vitest test suite once |
-| `pnpm run test:watch` | Run Vitest in watch mode |
-| `pnpm run test:coverage` | Run tests and generate a v8 coverage report |
-| `pnpm run lint` | Run both Prettier and ESLint checks with auto-fixes |
-| `pnpm run lint:prettier` | Format files with Prettier |
-| `pnpm run lint:eslint` | Lint and fix files with ESLint |
-| `pnpm run refresh` | Upgrade Astro and all dependencies to latest versions |
+| Command                  | Action                                                     |
+| :----------------------- | :--------------------------------------------------------- |
+| `pnpm install`           | Install dependencies                                       |
+| `pnpm run dev`           | Start local development server (default: `localhost:4321`) |
+| `pnpm run build`         | Build production site, generate PDF, and Pagefind index    |
+| `pnpm run pdf`           | Manually generate CV PDF from content collections          |
+| `pnpm run search:index`  | Run Pagefind indexing against `./dist/`                    |
+| `pnpm run preview`       | Preview the production build locally                       |
+| `pnpm run test`          | Run the Vitest test suite once                             |
+| `pnpm run test:watch`    | Run Vitest in watch mode                                   |
+| `pnpm run test:coverage` | Run tests and generate a v8 coverage report                |
+| `pnpm run lint`          | Run both Prettier and ESLint checks with auto-fixes        |
+| `pnpm run lint:prettier` | Format files with Prettier                                 |
+| `pnpm run lint:eslint`   | Lint and fix files with ESLint                             |
+| `pnpm run refresh`       | Upgrade Astro and all dependencies to latest versions      |
 
 ## 📂 Project Structure
 
@@ -67,7 +67,7 @@ This project uses the **Astro Content Layer API** (v6+) for managing data:
 
 ## 🚢 Deployment
 
-The project is pre-configured for **Netlify** via `netlify.toml`. It generates a static site by default (SSG).
+The project is deployed to **GitHub Pages** via `.github/workflows/deploy.yml`. It generates a static site by default (SSG), served from the `/spotlite/` base path.
 
 ## 🔎 Search Behavior
 

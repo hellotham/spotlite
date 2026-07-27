@@ -11,7 +11,7 @@ describe('PDF Stylesheet Refinement', () => {
   it('should not have padding in .markdown-body', () => {
     const cssPath = path.join(rootDir, 'scripts/pdf-theme.css')
     const content = fs.readFileSync(cssPath, 'utf8')
-    
+
     // Check that .markdown-body does not have padding
     const paddingMatch = /\.markdown-body\s*{[^}]*padding:[^}]*}/.test(content)
     expect(paddingMatch).toBe(false)

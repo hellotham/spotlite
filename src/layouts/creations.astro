@@ -9,6 +9,12 @@ const creations = await getCollection('creation')
 const sections = [...new Set(creations.map((c) => c.data.section))]
 const creationsList = sections.map((section) => ({
   section,
+  // Each section heading needs its own id: aria-labelledby resolves to the first
+  // matching element, so a shared id makes every landmark announce one name.
+  id: `creations-${section
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')}`,
   items: creations.filter((c) => c.data.section === section).map((c) => c.data)
 }))
 ---
@@ -32,11 +38,11 @@ const creationsList = sections.map((section) => ({
                 {
                   creationsList.map((section) => (
                     <section
-                      aria-labelledby=':R6l6:'
+                      aria-labelledby={section.id}
                       class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'
                     >
                       <div class='gap-y-8 grid grid-cols-1 items-baseline md:grid-cols-4'>
-                        <h2 id=':R6l6:' class='text-sm text-accent font-semibold font-serif'>
+                        <h2 id={section.id} class='text-sm text-accent font-semibold font-serif'>
                           {section.section}
                         </h2>
                         <div class='md:col-span-3'>

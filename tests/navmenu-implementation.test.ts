@@ -14,9 +14,10 @@ const readComponent = (relativePath: string) => {
 describe('NavMenu Implementation', () => {
   it('navmenu should use the page collection instead of the menu collection', () => {
     const content = readComponent('src/components/navmenu.astro')
-    
+
     // Expect usage of 'page' collection
-    expect(content).toContain("getCollection('page')")
+    // Tolerates the draft filter argument: getCollection('page', ...)
+    expect(content).toContain("getCollection('page'")
     // Expect NO usage of 'menu' collection
     expect(content).not.toContain("getCollection('menu')")
   })
@@ -28,16 +29,17 @@ describe('NavMenu Implementation', () => {
 
   it('navmenu should derive the href dynamically from item.id', () => {
     const content = readComponent('src/components/navmenu.astro')
-    expect(content).toContain('href={`/${item.id}`}')
+    expect(content).toContain('href={`${import.meta.env.BASE_URL}${item.id}/`}')
   })
 })
 
 describe('Footer Implementation', () => {
   it('footer should use the page collection instead of the menu collection', () => {
     const content = readComponent('src/components/footer.astro')
-    
+
     // Expect usage of 'page' collection
-    expect(content).toContain("getCollection('page')")
+    // Tolerates the draft filter argument: getCollection('page', ...)
+    expect(content).toContain("getCollection('page'")
     // Expect NO usage of 'menu' collection
     expect(content).not.toContain("getCollection('menu')")
   })
@@ -49,6 +51,6 @@ describe('Footer Implementation', () => {
 
   it('footer should derive the href dynamically from item.id', () => {
     const content = readComponent('src/components/footer.astro')
-    expect(content).toContain('href={`/${item.id}`}')
+    expect(content).toContain('href={`${import.meta.env.BASE_URL}${item.id}/`}')
   })
 })

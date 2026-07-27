@@ -11,14 +11,17 @@ describe('Work History List Page', () => {
   it('Work History content page and layout should exist', () => {
     const contentPath = path.join(rootDir, 'src/content/page/work.md')
     const layoutPath = path.join(rootDir, 'src/layouts/work.astro')
-    
+
     expect(fs.existsSync(contentPath)).toBe(true)
     expect(fs.existsSync(layoutPath)).toBe(true)
-    
+
     const content = fs.readFileSync(layoutPath, 'utf8')
     expect(content).toContain("getCollection('work')")
     expect(content).toContain('role')
     expect(content).toContain('company')
-    expect(content).toContain('datespan')
+    // The date range is derived from startyear/endyear rather than a stored datespan.
+    expect(content).toContain('startyear')
+    expect(content).toContain('endyear')
+    expect(content).toContain('formatDateRange')
   })
 })

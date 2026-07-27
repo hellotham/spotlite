@@ -6,8 +6,6 @@ Spotlite is a beautiful personal website template built with Astro and UnoCSS, i
 a similar sounding template from the Tailwind CSS team. Best of all, it's open
 source (MIT licence) so feel free to use and modify it!
 
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hellotham/spotlite&utm_medium=social&utm_source=github)
-
 It uses the following technologies:
 
 - [Astro](https://astro.build)
@@ -51,7 +49,7 @@ Spotlite uses all the latest and greatest features in Astro (>v6) including:
 
 It’s production-ready and easy to customise, making it the perfect starting point for your own personal website.
 
-It's also simple to deploy on Netlify or similar.
+It is deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 
 ## 🚀 Project Structure
 
@@ -60,7 +58,6 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── astro.config.mjs
-├── netlify.toml
 ├── package.json
 ├── uno.config.ts
 ├── public/
@@ -86,20 +83,20 @@ Inside of your Astro project, you'll see the following folders and files:
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server (default: `localhost:4321`) |
+| Command                    | Action                                                               |
+| :------------------------- | :------------------------------------------------------------------- |
+| `pnpm install`             | Installs dependencies                                                |
+| `pnpm run dev`             | Starts local dev server (default: `localhost:4321`)                  |
 | `pnpm run build`           | Builds site, generates PDF, and Pagefind index in `./dist/pagefind/` |
-| `pnpm run pdf`             | Manually trigger CV PDF generation               |
-| `pnpm run search:index`    | Runs Pagefind indexing against `./dist/`         |
-| `pnpm run preview`         | Preview your build locally, before deploying     |
-| `pnpm run test`            | Run Vitest test suite once                        |
-| `pnpm run test:watch`      | Run Vitest in watch mode                          |
-| `pnpm run test:coverage`   | Run tests with v8 coverage report                 |
-| `pnpm run lint`            | Run Prettier and ESLint with auto-fixes           |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm run pdf`             | Manually trigger CV PDF generation                                   |
+| `pnpm run search:index`    | Runs Pagefind indexing against `./dist/`                             |
+| `pnpm run preview`         | Preview your build locally, before deploying                         |
+| `pnpm run test`            | Run Vitest test suite once                                           |
+| `pnpm run test:watch`      | Run Vitest in watch mode                                             |
+| `pnpm run test:coverage`   | Run tests with v8 coverage report                                    |
+| `pnpm run lint`            | Run Prettier and ESLint with auto-fixes                              |
+| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check`                     |
+| `pnpm run astro -- --help` | Get help using the Astro CLI                                         |
 
 ## 🔎 Search Notes
 

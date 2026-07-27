@@ -5,7 +5,7 @@ module.exports = {
   ...require('prettier-config-standard'),
   useTabs: false,
   singleQuote: true,
-  trailingComma: "none",
+  trailingComma: 'none',
   semi: false,
   printWidth: 100,
   // pluginSearchDirs: [__dirname],

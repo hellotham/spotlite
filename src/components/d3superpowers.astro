@@ -25,6 +25,8 @@ import superpowers from '../superpowers.json'
     code?: string
   }
 
+  let teardown: (() => void) | null = null
+
   const setupSuperpowers = () => {
     const container = document.getElementById('superpowers-container')
     const tooltip = d3.select('#superpowers-tooltip')
@@ -183,12 +185,21 @@ import superpowers from '../superpowers.json'
     // Resize listener
     window.addEventListener('resize', renderChart)
 
+    // ClientRouter replaces the container on every navigation, so dataset.initialized
+    // cannot see the previous element and setup runs again. Drop the old listener so
+    // stale closures stop re-rendering into detached DOM.
+    teardown = () => window.removeEventListener('resize', renderChart)
+
     container.dataset.initialized = 'true'
   }
 
   // Initialize on page load
   setupSuperpowers()
   document.addEventListener('astro:page-load', setupSuperpowers)
+  document.addEventListener('astro:before-swap', () => {
+    teardown?.()
+    teardown = null
+  })
 </script>
 
 <style>

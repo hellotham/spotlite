@@ -6,7 +6,8 @@ export async function GET(context) {
   return rss({
     title: 'Spotlite',
     description: 'Personal Web Site',
-    site: context.site,
+    // The channel link is the site home, which lives under the configured base.
+    site: new URL(import.meta.env.BASE_URL, context.site),
     items: article.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
