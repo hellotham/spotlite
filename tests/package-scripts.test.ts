@@ -10,7 +10,10 @@ const rootDir = path.resolve(__dirname, '..')
 describe('Package Scripts', () => {
   it('should have a pdf script', () => {
     const pkg = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'))
-    expect(pkg.scripts.pdf).toBe('node scripts/generate-pdf.js')
+    expect(pkg.scripts.pdf).toContain('node scripts/generate-pdf.js')
+    // The generator renders the built /cv routes, so it must build first: running it
+    // against a stale dist would silently emit an outdated CV.
+    expect(pkg.scripts.pdf).toContain('pnpm run build')
   })
 
   it('should have an updated build script', () => {

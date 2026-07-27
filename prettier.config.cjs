@@ -16,6 +16,15 @@ module.exports = {
       options: {
         parser: 'astro'
       }
+    },
+    {
+      // Double quotes in CSS. Paged.js cannot parse single-quoted strings inside
+      // @page margin boxes, so `content: counter(page) " of " counter(pages)` in
+      // public/cv-print.css breaks the CV footer if prettier rewrites the quotes.
+      files: '*.css',
+      options: {
+        singleQuote: false
+      }
     }
   ]
 }

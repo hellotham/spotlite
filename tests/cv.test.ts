@@ -1,0 +1,157 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { describe, expect, it, vi } from 'vitest'
+
+// src/utils/cv.ts imports astro:content for buildCv; the pure helpers under test here
+// do not touch it, but the module graph still has to resolve outside Astro.
+vi.mock('astro:content', () => ({ getCollection: vi.fn(async () => []) }))
+
+const { formatDateRange, renderInline } = await import('../src/utils/cv')
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const rootDir = path.resolve(__dirname, '..')
+
+const readJson = (relativePath: string) =>
+  JSON.parse(fs.readFileSync(path.join(rootDir, relativePath), 'utf8'))
+
+const readText = (relativePath: string) => fs.readFileSync(path.join(rootDir, relativePath), 'utf8')
+
+describe('CV configuration', () => {
+  const cv = readJson('src/cv.json')
+
+  it('supplies the contact details a professional CV requires', () => {
+    // These do not exist anywhere else in the repo: the site config has no email,
+    // phone or location, and its `title` is a website tagline, not a CV headline.
+    expect(cv.name).toBeTruthy()
+    expect(cv.headline).toBeTruthy()
+    expect(cv.summary).toBeTruthy()
+    expect(cv.contact.email).toMatch(/@/)
+    expect(cv.contact.location).toBeTruthy()
+    expect(cv.contact.linkedin).toMatch(/^https:\/\//)
+  })
+
+  it('does not reuse the website tagline as the CV headline', () => {
+    // "artist, consultant, cyclist, designer, musician, photographer, world traveller"
+    // is site personality, not a professional headline.
+    const siteConfig = readJson('src/config.json')
+    expect(cv.headline).not.toBe(siteConfig.title)
+  })
+})
+
+describe('CV inline rendering', () => {
+  it('renders the inline markdown that appears in work bullets', () => {
+    expect(renderInline('**"Flexible Edges"**: plug-in solutions')).toBe(
+      '<strong>&quot;Flexible Edges&quot;</strong>: plug-in solutions'
+    )
+  })
+
+  it('escapes HTML before applying markdown, so bullets cannot inject markup', () => {
+    expect(renderInline('<img src=x onerror=alert(1)>')).not.toContain('<img')
+    expect(renderInline('AT&T/NCR')).toBe('AT&amp;T/NCR')
+  })
+
+  it('formats date ranges the way a CV expects', () => {
+    expect(formatDateRange(2016)).toBe('2016 – Present')
+    expect(formatDateRange(2011, 2016)).toBe('2011 – 2016')
+    expect(formatDateRange(2011, 2011)).toBe('2011')
+  })
+})
+
+describe('CV print routes', () => {
+  const onepage = readText('dist/cv/onepage/index.html')
+  const full = readText('dist/cv/full/index.html')
+
+  it('are excluded from search engines and the sitemap', () => {
+    for (const html of [onepage, full]) {
+      expect(html).toMatch(/<meta name="robots" content="noindex, nofollow">/)
+    }
+    const sitemap = readText('dist/sitemap-0.xml')
+    expect(sitemap).not.toContain('/cv/')
+  })
+
+  it('omit website-only content that does not belong on a CV', () => {
+    // The previous pipeline concatenated every page, so the PDF carried hi-fi gear,
+    // cameras, music videos and blog listings.
+    const forbidden = [
+      'Things I use and love',
+      'Things I have created',
+      'outrageous actualiser',
+      'AI Agents have skills',
+      'Superpowers'
+    ]
+    for (const html of [onepage, full]) {
+      for (const phrase of forbidden) {
+        expect(html).not.toContain(phrase)
+      }
+    }
+  })
+
+  it('carry the substance a CV needs', () => {
+    for (const html of [onepage, full]) {
+      expect(html).toContain('Professional Experience')
+      expect(html).toContain('Education')
+      expect(html).toContain('Core Competencies')
+      expect(html).toContain('Hello Tham')
+    }
+  })
+
+  it('present the full history in the full CV and a curated subset in the one-pager', () => {
+    const roleCount = (html: string) => (html.match(/class="cv-role"/g) ?? []).length
+    expect(roleCount(full)).toBeGreaterThan(roleCount(onepage))
+    // Nothing is silently dropped: the one-pager still accounts for earlier roles.
+    expect(onepage).toContain('Earlier career')
+  })
+
+  it('keeps the print stylesheet free of media queries', () => {
+    // The CV is a print-only document; @media rules here only ever caused trouble
+    // (they crashed the previous pagination library) and the screen preview does not
+    // need them.
+    const css = readText('public/cv-print.css')
+    expect(css).not.toMatch(/^@media/m)
+  })
+
+  it('keeps layout single-column for ATS parsing', () => {
+    // Multi-column body layouts are read out of order by applicant tracking systems.
+    // The competency grid is exempt: each item is a self-contained label/rating line.
+    const css = readText('public/cv-print.css')
+    const columnRules = css.match(/column-count:\s*\d+/g) ?? []
+    expect(columnRules.length).toBe(1)
+    expect(css).toContain('.cv-competencies')
+  })
+})
+
+describe('Generated CV PDFs', () => {
+  const pdfPath = (name: string) => path.join(rootDir, 'public', name)
+
+  const pageCount = (name: string) => {
+    const contents = fs.readFileSync(pdfPath(name)).toString('latin1')
+    return (contents.match(/\/Type\s*\/Page[^s]/g) ?? []).length
+  }
+
+  it('produces both documents', () => {
+    expect(fs.existsSync(pdfPath('cv-onepage.pdf'))).toBe(true)
+    expect(fs.existsSync(pdfPath('cv.pdf'))).toBe(true)
+  })
+
+  it('keeps the one-pager to exactly one page', () => {
+    expect(pageCount('cv-onepage.pdf')).toBe(1)
+  })
+
+  it('keeps the full CV to a sensible length', () => {
+    const pages = pageCount('cv.pdf')
+    expect(pages).toBeGreaterThan(1)
+    expect(pages).toBeLessThanOrEqual(4)
+  })
+
+  it('embeds real text rather than page images, so the PDFs can be parsed', () => {
+    // The single most important ATS property: a scanned or rasterised CV extracts
+    // nothing. Text-bearing PDFs carry font objects and text-showing operators.
+    for (const name of ['cv-onepage.pdf', 'cv.pdf']) {
+      const contents = fs.readFileSync(pdfPath(name)).toString('latin1')
+      expect(contents).toMatch(/\/Type\s*\/Font/)
+      expect(contents).not.toMatch(/\/Subtype\s*\/Image/)
+    }
+  })
+})

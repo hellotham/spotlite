@@ -1,0 +1,8 @@
+---
+import CvLayout from '../../layouts/cv.astro'
+import { buildCv } from '../../utils/cv'
+
+const cv = await buildCv('full')
+---
+
+<CvLayout {cv} variant='full' documentTitle={`${cv.name} — Curriculum Vitae`} />

@@ -1,0 +1,194 @@
+---
+import { Font } from 'astro:assets'
+import { renderInline, type CvModel, type CvVariant } from '../utils/cv'
+
+interface Props {
+  cv: CvModel
+  variant: CvVariant
+  documentTitle: string
+}
+
+const { cv, variant, documentTitle } = Astro.props
+---
+
+<!doctype html>
+<html lang='en' data-cv-variant={variant}>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width,initial-scale=1' />
+    <title>{documentTitle}</title>
+    {/* Never index the print routes: they duplicate site content for PDF rendering. */}
+    <meta name='robots' content='noindex, nofollow' />
+    <Font cssVariable='--font-noto-sans' preload />
+    <Font cssVariable='--font-noto-serif' preload />
+    {
+      /* Standalone print stylesheet, served from public/ rather than bundled, so the
+    CV renders identically regardless of the site's CSS pipeline. */
+    }
+    <link rel='stylesheet' href={`${import.meta.env.BASE_URL}cv-print.css`} />
+    {
+      /*
+      Astro/UnoCSS inject the site bundle into every page, including these. Drop it:
+      the CV must render from cv-print.css alone, or a site styling change silently
+      restyles the PDF. Inline and non-module so it runs before first paint.
+    */
+    }
+    <script is:inline>
+      for (const link of document.querySelectorAll('link[rel="stylesheet"]')) {
+        if (link.getAttribute('href')?.includes('/_astro/')) link.remove()
+      }
+      // The generator re-renders at a lower density when the last page would come out
+      // nearly empty. Read before first paint so measurements reflect the final size.
+      const density = new URLSearchParams(location.search).get('density')
+      if (density) document.documentElement.style.setProperty('--cv-density', density)
+    </script>
+  </head>
+  <body>
+    <article class='cv'>
+      <header class='cv-header'>
+        <h1 class='cv-name'>{cv.name}</h1>
+        <p class='cv-headline'>{cv.headline}</p>
+        <ul class='cv-contact'>
+          {
+            cv.contact.map((item) => (
+              <li>
+                {item.href ? <a href={item.href}>{item.value}</a> : <span>{item.value}</span>}
+              </li>
+            ))
+          }
+        </ul>
+      </header>
+
+      <section class='cv-section'>
+        <h2>Profile</h2>
+        <p class='cv-summary'>{cv.summary}</p>
+      </section>
+
+      <section class='cv-section'>
+        <h2>Key Achievements</h2>
+        <ul class='cv-achievements'>
+          {
+            cv.achievements.map((achievement) => (
+              <li>
+                <strong>{achievement.title}</strong> — {achievement.detail}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class='cv-section'>
+        <h2>Professional Experience</h2>
+        {
+          cv.roles.map((role) => (
+            <div class='cv-role'>
+              <div class='cv-role-head'>
+                <h3 class='cv-role-title'>
+                  {role.role}
+                  {role.type === 'consulting' && <span class='cv-role-type'> (Consulting)</span>}
+                </h3>
+                <span class='cv-dates'>{role.dateRange}</span>
+              </div>
+              <p class='cv-company'>{role.company}</p>
+              {role.bullets.length > 0 && (
+                <ul class='cv-bullets'>
+                  {role.bullets.map((bullet) => (
+                    <li set:html={renderInline(bullet)} />
+                  ))}
+                </ul>
+              )}
+              {role.subRoles.map((sub) => (
+                <div class='cv-subrole'>
+                  <h4 class='cv-subrole-title'>
+                    {sub.title}
+                    {sub.year && <span class='cv-subrole-year'> · {sub.year}</span>}
+                  </h4>
+                  <ul class='cv-bullets'>
+                    {sub.bullets.map((bullet) => (
+                      <li set:html={renderInline(bullet)} />
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ))
+        }
+
+        {
+          cv.earlierRoles.length > 0 && (
+            <div class='cv-earlier'>
+              <h3 class='cv-role-title'>Earlier career</h3>
+              <ul class='cv-earlier-list'>
+                {cv.earlierRoles.map((role) => (
+                  <li>
+                    <span class='cv-earlier-role'>{role.role}</span>
+                    <span class='cv-earlier-company'>{role.company}</span>
+                    <span class='cv-dates cv-earlier-dates'>{role.dateRange}</span>
+                  </li>
+                ))}
+              </ul>
+              {cv.earlierCompanies.length > 0 && (
+                <p class='cv-earlier-more'>Earlier roles at {cv.earlierCompanies.join(', ')}.</p>
+              )}
+            </div>
+          )
+        }
+      </section>
+
+      <section class='cv-section'>
+        <h2>Education</h2>
+        {
+          /* The one-pager compresses each qualification to a single line; the full CV
+        gives each its own block with awards. */
+        }
+        {
+          variant === 'onepage'
+            ? cv.education.map((item) => (
+                <p class='cv-education-line'>
+                  <span class='cv-education-degree'>{item.degree}</span>
+                  <span class='cv-education-institution'>{item.institution}</span>
+                  <span class='cv-dates'>{item.dateRange}</span>
+                </p>
+              ))
+            : cv.education.map((item) => (
+                <div class='cv-education'>
+                  <div class='cv-role-head'>
+                    <h3 class='cv-role-title'>{item.degree}</h3>
+                    <span class='cv-dates'>{item.dateRange}</span>
+                  </div>
+                  <p class='cv-company'>{item.institution}</p>
+                  {item.notes.length > 0 && (
+                    <ul class='cv-bullets'>
+                      {item.notes.map((note) => (
+                        <li set:html={renderInline(note)} />
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))
+        }
+      </section>
+
+      <section class='cv-section cv-section-competencies'>
+        <h2>Core Competencies</h2>
+        <ul class='cv-competencies'>
+          {
+            cv.competencies.map((competency) => (
+              <li>
+                <span class='cv-competency-name'>{competency.title}</span>
+                <span
+                  class='cv-competency-level'
+                  aria-label={`Level ${competency.level} of ${cv.competencyScaleMax}`}
+                >
+                  {Array.from({ length: cv.competencyScaleMax }, (_, index) => (
+                    <span class:list={['cv-pip', index < competency.level && 'cv-pip-on']} />
+                  ))}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </article>
+  </body>
+</html>

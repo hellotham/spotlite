@@ -31,7 +31,10 @@ export default defineConfig({
     mermaid(),
     UnoCSS(),
     sitemap({
-      filter: (page) => page !== 'https://hellotham.com/spotlite/404/'
+      // The /cv/ routes exist only as a rendering source for the PDFs; they duplicate
+      // site content and are marked noindex, so keep them out of the sitemap too.
+      filter: (page) =>
+        page !== 'https://hellotham.com/spotlite/404/' && !page.includes('/spotlite/cv/')
     })
   ]
 })

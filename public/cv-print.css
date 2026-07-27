@@ -1,0 +1,401 @@
+/*
+ * Standalone CV print stylesheet.
+ *
+ * Deliberately NOT part of the site's CSS pipeline. The PDF must be deterministic and
+ * insulated from site styling changes: the layout strips the site's UnoCSS bundle from
+ * these routes so it cannot restyle the CV.
+ *
+ * Pagination is Chrome's own, driven by the break/orphan/widow rules below.
+ */
+
+/* Reset: the print routes still receive the site's global stylesheet, so neutralise
+   anything inherited before the CV's own rules apply. */
+.cv,
+.cv * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Only the presentational lists are unmarked. Note this must not be a blanket
+   `.cv ul` rule: that out-specifies the class selectors below and silently strips
+   the markers off the content lists, leaving bullets reading as paragraphs. */
+.cv-contact,
+.cv-competencies,
+.cv-earlier-list {
+  list-style: none;
+}
+
+.cv-bullets,
+.cv-achievements {
+  list-style: disc;
+}
+
+.cv-bullets li,
+.cv-achievements li {
+  padding-left: 0.6mm;
+}
+
+.cv-bullets li::marker,
+.cv-achievements li::marker {
+  color: var(--cv-accent);
+  font-size: 0.85em;
+}
+
+/*
+ * Single-column by design. Multi-column CVs and sidebars are read out of order by
+ * applicant tracking systems, so all visual interest here comes from typography,
+ * spacing and rules rather than from layout columns.
+ */
+:root {
+  --cv-ink: #1a1a1a;
+  --cv-muted: #55555f;
+  --cv-rule: #c8c8d0;
+  --cv-accent: #7a2140;
+  --cv-density: 1;
+  --cv-body-size: calc(9.6pt * var(--cv-density));
+  --cv-leading: 1.36;
+}
+
+@page {
+  size: A4;
+  margin: 16mm 15mm 14mm 15mm;
+}
+
+html[data-cv-variant="onepage"] {
+  /* Slightly tighter to hold a full career on a single page. */
+  --cv-body-size: calc(9.4pt * var(--cv-density));
+  --cv-leading: 1.34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-noto-sans), system-ui, sans-serif;
+  font-size: var(--cv-body-size);
+  line-height: var(--cv-leading);
+  color: var(--cv-ink);
+  background: #fff;
+  /* Keep glyph shapes stable in print rather than optimising for screen. */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.cv {
+  max-width: 180mm;
+  margin: 0 auto;
+}
+
+/* ---- Header ---------------------------------------------------------- */
+
+.cv-header {
+  border-bottom: 1.5pt solid var(--cv-accent);
+  padding-bottom: 2.5mm;
+  margin-bottom: 4mm;
+}
+
+.cv-name {
+  font-family: var(--font-noto-serif), Georgia, serif;
+  font-size: 22pt;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.cv-headline {
+  font-size: 10.5pt;
+  color: var(--cv-accent);
+  font-weight: 500;
+  margin: 1.2mm 0 0;
+}
+
+.cv-contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 4mm;
+  margin: 2mm 0 0;
+  padding: 0;
+  font-size: 8.8pt;
+  color: var(--cv-muted);
+}
+
+/*
+ * Separators are generated, so copied text stays clean for parsers. Trailing rather
+ * than leading: when the contact line wraps, a leading separator dangles at the start
+ * of the second line.
+ */
+.cv-contact li:not(:last-child)::after {
+  content: "·";
+  margin-left: 4mm;
+  color: var(--cv-rule);
+}
+
+.cv-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Sections -------------------------------------------------------- */
+
+.cv-section {
+  margin-bottom: calc(4.5mm * var(--cv-density));
+  /* Never leave a heading stranded at the foot of a page. */
+  break-inside: auto;
+}
+
+.cv-section h2 {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cv-accent);
+  margin: 0 0 2mm;
+  padding-bottom: 1mm;
+  border-bottom: 0.5pt solid var(--cv-rule);
+  break-after: avoid;
+}
+
+.cv-summary {
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.cv-achievements {
+  margin: 0;
+  padding-left: 4.5mm;
+}
+
+.cv-achievements li {
+  margin-bottom: 1.2mm;
+}
+
+/* ---- Roles ----------------------------------------------------------- */
+
+.cv-role,
+.cv-education {
+  margin-bottom: calc(3.2mm * var(--cv-density));
+  /*
+   * Deliberately NOT break-inside: avoid. A long role (NAB carries three sub-roles)
+   * is taller than the space usually left on a page, so forbidding splits pushed
+   * whole roles to the next page and wasted close to a full page in gaps across a
+   * 13-role history. Splitting a role is fine; what must not happen is a heading
+   * stranded at the foot of a page, which the break-after and orphan rules below
+   * prevent.
+   */
+}
+
+.cv-role-head {
+  break-after: avoid;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4mm;
+}
+
+.cv-role-title {
+  font-size: 10.5pt;
+  font-weight: 700;
+  margin: 0;
+  break-after: avoid;
+}
+
+.cv-role-type {
+  font-weight: 400;
+  color: var(--cv-muted);
+}
+
+.cv-dates {
+  font-size: 9pt;
+  color: var(--cv-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.cv-company {
+  break-after: avoid;
+  font-size: 9.6pt;
+  font-weight: 500;
+  color: var(--cv-accent);
+  margin: 0.4mm 0 1.2mm;
+}
+
+.cv-bullets {
+  margin: 0;
+  padding-left: 4.5mm;
+}
+
+.cv-bullets li {
+  margin-bottom: 0.8mm;
+  /* Avoid a single line of a bullet falling alone across a page break. */
+  orphans: 2;
+  widows: 2;
+}
+
+.cv-subrole {
+  margin-top: 1.6mm;
+  break-inside: avoid;
+}
+
+.cv-subrole-title {
+  font-size: 9.6pt;
+  font-weight: 600;
+  margin: 0 0 0.8mm;
+  break-after: avoid;
+}
+
+.cv-subrole-year {
+  font-weight: 400;
+  color: var(--cv-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Earlier career -------------------------------------------------- */
+
+.cv-earlier {
+  margin-top: 2mm;
+  break-inside: avoid-page;
+}
+
+.cv-earlier-list {
+  list-style: none;
+  margin: 1mm 0 0;
+  padding: 0;
+}
+
+.cv-earlier-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  margin-bottom: 0.6mm;
+}
+
+.cv-earlier-role {
+  font-weight: 600;
+}
+
+.cv-earlier-company {
+  color: var(--cv-muted);
+  flex: 1;
+}
+
+.cv-earlier-dates {
+  margin-left: auto;
+}
+
+/* ---- Competencies ---------------------------------------------------- */
+
+.cv-competencies {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Columns here are a visual grid of short label/rating pairs, not a content
+     layout: each item is a self-contained line, so parsers still read them in
+     order. Long-form prose is never placed in columns. */
+  column-count: 2;
+  column-gap: 10mm;
+}
+
+.cv-competencies li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3mm;
+  break-inside: avoid;
+  margin-bottom: 0.9mm;
+}
+
+.cv-competency-name {
+  font-size: 9.4pt;
+}
+
+.cv-competency-level {
+  display: inline-flex;
+  gap: 0.9mm;
+  flex-shrink: 0;
+}
+
+.cv-pip {
+  width: 1.5mm;
+  height: 1.5mm;
+  border-radius: 50%;
+  border: 0.4pt solid var(--cv-rule);
+  display: inline-block;
+}
+
+.cv-pip-on {
+  background: var(--cv-accent);
+  border-color: var(--cv-accent);
+}
+
+/* The one-pager must never fragment; if it overflows, the page-count test fails
+   loudly rather than silently producing a second page. */
+html[data-cv-variant="onepage"] .cv {
+  break-inside: avoid;
+}
+
+/*
+ * No @media blocks in this file. Paged.js's at-rule handler throws on media queries
+ * it cannot resolve, which hangs pagination, so screen-only preview cosmetics live in
+ * the layout instead of here.
+ */
+
+/* ---- One-pager density ------------------------------------------------ */
+
+html[data-cv-variant="onepage"] .cv-section {
+  margin-bottom: 3mm;
+}
+
+html[data-cv-variant="onepage"] .cv-role {
+  margin-bottom: 2.4mm;
+}
+
+html[data-cv-variant="onepage"] .cv-achievements li {
+  margin-bottom: 0.7mm;
+}
+
+.cv-education-line {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  margin: 0 0 0.9mm;
+}
+
+.cv-education-degree {
+  font-weight: 600;
+}
+
+.cv-education-institution {
+  color: var(--cv-muted);
+  flex: 1;
+}
+
+.cv-earlier-more {
+  margin: 0.8mm 0 0;
+  color: var(--cv-muted);
+  font-size: 8.8pt;
+}
+
+/* ---- One-page auto-fit ------------------------------------------------- */
+
+/*
+ * The generator measures the rendered height and sets --cv-fit so the document
+ * scales to exactly one page. Hand-tuned font sizes break the moment content
+ * changes; this adapts, and the generator fails loudly if it would need to shrink
+ * past the legibility floor.
+ */
+html[data-cv-variant="onepage"] .cv {
+  zoom: var(--cv-fit, 1);
+}

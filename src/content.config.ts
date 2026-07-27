@@ -29,7 +29,14 @@ const work = defineCollection({
       startyear: z.number(),
       endyear: z.number().optional(),
       type: z.enum(['employment', 'consulting']).default('employment'),
-      image: image()
+      image: image(),
+      // CV curation. Deterministic overrides for the generated CV; the site ignores them.
+      // cvPriority raises a role in the one-pager shortlist (higher wins, default is recency).
+      cvPriority: z.number().optional(),
+      // Drop the role from the CV entirely (kept on the site).
+      omitFromCv: z.boolean().optional().default(false),
+      // Condensed single line used when the role falls into "Earlier career".
+      oneLiner: z.string().optional()
     })
 })
 
@@ -41,7 +48,8 @@ const education = defineCollection({
       degree: z.string(),
       startyear: z.number(),
       endyear: z.number().optional(),
-      image: image()
+      image: image(),
+      omitFromCv: z.boolean().optional().default(false)
     })
 })
 

@@ -1,0 +1,8 @@
+---
+import CvLayout from '../../layouts/cv.astro'
+import { buildCv } from '../../utils/cv'
+
+const cv = await buildCv('onepage')
+---
+
+<CvLayout {cv} variant='onepage' documentTitle={`${cv.name} — Résumé`} />

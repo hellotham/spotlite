@@ -14,22 +14,35 @@ describe('PDF Generation Script', () => {
     expect(fs.existsSync(scriptPath)).toBe(true)
   })
 
-  it('should generate cv.pdf when run', async () => {
-    // Generate into a temp dir rather than deleting and rewriting the tracked
-    // public/cv.pdf: that left the repo dirty after every run, and left the file
-    // missing entirely whenever generation failed.
+  it('generates both CV documents when run', async () => {
+    // Generate into a temp dir rather than rewriting the tracked PDFs in public/.
+    // ALL THREE output variables must be redirected: leaving any unset sends that
+    // document to public/ and leaves the repo dirty after every test run.
     const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'spotlite-pdf-'))
-    const outputPath = path.join(outDir, 'cv.pdf')
+    const fullPath = path.join(outDir, 'cv.pdf')
+    const onepagePath = path.join(outDir, 'cv-onepage.pdf')
 
     try {
       const { execSync } = await import('node:child_process')
       const scriptPath = path.join(rootDir, 'scripts/generate-pdf.js')
-      execSync(`node ${scriptPath}`, { env: { ...process.env, CV_PDF_OUTPUT: outputPath } })
+      execSync(`node ${scriptPath}`, {
+        env: {
+          ...process.env,
+          CV_PDF_OUTDIR: outDir,
+          CV_PDF_OUTPUT: fullPath,
+          CV_PDF_ONEPAGE: onepagePath
+        },
+        stdio: 'pipe'
+      })
 
-      expect(fs.existsSync(outputPath)).toBe(true)
-      expect(fs.statSync(outputPath).size).toBeGreaterThan(0)
+      for (const output of [fullPath, onepagePath]) {
+        expect(fs.existsSync(output)).toBe(true)
+        expect(fs.statSync(output).size).toBeGreaterThan(0)
+      }
     } finally {
       fs.rmSync(outDir, { recursive: true, force: true })
     }
-  })
+    // Renders two documents in a real browser, re-paginating the full CV when the
+    // last page comes out sparse, so the default 5s budget is nowhere near enough.
+  }, 180_000)
 })
