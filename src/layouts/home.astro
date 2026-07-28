@@ -10,6 +10,7 @@ import Timeline from '../components/timeline.astro'
 import Work from '../components/work.astro'
 import Education from '../components/education.astro'
 import Superpowers from '../components/superpowers.astro'
+import cv from '../cv.json' with { type: 'json' }
 
 const { frontmatter } = Astro.props
 
@@ -61,6 +62,23 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 class='text-base text-graniteGray mx-auto mt-6 max-w-2xl space-y-7 prose dark:text-opalGray lg:max-w-4xl dark:prose-invert'
               >
                 <slot />
+
+                {
+                  /* Rendered from cv.json, not written in index.md. These three lines are
+                  also the CV's key achievements, and when they lived in both places they
+                  drifted — the home page and both PDFs named clients differently. One copy
+                  is the whole point of the content model. */
+                }
+                <h2>Key Achievements</h2>
+                <ul>
+                  {
+                    cv.achievements.map((item) => (
+                      <li>
+                        <strong>{item.title}</strong>: {item.detail}
+                      </li>
+                    ))
+                  }
+                </ul>
               </div>
               <div class='mt-6 flex gap-6'>
                 {
