@@ -11,7 +11,7 @@ re-typed. The wording is unchanged._
 
 **[Download the original scanned paper (PDF, 647 KB)](/spotlite/crypt-usenix91.pdf)**
 
-**Philip Leong** – University of Sydney
+**Philip Leong** – University of Sydney \
 **Chris Tham** – State Bank of Victoria
 
 ## Abstract
