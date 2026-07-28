@@ -165,10 +165,15 @@ Two idioms coexist, and the choice is about authorship:
 - **Mermaid fenced blocks** for anything authored inside content Markdown — gantt, quadrant and
   xychart diagrams on the Superpowers page. Rendered by `astro-mermaid`, fully offline.
 
-Mermaid uses its own default palette rather than Rosely, which is a known inconsistency. Where a
-diagram's default fill is too pale to read on the cream background, override it per-diagram with
-an `%%{init}%%` directive using a palette colour checked to 3:1 against **both** backgrounds —
-Radiant Orchid (#b565a7) is the safe choice at 3.4:1 on cream and 3.8:1 on near-black.
+Mermaid carries a full Rosely theme in both colour schemes, so diagrams no longer arrive in the
+stock blues and lavenders. Nodes are Heavenly Pink on Radiant Orchid in light and a dark plum on
+Lupine in dark; connectors are Grapeade in light and Lupine in dark, both chosen to clear 3:1
+against their own page background since they sit on it rather than on a filled shape.
+
+The light half is genuine Mermaid theming (`theme: 'base'` plus `themeVariables` in
+`astro.config.mjs`); the dark half is `src/styles/mermaid.css`. `AGENTS.md` explains why it is
+split that way, and which diagram types need `!important` to override. Prefer extending those
+two files over per-diagram `%%{init}%%` directives, which cannot vary by colour scheme.
 
 The word cloud sizes each tag by how many roles carry it, drifts under Brownian motion, and
 separates labels along their shallowest axis of overlap — circle packing is wrong for wide text,

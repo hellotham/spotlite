@@ -9,6 +9,9 @@ import { Font, getImage } from 'astro:assets'
 // the shared layout rather than per-article because markdown is not component-based, so
 // there is no narrower seam to hang it on; it costs ~7 KB gzipped on every page.
 import 'katex/dist/katex.min.css'
+// Dark-mode recolouring for Mermaid. The light palette is real Mermaid theming in
+// astro.config.mjs; see the header of this file for why dark has to be CSS.
+import '../styles/mermaid.css'
 
 import config from '../config.json' with { type: 'json' }
 // The previous default pointed at /screenshot.png in public/, which does not exist —
@@ -204,12 +207,6 @@ const breadcrumbList = {
           (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches)
 
         document.documentElement.classList.toggle('dark', dark)
-        // Mirrored onto data-theme purely for astro-mermaid, which keys its theme off
-        // that attribute and watches it with a MutationObserver filtered to it. Nothing
-        // else reads it — UnoCSS and the site's own CSS both use the `dark` class — but
-        // without it every Mermaid diagram rendered in the light theme regardless, so
-        // their near-black label text was unreadable on the dark background.
-        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
       }
       setTheme()
       document.addEventListener('astro:after-swap', setTheme)

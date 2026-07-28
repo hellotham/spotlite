@@ -91,7 +91,6 @@ According to the [Open-Source Psychometrics Project](https://openpsychometrics.o
 | Conscientiousness     | 3.1   | Balanced between structure and spontaneity, preferring flexibility over routine |
 
 ```mermaid
-%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#b565a7"}}}}%%
 xychart-beta
     title "IPIP Big Five Factor Markers"
     x-axis ["Stability", "Intellect", "Extroversion", "Agreeableness", "Conscientious"]

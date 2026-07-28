@@ -694,23 +694,14 @@ speed of this implementation was compared with that of the custom hardware.
 
 ## About the authors
 
-![Philip Leong in 1991](./crypt-usenix91-philip-leong.jpeg)
-
 **Philip Leong** works at the Systems Engineering and Design Automation Laboratory at the
 Department of Electrical Engineering at the University of Sydney. His interests include operating
 systems, digital signal processing and VLSI design. He received a B.Sc. degree in Computer Science
-in 1987 and a B.E. (Hons) in Electrical Engineering in 1989. Reach him via mail at Systems
-Engineering and Design Automation Laboratory; Department of Electrical Engineering; University of
-Sydney J03; NSW 2006 AUSTRALIA; Phone: +61 2 692-3297. His electronic mail address is
-`phwl@ee.su.oz.au`.
+in 1987 and a B.E. (Hons) in Electrical Engineering in 1989.
 
-![Chris Tham in 1991](./crypt-usenix91-chris-tham.jpeg)
-
-**Chris Tham** is currently employed as a Treasury Analyst at the State Bank of Victoria. His
+**Chris Tham** is currently employed as a Treasury Analyst at the State Bank of Victoria. Her
 interests include distributed operating systems, concurrent computer language design and computer
-music. He graduated from University of Sydney in 1988 with a B.Sc. (Hons) in Computer Science.
-Reach him via mail at State Bank of Victoria; Level 23 9 Castlereagh St; Sydney NSW 2000;
-AUSTRALIA; Phone: +61 2 239-6282. His electronic mail address is `christie@blueboy.ct.saleven.oz.au`.
+music. She graduated from University of Sydney in 1988 with a B.Sc. (Hons) in Computer Science.
 
 ## Appendix A
 

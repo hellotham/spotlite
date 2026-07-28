@@ -150,11 +150,30 @@ Prefer an `AbortController` with `{ signal }` on each listener so one `abort()` 
 
 `src/pages/api/search.json.ts` must index **every** collection Pagefind picks up from rendered pages. When it drifted, four collections were unsearchable in dev while production worked perfectly — searching "swift" or "servicenow" returned nothing.
 
-### `astro-mermaid` keys off `data-theme`, not a class
+### Mermaid is themed in two places, and its `autoTheme` is off on purpose
 
-The site's theme is a `.dark` class, but the integration watches `html[data-theme]`. Both are set, in `layout.astro`'s pre-paint script and in `theme.astro` — keep them in step, or diagrams render light-themed on a dark background with near-black text.
+Light comes from real Mermaid theming — `theme: 'base'` plus `themeVariables` in
+`astro.config.mjs`. Dark comes from `src/styles/mermaid.css`. They are split because
+`astro-mermaid`'s `autoTheme` can only swap between Mermaid's own built-in themes, which
+discards custom `themeVariables` entirely; it also keys off an `html[data-theme]`
+attribute this site does not otherwise set, and drives the swap by re-rendering.
 
-The integration also double-initialises on load and can overwrite a diagram's stored source with its own rendered SVG, which only fails later when a re-render is requested. `layout.astro` stamps `data-diagram` during parse to pre-empt this. Don't remove that script.
+Consequences worth knowing before you change any of it:
+
+- **Do not re-enable `autoTheme`** without also restoring the `data-theme` mirroring in
+  `layout.astro` and `theme.astro`. It was removed when nothing read it any more.
+- **Gantt ignores its `themeVariables`.** `base` derives section and task colours through
+  its own logic, so those charts are driven from CSS in _both_ themes. The other diagram
+  types take the variables fine.
+- **Override strength differs by diagram type.** Flowchart and gantt are styled by a
+  `<style>` block Mermaid injects into each SVG, scoped by the diagram's generated id —
+  an ID selector, so overrides need `!important`. xychart and quadrant paint with SVG
+  presentation attributes, which lose to any stylesheet rule and need none.
+
+The integration also double-initialises on load and can overwrite a diagram's stored
+source with its own rendered SVG. That only bites when something asks for a re-render,
+which nothing does now, but `layout.astro` still stamps `data-diagram` during parse to
+keep the first render deterministic.
 
 ### Remark and rehype plugins need `@astrojs/markdown-remark`
 

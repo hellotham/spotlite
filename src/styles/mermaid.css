@@ -1,0 +1,271 @@
+/*
+ * Rosely dark theme for Mermaid diagrams.
+ *
+ * The light theme is real Mermaid theming — `theme: 'base'` plus themeVariables in
+ * astro.config.mjs. Dark is done here instead, because astro-mermaid's theme switching
+ * can only swap between Mermaid's own built-in themes and would discard those variables.
+ * Recolouring in CSS also means the diagrams flip instantly with the rest of the page
+ * rather than being torn down and re-rendered.
+ *
+ * Two different override strengths are needed, and the difference is not cosmetic:
+ *
+ *   - Flowchart and gantt are styled by a <style> block Mermaid injects into each SVG,
+ *     scoped by the diagram's generated id (`#mermaid-abc123 .nodeLabel`). That is an
+ *     ID selector, so these rules need `!important` to win.
+ *   - xychart and quadrant paint with SVG presentation attributes (`fill="#b565a7"`),
+ *     which lose to any stylesheet rule. Those need no `!important` at all.
+ */
+
+/* ---- Flowchart -------------------------------------------------------- */
+
+.dark .mermaid .label-container,
+.dark .mermaid .node rect,
+.dark .mermaid .node circle,
+.dark .mermaid .node ellipse,
+.dark .mermaid .node polygon,
+.dark .mermaid .node path {
+  fill: #3f3644 !important;
+  stroke: #be9cc1 !important;
+}
+
+.dark .mermaid .nodeLabel,
+.dark .mermaid .nodeLabel p,
+.dark .mermaid .label,
+.dark .mermaid .label span {
+  color: #f4eee8 !important;
+  fill: #f4eee8 !important;
+}
+
+.dark .mermaid .flowchart-link,
+.dark .mermaid .edgePath .path {
+  stroke: #be9cc1 !important;
+}
+
+.dark .mermaid .marker,
+.dark .mermaid .arrowMarkerPath {
+  fill: #be9cc1 !important;
+  stroke: #be9cc1 !important;
+}
+
+/* Edge labels float over the page, so they carry their own backing plate. */
+.dark .mermaid .edgeLabel,
+.dark .mermaid .edgeLabel p {
+  color: #f4eee8 !important;
+  background-color: #27272a !important;
+}
+
+.dark .mermaid .edgeLabel rect,
+.dark .mermaid .labelBkg {
+  fill: #27272a !important;
+  background-color: #27272a !important;
+}
+
+.dark .mermaid .cluster rect {
+  fill: #1f1f22 !important;
+  stroke: #615f5f !important;
+}
+
+/* ---- xychart ---------------------------------------------------------- */
+
+.dark .mermaid .chart-title,
+.dark .mermaid .bottom-axis .label,
+.dark .mermaid .left-axis .label,
+.dark .mermaid .bottom-axis .title,
+.dark .mermaid .left-axis .title {
+  fill: #f4eee8;
+}
+
+.dark .mermaid .bottom-axis .ticks path,
+.dark .mermaid .left-axis .ticks path,
+.dark .mermaid .axis-line,
+.dark .mermaid .axisl-line {
+  stroke: #a49e9e;
+}
+
+/* Lupine rather than the light theme's radiant orchid: brighter against near-black,
+   and still clears 3:1 for a filled shape. */
+.dark .mermaid .bar-plot-0 rect,
+.dark .mermaid .bar-plot-1 rect {
+  fill: #be9cc1;
+}
+
+.dark .mermaid .line-plot-0 path,
+.dark .mermaid .line-plot-1 path {
+  stroke: #be9cc1;
+}
+
+/* ---- Gantt ------------------------------------------------------------ */
+
+/*
+ * Gantt is the one diagram type that ignores its themeVariables here: `base` derives the
+ * section and task colours through its own theme logic, so `sectionBkgColor`,
+ * `taskBkgColor` and friends came out as Mermaid's stock blues and yellows however they
+ * were set. It is therefore driven from CSS in *both* themes rather than only in dark.
+ *
+ * These two charts are also a gantt bent into a diverging bar chart, which is why the
+ * `vert` marker bars exist at all — they are the -100/0/100 axis rules.
+ */
+
+.mermaid .section0,
+.mermaid .section2 {
+  fill: #faf6f2 !important;
+}
+
+.mermaid .section1,
+.mermaid .section3 {
+  fill: #f6eef0 !important;
+}
+
+.mermaid rect.done0,
+.mermaid rect.done1,
+.mermaid rect.done2,
+.mermaid rect.done3 {
+  fill: #d2c4d6 !important;
+  stroke: #85677b !important;
+}
+
+.mermaid rect.active0,
+.mermaid rect.active1,
+.mermaid rect.active2,
+.mermaid rect.active3 {
+  fill: #ec809e !important;
+  stroke: #c02d5a !important;
+}
+
+.mermaid rect.vert {
+  fill: #85677b !important;
+  stroke: #85677b !important;
+}
+
+.mermaid .titleText,
+.mermaid .sectionTitle,
+.mermaid .sectionTitle0,
+.mermaid .sectionTitle1,
+.mermaid .sectionTitle2,
+.mermaid .sectionTitle3,
+.mermaid .taskText,
+.mermaid .taskText0,
+.mermaid .taskText1,
+.mermaid .taskText2,
+.mermaid .taskText3,
+.mermaid .doneText0,
+.mermaid .doneText1,
+.mermaid .doneText2,
+.mermaid .doneText3,
+.mermaid .activeText0,
+.mermaid .activeText1,
+.mermaid .activeText2,
+.mermaid .activeText3,
+.mermaid .taskTextOutside0,
+.mermaid .taskTextOutside1,
+.mermaid .taskTextOutside2,
+.mermaid .taskTextOutside3,
+.mermaid .vertText {
+  fill: #27272a !important;
+}
+
+.dark .mermaid rect.vert {
+  fill: #be9cc1 !important;
+  stroke: #be9cc1 !important;
+}
+
+.dark .mermaid .titleText,
+.dark .mermaid .sectionTitle,
+.dark .mermaid .sectionTitle0,
+.dark .mermaid .sectionTitle1,
+.dark .mermaid .sectionTitle2,
+.dark .mermaid .sectionTitle3,
+.dark .mermaid .tick text {
+  fill: #f4eee8 !important;
+}
+
+.dark .mermaid .grid .tick line {
+  stroke: #4a4a4e !important;
+}
+
+.dark .mermaid .grid path {
+  stroke: #a49e9e !important;
+}
+
+.dark .mermaid .section0,
+.dark .mermaid .section2 {
+  fill: #2f2b32 !important;
+}
+
+.dark .mermaid .section1,
+.dark .mermaid .section3 {
+  fill: #262329 !important;
+}
+
+.dark .mermaid rect.done0,
+.dark .mermaid rect.done1,
+.dark .mermaid rect.done2,
+.dark .mermaid rect.done3 {
+  fill: #85677b !important;
+  stroke: #be9cc1 !important;
+}
+
+.dark .mermaid rect.active0,
+.dark .mermaid rect.active1,
+.dark .mermaid rect.active2,
+.dark .mermaid rect.active3 {
+  fill: #ec809e !important;
+  stroke: #f7caca !important;
+}
+
+/* Labels sitting inside a bar take the bar's contrast, not the page's: light on the
+   grapeade "done" bars, near-black on the pale pink "active" ones. */
+.dark .mermaid .doneText0,
+.dark .mermaid .doneText1,
+.dark .mermaid .doneText2,
+.dark .mermaid .doneText3 {
+  fill: #f4eee8 !important;
+}
+
+.dark .mermaid .activeText0,
+.dark .mermaid .activeText1,
+.dark .mermaid .activeText2,
+.dark .mermaid .activeText3 {
+  fill: #27272a !important;
+}
+
+.dark .mermaid .taskTextOutside0,
+.dark .mermaid .taskTextOutside1,
+.dark .mermaid .taskTextOutside2,
+.dark .mermaid .taskTextOutside3,
+.dark .mermaid .vertText {
+  fill: #f4eee8 !important;
+}
+
+/* ---- Quadrant chart --------------------------------------------------- */
+
+.dark .mermaid .quadrants > g:nth-of-type(1) rect {
+  fill: #443b4a;
+}
+
+.dark .mermaid .quadrants > g:nth-of-type(2) rect {
+  fill: #3a3340;
+}
+
+.dark .mermaid .quadrants > g:nth-of-type(3) rect {
+  fill: #2b282e;
+}
+
+.dark .mermaid .quadrants > g:nth-of-type(4) rect {
+  fill: #332f36;
+}
+
+.dark .mermaid .quadrants text,
+.dark .mermaid .labels text,
+.dark .mermaid .data-points text,
+.dark .mermaid .title text {
+  fill: #f4eee8;
+}
+
+.dark .mermaid .data-point circle {
+  fill: #ec809e;
+}
+
+.dark .mermaid .border {
+  stroke: #a49e9e;
+}
