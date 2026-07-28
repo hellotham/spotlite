@@ -15,6 +15,13 @@ import type { ImageMetadata } from 'astro'
  *   header. Same 96px height as the list tile so the two pages agree, with the width
  *   capped so a 5:1 wordmark cannot stretch across the column.
  *
+ *   That cap is `max-w-full sm:max-w-sm`, and the order matters. `h-24 w-auto` derives the
+ *   width from the aspect ratio, so a 2000x400 mark like Hello Tham's wants 480px; capping
+ *   only at `max-w-sm` pulled it back to 384px, still far wider than the 288px content
+ *   column on a 320px screen. Nothing scrolled, because html clips horizontal overflow, so
+ *   the wordmark was simply sliced off mid-word with no way to reveal the rest. Below `sm`
+ *   the container is the tighter bound; from `sm` up, 384px is.
+ *
  * The tile takes the mark's own background colour (`background`), so a logo with a solid
  * background reads as one seamless circle rather than a square floating on a contrasting
  * disc. White is the default: it suits marks that are white-backed and those that are
@@ -110,7 +117,7 @@ const monogramSize = size === 'sm' ? 'text-sm' : 'text-2xl'
         alt={decorative ? '' : alt}
         height={240}
         loading='lazy'
-        class:list={[className, 'h-24 w-auto max-w-sm object-contain']}
+        class:list={[className, 'h-24 w-auto max-w-full object-contain sm:max-w-sm']}
       />
     )
   ) : (

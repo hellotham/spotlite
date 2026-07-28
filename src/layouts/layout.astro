@@ -241,6 +241,27 @@ const breadcrumbList = {
       .font-mono {
         font-family: var(--font-noto-sans-mono) !important;
       }
+
+      /*
+       * Let a wide table scroll inside its own box rather than push the page.
+       *
+       * A table will not wrap below the width its columns need, so on a 320px screen the
+       * SFIA table on /superpowers/ came out 333px wide. Nothing scrolled and nothing
+       * hinted at the problem, because html clips horizontal overflow: the last column was
+       * simply cut off the right-hand edge. Code blocks already solve this with their own
+       * `overflow-x: auto`; tables had nothing.
+       *
+       * `display: block` is what makes a table scrollable at all, since overflow does not
+       * apply to `display: table`. `width: max-content` then restores the natural sizing
+       * that block would otherwise throw away, and `max-width: 100%` is what actually
+       * triggers the scroll once the content exceeds the column.
+       */
+      .prose table {
+        display: block;
+        width: max-content;
+        max-width: 100%;
+        overflow-x: auto;
+      }
       @keyframes fade-in-up-custom {
         from {
           opacity: 0;
