@@ -1,6 +1,6 @@
 ---
 company: Torrens University Australia
-role: Learning Facilitator
+role: Learning Facilitator (Lecturer)
 startyear: 2024
 type: employment
 image: ./torrens.svg

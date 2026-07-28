@@ -1,6 +1,6 @@
 ---
 company: Hello Tham
-role: Principal Consultant and Director
+role: Principal Consultant and Junior Janitor
 startyear: 2016
 type: employment
 image: ./hellotham.png
@@ -21,7 +21,7 @@ tags:
   ]
 ---
 
-- Founder and director of a boutique consultancy spanning business and IT strategy, enterprise architecture, operating models, strategic roadmaps, analytics and data science, digital products and content platforms.
+- Founder and Junior Janitor of a boutique consultancy spanning business and IT strategy, enterprise architecture, operating models, strategic roadmaps, analytics and data science, digital products and content platforms.
 - Author of **AI-dō: The Way of AI**, and developer of **FinvestLens** and **HelloNotes**, two native Apple applications published as free software.
 - Successfully delivered multiple consulting engagements, including [Cochlear](https://hellotham.com/spotlite/work/cochlear/), [Transport for NSW](https://hellotham.com/spotlite/work/tfnsw/) and [Broadspectrum](https://hellotham.com/spotlite/work/broadspectrum/).
 
