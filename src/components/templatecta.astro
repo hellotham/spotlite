@@ -1,32 +1,41 @@
 ---
 /**
- * Invitation to fork the template, shown at the foot of the home page.
+ * Invitation to fork the template, shown as a full-width band at the foot of the home page.
  *
  * It sits last on purpose. The page above it is a CV, and a reader who came to read that
  * should reach the end of it before being told the thing is also a product. Placing this
  * any higher puts a call to action for a different audience in the middle of someone
  * else's career.
+ *
+ * Full width rather than a grid column, because it addresses a different reader from
+ * everything above it. A card sitting in one column reads as another item in the career;
+ * spanning the page marks it as a change of subject.
  */
 const repo = 'https://github.com/hellotham/spotlite'
 ---
 
-<div class='p-6 card rounded-2xl'>
-  <h2 class='text-lg text-accent font-semibold font-serif flex items-center'>
-    <span class='i-heroicons-sparkles text-secondary h-6 w-6' aria-hidden='true'></span>
-    <span class='ml-3'>Like this site? Take it.</span>
-  </h2>
-  <p class='text-sm text-secondary mt-2'>
-    This whole site is <strong class='text-accent'>Spotlite</strong>, a free and open source Astro
-    template for your own CV. Write each role once as a Markdown file and it builds the work
-    history, the career timeline, the search index and two print-ready PDFs, so your CV and your
-    website can never disagree with each other.
-  </p>
-  <p class='text-sm text-secondary mt-2'>
-    Fork it, clear out my content, and make it yours. MIT licensed.
-  </p>
-  <a class='btn-primary mt-6 ui-focus-ring w-full' href={repo}>
-    Fork Spotlite on GitHub<span
-      class='i-heroicons-arrow-top-right-on-square h-4 w-4'
-      aria-hidden='true'></span>
-  </a>
+<div class='p-6 card rounded-2xl sm:p-8'>
+  <div class='flex flex-col gap-6 lg:flex-row lg:gap-10 lg:items-center'>
+    <div class='min-w-0 lg:flex-1'>
+      <h2 class='text-lg text-accent font-semibold font-serif flex items-center'>
+        <span class='i-heroicons-sparkles text-secondary shrink-0 h-6 w-6' aria-hidden='true'
+        ></span>
+        <span class='ml-3'>Like this site? Take it.</span>
+      </h2>
+      <p class='text-sm text-secondary mt-3'>
+        This whole site is <strong class='text-accent'>Spotlite</strong>, a free and open source
+        Astro template for your own CV. Write each role once as a Markdown file and it builds the
+        work history, the career timeline, the search index and two print-ready PDFs, so your CV and
+        your website can never disagree with each other.
+      </p>
+      <p class='text-sm text-secondary mt-2'>
+        Fork it, clear out my content, and make it yours. MIT licensed.
+      </p>
+    </div>
+    <a class='btn-primary ui-focus-ring w-full lg:shrink-0 lg:w-auto' href={repo}>
+      Fork Spotlite on GitHub<span
+        class='i-heroicons-arrow-top-right-on-square h-4 w-4'
+        aria-hidden='true'></span>
+    </a>
+  </div>
 </div>

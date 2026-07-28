@@ -136,11 +136,17 @@ social = social.sort((a, b) => a.data.order - b.data.order)
               <section aria-label='Latest articles'>
                 <ArticleList />
               </section>
-              <section aria-label='Use this template'>
-                <TemplateCTA />
-              </section>
             </div>
           </div>
+
+          {
+            /* Outside the grid, spanning both columns: this addresses a different reader
+            from the career above it, and a card sitting in one column would read as one
+            more item in that career rather than a change of subject. */
+          }
+          <section aria-label='Use this template' class='mt-20'>
+            <TemplateCTA />
+          </section>
         </div>
       </div>
     </div>
