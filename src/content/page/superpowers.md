@@ -80,19 +80,24 @@ I thrive in environments that value creativity, flexibility, and human connectio
 
 ### Big Five Personality Test Results
 
-According to [Open-Source Psychometrics Project](https://openpsychometrics.org/tests/IPIP-BFFM/results.php?r=4.9,5,4.6,3.1,5#_II) my results from the IPIP Big Five Factor Markers are in the table below:
+According to the [Open-Source Psychometrics Project](https://openpsychometrics.org/tests/IPIP-BFFM/results.php?r=4.9,5,4.6,3.1,5#_II) my results from the IPIP Big Five Factor Markers are in the table below. Each factor is scored from 1 to 5.
 
-<!-- Raw HTML rather than markdown image syntax so the intrinsic 520x122 can be declared:
-     this is a third-party image Astro cannot optimise or measure at build time, and
-     without dimensions it reflowed the page as it loaded. -->
+| Factor                | Score | Description                                                                     |
+| :-------------------- | :---- | :------------------------------------------------------------------------------ |
+| Emotional stability   | 5.0   | Calm and even-tempered, rarely rattled by pressure or setbacks                  |
+| Intellect/Imagination | 5.0   | Curious and inventive, drawn to abstract ideas and new experiences              |
+| Extroversion          | 4.9   | Energised by people, outgoing and comfortable taking the floor                  |
+| Agreeableness         | 4.6   | Trusting and cooperative, inclined to accommodate others                        |
+| Conscientiousness     | 3.1   | Balanced between structure and spontaneity, preferring flexibility over routine |
 
-<img
-  src="https://openpsychometrics.org/tests/IPIP-BFFM/BIG5-graphic.php?EXT=4.9&EST=5&AGR=4.6&CSN=3.1&IIM=5"
-  alt="IPIP Big Five Factor Markers"
-  width="520"
-  height="122"
-  loading="lazy"
-/>
+```mermaid
+%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#b565a7"}}}}%%
+xychart-beta
+    title "IPIP Big Five Factor Markers"
+    x-axis ["Stability", "Intellect", "Extroversion", "Agreeableness", "Conscientious"]
+    y-axis "Score" 0 --> 5
+    bar [5, 5, 4.9, 4.6, 3.1]
+```
 
 ## Gender Identity
 

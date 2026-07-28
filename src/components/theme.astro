@@ -164,14 +164,13 @@
 
     const updateTheme = () => {
       const theme = readStoredTheme()
-      if (
-        theme === 'dark' ||
-        (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
+      const dark =
+        theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+
+      document.documentElement.classList.toggle('dark', dark)
+      // Kept in step with the pre-paint script in layout.astro; see the comment there
+      // for why data-theme is mirrored alongside the class.
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
       updateUI()
     }
 

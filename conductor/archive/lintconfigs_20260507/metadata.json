@@ -1,8 +1,0 @@
-{
-  "track_id": "lintconfigs_20260507",
-  "type": "chore",
-  "status": "new",
-  "created_at": "2026-05-07T12:00:00Z",
-  "updated_at": "2026-05-07T12:00:00Z",
-  "description": "Review eslint and prettier configs and optimize for best practices. Install additional plugins if required."
-}

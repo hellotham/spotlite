@@ -21,7 +21,7 @@ Used for backgrounds, text, and structural elements where neutral grounding is n
 
 The soul of the system, tempering passion with purity.
 
-- **Morning Glory (#ec809e):** Vibrant highlight or action color (mapped to `text-accent`).
+- **Morning Glory (#ec809e):** Vibrant highlight or action colour. It is the dark-mode half of `text-accent`; light mode uses the darker **Morning Glory Dark (#c02d5a)**, because #ec809e only reaches 2.2:1 on the cream background.
 - **Rose Quartz (#f7caca):** The base color of Rosely; warm, gentle rose tone conveying composure.
 - **Barely Pink (#F8D7DD):** Soft background tint or secondary highlight.
 - **Heavenly Pink (#f4dede):** Ultra-soft background or subtle text accent.
@@ -59,7 +59,7 @@ Rosely embraces a clean, modern aesthetic utilizing **UnoCSS** (Wind4 preset) fo
 - **Borders:** Use thin, 1px borders colored with `border-border` (mapped to Opal Gray or similar neutral) for subtle separation.
 - **Shadows & Elevation:** Drop shadows should be soft and diffused (`shadow-sm` or `shadow-md`), enhancing the low-contrast ambiance without creating overwhelming visual hierarchy.
 - **Interactive States:** Hover and focus states should slightly shift the background or border color (e.g., using `text-accent` or Lupine accents) while maintaining the eye-comfortable constraint.
-- **Focus Indicators:** Use the `focus-ring` shortcut for all interactive elements to ensure a highly visible, accessible focus state for keyboard users.
+- **Focus Indicators:** Use the `ui-focus-ring` shortcut for all interactive elements to ensure a highly visible, accessible focus state for keyboard users.
 - **Component Architecture:** Build accessible and composable UI blocks styled with UnoCSS utility classes that reference Rosely's custom color variables.
 
 ### UnoCSS Shortcuts (Component Library)
@@ -101,8 +101,15 @@ For consistency and maintainability, we provide semantic shortcuts that encapsul
 
 #### Interactive Elements
 
-- `hover-accent` – Color shift on hover for links/text
-- `focus-ring` – Accessible focus indicator
+- `ui-hover-accent` – Color shift on hover for links/text
+- `ui-focus-ring` – Accessible focus indicator
+
+> **The `ui-` prefix is load-bearing.** UnoCSS resolves `<variant>-<utility>` before it
+> consults the shortcut table, so the obvious names silently lost: `focus-ring` parsed as
+> the `focus:` variant applied to `ring` and emitted a 1px `currentColor` ring instead of
+> the intended indicator, while `hover-accent` parsed as `hover:` plus a non-utility and
+> emitted no CSS whatsoever. Neither produced a build error. Do not rename these back, and
+> do not add new shortcuts whose first segment is a variant name.
 
 **Usage Examples:**
 
@@ -126,7 +133,55 @@ For consistency and maintainability, we provide semantic shortcuts that encapsul
 
 These shortcuts eliminate repetitive dark mode variants and ensure design consistency across all components.
 
-## 5. Motion & Animation
+## 5. Recurring Patterns
+
+Beyond the shortcut library, a few composite patterns recur across the site and should be
+reused rather than reinvented.
+
+### Entity marks (`entitylogo.astro`)
+
+One component renders every company and institution logo, across six surfaces, so the work
+and education collections present identically.
+
+- **`circular`** — the square mark in a round tile, for list pages (96px) and the home page's
+  compact rows (40px).
+- **`wide`** — a letterbox tile for wordmarks, used by the home page education card.
+- **`bare`** — the extended wordmark alone, no tile, for detail page headers.
+
+The tile takes the mark's own background colour (`logoBackground`), so a logo with a solid
+background reads as one seamless circle rather than a square floating on a contrasting disc.
+White is the default: it suits white-backed and transparent marks alike, and keeps dark
+artwork legible in dark mode. Where an entity has no mark at all, the tiled variants draw an
+initials monogram — which reads as deliberate, where a grey placeholder image read as broken.
+The `bare` variant renders nothing, since the detail page heading already names the entity.
+
+### Data visualisation
+
+Two idioms coexist, and the choice is about authorship:
+
+- **D3 in an inline `<script>`** for anything driven by site data — the career timeline, the
+  superpowers bar chart and bubble chart, the work word cloud. These are themeable, responsive,
+  and pause when off-screen.
+- **Mermaid fenced blocks** for anything authored inside content Markdown — gantt, quadrant and
+  xychart diagrams on the Superpowers page. Rendered by `astro-mermaid`, fully offline.
+
+Mermaid uses its own default palette rather than Rosely, which is a known inconsistency. Where a
+diagram's default fill is too pale to read on the cream background, override it per-diagram with
+an `%%{init}%%` directive using a palette colour checked to 3:1 against **both** backgrounds —
+Radiant Orchid (#b565a7) is the safe choice at 3.4:1 on cream and 3.8:1 on near-black.
+
+The word cloud sizes each tag by how many roles carry it, drifts under Brownian motion, and
+separates labels along their shallowest axis of overlap — circle packing is wrong for wide text,
+because a two-pixel vertical touch shoves two labels far apart horizontally.
+
+### Charts are decorative; their data is not
+
+Every visualisation is `aria-hidden` and paired with an accessible text equivalent — an
+`sr-only` list for the word cloud, a real table beside the psychometric charts, per-bubble
+`aria-label`s and a keyboard-reachable modal for the superpowers. The text equivalent is also
+what the search index picks up, so it is never optional.
+
+## 6. Motion & Animation
 
 Rosely uses motion purposefully to guide focus and add a layer of professional polish without sacrificing performance or serenity.
 
@@ -144,26 +199,69 @@ Rosely uses motion purposefully to guide focus and add a layer of professional p
 - **Smooth Transitions:** Hover and focus states for interactive elements (buttons, links, cards) use smooth CSS transitions (typically 200-300ms) for property changes like `color`, `scale`, and `box-shadow`.
 - **Tactile Transforms:** Interactive cards may use subtle transforms (e.g., `hover:-translate-y-1`) to provide a tactile sense of depth.
 
+### Continuous Motion
+
+Three components animate indefinitely rather than on entrance: the superpowers bubble chart,
+the work word cloud, and the career timeline. All three follow the same contract:
+
+- **Pause when off-screen.** An `IntersectionObserver` stops the `requestAnimationFrame` loop
+  when the chart scrolls out of view, so an idle tab costs nothing.
+- **Offer a pause control.** Indefinite motion beside other content needs a visible,
+  keyboard-reachable way to stop it (WCAG 2.2.2). The bubble chart's toggle is the pattern.
+- **Tear down on navigation.** `ClientRouter` swaps the DOM without unloading the script, so
+  every loop, observer and listener must be released on `astro:before-swap`.
+
 ### Motion Accessibility
 
 - **Reduced Motion Support:** In alignment with our serenity principle, all non-essential animations and transitions are automatically disabled or minimized when `prefers-reduced-motion: reduce` is detected, ensuring an inclusive experience for all users.
+- **JavaScript motion is not covered by the CSS preflight.** The `prefers-reduced-motion` block
+  in `uno.config.ts` neutralises CSS animation and transitions only; a `requestAnimationFrame`
+  loop keeps running regardless. Every animated component must read the media query itself and
+  settle into a static layout instead. This is a recurring source of regressions.
 
-## 6. Accessibility Standards
+## 7. Accessibility Standards
 
-Rosely is committed to being an inclusive design system that meets **WCAG 2.1 Level AA** standards.
+Rosely is committed to being an inclusive design system that meets **WCAG 2.2 Level AA** standards.
 
 ### Semantic Foundation
 
 - **Landmark Elements:** Use appropriate HTML5 tags (`<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`) to provide structural meaning for assistive technologies.
 - **Heading Hierarchy:** Maintain a logical, nested heading structure (H1 → H2 → H3) without skipping levels, ensuring clear document outlines.
 
+- **Bypass Blocks:** A skip link is the first focusable element on every page, jumping to
+  `#main-content`. The header repeats seven nav links plus search and theme controls on all 28
+  pages, so without it a keyboard user tabs through the lot every time. It is parked off-screen
+  with a transform rather than `sr-only focus:not-sr-only` — those two are the same specificity
+  and `sr-only` wins, leaving the link a 1px box on focus.
+
 ### Interactive Components
 
 - **ARIA Implementation:** Use standard ARIA roles and attributes (`aria-label`, `aria-expanded`, `aria-current`) where native semantic elements are insufficient, particularly for complex interactive components like mobile menus and search.
 - **Keyboard Navigability:** All interactive elements must be focusable via keyboard, following a logical tab order.
-- **Focus States:** Every focusable element must utilize the `focus-ring` utility to provide a clear, high-contrast visual indicator of focus.
+- **Focus States:** Every focusable element must utilize the `ui-focus-ring` utility to provide a clear, high-contrast visual indicator of focus.
+- **Dialogs:** Use the native `<dialog>` element, named with `aria-labelledby` pointing at its
+  own heading. An unnamed dialog is announced as just "dialog".
+- **Hover-revealed content** must be dismissible without moving the pointer — chart tooltips
+  listen for Escape (WCAG 1.4.13).
+- **Redundant alternative text:** an image inside a link that already names its subject takes
+  `alt=''`. Repeating the name makes the link announce it twice. `entitylogo.astro` exposes a
+  `decorative` prop for this, keeping `alt` for the monogram fallback.
 
 ### Color & Contrast
 
 - **Contrast Compliance:** While maintaining a serene "low-contrast" aesthetic, all text and interactive components are audited to meet WCAG AA contrast ratios (at least 4.5:1 for normal text and 3:1 for large text).
+- **Check against the real background, per theme.** The palette's cream (#f4eee8) and near-black
+  (#27272a) surfaces are far enough apart that a single token rarely satisfies both. Morning Glory
+  reaches only 2.2:1 on cream, so `ui-focus-ring` and `text-accent` both switch to Morning Glory
+  Dark in light mode. Assume a colour needs a light and a dark value until measured otherwise.
+- **Non-text contrast (3:1) applies to controls too.** An outline button's border is its only
+  boundary, so `btn-secondary` uses Granite Gray / Opal Gray rather than the softer decorative
+  `border-primary` token.
 - **Information without Color:** Never use color as the sole indicator of meaning or status (e.g., provide text labels or icons alongside color states for success and error messages).
+
+### Verification
+
+Lighthouse currently reports 100 for accessibility, best practices and SEO across the site, with
+performance 91–100. Treat that as the floor, not the goal — Lighthouse cannot see keyboard order,
+focus management or whether alternative text is meaningful, and it weights some genuine axe
+findings at zero.

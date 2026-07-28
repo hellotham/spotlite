@@ -1,8 +1,0 @@
-{
-  "track_id": "refactorsociallinks_20260509",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-05-09T00:00:00Z",
-  "updated_at": "2026-05-09T00:00:00Z",
-  "description": "refactor social links in personSchema in @src/layouts/layout.astro and get the informtion from social collection"
-}

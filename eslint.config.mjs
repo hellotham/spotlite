@@ -17,15 +17,7 @@ const codeFiles = ['**/*.{js,mjs,cjs,jsx,ts,tsx,mts,cts,astro}']
 export default defineConfig([
   // Ignore patterns. A config object containing only `ignores` applies globally.
   {
-    ignores: [
-      'dist/**',
-      '.astro/**',
-      'coverage/**',
-      'node_modules/**',
-      'conductor/**',
-      '**/*.d.ts',
-      '.github/'
-    ]
+    ignores: ['dist/**', '.astro/**', 'coverage/**', 'node_modules/**', '**/*.d.ts', '.github/']
   },
 
   // Base configs. These must be scoped to code files: markdown is parsed with a

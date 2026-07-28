@@ -195,14 +195,17 @@ const breadcrumbList = {
           stored = null
         }
 
-        if (
+        const dark =
           stored === 'dark' ||
           (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-          document.documentElement.classList.add('dark')
-        } else {
-          document.documentElement.classList.remove('dark')
-        }
+
+        document.documentElement.classList.toggle('dark', dark)
+        // Mirrored onto data-theme purely for astro-mermaid, which keys its theme off
+        // that attribute and watches it with a MutationObserver filtered to it. Nothing
+        // else reads it — UnoCSS and the site's own CSS both use the `dark` class — but
+        // without it every Mermaid diagram rendered in the light theme regardless, so
+        // their near-black label text was unreadable on the dark background.
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
       }
       setTheme()
       document.addEventListener('astro:after-swap', setTheme)
@@ -349,5 +352,31 @@ const breadcrumbList = {
       </main>
       <Footer />
     </div>
+    <script is:inline>
+      // Preserve each Mermaid diagram's source before astro-mermaid can render over it.
+      //
+      // The integration stores the source itself, but only `if (!hasAttribute('data-diagram'))`
+      // and it runs initMermaid twice on load (once at module execution, once on
+      // astro:page-load). The two passes interleave across an await, so for whichever
+      // diagram is mid-render the second pass reads textContent that is already the
+      // rendered SVG and stores *that* as the source. Nothing breaks until something
+      // asks for a re-render — which is exactly what the theme switch now does — and
+      // then that diagram dies with "No diagram type detected".
+      //
+      // This runs during parse, ahead of the integration's deferred module, so the
+      // attribute is always populated from the real source first. The data-processed
+      // guard means a rendered diagram is never mistaken for one.
+      ;(() => {
+        const stampSources = () => {
+          for (const pre of document.querySelectorAll('pre.mermaid')) {
+            if (!pre.hasAttribute('data-diagram') && !pre.hasAttribute('data-processed')) {
+              pre.setAttribute('data-diagram', pre.textContent || '')
+            }
+          }
+        }
+        stampSources()
+        document.addEventListener('astro:page-load', stampSources)
+      })()
+    </script>
   </body>
 </html>
