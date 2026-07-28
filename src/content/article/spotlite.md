@@ -1,17 +1,20 @@
 ---
-title: 'Spotlite: A Personal Web Site Astro starter'
+title: 'Spotlite: A CV and Portfolio Template for Astro'
 pubDate: 2023-05-25
-description: An elegant, clean and surprisingly feature full personal web site template written in Astro, UnoCSS and Iconify.
+description: An Astro template that generates a professional CV — two print-ready PDFs and a browsable portfolio site — from a single set of Markdown files.
 ---
 
 ![screenshot](../../assets/screenshot.png)
 
-Spotlite is a beautiful personal website template built with Astro and UnoCSS, inspired by
-a similar sounding template from the Tailwind CSS team. Best of all, it's open
-source (MIT licence) so feel free to use and modify it!
+Spotlite generates a professional CV — as two print-ready PDFs and as a browsable site —
+from a single set of Markdown files. It began as a personal website template inspired by a
+similar sounding one from the Tailwind CSS team, and the portfolio site is still there; but
+the CV is now the point. Open source under the MIT licence, so feel free to use and modify
+it.
 
-_This article was first written in 2023, when Spotlite was a fairly plain Astro 2 template.
-It has grown a great deal since — the description below reflects where it is now._
+_This article was first written in 2023, when Spotlite was a fairly plain Astro 2 personal
+website template. It has grown a great deal since, and its centre of gravity has moved to CV
+generation — the description below reflects where it is now._
 
 It uses the following technologies:
 
@@ -74,8 +77,8 @@ and scales to fit exactly one page rather than quietly spilling onto a second, a
 documents are single-column with selectable text so applicant tracking systems can parse
 them.
 
-It's production-ready and easy to customise, making it the perfect starting point for your
-own personal website.
+It's production-ready and easy to customise, making it a good starting point for anyone who
+wants their CV and their portfolio to stay in step.
 
 Deployment is a GitHub Actions workflow that builds the site, generates the Pagefind index
 and publishes to GitHub Pages on every push to `main`.

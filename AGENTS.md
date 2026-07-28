@@ -1,6 +1,6 @@
-# Spotlite - Astro Personal Web Site Template
+# Spotlite — Astro CV and Portfolio Template
 
-Spotlite is a modern, production-ready personal website template built with **Astro** and **UnoCSS**. It is designed to be highly performant, easy to customise, and simple to deploy as a static site.
+Spotlite generates a professional CV — two print-ready PDFs and a browsable site — from a single set of Markdown files, built with **Astro** and **UnoCSS**. The CV is the deliverable; the portfolio site around it is where the detail the PDF had to omit lives.
 
 `README.md` documents the project for a human setting it up. This file is for coding agents: what the project is, how it is put together, and — in the Traps section — the specific things that have cost real debugging time. `DESIGN.md` covers the visual system.
 

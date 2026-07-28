@@ -1,71 +1,99 @@
-# Spotlite - Personal Web Site Astro Starter
+# Spotlite — CV and Portfolio Template for Astro
 
 ![screenshot](https://github.com/hellotham/spotlite/blob/main/src/assets/screenshot.png?raw=true)
 
-Spotlite is a beautiful personal website template built with Astro and UnoCSS, inspired by
-a similar sounding template from the Tailwind CSS team. Best of all, it's open
-source (MIT licence) so feel free to use and modify it!
+Spotlite generates a **professional CV — as two print-ready PDFs and as a browsable site —
+from a single set of Markdown files**. Write each role once; the one-page résumé, the full
+curriculum vitae, the work history pages, the career timeline and the search index all
+follow from it.
 
-It uses the following technologies:
+Built with Astro and UnoCSS, and open source under the MIT licence, so feel free to use and
+modify it.
 
-- [Astro](https://astro.build)
+## Why it works this way
+
+A CV is a document of record. The failure mode of maintaining one is drift: the PDF you
+email says something different from the site you link to, because you updated one and not
+the other.
+
+Spotlite removes the opportunity. `src/content/work/*.md` is the only place a role exists,
+and **curation is deterministic** — recency, seniority, and explicit per-entry flags.
+Nothing in the pipeline rewords, summarises or infers a career fact; editorial copy lives in
+`src/cv.json` where a human can review it.
+
+The PDFs are built for applicant tracking systems as well as people: single column,
+selectable text, no layout tables. Multi-column CVs and sidebars are read out of order by
+ATS parsers, so the design takes its structure from typography instead.
+
+## The two documents
+
+| File                    | Contents                                                                                  |
+| :---------------------- | :---------------------------------------------------------------------------------------- |
+| `public/cv-onepage.pdf` | Profile, key achievements, most recent roles, condensed earlier career, education, skills |
+| `public/cv.pdf`         | Complete history with achievement bullets, education with awards, full competency list    |
+
+Run `pnpm run pdf` to regenerate. The one-pager measures itself and scales to fit exactly one
+page, **failing loudly** rather than spilling onto a second; the full CV re-renders slightly
+denser if the last page would otherwise carry only a line or two.
+
+To customise:
+
+- `src/cv.json` — contact details, professional headline, summary, key achievements, and the
+  one-pager limits (`maxRoles`, `maxBulletsPerRole`, `maxEarlierRoles`).
+- Per entry in the `work` and `education` collections: `cvPriority` to promote a role,
+  `omitFromCv` to hide one, `oneLiner` for its condensed form.
+
+Preview either document in the browser at `/cv/onepage/` or `/cv/full/`. Both routes are
+`noindex` and excluded from the sitemap and search index.
+
+## The site around it
+
+The same collections drive a portfolio site, so a recruiter following the link finds the
+detail the PDF had to leave out:
+
+- **Work History** — every role, with an animated word cloud of the capabilities, domains and
+  technologies across the career, and a detail page per role.
+- **Education** — qualifications with a detail page each.
+- **Superpowers** — self-assessed competencies as interactive D3 visualisations, with detail
+  modals. Feeds the CV's competency list.
+- **Home** — profile photo, social links, photo galleries, an interactive career timeline, and
+  the key achievements that open the CV. Prose is edited in `src/pages/index.md`.
+- **Articles** — long-form writing, with Mermaid diagrams and KaTeX maths available.
+- **Projects**, **Creations**, **Passions** — portfolio items, linkable artefacts, and tools of
+  the trade.
+- **Search** across the lot, via a Pagefind index built at deploy time.
+
+## Built with
+
+- [Astro](https://astro.build) (v7, Sätteri Markdown processor)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
-- [Vitest](https://vitest.dev/) for unit and component testing
 - [UnoCSS](https://unocss.dev/)
+- [Puppeteer](https://pptr.dev/) to render the CV PDFs from dedicated print routes
+- [Vitest](https://vitest.dev/) for unit and component testing
 - [D3.js](https://d3js.org/) for interactive data visualisations
 - [Mermaid](https://mermaid.js.org/) via `astro-mermaid` for diagrams
-- [KaTeX](https://katex.org/) via `remark-math` and `rehype-katex` for maths in Markdown
-- `@astrojs/sitemap` and `@astrojs/rss` preintegrated
-- Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
+- [KaTeX](https://katex.org/) for maths in Markdown, rendered at build time and self-hosted
 - [Pagefind](https://pagefind.app/) for static full-site search
 - [PhotoSwipe](https://photoswipe.com/) for image lightbox galleries
-- [Puppeteer](https://pptr.dev/) to render the CV PDFs from dedicated print routes
+- [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/)
+- `@astrojs/sitemap` and `@astrojs/rss` preintegrated
+- Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
 
-It features:
-
-- A homepage featuring a profile photo, social links, photo galleries, links to blog
-  articles, an interactive career timeline, and interactive superpowers. Its prose is
-  edited in Markdown (`src/pages/index.md`).
-- An Articles page linking to blog articles.
-- A Projects page showcasing a portfolio of items with descriptions, images and
-  links.
-- A Superpowers page featuring interactive D3 data visualisations and detailed skill modals.
-- A Work History page with an animated word cloud of the capabilities, domains and
-  technologies across the career, and a detail page per role.
-- An Education page with a detail page per qualification.
-- A Creations page showcasing linkable artefacts.
-- A Passions page providing a list of products and tools used.
-- Support for diagrams and flowcharts via Mermaid, and for LaTeX maths via KaTeX.
-- Header search with Pagefind indexing for production builds.
-- Two print-ready CV PDFs generated from the content collections — a one-page résumé
-  and a full curriculum vitae.
-- Development search fallback powered by a local JSON endpoint.
-- Click-to-zoom image galleries on homepage cards and featured page images.
-
-Spotlite uses all the latest and greatest features in Astro (>v7) including:
-
-- optimised assets
-- data and content collections
-- endpoints
-- sitemap
-- RSS
-- static search indexing
-
-It’s production-ready and easy to customise, making it the perfect starting point for your own personal website.
+Astro features used throughout: optimised assets, content collections, endpoints, sitemap, RSS
+and static search indexing. Accessibility is treated as a requirement rather than a polish
+pass — see `DESIGN.md`.
 
 It is deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
 ├── astro.config.mjs
 ├── package.json
 ├── uno.config.ts
+├── AGENTS.md                 # Working notes for coding agents, incl. known traps
+├── DESIGN.md                 # The Rosely design system
 ├── public/
 │   ├── cv.pdf               # Generated: full CV
 │   ├── cv-onepage.pdf       # Generated: one-page résumé
@@ -91,8 +119,12 @@ Inside of your Astro project, you'll see the following folders and files:
   │   │   └── full.astro
   │   ├── api/search.json.ts # Search index used when Pagefind is unavailable
   │   └── rss.xml.js
+  ├── styles/
+  │   ├── mermaid.css        # Rosely dark theme for diagrams
+  │   └── shiki-rosely.ts    # Rosely syntax highlighting, light and dark
   ├── utils/
   │   ├── cv.ts              # Deterministic CV curation
+  │   ├── katex-mdast.ts     # Build-time maths rendering
   │   └── timeline.ts
   ├── content.config.ts
   ├── config.json            # Site identity
@@ -120,61 +152,30 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro ...`         | Run CLI commands like `astro add`, `astro check`       |
 | `pnpm astro --help`      | Get help using the Astro CLI                           |
 
-## 📄 CV PDFs
-
-Two documents are generated from the same content collections that drive the site, so
-there is a single source of truth — editing `src/content/work/*.md` updates both.
-
-| File                    | Contents                                                                                  |
-| :---------------------- | :---------------------------------------------------------------------------------------- |
-| `public/cv-onepage.pdf` | Profile, key achievements, most recent roles, condensed earlier career, education, skills |
-| `public/cv.pdf`         | Complete history with achievement bullets, education with awards, full competency list    |
-
-Both are single column with selectable text. Multi-column layouts and sidebars are read
-out of order by applicant tracking systems, so the design gets its structure from
-typography rather than columns.
-
-Run `pnpm run pdf` to regenerate. The one-pager measures itself and scales to fit exactly
-one page, failing loudly rather than spilling onto a second; the full CV re-renders
-slightly denser if the last page would otherwise carry only a line or two.
-
-To customise:
-
-- `src/cv.json` — contact details, professional headline, summary, key achievements, and
-  the one-pager limits (`maxRoles`, `maxBulletsPerRole`, `maxEarlierRoles`).
-- Per entry in the `work` and `education` collections: `cvPriority` to promote a role,
-  `omitFromCv` to hide one, `oneLiner` for its condensed form.
-
-Curation is deterministic — recency, seniority and those explicit flags. Nothing in the
-pipeline rewords a career fact.
-
-Preview either document in the browser at `/cv/onepage/` or `/cv/full/`. Both routes are
-`noindex` and excluded from the sitemap and search index.
+Note that `build` does **not** regenerate the PDFs — that is `pnpm run pdf`.
 
 ## 🏷️ Work Tags and the Word Cloud
 
-Each entry in the `work` collection carries an optional `tags` array of capabilities,
-domains and technologies. `src/components/wordcloud.astro` aggregates them across the
-whole collection and renders the result on `/work/`, sizing each tag by **the number of
-roles it appears in** — so the cloud shows where a career actually concentrated rather
-than what any one entry claims.
+Each entry in the `work` collection carries an optional `tags` array of capabilities, domains
+and technologies. `src/components/wordcloud.astro` aggregates them across the whole collection
+and renders the result on `/work/`, sizing each tag by **the number of roles it appears in** —
+so the cloud shows where a career actually concentrated rather than what any one entry claims.
 
 That weighting only works if the vocabulary is reused deliberately between entries.
-"Enterprise architecture" appearing in six roles is signal; the same idea spelled
-"Enterprise architecture" in one entry and "EA" in another is two tags of weight one.
-Distinct tags that happen to look similar (`IT strategy` vs `Technology strategy`) are
-fine when the difference is real.
+"Enterprise architecture" appearing in six roles is signal; the same idea spelled "Enterprise
+architecture" in one entry and "EA" in another is two tags of weight one. Distinct tags that
+happen to look similar (`IT strategy` vs `Technology strategy`) are fine when the difference is
+real.
 
-The cloud is decorative: it is `aria-hidden`, and the same tags are published beneath it
-as a `sr-only` list with their counts, which is also what the search index picks up. It
-honours `prefers-reduced-motion` by settling into a static layout.
+The cloud is decorative: it is `aria-hidden`, and the same tags are published beneath it as an
+`sr-only` list with their counts, which is also what the search index picks up. It honours
+`prefers-reduced-motion` by settling into a static layout.
 
 ## 🔎 Search Notes
 
 - Production and preview builds use Pagefind assets generated during `pnpm run build`.
-- Where Pagefind is unavailable, search falls back to `src/pages/api/search.json.ts`.
-  That endpoint must cover **every** collection Pagefind indexes from the rendered
-  pages: if one is missing, its content is silently unsearchable in that environment
-  while production works fine.
+- Where Pagefind is unavailable, search falls back to `src/pages/api/search.json.ts`. That
+  endpoint must cover **every** collection Pagefind indexes from the rendered pages: if one is
+  missing, its content is silently unsearchable in that environment while production works fine.
 - Use `pnpm run build`, not `astro build`. A bare `astro build` clears `dist/` without
   regenerating `dist/pagefind/`, so search quietly drops to the fallback with no error.
