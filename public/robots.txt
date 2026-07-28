@@ -1,3 +1,9 @@
+# Note: public/ is served under the /spotlite/ base, so this file is published at
+# https://hellotham.com/spotlite/robots.txt. Crawlers only read /robots.txt at the origin
+# root, which belongs to the apex-domain site, not this repository — so nothing here takes
+# effect. It is kept because it is correct for anyone who deploys Spotlite at a domain
+# root. To have the sitemap discovered at hellotham.com, add the Sitemap line below to the
+# apex site's own robots.txt, or submit it in Search Console.
 User-agent: *
 Allow: /
 

@@ -13,7 +13,7 @@ work = work.sort((a, b) => {
 ---
 
 <div class='p-6 card rounded-2xl'>
-  <h2 class='text-lg text-accent font-semibold font-serif flex'>
+  <h2 class='text-lg text-accent font-semibold font-serif flex items-center'>
     <span class='i-heroicons-briefcase text-secondary h-6 w-6' aria-hidden='true'></span>
     <span class='ml-3'>Work</span>
   </h2>
@@ -23,12 +23,13 @@ work = work.sort((a, b) => {
         <li>
           <a
             href={`${import.meta.env.BASE_URL}work/${job.id}/`}
-            class='group p-2 rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
+            class='group p-2 ui-focus-ring rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 dark:hover:bg-grapeade/30'
           >
             <EntityLogo
               src={job.data.image}
               alt={job.data.company}
               background={job.data.logoBackground}
+              decorative
               size='sm'
               class='mt-1'
             />

@@ -25,7 +25,7 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
           <li>
             <button
               type='button'
-              class='superpower-trigger group p-2 text-left rounded-xl flex gap-4 w-full transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
+              class='superpower-trigger group p-2 text-left ui-focus-ring rounded-xl flex gap-4 w-full transition -m-2 hover:bg-heavenlyPink/50 dark:hover:bg-grapeade/30'
               data-title={item.title}
               data-description={item.description}
               data-level={item.level}
@@ -54,6 +54,7 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
 
 <dialog
   id='superpowers-modal'
+  aria-labelledby='modal-title'
   class='p-0 border border-primary/30 rounded-2xl bg-sugarSwizzle/95 glass flex-col max-w-lg w-[calc(100%-2rem)] shadow-2xl backdrop-blur-md dark:bg-blackBeauty/90 open:flex'
 >
   <div class='p-6 sm:p-8'>
@@ -71,7 +72,7 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
       <button
         id='close-modal'
         type='button'
-        class='text-secondary p-1 rounded-lg transition hover:text-accent focus-ring'
+        class='text-secondary p-1 ui-focus-ring rounded-lg transition hover:text-accent'
         aria-label='Close modal'
       >
         <span class='i-heroicons-x-mark h-6 w-6'></span>
@@ -112,7 +113,11 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
     const commentEl = document.getElementById('modal-comment')
     const commentContainer = document.getElementById('modal-comment-container')
 
-    if (!modal || !closeBtn) return
+    // The guard the other components use. On the first page view both the module-scope
+    // call below and the astro:page-load event fire, so every listener was registered
+    // twice and each trigger called showModal() on an already-open dialog — which throws
+    // InvalidStateError, harmlessly but noisily.
+    if (!modal || !closeBtn || modal.dataset.modalInitialized === 'true') return
 
     triggers.forEach((trigger) => {
       trigger.addEventListener('click', () => {
@@ -156,6 +161,8 @@ const sortedSuperpowers = [...superpowers].sort((a, b) => a.title.localeCompare(
     modal.addEventListener('close', () => {
       document.body.style.overflow = ''
     })
+
+    modal.dataset.modalInitialized = 'true'
   }
 
   setupModal()

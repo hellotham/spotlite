@@ -1,0 +1,423 @@
+---
+import { getCollection } from 'astro:content'
+
+/**
+ * Word cloud of the capabilities, domains and technologies across the work history.
+ *
+ * A tag's size is the number of roles that carry it, so the cloud shows where a career
+ * actually concentrated rather than what any single entry claims. Weights come from the
+ * `tags` field on the work collection — see src/content.config.ts for why the vocabulary
+ * has to be reused deliberately between entries.
+ *
+ * The cloud is a decoration: it is `aria-hidden`, and the same tags are published as an
+ * ordered list for assistive technology and for the search index. Making 45 drifting
+ * labels focusable would add a long, unordered tab sequence that leads nowhere, and the
+ * list conveys the same information — including the counts, which the sizes only imply.
+ */
+const work = await getCollection('work')
+
+const counts = new Map<string, number>()
+for (const entry of work) {
+  // Deduplicate within an entry: a tag repeated in one role must not inflate its weight.
+  for (const tag of new Set(entry.data.tags)) {
+    counts.set(tag, (counts.get(tag) ?? 0) + 1)
+  }
+}
+
+const tags = [...counts.entries()]
+  .map(([text, count]) => ({ text, count }))
+  .sort((a, b) => b.count - a.count || a.text.localeCompare(b.text))
+
+const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
+---
+
+{
+  tags.length > 0 && (
+    <figure class='mt-16 sm:mt-20'>
+      <div
+        id='wordcloud'
+        aria-hidden='true'
+        class='min-h-[320px] w-full relative'
+        data-tags={JSON.stringify(tags)}
+      />
+      <figcaption class='sr-only'>
+        Capabilities, domains and technologies across this work history, sized by the number of
+        roles each one appears in.
+        <ul>
+          {tags.map((tag) => (
+            <li>
+              {tag.text} — {tag.count} {roleWord(tag.count)}
+            </li>
+          ))}
+        </ul>
+      </figcaption>
+    </figure>
+  )
+}
+
+<script>
+  import * as d3 from 'd3'
+
+  interface Tag {
+    text: string
+    count: number
+  }
+
+  interface TagNode extends Tag {
+    /** Half-extent of the label's box at its largest pulse, plus the separation gap. */
+    hw: number
+    hh: number
+    fontSize: number
+    colour: number
+    x: number
+    y: number
+    vx: number
+    vy: number
+    /** Pulse phase and period, so labels breathe independently rather than in unison. */
+    phase: number
+    period: number
+  }
+
+  const PALETTE_SIZE = 6
+  const GAP = 10
+  /** Labels breathe between 1 - PULSE and 1 + PULSE; collision uses the upper bound. */
+  const PULSE = 0.1
+
+  let teardown: (() => void) | null = null
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+  const setupWordCloud = () => {
+    const container = document.getElementById('wordcloud')
+    if (!container || container.dataset.initialized === 'true') return
+
+    const data: Tag[] = JSON.parse(container.getAttribute('data-tags') || '[]')
+    if (data.length === 0) return
+
+    let animationRunning = false
+    let animationFrameId: number | null = null
+    let observer: IntersectionObserver | null = null
+
+    const render = () => {
+      const root = document.getElementById('wordcloud')
+      if (!root) return
+
+      // render doubles as the resize handler, so tear the previous run down first —
+      // otherwise each resize leaves another rAF loop and observer alive over detached
+      // nodes, all of them still writing transforms.
+      animationRunning = false
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId)
+        animationFrameId = null
+      }
+      observer?.disconnect()
+      observer = null
+      root.innerHTML = ''
+
+      const width = root.clientWidth
+      if (width === 0) return
+
+      // Narrow columns get smaller type, or "Enterprise architecture" alone would span
+      // the viewport and leave nothing for the physics to move.
+      const scale = Math.max(0.55, Math.min(width / 880, 1))
+      const minFont = 13 * scale
+      const maxFont = 40 * scale
+
+      const minCount = d3.min(data, (d) => d.count) ?? 1
+      const maxCount = d3.max(data, (d) => d.count) ?? 1
+      // sqrt, not linear: a tag appearing six times should read as clearly larger than a
+      // one-off without becoming six times the height and dominating the canvas.
+      const fontFor = (count: number) => {
+        if (maxCount === minCount) return (minFont + maxFont) / 2
+        const t =
+          (Math.sqrt(count) - Math.sqrt(minCount)) / (Math.sqrt(maxCount) - Math.sqrt(minCount))
+        return minFont + t * (maxFont - minFont)
+      }
+
+      const svg = d3
+        .select(root)
+        .append('svg')
+        .attr('width', width)
+        .attr('style', 'max-width: 100%; height: auto;')
+
+      const groups = svg
+        .append('g')
+        .selectAll('g')
+        .data(data)
+        .join('g')
+        .attr('class', (_d, i) => `wc-tag wc-c${i % PALETTE_SIZE}`)
+
+      const labels = groups
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .attr('dominant-baseline', 'central')
+        .style('font-size', (d) => `${fontFor(d.count)}px`)
+        .style('font-weight', (d) => (d.count > minCount ? 600 : 500))
+        .text((d) => d.text)
+
+      // Measure what the browser actually laid out. Estimating from character counts is
+      // wrong for a proportional face, and an overestimate wastes canvas while an
+      // underestimate lets labels overlap.
+      const measure = () => labels.nodes().map((node) => (node as SVGTextElement).getBBox())
+      let boxes = measure()
+
+      // A label wider than the column can never be placed legibly, so shrink the whole
+      // scale until the widest one fits rather than letting it clip at the edge.
+      const widest = d3.max(boxes, (b) => b.width) ?? 0
+      const shrink = widest > 0 ? Math.min(1, (width - 24) / widest) : 1
+      if (shrink < 1) {
+        labels.style('font-size', (d) => `${fontFor(d.count) * shrink}px`)
+        boxes = measure()
+      }
+
+      const nodes: TagNode[] = data.map((d, i) => {
+        const box = boxes[i]
+        return {
+          ...d,
+          // Reserve the pulsed size: if collision used the resting box, labels would
+          // grow into each other every time two neighbours expanded together.
+          hw: (box.width * (1 + PULSE)) / 2 + GAP / 2,
+          hh: (box.height * (1 + PULSE)) / 2 + GAP / 2,
+          fontSize: fontFor(d.count) * shrink,
+          colour: i % PALETTE_SIZE,
+          x: 0,
+          y: 0,
+          vx: 0,
+          vy: 0,
+          phase: Math.random() * Math.PI * 2,
+          period: 7000 + Math.random() * 7000
+        }
+      })
+
+      // Height follows the content: enough canvas that the labels occupy roughly a third
+      // of it, which is the density at which they can drift without constant collisions.
+      const inkArea = nodes.reduce((sum, n) => sum + n.hw * 2 * (n.hh * 2), 0)
+      const height = Math.max(320, Math.min(Math.round(inkArea / (width * 0.34)), 760))
+
+      svg.attr('height', height).attr('viewBox', `0 0 ${width} ${height}`)
+
+      nodes.forEach((n) => {
+        n.x = n.hw + Math.random() * Math.max(1, width - n.hw * 2)
+        n.y = n.hh + Math.random() * Math.max(1, height - n.hh * 2)
+      })
+
+      /**
+       * Separate overlapping boxes along their shallowest axis of penetration.
+       *
+       * Circle packing pushes along the centre-to-centre vector, which is wrong for wide
+       * boxes: two labels overlapping by two pixels vertically would be shoved far apart
+       * horizontally. Resolving the smaller overlap keeps the correction proportionate.
+       */
+      const resolveOverlaps = (passes: number) => {
+        for (let pass = 0; pass < passes; pass++) {
+          for (let i = 0; i < nodes.length; i++) {
+            const a = nodes[i]
+            for (let j = i + 1; j < nodes.length; j++) {
+              const b = nodes[j]
+              const dx = b.x - a.x
+              const dy = b.y - a.y
+              const overlapX = a.hw + b.hw - Math.abs(dx)
+              if (overlapX <= 0) continue
+              const overlapY = a.hh + b.hh - Math.abs(dy)
+              if (overlapY <= 0) continue
+
+              if (overlapX < overlapY) {
+                const push = (overlapX / 2) * (dx < 0 ? -1 : 1)
+                a.x -= push
+                b.x += push
+              } else {
+                const push = (overlapY / 2) * (dy < 0 ? -1 : 1)
+                a.y -= push
+                b.y += push
+              }
+            }
+            a.x = Math.max(a.hw, Math.min(width - a.hw, a.x))
+            a.y = Math.max(a.hh, Math.min(height - a.hh, a.y))
+          }
+        }
+      }
+
+      resolveOverlaps(80)
+
+      const minSpeed = 0.05
+      const maxSpeed = 0.28
+      const brownianStrength = 0.03
+      const velocityDecay = 0.985
+      const wallBounce = 0.85
+
+      nodes.forEach((n) => {
+        const angle = Math.random() * 2 * Math.PI
+        n.vx = Math.cos(angle) * minSpeed
+        n.vy = Math.sin(angle) * minSpeed
+      })
+
+      const paint = (time: number) => {
+        groups.attr('transform', (_d, i) => {
+          const n = nodes[i]
+          const pulse = 1 + PULSE * Math.sin(n.phase + (time / n.period) * Math.PI * 2)
+          return `translate(${n.x.toFixed(2)},${n.y.toFixed(2)}) scale(${pulse.toFixed(3)})`
+        })
+      }
+
+      const animate = (time: number) => {
+        if (!animationRunning) return
+
+        nodes.forEach((n) => {
+          n.vx += (Math.random() - 0.5) * brownianStrength
+          n.vy += (Math.random() - 0.5) * brownianStrength
+          n.vx *= velocityDecay
+          n.vy *= velocityDecay
+          n.x += n.vx
+          n.y += n.vy
+        })
+
+        // Five passes, not the three the bubble chart uses: separation here propagates
+        // through chains of wide neighbours, and at three the slack shows up as a
+        // couple of pixels of overlap between stacked labels.
+        resolveOverlaps(5)
+
+        // Bounce only when the label is still travelling into the wall, so a node the
+        // separation pass has just pinned against an edge does not flip every frame.
+        nodes.forEach((n) => {
+          if (n.x - n.hw <= 0) {
+            n.x = n.hw
+            if (n.vx < 0) n.vx = -n.vx * wallBounce
+          } else if (n.x + n.hw >= width) {
+            n.x = width - n.hw
+            if (n.vx > 0) n.vx = -n.vx * wallBounce
+          }
+          if (n.y - n.hh <= 0) {
+            n.y = n.hh
+            if (n.vy < 0) n.vy = -n.vy * wallBounce
+          } else if (n.y + n.hh >= height) {
+            n.y = height - n.hh
+            if (n.vy > 0) n.vy = -n.vy * wallBounce
+          }
+        })
+
+        nodes.forEach((n) => {
+          const speed = Math.hypot(n.vx, n.vy)
+          if (speed > maxSpeed) {
+            n.vx *= maxSpeed / speed
+            n.vy *= maxSpeed / speed
+          } else if (speed < minSpeed) {
+            const s = speed > 0.001 ? speed : 0.001
+            n.vx *= minSpeed / s
+            n.vy *= minSpeed / s
+          }
+        })
+
+        paint(time)
+        animationFrameId = requestAnimationFrame(animate)
+      }
+
+      // The reduced-motion preflight only tames CSS animation and transitions; a rAF
+      // loop would keep drifting regardless, so settle the layout and leave it still.
+      if (prefersReducedMotion.matches) {
+        resolveOverlaps(160)
+        groups.attr('transform', (_d, i) => `translate(${nodes[i].x},${nodes[i].y})`)
+        return
+      }
+
+      paint(0)
+      observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting && !animationRunning) {
+              animationRunning = true
+              animationFrameId = requestAnimationFrame(animate)
+            } else if (!entry.isIntersecting) {
+              animationRunning = false
+              if (animationFrameId !== null) {
+                cancelAnimationFrame(animationFrameId)
+                animationFrameId = null
+              }
+            }
+          }
+        },
+        { threshold: 0.05 }
+      )
+      observer.observe(root)
+    }
+
+    render()
+    window.addEventListener('resize', render)
+
+    // ClientRouter swaps the container on every navigation, so dataset.initialized cannot
+    // see the previous element and setup runs again. Without this the old closure's
+    // resize handler, observer and rAF loop all survive into the next page.
+    teardown = () => {
+      animationRunning = false
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId)
+        animationFrameId = null
+      }
+      observer?.disconnect()
+      observer = null
+      window.removeEventListener('resize', render)
+    }
+
+    container.dataset.initialized = 'true'
+  }
+
+  setupWordCloud()
+  document.addEventListener('astro:page-load', setupWordCloud)
+  document.addEventListener('astro:before-swap', () => {
+    teardown?.()
+    teardown = null
+  })
+</script>
+
+<style is:global>
+  /* Global, not scoped: Astro's scoping works by stamping an attribute onto elements in
+     the template, and every node here is created by the script at runtime, so a scoped
+     rule would never match. Every selector is anchored to the #wordcloud id instead.
+
+     Set per theme in CSS rather than from the script: the colours that clear 4.5:1 on
+     the cream background are far too dark on the near-black one, and a JS palette would
+     have to observe the theme toggle to keep up. Both sets are contrast-checked against
+     their own background. */
+  #wordcloud .wc-c0 {
+    fill: #a8264f;
+  }
+  #wordcloud .wc-c1 {
+    fill: #1f6f8b;
+  }
+  #wordcloud .wc-c2 {
+    fill: #8d4f83;
+  }
+  #wordcloud .wc-c3 {
+    fill: #26654f;
+  }
+  #wordcloud .wc-c4 {
+    fill: #b0472a;
+  }
+  #wordcloud .wc-c5 {
+    fill: #7a5c1f;
+  }
+
+  .dark #wordcloud .wc-c0 {
+    fill: #ec809e;
+  }
+  .dark #wordcloud .wc-c1 {
+    fill: #3cadd4;
+  }
+  .dark #wordcloud .wc-c2 {
+    fill: #be9cc1;
+  }
+  .dark #wordcloud .wc-c3 {
+    fill: #64bfa4;
+  }
+  .dark #wordcloud .wc-c4 {
+    fill: #eada4f;
+  }
+  .dark #wordcloud .wc-c5 {
+    fill: #f7caca;
+  }
+
+  #wordcloud svg {
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+</style>

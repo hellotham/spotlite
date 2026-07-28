@@ -14,11 +14,11 @@ const current = Astro.url.pathname
       <li>
         <a
           class:list={[
-            'relative block px-3 py-2 transition-colors duration-200 focus-ring rounded-md',
+            'relative block px-3 py-2 transition-colors duration-200 ui-focus-ring rounded-md',
             current == `${import.meta.env.BASE_URL}${item.id}/` ||
             current == `${import.meta.env.BASE_URL}${item.id}`
               ? 'text-accent'
-              : 'hover-accent'
+              : 'ui-hover-accent'
           ]}
           href={`${import.meta.env.BASE_URL}${item.id}/`}
           aria-current={

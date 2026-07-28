@@ -28,11 +28,14 @@ const rotates = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
             aria-label={`Open photo ${i + 1} in lightbox`}
             class='group h-full w-full block cursor-zoom-in relative'
           >
+            {/* alt='' marks the photo decorative: the wrapping anchor already carries the
+              accessible name. "Card" described the component, not the photograph — a text
+              alternative that is not one (WCAG 1.1.1, technique F30). */}
             <Image
               class='h-full w-full transition duration-300 ease-out inset-0 absolute object-cover group-hover:scale-105'
               style='color:transparent'
               src={card}
-              alt='Card'
+              alt=''
               width={512}
               height={512}
               loading='lazy'
@@ -56,7 +59,13 @@ const rotates = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
   const loadLightboxModule = async () => {
     if (!lightboxModulePromise) {
-      lightboxModulePromise = import('photoswipe/lightbox')
+      // Clear the cache on failure. A rejected promise left in place poisons every
+      // later call, so one dropped chunk disabled the lightbox for the whole session
+      // — including across client-side navigations, where the module scope survives.
+      lightboxModulePromise = import('photoswipe/lightbox').catch((error) => {
+        lightboxModulePromise = undefined
+        throw error
+      })
     }
     return lightboxModulePromise
   }
@@ -83,8 +92,14 @@ const rotates = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
     }
   }
 
-  void initPhotoSwipe()
-  document.addEventListener('astro:page-load', () => {
-    void initPhotoSwipe()
-  })
+  // Handled rather than discarded with `void`: a failed chunk load is not fatal —
+  // the images stay visible and simply do not zoom — but as an unhandled rejection it
+  // surfaced as a console error with no explanation.
+  const startPhotoSwipe = () =>
+    initPhotoSwipe().catch((error) => {
+      console.error('PhotoSwipe failed to initialise; images will not open in a lightbox', error)
+    })
+
+  startPhotoSwipe()
+  document.addEventListener('astro:page-load', startPhotoSwipe)
 </script>

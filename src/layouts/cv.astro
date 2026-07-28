@@ -123,6 +123,10 @@ const { cv, variant, documentTitle } = Astro.props
                   <li>
                     <span class='cv-earlier-role'>{role.role}</span>
                     <span class='cv-earlier-company'>{role.company}</span>
+                    {/* oneLiner is the documented condensed form for a role demoted to
+                        Earlier career. It was plumbed through buildCv but never rendered,
+                        so setting it in frontmatter silently did nothing. */}
+                    {role.oneLiner && <span class='cv-earlier-oneliner'>{role.oneLiner}</span>}
                     <span class='cv-dates cv-earlier-dates'>{role.dateRange}</span>
                   </li>
                 ))}

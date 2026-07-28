@@ -20,6 +20,18 @@ export interface Props {
   pubDate?: Date
   itemPage?: boolean
   home?: boolean
+  /**
+   * Listing routes enumerate many child URLs, which is what schema.org CollectionPage
+   * describes; ItemPage is defined as a page devoted to a single item. Both are driven
+   * off `itemPage`, so this only selects which type that flag emits.
+   */
+  collectionPage?: boolean
+  /**
+   * Human label for the final breadcrumb crumb. Without it the crumb is the raw URL
+   * slug title-cased, which reads as "Nab", "Usyd", "Tfnsw" and "Hp" on every work and
+   * education detail page.
+   */
+  crumbLabel?: string
 }
 
 const {
@@ -29,7 +41,9 @@ const {
   article = false,
   pubDate,
   itemPage = false,
-  home = false
+  home = false,
+  collectionPage = false,
+  crumbLabel
 } = Astro.props
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
@@ -37,7 +51,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 let socialImageURL = typeof image === 'string' ? image : ''
 if (typeof image === 'object') {
   const optimizedImage = await getImage({
-    src: itemPage && image ? image : image, // Keep optimization logic
+    src: image,
     width: 1200,
     height: 630,
     format: 'jpg'
@@ -49,11 +63,15 @@ const finalSocialImageURL = new URL(socialImageURL, Astro.site || 'https://hello
 
 const social = await getCollection('social')
 
+// The site lives under a base path, so Astro.site alone (https://hellotham.com) points
+// structured data at a different site — the apex domain is not this one.
+const siteHome = new URL(import.meta.env.BASE_URL, Astro.site).href
+
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: config.name,
-  url: Astro.site,
+  url: siteHome,
   description: config.description
 }
 
@@ -61,8 +79,10 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: config.name,
-  url: Astro.site,
-  image: socialImageURL,
+  url: siteHome,
+  // Absolute, matching the Article and ItemPage blocks on the same page — socialImageURL
+  // is the base-relative asset path, so the three nodes described one image three ways.
+  image: finalSocialImageURL.href,
   sameAs: social.map((item) => item.data.link),
   jobTitle: config.title,
   worksFor: {
@@ -91,7 +111,7 @@ let itemPageSchema = {}
 if (itemPage) {
   itemPageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'ItemPage',
+    '@type': collectionPage ? 'CollectionPage' : 'ItemPage',
     name: title,
     description: description,
     image: finalSocialImageURL
@@ -123,10 +143,15 @@ const breadcrumbList = {
         index === array.length - 1
           ? array.slice(0, index + 1).join('/')
           : (listingPage[segment] ?? segment)
+      // Only the final crumb can take crumbLabel: it is the one naming the entity this
+      // page is about. Title-casing the slug is the fallback, and it is a poor one —
+      // /work/nab/ becomes "Nab" rather than "NAB Group".
+      const isLast = index === array.length - 1
       acc.push({
         '@type': 'ListItem',
         position: index + 2,
-        name: segment.charAt(0).toUpperCase() + segment.slice(1),
+        name:
+          isLast && crumbLabel ? crumbLabel : segment.charAt(0).toUpperCase() + segment.slice(1),
         item: new URL(basePath + target + '/', Astro.site).href
       })
       return acc
@@ -287,6 +312,22 @@ const breadcrumbList = {
     {!import.meta.env.DEV && <ClientRouter />}
   </head>
   <body>
+    {
+      /* WCAG 2.4.1 Bypass Blocks: the header repeats seven nav links plus the search and
+      theme controls on all 28 pages, so a keyboard user had to tab through the lot to
+      reach content, every time.
+
+      Parked off-screen with a transform rather than `sr-only focus:not-sr-only`: those
+      two are the same specificity, and `sr-only` is emitted later, so its
+      `position:static; width:1px; clip:rect(0,0,0,0)` won and the link stayed a 1px box
+      on focus — verified in the browser. A transform has nothing to lose against. */
+    }
+    <a
+      href='#main-content'
+      class='text-primary p-3 ui-focus-ring rounded-md bg-sugarSwizzle ring-1 ring-opalGray/30 shadow-md transition left-4 top-4 fixed z-50 dark:bg-blackBeauty -translate-y-20 focus:translate-y-0'
+    >
+      Skip to content
+    </a>
     <div class='flex pointer-events-none inset-0 justify-center fixed'>
       <div class='mx-auto flex max-w-7xl w-full pointer-events-none sm:px-8'>
         <div
@@ -302,7 +343,8 @@ const breadcrumbList = {
       whole body, so the nav, search and theme chrome repeated on all 28 pages made
       common words match every page. */
       }
-      <main class='flex-1' data-pagefind-body>
+      {/* tabindex='-1' so the skip link can move focus here; it stays out of tab order. */}
+      <main id='main-content' tabindex='-1' class='flex-1' data-pagefind-body>
         <slot />
       </main>
       <Footer />

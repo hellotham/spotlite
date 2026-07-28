@@ -23,7 +23,9 @@ const { Content } = await render(work)
 
 <Layout
   title={`${work.data.role} at ${work.data.company}`}
-  description={`${work.data.role} position at ${work.data.company} (${formatDateRange(work.data.startyear, work.data.endyear)})`}
+  description={work.data.description ??
+    `${work.data.role} position at ${work.data.company} (${formatDateRange(work.data.startyear, work.data.endyear)})`}
+  crumbLabel={work.data.company}
   itemPage={true}
 >
   <Container class='mt-16 lg:mt-32'>

@@ -6,6 +6,18 @@ endyear: 2016
 type: consulting
 image: ./broadspectrum.png
 description: 'Facilitated and co-developed IT strategy across successive engagements, led architecture and design as interim executive manager, and established a data analytics capability.'
+tags:
+  [
+    'IT strategy',
+    'Enterprise architecture',
+    'Strategic roadmaps',
+    'Operating models',
+    'Data analytics',
+    'Tableau',
+    'AWS',
+    'IoT',
+    'SAP'
+  ]
 ---
 
 ## Strategy Consultant (2015-2016)

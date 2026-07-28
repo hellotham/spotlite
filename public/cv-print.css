@@ -306,6 +306,15 @@ body {
   flex: 1;
 }
 
+/* Optional, so it shares the free space with the company rather than replacing it —
+   the row reads correctly whether or not a role supplies a oneLiner. */
+.cv-earlier-oneliner {
+  color: var(--cv-muted);
+  font-style: italic;
+  flex: 2;
+  min-width: 0;
+}
+
 .cv-earlier-dates {
   margin-left: auto;
 }

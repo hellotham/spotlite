@@ -6,7 +6,7 @@ pubDate: 2019-01-19T22:00:00.000Z
 
 When I turned 50, I announced my professional retirement. We had calculated that we have accumulated enough savings to live out the rest of our lives in comfortable obscurity, in “shabby poor” circumstances, and that was fine by us. I could devote the rest of my life in creative pursuits, the occasional travel, and lots of gazing at sunsets and long walks.
 
-I wrapped up a current engagement with a client and said I wasn’t planning on accepting any more work. Various people came over, kissed me, and wished me well. My client threw a nice lunch for me. I packed up all my personal belongings, and left the door not ever intending to step back in again.
+I wrapped up a current engagement with a client and said I wasn’t planning on accepting any more work. Various people came over, kissed me, and wished me well. My client threw a nice lunch for me. I packed up all my personal belongings, and walked out the door not ever intending to step back in again.
 
 Three months passed. I started composing music, and learning to draw. I was settling comfortably into retirement.
 
@@ -40,7 +40,7 @@ Eventually, we found a candidate that they really liked and they hired him. As p
 
 When I came back, the Chief Executive of Business Services called me up for a meeting. He heard about my reasons for not accepting the position, and in true Godfather style decided to make me an offer I couldn’t refuse.
 
-> “I have an interesting “challenge” for you. I want to lift the use of analytics in the organisation to gain business insights and improve performance. Can you help me do that?”
+> “I have an interesting ‘challenge’ for you. I want to lift the use of analytics in the organisation to gain business insights and improve performance. Can you help me do that?”
 
 I replied that I didn’t have a background in analytics and knew nothing about the subject. He said that is why he is asking me, because he wanted a “modern” analytics environment and didn’t want anyone “tainted” with “experience.” Then he threw the hook in.
 
@@ -48,9 +48,9 @@ I replied that I didn’t have a background in analytics and knew nothing about 
 
 The moment he said that, I was in.
 
-The company sent me to a Gartner conference on Business Intelligence and Analytics. I understood why the Chief Executive did not want anyone with experience – the world of Analytics has been turned upside down by self service, citizen data scientists, Big Data, Internet of Things, cloud platforms. I went back to him and said “I get it.”
+The company sent me to a Gartner conference on Business Intelligence and Analytics. I understood why the Chief Executive did not want anyone with experience – the world of Analytics has been turned upside down by self-service, citizen data scientists, Big Data, Internet of Things, cloud platforms. I went back to him and said “I get it.”
 
-I spent about a year trying to enable self-service analytics in the organisation. Helping business units analyse their own data. Someone called me the “analytics evangelist” and I liked it, so the term stuck. I led a project to evaluate self service analytics tools, and we eventually chose Tableau. I learnt Python and R, and spent two weeks writing a Python script that ran on a Raspberry Pi to ingest two years worth of telemetries and GPS data from the company vehicle fleet. I registered an account on AWS and created an instance of Amazon Redshift on my personal credit card. I helped the organisation to ingest a year’s worth of transactional data onto Redshift. I then ran a tender seeking an organisation to manage Redshift and deliver Analytics as a Service to the organisation.
+I spent about a year trying to enable self-service analytics in the organisation. Helping business units analyse their own data. Someone called me the “analytics evangelist” and I liked it, so the term stuck. I led a project to evaluate self-service analytics tools, and we eventually chose Tableau. I learnt Python and R, and spent two weeks writing a Python script that ran on a Raspberry Pi to ingest two years’ worth of telemetries and GPS data from the company vehicle fleet. I registered an account on AWS and created an instance of Amazon Redshift on my personal credit card. I helped the organisation to ingest a year’s worth of transactional data onto Redshift. I then ran a tender seeking an organisation to manage Redshift and deliver Analytics as a Service to the organisation.
 
 I realised in that year that I don’t have to be “retired” to do the things I love, and learning new things. I could do all that, and get paid doing so.
 
@@ -68,6 +68,6 @@ I am also far more willing to selflessly help others. Nothing pleases me more th
 
 Most importantly, being retired means the ability to say No. My clients know I only accept jobs that interest me, so they can’t just order me around, they have to pitch assignments to me.
 
-The money is great, and hopefully when the work stops our lives will be less shabby poor, but to be honest I’ve stopped caring about money a long time ago. We have bought all the things that we could possibly want, and visited most of the places we want to visit, and don’t really want the really expensive toys like fancy cars, boats or planes. I am more interested in creating art than buying art, and we certainly don’t need additional property.
+The money is great, and hopefully when the work stops our lives will be less shabby poor, but to be honest I stopped caring about money a long time ago. We have bought all the things that we could possibly want, and visited most of the places we want to visit, and don’t really want the really expensive toys like fancy cars, boats or planes. I am more interested in creating art than buying art, and we certainly don’t need additional property.
 
 If only I had known how good retirement was going to be, I would have retired earlier. It’s amazing how one word can completely change a life.

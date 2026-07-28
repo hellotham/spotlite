@@ -44,6 +44,15 @@ interface Props {
   variant?: 'circular' | 'wide' | 'bare'
   /** Tile diameter: `sm` for the home page's compact rows, `lg` for the list pages. */
   size?: 'sm' | 'lg'
+  /**
+   * Render the mark with an empty alt. Set this where the logo sits inside a link that
+   * already names the entity, so the link does not announce the company twice.
+   *
+   * `alt` is still required, because it is also the source of the monogram drawn for
+   * entities with no mark — passing an empty `alt` instead would silently blank those
+   * initials.
+   */
+  decorative?: boolean
   background?: string
   class?: string
 }
@@ -53,6 +62,7 @@ const {
   alt,
   variant = 'circular',
   size = 'lg',
+  decorative = false,
   background,
   class: className = ''
 } = Astro.props
@@ -92,7 +102,7 @@ const monogramSize = size === 'sm' ? 'text-sm' : 'text-2xl'
     src && (
       <Image
         {src}
-        {alt}
+        alt={decorative ? '' : alt}
         height={240}
         loading='lazy'
         class:list={[className, 'h-24 w-auto max-w-sm object-contain']}
@@ -111,7 +121,13 @@ const monogramSize = size === 'sm' ? 'text-sm' : 'text-2xl'
         /* The inner box is what sizes a logo: trimming its padding does not enlarge
           it, because object-contain already scales to fit. The tile clips, so a
           full-bleed square mark simply meets the circle's edge. */
-        <Image {src} {alt} height={220} loading='lazy' class:list={[inner, 'object-contain']} />
+        <Image
+          {src}
+          alt={decorative ? '' : alt}
+          height={220}
+          loading='lazy'
+          class:list={[inner, 'object-contain']}
+        />
       ) : (
         <span
           aria-hidden='true'

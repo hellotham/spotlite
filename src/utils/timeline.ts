@@ -17,10 +17,8 @@ export function processTimelineData(
   const currentYear = new Date().getFullYear()
 
   const work: TimelineEntry[] = workEntries.map((entry) => ({
-    title: entry.data.role || ('title' in entry.data ? (entry.data.title as string) : ''), // fallback for test mocks
-    organization:
-      entry.data.company ||
-      ('organization' in entry.data ? (entry.data.organization as string) : ''),
+    title: entry.data.role,
+    organization: entry.data.company,
     startYear: entry.data.startyear,
     endYear: entry.data.endyear || currentYear,
     isOngoing: !entry.data.endyear,
@@ -29,9 +27,8 @@ export function processTimelineData(
   }))
 
   const education: TimelineEntry[] = educationEntries.map((entry) => ({
-    title: entry.data.degree || ('school' in entry.data ? (entry.data.school as string) : ''),
-    organization:
-      entry.data.institution || ('school' in entry.data ? (entry.data.school as string) : ''),
+    title: entry.data.degree,
+    organization: entry.data.institution,
     startYear: entry.data.startyear,
     endYear: entry.data.endyear || currentYear,
     isOngoing: !entry.data.endyear,

@@ -69,10 +69,13 @@ const startServer = (base) =>
           urlPath = urlPath.slice(base.length - 1)
         }
 
-        let filePath = path.join(distDir, urlPath)
-        if (filePath.endsWith('/')) filePath = path.join(filePath, 'index.html')
-        // Contain requests to dist/ regardless of what the page asks for.
-        if (!path.resolve(filePath).startsWith(distDir)) {
+        let filePath = path.resolve(path.join(distDir, urlPath))
+        if (urlPath.endsWith('/')) filePath = path.join(filePath, 'index.html')
+        // Contain requests to dist/ regardless of what the page asks for. Compared with
+        // a trailing separator: distDir has none, so a bare startsWith also accepted any
+        // sibling whose name merely begins with "dist" — <root>/dist-backup/x passed a
+        // guard whose whole job is to reject it.
+        if (filePath !== distDir && !filePath.startsWith(distDir + path.sep)) {
           res.writeHead(403).end('Forbidden')
           return
         }

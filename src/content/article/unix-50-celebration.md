@@ -4,11 +4,11 @@ description: A beautiful operating system, still healthy after 50 years.
 pubDate: 2020-06-10T00:00:00.000Z
 ---
 
-Recently Unix celebrated it's 50th birthday. We don't know the exact date but we do know it was sometime in late 1970. That's one reason why the Unix system clock starts from 1970.
+Recently Unix celebrated its 50th birthday. We don't know the exact date but we do know it was sometime in late 1970. That's one reason why the Unix system clock starts from 1970.
 
 ## What is Unix?
 
-According the [Wikipedia entry on Unix](https://en.wikipedia.org/wiki/Unix), Unix (sometimes spelled UNIX) is
+According to the [Wikipedia entry on Unix](https://en.wikipedia.org/wiki/Unix), Unix (sometimes spelled UNIX) is
 
 > a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others.
 
@@ -24,11 +24,11 @@ Sometime in August 1970, the first version of Unix successfully ran on a PDP-11/
 
 My exposure to Unix was through the computer science courses I took at the University of Sydney in the early 1980s, as part of a B.Sc. degree. Like many students of my generation, I immediately fell in love with the operating system. Compared to what I was using prior to entering university (various personal computers such as the Apple ][, TRS-80 and Commodore 64), it was sophisticated and elegant, and surprisingly powerful.
 
-In Unix, you could refer to any system resource as a file (including system memory and I/O ports!). There was an interactive shell that you could actually program. There was a small collection of utilities (which were called "tools"), each a simple program in it's own right that typically only did something simple, that you can join (using a data transfer mechanism known as a "pipe") to do useful and non-trivial tasks (much like building using LEGO bricks).
+In Unix, you could refer to any system resource as a file (including system memory and I/O ports!). There was an interactive shell that you could actually program. There was a small collection of utilities (which were called "tools"), each a simple program in its own right that typically only did something simple, that you can join (using a data transfer mechanism known as a "pipe") to do useful and non-trivial tasks (much like building using LEGO bricks).
 
 The operating system and utilities were mostly written in a language called "C", which was easy to learn, elegant, and was fast. The language had an almost 1-1 relationship with machine language (particularly on the DEC family of minicomputers) so the C compiler was very good at generating efficient and small executables. A "Hello World" program written in C resulted in an executable file only about 4 kilobytes in size, and that included the entire C runtime library.
 
-At the time, the Basser Department of Computer Science at the University of Sydney had two systems running Unix - basset (which was used for undergraduate teaching) and basser (which was used by the teaching staff and postgraduates for research). The version of Unix (originally 32V which is based on PWB/Unix) was highly tweaked and customised to be able to support hundreds of students using a single VAX 11/780 (a mini-computer that was fast in it's day, and capable of executing 1 million instructions per second, but very slow by today's standards, hundreds of times slower than even the least capable Raspberry Pi). By the time I was in my final (honours) year, basser was upgraded to a vanilla 8th edition Research Unix. In those days, honours students were considered quasi-postgrads so I had access to basser as well as basset. Not only did I have an email address, I could access USENET news. I even had a chance to play around with an early generation graphics terminal (the "Blit" developed by Bell Labs which ran a simplified operating system that eventually morphed into Plan 9).
+At the time, the Basser Department of Computer Science at the University of Sydney had two systems running Unix - basset (which was used for undergraduate teaching) and basser (which was used by the teaching staff and postgraduates for research). The version of Unix (originally 32V which is based on PWB/Unix) was highly tweaked and customised to be able to support hundreds of students using a single VAX 11/780 (a mini-computer that was fast in its day, and capable of executing 1 million instructions per second, but very slow by today's standards, hundreds of times slower than even the least capable Raspberry Pi). By the time I was in my final (honours) year, basser was upgraded to a vanilla 8th edition Research Unix. In those days, honours students were considered quasi-postgrads so I had access to basser as well as basset. Not only did I have an email address, I could access USENET news. I even had a chance to play around with an early generation graphics terminal (the "Blit" developed by Bell Labs which ran a simplified operating system that eventually morphed into Plan 9).
 
 I was depressed and dreaded graduating. In those days, Unix was unheard of outside the academic world. Big companies ran mainframes, smaller companies ran minicomputers, small businesses were starting to use personal computers for business tasks. None of these machines ran Unix. Their operating systems looked clunky and Byzantine compared to the elegance of Unix. Everyone I knew, teachers and students, said it was almost impossible to land a job in the "real" world that involved Unix.
 
@@ -38,7 +38,7 @@ My lucky break came during my third year of studies. HP has just released a new 
 
 I attended a meeting with my future boss. I had assumed it was a job interview, but I can only remember him asking me one question: "When can you start?" I meekly suggested I was free tomorrow afternoon. He said "Great, we will see you then. I'll pay you $10 an hour."
 
-I was estatic. Not only was I getting paid to play around with my very own Unix minicomputer, my desk was basically in front of the console, which turned out to be a graphics terminal (which probably cost a fortune in those days). However, I was missing email and USENET news.
+I was ecstatic. Not only was I getting paid to play around with my very own Unix minicomputer, my desk was basically in front of the console, which turned out to be a graphics terminal (which probably cost a fortune in those days). However, I was missing email and USENET news.
 
 At that time, there was no Internet. But there was ACSnet (the Australian Computer Science network) which connected academic institutions around Australia and was linked to ARPANET and the UUCP network in the US. However, several individuals (including myself) were keen to connect to it, and finally we were given the opportunity, provided we paid $3,000 for the ACSnet software, bought our own modem (2400 baud) and arranged for a telephone connection.
 
@@ -48,17 +48,17 @@ So we became one of the earliest Australian non-academic sites with an "Internet
 
 As for the free software, I remember unpacking and installing the very first version of Python, released to alt.sources. I also remember installing Perl, and I thought it was very useful.
 
-In those days, the number of systems in Australia connected to ACSnet were in the dozens, and the domain names can easily fit on a single A4 sheet of paper with plenty of white space.
+In those days, the number of systems in Australia connected to ACSnet was in the dozens, and the domain names can easily fit on a single A4 sheet of paper with plenty of white space.
 
 After graduating, my first full time job was for a fintech startup. The words "fintech" and "startup" didn't exist then, but the company fit the description. It manufactured synthetic foreign currency options (mainly for importers and exporters) by hedging a combination of the physical currencies and futures contracts. I used a Sun 3/60 workstation running SunOS (an almost vanilla version of 4.3BSD with a graphical user interface). I loved that workstation, that was my ideal of the ultimate desktop computer.
 
 I wrote a technical paper on using a set of distributed workstations to do risk management for an options portfolio, which was published on SunTech Journal.
 
-After that, I worked in the Treasury Division of State Bank Victoria (now part of Commonwealth Bank). I wasn't part of the Information Systems group that was managing the bank's mainframes and PCs, but the Treasury Division used Sun workstations for the trading room floor, and had one of the fastest Unix machines of it's day, a Pyramid Unix super minicomputer running PyramidOS (a strange "dual universe" operating system that was capable of supporting both the BSD and SystemV variants of Unix simultaneously).
+After that, I worked in the Treasury Division of State Bank Victoria (now part of Commonwealth Bank). I wasn't part of the Information Systems group that was managing the bank's mainframes and PCs, but the Treasury Division used Sun workstations for the trading room floor, and had one of the fastest Unix machines of its day, a Pyramid Unix super minicomputer running PyramidOS (a strange "dual universe" operating system that was capable of supporting both the BSD and SystemV variants of Unix simultaneously).
 
-Security and operational controls were more relaxed back then. Even though I wasn't in the IT team, I was regarded as "safe" and "trustworthy" so I had sudo access to the production Pyramid system as well as root access to my Sun workstation. I used to opportunity to install lots of brand new software, including GCC, bash, etc.
+Security and operational controls were more relaxed back then. Even though I wasn't in the IT team, I was regarded as "safe" and "trustworthy" so I had sudo access to the production Pyramid system as well as root access to my Sun workstation. I used the opportunity to install lots of brand new software, including GCC, bash, etc.
 
-I ended up using the computing power of the Pyramid to crack Unix passwords. As part of writing a Usenix paper called "Unix passwords considered insecure" I wrote a brute force password guesser that used large amounts of system memory to speed things up. I then successfully used the algorithm to obtain the passwords for quite a few accounts on a machine belonging to the University of Sydney, and successfully logged into the system using various usernames.
+I ended up using the computing power of the Pyramid to crack Unix passwords. As part of writing a USENIX paper called "Unix passwords considered insecure" I wrote a brute force password guesser that used large amounts of system memory to speed things up. I then successfully used the algorithm to obtain the passwords for quite a few accounts on a machine belonging to the University of Sydney, and successfully logged into the system using various usernames.
 
 A few weeks later, I received a phone call from a system administrator at the University of Sydney. Apparently they noticed my successful hacking attempts. I explained what I was doing, and I think they forgave me. They ended up offering me a chance to connect my home PC to the Internet for $10 a month as long as I promised never to hack them again. Needless to say I accepted the offer immediately.
 
@@ -66,18 +66,18 @@ So I became one of the first people in Australia to have a personal system (a ho
 
 ## Unix in the 1990s
 
-After that I've worked for two Unix companies, AT&T and HP. Sometime in the late 1990s, I stopped being intimately involved in Unix as my role changed and I became less and less involved in the technical side of things. I still ran a version of FreeBSD at home for a long time, but I've never really liked Microsoft Windows. Windows was probably one of the reasons I became less and less technical as I disliked almost everything Microsoft did in the 90s. At one stage, it seemed Unix will disappear into oblivion.
+After that I've worked for two Unix companies, AT&T and HP. Sometime in the late 1990s, I stopped being intimately involved in Unix as my role changed and I became less and less involved in the technical side of things. I still ran a version of FreeBSD at home for a long time, but I've never really liked Microsoft Windows. Windows was probably one of the reasons I became less and less technical as I disliked almost everything Microsoft did in the 90s. At one stage, it seemed Unix would disappear into oblivion.
 
-There was Linux, but I never really liked Linux much - a lot of it was different enough from Unix that it annoyed me. And Linux as an operating system today seems to break almost every aspect of the original Unix philosophy of keeping things small and simple, or the philosophy of being able to using small tools as building blocks for achieving more complex tasks.
+There was Linux, but I never really liked Linux much - a lot of it was different enough from Unix that it annoyed me. And Linux as an operating system today seems to break almost every aspect of the original Unix philosophy of keeping things small and simple, or the philosophy of being able to use small tools as building blocks for achieving more complex tasks.
 
 ## Unix in the new Millennium
 
-But Apple came to the rescue with OS X. Apple in the 1990s was a floundering company stuck with an ageing macOS that didn't even multi-task well. There were several failed attempts to write a new operating system (I wonder how many people remember Taligent, or Pink), but it wasn't until Steve Jobs came back, and brought NeXT with him, that Apple finally went to Unix (the precursor to the Macintosh, the Lisa, supported a version of Unix but it was never widely used). macOS X was based on NeXTOS, which is turn was a Unix operating system using Mach (which as designed by CMU as a modern rewrite of the traditional monolithic Unix kernel) plus BSD utilities.
+But Apple came to the rescue with OS X. Apple in the 1990s was a floundering company stuck with an ageing Mac OS that didn't even multi-task well. There were several failed attempts to write a new operating system (I wonder how many people remember Taligent, or Pink), but it wasn't until Steve Jobs came back, and brought NeXT with him, that Apple finally went to Unix (the precursor to the Macintosh, the Lisa, supported a version of Unix but it was never widely used). Mac OS X was based on NEXTSTEP, which in turn was a Unix operating system using Mach (which was designed by CMU as a modern rewrite of the traditional monolithic Unix kernel) plus BSD utilities.
 
 The success of Apple in the post-iPhone era means that today Unix is used by billions of people in the world. There is a little bit of Unix in every iPhone, iPad, HomePod, Apple TV and even Apple Watch. Every Macintosh runs a fully compliant Unix operating system (one of a handful of Unix variants certified to the Single Unix Specification at the UNIX 03 level).
 
-The other major use of Unix is in the Sony Playstation 4, which runs a modified version of FreeBSD called Orbix.
+The other major use of Unix is in the Sony PlayStation 4, which runs a modified version of FreeBSD called Orbix.
 
-Finally, Linux is a Unix-like operating system, even though it doesn't have any of the original Unix source code it in (unlike macOS, FreeBSD and Orbix which can trace their ancestry all the way back to 1970). And of course, since Android uses Linux, it means a variant of a Unix or Unix like operating system is used by the majority of people on the planet. By contrast, Windows is becoming less and less relevant and the latest version of Windows even supports Linux so arguably in the future every Windows machine is potentially a Linux machine.
+Finally, Linux is a Unix-like operating system, even though it doesn't have any of the original Unix source code in it (unlike macOS, FreeBSD and Orbix which can trace their ancestry all the way back to 1970). And of course, since Android uses Linux, it means a variant of a Unix or Unix like operating system is used by the majority of people on the planet. By contrast, Windows is becoming less and less relevant and the latest version of Windows even supports Linux so arguably in the future every Windows machine is potentially a Linux machine.
 
 So let's celebrate a beautiful operating system, still healthy after 50 years, and may it live another 50 at least.

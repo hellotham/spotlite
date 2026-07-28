@@ -33,7 +33,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 <a
                   href={`${import.meta.env.BASE_URL}`}
                   aria-label='Home'
-                  class='shrink-0 h-32 w-32 block pointer-events-auto'
+                  class='shrink-0 h-20 w-20 block pointer-events-auto sm:h-32 sm:w-32'
                 >
                   <Image
                     src={Avatar}
@@ -41,10 +41,19 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                     width={256}
                     height={256}
                     loading='eager'
-                    class='rounded-full bg-sugarSwizzle h-32 w-32 ring-1 ring-opalGray/20 shadow-md object-cover dark:bg-blackBeauty dark:ring-opalGray/20'
+                    class='rounded-full bg-sugarSwizzle h-20 w-20 ring-1 ring-opalGray/20 shadow-md object-cover dark:bg-blackBeauty sm:h-32 sm:w-32 dark:ring-opalGray/20'
                   />
                 </a>
-                <h1 class='text-3xl text-accent tracking-tight font-serif font-italic sm:text-4xl'>
+                {
+                  /* min-w-0 and break-words are both required. A flex item defaults to
+                  min-width:auto, so the h1 refused to shrink below its longest word and
+                  pushed past the container; with min-w-0 alone the word then overflows
+                  the h1's own box instead. At 320px the tagline was clipped mid-word by
+                  html{overflow-x:hidden}, with no scrollbar to reveal it. */
+                }
+                <h1
+                  class='text-3xl text-accent tracking-tight font-serif min-w-0 break-words font-italic sm:text-4xl'
+                >
                   {frontmatter.description}
                 </h1>
               </div>
@@ -87,7 +96,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
       <div class='px-4 relative lg:px-12 sm:px-8'>
         <div class='mx-auto max-w-2xl lg:max-w-5xl'>
           <div class='mx-auto gap-y-20 grid grid-cols-1 xl:grid-cols-2'>
-            <div class='space-y-10 lg:pl-16 xl:pl-8'>
+            <div class='space-y-10 xl:pl-8'>
               <section aria-label='Call to action'>
                 <CTAForm />
               </section>
@@ -101,7 +110,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 <Education />
               </section>
             </div>
-            <div class='space-y-10 lg:pl-16 xl:pl-8'>
+            <div class='space-y-10 xl:pl-8'>
               <section aria-label='Superpowers'>
                 <Superpowers />
               </section>

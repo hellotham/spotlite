@@ -2,17 +2,17 @@
   "name": "Chris Tham",
   "headline": "Strategy Consultant | Technology Strategy, Architecture and Business Change",
   "contact": {
-    "email": "chris.tham@hellotham.com",
+    "email": "chris@christham.net",
     "phone": "+61 413 008 577",
     "location": "Sydney, Australia",
     "linkedin": "https://www.linkedin.com/in/christham",
-    "website": "https://hellotham.com/spotlite/"
+    "website": "https://christham.net/"
   },
   "summary": "Founder of Hello Tham, a boutique strategy consulting company. Available for short to medium term consulting engagements spanning strategic business change, business and operating model design, business process improvement, and technology strategy, architecture and solutions.",
   "achievements": [
     {
       "title": "Flexible strategic change agent and thought leader",
-      "detail": "Led IT strategies and operating models for TransportNSW, Transfield Services, ING, NAB and MLC."
+      "detail": "Led IT strategies and operating models for Transport for NSW, Transfield Services, ING, NAB and MLC."
     },
     {
       "title": "Successful and proven technology strategy and architecture leader",
@@ -24,13 +24,15 @@
     }
   ],
   "onePage": {
-    "maxRoles": 4,
-    "maxBulletsPerRole": 2,
+    "maxRoles": 3,
+    "maxBulletsPerRole": 3,
     "minCompetencyLevel": 6,
     "earlierCareerHeading": "Earlier career",
     "maxEarlierRoles": 5
   },
   "full": {
-    "minCompetencyLevel": 5
+    "minCompetencyLevel": 5,
+    "detailedRoles": 3,
+    "maxBulletsPerEarlierRole": 4
   }
 }

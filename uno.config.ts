@@ -52,15 +52,23 @@ export default defineConfig({
       'px-3 py-2 rounded-md font-medium transition inline-flex items-center justify-center gap-2',
     'btn-primary':
       'btn-base text-sugarSwizzle bg-blackBeauty dark:bg-grapeade hover:bg-grapeade dark:hover:bg-grapeade/80 active:text-sugarSwizzle/70',
-    'btn-secondary': 'btn-base text-primary border border-primary hover:bg-morningGlory/10',
+    // An outline button's border is its only boundary, so it has to meet WCAG 1.4.11's
+    // 3:1 for non-text contrast on its own. The shared `border-primary` token is
+    // #a49e9e, which is 2.6:1 on the light card and 2.1:1 on the dark one — fine for a
+    // decorative card edge, not for the sole affordance of a control.
+    'btn-secondary':
+      'btn-base text-primary border border-graniteGray dark:border-opalGray hover:bg-morningGlory/10',
     'btn-ghost': 'btn-base text-primary hover:text-accent',
-    'btn-sm': 'btn-base text-xs px-2 py-1',
+    // `!` on the size overrides: btn-sm composes btn-base and is itself composed with
+    // btn-secondary, which re-expands btn-base's px-3 py-2. Same specificity, so the
+    // later rule won and the "small" button rendered at full size.
+    'btn-sm': 'btn-base text-xs px-2! py-1!',
 
     // Input styles
-    // Focus uses the shared focus-ring rather than removing the outline in favour of
+    // Focus uses the shared ui-focus-ring rather than removing the outline in favour of
     // a 10%-opacity ring, which was too faint to serve as a focus indicator.
     'input-base':
-      'px-3 py-2 rounded-md border border-border/40 bg-sugarSwizzle dark:bg-blackBeauty/15 text-primary placeholder:text-secondary focus-ring focus:border-morningGlory transition',
+      'px-3 py-2 rounded-md border border-border/40 bg-sugarSwizzle dark:bg-blackBeauty/15 text-primary placeholder:text-secondary ui-focus-ring focus:border-morningGlory transition',
 
     // Card styles
     card: 'rounded-lg border border-primary bg-white dark:bg-blackBeauty shadow-sm',
@@ -71,10 +79,21 @@ export default defineConfig({
     surface: 'bg-sugarSwizzle dark:bg-blackBeauty',
     'surface-subtle': 'bg-sugarSwizzle/50 dark:bg-blackBeauty/50',
 
-    // Interactive states
-    'hover-accent': 'hover:text-accent transition',
-    'focus-ring':
-      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-morningGlory focus-visible:ring-offset-2 dark:focus-visible:ring-offset-blackBeauty'
+    // Interactive states.
+    //
+    // The `ui-` prefix is load-bearing, not decoration. UnoCSS resolves `<variant>-<utility>`
+    // before it consults the shortcut table, so the obvious names silently lost: `focus-ring`
+    // parsed as the `focus:` variant applied to `ring`, emitting a 1px currentColor ring on
+    // :focus instead of the 2px accent focus-visible ring declared here — and `hover-accent`
+    // parsed as `hover:` + `accent`, which is not a utility, so it emitted nothing at all and
+    // the theme menu rows had no hover affordance. `ui-` is not a variant, so these resolve as
+    // shortcuts. Renaming either one back will reintroduce the bug without any build error.
+    'ui-hover-accent': 'hover:text-accent transition',
+    // morningGlory (#ec809e) is only 2.2:1 on the light surface — below the 3:1 WCAG 1.4.11
+    // requires of a focus indicator, and it is the sole replacement for the outline suppressed
+    // on the line above. The palette already carries a darker variant for exactly this.
+    'ui-focus-ring':
+      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-morningGloryDark focus-visible:ring-offset-2 dark:focus-visible:ring-morningGlory dark:focus-visible:ring-offset-blackBeauty'
   },
   presets: [
     presetWind4({

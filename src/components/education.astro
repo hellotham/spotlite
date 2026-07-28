@@ -23,12 +23,13 @@ education = education.sort((a, b) => {
         <li>
           <a
             href={`${import.meta.env.BASE_URL}education/${item.id}/`}
-            class='group p-2 rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
+            class='group p-2 ui-focus-ring rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 dark:hover:bg-grapeade/30'
           >
             <EntityLogo
               src={item.data.image}
               alt={item.data.institution}
               background={item.data.logoBackground}
+              decorative
               variant='wide'
               class='mt-1'
             />

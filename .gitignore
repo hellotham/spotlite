@@ -21,4 +21,11 @@ pnpm-debug.log*
 .DS_Store
 coverage/
 
-public/cv.pdf
+# Both generated CVs are deliberately tracked: ctaform.astro links to /cv.pdf and
+# /cv-onepage.pdf, and public/ is copied verbatim into the build, so an untracked file
+# would 404 on the deployed site. (public/cv.pdf was listed here while still tracked,
+# which had no effect but read as though the download were disposable.)
+
+# Working CV drafts, kept locally only. Anchored to the repo root so this cannot match
+# public/*.pdf — a bare *.pdf would silently stop the published downloads being tracked.
+/*.pdf

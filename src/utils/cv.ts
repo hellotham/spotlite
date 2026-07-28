@@ -13,10 +13,6 @@ import superpowers from '../superpowers.json' with { type: 'json' }
 
 export type CvVariant = 'onepage' | 'full'
 
-export interface CvBullet {
-  text: string
-}
-
 /** A dated sub-role within a single employer, e.g. NAB's three successive roles. */
 export interface CvSubRole {
   title: string
@@ -137,6 +133,21 @@ const byRecency = <T extends { endYear?: number; startYear: number }>(a: T, b: T
   return b.startYear - a.startYear
 }
 
+/**
+ * Flatten a role to a single list of bullets for the one-pager.
+ *
+ * Sub-role headings are dropped rather than partially filled: trimming mid-way through
+ * one leaves a heading above a fragment of its list — Torrens rendered "Undergraduate
+ * subjects" followed by one of its five subjects, which reads as truncation rather
+ * than a summary. Roles written entirely as sub-roles fall back to their bullets so
+ * they are never left blank.
+ */
+const flattenRole = (role: CvRole, maxBullets: number): CvRole => {
+  const source =
+    role.bullets.length > 0 ? role.bullets : role.subRoles.flatMap((sub) => sub.bullets)
+  return { ...role, bullets: source.slice(0, maxBullets), subRoles: [] }
+}
+
 /** Trim a role to at most `maxBullets`, preferring the earliest (most senior) entries. */
 const trimRole = (role: CvRole, maxBullets: number): CvRole => {
   if (bulletCount(role) <= maxBullets) return role
@@ -233,7 +244,14 @@ export const buildCv = async (variant: CvVariant): Promise<CvModel> => {
   }
 
   if (variant === 'full') {
-    return { ...base, roles: allRoles, earlierRoles: [], earlierCompanies: [] }
+    // The full CV keeps every role, but weights detail towards current work: without
+    // this an engagement from 2011 could carry more bullets than the role held today.
+    const roles = allRoles.map((role, index) =>
+      index < cvConfig.full.detailedRoles
+        ? role
+        : trimRole(role, cvConfig.full.maxBulletsPerEarlierRole)
+    )
+    return { ...base, roles, earlierRoles: [], earlierCompanies: [] }
   }
 
   // One-pager: keep the most recent roles in detail, and fold the remainder into a
@@ -261,7 +279,7 @@ export const buildCv = async (variant: CvVariant): Promise<CvModel> => {
     ...base,
     roles: featured
       .sort(byRecency)
-      .map((role) => trimRole(role, cvConfig.onePage.maxBulletsPerRole)),
+      .map((role) => flattenRole(role, cvConfig.onePage.maxBulletsPerRole)),
     earlierRoles: remaining.slice(0, maxEarlier),
     earlierCompanies: remaining.slice(maxEarlier).map((role) => role.company)
   }

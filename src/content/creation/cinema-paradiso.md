@@ -1,6 +1,6 @@
 ---
 section: Music
-item: Cinema Paradiso (string Orchestra)
+item: Cinema Paradiso (string orchestra)
 parent: Soundcloud
 description: >
   In memory of Ennio Morricone, a string orchestra arrangement of Cinema Paradiso, transcribed by me into Finale.

@@ -2,6 +2,21 @@
 import superpowers from '../superpowers.json'
 ---
 
+{
+  /* WCAG 2.2.2 Pause, Stop, Hide: the Brownian motion runs indefinitely alongside other
+  page content, so it needs a control. Rendered in the markup rather than injected by the
+  script so it exists before d3 loads and survives a re-render. */
+}
+<div class='mb-2 flex justify-end'>
+  <button
+    type='button'
+    id='bubblechart-toggle'
+    aria-pressed='false'
+    class='text-xs text-secondary px-2 py-1 ui-focus-ring rounded-md hover:text-accent'
+  >
+    Pause motion
+  </button>
+</div>
 <div
   id='bubblechart-container'
   class='text-secondary min-h-[400px] w-full relative'
@@ -91,6 +106,17 @@ import superpowers from '../superpowers.json'
     let animationRunning = false
     let animationFrameId: number | null = null
     let observer: IntersectionObserver | null = null
+    // Set by the Pause control. Distinct from animationRunning, which the
+    // IntersectionObserver also drives: without a separate flag, scrolling the chart back
+    // into view would restart motion the user had explicitly stopped.
+    let userPaused = false
+    // Every document- and window-level listener registered below hangs off this, so
+    // teardown drops them all at once when ClientRouter swaps the page out.
+    const listeners = new AbortController()
+    // `animate` closes over the nodes built by renderChart, so it only exists inside that
+    // scope. The Pause control lives outside it and needs to restart the current loop —
+    // and must pick up the newest one after a resize re-render, not a stale closure.
+    let animate: (() => void) | null = null
 
     const renderChart = () => {
       const chartContainer = document.getElementById('bubblechart-container')
@@ -206,7 +232,7 @@ import superpowers from '../superpowers.json'
       })
 
       // Phased animation loop - each phase completes for ALL bubbles before the next starts
-      const animate = () => {
+      const loop = () => {
         if (!animationRunning) return
 
         // Phase 1: Brownian impulse + friction + integrate position (all bubbles)
@@ -282,8 +308,13 @@ import superpowers from '../superpowers.json'
         })
 
         node.attr('transform', (d) => `translate(${d.x},${d.y})`)
-        animationFrameId = requestAnimationFrame(animate)
+        animationFrameId = requestAnimationFrame(loop)
       }
+
+      // Publish this render's loop so the Pause control can restart it. Reassigned on
+      // every render, so after a resize the control drives the current loop, not a stale
+      // closure over discarded nodes.
+      animate = loop
 
       // Place nodes
       const node = svg.append('g').selectAll('g').data(nodes).join('g').attr('class', 'bubble')
@@ -350,6 +381,17 @@ import superpowers from '../superpowers.json'
       // Text wrapping logic based on guide
       const text = node
         .append('text')
+        // Hidden from assistive technology: the group's aria-label already carries this
+        // title plus the level, so there is nothing here for a screen reader to add.
+        //
+        // Note this does NOT clear axe's label-content-name-mismatch, which still reports
+        // these bubbles: axe sanitises each tspan separately when reconstructing an
+        // element's visible text, so a title wrapped across lines reads back as
+        // "Digitalmindset" and cannot match the spaced accessible name whatever separator
+        // the tspans carry. Lighthouse weights that audit at 0 for this reason. The
+        // underlying concern — a speech-input user saying what they see — is satisfied:
+        // "Digital mindset" is a substring of "Digital mindset, level 5".
+        .attr('aria-hidden', 'true')
         .style('font-size', (d) => Math.max(7, Math.min(d.radius * 0.35, 14)) + 'px')
         .style('font-weight', 'bold')
         .style('fill', (d) => readableTextColor(colorScale(d.level)))
@@ -359,10 +401,16 @@ import superpowers from '../superpowers.json'
         .selectAll('tspan')
         .data((d) => {
           const name = d.title
-          // Split by spaces or hyphens, preserving the hyphen
+          // Split by spaces or hyphens, restoring whichever separator was consumed.
+          //
+          // The separator matters beyond appearance: tspans concatenate without it, so
+          // dropping the space left the group's text content reading "Digitalmindset",
+          // which is what copy-paste and any textContent-based tooling saw. A trailing
+          // space is stripped when SVG renders the tspan, so this changes nothing on
+          // screen.
           return name.split(/[\s-]/g).map((word: string, i: number, arr: string[]) => {
-            if (name.includes(`${word}-`) && i < arr.length - 1) return `${word}-`
-            return word
+            if (i === arr.length - 1) return word
+            return name.includes(`${word}-`) ? `${word}-` : `${word} `
           })
         })
         .join('tspan')
@@ -374,9 +422,9 @@ import superpowers from '../superpowers.json'
       observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting && !animationRunning) {
+            if (entry.isIntersecting && !animationRunning && !userPaused) {
               animationRunning = true
-              animate()
+              animate?.()
             } else if (!entry.isIntersecting) {
               animationRunning = false
             }
@@ -392,7 +440,7 @@ import superpowers from '../superpowers.json'
       // Start animation, unless the user asked for reduced motion. The preflight
       // media query only tames CSS animation and transitions, not this rAF loop, so
       // the bubbles would otherwise drift forever regardless of the setting.
-      if (prefersReducedMotion.matches) {
+      if (prefersReducedMotion.matches || userPaused) {
         resolveOverlaps(120)
         node.attr('transform', (d) => `translate(${d.x},${d.y})`)
       } else {
@@ -402,6 +450,44 @@ import superpowers from '../superpowers.json'
     }
 
     renderChart()
+
+    // The control is hidden under reduced motion: nothing is moving, so an offer to
+    // pause would be a lie.
+    const toggle = document.getElementById('bubblechart-toggle')
+    if (toggle) {
+      if (prefersReducedMotion.matches) {
+        toggle.classList.add('hidden')
+      } else {
+        toggle.addEventListener(
+          'click',
+          () => {
+            userPaused = !userPaused
+            toggle.setAttribute('aria-pressed', String(userPaused))
+            toggle.textContent = userPaused ? 'Resume motion' : 'Pause motion'
+            if (userPaused) {
+              animationRunning = false
+              if (animationFrameId !== null) {
+                cancelAnimationFrame(animationFrameId)
+                animationFrameId = null
+              }
+            } else if (!animationRunning) {
+              animationRunning = true
+              animate?.()
+            }
+          },
+          { signal: listeners.signal }
+        )
+      }
+    }
+
+    // WCAG 1.4.13 requires hover content to be dismissible without moving the pointer.
+    document.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key === 'Escape') tooltip.classed('hidden', true)
+      },
+      { signal: listeners.signal }
+    )
 
     // Resize listener with debouncing or simple re-render
     window.addEventListener('resize', renderChart)
@@ -418,6 +504,7 @@ import superpowers from '../superpowers.json'
       }
       observer?.disconnect()
       observer = null
+      listeners.abort()
       window.removeEventListener('resize', renderChart)
     }
 

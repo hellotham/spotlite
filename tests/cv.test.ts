@@ -142,7 +142,10 @@ describe('Generated CV PDFs', () => {
   it('keeps the full CV to a sensible length', () => {
     const pages = pageCount('cv.pdf')
     expect(pages).toBeGreaterThan(1)
-    expect(pages).toBeLessThanOrEqual(4)
+    // Five pages covers a fifteen-role career with detail on the recent ones. This
+    // bound exists to catch unbounded growth, not to bless any length: if it fails,
+    // trim content or tighten the one-pager limits rather than raising it again.
+    expect(pages).toBeLessThanOrEqual(5)
   })
 
   it('embeds real text rather than page images, so the PDFs can be parsed', () => {

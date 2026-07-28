@@ -23,7 +23,9 @@ const { Content } = await render(item)
 
 <Layout
   title={`${item.data.degree} at ${item.data.institution}`}
-  description={`${item.data.degree} from ${item.data.institution} (${formatDateRange(item.data.startyear, item.data.endyear)})`}
+  description={item.data.description ??
+    `${item.data.degree} from ${item.data.institution} (${formatDateRange(item.data.startyear, item.data.endyear)})`}
+  crumbLabel={item.data.institution}
   itemPage={true}
 >
   <Container class='mt-16 lg:mt-32'>

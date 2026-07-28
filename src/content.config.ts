@@ -33,6 +33,13 @@ const work = defineCollection({
       // teaser — entries that open with a heading or a lead-in like "Awarded:"
       // read as fragments.
       description: z.string().optional(),
+      // Capabilities, domains and technologies this role involved. Aggregated across
+      // the collection into the word cloud on /work, where a tag's size is how many
+      // roles carry it — so the vocabulary has to be reused deliberately between
+      // entries rather than reworded per entry ("IT strategy" and "Technology
+      // strategy" are distinct tags on purpose; "Analytics" vs "Data analytics"
+      // would be an accident).
+      tags: z.array(z.string()).optional().default([]),
       // Optional: an entry with no real mark falls back to a text monogram.
       image: image().optional(),
       // Optional extended wordmark, used where there is room for it (the detail page

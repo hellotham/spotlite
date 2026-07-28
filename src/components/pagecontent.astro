@@ -32,8 +32,11 @@ const featuredImageHeight =
                 aria-label='Open featured image in lightbox'
                 class='group block cursor-zoom-in relative'
               >
+                {/* alt='' marks the image decorative: the anchor supplies the accessible
+                  name. "Featured image" named the image's role on the page rather than its
+                  content, which is not a text alternative (WCAG 1.1.1). */}
                 <Image
-                  alt='Featured image'
+                  alt=''
                   width={800}
                   height={800}
                   fit='cover'
@@ -86,7 +89,13 @@ const featuredImageHeight =
 
   const loadLightboxModule = async () => {
     if (!lightboxModulePromise) {
-      lightboxModulePromise = import('photoswipe/lightbox')
+      // Clear the cache on failure. A rejected promise left in place poisons every
+      // later call, so one dropped chunk disabled the lightbox for the whole session
+      // — including across client-side navigations, where the module scope survives.
+      lightboxModulePromise = import('photoswipe/lightbox').catch((error) => {
+        lightboxModulePromise = undefined
+        throw error
+      })
     }
     return lightboxModulePromise
   }
@@ -113,8 +122,14 @@ const featuredImageHeight =
     }
   }
 
-  void initPhotoSwipe()
-  document.addEventListener('astro:page-load', () => {
-    void initPhotoSwipe()
-  })
+  // Handled rather than discarded with `void`: a failed chunk load is not fatal —
+  // the images stay visible and simply do not zoom — but as an unhandled rejection it
+  // surfaced as a console error with no explanation.
+  const startPhotoSwipe = () =>
+    initPhotoSwipe().catch((error) => {
+      console.error('PhotoSwipe failed to initialise; images will not open in a lightbox', error)
+    })
+
+  startPhotoSwipe()
+  document.addEventListener('astro:page-load', startPhotoSwipe)
 </script>

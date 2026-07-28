@@ -2,7 +2,13 @@
 
 ---
 
-<div class='flex justify-end'>
+{
+  /* `relative` on the wrapper, matching search.astro. Without it the menu's containing
+  block was the nearest positioned ancestor further up the header, so `top-10` measured
+  from the header row rather than from the toggle and the panel opened on top of the
+  toggle, the search button and the last nav link at every width. */
+}
+<div class='flex justify-end relative'>
   <div class='pointer-events-auto'>
     <button
       type='button'
@@ -11,7 +17,7 @@
       aria-expanded='false'
       aria-haspopup='listbox'
       aria-controls='theme-menu'
-      class='group px-3 py-2 rounded-full glass-hover focus-ring'
+      class='group px-3 py-2 ui-focus-ring rounded-full glass-hover'
       ><svg
         viewBox='0 0 24 24'
         stroke-width='1.5'
@@ -38,13 +44,13 @@
   </div>
   <div
     id='theme-menu'
-    class='text-base text-primary font-medium mt-1 px-3 py-1 rounded-md glass max-h-56 w-60 hidden pointer-events-auto top-10 absolute z-20 overflow-auto'
+    class='text-base text-primary font-medium mt-1 px-3 py-1 rounded-md glass max-h-56 w-60 hidden pointer-events-auto right-0 top-10 absolute z-20 overflow-auto'
     tabindex='-1'
     role='listbox'
     aria-labelledby='theme-toggle-button'
   >
     <div
-      class='hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
+      class='ui-hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
       id='theme-auto'
       role='option'
       aria-selected='false'
@@ -63,7 +69,7 @@
       </span>
     </div>
     <div
-      class='hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
+      class='ui-hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
       id='theme-light'
       role='option'
       aria-selected='false'
@@ -82,7 +88,7 @@
       </span>
     </div>
     <div
-      class='hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
+      class='ui-hover-accent py-2 pl-2 pr-4 cursor-default select-none relative'
       id='theme-dark'
       role='option'
       aria-selected='false'

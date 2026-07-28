@@ -9,7 +9,7 @@ source (MIT licence) so feel free to use and modify it!
 It uses the following technologies:
 
 - [Astro](https://astro.build)
-- [Typescript](https://www.typescriptlang.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
 - [Vitest](https://vitest.dev/) for unit and component testing
@@ -24,13 +24,16 @@ It uses the following technologies:
 
 It features:
 
-- A homepage featuring photos, links to blog articles, career history, and interactive superpowers.
-- An About page that can be edited in Markdown and featuring a profile photo
-  and social media links.
+- A homepage featuring a profile photo, social links, photo galleries, links to blog
+  articles, an interactive career timeline, and interactive superpowers. Its prose is
+  edited in Markdown (`src/pages/index.md`).
 - An Articles page linking to blog articles.
 - A Projects page showcasing a portfolio of items with descriptions, images and
   links.
 - A Superpowers page featuring interactive D3 data visualisations and detailed skill modals.
+- A Work History page with an animated word cloud of the capabilities, domains and
+  technologies across the career, and a detail page per role.
+- An Education page with a detail page per qualification.
 - A Creations page showcasing linkable artefacts.
 - A Passions page providing a list of products and tools used.
 - Support for diagrams and flowcharts via Mermaid.
@@ -40,7 +43,7 @@ It features:
 - Development search fallback powered by a local JSON endpoint.
 - Click-to-zoom image galleries on homepage cards and featured page images.
 
-Spotlite uses all the latest and greatest features in Astro (>v6) including:
+Spotlite uses all the latest and greatest features in Astro (>v7) including:
 
 - optimised assets
 - data and content collections
@@ -72,6 +75,8 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── generate-pdf.js      # Renders the /cv routes to PDF with Puppeteer
 └── src/
   ├── components/            # UI components (header, search, D3 charts, modals)
+  │   ├── entitylogo.astro   # Shared company/institution mark, all six surfaces
+  │   └── wordcloud.astro    # Animated tag cloud on /work
   ├── content/               # Markdown collections (article, page, project, work,
   │                          # education, passion, creation)
   ├── layouts/               # Page layouts, including cv.astro for the print routes
@@ -99,20 +104,20 @@ Inside of your Astro project, you'll see the following folders and files:
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                    | Action                                                 |
-| :------------------------- | :----------------------------------------------------- |
-| `pnpm install`             | Installs dependencies                                  |
-| `pnpm run dev`             | Starts local dev server (default: `localhost:4321`)    |
-| `pnpm run build`           | Builds site and Pagefind index in `./dist/pagefind/`   |
-| `pnpm run pdf`             | Builds, then regenerates both CV PDFs into `./public/` |
-| `pnpm run search:index`    | Runs Pagefind indexing against `./dist/`               |
-| `pnpm run preview`         | Preview your build locally, before deploying           |
-| `pnpm run test`            | Run Vitest test suite once                             |
-| `pnpm run test:watch`      | Run Vitest in watch mode                               |
-| `pnpm run test:coverage`   | Run tests with v8 coverage report                      |
-| `pnpm run lint`            | Run Prettier and ESLint with auto-fixes                |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check`       |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                           |
+| Command                  | Action                                                 |
+| :----------------------- | :----------------------------------------------------- |
+| `pnpm install`           | Installs dependencies                                  |
+| `pnpm run dev`           | Starts local dev server (default: `localhost:4321`)    |
+| `pnpm run build`         | Builds site and Pagefind index in `./dist/pagefind/`   |
+| `pnpm run pdf`           | Builds, then regenerates both CV PDFs into `./public/` |
+| `pnpm run search:index`  | Runs Pagefind indexing against `./dist/`               |
+| `pnpm run preview`       | Preview your build locally, before deploying           |
+| `pnpm run test`          | Run Vitest test suite once                             |
+| `pnpm run test:watch`    | Run Vitest in watch mode                               |
+| `pnpm run test:coverage` | Run tests with v8 coverage report                      |
+| `pnpm run lint`          | Run Prettier and ESLint with auto-fixes                |
+| `pnpm astro ...`         | Run CLI commands like `astro add`, `astro check`       |
+| `pnpm astro --help`      | Get help using the Astro CLI                           |
 
 ## 📄 CV PDFs
 
@@ -144,6 +149,24 @@ pipeline rewords a career fact.
 
 Preview either document in the browser at `/cv/onepage/` or `/cv/full/`. Both routes are
 `noindex` and excluded from the sitemap and search index.
+
+## 🏷️ Work Tags and the Word Cloud
+
+Each entry in the `work` collection carries an optional `tags` array of capabilities,
+domains and technologies. `src/components/wordcloud.astro` aggregates them across the
+whole collection and renders the result on `/work/`, sizing each tag by **the number of
+roles it appears in** — so the cloud shows where a career actually concentrated rather
+than what any one entry claims.
+
+That weighting only works if the vocabulary is reused deliberately between entries.
+"Enterprise architecture" appearing in six roles is signal; the same idea spelled
+"Enterprise architecture" in one entry and "EA" in another is two tags of weight one.
+Distinct tags that happen to look similar (`IT strategy` vs `Technology strategy`) are
+fine when the difference is real.
+
+The cloud is decorative: it is `aria-hidden`, and the same tags are published beneath it
+as a `sr-only` list with their counts, which is also what the search index picks up. It
+honours `prefers-reduced-motion` by settling into a static layout.
 
 ## 🔎 Search Notes
 

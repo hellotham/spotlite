@@ -185,10 +185,25 @@ import superpowers from '../superpowers.json'
     // Resize listener
     window.addEventListener('resize', renderChart)
 
+    // WCAG 1.4.13 requires hover content to be dismissible without moving the pointer.
+    // Registered through an AbortController because ClientRouter re-runs this script on
+    // every navigation, so an unmanaged document listener would accumulate.
+    const listeners = new AbortController()
+    document.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key === 'Escape') tooltip.classed('hidden', true)
+      },
+      { signal: listeners.signal }
+    )
+
     // ClientRouter replaces the container on every navigation, so dataset.initialized
     // cannot see the previous element and setup runs again. Drop the old listener so
     // stale closures stop re-rendering into detached DOM.
-    teardown = () => window.removeEventListener('resize', renderChart)
+    teardown = () => {
+      window.removeEventListener('resize', renderChart)
+      listeners.abort()
+    }
 
     container.dataset.initialized = 'true'
   }
