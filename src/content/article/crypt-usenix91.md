@@ -316,9 +316,20 @@ flowchart TB
 
 **Figure 2:** The E expansion
 
-![A salt box: a crossbar that optionally swaps output bit i with output bit i+24 under the control of salt bit i](./crypt-usenix91-salt-box.jpeg)
+```mermaid
+flowchart TB
+    A1["bit 1"] -. unchanged .-> B1["bit 1"]
+    Ai["bit i"] -- "salt[i] = 0" --> Bi["bit i"]
+    Ai -- "salt[i] = 1" --> Bj["bit i+24"]
+    Aj["bit i+24"] -- "salt[i] = 0" --> Bj
+    Aj -- "salt[i] = 1" --> Bi
+    A48["bit 48"] -. unchanged .-> B48["bit 48"]
+```
 
-**Figure 3:** The salt box
+**Figure 3:** The salt box. The 48-bit $E$ expansion output runs across the top, the salt
+box output across the bottom. Bits $i$ and $i+24$ cross over when salt bit $i$ is set and
+run straight through when it is clear; every other bit of the bus is untouched. The
+original figure draws the same thing as crossed wiring between two of the 48 lines.
 
 ### Key schedule
 

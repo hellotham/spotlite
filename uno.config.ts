@@ -107,7 +107,16 @@ export default defineConfig({
         'vertical-align': 'middle'
       }
     }),
-    presetTypography()
+    presetTypography({
+      cssExtend: {
+        // presetTypography wraps every inline <code> in literal backticks via
+        // ::before/::after content. On a page that names `crypt()`, `login(1)` and
+        // `/etc/passwd` in nearly every sentence that reads as noise, and the marks are
+        // redundant once the code is already set in mono on a tinted background.
+        'code::before': { content: 'none' },
+        'code::after': { content: 'none' }
+      }
+    })
   ],
   preflights: [
     {
