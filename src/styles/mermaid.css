@@ -39,6 +39,28 @@
   font-style: var(--shiki-dark-font-style) !important;
 }
 
+/* ---- The diagram container -------------------------------------------- */
+
+/*
+ * Mermaid diagrams are authored as fenced code blocks, so the typography preset styles
+ * `pre.mermaid` as one: a dark slate panel with pale text meant to sit on it. That is
+ * right for a code sample and wrong the moment the source is replaced by an SVG — on the
+ * light page it puts a dark panel behind every diagram and leaves the container's
+ * inherited colour near-white. That is what "rendered in dark mode on a light theme"
+ * actually was, and it is pure CSS, which is why it looked like the page had picked the
+ * wrong theme rather than like something had failed.
+ *
+ * Reset it in both themes. The diagrams carry their own colours and sit directly on the
+ * page, transparent, exactly as the `background: 'transparent'` themeVariable intends.
+ */
+pre.mermaid,
+.prose pre.mermaid {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: inherit !important;
+  border: 0 !important;
+}
+
 /* ---- Flowchart -------------------------------------------------------- */
 
 /*
