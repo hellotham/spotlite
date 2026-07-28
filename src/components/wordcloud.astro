@@ -37,7 +37,7 @@ const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
       <div
         id='wordcloud'
         aria-hidden='true'
-        class='min-h-[320px] w-full relative'
+        class='min-h-[240px] w-full relative'
         data-tags={JSON.stringify(tags)}
       />
       <figcaption class='sr-only'>
@@ -73,15 +73,19 @@ const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
     y: number
     vx: number
     vy: number
+    /** The spot the spiral gave this label; drift is a spring back towards it. */
+    homeX: number
+    homeY: number
+    spring: number
     /** Pulse phase and period, so labels breathe independently rather than in unison. */
     phase: number
     period: number
   }
 
   const PALETTE_SIZE = 6
-  const GAP = 10
+  const GAP = 5
   /** Labels breathe between 1 - PULSE and 1 + PULSE; collision uses the upper bound. */
-  const PULSE = 0.1
+  const PULSE = 0.03
 
   let teardown: (() => void) | null = null
 
@@ -184,22 +188,17 @@ const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
           y: 0,
           vx: 0,
           vy: 0,
+          homeX: 0,
+          homeY: 0,
+          spring: 0,
           phase: Math.random() * Math.PI * 2,
           period: 7000 + Math.random() * 7000
         }
       })
 
-      // Height follows the content: enough canvas that the labels occupy roughly a third
-      // of it, which is the density at which they can drift without constant collisions.
-      const inkArea = nodes.reduce((sum, n) => sum + n.hw * 2 * (n.hh * 2), 0)
-      const height = Math.max(320, Math.min(Math.round(inkArea / (width * 0.34)), 760))
-
-      svg.attr('height', height).attr('viewBox', `0 0 ${width} ${height}`)
-
-      nodes.forEach((n) => {
-        n.x = n.hw + Math.random() * Math.max(1, width - n.hw * 2)
-        n.y = n.hh + Math.random() * Math.max(1, height - n.hh * 2)
-      })
+      // Assigned once the spiral below has revealed how tall the cloud actually is.
+      // resolveOverlaps closes over it, but is not called until after it is set.
+      let height = 320
 
       /**
        * Separate overlapping boxes along their shallowest axis of penetration.
@@ -237,18 +236,84 @@ const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
         }
       }
 
-      resolveOverlaps(80)
+      /**
+       * Place the labels along an Archimedean spiral, heaviest first.
+       *
+       * The data is already sorted by weight, so walking outwards from the centre and
+       * dropping each label at the first point it does not touch one already placed
+       * gives the structure a word cloud is supposed to have: the tags that ran through
+       * a whole career hold the middle, and the one-offs fill in around them.
+       *
+       * Seeding at random and relaxing, which is what this did before, cannot produce
+       * that. Relaxation only separates overlapping boxes; it has no notion of which
+       * label deserves the centre, so weight and position were unrelated.
+       */
+      const placed: TagNode[] = []
+      const cx = width / 2
+      const hits = (n: TagNode, x: number, y: number) =>
+        placed.some((p) => Math.abs(x - p.x) < n.hw + p.hw && Math.abs(y - p.y) < n.hh + p.hh)
 
-      const minSpeed = 0.05
-      const maxSpeed = 0.28
-      const brownianStrength = 0.03
-      const velocityDecay = 0.985
-      const wallBounce = 0.85
+      // The column is far wider than the cloud is tall, so step the spiral faster
+      // horizontally than vertically. A circular one would stack the labels into a
+      // narrow column and leave the sides of the figure empty.
+      const ASPECT = 2.4
+      const STEP = 0.1
+      const GROWTH = 0.55
 
       nodes.forEach((n) => {
-        const angle = Math.random() * 2 * Math.PI
-        n.vx = Math.cos(angle) * minSpeed
-        n.vy = Math.sin(angle) * minSpeed
+        const maxX = Math.max(n.hw, width - n.hw)
+        for (let t = 0; t < 480; t += STEP) {
+          const r = GROWTH * t
+          const x = cx + r * Math.cos(t) * ASPECT
+          const y = r * Math.sin(t)
+          if (x < n.hw || x > maxX || hits(n, x, y)) continue
+          n.x = x
+          n.y = y
+          placed.push(n)
+          return
+        }
+        // Nothing on the spiral fitted, which only happens in a very narrow column:
+        // fall back to stacking beneath everything placed so far.
+        n.x = Math.min(maxX, Math.max(n.hw, cx))
+        n.y = (d3.max(placed, (p) => p.y + p.hh) ?? 0) + n.hh
+        placed.push(n)
+      })
+
+      // Fit the canvas to the cloud rather than the cloud to a guessed canvas. The
+      // spiral is centred on y = 0 and grows both ways, so shift it into view and take
+      // the height from what was actually laid out.
+      const PAD = 4
+      const top = d3.min(nodes, (n) => n.y - n.hh) ?? 0
+      const bottom = d3.max(nodes, (n) => n.y + n.hh) ?? 0
+      nodes.forEach((n) => (n.y += PAD - top))
+      height = Math.max(200, Math.round(bottom - top + PAD * 2))
+
+      svg.attr('height', height).attr('viewBox', `0 0 ${width} ${height}`)
+
+      resolveOverlaps(12)
+      nodes.forEach((n) => {
+        n.homeX = n.x
+        n.homeY = n.y
+      })
+
+      const maxSpeed = 0.09
+      const brownianStrength = 0.011
+      const velocityDecay = 0.94
+      const wallBounce = 0.6
+
+      // Hold each label near the spot the spiral gave it, and hold the big ones more
+      // firmly. Unconstrained drift would slowly undo the arrangement, and the
+      // arrangement is the whole point; Brownian motion has no memory of where it began.
+      const smallestFont = d3.min(nodes, (n) => n.fontSize) ?? 1
+      const largestFont = d3.max(nodes, (n) => n.fontSize) ?? 1
+      nodes.forEach((n) => {
+        const t =
+          largestFont === smallestFont
+            ? 0.5
+            : (n.fontSize - smallestFont) / (largestFont - smallestFont)
+        n.spring = 0.0016 + 0.0042 * t
+        n.vx = (Math.random() - 0.5) * 0.04
+        n.vy = (Math.random() - 0.5) * 0.04
       })
 
       const paint = (time: number) => {
@@ -263,8 +328,8 @@ const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
         if (!animationRunning) return
 
         nodes.forEach((n) => {
-          n.vx += (Math.random() - 0.5) * brownianStrength
-          n.vy += (Math.random() - 0.5) * brownianStrength
+          n.vx += (Math.random() - 0.5) * brownianStrength + (n.homeX - n.x) * n.spring
+          n.vy += (Math.random() - 0.5) * brownianStrength + (n.homeY - n.y) * n.spring
           n.vx *= velocityDecay
           n.vy *= velocityDecay
           n.x += n.vx
@@ -295,15 +360,13 @@ const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
           }
         })
 
+        // Cap the speed but never enforce a floor: a floor would force every label to
+        // keep travelling, which fights the spring and slowly grinds the layout apart.
         nodes.forEach((n) => {
           const speed = Math.hypot(n.vx, n.vy)
           if (speed > maxSpeed) {
             n.vx *= maxSpeed / speed
             n.vy *= maxSpeed / speed
-          } else if (speed < minSpeed) {
-            const s = speed > 0.001 ? speed : 0.001
-            n.vx *= minSpeed / s
-            n.vy *= minSpeed / s
           }
         })
 
@@ -314,7 +377,7 @@ const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
       // The reduced-motion preflight only tames CSS animation and transitions; a rAF
       // loop would keep drifting regardless, so settle the layout and leave it still.
       if (prefersReducedMotion.matches) {
-        resolveOverlaps(160)
+        resolveOverlaps(24)
         groups.attr('transform', (_d, i) => `translate(${nodes[i].x},${nodes[i].y})`)
         return
       }
