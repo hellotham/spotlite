@@ -1,7 +1,7 @@
 ---
 title: 'Rogoweb: Rogue and Rog-O-Matic, alive in the browser'
 description: A port of the classic Unix game Rogue and its automated player Rog-O-Matic, coded using AI in about five days. Press START and enjoy the good old days.
-pubDate: 2026-07-28
+pubDate: 2026-07-05
 ---
 
 I am proud to showcase my latest AI vibe coding project: a port of the classic Unix game

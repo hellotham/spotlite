@@ -1,7 +1,7 @@
 ---
 title: 'Colossal Cave Adventure, rebuilt over breakfast'
 description: A faithful port of the game that founded interactive fiction, vibe coded a few prompts at a time. Then a second AI solved the map the first one could not.
-pubDate: 2026-07-28
+pubDate: 2026-07-04
 ---
 
 Another day, another successful vibe coding project.
