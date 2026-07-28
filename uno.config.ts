@@ -21,6 +21,10 @@ export default defineConfig({
       // Rosely palette - Colourful
       raspberrySorbet: '#d2386c',
       morningGloryDark: '#c02d5a', // Darker pink for light mode text contrast
+      // Darker grapeade for the dark-mode primary button. Sugar Swizzle on plain
+      // grapeade measures 4.31:1 — just under the 4.5:1 button text needs. Same
+      // pattern, and same reason, as morningGloryDark above.
+      grapeadeDark: '#7a5e70',
       spearmint: '#64bfa4',
       aquarius: '#3CADD4',
       meadowlark: '#eada4f',
@@ -51,7 +55,7 @@ export default defineConfig({
     'btn-base':
       'px-3 py-2 rounded-md font-medium transition inline-flex items-center justify-center gap-2',
     'btn-primary':
-      'btn-base text-sugarSwizzle bg-blackBeauty dark:bg-grapeade hover:bg-grapeade dark:hover:bg-grapeade/80 active:text-sugarSwizzle/70',
+      'btn-base text-sugarSwizzle bg-blackBeauty dark:bg-grapeadeDark hover:bg-grapeade dark:hover:bg-grapeade active:text-sugarSwizzle/70',
     // An outline button's border is its only boundary, so it has to meet WCAG 1.4.11's
     // 3:1 for non-text contrast on its own. The shared `border-primary` token is
     // #a49e9e, which is 2.6:1 on the light card and 2.1:1 on the dark one — fine for a

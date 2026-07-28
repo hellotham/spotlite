@@ -93,6 +93,11 @@ const monogram = alt
   .join('')
 
 const monogramSize = size === 'sm' ? 'text-sm' : 'text-2xl'
+
+// The monogram is deliberately NOT `text-secondary`. That token flips to Opal Gray in
+// dark mode, but the tile underneath does not flip — it stays white (or the entry's own
+// logoBackground), so the initials went to 2.6:1 on white. A fixed Granite Gray holds
+// 5.4:1 on the white default in both schemes.
 ---
 
 {
@@ -131,7 +136,7 @@ const monogramSize = size === 'sm' ? 'text-sm' : 'text-2xl'
       ) : (
         <span
           aria-hidden='true'
-          class:list={[monogramSize, 'text-secondary font-semibold font-serif tracking-wide']}
+          class:list={[monogramSize, 'text-graniteGray font-semibold font-serif tracking-wide']}
         >
           {monogram}
         </span>

@@ -2,9 +2,8 @@ import { defineConfig, fontProviders } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 import sitemap from '@astrojs/sitemap'
 import mermaid from 'astro-mermaid'
-import { unified } from '@astrojs/markdown-remark'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
+import { satteri } from '@astrojs/markdown-satteri'
+import { katexPlugin } from './src/utils/katex-mdast.ts'
 import { roselyLight, roselyDark } from './src/styles/shiki-rosely.ts'
 
 // https://astro.build/config
@@ -32,18 +31,12 @@ export default defineConfig({
     }
   ],
   markdown: {
-    // $inline$ and $$display$$ maths, rendered to HTML+MathML at build time by KaTeX.
-    // Nothing ships to the browser but the stylesheet, which layout.astro imports, so
-    // there is no client-side typesetting pass and no flash of raw LaTeX.
-    //
-    // This selects the unified processor in place of Astro 7's default Sätteri. Sätteri
-    // does have a `math` feature, but it only *parses* $...$ into math nodes — it has no
-    // renderer, so the equations come out as a plaintext code block full of raw LaTeX,
-    // and its `hastPlugins` are a bespoke visitor API that silently ignores a rehype
-    // plugin like rehype-katex. Rendering at build time needs unified.
-    processor: unified({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [[rehypeKatex, { strict: false }]]
+    // Astro 7's default Rust processor. `features.math` parses $...$ and $$...$$ into
+    // maths nodes; katexPlugin typesets them at the mdast phase, which is the only phase
+    // where they still exist as maths — see src/utils/katex-mdast.ts.
+    processor: satteri({
+      features: { math: true },
+      mdastPlugins: [katexPlugin()]
     }),
     // Rosely syntax highlighting, one palette per colour scheme. `defaultColor: 'light'`
     // inlines the light theme and emits the dark one as --shiki-dark custom properties,

@@ -21,7 +21,7 @@
     "refresh": "pnpm dlx @astrojs/upgrade; pnpm up -L"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^7.2.1",
+    "@astrojs/markdown-satteri": "^0.3.4",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
     "@iconify-json/heroicons": "^1.2.3",
@@ -34,8 +34,7 @@
     "katex": "^0.18.1",
     "mermaid": "^11.16.0",
     "photoswipe": "^5.4.4",
-    "rehype-katex": "^7.0.1",
-    "remark-math": "^6.0.0",
+    "satteri": "^0.9.5",
     "sharp": "^0.35.3",
     "unocss": "^66.7.5"
   },

@@ -25,7 +25,7 @@ Tone is professional but not corporate-bland. All prose is **Australian English*
 - **Image Processing:** [Sharp](https://sharp.pixelplumbing.com/)
 - **Lightbox:** [PhotoSwipe](https://photoswipe.com/) for click-to-zoom image galleries
 - **Visualisations:** [D3.js](https://d3js.org/) for interactive data-driven components and [Mermaid](https://mermaid.js.org/) via `astro-mermaid` for diagrams
-- **Maths:** `remark-math` + `rehype-katex`, rendered at build time; `@astrojs/markdown-remark` supplies the unified processor they need
+- **Maths:** Sätteri parses `$…$`; `src/utils/katex-mdast.ts` typesets it with KaTeX at build time
 - **Search Indexing:** [Pagefind](https://pagefind.app/) for static full-site search
 - **PDF Generation:** [Puppeteer](https://pptr.dev/) driving dedicated print-only routes
 
@@ -175,13 +175,22 @@ source with its own rendered SVG. That only bites when something asks for a re-r
 which nothing does now, but `layout.astro` still stamps `data-diagram` during parse to
 keep the first render deterministic.
 
-### Remark and rehype plugins need `@astrojs/markdown-remark`
+### Markdown runs on Sätteri, and its plugins are not remark/rehype
 
-Astro 7 ships a new default Markdown processor, and `markdown.remarkPlugins` /
-`markdown.rehypePlugins` are silently unsupported by it — the build fails outright with a
-message telling you to install `@astrojs/markdown-remark`. Installing that package swaps
-the whole site back to the unified processor, so treat it as a site-wide change and
-re-check existing pages, not just the one you added a plugin for.
+`markdown.processor` is Astro 7's default Rust processor, configured in `astro.config.mjs`.
+Its `mdastPlugins` / `hastPlugins` are Sätteri's own visitor interface (`defineMdastPlugin`),
+**not** unified plugins. A remark or rehype plugin passed there is accepted and silently
+never runs — no error, no output. That cost real time; see
+[bruits/satteri#180](https://github.com/bruits/satteri/issues/180).
+
+Maths is the live example. `features.math` only _parses_ `$…$` into `math` / `inlineMath`
+nodes — nothing typesets them, so without a plugin the LaTeX reaches the page verbatim.
+`src/utils/katex-mdast.ts` renders them at the **mdast** phase, which is the only phase
+where they still exist as maths: after mdast→hast they are indistinguishable from a fenced
+block tagged `language-math`, which is why rehype-katex cannot be retrofitted.
+
+If you need a unified plugin, `markdown.processor: unified({ remarkPlugins, rehypePlugins })`
+from `@astrojs/markdown-remark` still works, but it swaps the processor for the whole site.
 
 ### Syntax highlighting is prose, and its contrast is enforced
 

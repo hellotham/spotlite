@@ -268,6 +268,7 @@ Rosely is committed to being an inclusive design system that meets **WCAG 2.2 Le
 ### Color & Contrast
 
 - **Contrast Compliance:** While maintaining a serene "low-contrast" aesthetic, all text and interactive components are audited to meet WCAG AA contrast ratios (at least 4.5:1 for normal text and 3:1 for large text).
+- **Audit in both colour schemes.** Lighthouse follows the machine's `prefers-color-scheme`, so a run can silently cover only one of them — two dark-mode failures (the primary button at 4.31:1, and the logo monogram at 2.6:1) survived several "100" reports that had all landed in light mode. Force the scheme when auditing.
 - **Check against the real background, per theme.** The palette's cream (#f4eee8) and near-black
   (#27272a) surfaces are far enough apart that a single token rarely satisfies both. Morning Glory
   reaches only 2.2:1 on cream, so `ui-focus-ring` and `text-accent` both switch to Morning Glory
