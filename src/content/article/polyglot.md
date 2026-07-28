@@ -4,46 +4,50 @@ description: In 1991 three of us wrote a program that compiles and runs in eight
 pubDate: 1991-03-18
 ---
 
-_Filed under the date we posted it to Usenet. Everything from "What happened next" onwards
-is what became of it in the years since._
+_Filed under the date we posted it to Usenet, although the story of what became of it carries
+on well past that._
 
-Here is a program. Compile it, run it, and it prints one line:
+I would like to show you a program that three of us wrote back in 1991. It has had a far longer
+life than any of us imagined, and it is probably the first code I ever published.
+
+When you compile it and run it, it prints a single line:
 
 ```text
 hello polyglots
 ```
 
-That is not the interesting part. The interesting part is that you can compile the same file
-as COBOL. Or as Pascal. Or Fortran, or C, or Perl. You can feed it to a PostScript
-interpreter. You can run it as a Unix shell script. You can rename it to `.COM` and let
-MS-DOS run it as raw machine code.
+Which is not terribly impressive on its own, so here is the part that makes it worth writing
+about. You can compile that same file as COBOL, or as Pascal, or as Fortran, or C, or Perl, and
+you can also hand it to a PostScript interpreter, run it as a Unix shell script, or rename it
+to `.COM` and let MS-DOS run it directly as machine code. Eight languages in all, from a single
+file that does not change by so much as a byte between them, and it prints the same cheerful
+line every time.
 
-Eight languages. One file, not a byte different between them. Same line of output every time.
-
-Kevin Bungard, Peter Lisle and I wrote it in 1991, with thanks to George Janczuk. It is
-probably the first code I ever published, and thirty-five years later it is still the piece
-of my work that the most people have seen.
+Kevin Bungard, Peter Lisle and I wrote it together, with thanks to George Janczuk, and
+thirty-five years later it is still the piece of my work that the most people have seen.
 
 ## Where it came from
 
-In 1990 there was a conversation in the rec.puzzles newsgroup about programs that work in
-more than one language. Somebody posted one that ran in two languages, somebody else managed
-three, and we thought that was wonderful.
+Back in 1990 there was a lovely, rambling conversation in the rec.puzzles newsgroup about
+programs that manage to work in more than one language at a time. Someone posted one that ran
+in two, someone else managed three, and we thought the whole idea was wonderful.
 
-So we had a go ourselves. It was meant to be an evening of fun. It got out of hand, in the
-way these things do, and we ended up with seven languages.
+So we decided to have a go ourselves, imagining it might fill an evening. It filled a good deal
+more than that, in the way these things tend to, and by the time we came up for air we had
+seven languages working.
 
-We posted it back to the newsgroup on 18 March 1991. The machine it went out from was at
-Sydney University, back when Australian addresses still ended in `.oz.au`.
+We posted it back to the newsgroup on 18 March 1991, from a machine at Sydney University, back
+when Australian addresses still ended in `.oz.au`.
 
 ## How the trick works
 
-One commenter on our page summed it up better than we ever did: the code that is not meant
-for a particular compiler is commented out in that language.
+One of the commenters on our page summed it up more neatly than we ever managed: the code that
+is not meant for a particular compiler is simply commented out in that language.
 
-That is the whole idea. Every language has its own way of marking a comment, and no two
-agree. So you can write a line that is a real instruction in one language while every other
-compiler looks at the same characters and decides there is nothing there.
+That really is the whole idea. It works because every language has its own way of marking a
+comment, and no two of them quite agree. So if you are careful enough, you can write a line
+that is a genuine instruction in one language, while every other compiler looks at the same
+characters and decides there is nothing there worth reading.
 
 | Language    | What it ignores                                             |
 | ----------- | ----------------------------------------------------------- |
@@ -54,27 +58,29 @@ compiler looks at the same characters and decides there is nothing there.
 | PostScript  | Everything after a `%` on the line                          |
 | Shell, Perl | Everything after a `#` on the line                          |
 
-Look at the left edge of the listing below and you can see it happening. Nearly every line
-starts with `C`, which is why Fortran skips the lot. Just to the right of that sits `#`, so
-the shell and Perl skip it too. Then `*`, which puts COBOL to sleep. The comment block at the
-top is the part we were proudest of, because it is a valid comment in all eight languages at
-once, and it is also the documentation.
+You can watch it happening along the left edge of the listing below. Almost every line begins
+with a `C`, which is Fortran's cue to skip over it, and just to the right of that sits a `#`,
+which sends the shell and Perl on their way, followed by a `*` that quietly puts COBOL to
+sleep. The block of text at the top is the part we were proudest of, because it manages to be a
+valid comment in all eight languages at once while also serving as the documentation.
 
-The blank lines at the very start are not decoration. Take them out and it stops working.
+As for the two blank lines at the very beginning, they are not there for the look of the thing.
+Take them out and it stops working.
 
 ## The source
 
-A note on how this is printed. Normally this site colours code by language, but there is no
-sensible way to do that here. A highlighter has to pick one language, and whichever it picks
-it will be wrong about the other seven. Rosetta Code, which reproduces the program, ran into
-the same thing and warns readers that the colouring comes out rather scrambled.
+Before you read it, a word about how it is printed here. This site normally colours code
+according to its language, but there is no sensible way to do that here. Any highlighter has to
+choose a single language, and it will then be wrong about the other seven. Rosetta Code, which
+also reproduces the program, ran into exactly the same difficulty and gently warns its readers
+that the colouring comes out rather scrambled.
 
-So it is set below as plain text, exactly as the file is. That is the honest way to show it.
-The program is in the public domain.
+So I have set it out below as plain text, just as the file is, which seemed the more honest way
+to show it. The program itself is in the public domain, so you are very welcome to it.
 
-One thing to explain before you read it. This is the current edition, the one with Perl in
-it and with two dates in the header. We started with seven languages in 1991. How the eighth
-arrived is a story for further down.
+One last thing worth mentioning: what follows is the current edition, the one with Perl in it
+and two dates in its header. We began with seven languages in 1991, and the story of how the
+eighth arrived comes a little further down.
 
 ```text
 
@@ -163,50 +169,55 @@ C     *)
 C)pop%     program       polyglot.                                      *){*/}
 ```
 
-If you want to run it, [download the original](https://ideology.com.au/polyglot/) and rename
-it to `polyglot.cob`, `.pas`, `.f77`, `.c`, `.ps`, `.sh`, `.com` or `.pl` depending on which
-compiler you are pointing at it. One warning from the notes still applies: if you move it
-between Unix and Windows, make sure the line endings survive the trip.
+If you would like to run it, you can [download the original](https://ideology.com.au/polyglot/)
+and rename it to `polyglot.cob`, `.pas`, `.f77`, `.c`, `.ps`, `.sh`, `.com` or `.pl`, depending
+on which compiler you intend to point at it. One warning from the original notes still holds:
+if you move the file between Unix and Windows, do check that the line endings survive the
+journey.
 
-My favourite detail is that the Unix `file` command, asked what this is, still answers
-without hesitation: FORTRAN program text.
+My favourite detail, and one that still makes me smile, is that the Unix `file` command, asked
+what this thing is, answers without a moment's hesitation: FORTRAN program text.
 
 ## What happened next
 
-The replies started two days after we posted it, and they never really stopped.
+The replies began two days after we posted it, and they have never entirely stopped.
 
-People compiled it on things we had no access to. It went through a Cray running UNICOS in
-August 1991, where the Fortran was happy, the C compiler grumbled but worked, and the Pascal
-compiler was described as "quite unhappy". Somebody ran it on a mainframe and only had to
-nudge one word into a different column. Somebody ran it on a digital clock. Somebody, at
-some point, tried it on a Palm Pilot and reported the sad news that it did not work.
+People started compiling it on machines we could only have dreamt of getting near. In August
+1991 it went through a Cray running UNICOS, where the Fortran was perfectly happy, the C
+compiler grumbled a little but worked, and the Pascal compiler was reported to be "quite
+unhappy". Someone ran it on a mainframe and needed only to nudge a single word into a different
+column to get it going. Someone else cheerfully reported running it on a digital clock. One
+kind soul tried it on a Palm Pilot and wrote in with the sad news that it did not work.
 
-In January 2001 the page was linked from Slashdot and thousands of people arrived at once.
-Among the comments left that day were a few signed with names that were probably not their
-owners. One, signed Richard Stallman, insisted the proper name was GNU/Polyglot. Another,
-signed Larry Wall, asked simply: "And Perl?"
+Then in January 2001 the page was linked from Slashdot and several thousand people arrived at
+once. A few of the comments left that day were signed with names that almost certainly did not
+belong to the people typing them. One, signed Richard Stallman, insisted that the proper name
+was GNU/Polyglot. Another, signed Larry Wall, asked simply, "And Perl?"
 
-Kevin took that as a challenge. For the tenth anniversary he added Perl, which took it from
-seven languages to eight, and fixed the machine code so it would run on Win32 as well as
-DOS. Then, feeling rather pleased with ourselves, we entered it in the International
-Obfuscated C Code Contest. Months later the results came out and we were not mentioned
-anywhere.
+Kevin took that last one as a challenge. For the tenth anniversary he added Perl, taking us
+from seven languages to eight, and fixed the machine code so it would run happily on Win32 as
+well as DOS. Feeling pleased with ourselves by then, we entered it in the International
+Obfuscated C Code Contest. When the results were finally announced some months later, we had
+not been mentioned anywhere at all.
 
 ## Still out there
 
-Rosetta Code has an entry for polyglot programs, and it opens by saying the most famous
-example is ours. It is included in the Hello World collections that people maintain. It
-turns up in Linux distributions now and then, which is fine, because we put it in the public
-domain and asked for nothing except an acknowledgement.
+Rosetta Code keeps an entry for polyglot programs, and it opens by saying that the most famous
+example is ours, which I still find a little startling to read. It has found its way into the
+Hello World collections that people lovingly maintain, and it turns up in Linux distributions
+every now and again. That is quite all right by us, since we put it into the public domain and
+asked for nothing in return beyond a kind word.
 
-The comments on the original page run from March 1991 to December 2023. Thirty-two years of
-strangers finding it, working out what it does, and leaving a note. Some are technical. Most
-are some version of "you are all mad", which is fair.
+The comments on the original page run from March 1991 all the way through to December 2023,
+which is thirty-two years of strangers stumbling across it, working out what on earth it does,
+and leaving a note behind them. Some are properly technical, though most are some variation on
+"you are all completely mad", which seems fair enough to me.
 
-There is a comment from 2004 that says the writer rarely makes predictions about software,
-but that this one will still be referenced in a hundred years. I would not go that far. What
-I will say is that we wrote it for no reason other than that it seemed funny at the time, we
-gave it away, and it has outlasted nearly everything else I have built since.
+There is one from 2004 in which the writer says they rarely make predictions about software,
+but that this one will still be referenced in a hundred years' time. I would not go anywhere
+near that far. What I will say is that we wrote it for no better reason than that it seemed
+funny at the time, we gave it away without a second thought, and it has quietly outlasted very
+nearly everything else I have built since.
 
-If you write something small and strange and put it where people can find it, you have no
-idea how long it will keep going.
+If you make something small and strange, and put it somewhere people can find it, there is
+really no telling how long it might keep going.
