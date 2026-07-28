@@ -6,12 +6,16 @@ pubDate: 2026-07-28
 
 ![screenshot](../../assets/screenshot.png)
 
-Most of us keep our CV in a Word document somewhere, and for years mine lived there too. These
-days it is a website that prints itself, and I would love to tell you how that came about,
-partly because the thing that made it possible is free and you are very welcome to take it for
-yourself.
+Don't you think all CVs kind of look the same these days? They tend to be boring PDF documents
+that all say the same things. Employers find it hard to distinguish between candidates for
+a position - everyone seems to have the same experience and skills. Job seekers often find
+their submitted job applications are rejected by an AI well before a human gets to see them.
 
-This site is built with [Spotlite](https://github.com/hellotham/spotlite), a template I first
+Here is a way to reinvent what a CV is: as a full function website. It can even export the
+contents as an ATS compliant PDF file, to include in job applications. But hopefully a
+human may be interested enough to browse through it first.
+
+This site is called [Spotlite](https://github.com/hellotham/spotlite), a template I first
 hand-coded over a weekend in 2023, when it was nothing more ambitious than a simple personal
 website. During 2026 I rebuilt it with the help of two AI platforms, and somewhere along the
 way it turned into something more useful: a modern CV template, with my own CV sitting inside
