@@ -6,10 +6,10 @@ endyear: 1992
 type: employment
 image: ./sbv.jpg
 logoBackground: '#faf3ec'
-description: 'Treasury analysis and software development, covering financial instruments pricing and risk analysis.'
+description: 'Pricing exotic options as a Treasury analyst, and maintaining the Treasury management system.'
 tags:
-  ['Software development', 'Systems analysis', 'Financial modelling', 'Risk analysis', 'Treasury']
+  ['Software development', 'Systems analysis', 'Options pricing', 'Financial modelling', 'Treasury']
 ---
 
-- Systems analysis and software development.
-- Financial instruments pricing and risk analysis.
+- Analyst pricing exotic options.
+- Maintained the Treasury management system.
