@@ -40,6 +40,7 @@ gantt
     title Campaigner (ENFP-A)
     dateFormat  X
     axisFormat %s
+    todayMarker off
 
     "-100" :vert, -100, -100
     "0"    :vert, 0, 0
@@ -110,6 +111,7 @@ gantt
     title Casually Feminine
     dateFormat  X
     axisFormat %s
+    todayMarker off
 
     "-100" :vert, -100, -100
     "0"    :vert, 0, 0
