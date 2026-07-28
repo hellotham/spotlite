@@ -1,84 +1,142 @@
 ---
-title: 'Spotlite: A CV and Portfolio Template for Astro'
-pubDate: 2023-05-25
-description: An Astro template that generates a professional CV — two print-ready PDFs and a browsable portfolio site — from a single set of Markdown files.
+title: 'Spotlite: three years, two AI agents, and a CV that maintains itself'
+pubDate: 2026-07-28
+description: How a small hand-coded Astro template from 2023 became a CV generator — rebuilt in 2026 first with Google Antigravity, then with Claude Code.
 ---
 
 ![screenshot](../../assets/screenshot.png)
 
-Spotlite generates a professional CV — as two print-ready PDFs and as a browsable site —
-from a single set of Markdown files. It began as a personal website template inspired by a
-similar sounding one from the Tailwind CSS team, and the portfolio site is still there; but
-the CV is now the point. Open source under the MIT licence, so feel free to use and modify
-it.
+The site you are reading is built with [Spotlite](https://github.com/hellotham/spotlite), an
+Astro template I first wrote in May 2023. It has changed almost beyond recognition since,
+and most of that change happened in 2026, in two bursts, neither of which I typed myself.
 
-_This article was first written in 2023, when Spotlite was a fairly plain Astro 2 personal
-website template. It has grown a great deal since, and its centre of gravity has moved to CV
-generation — the description below reflects where it is now._
+This is the story of what it was, what it is now, and what it was like to hand a codebase to
+an AI agent — twice.
 
-It uses the following technologies:
+## What it does now
 
-- [Astro](https://astro.build)
-- [Typescript](https://www.typescriptlang.org/)
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
-- [Vitest](https://vitest.dev/) for unit and component testing
-- [UnoCSS](https://unocss.dev/)
-- [D3.js](https://d3js.org/) for interactive data visualisations
-- [Mermaid](https://mermaid.js.org/) via `astro-mermaid` for diagrams
-- [Pagefind](https://pagefind.app/) for static full-site search
-- [PhotoSwipe](https://photoswipe.com/) for image lightbox galleries
-- [Puppeteer](https://pptr.dev/) to render CV PDFs from dedicated print routes
-- `@astrojs/sitemap` and `@astrojs/rss` preintegrated
-- Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
+Spotlite generates a **professional CV — two print-ready PDFs and a browsable site — from a
+single set of Markdown files**. A role lives in exactly one place, `src/content/work/`, and
+from there it feeds the one-page résumé, the full curriculum vitae, the work history pages,
+the career timeline, the word cloud and the search index.
 
-It features:
+That single-source rule is the whole idea. A CV is a document of record, and the failure mode
+of keeping one is drift: the PDF you email says something different from the site you link
+to, because you updated one and forgot the other. If there is only one copy of each fact,
+that cannot happen.
 
-- A homepage featuring photos, links to blog articles, an interactive career timeline,
-  and a superpowers visualisation.
-- An About page that can be edited in Markdown and featuring a profile photo
-  and social media links.
-- An Articles page linking to blog articles.
-- A Projects page showcasing a portfolio of items with descriptions, images and
-  links.
-- A Superpowers page with D3 visualisations and detailed skill modals.
-- A Work History page with a word cloud of capabilities and technologies, and a detail
-  page per role.
-- An Education page with a detail page per qualification.
-- A Creations page showcasing linkable artefacts.
-- A Passions page providing a list of products and tools used.
-- Header search, backed by a Pagefind index built at deploy time.
-- Two print-ready CV PDFs generated from the same content collections that drive the
-  site — a one-page résumé and a full curriculum vitae.
-- Support for diagrams and flowcharts via Mermaid.
-- Click-to-zoom image galleries on homepage cards and featured page images.
+The curation is deliberately mechanical — recency, seniority, and a few explicit per-entry
+flags. Nothing in the pipeline rewords or infers a career fact. The one-pager measures itself
+and scales to fit exactly one page, failing loudly rather than quietly spilling onto a second.
+Both PDFs are single column with selectable text, because multi-column CVs and sidebars get
+read out of order by applicant tracking systems.
 
-Spotlite uses all the latest and greatest features in Astro (>v6) including:
+## 2023: hand-coded
 
-- optimised assets
-- data and content collections
-- endpoints
-- sitemap
-- RSS
-- static search indexing
+The original was a weekend project. Eleven commits in May 2023 took it from `Initial commit`
+to something I was happy to put my name on: Astro 2, UnoCSS, Alpine.js for the interactive
+bits, and a layout inspired by a similar-sounding template from the Tailwind CSS team. It was
+a personal website template, and a fairly plain one.
 
-## Everything comes from the content collections
+Then it sat. Across 2024 and 2025 it received eight commits — package bumps, an Astro 4
+upgrade, an Astro 5 upgrade, a hover colour I never liked. Maintenance, not development. That
+is the honest fate of most side projects, and I had no particular plan to change it.
 
-The idea that has held up best is that there is exactly one source of truth for any fact.
-A role lives in `src/content/work` as a Markdown file with frontmatter, and that single
-entry feeds the home page timeline, the work list, its own detail page, the search index,
-the word cloud, and both CV PDFs. Nothing is written twice, so nothing can disagree with
-itself — which matters most for the CV, where a document of record has to match the site
-it was generated from.
+## May 2026: Google Antigravity
 
-The CV generation is deliberately deterministic: it curates by recency, seniority and
-explicit per-entry flags, and never rewords a career fact. The one-pager measures itself
-and scales to fit exactly one page rather than quietly spilling onto a second, and both
-documents are single-column with selectable text so applicant tracking systems can parse
-them.
+In May I pointed **Google Antigravity** (Gemini) at the repository, working through a
+track-based workflow where each piece of work got a written specification and plan before any
+code was touched. Over about eleven days it produced **463 commits across 25 tracks**.
 
-It's production-ready and easy to customise, making it a good starting point for anyone who
-wants their CV and their portfolio to stay in step.
+The scale is less impressive than it sounds — roughly 300 of those commits were the
+workflow's own bookkeeping, marking tasks complete. But the substance was real, and it is
+most of what the site is today:
 
-Deployment is a GitHub Actions workflow that builds the site, generates the Pagefind index
-and publishes to GitHub Pages on every push to `main`.
+- **Alpine.js removed entirely**, its mobile menu and theme switcher rewritten in plain
+  JavaScript.
+- **A test suite**, from nothing. Vitest arrived alongside a genuine test-first discipline —
+  several tracks open with a commit adding failing tests.
+- **The Rosely design system**: the warm, low-contrast palette this site still uses, applied
+  across every component, and written down in `DESIGN.md`.
+- **SEO**: dynamic meta tags, OpenGraph and Twitter cards, JSON-LD structured data, sitemap
+  and `robots.txt`.
+- **Content collections** for pages, work, education, creations and passions — the migration
+  that made everything else possible.
+- **Motion**: Astro's `ClientRouter` for SPA-like navigation, entrance animations, hover and
+  focus transitions.
+- **Pagefind** static search and **PhotoSwipe** lightbox galleries.
+- **An accessibility audit** with fixes for ARIA, landmarks, focus indicators and contrast.
+- **Three D3 visualisations** — the career timeline, the superpowers bar chart, and the
+  bubble chart, which took twenty-odd commits to get from "overlapping circles" to the
+  Brownian motion it does now.
+- **The first CV PDF generation**, which is where the project's centre of gravity started to
+  shift.
+
+## July 2026: Claude Code
+
+In late July I handed the same repository to **Claude Code**, running Opus 5. Sixteen commits
+over two days, and a different character of work: less building outward, more going back over
+what was there.
+
+The CV was the main event. I asked for a proper redesign — the existing PDF was essentially a
+printout of the website, complete with charts and navigation. It came back as two documents
+built from a deterministic curation engine, rendered through dedicated print-only routes by
+Puppeteer, with a one-pager that measures itself and refuses to overflow.
+
+Then a full-codebase review, run as seven parallel reviewers over separate dimensions with
+every finding adversarially verified before being reported. **119 findings survived**. Some
+were embarrassing:
+
+- Two UnoCSS shortcuts, `focus-ring` and `hover-accent`, that **emitted no CSS at all**.
+  UnoCSS resolves `variant-utility` before it consults the shortcut table, so `focus-ring`
+  had been parsed as the `focus:` variant applied to `ring` — for months, eleven elements had
+  no proper focus indicator and the theme menu had no hover state. No build error, ever.
+- The home page headline **clipped mid-word at 320px**, hidden by `overflow-x: hidden`.
+- A personal résumé PDF, complete with my home address, sitting in a public repository.
+
+The rest of the two days: an animated word cloud on the work page, weighted by how many roles
+each tag appears in; company and institution logos unified into one component; the 1991 USENIX
+paper I co-wrote [reproduced as an article](/spotlite/article/crypt-usenix91/), transcribed
+from a scan with its figures redrawn as Mermaid diagrams; Rosely themes for Mermaid and for
+syntax highlighting, in both light and dark, with the contrast enforced by a test; and a
+migration of the whole Markdown pipeline onto Astro 7's new Rust processor.
+
+## What I actually learned
+
+**Both agents were more useful going back than going forward.** The genuinely valuable work in
+both bursts was finding things that were already broken — a shortcut emitting nothing, a
+headline clipped at mobile width, a contrast ratio of 3.04 where 4.5 was needed. None of it
+was visible. All of it had been shipped.
+
+**Confident and wrong is the failure mode to watch.** Claude told me twice, with reasoning,
+that Astro's new Markdown processor could not render maths at build time. It could — it
+needed a plugin at a different phase, and a rehype plugin passed to the wrong hook had been
+accepted and silently ignored, which is what produced the false conclusion. It only came out
+because I pushed back and asked whether it had actually checked. That silent-ignore behaviour
+is now [an open issue](https://github.com/bruits/satteri/issues/180) against the processor.
+
+**Verification is where the value is.** "Lighthouse says 100" turned out to mean "100 in light
+mode", because Lighthouse follows the machine's colour scheme and every run had landed the
+same way. Two real dark-mode contrast failures had been sitting underneath several clean
+reports. The lesson is not that the tool lied — it is that a number is only as good as the
+conditions you ran it under, and it is worth asking what those were.
+
+**Write the reasons down.** The most durable artefacts from both phases are `DESIGN.md` and
+`AGENTS.md` — the second of which is mostly a list of traps, each one describing a failure
+that actually happened and cost real time. Future agents read it before they touch anything.
+
+## The stack
+
+- [Astro](https://astro.build) 7, with the Sätteri Rust Markdown processor
+- [TypeScript](https://www.typescriptlang.org/) and [UnoCSS](https://unocss.dev/)
+- [Puppeteer](https://pptr.dev/) rendering the CV PDFs from print-only routes
+- [Vitest](https://vitest.dev/) — 27 test files, several asserting against the built output
+- [D3.js](https://d3js.org/) for the timeline, superpowers and word cloud
+- [Mermaid](https://mermaid.js.org/) for diagrams and [KaTeX](https://katex.org/) for maths,
+  both themed to Rosely and rendered at build time
+- [Pagefind](https://pagefind.app/) for search, [PhotoSwipe](https://photoswipe.com/) for
+  galleries
+- Deployed to GitHub Pages on every push to `main`
+
+It is open source under the MIT licence. If you would like your CV and your portfolio to stop
+disagreeing with each other, [help yourself](https://github.com/hellotham/spotlite).

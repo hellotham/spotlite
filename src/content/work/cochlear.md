@@ -2,7 +2,6 @@
 company: Cochlear
 role: Enterprise Architect
 startyear: 2025
-endyear: 2026
 type: consulting
 image: ./cochlear.png
 description: 'Enterprise architecture within Technology and Data Solutions: an architecture service model, EA metrics and LeanIX executive reporting, an AI reference architecture, and federated repository-centric governance.'
