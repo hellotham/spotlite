@@ -11,16 +11,16 @@
   "summary": "Founder of Hello Tham, a boutique strategy consulting company. Available for short to medium term consulting engagements spanning strategic business change, business and operating model design, business process improvement, and technology strategy, architecture and solutions.",
   "achievements": [
     {
-      "title": "Enterprise and AI architecture leader",
-      "detail": "Currently defining the AI reference architecture, agentic AI guardrails and enterprise architecture metrics at Cochlear. Previously Head of Architecture at NAB and MLC."
-    },
-    {
       "title": "Flexible strategic change agent and thought leader",
-      "detail": "Led IT strategies and operating models for Transport for NSW, Transfield Services, ING, NAB and MLC, and founded Hello Tham in 2016 to deliver that work independently."
+      "detail": "Led IT strategies and operating models for Transport for NSW, Transfield Services, ING, NAB and MLC. Founder of Hello Tham, delivering strategy, architecture and operating model engagements since 2016."
     },
     {
-      "title": "Educator, innovator and author",
-      "detail": "Lecturer in Information Systems at Torrens University, twice awarded the Learning and Teaching Merit Award. Author of AI-dō, and developer of two native Apple applications released as free software."
+      "title": "Successful and proven technology strategy and architecture leader",
+      "detail": "Enterprise Architect at Cochlear, defining the architecture service model, EA metrics framework and federated architecture governance. Head of Architecture roles at NAB and MLC; consultant for HP and AT&T/NCR."
+    },
+    {
+      "title": "Recognised technology innovator and industry expert",
+      "detail": "Shaped Cochlear's AI Reference Architecture and agentic AI guardrails; pioneered AI/ML dashboards, omni-channel self-service chatbots and service-oriented architectures. Lecturer in Information Systems at Torrens University and author of AI-dō."
     }
   ],
   "onePage": {
