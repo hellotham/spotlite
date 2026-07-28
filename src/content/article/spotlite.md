@@ -1,92 +1,74 @@
 ---
-title: How two AI agents rebuilt my website
-description: I built this site by hand in 2023, then barely touched it for two years. This year I handed it to Google Antigravity, and later to Claude Code.
+title: 'Spotlite: the modern CV template'
+description: A free Astro template that turns a folder of Markdown files into a beautiful website and a polished one-page CV. Fork it and make it yours.
 pubDate: 2026-07-28
 ---
 
 ![screenshot](../../assets/screenshot.png)
 
-I built this website over a weekend in May 2023.
+Your CV is probably a Word document. Mine is a website that prints itself.
 
-It was a simple thing. Astro for the pages, UnoCSS for the styling, and a bit of Alpine.js to make the menu open and close. I called it Spotlite, and I put it on GitHub so other people could use it too.
+This site is built with [Spotlite](https://github.com/hellotham/spotlite), a template I first hand-coded over a weekend in 2023. Back then it was a simple personal website. In 2026 I rebuilt it with the help of two AI platforms, and it grew into something much more interesting: a modern CV template.
 
-Then I mostly left it alone. Over the next two and a half years it got eight commits. A few package updates, an upgrade to Astro 4, an upgrade to Astro 5, and one hover colour I never liked but never fixed. That is what happens to side projects.
+Everything you see here is the demo. My own CV is the exemplar. The work history, the charts, the PDFs you can download, all of it comes from one small folder of Markdown files.
 
-This year I gave it to two AI coding agents, a couple of months apart. The site you are reading now is the result, and it is not really the same website any more.
+## Write it once
 
-## What it does now
+Here is the idea at the heart of Spotlite.
 
-The main change is what the site is for.
+Most people keep their CV in one file and their online profile somewhere else. The two drift apart. You update one, forget the other, and six months later they disagree about your own career.
 
-It used to be a personal website that happened to list my work history. Now it is a CV generator. I write each job once, as a Markdown file, and the site builds everything else from that one file: the work history page, the career timeline, the search index, and two PDF versions of my CV.
+In Spotlite, each job is a single Markdown file. From that one file the template builds the work history page, the career timeline, the word cloud, the search index, and two PDF versions of your CV. Change a date once and everything updates together. Nothing can drift, because there is nothing to drift from.
 
-That last part is the bit I actually wanted. If you keep your CV in a Word document and your work history on a website, the two slowly stop agreeing with each other. You update one and forget the other. Six months later they say different things and you have no idea which one is right.
+## A CV that lays itself out
 
-Now there is only one copy of each fact, so they cannot disagree.
+Run one command and Spotlite produces two documents: a one-page CV for recruiters, and a full CV with your complete history.
 
-## May 2026: Google Antigravity
+The one-pager is my favourite feature. It measures itself, and if the content will not fit on a single page, it scales the type down until it does. If it would have to shrink below a legibility floor, it refuses to build at all rather than hand you something unreadable. No more fighting Word margins at midnight.
 
-In May I pointed Google Antigravity, which runs on Gemini, at the code. It worked through a list of tracks, and for each one it wrote a plan before it wrote any code.
+Both documents are single column with selectable text, which means the automated systems that companies use to scan CVs can actually read them. And because they are generated from the same files as the site, they are correct by construction.
 
-It made 463 commits over about eleven days. That number sounds more impressive than it is, because roughly 300 of them were the agent ticking off its own to-do list. The real work was still substantial:
+## Charts that feel alive
 
-- It removed Alpine.js completely and rewrote the menu and the dark mode switch in plain JavaScript.
-- It added tests. The project had none. It also got into the habit of writing the test first and watching it fail, which I did not ask for.
-- It designed the colour scheme this site still uses, and wrote it down so it could be applied consistently.
-- It sorted out the things search engines care about: page titles, social sharing previews, a sitemap.
-- It moved all the content into proper collections, which is what made everything afterwards possible.
-- It added site search, image galleries, and page transitions.
-- It ran an accessibility audit and fixed what it found.
-- It built the three D3 charts: the career timeline, the superpowers chart, and the floating bubbles. The bubbles took about twenty attempts to stop overlapping.
-- It generated the first version of the CV PDF.
+A CV is a story, and Spotlite tells it visually:
 
-That last one is where the project quietly changed direction, although I did not notice at the time.
+- A career timeline that draws itself from your work history.
+- A skills chart where your strengths float and drift like molecules, each one clickable for the detail.
+- A word cloud built from tags on your roles. A skill that appears in six jobs floats larger than one that appears in one, so the cloud shows where your career actually concentrated. It drifts gently, like a badge wall come to life.
 
-## July 2026: Claude Code
+The motion is polite. Every animation pauses when off screen, offers a pause button, and switches itself off for people who prefer reduced motion.
 
-In late July I handed the same code to Claude Code, running Opus 5. About twenty commits over two days, and a very different sort of work. Less building new things, more going back over what was already there.
+## Beautiful in the details
 
-The CV was the main job. The old PDF was basically a printout of the website, charts and all, which is not what anyone wants to receive as a CV. It came back as two proper documents. A one page version and a full one, both plain enough for the software that companies use to read CVs automatically.
+The whole template uses one design system, called Rosely: a warm, low-contrast palette that works in light and dark mode. And I do mean the whole template. Code samples, diagrams and even mathematical equations are themed to match, in both modes.
 
-The one page version is my favourite bit. It measures itself, and if it does not fit on one page it shrinks the type until it does. If it cannot shrink far enough to stay readable, it stops and complains rather than quietly giving me a two page CV.
+Some of it goes further than any template I know of. The syntax highlighting colours are checked by an automated test that fails the build if any colour drops below the contrast that accessibility guidelines require. The pages score 100 for accessibility in Lighthouse, and that number was checked in dark mode too, not just light.
 
-Then I asked it to review the whole codebase. It ran seven reviewers at once, each looking at a different thing, and then argued with its own findings before showing me any. A hundred and nineteen survived. Some were embarrassing.
+There is also full-site search, photo galleries with a lightbox, smooth page transitions, social sharing cards, and an RSS feed. Diagrams work out of the box, and so do maths equations, rendered at build time with nothing fetched from a CDN.
 
-## The things that were already broken
+## Fast, tested, free
 
-This is the part I did not expect.
+Spotlite runs on Astro 7 with its new Rust-based Markdown engine, so builds are quick and pages are static and fast. A test suite of 119 tests keeps it honest. A GitHub Actions workflow is included, so pushing to your repository deploys the site automatically.
 
-Both agents were most useful when looking backwards. Everything below had been live on the site for months, and I had no idea:
+It is open source under the MIT licence. Fork it, gut my content, and make it yours.
 
-- Two of my styling shortcuts produced no CSS at all. I had named one of them `focus-ring`, and it turned out UnoCSS reads that as an instruction rather than a name. So eleven buttons and links had no visible outline when you tabbed to them, and the dark mode menu had no hover effect. Nothing ever complained.
-- On a narrow phone screen, the headline on my home page was cut off in the middle of a word. There was no scrollbar, so there was nothing to hint that anything was missing.
-- The code samples in my articles used a grey that was too faint to read properly.
-- An old copy of my résumé, with my home address in it, was sitting in a public GitHub repository.
+## Make it yours in an afternoon
 
-None of that was visible to me. All of it had been shipped.
+The customisation surface is deliberately small:
 
-## Where AI got it wrong
+- One Markdown file per job or qualification, in the work and education folders.
+- One file, `cv.json`, for your name, headline, key achievements and contact details.
+- One file, `superpowers.json`, for your skills.
+- Your photos and social links.
 
-I do not want to give the impression this was magic.
+That is essentially it. The template does the rest, and my own files are all there as worked examples.
 
-At one point Claude told me, twice and with confident reasoning, that Astro's new Markdown engine could not display mathematical formulas. I had a 1991 paper I wanted to republish, and it is full of equations, so this mattered.
+## What I learnt building it with AI
 
-It was wrong. The feature works, but it needed a plugin attached at a different point in the process. The agent had attached one at the wrong point, the software had accepted it and then silently ignored it, and the resulting silence looked like proof.
+Two AI platforms did the heavy lifting of the 2026 rebuild. Google Antigravity laid the foundations: the design system, the test suite, the content collections and the first charts. Claude Code then turned it into the CV machine described above, and along the way reviewed the whole codebase and fixed bugs I had been shipping for months without noticing.
 
-It only came out because I pushed back and asked whether it had actually checked. It had not. When it did, the answer changed.
+Three lessons, all happy ones. First, AI is remarkably good at improving what already exists; my hand-built site came back better than I could have made it alone. Second, the magic question is "did you actually check that?", which turns a confident answer into a verified one. Third, write notes for your AI the way you would for a new team member. Spotlite now carries a file of hard-won tips, and every session that reads it starts smarter than the last.
 
-The silent part was a genuine bug in someone else's software, and it is now [an open issue](https://github.com/bruits/satteri/issues/180) against that project. But I would never have got there by nodding along.
+The result is a template I am genuinely proud of, built faster and finished better than I could have managed by hand.
 
-There was a similar moment with accessibility scores. I was told the site scored 100 out of 100 several times. That was true, but only in light mode. The testing tool follows whatever colour scheme your computer is set to, and every test had happened to run the same way. In dark mode there were two real problems hiding underneath all those perfect scores.
-
-## What I take from it
-
-Three things.
-
-The first is that AI is better at finding your old mistakes than at writing new features. The features were fine. The faint grey, the broken outline, the headline cut in half, those had been sitting there for months and no human was ever going to spot them by reading the code.
-
-The second is that confident and wrong is the thing to watch for. Not wrong and hesitant, which is easy to catch. Confident, well argued, and wrong. The only defence I found was asking, plainly, "did you actually check that?" It is remarkable how often the answer is no.
-
-The third is to write down why, not just what. The two most useful files in the project now are the design notes and a file of traps for future agents, which is really just a list of every mistake anyone made and what it cost. Both agents read it before touching anything.
-
-Spotlite is still free to use, under the MIT licence. If your CV and your website have stopped agreeing with each other, [help yourself](https://github.com/hellotham/spotlite).
+Your CV deserves better than a Word document. [Help yourself.](https://github.com/hellotham/spotlite)
