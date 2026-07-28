@@ -175,6 +175,19 @@ The light half is genuine Mermaid theming (`theme: 'base'` plus `themeVariables`
 split that way, and which diagram types need `!important` to override. Prefer extending those
 two files over per-diagram `%%{init}%%` directives, which cannot vary by colour scheme.
 
+### Syntax highlighting
+
+Code blocks carry their own Rosely themes, in `src/styles/shiki-rosely.ts`: darkened hues on
+Sugar Swizzle in light, the Rosely brights on Black Beauty in dark, with matching hue roles in
+both — raspberry keywords, green strings, orchid function names, terracotta numbers, grey
+italic comments.
+
+The two palettes are different colours rather than one set relit, and that is forced rather than
+chosen: clearing 4.5:1 needs luminance below ~0.15 on the cream background and above ~0.27 on
+the near-black one, and no single colour does both. **Treat highlighting as prose, not
+decoration** — a comment is a sentence and a string literal is text, so every token meets the
+4.5:1 body-text bar, not the 3:1 graphical one. `tests/shiki-theme.test.ts` enforces it.
+
 The word cloud sizes each tag by how many roles carry it, drifts under Brownian motion, and
 separates labels along their shallowest axis of overlap — circle packing is wrong for wide text,
 because a two-pixel vertical touch shoves two labels far apart horizontally.

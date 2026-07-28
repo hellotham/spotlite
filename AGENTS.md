@@ -183,12 +183,23 @@ message telling you to install `@astrojs/markdown-remark`. Installing that packa
 the whole site back to the unified processor, so treat it as a site-wide change and
 re-check existing pages, not just the one you added a plugin for.
 
-### Shiki's default theme fails contrast on comments
+### Syntax highlighting is prose, and its contrast is enforced
 
 Astro's default `github-dark` renders comments at #6a737d on #24292e — 3.05:1, below the
-4.5:1 that body text requires, and a code comment is prose. `shikiConfig.theme` is set to
-`github-dark-default`, which takes the same tokens to 6.15:1. This only shows up on pages
-with substantial commented code, so it can hide for a long time.
+4.5:1 that body text requires, and a code comment is a sentence. Nothing in the build
+complained, and it only surfaces on pages with substantial commented code, so it hid for
+a long time.
+
+Code blocks now use the Rosely themes in `src/styles/shiki-rosely.ts`, one palette per
+colour scheme, wired through `shikiConfig.themes` with `defaultColor: 'light'` — Shiki
+inlines the light colours and emits the dark ones as `--shiki-dark` custom properties,
+which `src/styles/mermaid.css` swaps under `.dark`.
+
+`tests/shiki-theme.test.ts` recomputes every token's ratio against its own background and
+fails below 4.5:1, so a palette tweak cannot quietly undo this. Note the two palettes are
+deliberately different hues, not one set relit: a foreground needs luminance below ~0.15
+to clear 4.5:1 on the cream background and above ~0.27 on the near-black one, and nothing
+satisfies both.
 
 ### SVG has no intrinsic size without width/height
 

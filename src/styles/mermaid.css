@@ -16,6 +16,21 @@
  *     which lose to any stylesheet rule. Those need no `!important` at all.
  */
 
+/* ---- Shiki code blocks ------------------------------------------------ */
+
+/*
+ * Shiki's dual-theme output: `defaultColor: 'light'` inlines the light colours and puts
+ * the dark ones in --shiki-dark custom properties on every token span. Swapping them is
+ * this one rule. `!important` because the inline light value is a style attribute.
+ */
+
+.dark .astro-code,
+.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+}
+
 /* ---- Flowchart -------------------------------------------------------- */
 
 .dark .mermaid .label-container,

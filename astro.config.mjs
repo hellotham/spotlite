@@ -5,6 +5,7 @@ import mermaid from 'astro-mermaid'
 import { unified } from '@astrojs/markdown-remark'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import { roselyLight, roselyDark } from './src/styles/shiki-rosely.ts'
 
 // https://astro.build/config
 export default defineConfig({
@@ -44,10 +45,18 @@ export default defineConfig({
       remarkPlugins: [remarkMath],
       rehypePlugins: [[rehypeKatex, { strict: false }]]
     }),
-    // Not Astro's default `github-dark`, whose comment colour (#6a737d on #24292e) is
-    // 3.05:1 — below the 4.5:1 body text needs, and comments are prose. The modern
-    // GitHub dark palette takes the same tokens to 6.15:1 and looks near-identical.
-    shikiConfig: { theme: 'github-dark-default' }
+    // Rosely syntax highlighting, one palette per colour scheme. `defaultColor: 'light'`
+    // inlines the light theme and emits the dark one as --shiki-dark custom properties,
+    // which src/styles/mermaid.css swaps in under `.dark` — so code blocks recolour with
+    // the page instead of staying dark on a cream background as they did before.
+    //
+    // Contrast is enforced, not assumed: see src/styles/shiki-rosely.ts and
+    // tests/shiki-theme.test.ts. Astro's own default (`github-dark`) put comments at
+    // 3.04:1, which is how this started.
+    shikiConfig: {
+      themes: { light: roselyLight, dark: roselyDark },
+      defaultColor: 'light'
+    }
   },
   integrations: [
     // Rosely-aligned Mermaid theming.
