@@ -276,9 +276,29 @@
 .mermaid .taskTextOutside1,
 .mermaid .taskTextOutside2,
 .mermaid .taskTextOutside3,
-.mermaid .vertText,
 .mermaid .tick text {
   fill: #27272a !important;
+}
+
+/*
+ * The vert markers are the only labels Mermaid paints from an id-scoped `!important`
+ * rule of its own (`#mermaid-abc .vertText { fill: navy !important }`), and no class
+ * selector can outrank an ID one however many classes it carries. Navy is legible
+ * enough on the cream page but all but disappears on the near-black one.
+ *
+ * A cascade layer settles it. For `!important` declarations the layer order is
+ * reversed, so a layered important beats an unlayered important outright, specificity
+ * never being compared across layers. Scoped to just these rules rather than the whole
+ * file, so nothing else has its cascade quietly rearranged.
+ */
+@layer mermaid-vert {
+  .mermaid .vertText {
+    fill: #27272a !important;
+  }
+
+  .dark .mermaid .vertText {
+    fill: #f4eee8 !important;
+  }
 }
 
 .dark .mermaid rect.vert {

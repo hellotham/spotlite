@@ -69,6 +69,22 @@ export default defineConfig({
       theme: 'base',
       autoTheme: false,
       mermaidConfig: {
+        /*
+         * Pin the drawing width instead of letting Mermaid measure the container.
+         *
+         * Gantt and xychart size themselves from the element they are rendered into, and
+         * that measurement is only correct once layout has settled. astro-mermaid renders
+         * from a deferred module, so occasionally it measures too early and falls back to
+         * a 300px canvas: the chart comes out squashed, with the bar labels and the axis
+         * numbers overlapping each other. It is intermittent, roughly one load in six
+         * here, which is why refreshing the page appeared to fix it.
+         *
+         * A fixed useWidth removes the measurement from the equation. `useMaxWidth` stays
+         * on, so the SVG still scales down to whatever column it lands in — the diagram is
+         * responsive, its internal geometry just no longer depends on render timing.
+         */
+        gantt: { useWidth: 1000, useMaxWidth: true },
+        xyChart: { width: 900, height: 500 },
         themeVariables: {
           // Transparent so a diagram sits on the page or card it is placed in.
           background: 'transparent',
