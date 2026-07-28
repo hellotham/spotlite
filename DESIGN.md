@@ -155,6 +155,10 @@ artwork legible in dark mode. Where an entity has no mark at all, the tiled vari
 initials monogram — which reads as deliberate, where a grey placeholder image read as broken.
 The `bare` variant renders nothing, since the detail page heading already names the entity.
 
+Its width cap is `max-w-full sm:max-w-sm`, and that order matters. With the height fixed the
+width follows the aspect ratio, so a wide wordmark wants far more room than a phone column
+has; the container has to bound it before any fixed size does.
+
 ### Data visualisation
 
 Two idioms coexist, and the choice is about authorship:
@@ -170,10 +174,14 @@ stock blues and lavenders. Nodes are Heavenly Pink on Radiant Orchid in light an
 Lupine in dark; connectors are Grapeade in light and Lupine in dark, both chosen to clear 3:1
 against their own page background since they sit on it rather than on a filled shape.
 
-The light half is genuine Mermaid theming (`theme: 'base'` plus `themeVariables` in
-`astro.config.mjs`); the dark half is `src/styles/mermaid.css`. `AGENTS.md` explains why it is
-split that way, and which diagram types need `!important` to override. Prefer extending those
-two files over per-diagram `%%{init}%%` directives, which cannot vary by colour scheme.
+Both halves now live in `src/styles/mermaid.css`, including the light one that
+`themeVariables` also sets. That duplication is the point: Mermaid bakes its colours in at
+render time, and the integration can render the same diagram twice under racing conditions,
+so a diagram that lost the race kept the stock palette until something re-rendered it.
+Deciding appearance in CSS makes it independent of when a diagram was drawn. `AGENTS.md`
+covers the consequences, chiefly that every rule needs `!important` and one needs a cascade
+layer. Prefer extending that file over per-diagram `%%{init}%%` directives, which cannot vary
+by colour scheme.
 
 ### Syntax highlighting
 
@@ -188,9 +196,19 @@ the near-black one, and no single colour does both. **Treat highlighting as pros
 decoration** — a comment is a sentence and a string literal is text, so every token meets the
 4.5:1 body-text bar, not the 3:1 graphical one. `tests/shiki-theme.test.ts` enforces it.
 
-The word cloud sizes each tag by how many roles carry it, drifts under Brownian motion, and
-separates labels along their shallowest axis of overlap — circle packing is wrong for wide text,
-because a two-pixel vertical touch shoves two labels far apart horizontally.
+The word cloud sizes each tag by how many roles carry it and **places labels along an
+Archimedean spiral, heaviest first**, so the tags that ran through a whole career hold the
+centre and the one-offs fill in around them. Seeding at random and relaxing the overlaps away
+cannot produce that: relaxation only separates boxes, it has no notion of which label deserves
+the middle, so weight and position were unrelated. The spiral steps faster horizontally than
+vertically, or a circular one stacks the labels into a column and leaves the sides of a wide
+figure empty.
+
+Motion is a weak spring back to the spiral position, stiffer for larger labels, with Brownian
+jitter on top — unanchored drift slowly undoes the arrangement, and the arrangement is the
+point. Overlaps are still resolved along the shallowest axis of penetration, because circle
+packing is wrong for wide text: a two-pixel vertical touch shoves two labels far apart
+horizontally.
 
 ### Charts are decorative; their data is not
 
@@ -278,9 +296,31 @@ Rosely is committed to being an inclusive design system that meets **WCAG 2.2 Le
   `border-primary` token.
 - **Information without Color:** Never use color as the sole indicator of meaning or status (e.g., provide text labels or icons alongside color states for success and error messages).
 
+### Responsive Behaviour
+
+The site is verified from **320px to 1536px** in both colour schemes. Nothing may extend past
+the viewport at any width. Where content genuinely cannot fit a narrow column — a wide table,
+a code block, a diagram — it gets its own `overflow-x: auto` box so it scrolls inside itself
+rather than pushing the page.
+
+This has to be measured rather than eyeballed, because `html` clips horizontal overflow: a
+page that is broken at 320px looks perfectly composed, with the excess sliced off the right
+edge and no scrollbar to suggest anything is missing. Compare `documentElement.scrollWidth`
+against `clientWidth` at each breakpoint and treat any difference as a defect.
+
+The failures this catches are layout, not colour. Both defects found in the last sweep — a
+wordmark 480px wide in a 288px column, and a table losing its last column — were identical in
+light and dark.
+
 ### Verification
 
 Lighthouse currently reports 100 for accessibility, best practices and SEO across the site, with
 performance 91–100. Treat that as the floor, not the goal — Lighthouse cannot see keyboard order,
 focus management or whether alternative text is meaningful, and it weights some genuine axe
 findings at zero.
+
+The full sweep behind the responsive and contrast claims covers every page at seven widths in
+both schemes, checking overflow, text contrast against the effective background, broken images
+and console errors. Resolve colours by painting them to a canvas rather than parsing the
+computed string — the theme is authored in `oklch`, and a regex-based reader reports hundreds
+of contrast failures that do not exist.

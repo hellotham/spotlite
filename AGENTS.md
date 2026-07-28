@@ -150,30 +150,87 @@ Prefer an `AbortController` with `{ signal }` on each listener so one `abort()` 
 
 `src/pages/api/search.json.ts` must index **every** collection Pagefind picks up from rendered pages. When it drifted, four collections were unsearchable in dev while production worked perfectly — searching "swift" or "servicenow" returned nothing.
 
-### Mermaid is themed in two places, and its `autoTheme` is off on purpose
+### Mermaid is themed entirely from CSS, in both schemes
 
-Light comes from real Mermaid theming — `theme: 'base'` plus `themeVariables` in
-`astro.config.mjs`. Dark comes from `src/styles/mermaid.css`. They are split because
-`astro-mermaid`'s `autoTheme` can only swap between Mermaid's own built-in themes, which
-discards custom `themeVariables` entirely; it also keys off an `html[data-theme]`
-attribute this site does not otherwise set, and drives the swap by re-rendering.
+Both palettes live in `src/styles/mermaid.css`. The `themeVariables` in `astro.config.mjs`
+still set the light colours at render time, and that duplication is deliberate.
 
-Consequences worth knowing before you change any of it:
+Mermaid bakes colours into each SVG as it renders, so a diagram's appearance is decided by
+whatever config was in force during that particular render. `astro-mermaid` renders from two
+places — once when its module runs and again on `astro:after-swap` — and a client-side
+navigation fires both, so two passes race over the same diagrams. Lose that race and a
+diagram keeps Mermaid's stock palette until something re-renders it. That is why reloading
+appeared to "fix" a wrongly-themed diagram: a full page load only ever runs one pass.
 
+Stating both themes in CSS takes appearance out of the render entirely. Dark rules carry an
+extra `.dark` class and so outrank their light counterparts.
+
+What follows from that:
+
+- **Everything needs `!important`.** Mermaid injects a `<style>` into each SVG scoped by the
+  diagram's generated id, and an ID selector beats a class rule. That includes xychart and
+  quadrant, which an earlier version of this note wrongly exempted — their text is styled
+  from the same block, and the dark chart titles were unreadable until they were flagged.
+- **Target the `<text>`, not the wrapping `<g>`.** xychart's `chart-title`, `bottom-axis` and
+  `left-axis` classes sit on groups, while the fill sits on the text inside them. A rule on
+  the group silently does nothing.
+- **One rule needs a cascade layer.** Gantt paints `.vertText` as `fill: navy !important`
+  from that id-scoped block, and no class selector can outrank an ID one however many
+  classes it carries. `@layer mermaid-vert` wins because layer order reverses for important
+  declarations, so a layered important beats an unlayered one outright.
+- **Diagram geometry is pinned, not measured.** Gantt and xychart size themselves from the
+  element they render into, and that measurement is only correct once layout has settled.
+  Roughly one load in six produced a 300px canvas and a squashed chart with overlapping
+  labels. `gantt.useWidth` and `xyChart.width` in `astro.config.mjs` remove the measurement;
+  `useMaxWidth` stays on, so they still scale down to their column.
+- **`pre.mermaid` inherits code-block styling.** Diagrams are authored as fenced code, so the
+  typography preset gives the container a dark slate panel and pale text meant to sit on it.
+  Correct for a code sample, wrong the moment the SVG replaces the source — on the light page
+  it put a dark panel behind every diagram and read as the site having picked the wrong
+  theme. `mermaid.css` resets background, colour and border on the container.
+- **Gantt ignores its `themeVariables`.** `base` derives section and task colours through its
+  own logic, so those charts are driven from CSS in both schemes.
+- **Gantt used as a bar chart wants `todayMarker off`.** The psychometric charts on
+  `/superpowers/` have no time axis, so Mermaid drew the marker at x ≈ 7,500,000. Clipped and
+  invisible, but it makes a real overflow audit much harder to read.
 - **Do not re-enable `autoTheme`** without also restoring the `data-theme` mirroring in
-  `layout.astro` and `theme.astro`. It was removed when nothing read it any more.
-- **Gantt ignores its `themeVariables`.** `base` derives section and task colours through
-  its own logic, so those charts are driven from CSS in _both_ themes. The other diagram
-  types take the variables fine.
-- **Override strength differs by diagram type.** Flowchart and gantt are styled by a
-  `<style>` block Mermaid injects into each SVG, scoped by the diagram's generated id —
-  an ID selector, so overrides need `!important`. xychart and quadrant paint with SVG
-  presentation attributes, which lose to any stylesheet rule and need none.
+  `layout.astro` and `theme.astro`. It keys off an attribute this site no longer sets, can
+  only swap between Mermaid's own built-in themes, and drives the swap by re-rendering.
 
-The integration also double-initialises on load and can overwrite a diagram's stored
-source with its own rendered SVG. That only bites when something asks for a re-render,
-which nothing does now, but `layout.astro` still stamps `data-diagram` during parse to
-keep the first render deterministic.
+The integration also double-initialises on load and can overwrite a diagram's stored source
+with its own rendered SVG, so `layout.astro` stamps `data-diagram` during parse to keep the
+first render deterministic.
+
+### `html { overflow-x: hidden }` hides responsive breakage
+
+The page never scrolls sideways, so nothing overflows _visibly_ — content is simply sliced
+off the right edge with no scrollbar and no other clue. Two real defects lived behind that:
+a 480px-wide wordmark in a 288px column on `/work/hellotham/`, cut off mid-word, and the
+SFIA table on `/superpowers/` losing its last column at 320px.
+
+Neither is visible by looking at the page, and neither is a colour-scheme problem. Audit by
+comparing `documentElement.scrollWidth` against `clientWidth` at each breakpoint, and treat
+any difference as a defect even though the page looks fine. When something legitimately
+exceeds its column — a wide table, a code block, a diagram — give it its own
+`overflow-x: auto` box so the content stays reachable.
+
+### Computed colours are `oklch()`; do not parse them by hand
+
+`getComputedStyle().color` returns whatever colour space the value was authored in, and the
+UnoCSS theme is in `oklch`. Pulling three numbers out of the string with a regex and treating
+them as RGB produces confident nonsense: an audit written that way reported 222 contrast
+failures across the site, every one an artefact, and the real number was zero.
+
+Resolve colours by painting them instead — assign to a canvas `fillStyle`, fill one pixel,
+read it back with `getImageData`. That returns real sRGB bytes for any colour the browser can
+render, including `color-mix()` and `oklab()`.
+
+### A table cannot scroll without `display: block`
+
+`overflow` does not apply to `display: table`, so a table wider than its column pushes the
+page instead of scrolling. Prose tables are handled in the global block in `layout.astro`
+with `display: block; width: max-content; max-width: 100%; overflow-x: auto` — the
+`max-content` restores the natural sizing that `block` would otherwise discard.
 
 ### Markdown runs on Sätteri, and its plugins are not remark/rehype
 
@@ -213,6 +270,10 @@ satisfies both.
 ### SVG has no intrinsic size without width/height
 
 An SVG declaring only a `viewBox` collapses to 0×0 under `h-auto w-auto`. Always set a definite dimension on one axis and let the other follow — this is why `entitylogo.astro` passes only `height`.
+
+The other half of that: with the height fixed and the width free, the width comes from the
+aspect ratio and can be anything. A 2000×400 wordmark at `h-24` wants 480px. Cap it against
+the container (`max-w-full`) before capping it at a fixed size, or it will run off a phone.
 
 ## 🎨 Styling Conventions
 

@@ -10,6 +10,7 @@ import Timeline from '../components/timeline.astro'
 import Work from '../components/work.astro'
 import Education from '../components/education.astro'
 import Superpowers from '../components/superpowers.astro'
+import TemplateCTA from '../components/templatecta.astro'
 import cv from '../cv.json' with { type: 'json' }
 
 const { frontmatter } = Astro.props
@@ -134,6 +135,9 @@ social = social.sort((a, b) => a.data.order - b.data.order)
               </section>
               <section aria-label='Latest articles'>
                 <ArticleList />
+              </section>
+              <section aria-label='Use this template'>
+                <TemplateCTA />
               </section>
             </div>
           </div>

@@ -7,8 +7,11 @@ from a single set of Markdown files**. Write each role once; the one-page résum
 curriculum vitae, the work history pages, the career timeline and the search index all
 follow from it.
 
-Built with Astro and UnoCSS, and open source under the MIT licence, so feel free to use and
-modify it.
+Built with Astro and UnoCSS, and open source under the MIT licence.
+
+**Fork it, clear out the demo content, and make it yours.** The live demo is
+[hellotham.com/spotlite](https://hellotham.com/spotlite/) — everything you see there, including
+the CV PDFs, is generated from the Markdown files in `src/content/`.
 
 ## Why it works this way
 
@@ -57,7 +60,9 @@ detail the PDF had to leave out:
 - **Superpowers** — self-assessed competencies as interactive D3 visualisations, with detail
   modals. Feeds the CV's competency list.
 - **Home** — profile photo, social links, photo galleries, an interactive career timeline, and
-  the key achievements that open the CV. Prose is edited in `src/pages/index.md`.
+  the key achievements that open the CV. Prose is edited in `src/pages/index.md`; the
+  fork-this-template card at the foot is `src/components/templatecta.astro`, and is the first
+  thing to delete when you make the site your own.
 - **Articles** — long-form writing, with Mermaid diagrams and KaTeX maths available.
 - **Projects**, **Creations**, **Passions** — portfolio items, linkable artefacts, and tools of
   the trade.
@@ -120,7 +125,7 @@ It is deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push t
   │   ├── api/search.json.ts # Search index used when Pagefind is unavailable
   │   └── rss.xml.js
   ├── styles/
-  │   ├── mermaid.css        # Rosely dark theme for diagrams
+  │   ├── mermaid.css        # Rosely theme for diagrams, both schemes
   │   └── shiki-rosely.ts    # Rosely syntax highlighting, light and dark
   ├── utils/
   │   ├── cv.ts              # Deterministic CV curation
@@ -170,6 +175,24 @@ real.
 The cloud is decorative: it is `aria-hidden`, and the same tags are published beneath it as an
 `sr-only` list with their counts, which is also what the search index picks up. It honours
 `prefers-reduced-motion` by settling into a static layout.
+
+## 📐 Responsive and Contrast Bar
+
+The site is verified from **320px to 1536px in both colour schemes**: nothing may extend past
+the viewport at any width, and all text meets WCAG AA against its actual background.
+
+Two things make this easy to get wrong, and both are worth knowing before you change layout:
+
+- `html` clips horizontal overflow, so a page broken at 320px still _looks_ composed — the
+  excess is sliced off the right edge with no scrollbar. Compare `documentElement.scrollWidth`
+  against `clientWidth` rather than trusting your eyes.
+- The theme is authored in `oklch`, so `getComputedStyle().color` returns `oklch(...)`. Reading
+  those numbers as RGB produces confident nonsense. Resolve colours by painting them to a
+  canvas and reading the pixel back.
+
+Content that genuinely cannot fit a narrow column gets its own `overflow-x: auto` box — code
+blocks, diagrams and prose tables all do — so it scrolls inside itself instead of pushing the
+page.
 
 ## 🔎 Search Notes
 
