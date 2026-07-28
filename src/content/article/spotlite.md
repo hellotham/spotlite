@@ -1,142 +1,92 @@
 ---
-title: 'Spotlite: three years, two AI agents, and a CV that maintains itself'
+title: How two AI agents rebuilt my website
+description: I built this site by hand in 2023, then barely touched it for two years. This year I handed it to Google Antigravity, and later to Claude Code.
 pubDate: 2026-07-28
-description: How a small hand-coded Astro template from 2023 became a CV generator — rebuilt in 2026 first with Google Antigravity, then with Claude Code.
 ---
 
 ![screenshot](../../assets/screenshot.png)
 
-The site you are reading is built with [Spotlite](https://github.com/hellotham/spotlite), an
-Astro template I first wrote in May 2023. It has changed almost beyond recognition since,
-and most of that change happened in 2026, in two bursts, neither of which I typed myself.
+I built this website over a weekend in May 2023.
 
-This is the story of what it was, what it is now, and what it was like to hand a codebase to
-an AI agent — twice.
+It was a simple thing. Astro for the pages, UnoCSS for the styling, and a bit of Alpine.js to make the menu open and close. I called it Spotlite, and I put it on GitHub so other people could use it too.
+
+Then I mostly left it alone. Over the next two and a half years it got eight commits. A few package updates, an upgrade to Astro 4, an upgrade to Astro 5, and one hover colour I never liked but never fixed. That is what happens to side projects.
+
+This year I gave it to two AI coding agents, a couple of months apart. The site you are reading now is the result, and it is not really the same website any more.
 
 ## What it does now
 
-Spotlite generates a **professional CV — two print-ready PDFs and a browsable site — from a
-single set of Markdown files**. A role lives in exactly one place, `src/content/work/`, and
-from there it feeds the one-page résumé, the full curriculum vitae, the work history pages,
-the career timeline, the word cloud and the search index.
+The main change is what the site is for.
 
-That single-source rule is the whole idea. A CV is a document of record, and the failure mode
-of keeping one is drift: the PDF you email says something different from the site you link
-to, because you updated one and forgot the other. If there is only one copy of each fact,
-that cannot happen.
+It used to be a personal website that happened to list my work history. Now it is a CV generator. I write each job once, as a Markdown file, and the site builds everything else from that one file: the work history page, the career timeline, the search index, and two PDF versions of my CV.
 
-The curation is deliberately mechanical — recency, seniority, and a few explicit per-entry
-flags. Nothing in the pipeline rewords or infers a career fact. The one-pager measures itself
-and scales to fit exactly one page, failing loudly rather than quietly spilling onto a second.
-Both PDFs are single column with selectable text, because multi-column CVs and sidebars get
-read out of order by applicant tracking systems.
+That last part is the bit I actually wanted. If you keep your CV in a Word document and your work history on a website, the two slowly stop agreeing with each other. You update one and forget the other. Six months later they say different things and you have no idea which one is right.
 
-## 2023: hand-coded
-
-The original was a weekend project. Eleven commits in May 2023 took it from `Initial commit`
-to something I was happy to put my name on: Astro 2, UnoCSS, Alpine.js for the interactive
-bits, and a layout inspired by a similar-sounding template from the Tailwind CSS team. It was
-a personal website template, and a fairly plain one.
-
-Then it sat. Across 2024 and 2025 it received eight commits — package bumps, an Astro 4
-upgrade, an Astro 5 upgrade, a hover colour I never liked. Maintenance, not development. That
-is the honest fate of most side projects, and I had no particular plan to change it.
+Now there is only one copy of each fact, so they cannot disagree.
 
 ## May 2026: Google Antigravity
 
-In May I pointed **Google Antigravity** (Gemini) at the repository, working through a
-track-based workflow where each piece of work got a written specification and plan before any
-code was touched. Over about eleven days it produced **463 commits across 25 tracks**.
+In May I pointed Google Antigravity, which runs on Gemini, at the code. It worked through a list of tracks, and for each one it wrote a plan before it wrote any code.
 
-The scale is less impressive than it sounds — roughly 300 of those commits were the
-workflow's own bookkeeping, marking tasks complete. But the substance was real, and it is
-most of what the site is today:
+It made 463 commits over about eleven days. That number sounds more impressive than it is, because roughly 300 of them were the agent ticking off its own to-do list. The real work was still substantial:
 
-- **Alpine.js removed entirely**, its mobile menu and theme switcher rewritten in plain
-  JavaScript.
-- **A test suite**, from nothing. Vitest arrived alongside a genuine test-first discipline —
-  several tracks open with a commit adding failing tests.
-- **The Rosely design system**: the warm, low-contrast palette this site still uses, applied
-  across every component, and written down in `DESIGN.md`.
-- **SEO**: dynamic meta tags, OpenGraph and Twitter cards, JSON-LD structured data, sitemap
-  and `robots.txt`.
-- **Content collections** for pages, work, education, creations and passions — the migration
-  that made everything else possible.
-- **Motion**: Astro's `ClientRouter` for SPA-like navigation, entrance animations, hover and
-  focus transitions.
-- **Pagefind** static search and **PhotoSwipe** lightbox galleries.
-- **An accessibility audit** with fixes for ARIA, landmarks, focus indicators and contrast.
-- **Three D3 visualisations** — the career timeline, the superpowers bar chart, and the
-  bubble chart, which took twenty-odd commits to get from "overlapping circles" to the
-  Brownian motion it does now.
-- **The first CV PDF generation**, which is where the project's centre of gravity started to
-  shift.
+- It removed Alpine.js completely and rewrote the menu and the dark mode switch in plain JavaScript.
+- It added tests. The project had none. It also got into the habit of writing the test first and watching it fail, which I did not ask for.
+- It designed the colour scheme this site still uses, and wrote it down so it could be applied consistently.
+- It sorted out the things search engines care about: page titles, social sharing previews, a sitemap.
+- It moved all the content into proper collections, which is what made everything afterwards possible.
+- It added site search, image galleries, and page transitions.
+- It ran an accessibility audit and fixed what it found.
+- It built the three D3 charts: the career timeline, the superpowers chart, and the floating bubbles. The bubbles took about twenty attempts to stop overlapping.
+- It generated the first version of the CV PDF.
+
+That last one is where the project quietly changed direction, although I did not notice at the time.
 
 ## July 2026: Claude Code
 
-In late July I handed the same repository to **Claude Code**, running Opus 5. Sixteen commits
-over two days, and a different character of work: less building outward, more going back over
-what was there.
+In late July I handed the same code to Claude Code, running Opus 5. About twenty commits over two days, and a very different sort of work. Less building new things, more going back over what was already there.
 
-The CV was the main event. I asked for a proper redesign — the existing PDF was essentially a
-printout of the website, complete with charts and navigation. It came back as two documents
-built from a deterministic curation engine, rendered through dedicated print-only routes by
-Puppeteer, with a one-pager that measures itself and refuses to overflow.
+The CV was the main job. The old PDF was basically a printout of the website, charts and all, which is not what anyone wants to receive as a CV. It came back as two proper documents. A one page version and a full one, both plain enough for the software that companies use to read CVs automatically.
 
-Then a full-codebase review, run as seven parallel reviewers over separate dimensions with
-every finding adversarially verified before being reported. **119 findings survived**. Some
-were embarrassing:
+The one page version is my favourite bit. It measures itself, and if it does not fit on one page it shrinks the type until it does. If it cannot shrink far enough to stay readable, it stops and complains rather than quietly giving me a two page CV.
 
-- Two UnoCSS shortcuts, `focus-ring` and `hover-accent`, that **emitted no CSS at all**.
-  UnoCSS resolves `variant-utility` before it consults the shortcut table, so `focus-ring`
-  had been parsed as the `focus:` variant applied to `ring` — for months, eleven elements had
-  no proper focus indicator and the theme menu had no hover state. No build error, ever.
-- The home page headline **clipped mid-word at 320px**, hidden by `overflow-x: hidden`.
-- A personal résumé PDF, complete with my home address, sitting in a public repository.
+Then I asked it to review the whole codebase. It ran seven reviewers at once, each looking at a different thing, and then argued with its own findings before showing me any. A hundred and nineteen survived. Some were embarrassing.
 
-The rest of the two days: an animated word cloud on the work page, weighted by how many roles
-each tag appears in; company and institution logos unified into one component; the 1991 USENIX
-paper I co-wrote [reproduced as an article](/spotlite/article/crypt-usenix91/), transcribed
-from a scan with its figures redrawn as Mermaid diagrams; Rosely themes for Mermaid and for
-syntax highlighting, in both light and dark, with the contrast enforced by a test; and a
-migration of the whole Markdown pipeline onto Astro 7's new Rust processor.
+## The things that were already broken
 
-## What I actually learned
+This is the part I did not expect.
 
-**Both agents were more useful going back than going forward.** The genuinely valuable work in
-both bursts was finding things that were already broken — a shortcut emitting nothing, a
-headline clipped at mobile width, a contrast ratio of 3.04 where 4.5 was needed. None of it
-was visible. All of it had been shipped.
+Both agents were most useful when looking backwards. Everything below had been live on the site for months, and I had no idea:
 
-**Confident and wrong is the failure mode to watch.** Claude told me twice, with reasoning,
-that Astro's new Markdown processor could not render maths at build time. It could — it
-needed a plugin at a different phase, and a rehype plugin passed to the wrong hook had been
-accepted and silently ignored, which is what produced the false conclusion. It only came out
-because I pushed back and asked whether it had actually checked. That silent-ignore behaviour
-is now [an open issue](https://github.com/bruits/satteri/issues/180) against the processor.
+- Two of my styling shortcuts produced no CSS at all. I had named one of them `focus-ring`, and it turned out UnoCSS reads that as an instruction rather than a name. So eleven buttons and links had no visible outline when you tabbed to them, and the dark mode menu had no hover effect. Nothing ever complained.
+- On a narrow phone screen, the headline on my home page was cut off in the middle of a word. There was no scrollbar, so there was nothing to hint that anything was missing.
+- The code samples in my articles used a grey that was too faint to read properly.
+- An old copy of my résumé, with my home address in it, was sitting in a public GitHub repository.
 
-**Verification is where the value is.** "Lighthouse says 100" turned out to mean "100 in light
-mode", because Lighthouse follows the machine's colour scheme and every run had landed the
-same way. Two real dark-mode contrast failures had been sitting underneath several clean
-reports. The lesson is not that the tool lied — it is that a number is only as good as the
-conditions you ran it under, and it is worth asking what those were.
+None of that was visible to me. All of it had been shipped.
 
-**Write the reasons down.** The most durable artefacts from both phases are `DESIGN.md` and
-`AGENTS.md` — the second of which is mostly a list of traps, each one describing a failure
-that actually happened and cost real time. Future agents read it before they touch anything.
+## Where AI got it wrong
 
-## The stack
+I do not want to give the impression this was magic.
 
-- [Astro](https://astro.build) 7, with the Sätteri Rust Markdown processor
-- [TypeScript](https://www.typescriptlang.org/) and [UnoCSS](https://unocss.dev/)
-- [Puppeteer](https://pptr.dev/) rendering the CV PDFs from print-only routes
-- [Vitest](https://vitest.dev/) — 27 test files, several asserting against the built output
-- [D3.js](https://d3js.org/) for the timeline, superpowers and word cloud
-- [Mermaid](https://mermaid.js.org/) for diagrams and [KaTeX](https://katex.org/) for maths,
-  both themed to Rosely and rendered at build time
-- [Pagefind](https://pagefind.app/) for search, [PhotoSwipe](https://photoswipe.com/) for
-  galleries
-- Deployed to GitHub Pages on every push to `main`
+At one point Claude told me, twice and with confident reasoning, that Astro's new Markdown engine could not display mathematical formulas. I had a 1991 paper I wanted to republish, and it is full of equations, so this mattered.
 
-It is open source under the MIT licence. If you would like your CV and your portfolio to stop
-disagreeing with each other, [help yourself](https://github.com/hellotham/spotlite).
+It was wrong. The feature works, but it needed a plugin attached at a different point in the process. The agent had attached one at the wrong point, the software had accepted it and then silently ignored it, and the resulting silence looked like proof.
+
+It only came out because I pushed back and asked whether it had actually checked. It had not. When it did, the answer changed.
+
+The silent part was a genuine bug in someone else's software, and it is now [an open issue](https://github.com/bruits/satteri/issues/180) against that project. But I would never have got there by nodding along.
+
+There was a similar moment with accessibility scores. I was told the site scored 100 out of 100 several times. That was true, but only in light mode. The testing tool follows whatever colour scheme your computer is set to, and every test had happened to run the same way. In dark mode there were two real problems hiding underneath all those perfect scores.
+
+## What I take from it
+
+Three things.
+
+The first is that AI is better at finding your old mistakes than at writing new features. The features were fine. The faint grey, the broken outline, the headline cut in half, those had been sitting there for months and no human was ever going to spot them by reading the code.
+
+The second is that confident and wrong is the thing to watch for. Not wrong and hesitant, which is easy to catch. Confident, well argued, and wrong. The only defence I found was asking, plainly, "did you actually check that?" It is remarkable how often the answer is no.
+
+The third is to write down why, not just what. The two most useful files in the project now are the design notes and a file of traps for future agents, which is really just a list of every mistake anyone made and what it cost. Both agents read it before touching anything.
+
+Spotlite is still free to use, under the MIT licence. If your CV and your website have stopped agreeing with each other, [help yourself](https://github.com/hellotham/spotlite).
