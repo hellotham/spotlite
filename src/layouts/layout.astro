@@ -5,6 +5,10 @@ import { ClientRouter } from 'astro:transitions'
 import { getCollection } from 'astro:content'
 import type { ImageMetadata } from 'astro'
 import { Font, getImage } from 'astro:assets'
+// KaTeX's stylesheet, for the maths rendered at build time by rehype-katex. Imported in
+// the shared layout rather than per-article because markdown is not component-based, so
+// there is no narrower seam to hang it on; it costs ~7 KB gzipped on every page.
+import 'katex/dist/katex.min.css'
 
 import config from '../config.json' with { type: 'json' }
 // The previous default pointed at /screenshot.png in public/, which does not exist —

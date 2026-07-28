@@ -25,6 +25,7 @@ Tone is professional but not corporate-bland. All prose is **Australian English*
 - **Image Processing:** [Sharp](https://sharp.pixelplumbing.com/)
 - **Lightbox:** [PhotoSwipe](https://photoswipe.com/) for click-to-zoom image galleries
 - **Visualisations:** [D3.js](https://d3js.org/) for interactive data-driven components and [Mermaid](https://mermaid.js.org/) via `astro-mermaid` for diagrams
+- **Maths:** `remark-math` + `rehype-katex`, rendered at build time; `@astrojs/markdown-remark` supplies the unified processor they need
 - **Search Indexing:** [Pagefind](https://pagefind.app/) for static full-site search
 - **PDF Generation:** [Puppeteer](https://pptr.dev/) driving dedicated print-only routes
 
@@ -154,6 +155,21 @@ Prefer an `AbortController` with `{ signal }` on each listener so one `abort()` 
 The site's theme is a `.dark` class, but the integration watches `html[data-theme]`. Both are set, in `layout.astro`'s pre-paint script and in `theme.astro` — keep them in step, or diagrams render light-themed on a dark background with near-black text.
 
 The integration also double-initialises on load and can overwrite a diagram's stored source with its own rendered SVG, which only fails later when a re-render is requested. `layout.astro` stamps `data-diagram` during parse to pre-empt this. Don't remove that script.
+
+### Remark and rehype plugins need `@astrojs/markdown-remark`
+
+Astro 7 ships a new default Markdown processor, and `markdown.remarkPlugins` /
+`markdown.rehypePlugins` are silently unsupported by it — the build fails outright with a
+message telling you to install `@astrojs/markdown-remark`. Installing that package swaps
+the whole site back to the unified processor, so treat it as a site-wide change and
+re-check existing pages, not just the one you added a plugin for.
+
+### Shiki's default theme fails contrast on comments
+
+Astro's default `github-dark` renders comments at #6a737d on #24292e — 3.05:1, below the
+4.5:1 that body text requires, and a code comment is prose. `shikiConfig.theme` is set to
+`github-dark-default`, which takes the same tokens to 6.15:1. This only shows up on pages
+with substantial commented code, so it can hide for a long time.
 
 ### SVG has no intrinsic size without width/height
 

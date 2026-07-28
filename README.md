@@ -16,6 +16,7 @@ It uses the following technologies:
 - [UnoCSS](https://unocss.dev/)
 - [D3.js](https://d3js.org/) for interactive data visualisations
 - [Mermaid](https://mermaid.js.org/) via `astro-mermaid` for diagrams
+- [KaTeX](https://katex.org/) via `remark-math` and `rehype-katex` for maths in Markdown
 - `@astrojs/sitemap` and `@astrojs/rss` preintegrated
 - Heroicons and SVG Logos preloaded via [Iconify](https://iconify.design/)
 - [Pagefind](https://pagefind.app/) for static full-site search
@@ -36,7 +37,7 @@ It features:
 - An Education page with a detail page per qualification.
 - A Creations page showcasing linkable artefacts.
 - A Passions page providing a list of products and tools used.
-- Support for diagrams and flowcharts via Mermaid.
+- Support for diagrams and flowcharts via Mermaid, and for LaTeX maths via KaTeX.
 - Header search with Pagefind indexing for production builds.
 - Two print-ready CV PDFs generated from the content collections — a one-page résumé
   and a full curriculum vitae.
