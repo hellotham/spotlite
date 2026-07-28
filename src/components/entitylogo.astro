@@ -1,0 +1,125 @@
+---
+import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
+
+/**
+ * Company and institution logo, shared by the work and education list and detail pages
+ * so both collections present identically.
+ *
+ * - `circular` — the square mark in a round tile, for the list pages. Same shape as the
+ *   home page's career list, scaled up: a list row is ~112px tall, so the tile fills it
+ *   rather than sitting as a small icon.
+ * - `wide` — a letterbox tile, used by the home page's education card where the marks
+ *   are wordmarks rather than square icons.
+ * - `bare` — the extended wordmark on its own, no tile or card, for the detail page
+ *   header. Same 96px height as the list tile so the two pages agree, with the width
+ *   capped so a 5:1 wordmark cannot stretch across the column.
+ *
+ * The tile takes the mark's own background colour (`background`), so a logo with a solid
+ * background reads as one seamless circle rather than a square floating on a contrasting
+ * disc. White is the default: it suits marks that are white-backed and those that are
+ * transparent, and it keeps dark artwork legible in dark mode, where a near-black tile
+ * would swallow it.
+ *
+ * A definite height is always set, with the width left to follow. Relying on the file's
+ * own dimensions does not work: an SVG declaring only a viewBox has no intrinsic size,
+ * so `h-auto w-auto` collapses it to nothing — torrens-full.svg rendered as an empty
+ * box, while hellotham-full.svg, which declares width/height, happened to survive.
+ *
+ * object-contain rather than object-cover: most marks here are square, but
+ * Broadspectrum (1.56) and ING (1.64) are wordmarks whose sides a square crop cuts off.
+ *
+ * The tile clips to the circle: some marks are full-bleed squares (Torrens is a solid
+ * orange block) whose corners otherwise poke out past the curve.
+ *
+ * With no `src`, the tiled variants draw a monogram of the entity's initials — that
+ * reads as a deliberate placeholder, where the previous grey-disc image looked like a
+ * broken one. The `bare` variant renders nothing at all instead, since a detail page
+ * already names the entity in its heading.
+ */
+interface Props {
+  /** Omit when the entity has no logo; a monogram of `alt` is drawn instead. */
+  src?: ImageMetadata
+  alt: string
+  variant?: 'circular' | 'wide' | 'bare'
+  /** Tile diameter: `sm` for the home page's compact rows, `lg` for the list pages. */
+  size?: 'sm' | 'lg'
+  background?: string
+  class?: string
+}
+
+const {
+  src,
+  alt,
+  variant = 'circular',
+  size = 'lg',
+  background,
+  class: className = ''
+} = Astro.props
+
+const tile =
+  variant === 'wide'
+    ? 'h-10 w-24 rounded-md'
+    : size === 'sm'
+      ? 'h-10 w-10 rounded-full'
+      : 'h-24 w-24 rounded-full'
+const inner =
+  variant === 'wide'
+    ? 'h-8 w-auto max-w-[5.5rem]'
+    : size === 'sm'
+      ? 'h-9 w-9'
+      : 'h-[5.5rem] w-[5.5rem]'
+
+// A per-entry colour cannot come from a utility class, so it is set inline.
+const tileBackground = background ?? '#ffffff'
+
+// Initials from the entity name: "Bain & Company" -> BC, "University of Sydney" -> US.
+// Joining words are dropped so the monogram reflects the distinctive words.
+const monogram = alt
+  .split(/[\s&]+/)
+  .filter((word) => word && !/^(and|of|the|for|de|von)$/i.test(word))
+  .slice(0, 2)
+  .map((word) => word[0].toUpperCase())
+  .join('')
+
+const monogramSize = size === 'sm' ? 'text-sm' : 'text-2xl'
+---
+
+{
+  variant === 'bare' ? (
+    /* Detail headers show the wordmark or nothing at all. A monogram badge would add
+       weight to a page whose heading already names the entity underneath it. */
+    src && (
+      <Image
+        {src}
+        {alt}
+        height={240}
+        loading='lazy'
+        class:list={[className, 'h-24 w-auto max-w-sm object-contain']}
+      />
+    )
+  ) : (
+    <div
+      style={`background-color: ${tileBackground}`}
+      class:list={[
+        className,
+        tile,
+        'flex flex-none ring-1 ring-opalGray/20 shadow-md items-center justify-center overflow-hidden relative dark:ring-opalGray/30'
+      ]}
+    >
+      {src ? (
+        /* The inner box is what sizes a logo: trimming its padding does not enlarge
+          it, because object-contain already scales to fit. The tile clips, so a
+          full-bleed square mark simply meets the circle's edge. */
+        <Image {src} {alt} height={220} loading='lazy' class:list={[inner, 'object-contain']} />
+      ) : (
+        <span
+          aria-hidden='true'
+          class:list={[monogramSize, 'text-secondary font-semibold font-serif tracking-wide']}
+        >
+          {monogram}
+        </span>
+      )}
+    </div>
+  )
+}

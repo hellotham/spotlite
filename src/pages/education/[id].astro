@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content'
 import { getCollection, render } from 'astro:content'
 import Layout from '../../layouts/layout.astro'
 import Container from '../../components/container.astro'
+import EntityLogo from '../../components/entitylogo.astro'
 import { formatDateRange } from '../../utils/timeline'
 
 export async function getStaticPaths() {
@@ -39,6 +40,12 @@ const { Content } = await render(item)
         >
         <article>
           <header class='flex flex-col'>
+            <EntityLogo
+              src={item.data.logo ?? item.data.image}
+              alt={item.data.institution}
+              variant='bare'
+              class='mb-5 self-start'
+            />
             <h1 class='text-4xl text-accent tracking-tight font-bold font-serif sm:text-5xl'>
               {item.data.degree}
             </h1>

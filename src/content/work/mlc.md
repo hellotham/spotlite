@@ -5,6 +5,7 @@ startyear: 1998
 endyear: 2004
 type: employment
 image: ./mlc.png
+description: 'Established the architecture function and its governance processes, re-establishing strategic control over a fully outsourced IT operation and leading definition of the IT strategy.'
 ---
 
 - Established the architecture function at MLC, re-establishing strategic control over technology from a fully outsourced IT operation.

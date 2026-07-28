@@ -29,7 +29,19 @@ const work = defineCollection({
       startyear: z.number(),
       endyear: z.number().optional(),
       type: z.enum(['employment', 'consulting']).default('employment'),
-      image: image(),
+      // Short summary shown on the list pages. The body's first line makes a poor
+      // teaser — entries that open with a heading or a lead-in like "Awarded:"
+      // read as fragments.
+      description: z.string().optional(),
+      // Optional: an entry with no real mark falls back to a text monogram.
+      image: image().optional(),
+      // Optional extended wordmark, used where there is room for it (the detail page
+      // header). Compact contexts — home page, list pages — keep the square `image`.
+      logo: image().optional(),
+      // Background of the logo tile, so a mark with its own solid background reads as a
+      // seamless circular logo rather than floating on a contrasting disc. Defaults to
+      // white, which suits both white-background and transparent marks.
+      logoBackground: z.string().optional(),
       // CV curation. Deterministic overrides for the generated CV; the site ignores them.
       // cvPriority raises a role in the one-pager shortlist (higher wins, default is recency).
       cvPriority: z.number().optional(),
@@ -48,7 +60,18 @@ const education = defineCollection({
       degree: z.string(),
       startyear: z.number(),
       endyear: z.number().optional(),
-      image: image(),
+      // Short summary shown on the list pages. The body's first line makes a poor
+      // teaser — entries that open with a heading or a lead-in like "Awarded:"
+      // read as fragments.
+      description: z.string().optional(),
+      // Optional: an entry with no real mark falls back to a text monogram.
+      image: image().optional(),
+      // As above: optional extended wordmark for the detail page header.
+      logo: image().optional(),
+      // Background of the logo tile, so a mark with its own solid background reads as a
+      // seamless circular logo rather than floating on a contrasting disc. Defaults to
+      // white, which suits both white-background and transparent marks.
+      logoBackground: z.string().optional(),
       omitFromCv: z.boolean().optional().default(false)
     })
 })

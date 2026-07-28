@@ -4,7 +4,9 @@ role: Head of Strategy and Architecture
 startyear: 2008
 endyear: 2008
 type: employment
-image: ./ing.jpg
+image: ./ing.svg
+logo: ./ing-full.svg
+description: 'Established the IT Strategy and Architecture function of around twenty people, defined its governance model, and delivered technology roadmaps for key business units.'
 ---
 
 - Successfully established IT Strategy and Architecture Function (team size: approximately 20).

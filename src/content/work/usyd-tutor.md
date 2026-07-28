@@ -4,7 +4,8 @@ role: Tutor
 startyear: 1987
 endyear: 1987
 type: employment
-image: ./generic.png
+image: ../education/usyd.svg
+description: 'Casual tutor in the Basser Department of Computer Science.'
 ---
 
 Casual tutor in Basser Department of Computer Science.

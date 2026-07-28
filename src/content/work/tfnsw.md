@@ -5,6 +5,7 @@ startyear: 2016
 endyear: 2019
 type: consulting
 image: ./tfnsw.jpg
+description: 'Strategic consulting spanning a multi-year enterprise application business case, mobile and web proofs of concept, a leave-request chatbot, KPI dashboards and machine learning for incident routing.'
 ---
 
 Provided strategic consulting services:

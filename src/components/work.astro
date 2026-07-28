@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import { Image } from 'astro:assets'
+import EntityLogo from './entitylogo.astro'
 import { formatDateRange } from '../utils/timeline'
 
 let work = await getCollection('work')
@@ -25,16 +25,13 @@ work = work.sort((a, b) => {
             href={`${import.meta.env.BASE_URL}work/${job.id}/`}
             class='group p-2 rounded-xl flex gap-4 transition -m-2 hover:bg-heavenlyPink/50 focus-ring dark:hover:bg-grapeade/30'
           >
-            <div class='mt-1 rounded-full flex flex-none h-10 w-10 ring-1 ring-opalGray/20 shadow-md items-center justify-center relative dark:border dark:border-border/50 dark:bg-blackBeauty dark:ring-0'>
-              <Image
-                src={job.data.image}
-                alt={job.data.company}
-                width={64}
-                height={64}
-                loading='lazy'
-                class='h-8 w-8 object-cover'
-              />
-            </div>
+            <EntityLogo
+              src={job.data.image}
+              alt={job.data.company}
+              background={job.data.logoBackground}
+              size='sm'
+              class='mt-1'
+            />
             <dl class='flex flex-auto flex-wrap gap-x-2'>
               <dt class='sr-only'>Company</dt>
               <dd class='text-sm text-primary font-medium flex-none w-full transition group-hover:text-accent'>

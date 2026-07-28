@@ -22,6 +22,21 @@
   letter-spacing: normal;
 }
 
+/*
+ * The reset above sets `font: inherit` on every descendant, which flattens semantic
+ * emphasis to normal weight — including the achievement titles, marked up as <strong>
+ * precisely so they stand out. Restore it explicitly.
+ */
+.cv strong,
+.cv b {
+  font-weight: 700;
+}
+
+.cv em,
+.cv i {
+  font-style: italic;
+}
+
 /* Only the presentational lists are unmarked. Note this must not be a blanket
    `.cv ul` rule: that out-specifies the class selectors below and silently strips
    the markers off the content lists, leaving bullets reading as paragraphs. */
