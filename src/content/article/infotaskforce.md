@@ -80,7 +80,7 @@ at the university, and the friend put it on a server, and after that it was no l
 There is a genuine disagreement in the record about when. George's account, given to Jimmy
 Maher for his history of the period, has the accidental upload on 2 June 1987 and an official
 version 1.0 following on 1 August that year. The Infocom Fact Sheet, compiled from archives
-rather than memory, has an early version surfacing on a Sydney University FTP server in March 1991. Both may be true of different copies; I would not want to adjudicate between a
+rather than memory, has an early version surfacing on a Sydney University FTP server in March 1991. Both may be true of different copies, and I would not want to adjudicate between a
 participant's memory and an archivist's records at this distance.
 
 What is not in dispute is the response. People wrote from everywhere, which astonished us,
