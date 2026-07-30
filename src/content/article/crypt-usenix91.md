@@ -7,7 +7,8 @@ pubDate: 1991-01-21
 _This is a reproduction of a paper presented at the USENIX Winter '91 Conference in
 Dallas, Texas (pp. 269–279), written with Philip Leong. I have transcribed it from a scan
 of the proceedings: the figures have been redrawn, the tables set as tables, and the code
-re-typed. The wording is unchanged._
+re-typed. The wording is unchanged. There is a
+[postscript from 2026](#postscript-thirty-five-years-on) at the end, which is not._
 
 **[Download the original scanned paper (PDF, 647 KB)](/spotlite/crypt-usenix91.pdf)**
 
@@ -937,3 +938,58 @@ char *pw, *salt;
     return encrypt(pw);
 }
 ```
+
+## Postscript, thirty-five years on
+
+_Everything above this line is the 1991 paper. Everything below it was written in 2026._
+
+Reading it back after thirty-five years, it almost seems as though another person wrote it.
+These days I do not know maths, I do not know cryptography, and I certainly do not know how to
+code. AI does all my coding for me.
+
+I started the work at Optech, a fintech startup, and finished it after moving to State Bank
+Victoria. What made any of it possible was a shift in the hardware. Unix machines had arrived
+with enough memory and enough speed that a single process could gobble megabytes without
+anyone minding, and the whole attack in this paper rests on being allowed to be that greedy.
+State Bank Victoria was an early adopter, and had a Pyramid, at the time about the fastest
+Unix machine you could buy. I had sudo on it. We were all rather naive about security in those
+days, which is somewhat the point of the paper.
+
+### The part that is not in the paper
+
+Having shown that a password file readable by anyone could be worked through in reasonable
+time, I wanted to know whether it held up outside a laboratory. So I ran it against the
+password file of the main computer at the University of Sydney, my alma mater, and recovered
+the passwords of more than twenty users.
+
+The university found out, and was, reasonably enough, concerned. I explained that it was
+research for this paper.
+
+What happened next still delights me. Rather than any of the things that would happen today,
+they gave me a TCP/IP connection to their machine. Crime, it turns out, occasionally pays. So
+I became one of the first people in Australia with an Internet connection at home, with my old
+university as my internet service provider, running NetBSD and then FreeBSD on a machine in my
+own house. I was brave enough to run FreeBSD-current, which meant that every night it pulled
+down whatever had changed and recompiled the entire operating system and its utilities while I
+slept. It was, at the time, living the dream.
+
+That connection is the quiet thread running through several other pieces here. The machine was
+`extro`, at the university's computing centre, and it is the address that
+[a program in eight languages](/spotlite/article/polyglot/) went out from in March 1991, that
+[two HP 48 applications](/spotlite/article/hp48/) went out from that November, and that the
+[InfoTaskForce](/spotlite/article/infotaskforce/) used for its bug reports. Everything I
+published in those years reached the world through a connection I was given for breaking into
+the university's password file.
+
+### What became of the paper
+
+The timing turned out to matter more than the cryptography. The paper landed as the industry
+was moving off mainframes and onto Unix, at exactly the moment a great many organisations were
+inheriting a password file that any user could read.
+
+It was cited often, and the two things it argues for both became ordinary practice across Unix
+vendors in the years that followed: strengthen the password encryption so that guessing costs
+more, and stop leaving the encrypted passwords where everyone can read them. The second of
+those is the shadow password file, which every Unix and Linux system now has as a matter of
+course. It is a strange feeling to have a small part in something that is now simply how
+things are done, and that nobody has any reason to think about.

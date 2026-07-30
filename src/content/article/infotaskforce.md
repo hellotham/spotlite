@@ -162,3 +162,8 @@ Two of the names above turn up in that story as well. Peter Lisle and George Jan
 part of the polyglot, which we posted from the same Sydney University machine, `extro`, that
 the InfoTaskForce used for its bug reports. It was a small department, and it was a very good
 few years.
+
+`extro` is worth a footnote of its own, as it happens. The university gave me an account on it
+by way of thanks for
+[breaking into their password file](/spotlite/article/crypt-usenix91/#postscript-thirty-five-years-on),
+which is not a sentence that would survive a modern security review.

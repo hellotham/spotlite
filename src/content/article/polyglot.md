@@ -37,7 +37,8 @@ more than that, in the way these things tend to, and by the time we came up for 
 seven languages working.
 
 We posted it back to the newsgroup on 18 March 1991, from a machine at Sydney University, back
-when Australian addresses still ended in `.oz.au`.
+when Australian addresses still ended in `.oz.au`. I had that connection because of an
+entirely separate escapade, which is [a story in its own right](/spotlite/article/crypt-usenix91/#postscript-thirty-five-years-on).
 
 ## How the trick works
 
