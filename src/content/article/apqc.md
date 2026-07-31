@@ -1,11 +1,11 @@
 ---
 title: "APQC's process framework, and the section I worked on"
 description: How a global business process taxonomy actually gets written, and how consulting work at Transfield Services fed back into the standard everyone else uses.
-pubDate: 2015-05-20
+pubDate: 2015-10-22
 ---
 
-_Filed under the date APQC published its case study on the work. The framework contribution
-ran either side of it._
+_Filed under the date APQC announced Version 7.0.0. The consulting work behind it ran for
+several years either side._
 
 Somewhere in most large organisations there is an argument about what things are called. One
 division calls it procurement, another calls it sourcing, a third has it buried inside
@@ -64,27 +64,44 @@ July 2012, marking the framework's twentieth anniversary, APQC credited the upda
 the company I was consulting to listed beside those two was a pleasant surprise. My own
 contribution to that release was minor.
 
-Version 7.0.0, which followed at APQC's 2015 Process Conference, is where I did real work. That
-release split the delivery of physical products from the delivery of services, which pushed
-every category after it down by one, and the last of them, previously 12.0, became **13.0
-Develop and Manage Business Capabilities**. That is the section I worked on.
+Version 7.0.0, released at APQC's Process Conference in October 2015, is where I did real
+work. Our adviser there was Jeff Varney, a director at APQC, and it was Jeff who took our
+suggestions and worked them into the release.
 
-## What Section 13.0 covers
+That version made one very visible change, which Jeff
+[wrote up at the time](https://www.apqc.org/blog/giving-services-their-proper-place-pcf). It
+split the old category 4.0, Deliver Products and Services, into two standalone categories, one
+for physical products and one for services, taking the framework from twelve process
+categories to thirteen. That particular suggestion came from IBM rather than from us, but it
+is the change that renumbered everything after it, and it is why the business capabilities
+category, previously 12.0, became 13.0.
 
-It is the part of the framework that describes how an organisation gets better at what it
-does, rather than what it does. Process management, quality management, benchmarking, change
-management, and knowledge management all live there.
+Our contribution sits inside that last category. **Section 13.2, Manage Portfolio, Program,
+and Project**, is the one I worked on.
 
-That last one is why the work fitted. Section 13.5 is about developing and managing
-enterprise-wide knowledge, and Transfield was doing exactly that at the time with its Centres
-of Excellence. Writing a definition of a process while running that process on 26,000 people
-is an unusually good way to find out whether the definition is any use.
+## Why that section
 
-There is a nice symmetry in it, too. The 6.0.0 release notes had already singled out the
+Category 13.0 describes how an organisation gets better at what it does, rather than what it
+does. Process management, portfolio and project management, quality, change management,
+benchmarking and knowledge management all live there.
+
+Section 13.2 fitted us because it was not theory. Jeff's own post makes the point that
+services are typically delivered "through projects, continuous support functions, or discrete
+instances based upon a request for service or incident", and that is precisely what Transfield
+was. A company running maintenance and operations contracts across 20 industries and 11
+countries is running a portfolio of programmes and projects, and that portfolio was the
+mechanism by which the business made its money. We were describing something we did every day.
+
+The section next door helped too. Section 13.5 covers developing and managing enterprise-wide
+knowledge, which is what the Centres of Excellence programme was for. Writing a definition of
+a process while running that process on 26,000 people is an unusually good way to find out
+whether the definition is any use.
+
+There is a nice symmetry in it, too. The 6.0.0 announcement had already singled out the
 business capabilities section for "an extensive reworking and expansion", covering process
-improvement, quality management, knowledge management and benchmarking. So the section I
-ended up working on in 7.0.0 was the one the previous release had already decided needed the
-most attention.
+improvement, quality management, knowledge management and benchmarking. So the category I
+ended up working inside in 7.0.0 was the one the previous release had already decided needed
+the most attention.
 
 ## Why any of this matters
 
