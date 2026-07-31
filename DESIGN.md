@@ -294,6 +294,17 @@ Rosely is committed to being an inclusive design system that meets **WCAG 2.2 Le
 - **Non-text contrast (3:1) applies to controls too.** An outline button's border is its only
   boundary, so `btn-secondary` uses Granite Gray / Opal Gray rather than the softer decorative
   `border-primary` token.
+- **A tinted container is its own background, and one accent cannot serve text and decoration.**
+  The callouts in `src/styles/alert.css` wash the page with `color-mix(… accent 8%, transparent)`,
+  so a title painted in that same accent is read against a background made from itself — which
+  costs contrast rather than granting it. All six kinds measured between 2.4:1 and 3.8:1 in light
+  mode while the tint, the 3px rule and the title shared one value, despite the three owing
+  nothing, 3:1 and 4.5:1 respectively. `--alert-accent` now keeps the decoration and
+  `--alert-title` carries the text.
+- **Audit the variants nothing uses yet.** Only two of the six callout kinds appear in any
+  article, so measuring the rendered pages found only their failures. Injecting the other four
+  into a built page turned up a seventh: IMPORTANT at 4.33:1 in **dark** mode, the one scheme the
+  used kinds all passed in.
 - **Information without Color:** Never use color as the sole indicator of meaning or status (e.g., provide text labels or icons alongside color states for success and error messages).
 
 ### Responsive Behaviour

@@ -2,15 +2,30 @@
  * GitHub-flavoured alerts, emitted by src/utils/alert-mdast.ts as
  * `<div class="alert alert-note">` with a `<p class="alert-title">` in front.
  *
- * Colour comes from a single `--alert-accent` per kind, so each rule sets one custom
- * property rather than repeating the border, the tint and the title colour. The tint is
- * `color-mix` against the page background, which keeps it readable in both themes
- * without a second palette: in dark mode the same accent lands as a dark wash rather
- * than the pale one it makes on white.
+ * Each kind sets two custom properties rather than repeating the border, the tint and
+ * the title colour. `--alert-accent` paints the rule and the tint; `--alert-title`
+ * paints the title, at the same hue and chroma but a lower lightness.
+ *
+ * They are separate because they answer to different rules. The tint is decoration and
+ * owes nothing, but the title is 14.4px at weight 600 — under both thresholds for WCAG
+ * "large text" — so it owes 4.5:1. One accent cannot do both: a colour light enough to
+ * make a pleasant 8% wash is too light to read at that size, and every kind measured
+ * between 2.43:1 and 3.84:1 on the light page while they shared a value. Darkening the
+ * accent itself would have paid for that by muddying the tint on every alert.
+ *
+ * The tint is `color-mix` against the page background, which keeps it readable in both
+ * themes without a second palette: in dark mode the same accent lands as a dark wash
+ * rather than the pale one it makes on white. That also means the title is never read
+ * against the page — it sits on a tint made from its own accent, which drags the
+ * background toward the text and costs contrast rather than granting it.
+ *
+ * A kind that overrides `--alert-accent` has to set `--alert-title` with it, or it keeps
+ * whichever title colour it inherited and drifts out of its own hue.
  */
 
 .prose .alert {
   --alert-accent: var(--color-rosely-500, oklch(0.62 0.16 348));
+  --alert-title: oklch(0.52 0.16 348);
   margin: 1.75em 0;
   padding: 0.9em 1.2em;
   border-inline-start: 3px solid var(--alert-accent);
@@ -21,7 +36,7 @@
 
 .prose .alert-title {
   margin: 0 0 0.4em;
-  color: var(--alert-accent);
+  color: var(--alert-title, var(--alert-accent));
   font-weight: 600;
   font-size: 0.9em;
   letter-spacing: 0.02em;
@@ -39,21 +54,44 @@
 
 .prose .alert-tip {
   --alert-accent: oklch(0.6 0.14 160);
+  --alert-title: oklch(0.47 0.14 160);
 }
 .prose .alert-important {
   --alert-accent: oklch(0.58 0.17 300);
+  --alert-title: oklch(0.51 0.17 300);
 }
 .prose .alert-warning {
   --alert-accent: oklch(0.65 0.15 70);
+  --alert-title: oklch(0.5 0.15 70);
 }
 .prose .alert-caution {
   --alert-accent: oklch(0.6 0.19 25);
+  --alert-title: oklch(0.52 0.19 25);
 }
 
 /* Syntax forms are reference material rather than a warning, so they take the body
-   text colour and lean on the rule and the tint alone to set themselves apart. */
+   text colour and lean on the rule and the tint alone to set themselves apart. Its
+   title keeps the note title's lightness at a lower chroma, so it stays the quieter of
+   the two pinks it was before rather than becoming the darker one. */
 .prose .alert-syntax {
   --alert-accent: var(--color-rosely-400, oklch(0.7 0.12 348));
+  --alert-title: oklch(0.52 0.12 348);
+}
+
+/*
+ * Dark mode reverses the problem. On the near-black page the accents are already the
+ * light colour on the dark background, so the title goes back to the accent and the
+ * darkened light-mode values would make it worse, not better.
+ *
+ * IMPORTANT is the exception: its accent is the darkest of the six and measured 4.33:1
+ * here, so it needs lifting rather than merely restoring. That failure predates the
+ * light-mode one and was invisible for the same reason — no article uses the kind yet.
+ */
+.dark .prose .alert {
+  --alert-title: var(--alert-accent);
+}
+.dark .prose .alert-important {
+  --alert-title: oklch(0.66 0.17 300);
 }
 
 .prose .alert-syntax p:not(.alert-title) {
