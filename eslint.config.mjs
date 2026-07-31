@@ -78,6 +78,15 @@ export default defineConfig([
       // Content collections put YAML frontmatter in every file. Without this it is
       // parsed as markdown body, which produces false positives.
       frontmatter: 'yaml'
+    },
+    rules: {
+      // A GFM alert opens `> [!NOTE]`, which reads as a reference link to a label
+      // nothing defines. Allow the five markers rather than dropping the rule, which
+      // still wants to catch genuinely broken `[text][ref]` links.
+      'markdown/no-missing-label-refs': [
+        'error',
+        { allowLabels: ['!NOTE', '!TIP', '!IMPORTANT', '!WARNING', '!CAUTION'] }
+      ]
     }
   },
 

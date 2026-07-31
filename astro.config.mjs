@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap'
 import mermaid from 'astro-mermaid'
 import { satteri } from '@astrojs/markdown-satteri'
 import { katexPlugin } from './src/utils/katex-mdast.ts'
+import { alertPlugin } from './src/utils/alert-mdast.ts'
 import { roselyLight, roselyDark } from './src/styles/shiki-rosely.ts'
 
 // https://astro.build/config
@@ -36,7 +37,7 @@ export default defineConfig({
     // where they still exist as maths — see src/utils/katex-mdast.ts.
     processor: satteri({
       features: { math: true },
-      mdastPlugins: [katexPlugin()]
+      mdastPlugins: [katexPlugin(), alertPlugin()]
     }),
     // Rosely syntax highlighting, one palette per colour scheme. `defaultColor: 'light'`
     // inlines the light theme and emits the dark one as --shiki-dark custom properties,

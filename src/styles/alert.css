@@ -1,0 +1,51 @@
+/*
+ * GitHub-flavoured alerts, emitted by src/utils/alert-mdast.ts as
+ * `<div class="alert alert-note">` with a `<p class="alert-title">` in front.
+ *
+ * Colour comes from a single `--alert-accent` per kind, so each rule sets one custom
+ * property rather than repeating the border, the tint and the title colour. The tint is
+ * `color-mix` against the page background, which keeps it readable in both themes
+ * without a second palette: in dark mode the same accent lands as a dark wash rather
+ * than the pale one it makes on white.
+ */
+
+.prose .alert {
+  --alert-accent: var(--color-rosely-500, oklch(0.62 0.16 348));
+  margin: 1.75em 0;
+  padding: 0.9em 1.2em;
+  border-inline-start: 3px solid var(--alert-accent);
+  border-radius: 0.25rem;
+  background: color-mix(in oklch, var(--alert-accent) 8%, transparent);
+  font-style: normal;
+}
+
+.prose .alert-title {
+  margin: 0 0 0.4em;
+  color: var(--alert-accent);
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+}
+
+.prose .alert > :last-child {
+  margin-bottom: 0;
+}
+
+/* Quotation marks belong to a blockquote, not a callout. */
+.prose .alert p::before,
+.prose .alert p::after {
+  content: none;
+}
+
+.prose .alert-tip {
+  --alert-accent: oklch(0.6 0.14 160);
+}
+.prose .alert-important {
+  --alert-accent: oklch(0.58 0.17 300);
+}
+.prose .alert-warning {
+  --alert-accent: oklch(0.65 0.15 70);
+}
+.prose .alert-caution {
+  --alert-accent: oklch(0.6 0.19 25);
+}

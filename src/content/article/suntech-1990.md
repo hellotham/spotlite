@@ -7,13 +7,12 @@ pubDate: 1990-01-01
 _This is a reproduction of an article from SunTech Journal, Volume 3, Number 1, Winter 1990,
 pages 46 to 52, published by Sun Microsystems, Inc. It was written with Tim Posney while I was
 at [Optech International](/spotlite/work/optech/). I have transcribed it from a scan of the
-issue: the wording is unchanged apart from two typesetting slips in the original, and the
-illustration is by Paul Wolf._
+issue: the wording is unchanged apart from two typesetting slips in the original, the figures
+are the printed ones, and the illustration is by Paul Wolf._
 
-_The figures are ours rather than the magazine's. SunTech's artist redrew all five for the
-page, and these are the drawings he worked from, converted from the original PostScript, so
-Figure 2 appears in the landscape form we drew it in rather than turned upright to fit a
-column._
+_This is what SunTech's readers saw. The longer version we submitted, with two sections the
+magazine dropped and the figures as we drew them, is
+[here](/spotlite/article/optech-1990/)._
 
 **[Download the original scanned article (PDF, 4.3 MB)](/spotlite/suntech-1990.pdf)**
 
@@ -51,7 +50,7 @@ US\$80,000 minus the option premium. If, however, the exchange rate is 0.85, the
 abandon the option and make a profit of US\$5000 minus the option premium. The expected payoff
 is given in the graph below.
 
-![Payoff diagram plotting profit from exchange-rate movement against the USD/AUD rate. The unhedged payoff falls away in a straight line through 0.80, while the payoff after purchasing the option follows it down and then flattens out below 0.80, one option premium lower. A key below names the two lines](../../assets/suntech-figure-1.svg)
+![Payoff diagram plotting profit from exchange-rate movement against the USD/AUD rate. The unhedged payoff falls away in a straight line through 0.80, while the payoff after purchasing the option follows it down and then flattens out below 0.80, one option premium lower](../../assets/suntech-figure-1.jpeg)
 
 _Figure 1. Example payoff diagram._
 
@@ -188,7 +187,7 @@ Interapplication communication is performed by the TCP/IP socket mechanism via t
 system for point-to-point communication and through the Sybase SQL DataServer or remote
 procedure calls for broadcast communication.
 
-![Figure 2, Pricing and Trading in the Front Office: a horizontal row of stages running Dates, Clients, Portfolios, Live Market Data, Pricing, Trading, Hedging, Rebalancing, Risk Measures, Sensitivity Analysis and Graphs, each with its database or calculator hanging below it. Reuters feeds Live Market Data, the Back Office hangs off the database of trades, and a workstation and clipboard sit above Trading](../../assets/suntech-figure-2.svg)
+![Figure 2: a flow diagram of the front office. A central column runs from Dates, Clients, Portfolios, Live Market Data and Pricing up through Trading to Hedging, Rebalancing, Risk Measures, Sensitivity Analysis and Graphs. Each stage is served by a database or calculator alongside it, with Reuters feeding market data in, the Back Office reading the database of trades, and the trader's workstation and Clipboard attached to Trading](../../assets/suntech-figure-2.jpeg)
 
 The following applications have been developed for the Optech system:
 
@@ -231,11 +230,17 @@ The following applications have been developed for the Optech system:
 - Back-Office Support. The Back Office application has a character-oriented interface to
   back-office staff, allowing the performance of day-to-day system operations.
 
-![Figure 3, examples of pricing and trading screens for different instruments. 3(a), the foreign-exchange option trading system: a title bar reading User:fred, Pricing & Trading, Wed 04-Sep-89, an icon rail down the left for Initialise, AutoCalc, Recalc, Add and Delete Instrument, ReBalance, Live, Trade, Risk, Clipboard, Graph and Quit, and panels for pricing models, the trade package, dates, exercise type, volatility, market data, option details, price and a scrolling instrument package](../../assets/suntech-figure-3a.svg)
+![Screenshot of the foreign-exchange options-trading screen: a column of icon buttons down the left for Initialise, AutoCalc, Recalc, Add and Delete Instrument, Rebalance, Live, Trade, Risk, Clipboard, Graph and Quit, beside panels for pricing models, the trade package, option dates and exercise type, market data, option details and price, and a scrolling instrument package at the foot](../../assets/suntech-figure-3a.jpeg)
 
-![3(b), the caps, floors and collars trading system: panels for the trade type and premium, the package, zero premium calculation, prices, settlement, expiry dates and spread on volatilities, a scrolling instruments table, and advance, arrear and amortized premiums along the foot](../../assets/suntech-figure-3b.svg)
+_Figure 3a. Foreign-exchange options-trading system._
 
-![3(c), the OTC bond option trading system: a title bar reading User:fred, OTC Bond Options, Wed 06-Dec-89, and panels for bond details, option details, the package, volatility, a calculations row showing strike, premium, volatility, delta, rho, gamma, theta and vega, and rates at the foot](../../assets/suntech-figure-3c.svg)
+![Screenshot of the caps, floors and collars trading screen: buttons for Cap, Floor and Collar and for zero or non-zero premium, panels for zero premium calculation, prices, settlement, expiry dates and spread on volatilities, an empty scrolling instruments table, and advance, arrear and amortized premiums along the bottom](../../assets/suntech-figure-3b.jpeg)
+
+_Figure 3b. Caps, floors, and collars trading system._
+
+![Screenshot of the over-the-counter bond-option trading screen: panels for bond details, option details with put and call positions and settlement dates, the package and volatility, a calculations row showing strike, premium, volatility, delta, rho, gamma, theta and vega, and total bond price and short term rates at the foot](../../assets/suntech-figure-3c.jpeg)
+
+_Figure 3c. OTC bond-option trading system._
 
 ## The Optech Libraries and Modules
 
