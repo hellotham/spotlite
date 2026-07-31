@@ -1328,9 +1328,9 @@ The following are a brief summary of control flow statements available in _Rubat
 ##### 4.11.2.1 if-then-else
 
 > [!SYNTAX]
-> **if**_expression_**then**_statement1_
+> `if` <em>expression</em> `then` <em>statement1</em>
 >
-> **if**_expression_**then**_statement1_**else**_statement2_
+> `if` <em>expression</em> `then` <em>statement1</em> `else` <em>statement2</em>
 
 The _expression_ is evaluated. If the result is true (nonzero value) _statement1_ is executed. If the result is false (zero value) control flow will pass on to the next entity or statement in sequence or, if the **else** keyword is present, _statement2_ is executed.
 
@@ -1339,7 +1339,7 @@ The _expression_ is evaluated. If the result is true (nonzero value) _statement1
 ##### 4.11.2.2 while-do
 
 > [!SYNTAX]
-> **while**_expression_**do**_statement_
+> `while` <em>expression</em> `do` <em>statement</em>
 
 The _expression_ is evaluated. If the result is true, then _statement_ is executed. The _expression_ is then reevaluated. _Statement_ will be rexecuted until the _expression_ evaluates to false (0), at which point control will be passed onto the next statement after the **while-do** statement.
 
@@ -1348,7 +1348,7 @@ The _expression_ is evaluated. If the result is true, then _statement_ is execut
 ##### 4.11.2.3 do-while
 
 > [!SYNTAX]
-> **do**_statement_**while**_expression_
+> `do` <em>statement</em> `while` <em>expression</em>
 
 The _statement_ is executed. The _expression_ is then evaluated. If the result is true, the _statement_ is reexecuted. This continues until the _expression_ evaluates to false. Control then passes to the next statement.
 
@@ -1357,7 +1357,7 @@ The _statement_ is executed. The _expression_ is then evaluated. If the result i
 ##### 4.11.2.4 repeat
 
 > [!SYNTAX]
-> **repeat**_expression_**do**_statement_
+> `repeat` <em>expression</em> `do` <em>statement</em>
 
 The _statement_ is repeated _expression_ number of times.
 
@@ -1399,9 +1399,9 @@ The invocation of the procedure is called a _procedure call_, and the values and
 Parameters may be values, variables, notes, chords phrases or even other procedure names. A procedure binding (also called 'declaration') binds its parameters to local names and act as if the entities passed to the procedure has been bound locally within the procedure. If a parameter binding is subsequently changed within a procedure, this change is invisible to the outer block that invoked the procedure.
 
 > [!SYNTAX]
-> **procedure**_name_**(**_parameters_**)**<em>procedure_body</em>
+> `procedure` <em>name</em>(<em>parameters</em>) <em>procedure_body</em>
 >
-> **procedure**_name_**()**<em>procedure_body</em>
+> `procedure` <em>name</em>() <em>procedure_body</em>
 
 The _name_ of a procedure is the string by which the procedure is bound to. The _parameters_ are simply variables, notes, chords or phrases declarations[^11] separated by the ',' character. The <em>procedure_body</em> is a block (either a phrase or a chord) that will be executed by the procedure when invoked.
 
