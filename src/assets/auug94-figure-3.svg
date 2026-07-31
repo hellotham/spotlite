@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2451 -2019 5142 3710" role="img" aria-label="">
+<defs><clipPath id="w"><rect x="-3120" y="-2160" width="6240" height="4320"/></clipPath></defs>
+<g clip-path="url(#w)">
+<rect x="-2312" y="-1880" width="1113" height="489" style="fill:#919191;stroke:none"/>
+<rect x="-2352" y="-1920" width="1113" height="489" style="fill:#cecece;stroke:none"/>
+<text x="-2188" y="-1723" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold">Presentation</text>
+<text x="-1972" y="-1550" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold">Logic</text>
+<path d="M-1036,-1784 L-1036,-1710 L-1208,-1710 L-1208,-1562 L-1036,-1562 L-1036,-1488 L-864,-1636 Z" style="fill:#919191;stroke:none"/>
+<path d="M-1076,-1824 L-1076,-1750 L-1248,-1750 L-1248,-1602 L-1076,-1602 L-1076,-1528 L-904,-1676 Z" style="fill:#cecece;stroke:none"/>
+<path d="M-824,-1636 L-652,-1488 L-652,-1562 L-480,-1562 L-480,-1710 L-652,-1710 L-652,-1784 Z" style="fill:#919191;stroke:none"/>
+<path d="M-864,-1676 L-692,-1528 L-692,-1602 L-520,-1602 L-520,-1750 L-692,-1750 L-692,-1824 Z" style="fill:#00ae00;stroke:none"/>
+<rect x="-488" y="-1880" width="1113" height="489" style="fill:#919191;stroke:none"/>
+<rect x="-528" y="-1920" width="1113" height="489" style="fill:#00ae00;stroke:none"/>
+<text x="-240" y="-1723" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold">Business</text>
+<text x="-148" y="-1550" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold">Logic</text>
+<path d="M788,-1784 L788,-1710 L616,-1710 L616,-1562 L788,-1562 L788,-1488 L960,-1636 Z" style="fill:#919191;stroke:none"/>
+<path d="M748,-1824 L748,-1750 L576,-1750 L576,-1602 L748,-1602 L748,-1528 L920,-1676 Z" style="fill:#00ae00;stroke:none"/>
+<path d="M1000,-1636 L1172,-1488 L1172,-1562 L1344,-1562 L1344,-1710 L1172,-1710 L1172,-1784 Z" style="fill:#919191;stroke:none"/>
+<path d="M960,-1676 L1132,-1528 L1132,-1602 L1304,-1602 L1304,-1750 L1132,-1750 L1132,-1824 Z" style="fill:#618ffd;stroke:none"/>
+<rect x="1336" y="-1880" width="1113" height="489" style="fill:#919191;stroke:none"/>
+<rect x="1296" y="-1920" width="1113" height="489" style="fill:#618ffd;stroke:none"/>
+<text x="1494" y="-1723" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold">Data Mgmt</text>
+<text x="1676" y="-1550" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold">Logic</text>
+<path d="M-1853,-1255 L-1754,-1392 L-1645,-1255 L-1701,-1255 L-1701,-1130 L-1694,-1109 L-1680,-1093 L-1661,-1085 L-1633,-1082 L-1603,-1082 L-1603,-984 L-1650,-985 L-1671,-988 L-1694,-992 L-1710,-998 L-1727,-1006 L-1741,-1016 L-1758,-1030 L-1771,-1047 L-1781,-1064 L-1791,-1084 L-1797,-1108 L-1798,-1130 L-1798,-1255 Z" style="fill:#800080;stroke:#000000;stroke-width:8.00"/>
+<path d="M-989,-1255 L-890,-1392 L-781,-1255 L-837,-1255 L-837,-1130 L-830,-1109 L-816,-1093 L-797,-1085 L-769,-1082 L-739,-1082 L-739,-984 L-786,-985 L-807,-988 L-830,-992 L-846,-998 L-863,-1006 L-877,-1016 L-894,-1030 L-907,-1047 L-917,-1064 L-927,-1084 L-933,-1108 L-934,-1130 L-934,-1255 Z" style="fill:#800080;stroke:#000000;stroke-width:8.00"/>
+<path d="M-77,-1255 L22,-1392 L131,-1255 L75,-1255 L75,-1130 L82,-1109 L96,-1093 L115,-1085 L143,-1082 L173,-1082 L173,-984 L126,-985 L105,-988 L82,-992 L66,-998 L49,-1006 L35,-1016 L18,-1030 L5,-1047 L-5,-1064 L-15,-1084 L-21,-1108 L-22,-1130 L-22,-1255 Z" style="fill:#800080;stroke:#000000;stroke-width:8.00"/>
+<path d="M883,-1255 L982,-1392 L1091,-1255 L1035,-1255 L1035,-1130 L1042,-1109 L1056,-1093 L1075,-1085 L1103,-1082 L1133,-1082 L1133,-984 L1086,-985 L1065,-988 L1042,-992 L1026,-998 L1009,-1006 L995,-1016 L978,-1030 L965,-1047 L955,-1064 L945,-1084 L939,-1108 L938,-1130 L938,-1255 Z" style="fill:#800080;stroke:#000000;stroke-width:8.00"/>
+<path d="M1795,-1255 L1894,-1392 L2003,-1255 L1947,-1255 L1947,-1130 L1954,-1109 L1968,-1093 L1987,-1085 L2015,-1082 L2045,-1082 L2045,-984 L1998,-985 L1977,-988 L1954,-992 L1938,-998 L1921,-1006 L1907,-1016 L1890,-1030 L1877,-1047 L1867,-1064 L1857,-1084 L1851,-1108 L1850,-1130 L1850,-1255 Z" style="fill:#800080;stroke:#000000;stroke-width:8.00"/>
+<text x="-1520" y="-960" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:192px;fill:#000000;font-weight:bold">DP</text>
+<text x="-656" y="-960" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:192px;fill:#000000;font-weight:bold">RP</text>
+<text x="241" y="-960" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:192px;fill:#000000;font-weight:bold">DTP</text>
+<text x="1211" y="-960" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:192px;fill:#000000;font-weight:bold">RDM</text>
+<text x="2075" y="-960" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:192px;fill:#000000;font-weight:bold">DDM</text>
+<rect x="-2352" y="-912" width="632" height="200" style="fill:#ffffff;stroke:#000000;stroke-width:8.00"/>
+<text x="-2228" y="-772" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#919191;font-weight:bold">Client</text>
+<rect x="-1728" y="-720" width="4136" height="200" style="fill:#919191;stroke:#000000;stroke-width:8.00"/>
+<text x="132" y="-580" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#ffffff;font-weight:bold">Server</text>
+<rect x="-2352" y="-384" width="1496" height="200" style="fill:#ffffff;stroke:#000000;stroke-width:8.00"/>
+<text x="-1796" y="-244" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#919191;font-weight:bold">Client</text>
+<rect x="-864" y="-192" width="3272" height="200" style="fill:#919191;stroke:#000000;stroke-width:8.00"/>
+<text x="564" y="-52" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#ffffff;font-weight:bold">Server</text>
+<rect x="-2352" y="144" width="2408" height="200" style="fill:#ffffff;stroke:#000000;stroke-width:8.00"/>
+<text x="-1340" y="284" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#919191;font-weight:bold">Client</text>
+<rect x="48" y="336" width="2360" height="200" style="fill:#919191;stroke:#000000;stroke-width:8.00"/>
+<text x="1020" y="476" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#ffffff;font-weight:bold">Server</text>
+<rect x="-2352" y="672" width="3320" height="200" style="fill:#ffffff;stroke:#000000;stroke-width:8.00"/>
+<text x="-884" y="812" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#919191;font-weight:bold">Client</text>
+<rect x="960" y="864" width="1448" height="200" style="fill:#919191;stroke:#000000;stroke-width:8.00"/>
+<text x="1476" y="1004" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#ffffff;font-weight:bold">Server</text>
+<rect x="-2352" y="1200" width="4232" height="200" style="fill:#ffffff;stroke:#000000;stroke-width:8.00"/>
+<text x="-428" y="1340" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#919191;font-weight:bold">Client</text>
+<rect x="1872" y="1392" width="536" height="200" style="fill:#919191;stroke:#000000;stroke-width:8.00"/>
+<text x="1932" y="1532" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#ffffff;font-weight:bold">Server</text>
+<text x="-1632" y="-768" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold;font-style:italic">Distributed Presentation</text>
+<text x="-768" y="-240" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold;font-style:italic">Remote Presentation</text>
+<text x="144" y="288" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold;font-style:italic">Distributed Transaction Processing</text>
+<text x="-20" y="1536" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold;font-style:italic">Distributed Data Management</text>
+<text x="-716" y="1008" text-anchor="start" style="font-family:&quot;Times New Roman&quot;,Helvetica,sans-serif;font-size:144px;fill:#000000;font-weight:bold;font-style:italic">Remote Data Management</text>
+</g>
+</svg>
