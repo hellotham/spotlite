@@ -77,12 +77,17 @@ continues past this point.
 The first version reached the wider world without our doing it. George gave a copy to a friend
 at the university, and the friend put it on a server, and after that it was no longer ours.
 
-There is a genuine disagreement in the record about when. George's account, given to Jimmy
-Maher for his history of the period, has the accidental upload on 2 June 1987 and an official
-version 1.0 following on 1 August that year. The Infocom Fact Sheet, compiled from archives
-rather than memory, has an early version surfacing in March 1991, on a Sydney University FTP
-server. Both may be true of different copies, and I would not want to adjudicate between a
-participant's memory and an archivist's records at this distance.
+The published record is a little muddled about when. George's account, given to Jimmy Maher
+for his history of the period, has the accidental upload on 2 June 1987 and an official version
+1.0 following on 1 August that year. The Infocom Fact Sheet instead has an early version
+surfacing on a Sydney University FTP server in March 1991, and that date has been repeated
+since as though it were the release.
+
+George is right, and it is worth saying so plainly. The code went out in the late 1980s, well
+before the Internet was something an ordinary person simply had. What happened in 1991 was
+that a copy turned up on an archive server, years after the fact, which is the point at which
+it became visible to anyone who went looking for it. The archivists were recording when they
+first saw the thing, not when it left our hands.
 
 What is not in dispute is the response. People wrote from everywhere, which astonished us,
 because we had built it for ourselves. We kept adding to it in fits and starts as we finished
@@ -152,11 +157,13 @@ things are worth keeping runnable.
 ## A footnote about who wrote what
 
 I should be precise about my own part, because it is easy to let a story like this drift.
-David Beazley wrote the interpreter. The rest of us worked out what the Z-Machine actually
-did so that he could write it, which is why, when I say elsewhere that a
+David Beazley wrote the interpreter. The rest of us worked out what the Z-Machine actually did
+so that he could write it, and my own contribution to the software beyond that was porting it
+to MS-DOS, which is how the `itf-exe` package in the archive came about.
+
+So strictly speaking the source was not mine, which is why, when I say elsewhere that a
 [program in eight languages](/spotlite/article/polyglot/) was probably the first code I ever
-published, I still think that is right. The InfoTaskForce published a great deal earlier, and
-the code in it was not mine.
+published, I still think that is about right.
 
 Two of the names above turn up in that story as well. Peter Lisle and George Janczuk were both
 part of the polyglot, which we posted from the same Sydney University machine, `extro`, that

@@ -973,7 +973,12 @@ own house. I was brave enough to run FreeBSD-current, which meant that every nig
 down whatever had changed and recompiled the entire operating system and its utilities while I
 slept. It was, at the time, living the dream.
 
-That connection is the quiet thread running through several other pieces here. The machine was
+It was not the first time those university contacts had been useful. A few years earlier, while
+I was at Bain & Company, I had used the same connections to get the firm itself online, which
+made it one of the earliest organisations in Australia outside a university to be on the
+Internet at all.
+
+The connection is the quiet thread running through several other pieces here. The machine was
 `extro`, at the university's computing centre, and it is the address that
 [a program in eight languages](/spotlite/article/polyglot/) went out from in March 1991, that
 [two HP 48 applications](/spotlite/article/hp48/) went out from that November, and that the
