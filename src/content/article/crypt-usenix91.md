@@ -979,12 +979,14 @@ made it one of the earliest organisations in Australia outside a university to b
 Internet at all.
 
 The connection is the quiet thread running through several other pieces here. The machine was
-`extro`, at the university's computing centre, and it is the address that
-[a program in eight languages](/spotlite/article/polyglot/) went out from in March 1991, that
-[two HP 48 applications](/spotlite/article/hp48/) went out from that November, and that the
-[InfoTaskForce](/spotlite/article/infotaskforce/) used for its bug reports. Everything I
-published in those years reached the world through a connection I was given for breaking into
-the university's password file.
+`extro`, the one the university used to reach the world outside itself, which is where the
+name comes from, and my account on it was the credential the point-to-point link ran on. It is
+the address [two HP 48 applications](/spotlite/article/hp48/) went out from in November 1991,
+and the address the [InfoTaskForce](/spotlite/article/infotaskforce/) published for its bug
+reports. [A program in eight languages](/spotlite/article/polyglot/) had gone out earlier that
+year from `metro`, a sister machine at the same computing centre. Everything I put out in
+those years reached the world through a connection I was given for breaking into the
+university's password file.
 
 ### What became of the paper
 
