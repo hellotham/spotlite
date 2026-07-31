@@ -6,8 +6,8 @@ pubDate: 1987-11-01
 
 ![The University of Sydney crest: a lion passant above an open book on a white cross, flanked by stars of the Southern Cross, over a scroll reading Sidere Mens Eadem Mutato](../../assets/usyd-crest.svg)
 
-_Chris Tham, Computer Science Honours, 1987. Basser Department of Computer Science, University
-of Sydney._
+_Chris Tham, Computer Science Honours, 1987. Basser Department of Computer Science, Madsen
+Building F09, University of Sydney, NSW 2006, Australia._
 
 _This is my honours thesis, for which I was awarded the University Medal. It was written in
 troff, and in January 1998 I converted it to HTML with a perl script of my own called `m2h`;
@@ -17,8 +17,8 @@ closed as the other. Its own numbering was off by one throughout, the footnotes 
 being listed from two while cited from one, so both are renumbered against the text. The words
 are otherwise as submitted._
 
-> (Italian = robbed)
->
+## Rubato (Italian = robbed)
+
 > Over the centuries the cry of _Ancora rubato_ (robbed again) has echoed through the corridors
 > of opera-houses as the orchestral musicians opened their pay-packets. In time, the word became
 > so associated with the sight of players hanging about the stage door waiting to argue with the
@@ -1328,9 +1328,9 @@ The following are a brief summary of control flow statements available in _Rubat
 ##### 4.11.2.1 if-then-else
 
 > [!SYNTAX]
-> `if` <em>expression</em> `then` <em>statement1</em>
+> **if**_expression_**then**_statement1_
 >
-> `if` <em>expression</em> `then` <em>statement1</em> `else` <em>statement2</em>
+> **if**_expression_**then**_statement1_**else**_statement2_
 
 The _expression_ is evaluated. If the result is true (nonzero value) _statement1_ is executed. If the result is false (zero value) control flow will pass on to the next entity or statement in sequence or, if the **else** keyword is present, _statement2_ is executed.
 
@@ -1339,7 +1339,7 @@ The _expression_ is evaluated. If the result is true (nonzero value) _statement1
 ##### 4.11.2.2 while-do
 
 > [!SYNTAX]
-> `while` <em>expression</em> `do` <em>statement</em>
+> **while**_expression_**do**_statement_
 
 The _expression_ is evaluated. If the result is true, then _statement_ is executed. The _expression_ is then reevaluated. _Statement_ will be rexecuted until the _expression_ evaluates to false (0), at which point control will be passed onto the next statement after the **while-do** statement.
 
@@ -1348,7 +1348,7 @@ The _expression_ is evaluated. If the result is true, then _statement_ is execut
 ##### 4.11.2.3 do-while
 
 > [!SYNTAX]
-> `do` <em>statement</em> `while` <em>expression</em>
+> **do**_statement_**while**_expression_
 
 The _statement_ is executed. The _expression_ is then evaluated. If the result is true, the _statement_ is reexecuted. This continues until the _expression_ evaluates to false. Control then passes to the next statement.
 
@@ -1357,7 +1357,7 @@ The _statement_ is executed. The _expression_ is then evaluated. If the result i
 ##### 4.11.2.4 repeat
 
 > [!SYNTAX]
-> `repeat` <em>expression</em> `do` <em>statement</em>
+> **repeat**_expression_**do**_statement_
 
 The _statement_ is repeated _expression_ number of times.
 
@@ -1399,9 +1399,9 @@ The invocation of the procedure is called a _procedure call_, and the values and
 Parameters may be values, variables, notes, chords phrases or even other procedure names. A procedure binding (also called 'declaration') binds its parameters to local names and act as if the entities passed to the procedure has been bound locally within the procedure. If a parameter binding is subsequently changed within a procedure, this change is invisible to the outer block that invoked the procedure.
 
 > [!SYNTAX]
-> `procedure` <em>name</em>(<em>parameters</em>) <em>procedure_body</em>
+> **procedure**_name_**(**_parameters_**)**<em>procedure_body</em>
 >
-> `procedure` <em>name</em>() <em>procedure_body</em>
+> **procedure**_name_**()**<em>procedure_body</em>
 
 The _name_ of a procedure is the string by which the procedure is bound to. The _parameters_ are simply variables, notes, chords or phrases declarations[^11] separated by the ',' character. The <em>procedure_body</em> is a block (either a phrase or a chord) that will be executed by the procedure when invoked.
 
@@ -1825,9 +1825,9 @@ The following types of statements are currently valid within a phrase or chord b
 #### 5.5.1 if-then-else
 
 > [!SYNTAX]
-> `if` <em>expression</em> `then` <em>statement1</em>
+> `if` _expression_ `then` _statement1_
 >
-> `if` <em>expression</em> `then` <em>statement1</em> `else` <em>statement2</em>
+> `if` _expression_ `then` _statement1_ `else` _statement2_
 
 Evaluate _expression_. If result is nonzero, execute _statement1_, else execute _statement2_, if specified.
 
@@ -1836,7 +1836,7 @@ Evaluate _expression_. If result is nonzero, execute _statement1_, else execute 
 #### 5.5.2 repeat-do
 
 > [!SYNTAX]
-> `repeat` <em>expression</em> `do` <em>statement</em>
+> `repeat` _expression_ `do` _statement_
 
 Evaluate _expression_. If result is nonzero, execute _statement_ iteratively the number of times specified by _expression_.
 
@@ -1845,7 +1845,7 @@ Evaluate _expression_. If result is nonzero, execute _statement_ iteratively the
 #### 5.5.3 while-do
 
 > [!SYNTAX]
-> `while` <em>expression</em> `do` <em>statement</em>
+> `while` _expression_ `do` _statement_
 
 Evaluate _expression_. If result is nonzero, execute _statement_ and reevaluate _expression_ repeatedly until _expression_ evaluates to zero.
 
@@ -1854,7 +1854,7 @@ Evaluate _expression_. If result is nonzero, execute _statement_ and reevaluate 
 #### 5.5.4 do-while
 
 > [!SYNTAX]
-> `do` <em>statement</em> `while` <em>expression</em>
+> `do` _statement_ `while` _expression_
 
 Execute _statement_ and evaluate _expression_ repeatedly until _expression_ evaluates to zero.
 
@@ -1863,7 +1863,7 @@ Execute _statement_ and evaluate _expression_ repeatedly until _expression_ eval
 #### 5.5.5 tempo
 
 > [!SYNTAX]
-> `tempo` <em>expression1</em> = <em>expression2</em>
+> `tempo` _expression1_ `=` _expression2_
 
 _expression1_ must evaluate to the number of units used as a counting quantity. _expression2_ evaluates to the number of times the counting quantity must occur in one minute.
 
@@ -1872,9 +1872,9 @@ _expression1_ must evaluate to the number of units used as a counting quantity. 
 #### 5.5.6 default
 
 > [!SYNTAX]
-> `default` <em>pitch1</em> = <em>pitch2</em>
+> `default` _pitch1_ `=` _pitch2_
 >
-> `default` <em>attribute</em>
+> `default` _attribute_
 
 Changes the default value associated with note pitches or attributes. The first form of the statement implies a transposition of all notes up or down given by the offset of _pitch2_ relative to _pitch1_. The second form sets the default value of the note attribute to the value specified.
 
@@ -1883,7 +1883,7 @@ Changes the default value associated with note pitches or attributes. The first 
 #### 5.5.7 Assignment
 
 > [!SYNTAX]
-> <em>identifier</em> = <em>object</em>
+> _identifier_ `=` _object_
 
 Assigns (binds) object to identifier. Identifier assignments are 'strongly-typed', i.e. an object of a given type can only be assignmed to an identifier of the same type.
 
@@ -1892,7 +1892,7 @@ Assigns (binds) object to identifier. Identifier assignments are 'strongly-typed
 #### 5.5.8 Template and Procedure Calls
 
 > [!SYNTAX]
-> <em>identifier</em> (<em>parameter_list</em>)
+> _identifier_ `(`<em>parameter_list</em>`)`
 
 Invoke a template or procedure, depending on the type of the identifier. The syntax of a template or procedure call is deliberately made identical to the syntax of a function call.
 
@@ -1901,7 +1901,7 @@ Invoke a template or procedure, depending on the type of the identifier. The syn
 #### 5.5.9 return
 
 > [!SYNTAX]
-> `return` <em>expression</em>
+> `return` _expression_
 
 Only valid within the context of a function body, this statement returns the value of the expression to the invoker of the function.
 
@@ -1914,15 +1914,15 @@ Identifiers may be defined within the body of a phrase or a chord and 'typed' to
 The syntax of an identifier definition is:
 
 > [!SYNTAX]
-> <em>type</em> <em>identifier</em>
+> _type_ _identifier_
 >
-> <em>type</em> <em>identifier</em> = <em>object</em>
+> _type_ _identifier_ `=` _object_
 >
-> `procedure` <em>identifier</em>(<em>parameter_defs</em>) <em>block</em>
+> `procedure` _identifier_`(`<em>parameter_defs</em>`)` _block_
 >
-> `function` <em>identifier</em>(<em>parameter_defs</em>) <em>block</em>
+> `function` _identifier_`(`<em>parameter_defs</em>`)` _block_
 >
-> `template` <em>identifier</em>(<em>template_defs</em>)
+> `template` _identifier_`(`<em>template_defs</em>`)`
 
 A _type_ is either a note, phrase, chord or envelope. <em>parameter_defs</em> is a list of definitions with no initial bindings separated by COMMA. A _block_ is either a phrase or a chord. <em>template_defs</em> is a list of attribute lists separated by COMMA.
 
@@ -1949,7 +1949,7 @@ External definitions are like global definitions, except that they are preceeded
 ### 5.8 conductor
 
 > [!SYNTAX]
-> `conductor` <em>block</em>
+> `conductor` _block_
 
 Every complete _Rubato_ program (merger of the individual source files linked together) must have one `conductor` definition. It represents the phrase or chord that is executed by the _Rubato_ machine when initially started up.
 
@@ -1964,9 +1964,9 @@ These 'statements' control the action of the compiler when parsing the source fi
 #### 5.9.1 $key
 
 > [!SYNTAX]
-> `$key` <em>pitch</em> `major`
+> `$key` _pitch_ `major`
 >
-> `$key` <em>pitch</em> `minor`
+> `$key` _pitch_ `minor`
 >
 > `$key` <em>accidental_list</em>
 
@@ -1979,7 +1979,7 @@ The alternative `$key` specification takes an <em>accidental_list</em>, which is
 #### 5.9.2 $default
 
 > [!SYNTAX]
-> `$default` <em>pitch1</em> = <em>pitch2</em>
+> `$default` _pitch1_ `=` _pitch2_
 
 This controls the default octave or initial transposition of note pitches coded up for the rest of the language. It forces the compiler to transpose all notes coded up by an offset equal to the pitch number of _pitch1_ subtracted from the pitch number of _pitch1_. Uppercase pitches and lowercase pitches can be transposed independently, allowing two octaves to be readily accessible without the use of INCPIT or DECPIT operators.
 
@@ -2253,11 +2253,11 @@ The assembler only makes a single pass through the assembly files specified on t
 
 Pseudo instructions are recognized by the assembler and acted upon. The pseudo instructions recognized by the assembler are:
 
-- **"const** Attach a constant value to a label
-- **"data** Put value _n_ into the next available location in the data store
-- **"udata** Reserve the next _n_ locations in the data store
-- **"public** Declare label to be public (i.e. available for reference by other assembly files)
-- **"extern** Declare label as being defined in some other assembly file (as a `public`)
+- **`const`** Attach a constant value to a label
+- **`data`** Put value _n_ into the next available location in the data store
+- **`udata`** Reserve the next _n_ locations in the data store
+- **`public`** Declare label to be public (i.e. available for reference by other assembly files)
+- **`extern`** Declare label as being defined in some other assembly file (as a `public`)
 
 The linker is an extremely simple linker. All it does is resolve external and public labels between assembly files. It is really an extension of the assembler.
 
@@ -2315,9 +2315,8 @@ The debugger is a late addition to the executor. It basically emulates the facil
 
 Each note generated by the interpreter into the output file has the following format, on one line of the player file:
 
-```text
-ttime ppitch uduration lloudness vchannel zpatch
-```
+> [!SYNTAX]
+> `t`_time_ `p`_pitch_ `u`_duration_ `l`_loudness_ `v`_channel_ `z`_patch_
 
 The _time_ of the note is the onset time, i.e. the time the note should start sounding given by the number of centiseconds into the piece. The _pitch_ of the note is the pitch number - 12. The _duration_ of the note is the length of time in which the note will sound, in centiseconds. The _loudness_ of the note corresponds to the note velocity. The _patch_ and _channel_ of the note corresponds with the equivalent attribute in the _Rubato_ language.
 
