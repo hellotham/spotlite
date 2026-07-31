@@ -70,7 +70,7 @@ Prefer non-interactive commands. Watch-mode tools need `CI=true` or their single
 - `src/components/wordcloud.astro`: Animated tag cloud on `/work`.
 - `src/components/search.astro`: Header search UI and client logic.
 - `src/pages/api/search.json.ts`: Fallback search index endpoint.
-- `tests/`: 26 Vitest files. Several assert against built output in `dist/`, so a broken build fails tests.
+- `tests/`: 27 Vitest files. Several assert against built output in `dist/`, so a broken build fails tests.
 
 ## 📝 Content Management
 
@@ -309,7 +309,7 @@ A requirement, not a polish pass. Target is **WCAG 2.2 Level AA**. In practice:
 
 ## 🧪 Testing
 
-Vitest, 26 files, `jsdom` environment. Tests cover collection contracts, routing, base-path handling, component behaviour, the search endpoint, the RSS route, the PDF script and the generated PDFs themselves.
+Vitest, 27 files, `jsdom` environment. Tests cover collection contracts, routing, base-path handling, component behaviour, the search endpoint, the RSS route, the PDF script and the generated PDFs themselves.
 
 Write the test first where you can, and add one whenever you fix a bug a test could have caught. Aim for >80% coverage on new code (`pnpm run test:coverage`).
 
