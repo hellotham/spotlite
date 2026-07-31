@@ -168,13 +168,10 @@ published, I still think that is about right.
 Two of the names above turn up in that story as well: Peter Lisle and George Janczuk were both
 part of the polyglot. It was a small circle, and it was a very good few years.
 
-`extro` is worth a footnote of its own. It was not a department or a group of people but a
-single machine, the one Sydney University used to reach the world outside itself, which is
-where the name comes from. I was the only one of us with an account on it. George and Peter
-had their own addresses elsewhere, and my own posts went out through mine.
-
-The university gave me that account by way of thanks for
+`extro` is worth a footnote of its own. It was a single machine, the one Sydney University
+used to reach the world outside itself, which is where the name comes from, and the university
+gave me an account on it by way of thanks for
 [breaking into their password file](/spotlite/article/crypt-usenix91/#postscript-thirty-five-years-on),
-which is not a sentence that would survive a modern security review. It was also the
-credential for the point-to-point TCP/IP link, so it is the reason anything of mine reached
+which is not a sentence that would survive a modern security review. That account was the
+credential the point-to-point TCP/IP link ran on, so it is the reason anything of mine reached
 the Internet at all.
