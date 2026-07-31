@@ -67,8 +67,12 @@ describe('CV print routes', () => {
     for (const html of [onepage, full]) {
       expect(html).toMatch(/<meta name="robots" content="noindex, nofollow">/)
     }
+    // Assert the print routes specifically, not the bare substring `/cv/`. A site
+    // deployed under a `/cv/` base has that substring in every URL, so the loose form
+    // passed only for as long as the base happened to be something else.
     const sitemap = readText('dist/sitemap-0.xml')
-    expect(sitemap).not.toContain('/cv/')
+    expect(sitemap).not.toMatch(/\/cv\/(onepage|full)\//)
+    expect(sitemap).not.toMatch(/\/404\//)
   })
 
   it('omit website-only content that does not belong on a CV', () => {

@@ -128,8 +128,8 @@ if (itemPage) {
 const basePath = import.meta.env.BASE_URL
 
 // Strip the base as a prefix rather than filtering out segments that merely equal
-// its name — /spotlite/article/spotlite/ is a real URL, and filtering by name drops
-// the article's own crumb as well as the base.
+// its name. A later segment can legitimately repeat the base's name, so filtering by
+// name drops that page's own crumb as well as the base.
 const relativePath = Astro.url.pathname.startsWith(basePath)
   ? Astro.url.pathname.slice(basePath.length)
   : Astro.url.pathname.replace(/^\//, '')
