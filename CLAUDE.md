@@ -6,8 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `AGENTS.md` is the authoritative agent brief: what the project is, the full command table, the
 content model, the CV pipeline, and a long **Traps** section where each entry is a real debugging
-session. Read it before changing anything. `DESIGN.md` covers the Rosely visual system;
-`README.md` documents setup for a human.
+session. **It is not loaded automatically** — only this file is — so read it before changing
+anything. `DESIGN.md` covers the Rosely visual system; `README.md` documents setup for a human.
 
 This file holds only what those three do not, and should stay short so it does not drift from them.
 
@@ -59,8 +59,9 @@ amounts pair into an inline equation, which blows the page width open with no bu
 
 Several articles reproduce a published paper or thesis (`crypt-usenix91`, `suntech-1990`,
 `optech-1990`, `rubato`). The house pattern: an italic preface stating what the source was and what
-was changed, a link to the original in `public/`, and the document's own References kept as-is
-rather than replaced with a Sources section.
+was changed, a link to the original in `public/`, and the document's own References or Bibliography
+kept as it stood. A Sources section may sit alongside for provenance the original had no reason to
+carry — `crypt-usenix91` has both — but never replaces it.
 
 Where the source is a scan or a lossy conversion, **state every repair in the preface** and keep
 them auditable — repair a named defect explicitly rather than inferring a general rule, unless the
@@ -83,6 +84,11 @@ positions instead.
 ```bash
 pnpm lint && pnpm astro check && pnpm test && pnpm build
 ```
+
+`pnpm lint` **writes** — it is `prettier --write .` then `eslint --fix .`, not a check. It reformats
+anything not covered by `.prettierignore` or the eslint `ignores`, which is how a vendored 1998 HTML
+bundle in `public/` got silently reindented. Add new vendored or generated material to both ignore
+lists before running it.
 
 Touching content, `src/cv.json` or `src/utils/cv.ts` also needs `pnpm run pdf` — the PDFs are
 committed and go stale silently. `pnpm build`, never bare `astro build`.
