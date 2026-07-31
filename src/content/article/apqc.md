@@ -53,6 +53,14 @@ this. APQC wrote it up as
 [a case study](https://www.apqc.org/resource-library/resource-listing/creating-process-framework-transfield-services)
 in May 2015.
 
+None of it was an end in itself. The framework sat inside a larger effort to revitalise the
+group's global management system, the thing that carries quality and business process
+standardisation across every country and every contract, and it ran in conjunction with an SAP
+rollout. That is usually why this sort of work gets funded. An ERP implementation forces the
+question of what the standard process actually is and will not accept a vague answer, and a
+management system needs a stable vocabulary to hang its quality and assurance requirements
+on.
+
 ## Contributing back
 
 The interesting part, at least to me, is that this was not a one-way transaction.
@@ -85,12 +93,22 @@ Category 13.0 describes how an organisation gets better at what it does, rather 
 does. Process management, portfolio and project management, quality, change management,
 benchmarking and knowledge management all live there.
 
-Section 13.2 fitted us because it was not theory. Jeff's own post makes the point that
-services are typically delivered "through projects, continuous support functions, or discrete
-instances based upon a request for service or incident", and that is precisely what Transfield
-was. A company running maintenance and operations contracts across 20 industries and 11
-countries is running a portfolio of programmes and projects, and that portfolio was the
-mechanism by which the business made its money. We were describing something we did every day.
+Section 13.2 fitted us because it was not theory. Project management was a core competency at
+Transfield rather than a support function, and that follows from what the company was. Jeff's
+own post observes that services are typically delivered "through projects, continuous support
+functions, or discrete instances based upon a request for service or incident". That is
+precisely what a group running maintenance and operations contracts across 20 industries and
+11 countries does all day. The portfolio was the mechanism by which the business made its
+money, so we were describing something we already lived with.
+
+What we brought to the section was drawn from PMBOK, the Project Management Body of Knowledge,
+which is the profession's own account of how portfolios, programmes and projects are
+structured. The two documents do different jobs. The PCF describes what an organisation does,
+while PMBOK describes how the project management discipline organises itself. Aligning 13.2
+with it meant the framework's account of that work matched the standard the practitioners were
+already trained on, instead of inventing a second vocabulary alongside it. For a taxonomy
+whose entire purpose is a shared vocabulary, inventing a competing one where a good standard
+already exists would be a strange thing to do.
 
 The section next door helped too. Section 13.5 covers developing and managing enterprise-wide
 knowledge, which is what the Centres of Excellence programme was for. Writing a definition of
