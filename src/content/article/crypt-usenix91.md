@@ -451,7 +451,7 @@ The UNIX implementation uses one byte to store every bit that needs to be manipu
 Hence, 64 bytes consisting of the numbers 0 and 1 were used to represent a 64-bit entity. In
 our implementation, the same entity is represented by two 32-bit words. This allows us to use
 the rotate and exclusive OR operations in the instruction set, and hence exploit the inherent
-parallelism in the datapath of the CPU. Also, we precomputed all expansion, selection, and
+parallelism in the data-path of the CPU. Also, we precomputed all expansion, selection, and
 permutation functions and in many cases combined several operations into one precomputed
 array.
 
@@ -602,9 +602,9 @@ Figure 6 summarizes the results of this table in a scatter plot.
 ```mermaid
 xychart-beta
     title "crypt() performance"
-    x-axis ["H'ware", "RS/6000", "5000", "Sparc1+", "2100", "9810", "3/60"]
-    y-axis "Time (ms)" 0 --> 10
-    bar [0.006, 1.2, 1.8, 2.0, 3.3, 6.3, 7.2]
+    x-axis ["H'ware", "RS/6000", "5000/200", "Sparc1+", "2100", "9810", "3/60 gcc", "3/60 cc", "3/50"]
+    y-axis "Time (ms)" 0 --> 16
+    bar [0.006, 1.2, 1.8, 2.0, 3.3, 6.3, 7.2, 9.5, 16.0]
 ```
 
 **Figure 6:** crypt() performance. The original is a scatter plot of the same figures.
@@ -1000,3 +1000,10 @@ more, and stop leaving the encrypted passwords where everyone can read them. The
 those is the shadow password file, which every Unix and Linux system now has as a matter of
 course. It is a strange feeling to have a small part in something that is now simply how
 things are done, and that nobody has any reason to think about.
+
+## Sources
+
+- [The paper as published](https://phwl.org/assets/papers/crypt_usenix91.pdf), from the site of
+  my co-author Philip Leong.
+- [A scan of the proceedings](/spotlite/crypt-usenix91.pdf), which this reproduction was
+  transcribed from.
