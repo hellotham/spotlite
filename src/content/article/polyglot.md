@@ -72,8 +72,8 @@ Take them out and it stops working.
 
 Before you read it, a word about how it is printed here. This site normally colours code
 according to its language, but there is no sensible way to do that here. Any highlighter has to
-choose a single language, and it will then be wrong about the other seven. Rosetta Code, which
-also reproduces the program, ran into exactly the same difficulty and gently warns its readers
+choose a single language, and it will then be wrong about the other seven.
+[Rosetta Code](https://rosettacode.org/wiki/Polyglot), which also reproduces the program, ran into exactly the same difficulty and gently warns its readers
 that the colouring comes out rather scrambled.
 
 So I have set it out below as plain text, just as the file is, which seemed the more honest way
@@ -222,3 +222,10 @@ nearly everything else I have built since.
 
 If you make something small and strange, and put it somewhere people can find it, there is
 really no telling how long it might keep going.
+
+## Sources
+
+- [Polyglot](https://ideology.com.au/polyglot/), the original page, with the source, the
+  download and thirty-two years of visitor comments.
+- [Rosetta Code: Polyglot](https://rosettacode.org/wiki/Polyglot), which reproduces the program and notes that the syntax
+  highlighting comes out scrambled.

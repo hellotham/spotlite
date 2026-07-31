@@ -77,9 +77,10 @@ continues past this point.
 The first version reached the wider world without our doing it. George gave a copy to a friend
 at the university, and the friend put it on a server, and after that it was no longer ours.
 
-The published record is a little muddled about when. George's account, given to Jimmy Maher
-for his history of the period, has the accidental upload on 2 June 1987 and an official version
-1.0 following on 1 August that year. The Infocom Fact Sheet instead has an early version
+The published record is a little muddled about when. George's account, given to
+[Jimmy Maher](https://www.filfre.net/2019/10/new-tricks-for-an-old-z-machine-part-1-digging-the-trenches/) for his history of the period, has the accidental upload on 2 June 1987 and an official version
+1.0 following on 1 August that year. The [Infocom Fact Sheet](http://pdd.if-legends.org/infocom/fact-sheet.txt) instead has an early
+version
 surfacing on a Sydney University FTP server in March 1991, and that date has been repeated
 since as though it were the release.
 
@@ -124,7 +125,8 @@ So the Z-Machine escaped into the public domain more or less as Infocom themselv
 collapsing. Mark Howell built a faster, cleaner interpreter called ZIP on the foundation, and
 went deeper into the architecture than any of us had. By the mid-nineties Howell and Graham
 Nelson had agreed a standard set of names for the opcodes, and in November 1995 the first
-Z-Machine Standard was written down: a formal specification of a machine that no company had
+[Z-Machine Standard](https://zspec.jaredreisinger.com/001-preface) was written down: a formal specification of a machine that no
+company had
 ever documented and whose owner no longer existed.
 
 Nelson, who did more than anyone to build what came next, put it in a way I have always
@@ -175,3 +177,14 @@ gave me an account on it by way of thanks for
 which is not a sentence that would survive a modern security review. That account was the
 credential the point-to-point TCP/IP link ran on, so it is the reason anything of mine reached
 the Internet at all.
+
+## Sources
+
+- Jimmy Maher,
+  [New Tricks for an Old Z-Machine, Part 1: Digging the Trenches](https://www.filfre.net/2019/10/new-tricks-for-an-old-z-machine-part-1-digging-the-trenches/), The Digital
+  Antiquarian, October 2019, which is where George Janczuk's account of the group comes from.
+- Paul David Doherty, [the Infocom Fact Sheet](http://pdd.if-legends.org/infocom/fact-sheet.txt), the archivists' record of the
+  interpreters, the games and the company.
+- [The InfoTaskForce interpreter and its release announcement](https://www.ifarchive.org/if-archive/infocom/interpreters/old/itf/README), in the Interactive
+  Fiction Archive.
+- [The Z-Machine Standards Document](https://zspec.jaredreisinger.com/001-preface), for what became of the format afterwards.

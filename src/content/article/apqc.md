@@ -67,8 +67,9 @@ The interesting part, at least to me, is that this was not a one-way transaction
 
 A framework like the PCF is only as good as the practice it is drawn from, so APQC revises it
 using input from the organisations actually applying it. When Version 6.0.0 was released in
-July 2012, marking the framework's twentieth anniversary, APQC credited the update to
-"significant input from APQC members, including Intel, IBM, and Transfield Services". Seeing
+July 2012, marking the framework's twentieth anniversary,
+[APQC credited the update](https://www.apqc.org/about-apqc/news-press-release/apqc-releases-updated-process-classification-framework-20th) to "significant input from APQC members, including Intel,
+IBM, and Transfield Services". Seeing
 the company I was consulting to listed beside those two was a pleasant surprise. My own
 contribution to that release was minor.
 
@@ -140,3 +141,15 @@ should be, but the section is a little better than it was.
 The consulting work behind it is on my
 [Broadspectrum engagement page](/spotlite/work/broadspectrum/), which ran from 2011 to 2016
 across several separate pieces of work.
+
+## Sources
+
+- [APQC Releases Updated Process Classification Framework on 20th Anniversary](https://www.apqc.org/about-apqc/news-press-release/apqc-releases-updated-process-classification-framework-20th), the
+  Version 6.0.0 announcement naming Transfield Services among the contributors.
+- [Creating a Process Framework at Transfield Services](https://www.apqc.org/resource-library/resource-listing/creating-process-framework-transfield-services),
+  APQC's case study, May 2015.
+- Jeff Varney,
+  [Giving Services their Proper Place in the PCF](https://www.apqc.org/blog/giving-services-their-proper-place-pcf),
+  APQC, October 2015, on the change that took the framework to thirteen categories.
+- [APQC's Process Classification Framework](https://www.apqc.org/process-frameworks) itself,
+  which is free to download.
