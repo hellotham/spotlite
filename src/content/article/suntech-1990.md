@@ -4,11 +4,11 @@ description: Our 1990 SunTech Journal article on hedging the risk in an options 
 pubDate: 1990-01-01
 ---
 
-_This is a reproduction of an article published in SunTech Journal, Winter 1990, pages 46 to
-52, written with Tim Posney while I was at [Optech International](/spotlite/work/optech/). I
-have transcribed it from a scan of the issue. The wording is unchanged apart from two
-typesetting slips in the original, the figures are the printed ones, and the illustration is by
-Paul Wolf._
+_This is a reproduction of an article from SunTech Journal, Volume 3, Number 1, Winter 1990,
+pages 46 to 52, published by Sun Microsystems, Inc. It was written with Tim Posney while I was
+at [Optech International](/spotlite/work/optech/). I have transcribed it from a scan of the
+issue: the wording is unchanged apart from two typesetting slips in the original, the figures
+are the printed ones, and the illustration is by Paul Wolf._
 
 **[Download the original scanned article (PDF, 4.3 MB)](/spotlite/suntech-1990.pdf)**
 
