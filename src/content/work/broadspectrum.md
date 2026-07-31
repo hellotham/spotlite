@@ -5,7 +5,7 @@ startyear: 2011
 endyear: 2016
 type: consulting
 image: ./broadspectrum.png
-description: 'Facilitated and co-developed IT strategy across successive engagements, led architecture and design as interim executive manager, and established a data analytics capability.'
+description: "Facilitated and co-developed IT strategy across successive engagements, led architecture and design as interim executive manager, established a data analytics capability, and contributed to APQC's global Process Classification Framework."
 tags:
   [
     'IT strategy',
@@ -13,6 +13,8 @@ tags:
     'Strategic roadmaps',
     'Operating models',
     'Data analytics',
+    'Process frameworks',
+    'Knowledge management',
     'Tableau',
     'AWS',
     'IoT',
@@ -42,3 +44,5 @@ As interim leader, successfully achieved objectives:
 - Analysis of implementation options for a support/shared services operating model.
 - Established a data analytics capability in operations and business development.
 - Development of a strategic technology architecture and migration roadmap.
+- Contributed to APQC's Process Classification Framework, the cross-industry business process taxonomy used by thousands of organisations worldwide. APQC credited Version 6.0.0 to "significant input from APQC members, including Intel, IBM, and Transfield Services"; I authored input to Section 13.0, Develop and Manage Business Capabilities, in Version 7.0.0.
+- Supported the standardisation of business processes across a group that had grown its employee base by 329 per cent to more than 26,000 people across 20 industries and 11 countries, [written up by APQC as a case study](https://www.apqc.org/resource-library/resource-listing/creating-process-framework-transfield-services) reporting a 30 per cent reduction in process redundancy.
