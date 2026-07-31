@@ -263,6 +263,38 @@ const breadcrumbList = {
         max-width: 100%;
         overflow-x: auto;
       }
+
+      /*
+       * Emphasis inside a blockquote goes back to roman.
+       *
+       * The typography preset sets the whole quotation in italic, so an <em> within it is
+       * italic on italic and reads as nothing at all. Rubato's epigraph is the case that
+       * showed it: the author italicised `Ancora rubato` and the distinction vanished.
+       * Reverting is the long-standing typographic convention, not a workaround.
+       */
+      .prose blockquote em,
+      .prose blockquote cite {
+        font-style: normal;
+      }
+
+      /*
+       * Give the generated footnote list a visible heading.
+       *
+       * The Markdown processor emits `<h2 class="sr-only">Footnotes</h2>`, which is right for
+       * a page whose footnotes are its only trailing matter. Where a document ends with its
+       * own References — the reproduced papers all do — the two lists run together with
+       * nothing between them, and the numbering restarts with no explanation.
+       */
+      .prose .footnotes > h2#footnote-label {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 2em 0 0.75em;
+        overflow: visible;
+        clip: auto;
+        clip-path: none;
+        white-space: normal;
+      }
       @keyframes fade-in-up-custom {
         from {
           opacity: 0;
