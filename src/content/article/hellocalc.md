@@ -146,3 +146,12 @@ fairly sure my twelve-year-old self would approve.
 
 [Try it here](https://christham.net/hellocalc/), or look at
 [how it is put together](https://github.com/ChristineTham/hellocalc).
+
+## Sources
+
+- [Hello Calc](https://github.com/ChristineTham/hellocalc), the source, which also holds the
+  `hp/` reference directory: every model's keyboard layout, function catalogue and the
+  owner's manuals used to verify behaviour.
+- [HP-35](https://en.wikipedia.org/wiki/HP-35) and
+  [HP 48 series](https://en.wikipedia.org/wiki/HP_48_series), Wikipedia, for model dates and
+  hardware details.

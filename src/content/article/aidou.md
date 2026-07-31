@@ -127,3 +127,12 @@ the tools work out how, and checked what came back.
 The book is [free to read online](https://christham.net/aidou/), and the whole thing, text and
 toolchain together, is [open on GitHub](https://github.com/ChristineTham/aidou) under a public
 domain dedication. Take whatever is useful.
+
+## Sources
+
+- [AI-dō](https://christham.net/aidou/), the book itself, free to read. The preface is where
+  the account of how it was built comes from.
+- [The repository](https://github.com/ChristineTham/aidou), text and toolchain together, under
+  a public domain dedication.
+- [Quarto](https://quarto.org/) and [Typst](https://typst.app/), which turn the Markdown into
+  the website, the PDF and the ePub.

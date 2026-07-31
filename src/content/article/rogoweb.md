@@ -24,8 +24,9 @@ their way to victory.
 
 Then rogomatic was introduced, which is one of the earliest examples of AI actually working. It
 was an expert system that could train itself to play rogue well, built at Carnegie Mellon in
-1981 by Michael Mauldin and his colleagues, and it was startlingly good. Across 106 games it
-achieved the highest median score of any player on the university's system, humans included.
+1981 by Michael Mauldin and his colleagues, and it was startlingly good. Their
+[1983 paper](https://kilthub.cmu.edu/articles/journal_contribution/Rog-O-Matic_a_belligerent_expert_system/6609137/1) reports that over three weeks it scored a higher median than any of the
+fifteen best human players at Carnegie Mellon and the University of Texas at Austin.
 
 Naturally, we all started using it. Eventually rogomatic took up so much CPU time that it was
 banned from the university computers too. We students wished we had personal Unix computers, so
@@ -108,3 +109,14 @@ together.
 Just press the START button and enjoy the good old days.
 
 [Play it here.](https://christham.net/rogoweb/)
+
+## Sources
+
+- [rogoweb](https://github.com/ChristineTham/rogoweb), the source, which carries the merged
+  Rogue 5.4 and Rog-O-Matic XIV codebases and the notes on the port.
+- Michael Mauldin, Guy Jacobson, Andrew Appel and Leonard Hamey,
+  [Rog-O-Matic: A Belligerent Expert System](https://kilthub.cmu.edu/articles/journal_contribution/Rog-O-Matic_a_belligerent_expert_system/6609137/1), Carnegie Mellon University
+  technical report CMU-CS-83-144, 1983.
+- [Rogue](<https://en.wikipedia.org/wiki/Rogue_(video_game)>), Wikipedia, for the game's origins and its authors.
+- [Chapter 3 of AI-dō](https://christham.net/aidou/software.html), which describes how the
+  port was built and what went wrong along the way.

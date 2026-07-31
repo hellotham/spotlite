@@ -21,7 +21,7 @@ Kentucky's Mammoth Cave onto a game for his daughters. Don Woods expanded it in 
 the dwarves, the magic word `XYZZY`, and the famous 350-point score. Everything that came after,
 from Zork to the modern narrative game, is downstream of those two.
 
-My version forward-ports Eric Raymond's faithful `open-adventure` edition into strictly typed
+My version forward-ports Eric Raymond's faithful [`open-adventure`](https://gitlab.com/esr/open-adventure) edition into strictly typed
 TypeScript, running as a Next.js app. It is a completely faithful port, and it passes the legacy
 test suite.
 
@@ -106,3 +106,14 @@ resurrecting the software of my youth. I have written about the method behind al
 [chapter three of my book](https://christham.net/aidou/software.html), but the short version is
 the one this project demonstrates best: say what you want, say how you will know it is right,
 and then get out of the way.
+
+## Sources
+
+- [adventure](https://github.com/ChristineTham/adventure), the source, and Eric Raymond's
+  [open-adventure](https://gitlab.com/esr/open-adventure), the faithful edition this port is built from.
+- Dennis G. Jerz,
+  [Somewhere Nearby is Colossal Cave: Examining Will Crowther's Original Adventure in Code and
+  in Kentucky](https://www.digitalhumanities.org/dhq/vol/1/2/000009/000009.html), Digital Humanities Quarterly, 2007, which is the scholarly account of
+  the original and its Kentucky cave.
+- [Chapter 3 of AI-dō](https://christham.net/aidou/software.html), on the intent, the checks,
+  and the map that one model could not lay out and another could.
