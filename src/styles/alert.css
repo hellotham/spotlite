@@ -49,3 +49,14 @@
 .prose .alert-caution {
   --alert-accent: oklch(0.6 0.19 25);
 }
+
+/* Syntax forms are reference material rather than a warning, so they take the body
+   text colour and lean on the rule and the tint alone to set themselves apart. */
+.prose .alert-syntax {
+  --alert-accent: var(--color-rosely-400, oklch(0.7 0.12 348));
+}
+
+.prose .alert-syntax p:not(.alert-title) {
+  font-family: var(--font-noto-sans-mono), monospace;
+  font-size: 0.9em;
+}

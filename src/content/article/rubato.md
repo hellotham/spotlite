@@ -1327,11 +1327,10 @@ The following are a brief summary of control flow statements available in _Rubat
 
 ##### 4.11.2.1 if-then-else
 
-```text
-Syntax:
-if expression then statement1
-if expression then statement1 else statement2
-```
+> [!SYNTAX]
+> `if` <em>expression</em> `then` <em>statement1</em>
+>
+> `if` <em>expression</em> `then` <em>statement1</em> `else` <em>statement2</em>
 
 The _expression_ is evaluated. If the result is true (nonzero value) _statement1_ is executed. If the result is false (zero value) control flow will pass on to the next entity or statement in sequence or, if the **else** keyword is present, _statement2_ is executed.
 
@@ -1339,10 +1338,8 @@ The _expression_ is evaluated. If the result is true (nonzero value) _statement1
 
 ##### 4.11.2.2 while-do
 
-```text
-Syntax:
-while expression do statement
-```
+> [!SYNTAX]
+> `while` <em>expression</em> `do` <em>statement</em>
 
 The _expression_ is evaluated. If the result is true, then _statement_ is executed. The _expression_ is then reevaluated. _Statement_ will be rexecuted until the _expression_ evaluates to false (0), at which point control will be passed onto the next statement after the **while-do** statement.
 
@@ -1350,10 +1347,8 @@ The _expression_ is evaluated. If the result is true, then _statement_ is execut
 
 ##### 4.11.2.3 do-while
 
-```text
-Syntax:
-do statement while expression
-```
+> [!SYNTAX]
+> `do` <em>statement</em> `while` <em>expression</em>
 
 The _statement_ is executed. The _expression_ is then evaluated. If the result is true, the _statement_ is reexecuted. This continues until the _expression_ evaluates to false. Control then passes to the next statement.
 
@@ -1361,10 +1356,8 @@ The _statement_ is executed. The _expression_ is then evaluated. If the result i
 
 ##### 4.11.2.4 repeat
 
-```text
-Syntax:
-repeat expression do statement
-```
+> [!SYNTAX]
+> `repeat` <em>expression</em> `do` <em>statement</em>
 
 The _statement_ is repeated _expression_ number of times.
 
@@ -1405,13 +1398,12 @@ The invocation of the procedure is called a _procedure call_, and the values and
 
 Parameters may be values, variables, notes, chords phrases or even other procedure names. A procedure binding (also called 'declaration') binds its parameters to local names and act as if the entities passed to the procedure has been bound locally within the procedure. If a parameter binding is subsequently changed within a procedure, this change is invisible to the outer block that invoked the procedure.
 
-```text
-Syntax:
-procedure name(parameters) procedure_body
-procedure name() procedure_body
-```
+> [!SYNTAX]
+> `procedure` <em>name</em>(<em>parameters</em>) <em>procedure_body</em>
+>
+> `procedure` <em>name</em>() <em>procedure_body</em>
 
-The _name_ of a procedure is the string by which the procedure is bound to. The _parameters_ are simply variables, notes, chords or phrases declarations[^11] separated by the ',' character. The _procedure_body_ is a block (either a phrase or a chord) that will be executed by the procedure when invoked.
+The _name_ of a procedure is the string by which the procedure is bound to. The _parameters_ are simply variables, notes, chords or phrases declarations[^11] separated by the ',' character. The <em>procedure_body</em> is a block (either a phrase or a chord) that will be executed by the procedure when invoked.
 
 For example,
 
@@ -1751,8 +1743,8 @@ These are usually written in infix notation, with precedence of operators enforc
 - **`or`** binary OR
 - **`and`** binary AND
 - **`==` and `<>`** Return 1 if operands are equal (not equal), 0 otherwise
-- **`=`** Return 1 if the first operand is less than (greater than) or equal to the second operand, 0 otherwise
-- **``** Return 1 if the first operand is less than (greater than) the second operand, 0 otherwise
+- **`<=` and `>=`** Return 1 if the first operand is less than (greater than) or equal to the second operand, 0 otherwise
+- **`<` and `>`** Return 1 if the first operand is less than (greater than) the second operand, 0 otherwise
 - **`+` and `-`** Integer addition (subtraction)
 - **`*` and `/` and `mod`** Integer multiplication (division) (modulus or remainder)
 
@@ -1767,7 +1759,7 @@ The following may also be treated like a number in an arithmetical expression, t
 - **variable** This is an identifier bound to a number
 - **key factor** This is the keyword `key` followed by a pitch constant. It is numerically equal to the pitch number corresponding to the pitch constant.
 - **current value** this is the _default_ or nominal value of the attribute of a note. The current value is obtained by stuttering the attribute keyword, e.g. `!!` gives the current (default) value of the duration attribute.
-- **function call** This is numerically equal to the value returned by invoking the function. A function call is specified by _function_identifier_ `(`_parameter_list_`)` A parameter list is a list of numbers, notes, phrases, chords, templates, procedures, functions or envelopes separated by COMMA.
+- **function call** This is numerically equal to the value returned by invoking the function. A function call is specified by <em>function_identifier</em> `(`<em>parameter_list</em>`)` A parameter list is a list of numbers, notes, phrases, chords, templates, procedures, functions or envelopes separated by COMMA.
 
 <a id="H5-4"></a>
 
@@ -1832,10 +1824,10 @@ The following types of statements are currently valid within a phrase or chord b
 
 #### 5.5.1 if-then-else
 
-```text
-if expression then statement1
-if expression then statement1 else statement2
-```
+> [!SYNTAX]
+> `if` <em>expression</em> `then` <em>statement1</em>
+>
+> `if` <em>expression</em> `then` <em>statement1</em> `else` <em>statement2</em>
 
 Evaluate _expression_. If result is nonzero, execute _statement1_, else execute _statement2_, if specified.
 
@@ -1843,9 +1835,8 @@ Evaluate _expression_. If result is nonzero, execute _statement1_, else execute 
 
 #### 5.5.2 repeat-do
 
-```text
-repeat expression do statement
-```
+> [!SYNTAX]
+> `repeat` <em>expression</em> `do` <em>statement</em>
 
 Evaluate _expression_. If result is nonzero, execute _statement_ iteratively the number of times specified by _expression_.
 
@@ -1853,9 +1844,8 @@ Evaluate _expression_. If result is nonzero, execute _statement_ iteratively the
 
 #### 5.5.3 while-do
 
-```text
-while expression do statement
-```
+> [!SYNTAX]
+> `while` <em>expression</em> `do` <em>statement</em>
 
 Evaluate _expression_. If result is nonzero, execute _statement_ and reevaluate _expression_ repeatedly until _expression_ evaluates to zero.
 
@@ -1863,9 +1853,8 @@ Evaluate _expression_. If result is nonzero, execute _statement_ and reevaluate 
 
 #### 5.5.4 do-while
 
-```text
-do statement while expression
-```
+> [!SYNTAX]
+> `do` <em>statement</em> `while` <em>expression</em>
 
 Execute _statement_ and evaluate _expression_ repeatedly until _expression_ evaluates to zero.
 
@@ -1873,9 +1862,8 @@ Execute _statement_ and evaluate _expression_ repeatedly until _expression_ eval
 
 #### 5.5.5 tempo
 
-```text
-tempo expression1 = expression2
-```
+> [!SYNTAX]
+> `tempo` <em>expression1</em> = <em>expression2</em>
 
 _expression1_ must evaluate to the number of units used as a counting quantity. _expression2_ evaluates to the number of times the counting quantity must occur in one minute.
 
@@ -1883,10 +1871,10 @@ _expression1_ must evaluate to the number of units used as a counting quantity. 
 
 #### 5.5.6 default
 
-```text
-default pitch1 = pitch2
-default attribute
-```
+> [!SYNTAX]
+> `default` <em>pitch1</em> = <em>pitch2</em>
+>
+> `default` <em>attribute</em>
 
 Changes the default value associated with note pitches or attributes. The first form of the statement implies a transposition of all notes up or down given by the offset of _pitch2_ relative to _pitch1_. The second form sets the default value of the note attribute to the value specified.
 
@@ -1894,9 +1882,8 @@ Changes the default value associated with note pitches or attributes. The first 
 
 #### 5.5.7 Assignment
 
-```text
-identifier = object
-```
+> [!SYNTAX]
+> <em>identifier</em> = <em>object</em>
 
 Assigns (binds) object to identifier. Identifier assignments are 'strongly-typed', i.e. an object of a given type can only be assignmed to an identifier of the same type.
 
@@ -1904,9 +1891,8 @@ Assigns (binds) object to identifier. Identifier assignments are 'strongly-typed
 
 #### 5.5.8 Template and Procedure Calls
 
-```text
-identifier (parameter_list)
-```
+> [!SYNTAX]
+> <em>identifier</em> (<em>parameter_list</em>)
 
 Invoke a template or procedure, depending on the type of the identifier. The syntax of a template or procedure call is deliberately made identical to the syntax of a function call.
 
@@ -1914,9 +1900,8 @@ Invoke a template or procedure, depending on the type of the identifier. The syn
 
 #### 5.5.9 return
 
-```text
-return expression
-```
+> [!SYNTAX]
+> `return` <em>expression</em>
 
 Only valid within the context of a function body, this statement returns the value of the expression to the invoker of the function.
 
@@ -1928,15 +1913,18 @@ Identifiers may be defined within the body of a phrase or a chord and 'typed' to
 
 The syntax of an identifier definition is:
 
-```text
-type identifier
-type identifier = object
-procedure identifier(parameter_defs) block
-function identifier(parameter_defs) block
-template identifier(template_defs)
-```
+> [!SYNTAX]
+> <em>type</em> <em>identifier</em>
+>
+> <em>type</em> <em>identifier</em> = <em>object</em>
+>
+> `procedure` <em>identifier</em>(<em>parameter_defs</em>) <em>block</em>
+>
+> `function` <em>identifier</em>(<em>parameter_defs</em>) <em>block</em>
+>
+> `template` <em>identifier</em>(<em>template_defs</em>)
 
-A _type_ is either a note, phrase, chord or envelope. _parameter_defs_ is a list of definitions with no initial bindings separated by COMMA. A _block_ is either a phrase or a chord. _template_defs_ is a list of attribute lists separated by COMMA.
+A _type_ is either a note, phrase, chord or envelope. <em>parameter_defs</em> is a list of definitions with no initial bindings separated by COMMA. A _block_ is either a phrase or a chord. <em>template_defs</em> is a list of attribute lists separated by COMMA.
 
 <a id="H5-7"></a>
 
@@ -1960,9 +1948,8 @@ External definitions are like global definitions, except that they are preceeded
 
 ### 5.8 conductor
 
-```text
-conductor block
-```
+> [!SYNTAX]
+> `conductor` <em>block</em>
 
 Every complete _Rubato_ program (merger of the individual source files linked together) must have one `conductor` definition. It represents the phrase or chord that is executed by the _Rubato_ machine when initially started up.
 
@@ -1976,23 +1963,23 @@ These 'statements' control the action of the compiler when parsing the source fi
 
 #### 5.9.1 $key
 
-```text
-$key pitch major
-$key pitch minor
-$key accidental_list
-```
+> [!SYNTAX]
+> `$key` <em>pitch</em> `major`
+>
+> `$key` <em>pitch</em> `minor`
+>
+> `$key` <em>accidental_list</em>
 
 This controls the key signature that notes coded in the file should be interpreted in. Currently, only major keys are implemented. The _pitch_ specified may include accidentals.
 
-The alternative `$key` specification takes an _accidental_list_, which is a list of pitches with accidentals separated by COMMA.
+The alternative `$key` specification takes an <em>accidental_list</em>, which is a list of pitches with accidentals separated by COMMA.
 
 <a id="H5-9-2"></a>
 
 #### 5.9.2 $default
 
-```text
-$default pitch1 = pitch2
-```
+> [!SYNTAX]
+> `$default` <em>pitch1</em> = <em>pitch2</em>
 
 This controls the default octave or initial transposition of note pitches coded up for the rest of the language. It forces the compiler to transpose all notes coded up by an offset equal to the pitch number of _pitch1_ subtracted from the pitch number of _pitch1_. Uppercase pitches and lowercase pitches can be transposed independently, allowing two octaves to be readily accessible without the use of INCPIT or DECPIT operators.
 
@@ -2366,27 +2353,27 @@ The list of shortcomings in the _Rubato_ system is a good pointer to future exte
 ```text
 source_file = { definition } .
 definition = conductor_def
-	| "$" key_stmt
-	| "$default" key_default
-	| "extern" prim_defines
-	| defines .
+| "$" key_stmt
+| "$default" key_default
+| "extern" prim_defines
+| defines .
 conductor_def = "conductor" block .
 prim_defines = note_def
-	| phrase_def
-	| chord_def
-	| var_def
-	| template_def
-	| procedure_def
-	| function_def
-	| envelope_def .
+| phrase_def
+| chord_def
+| var_def
+| template_def
+| procedure_def
+| function_def
+| envelope_def .
 prim_defines = note_def [ ASSIGN note ]
-	| phrase_def [ ASSIGN phrase ]
-	| chord_def [ ASSIGN chord ]
-	| var_def [ ASSIGN expression ]
-	| template_defset
-	| procedure_defset
-	| function_defset
-	| envelope_def [ ASSIGN envelope ] .
+| phrase_def [ ASSIGN phrase ]
+| chord_def [ ASSIGN chord ]
+| var_def [ ASSIGN expression ]
+| template_defset
+| procedure_defset
+| function_defset
+| envelope_def [ ASSIGN envelope ] .
 note_def = "note" IDENTIFIER .
 phrase_def = "phrase" IDENTIFIER .
 chord_def = "chord" IDENTIFIER .
@@ -2396,80 +2383,80 @@ procedure_def = "procedure" IDENTIFIER .
 function_def = "function" IDENTIFIER .
 envelope_def = "envelope" IDENTIFIER .
 template_defset = template_def [ ASSIGN TEMPLATE_IDENT |
-		"(" temp_params ")" ] .
+"(" temp_params ")" ] .
 temp_params = { attribute } { "," { attribute } } .
 procedure_defset = procedure_def [ ASSIGN PROCEDURE_IDENT
-		| "(" [ param { "," param } ] ")" block ] .
+| "(" [ param { "," param } ] ")" block ] .
 function_defset = function_def [ ASSIGN FUNCTION_IDENT
-		| "(" [ prim_defines { "," prim_defines } ] ")" block ] .
+| "(" [ prim_defines { "," prim_defines } ] ")" block ] .
 block = phrase | chord .
 attribute = delay [ expression | rel_expr ]
-	| velocity [ expression | rel_expr ]
-	| duration [ expression | rel_expr ]
-	| pressure [ expression | rel_expr ]
-	| patch [ expression | rel_expr ]
-	| channel [ expression | rel_expr ]
-	| "." factor [ rel_expr ]
-	| ":" factor [ rel_expr ]
-	| "^"
-	| "_" .
+| velocity [ expression | rel_expr ]
+| duration [ expression | rel_expr ]
+| pressure [ expression | rel_expr ]
+| patch [ expression | rel_expr ]
+| channel [ expression | rel_expr ]
+| "." factor [ rel_expr ]
+| ":" factor [ rel_expr ]
+| "^"
+| "_" .
 rel_expr = ( "+" | "-" | "*" | "/" | "mod" ) expression .
 note = ( key_factor | pitch expression | NOTE_IDENT )
-		{ attribute } .
+{ attribute } .
 phrase = ( BEGIN_PHRASE statement_list END_PHRASE | PHRASE_IDENT )
-	{ attribute } .
+{ attribute } .
 chord = ( BEGIN_CHORD statement_list END_CHORD | CHORD_IDENT )
-	{ attribute } .
+{ attribute } .
 envelope = /* unimplemented */ .
 statement_list = [ statement { [ BAR ] statement } ] .
 statement = defines
-	| note
-	| phrase
-	| chord
-	| envelope
-	| key_stmt
-	| tempo_stmt
-	| default_stmt
-	| set_stmt
-	| call_stmt
-	| repeat_stmt
-	| while_stmt
-	| do_stmt
-	| return_stmt .
+| note
+| phrase
+| chord
+| envelope
+| key_stmt
+| tempo_stmt
+| default_stmt
+| set_stmt
+| call_stmt
+| repeat_stmt
+| while_stmt
+| do_stmt
+| return_stmt .
 key_stmt = "key" ( KEYNAME ( "major" | "minor" )
-	| "(" KEYNAME { "," KEYNAME } ")" ) .
+| "(" KEYNAME { "," KEYNAME } ")" ) .
 tempo_stmt = "tempo" expression ASSIGN expression .
 default_stmt = "default" ( key_default | attribute ) .
 key_default = KEYNAME ASSIGN ( key_factor | expression ) .
 set_stmt = NOTE_IDENT ASSIGN note
-	| PHRASE_IDENT ASSIGN phrase
-	| CHORD_IDENT ASSIGN chord
-	| ENVELOPE_IDENT ASSIGN envelope
-	| VAR_IDENT ASSIGN expression .
+| PHRASE_IDENT ASSIGN phrase
+| CHORD_IDENT ASSIGN chord
+| ENVELOPE_IDENT ASSIGN envelope
+| VAR_IDENT ASSIGN expression .
 call_stmt = PROCEDURE_IDENT "(" [ call_param { "," call_param } ] ")"
-	| TEMPLATE_IDENT "(" note { "," note } ")" .
+| TEMPLATE_IDENT "(" note { "," note } ")" .
 call_param = note | phrase | chord | envelope | expression
-	| procedure | template | function .
+| procedure | template | function .
 repeat_stmt = "repeat" expression "do" statement .
 while_stmt = "while" expression "do" statement .
 do_stmt = "do" statement "while" expression .
 return_stmt = "return" expression .
 expression = expression binop expression |
-	unop expression |
-	factor .
+unop expression |
+factor .
 binop = "+" | "-" | "*" | "/" | "mod"
-	| "and" | "or" | "==" | "<>"
-	| "<" | ">" | "<=" | ">=" .
+| "and" | "or" | "==" | "<>"
+| "<" | ">" | "<=" | ">=" .
 unop = "~" | "not" | "." | ":" .
 factor = NUMBER | VAR_IDENT
-	| KEY key_factor |
-	"(" expression ")" |
-	CURRENT
-	| FUNCTION_IDENT "(" [ call_param { "," call_param } ] ")" .
+| KEY key_factor |
+"(" expression ")" |
+CURRENT
+| FUNCTION_IDENT "(" [ call_param { "," call_param } ] ")" .
 key_factor = KEYNAME { INCPIT | DECPIT } .
 KEYNAME = ( "a" | "b" | "c" | "d" | "e" | "f" | "g"
-	| "A" | "B" | "C" | "D" | "E" | "F" | "G" )
-	{ "#" | "$" | "%" } .
+| "A" | "B" | "C" | "D" | "E" | "F" | "G" )
+{ "#" | "$" | "%" } .
 pitch = "pitch" | "&" .
 delay = "pitch" | "\" .
 duration = "duration" | "!" .
@@ -2644,12 +2631,12 @@ System realtime commands have the highest priority (can interrupt multibyte comm
 A typical MIDI command byte is as follows:
 
 ```text
-	Status byte
-	10010010
-	1XXXYYYY
-	1	Leading Sentinel bit
-	XXX	Command ID
-	YYYY	Channel ID
+Status byte
+10010010
+1XXXYYYY
+1	Leading Sentinel bit
+XXX	Command ID
+YYYY	Channel ID
 ```
 
 <a id="figure17"></a>**Figure 17:** MIDI Status Byte Format

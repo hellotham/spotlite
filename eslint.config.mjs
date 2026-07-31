@@ -85,7 +85,7 @@ export default defineConfig([
       // still wants to catch genuinely broken `[text][ref]` links.
       'markdown/no-missing-label-refs': [
         'error',
-        { allowLabels: ['!NOTE', '!TIP', '!IMPORTANT', '!WARNING', '!CAUTION'] }
+        { allowLabels: ['!NOTE', '!TIP', '!IMPORTANT', '!WARNING', '!CAUTION', '!SYNTAX'] }
       ]
     }
   },

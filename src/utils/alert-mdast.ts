@@ -22,14 +22,17 @@ const TITLES = {
   TIP: 'Tip',
   IMPORTANT: 'Important',
   WARNING: 'Warning',
-  CAUTION: 'Caution'
+  CAUTION: 'Caution',
+  // Not one of GitHub's five. Added for language reference material, where a syntax
+  // form wants to be set apart from the prose but is not a code listing.
+  SYNTAX: 'Syntax'
 } as const
 
 type Kind = keyof typeof TITLES
 
 // The marker owns its whole line. `[!NOTE] text` on one line is not an alert on
 // GitHub either, so the newline is required rather than optional.
-const MARKER = /^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\][ \t]*(?:\r?\n|$)/
+const MARKER = /^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION|SYNTAX)\][ \t]*(?:\r?\n|$)/
 
 export const alertPlugin = () =>
   defineMdastPlugin({
