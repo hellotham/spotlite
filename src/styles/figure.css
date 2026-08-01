@@ -1,0 +1,29 @@
+/* Line-art figures in dark mode.
+ *
+ * The reproduced papers carry their diagrams as SVG converted from the original artwork, and
+ * that artwork was drawn for paper: black strokes on nothing. On the dark theme the page
+ * background is pure black and every element between the figure and <html> is transparent, so
+ * those figures were rendering black on black and were, quite literally, invisible. Nothing in
+ * the markup said so, because the images loaded fine and measured their full size.
+ *
+ * An <img>-embedded SVG is an isolated document. It cannot see the host page's `dark` class, so
+ * `currentColor` resolves to black and a `prefers-color-scheme` rule inside the file follows the
+ * operating system rather than this site's own toggle. The two disagree whenever a visitor
+ * overrides the theme by hand. Inverting from the outside is the only mechanism that tracks the
+ * class the site actually switches on.
+ *
+ * The hue rotation puts colour back where inversion moved it: the AUUG and BankTech diagrams
+ * have filled boxes, and a plain invert turns their blues orange. Line art is unaffected either
+ * way.
+ *
+ * Matched on `-figure-` in the filename rather than on `.svg`, because the site also serves SVG
+ * logos — ING, Torrens, Sydney, Macquarie — and inverting somebody's trademark is not a thing to
+ * do by accident. Every figure follows that naming convention and no logo does. Matching the
+ * filename fragment also survives both ways the image is served: `astro build` emits
+ * `crypt91-figure-1.<hash>.svg`, while `astro dev` serves `/_image?href=…crypt91-figure-1.svg…`
+ * with the name inside the query string. A selector anchored on `.svg` would miss the second.
+ */
+
+html.dark img[src*="-figure-"] {
+  filter: invert(1) hue-rotate(180deg);
+}
