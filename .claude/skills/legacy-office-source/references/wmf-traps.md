@@ -31,6 +31,42 @@ Push a placeholder.
 
 The lowest free index is reused, so the table is not append-only. Track holes.
 
+### A negative window extent mirrors the whole picture
+
+Charts embedded from Microsoft Graph declare a **negative** y extent in `SETWINDOWEXT`, meaning
+logical y grows upward rather than down. Read literally, the whole chart is mirrored top to
+bottom: the axis labels descend, the bars hang off the wrong side of the axis, and the picture is
+entirely plausible if you have not seen the original. Nothing errors.
+
+Map logical y into SVG's y-down space when the extent is negative, and leave it alone when it is
+not:
+
+```python
+fbase = (2 * orgY + extY) if extY < 0 else None      # recompute on every SETWINDOWORG/EXT
+y_svg = y_logical if fbase is None else fbase - y_logical
+```
+
+Clip rectangles need the same treatment, or the flipped drawing is clipped by unflipped
+rectangles and pieces disappear.
+
+This is worth checking for explicitly, because a document can hold both kinds at once. In the
+AUUG'93 paper ten of the eleven figures are MS Graph charts with inverted windows, and the
+eleventh, a logo pasted from PowerPoint, has a normal one. A converter that assumes either
+convention gets ten right and one wrong, or the reverse.
+
+Nor is it a charting habit. The AUUG'94 manuscript holds one inverted picture among eight, and it
+is a pasted architecture diagram containing no chart at all — that document has no MS Graph object
+anywhere in it. Test the extent, never the producing application. A mirrored picture is also easy
+to write off as an unusable cache when it is nothing of the sort, which cost that figure a
+publication cycle as a slide-derived substitute.
+
+### Rotated text needs `lfEscapement`, and MS Graph clips what it rotates
+
+`CREATEFONTINDIRECT` carries `lfEscapement` in tenths of a degree; MS Graph sets 2700 on vertical
+axis titles. Ignore it and the title is drawn horizontally at its anchor point, where MS Graph's
+narrow clip strip around the axis then removes almost all of it. The label does not appear as
+rotated-wrongly, it simply is not in the picture.
+
 ### Clipping is what makes arrows the right length
 
 These decks draw an arrow as a long shaft plus a head and clip the shaft. Ignore
@@ -125,9 +161,21 @@ glancing:
   and it distinguishes a conversion bug from a genuinely different revision of the artwork.
 - **Element counts.** Count text runs in the source and `<text>` elements in the output. Equal
   counts with something visually missing points at fill or colour, not at loss.
+- **Zero text runs can be correct.** Some metafiles draw their lettering as filled outlines rather
+  than as `TEXTOUT`, so the file carries no text record and no `CREATEFONTINDIRECT` at all. The
+  two figure 4s here differ on exactly this: the OpenWorld cache sets 16 text runs, the AUUG'94
+  cache outlines the same labels into polygons. Count the source's text records before reading an
+  empty `<text>` count as catastrophic loss — and compare fills against the **brush colours the
+  metafile declares**, not against the replaced raster's table, which may come from another
+  revision of the artwork with a finer shading ramp.
 - **Both sides of every boundary.** For text flow, check that the words either side of each
   figure survive; alt text sitting between them will otherwise read as a loss in any coverage
   test.
+- **Not the authority on aspect ratio.** A batch export usually sits on one fixed canvas — all
+  four AUUG'94 GIFs are 480x360, an aspect matching none of the four figures. Word writes a `PICF`
+  header immediately before each picture whose `xExt`/`yExt` give the printed size, and on every
+  figure here its ratio matches the metafile window to five decimal places. Trust that pair, and
+  do not "correct" a near-square figure standing among landscape ones.
 
 When a checker and a picture disagree, suspect the checker first. In practice it has been wrong
 more often than the conversion — a contrast audit once reported callout titles at 1.02:1,

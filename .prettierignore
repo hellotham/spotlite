@@ -3,11 +3,6 @@ dist
 .astro
 coverage
 
-# Vendored HTML kept verbatim. It is 1990s markup with unterminated tags that
-# Prettier cannot parse, and reformatting it would defeat the point of keeping it.
-public/rubato
-public/RUBATO.ZIP
-
 # Standard
 **/.git
 **/.svn

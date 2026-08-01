@@ -14,8 +14,6 @@ _This is what SunTech's readers saw. The longer version we submitted, with two s
 magazine dropped and the figures as we drew them, is
 [here](/spotlite/article/optech-1990/)._
 
-**[Download the original scanned article (PDF, 4.3 MB)](/spotlite/suntech-1990.pdf)**
-
 ![Paul Wolf's cover illustration: a trader in a red suit balances on a tightrope above a rising and falling candlestick chart, a workstation held out in each hand](../../assets/suntech-illustration.jpeg)
 
 _Making risk management less of a balancing act._

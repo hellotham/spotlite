@@ -1,23 +1,43 @@
 ---
 title: 'Distributed Client/Server Architectures and Transaction Processing on Open Systems'
 description: A 1994 conference paper surveying how client/server systems were actually being built on open systems, from remote presentation through to distributed databases, and where transactions fit.
-pubDate: 1994-09-01
+pubDate: 1994-12-13
 ---
 
-_This is a paper I gave at Oracle OpenWorld '94, written while I was an Architecture
-Consultant at [AT&T Global Information Solutions](/spotlite/work/ncr/). It is a revision of
-the paper I gave the same year at AUUG'94, the Australian UNIX Users Group conference, which
-is [also on this site](/spotlite/article/auug-1994/) and marks where the two diverge._
+_This is a paper I gave at Oracle OpenWorld '94, written while I was an Architecture Consultant
+at [AT&T Global Information Solutions](/spotlite/work/ncr/). It is a revision of the paper I gave
+earlier that year at [AUUG'94](/spotlite/article/auug-1994/), which marks where the two diverge._
 
-_Converted from my own HTML. Three faults in it are repaired here. A list item opened as
+_I cannot pin down the conference date. AUUG keeps its own history and AUUG'94 is on the record to
+the day, but this Oracle event has left no trace I can find, and the name was not used for
+Oracle's flagship American conference until years later, so this was a regional one. The files
+give a bracket rather than a date. Oracle's paper template was made in July 1994 and my manuscript
+was written into it; the slide deck was created on the 19th of September, ten days after I gave
+the AUUG version; and the deck was printed and saved for the last time on Tuesday the 13th of
+December. The talk cannot have been before that, and the date on this article is that last save
+rather than the conference itself._
+
+_Set from the Word manuscript, with the 1998 HTML export used as a cross-check. Compared as
+continuous text the two are identical: 37,967 characters each and not one difference. The only
+thing the export added was the section and figure numbering, which the manuscript leaves to an
+`AUTONUM` field and does not contain at all, and which the export got right. The AUUG'94 export
+of the same paper was not so lucky, and dropped a word from it._
+
+_The four figures are vector again, converted from the metafiles Word cached for each embedded
+object, in place of the 480-pixel GIFs. Two of them differ from those GIFs by more than
+resolution. In figure 3 the manuscript draws Business Logic green and Data Management pale blue
+where the GIF has dark blue and teal. In figure 1 the two LAN workstations are different clipart
+altogether: a green-screen desktop and a larger blue-screen machine with a mouse, where the GIF
+shows two identical green-screen PCs. Both are later revisions of the artwork, so what is here is
+what the paper was submitted with._
+
+_Three faults in the HTML export are repaired here. A list item opened as
 `<pli>`, which closes nothing, splitting one sentence across the break. The back-end command
 list nested its tags wrongly, putting two commands inside one span and the third outside any
 — the front-end list in the same sentence shows the intent. And Figure 1's source reached
 into the AUUG'94 directory for a file byte-identical to the copy sitting beside it. The
 closing contact block is dropped, being a 1994 office address, phone, fax and email at a
 company that has not carried that name in thirty years. The words are otherwise as given._
-
-**[Download the original HTML and figures (ZIP, 46 KB)](/spotlite/oow94.zip)**
 
 ## Abstract
 
@@ -96,7 +116,7 @@ What factors are responsible for the evolution of the client/server architecture
 
 There are _two opposing forces_ which tend to break up applications into multiple _application components_ and distribute these components across multiple systems: one encourages the migration of components closer to end users, and the other encourages the migration of components to centralised systems.
 
-![Two opposing arrows between centralised hosts and LAN workstations. Pointing down: price/performance, graphical user interfaces, decentralisation. Pointing up: unified access to information, location transparency, location independence. Between them sit centralised hosts, LAN servers and LAN workstations](../../assets/oow94-figure-1.gif)
+![Two opposing arrows between centralised hosts and LAN workstations. Pointing down: price/performance, graphical user interfaces, decentralisation. Pointing up: unified access to information, location transparency, location independence. Between them sit centralised hosts, LAN servers and LAN workstations](../../assets/oow94-figure-1.svg)
 
 **Figure 1:** _The forces separating application components over a network across machines_
 
@@ -145,7 +165,7 @@ A typical application has three basic components:
 1. _Business_ logic This is the part of the application that processes business tasks and manipulates data within the application.
 1. _Data Management_ logic This is the part of the application that stores and retrieves data into and from permanent storage (on a file system or on a database management system).
 
-![An end user at a workstation above three linked boxes, presentation logic, business logic and data management logic, with a database or file system below them](../../assets/oow94-figure-2.gif)
+![An end user at a workstation above three linked boxes, presentation logic, business logic and data management logic, with a database or file system below them](../../assets/oow94-figure-2.svg)
 
 **Figure 2:** _Application components_
 
@@ -223,7 +243,7 @@ The following models for designing distributed client/server architectures can b
 
 The following figure shows how each model distribute application components across client and server network nodes:
 
-![The three logic boxes across the top with five split points marked DP, RP, DTP, RDM and DDM. Below, five client and server bars show where the division falls in each model, the client growing and the server shrinking from top to bottom](../../assets/oow94-figure-3.gif)
+![The three logic boxes across the top with five split points marked DP, RP, DTP, RDM and DDM. Below, five client and server bars show where the division falls in each model, the client growing and the server shrinking from top to bottom](../../assets/oow94-figure-3.svg)
 
 **Figure 3:** _Client/server distribution models_
 
@@ -271,7 +291,7 @@ The great white hope of a vendor-neutral platform for supporting the DTP model i
 - _Distributed File Service_ (based on the _DECorum File System_, which is in turned based on the _Andrew File System_ or AFS)
 - _Local File Service_ (based on Transarc Episode)
 
-![The DCE architecture as a layered block: applications on top, then diskless support and other distributed services, the distributed file system, time, naming and other core services, remote procedure call, and threads with operating system and transport services at the base, flanked by security and management columns](../../assets/oow94-figure-4.gif)
+![The DCE architecture as a layered block: applications on top, then diskless support and other distributed services, the distributed file system, time, naming and other core services, remote procedure call, and threads with operating system and transport services at the base, flanked by security and management columns](../../assets/oow94-figure-4.svg)
 
 **Figure 4:** _DCE Architecture_
 

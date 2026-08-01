@@ -40,6 +40,28 @@ Both deploy to GitHub Pages on push to `main`. Wait for the run and check the SH
 note that a `cd` earlier in a compound command persists, so a `git push` labelled "spotlite" can
 easily push `cv` twice. Confirm with `git log origin/main..HEAD` per repo.
 
+### Original documents are kept in `cv` only
+
+The one place the two diverge on purpose. `cv` is a personal CV; `spotlite` is a public template
+and has no business shipping a personal archive. So **every original historical document — Word
+manuscripts, conference decks, scans, and the contemporaneous HTML exports — is committed to
+`cv/public/` and never to `spotlite/public/`.** `spotlite/public/` holds site chrome and the
+generated CV PDFs, nothing else.
+
+The articles reproducing those documents stay in **both**. In `spotlite` they simply carry no
+download link: the standalone `**[Download …]**` lines are dropped, and where a link sat inside a
+sentence the sentence keeps its words and loses the link. So these differ by design, and a
+base-normalised diff of them is _expected_ to show the download lines and nothing else:
+
+- `src/content/article/{auug-1993,auug-1994,openworld-1994,crypt-usenix91,suntech-1990}.md`
+- `src/content/page/education.md`
+
+`.claude/hooks/check-sibling-repo.py` holds both lists. It **refuses** a historical document
+written under `spotlite/`, and **downgrades to a warning** on the six files above — which does
+mean an unrelated drift in one of them is no longer caught, so diff them by hand when you touch
+them for another reason. It also exempts `public/site.webmanifest` and the two generated CV PDFs,
+which are each repo's own identity, and it normalises the **host** as well as the base path.
+
 ## Markdown extensions live in `src/utils/*-mdast.ts`
 
 Astro 7's Sätteri processor is configured in `astro.config.mjs` with

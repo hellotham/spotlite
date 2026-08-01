@@ -10,8 +10,6 @@ of the proceedings: the figures have been redrawn, the tables set as tables, and
 re-typed. The wording is unchanged. There is a
 [postscript from 2026](#postscript-thirty-five-years-on) at the end, which is not._
 
-**[Download the original scanned paper (PDF, 647 KB)](/spotlite/crypt-usenix91.pdf)**
-
 **Philip Leong** – University of Sydney \
 **Chris Tham** – State Bank of Victoria
 
@@ -1005,5 +1003,4 @@ things are done, and that nobody has any reason to think about.
 
 - [The paper as published](https://phwl.org/assets/papers/crypt_usenix91.pdf), from the site of
   my co-author Philip Leong.
-- [A scan of the proceedings](/spotlite/crypt-usenix91.pdf), which this reproduction was
-  transcribed from.
+- A scan of the proceedings, which this reproduction was transcribed from.

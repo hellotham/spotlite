@@ -13,6 +13,7 @@ a picture that comes out plausible and wrong. See references/wmf-traps.md.
 """
 
 import collections
+import math
 import re
 import struct
 import sys
@@ -74,9 +75,14 @@ class Brush:
 
 
 class Font:
-    def __init__(self, height, weight, italic, underline, face):
+    def __init__(self, height, weight, italic, underline, face, esc=0):
         self.height, self.weight = abs(height), weight
         self.italic, self.underline, self.face = italic, underline, face
+        # lfEscapement, tenths of a degree. MS Graph sets 2700 on the vertical axis titles.
+        # Ignored, the title is drawn horizontally at the anchor and then almost entirely
+        # removed by the narrow clip strip MS Graph sets around it -- the label simply is not
+        # in the picture, and nothing errors.
+        self.esc = esc
 
 
 class Converter:
@@ -89,6 +95,11 @@ class Converter:
         self.textcol, self.bkmode, self.align = '#000000', 2, 0
         self.pos = (0, 0)
         self.org, self.ext = (0, 0), (1000, 1000)
+        # MS Graph writes an inverted window: windowExt y is negative, so logical y grows
+        # UPWARD. Read literally, every chart comes out mirrored top-to-bottom -- axis labels
+        # descending, bars hanging off the wrong side -- with no error and a plausible picture.
+        # fbase maps logical y to SVG's y-down space:  y_svg = 2*orgY + extY - y_logical.
+        self.fbase = None
         self.polyfill = 1
         self.clip = None      # (x0, y0, x1, y1) in logical units
         self.stack = []
@@ -149,6 +160,12 @@ class Converter:
             p += size * 2
         return self
 
+    def fy(self, v):
+        return v if self.fbase is None else self.fbase - v
+
+    def setwin(self):
+        self.fbase = (2 * self.org[1] + self.ext[1]) if self.ext[1] < 0 else None
+
     def w(self, a, i):
         return struct.unpack_from('<h', self.d, a + i * 2)[0]
 
@@ -160,8 +177,10 @@ class Converter:
             return
         if func == SETWINDOWORG:
             self.org = (self.w(a, 1), self.w(a, 0))
+            self.setwin()
         elif func == SETWINDOWEXT:
             self.ext = (self.w(a, 1), self.w(a, 0))
+            self.setwin()
         elif func == SETBKMODE:
             self.bkmode = self.w(a, 0)
         elif func == SETPOLYFILLMODE:
@@ -172,6 +191,7 @@ class Converter:
             self.align = self.w(a, 0)
         elif func == INTERSECTCLIPRECT:
             b, r, t, l = (self.w(a, i) for i in range(4))
+            b, t = self.fy(b), self.fy(t)
             n_ = (min(l, r), min(t, b), max(l, r), max(t, b))
             c = self.clip
             self.clip = n_ if c is None else (max(c[0], n_[0]), max(c[1], n_[1]),
@@ -195,7 +215,8 @@ class Converter:
         elif func == CREATEFONTINDIRECT:
             face = self.d[a + 18: a + 18 + 32].split(b'\0')[0].decode('latin-1')
             flags = struct.unpack_from('<BBB', self.d, a + 10)
-            self.add(Font(self.w(a, 0), self.w(a, 4), flags[0], flags[1], face or 'Helvetica'))
+            self.add(Font(self.w(a, 0), self.w(a, 4), flags[0], flags[1],
+                          face or 'Helvetica', self.w(a, 2)))
         elif func == SELECTOBJECT:
             self.select(self.w(a, 0))
         elif func == DELETEOBJECT:
@@ -203,29 +224,33 @@ class Converter:
             if 0 <= i < len(self.objects):
                 self.objects[i] = None
         elif func == MOVETO:
-            self.pos = (self.w(a, 1), self.w(a, 0))
+            self.pos = (self.w(a, 1), self.fy(self.w(a, 0)))
         elif func == LINETO:
-            x, y = self.w(a, 1), self.w(a, 0)
+            x, y = self.w(a, 1), self.fy(self.w(a, 0))
             self.emit(f'<path d="M{self.pos[0]},{self.pos[1]} L{x},{y}" '
                       f'style="fill:none;{self.pen.stroke(1.0)}"/>',
                       [self.pos[0], x], [self.pos[1], y])
             self.pos = (x, y)
         elif func == RECTANGLE:
             b, r, t, l = (self.w(a, i) for i in range(4))
+            b, t = self.fy(b), self.fy(t)
             self.emit(f'<rect x="{min(l,r)}" y="{min(t,b)}" width="{abs(r-l)}" '
                       f'height="{abs(b-t)}" style="{self.style()}"/>', [l, r], [t, b])
         elif func == ROUNDRECT:
             eh, ew, b, r, t, l = (self.w(a, i) for i in range(6))
+            b, t = self.fy(b), self.fy(t)
             self.emit(f'<rect x="{min(l,r)}" y="{min(t,b)}" width="{abs(r-l)}" '
                       f'height="{abs(b-t)}" rx="{abs(ew)//2}" ry="{abs(eh)//2}" '
                       f'style="{self.style()}"/>', [l, r], [t, b])
         elif func == ELLIPSE:
             b, r, t, l = (self.w(a, i) for i in range(4))
+            b, t = self.fy(b), self.fy(t)
             self.emit(f'<ellipse cx="{(l+r)/2}" cy="{(t+b)/2}" rx="{abs(r-l)/2}" '
                       f'ry="{abs(b-t)/2}" style="{self.style()}"/>', [l, r], [t, b])
         elif func in (POLYGON, POLYLINE):
             cnt = self.w(a, 0)
-            pts = [(self.w(a, 1 + 2 * i), self.w(a, 2 + 2 * i)) for i in range(cnt)]
+            pts = [(self.w(a, 1 + 2 * i), self.fy(self.w(a, 2 + 2 * i)))
+                   for i in range(cnt)]
             self.poly(pts, func == POLYGON, func == POLYGON)
         elif func == POLYPOLYGON:
             npoly = self.w(a, 0)
@@ -233,7 +258,8 @@ class Converter:
             o = 1 + npoly
             segs = []
             for c in counts:
-                pts = [(self.w(a, o + 2 * i), self.w(a, o + 1 + 2 * i)) for i in range(c)]
+                pts = [(self.w(a, o + 2 * i), self.fy(self.w(a, o + 1 + 2 * i)))
+                       for i in range(c)]
                 o += 2 * c
                 if len(pts) > 1:
                     segs.append('M' + ' L'.join(f'{x},{y}' for x, y in pts) + ' Z')
@@ -246,8 +272,8 @@ class Converter:
         elif func == PIE:
             # yRadial2, xRadial2, yRadial1, xRadial1, bottom, right, top, left
             y2, x2, y1, x1, b, r, t, l = (self.w(a, i) for i in range(8))
+            y2, y1, b, t = self.fy(y2), self.fy(y1), self.fy(b), self.fy(t)
             cx, cy, rx, ry = (l + r) / 2, (t + b) / 2, abs(r - l) / 2, abs(b - t) / 2
-            import math
             def on_arc(px, py):
                 ang = math.atan2(py - cy, px - cx)
                 return cx + rx * math.cos(ang), cy + ry * math.sin(ang)
@@ -258,9 +284,10 @@ class Converter:
             a1 = math.atan2(ay - cy, ax - cx)
             a2 = math.atan2(by - cy, bx - cx)
             large = 1 if ((a1 - a2) % (2 * math.pi)) > math.pi else 0
+            sweep = 0 if self.fbase is None else 1     # a flipped window reverses the sweep
             self.emit(
                 f'<path d="M{cx:.1f},{cy:.1f} L{ax:.1f},{ay:.1f} '
-                f'A{rx:.1f},{ry:.1f} 0 {large} 0 {bx:.1f},{by:.1f} Z" '
+                f'A{rx:.1f},{ry:.1f} 0 {large} {sweep} {bx:.1f},{by:.1f} Z" '
                 f'style="{self.style()}"/>', [l, r], [t, b])
         elif func in (EXTTEXTOUT, TEXTOUT):
             self.text(func, a, n)
@@ -271,9 +298,10 @@ class Converter:
         if func == TEXTOUT:
             ln = self.w(a, 0)
             s = self.d[a + 2: a + 2 + ln]
-            y, x = self.w(a, 1 + (ln + 1) // 2), self.w(a, 2 + (ln + 1) // 2)
+            y, x = self.fy(self.w(a, 1 + (ln + 1) // 2)), self.w(a, 2 + (ln + 1) // 2)
         else:
-            y, x, ln, flags = self.w(a, 0), self.w(a, 1), self.w(a, 2), self.w(a, 3)
+            y, x, ln, flags = (self.fy(self.w(a, 0)), self.w(a, 1),
+                               self.w(a, 2), self.w(a, 3))
             off = 4 + (4 if (flags & 0x0006) else 0)     # ETO_OPAQUE/ETO_CLIPPED add a rect
             s = self.d[a + off * 2: a + off * 2 + ln]
         txt = s.decode('latin-1').replace('\r', ' ').replace('\n', ' ').rstrip('\0')
@@ -297,9 +325,21 @@ class Converter:
         wid = 0.5 * f.height * len(txt)
         x0 = {'start': x, 'middle': x - wid / 2, 'end': x - wid}[anchor]
         top = y if va == 0 else y - f.height * 0.78
-        self.emit(f'<text x="{x}" y="{y}"{dy} text-anchor="{anchor}" '
-                  f'style="{st}">{esc(txt)}</text>',
-                  [x0, x0 + wid], [top, top + f.height])
+        rot = ''
+        bx, by = [x0, x0 + wid], [top, top + f.height]
+        if f.esc:
+            # Escapement is measured against the device, so the window flip does not mirror
+            # it: a flipped window turns 2700 into SVG's rotate(270) == 90 degrees anti-
+            # clockwise, which is the bottom-to-top axis title the GIF exports show.
+            ang = (f.esc / 10.0) if self.fbase is not None else (-f.esc / 10.0)
+            rot = f' transform="rotate({ang:.1f} {x} {y})"'
+            r = math.radians(ang)
+            cs, sn = math.cos(r), math.sin(r)
+            pts = [(px - x, py - y) for px in bx for py in by]
+            bx = [x + px * cs - py * sn for px, py in pts]
+            by = [y + px * sn + py * cs for px, py in pts]
+        self.emit(f'<text x="{x}" y="{y}"{dy} text-anchor="{anchor}"{rot} '
+                  f'style="{st}">{esc(txt)}</text>', bx, by)
 
     def svg(self, title=''):
         ox, oy = self.org
