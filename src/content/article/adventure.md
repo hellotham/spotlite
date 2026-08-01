@@ -13,7 +13,11 @@ adventure, and when it reached MIT in the spring of 1977 the group who played it
 it by writing Zork and founding Infocom. For the five years to 1982, almost every game anyone
 wrote was another Advent.
 
-Rebuilding it cost me a few prompts each morning over breakfast, for a few days.
+I never played it. It was too big. No student was getting a program that size onto a shared
+university machine, for reasons that are further down this page.
+
+So this is not nostalgia. Rebuilding it cost me a few prompts each morning over breakfast, for a
+few days, and at the end of that I finally got to play it.
 
 ![Adventure at the starting location, with AI-generated art, the message panel, the compass and the inventory](../../assets/adventure.png)
 

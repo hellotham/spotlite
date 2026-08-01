@@ -24,8 +24,9 @@ PostScript interpreter, and, renamed to `.COM`, runs under MS-DOS directly as ma
 
 In 1990 there was a running conversation in the rec.puzzles newsgroup about programs that work
 in more than one language at a time. Someone posted one that ran in two, someone else managed
-three. So the three of us tried it. The file we ended up with was dated 15 February 1991 in its
-own header and had seven languages in it. We posted it to the newsgroup on 18 March,
+three. So the three of us tried it. My part was the shell script, which took an afternoon. The
+file we ended up with was dated 15 February 1991 in its own header and had seven languages in
+it. We posted it to the newsgroup on 18 March,
 from `metro`, a machine at Sydney University, back when Australian addresses still ended in
 `.oz.au`. I had that connection because I had broken into the university's password file, which
 is [a story in its own right](/spotlite/article/crypt-usenix91/#postscript-thirty-five-years-on).
