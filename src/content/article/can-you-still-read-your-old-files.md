@@ -26,14 +26,9 @@ looking like diagrams rather than like fax transmissions.
 ## The first problem: nothing can read them
 
 I have Microsoft PowerPoint installed. It is a current version, part of a Microsoft 365
-subscription that I pay for every month.
+subscription that I pay for.
 
 It cannot open my PowerPoint file.
-
-It does not say so, which is the part I object to. It does not report an error,
-or warn me that the format is too old, or offer to convert it. Asked to open the file, it finishes with no
-presentation open, as though nothing had been requested. It took a script to notice that. Anyone
-double-clicking the file would have assumed they had mis-typed the name.
 
 The file is `DCSATP.PPT`. It is 295 KB. Its own metadata is perfectly legible and tells me it was
 made with PowerPoint 4.0, that it holds 42 slides, that it was created on 17 August 1994, printed

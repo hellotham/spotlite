@@ -1,114 +1,131 @@
 ---
 title: 'Rogoweb: Rogue and Rog-O-Matic, alive in the browser'
-description: A port of the classic Unix game Rogue and its automated player Rog-O-Matic, coded using AI in about five days. Press START and enjoy the good old days.
+description: The 1980 game Rogue and the expert system built to play it, both compiled to WebAssembly and running side by side in a browser tab. The original C, not a rewrite.
 pubDate: 2026-07-05
 ---
 
-I am proud to showcase my latest AI vibe coding project: a port of the classic Unix game
-Rogue, and its automated player Rog-O-Matic, to the browser as a modern web application.
+I was halfway through my degree at the University of Sydney when Rogue appeared on the Unix
+machines in the Basser Department of Computer Science. It was an immediate hit with the
+students, and the university banned it from being played during the day. So we played after
+hours instead, at sessions we called Rogue parties. I was never much good at it compared with
+the others.
+
+Then we got hold of Rog-O-Matic, a program that played Rogue for you. Naturally we all started
+running it, and it ate so much processor time that the university banned it outright. We used to
+say we wished we had Unix computers of our own, so that we could play Rogue and Rog-O-Matic all
+day long.
+
+Forty years later, here they both are, running in a browser tab.
 
 ![Rogoweb running Rog-O-Matic in the browser: the VT100 terminal beside the live telemetry panel](../../assets/rogoweb.png)
 
-## Rogue parties
+## The game, and the program that played it
 
-As a bit of context, when I was about halfway through uni the game Rogue was introduced on our
-university minicomputer. It instantly became a hit amongst the students, and the university had
-to ban it from being played during the day, so we students would gather after hours and have
-"Rogue parties". To be honest, I was never really that good at the game compared to others, but
-I was part of the scene.
+Rogue is the 1980 dungeon crawler by Michael Toy, Glenn Wichman and Ken Arnold, and it is the
+game the roguelike genre is named after. The dungeon is drawn in punctuation. Rooms are dashes
+and pipes, corridors are rows of hashes, monsters are letters, and you are the `@`. There are
+twenty-six levels down to the Amulet of Yendor, the whole thing is generated fresh every game,
+and the monsters get nastier faster than you get better, which is why hardly anybody ever sees
+the Amulet.
 
-If you have not met it, Rogue is the 1980 dungeon crawler by Michael Toy, Glenn Wichman and Ken
-Arnold, and it is the game that gave the whole roguelike genre its name. You wander a dungeon
-drawn in text characters, and everything is generated fresh each time, so nobody can memorise
-their way to victory.
+Rog-O-Matic was begun at Carnegie Mellon in October 1981 by Michael Mauldin, Guy Jacobson,
+Andrew Appel and Leonard Hamey, as what they called a simple project, and it grew into 12,000
+lines of C against Rogue's 8,900. But it never saw inside the game at all. It watched the
+characters Rogue drew on the terminal, rebuilt the dungeon from them and typed keystrokes back,
+with its rules grouped into about a dozen "experts" in a fixed order of priority, so that the
+melee expert's decision to fight always overrode the object expert's call to pick something up.
 
-Then Rog-O-Matic was introduced, which is one of the earliest examples of AI actually working. It
-was an expert system that could train itself to play Rogue well, built at Carnegie Mellon in
-1981 by Michael Mauldin and his colleagues, and it was startlingly good. Their
-[1983 paper](https://kilthub.cmu.edu/articles/journal_contribution/Rog-O-Matic_a_belligerent_expert_system/6609137/1) reports that over three weeks it scored a higher median than any of the
-fifteen best human players at Carnegie Mellon and the University of Texas at Austin.
+It beat the humans. Between January and February 1983 it played 106 games of Rogue 5.2 at
+Carnegie Mellon, and against the fifteen best human players there it came out with the highest
+median score of the lot. Its best game scored 7,730, and in that one it found the Amulet and was
+killed carrying it back up to the surface.
 
-Naturally, we all started using it. Eventually Rog-O-Matic took up so much CPU time that it was
-banned from the university computers too. We students wished we had personal Unix computers, so
-that we could play Rogue and Rog-O-Matic all day long.
+It ran on a VAX 11/780, the same model of machine the Basser Department had hundreds of us
+sharing, which managed about a million instructions a second and was hundreds of times slower
+than the least capable Raspberry Pi. The paper puts Rog-O-Matic's cost at about thirty seconds
+of processor time for every dungeon level, with Rogue adding another fifteen for its side of the
+simulation, and that is one player on a machine of its own. Multiply it by every student who has
+just discovered the thing, and our ban explains itself.
 
 ## Not a reimplementation
 
-So, as a trip down memory lane, I have recreated the experience of running Rogue and Rog-O-Matic,
-in the browser.
+On Unix, `rogue` and `rogomatic` ran as two separate processes, with `rogomatic` launching
+`rogue` and talking to it through the standard input and output pipes. A browser has none of
+that machinery. There are no processes, no `fork`, and no pipes.
 
-I want to be clear about what this is, because
-[rebuilding every HP calculator](/spotlite/article/hellocalc/) was the exact opposite. Hello Calc is a
-reimplementation, with every function rewritten from scratch. This is not. This is the original
-source code, ported to run in WebAssembly as browser workers, with shared array buffers acting as
-the interprocess communication between the workers.
+When I [rebuilt every HP calculator](/spotlite/article/hellocalc/) I wrote every function again from
+scratch. Nothing of the sort has happened here. Both programs were compiled to WebAssembly with
+Emscripten and given a port of curses to talk to, `emcurses`, which is a port of `pdcurses`,
+which is itself a reimplementation of the original curses library. What changed is the plumbing
+underneath them.
 
-That last part is the whole problem in a sentence. On Unix, `rogue` and `rogomatic` ran as two
-separate processes, with `rogomatic` launching `rogue` and talking to it through the standard input
-and output pipes. A browser has none of that machinery. There are no processes, no `fork`, and
-no pipes.
+In place of the Unix pipe there is a ring buffer living in a `SharedArrayBuffer`, which is
+simply a fixed block of memory that two background workers can read and write in turn. The game
+runs in one worker, the bot runs in the other, and they talk to each other exactly as they
+always did, without either of them realising anything has changed.
 
-The answer was to compile both C codebases to WebAssembly with Emscripten, give them a port of
-curses to talk to, and then replace the Unix pipe with a ring buffer living in a
-`SharedArrayBuffer`, which is simply a fixed block of memory that two background workers can
-read and write in turn. The game runs in one worker, the bot runs in the other, and they talk to
-each other exactly as they did in 1981, without either of them realising anything has changed.
-
-The stats are handled the same way. Rather than scraping the terminal for the numbers, which is
-slow and error-prone, the C code writes its internal state straight into a corner of that shared
-memory, and the dashboard reads it from there.
+The telemetry comes out the other way about. Rog-O-Matic plays by scraping characters off the
+terminal, which was the only way to watch a game it was not allowed to modify. The dashboard is
+under no such restriction, so rather than scrape the screen for numbers that are slow and
+error-prone to recover, the C code writes its internal state straight into a corner of that
+shared memory and the dashboard reads it from there.
 
 ## How it was built
 
-The whole thing was coded using AI in about five days. I have written about the method at
-length in [chapter three of my book](https://christham.net/aidou/software.html), but the short
-version is that I described what I wanted rather than how to do it.
+It took five days. I have written about the method at length in
+[chapter three of my book](https://christham.net/aidou/software.html), but the whole of my brief
+here was one sentence: port `rogue` and `rogomatic` to run in the browser. To that I attached one
+constraint, that the original C should keep working, and one check, that the bot could still
+play a game through to the end. Everything above, the two workers and the ring buffer and the
+shared memory, came back as the answer to those three lines. I would never have thought of any
+of it.
 
-My intent was almost as short as the title of this article: port `rogue` and `rogomatic` to run in
-the browser. I added a constraint, that the original C code should keep working unchanged in
-spirit, and a check, that the bot could still run a game through to completion. The architecture
-you have just read about was the agent's answer, not mine. I would never have thought of it.
+It passed the check. It kept the constraint too, right up until I decided to break it.
 
-It was not all smooth. Using shared array buffers brought a great many race conditions, where
-one process sat waiting for the other and the game simply hung. Debugging those took real time
-and real expertise. I could guide the agent on some occasions, but in a good many cases it
-solved the problem itself once I asked it to go looking for race conditions. Along the way it
-also fixed bugs in the original source, which have been sitting there since the eighties.
+Shared array buffers brought race conditions with them, and the symptom was always the same. The
+game simply stopped, with one worker sitting waiting on the other for no reason I could see. Now
+and then I could point the agent at one. Mostly it found them itself, once I had asked it to go
+looking.
 
-The one place I overrode the agent's taste was the look. I coached it towards a VT100 terminal
-with proper DEC styling, because that is what these games ought to look like, and that is the
-only part of the design I shaped rather than delegated.
+The one thing I did not delegate was the look. It is a VT100, in the putty-coloured case DEC
+actually shipped, with the `digital` badge still in the corner.
 
 ## Teaching the bot to be better
 
-Once the port worked, I got greedy and asked the agent to improve the bot itself.
+Once the port worked, I got greedy and asked the agent to improve the bot itself. This is the
+point at which the original code stopped being original, and it was on purpose.
 
 Rog-O-Matic learns. It keeps a genetic pool of strategy weights and a long-term memory of how
 dangerous each monster has proven to be, and it evolves both across games, saving the results in
-your browser. A fresh install therefore plays rather badly and gets better the more it plays.
+your browser. A fresh install therefore plays badly and gets better the more it plays.
 
 To hand new players a bot that is already competent, the agent built an offline pretrainer and
 spread it across every CPU core, running separate populations that evolve in isolation and then
-merge under a rule that never allows a regression. That came out roughly ten times faster. It
-also went back into the 1981 C and repaired a raft of latent bugs and badly tuned heuristics,
-the most useful being a per-monster danger table, so that the bot stops cheerfully
-under-rating a dragon.
+merge under a rule that never lets the result come out worse. That trained about ten times
+faster than evolving one population on one core.
 
-Because Rogue is a game of chance, none of these changes could be judged on a single run. Each
-one had to be validated on win rate and average depth across a batch of games, which meant the
-agent had to play the game many times over to prove its own work. There is something rather
-pleasing about an AI grinding through hundreds of games to check whether it has improved a
-different AI from 1981.
+Then it went into the Rog-O-Matic source itself and retuned a set of judgements the original had
+left mis-set: when the bot heals, when it runs away, when it eats, and how much danger it
+credits each monster with, which is the one that stops it cheerfully under-rating a dragon. All
+of them had been sitting in that source since the eighties.
+
+Because Rogue is a game of chance, none of this could be judged on a single run. Each change had
+to hold up on win rate and average depth across a batch of games, so the agent spent most of its
+time playing Rogue a few hundred times over to find out whether it had improved a bot from the
+eighties.
+
+What came out of it plays rather better than I ever did, which I admit was never a demanding
+test.
 
 ## Have a go
 
-The app is live, and the source is on
-[GitHub](https://github.com/ChristineTham/rogoweb) if you would like to see how it fits
-together.
+[Play it here.](https://christham.net/rogoweb/) The source is on
+[GitHub](https://github.com/ChristineTham/rogoweb).
 
-Just press the START button and enjoy the good old days.
+We wanted Unix machines of our own so that nobody could stop us playing. What we have instead is
+a browser that will fake enough of Unix to run both programs at once.
 
-[Play it here.](https://christham.net/rogoweb/)
+Nobody is going to ban it this time.
 
 ## Sources
 
@@ -116,7 +133,8 @@ Just press the START button and enjoy the good old days.
   Rogue 5.4 and Rog-O-Matic XIV codebases and the notes on the port.
 - Michael Mauldin, Guy Jacobson, Andrew Appel and Leonard Hamey,
   [Rog-O-Matic: A Belligerent Expert System](https://kilthub.cmu.edu/articles/journal_contribution/Rog-O-Matic_a_belligerent_expert_system/6609137/1), Carnegie Mellon University
-  technical report CMU-CS-83-144, 1983.
+  technical report CMU-CS-83-144, 1983, for the architecture, the 106 games, the running cost
+  and the Amulet.
 - [Rogue](<https://en.wikipedia.org/wiki/Rogue_(video_game)>), Wikipedia, for the game's origins and its authors.
 - [Chapter 3 of AI-dō](https://christham.net/aidou/software.html), which describes how the
   port was built and what went wrong along the way.

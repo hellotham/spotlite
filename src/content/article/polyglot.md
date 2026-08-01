@@ -1,54 +1,41 @@
 ---
 title: 'hello polyglots: one program, eight languages'
-description: In 1991 three of us wrote a program that compiles and runs in eight languages. It is probably the first code I ever published, and it is still out there.
+description: A program three of us wrote in 1991 that compiles and runs in eight languages, and what became of it.
 pubDate: 1991-03-18
 ---
 
-_Filed under the date we posted it to Usenet, although the story of what became of it carries
-on well past that._
+_Filed under the date we posted it to Usenet. Most of what happened to it happened later._
 
-I would like to show you a program that three of us wrote back in 1991. It has had a far longer
-life than any of us imagined, and it is probably the first code I ever published.
+Kevin Bungard, Peter Lisle and I wrote a program in 1991 that compiles and runs in eight
+languages. Seven of them were there from the start and the eighth arrived ten years later. It
+is probably the first code I ever published.
 
-When you compile it and run it, it prints a single line:
+Compile it and run it and it prints a single line:
 
 ```text
 hello polyglots
 ```
 
-Which is not terribly impressive on its own, so here is the part that makes it worth writing
-about. You can compile that same file as COBOL, or as Pascal, or as Fortran, or C, or Perl, and
-you can also hand it to a PostScript interpreter, run it as a Unix shell script, or rename it
-to `.COM` and let MS-DOS run it directly as machine code. Eight languages in all, from a single
-file that does not change by so much as a byte between them, and it prints the same cheerful
-line every time.
-
-Kevin Bungard, Peter Lisle and I wrote it together, with thanks to George Janczuk, and
-thirty-five years later it is still the piece of my work that the most people have seen.
+The same file, not one byte different between them, compiles as COBOL, as Pascal, as Fortran
+and as C, runs as a Perl script and as a Unix shell script, prints when it is handed to a
+PostScript interpreter, and, renamed to `.COM`, runs under MS-DOS directly as machine code.
 
 ## Where it came from
 
-Back in 1990 there was a lovely, rambling conversation in the rec.puzzles newsgroup about
-programs that manage to work in more than one language at a time. Someone posted one that ran
-in two, someone else managed three, and we thought the whole idea was wonderful.
-
-So we decided to have a go ourselves, imagining it might fill an evening. It filled a good deal
-more than that, in the way these things tend to, and by the time we came up for air we had
-seven languages working.
-
-We posted it back to the newsgroup on 18 March 1991, from `metro`, a machine at Sydney
-University, back when Australian addresses still ended in `.oz.au`. I had that connection because of an
-entirely separate escapade, which is [a story in its own right](/spotlite/article/crypt-usenix91/#postscript-thirty-five-years-on).
+In 1990 there was a running conversation in the rec.puzzles newsgroup about programs that work
+in more than one language at a time. Someone posted one that ran in two, someone else managed
+three. So the three of us tried it. The file we ended up with was dated 15 February 1991 in its
+own header and had seven languages in it. We posted it to the newsgroup on 18 March,
+from `metro`, a machine at Sydney University, back when Australian addresses still ended in
+`.oz.au`. I had that connection because I had broken into the university's password file, which
+is [a story in its own right](/spotlite/article/crypt-usenix91/#postscript-thirty-five-years-on).
 
 ## How the trick works
 
-One of the commenters on our page summed it up more neatly than we ever managed: the code that
-is not meant for a particular compiler is simply commented out in that language.
-
-That really is the whole idea. It works because every language has its own way of marking a
-comment, and no two of them quite agree. So if you are careful enough, you can write a line
-that is a genuine instruction in one language, while every other compiler looks at the same
-characters and decides there is nothing there worth reading.
+The code that is not meant for a particular compiler is commented out in that language. That is
+the whole idea. It works because every language has its own way of marking a comment, and no
+two of them quite agree. So if you are careful enough, you can write a line that is a genuine
+instruction in one language while every other compiler reads the same characters as a comment.
 
 | Language    | What it ignores                                             |
 | ----------- | ----------------------------------------------------------- |
@@ -60,28 +47,19 @@ characters and decides there is nothing there worth reading.
 | Shell, Perl | Everything after a `#` on the line                          |
 
 You can watch it happening along the left edge of the listing below. Almost every line begins
-with a `C`, which is Fortran's cue to skip over it, and just to the right of that sits a `#`,
-which sends the shell and Perl on their way, followed by a `*` that quietly puts COBOL to
-sleep. The block of text at the top is the part we were proudest of, because it manages to be a
-valid comment in all eight languages at once while also serving as the documentation.
+with a `C`, which tells Fortran to skip it. Just to the right sits a `#`, which does the same
+for the shell and Perl, and then a `*`, which does it for COBOL. The block of text at the top
+is a valid comment in all eight languages at once and is also the documentation.
 
-As for the two blank lines at the very beginning, they are not there for the look of the thing.
-Take them out and it stops working.
+The two blank lines at the very beginning matter. Take them out and it stops working.
 
 ## The source
 
-Before you read it, a word about how it is printed here. This site normally colours code
-according to its language, but there is no sensible way to do that here. Any highlighter has to
-choose a single language, and it will then be wrong about the other seven.
-[Rosetta Code](https://rosettacode.org/wiki/Polyglot), which also reproduces the program, ran into exactly the same difficulty and gently warns its readers
-that the colouring comes out rather scrambled.
-
-So I have set it out below as plain text, just as the file is, which seemed the more honest way
-to show it. The program itself is in the public domain, so you are very welcome to it.
-
-One last thing worth mentioning: what follows is the current edition, the one with Perl in it
-and two dates in its header. We began with seven languages in 1991, and the story of how the
-eighth arrived comes a little further down.
+This site normally colours code according to its language. I have set the listing out as plain
+text instead, because any highlighter has to pick one language and will then be wrong about the
+other seven. It is the current edition, which is why the header carries two dates. The program
+is in the public domain, and the page it came from credits the three of us and thanks George
+Janczuk.
 
 ```text
 
@@ -172,56 +150,44 @@ C)pop%     program       polyglot.                                      *){*/}
 
 If you would like to run it, you can [download the original](https://ideology.com.au/polyglot/)
 and rename it to `polyglot.cob`, `.pas`, `.f77`, `.c`, `.ps`, `.sh`, `.com` or `.pl`, depending
-on which compiler you intend to point at it. One warning from the original notes still holds:
-if you move the file between Unix and Windows, do check that the line endings survive the
-journey.
+on which compiler you intend to point at it. If you move the file between Unix and Windows,
+check that the line endings survive.
 
-My favourite detail, and one that still makes me smile, is that the Unix `file` command, asked
-what this thing is, answers without a moment's hesitation: FORTRAN program text.
+The Unix `file` command, asked what this is, answers: FORTRAN program text.
 
 ## What happened next
 
-The replies began two days after we posted it, and they have never entirely stopped.
+On 26 August 1991 Peter Rigsbee ran it through Cray's own compilers under UNICOS. Fortran
+worked best, the C compiler issued a warning and worked anyway, and the Pascal compiler was
+"quite unhappy". In 2001 someone wrote in to report that it did not work on their Palm Pilot,
+and in 2009 a commenter calling himself DoubtfulBadger got it going on a mainframe by shifting
+the `end` of `end program` from column 12 to column 8.
 
-People started compiling it on machines we could only have dreamt of getting near. In August
-1991 it went through a Cray running UNICOS, where the Fortran was perfectly happy, the C
-compiler grumbled a little but worked, and the Pascal compiler was reported to be "quite
-unhappy". Someone ran it on a mainframe and needed only to nudge a single word into a different
-column to get it going. Someone else cheerfully reported running it on a digital clock. One
-kind soul tried it on a Palm Pilot and wrote in with the sad news that it did not work.
+A comment from 2004 says it ran on a digital clock.
 
-Then in January 2001 the page was linked from Slashdot and several thousand people arrived at
-once. A few of the comments left that day were signed with names that almost certainly did not
-belong to the people typing them. One, signed Richard Stallman, insisted that the proper name
-was GNU/Polyglot. Another, signed Larry Wall, asked simply, "And Perl?"
+In January 2001 the page was linked from Slashdot and several thousand people arrived at once.
+A comment on 25 January, signed Richard Stallman, said the proper name was GNU/Polyglot. One on
+16 February, signed Larry Wall, asked: "And Perl?"
 
-Kevin took that last one as a challenge. For the tenth anniversary he added Perl, taking us
-from seven languages to eight, and fixed the machine code so it would run happily on Win32 as
-well as DOS. Feeling pleased with ourselves by then, we entered it in the International
-Obfuscated C Code Contest. When the results were finally announced some months later, we had
-not been mentioned anywhere at all.
+Kevin answered the question. The tenth anniversary edition, dated 1 December 2001 in the
+header, took us from seven languages to eight and fixed the machine code to run on Win32 as
+well as DOS. We felt smug about it, so we entered it in the International Obfuscated C Code
+Contest. When the results were announced some months later, we were not mentioned.
 
 ## Still out there
 
 Rosetta Code keeps an entry for polyglot programs, and it opens by saying that the most famous
-example is ours, which I still find a little startling to read. It has found its way into the
-Hello World collections that people lovingly maintain, and it turns up in Linux distributions
-every now and again. That is quite all right by us, since we put it into the public domain and
-asked for nothing in return beyond a kind word.
+example is ours. In 2008 Wolfram Rösler wrote in to say he had linked it from his Hello World
+collection. Every so often somebody asks whether they can put it in a Linux distribution, and
+the answer has always been yes.
 
-The comments on the original page run from March 1991 all the way through to December 2023,
-which is thirty-two years of strangers stumbling across it, working out what on earth it does,
-and leaving a note behind them. Some are properly technical, though most are some variation on
-"you are all completely mad", which seems fair enough to me.
+The comments on the original page start two days after we posted it and run through to December
+2023, which is thirty-two years of strangers finding it and leaving a note. Some are technical.
+Most are a variation on "you are all completely mad", which seems fair enough to me.
 
-There is one from 2004 in which the writer says they rarely make predictions about software,
-but that this one will still be referenced in a hundred years' time. I would not go anywhere
-near that far. What I will say is that we wrote it for no better reason than that it seemed
-funny at the time, we gave it away without a second thought, and it has quietly outlasted very
-nearly everything else I have built since.
-
-If you make something small and strange, and put it somewhere people can find it, there is
-really no telling how long it might keep going.
+One from 16 December 2004, signed Alan, says he rarely makes predictions about software, "but
+this will exist and be referenced 100+ years from now". I would not go that far. It has
+outlasted nearly everything else I have built since.
 
 ## Sources
 
