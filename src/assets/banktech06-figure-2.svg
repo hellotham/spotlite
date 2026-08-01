@@ -1,4 +1,4 @@
-<svg version="1.2" viewBox="685 -418 25127 19274" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+<svg version="1.2" viewBox="1186 397 24028 17171" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
  <defs class="ClipPathGroup">
   <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
    <rect x="0" y="0" width="25400" height="19050"></rect>
@@ -105,276 +105,237 @@
   <g visibility="hidden">
    
   </g>
-  <g visibility="hidden">
-   
-  </g>
-  <g visibility="hidden">
-   
-  </g>
-  <g visibility="hidden">
-   
-  </g>
-  <g visibility="hidden">
-   
-  </g>
-  <g visibility="hidden">
-   
-  </g>
-  <g visibility="hidden">
-   
-  </g>
   
-   <g id="container-id19">
-    <g id="id19" class="Slide" clip-path="url(#presentation_clip_path)">
+   <g id="container-id13">
+    <g id="id13" class="Slide" clip-path="url(#presentation_clip_path)">
      
       
       
-       <g id="id516">
+       <g id="id118">
         
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1418" y="2288"><tspan font-family="Arial, sans-serif" font-size="1270px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="19976" fill="rgb(220,36,31)" stroke="none" style="white-space: pre">Explicit recognition of SOA in Retail </tspan></tspan><tspan class="TextPosition" x="1418" y="3699"><tspan font-family="Arial, sans-serif" font-size="1270px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="15178" fill="rgb(220,36,31)" stroke="none" style="white-space: pre">Banking Business Strategy</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2057" y="2146"><tspan font-family="Arial, sans-serif" font-size="1270px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="19481" fill="rgb(220,36,31)" stroke="none" style="white-space: pre">An Enterprise Architecture is a key </tspan></tspan><tspan class="TextPosition" x="2057" y="3557"><tspan font-family="Arial, sans-serif" font-size="1270px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="21815" fill="rgb(220,36,31)" stroke="none" style="white-space: pre">component of the Technology Strategy</tspan></tspan></tspan></text>
        </g>
       
       
-       <g id="id517">
+       <g id="id119">
         
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1833" y="8564"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3457" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enablers/Closing </tspan></tspan><tspan class="TextPosition" x="1868" y="9072"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3387" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">the Gap Strategy</tspan></tspan></tspan></text>
+        <path fill="rgb(235,231,145)" stroke="none" d="M 13200,13343 L 1666,13343 1666,8554 24733,8554 24733,13343 13200,13343 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 13200,13343 L 1666,13343 1666,8554 24733,8554 24733,13343 13200,13343 Z "></path>
        </g>
       
       
-       <g id="id518">
+       <g id="id120">
         
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1955" y="13305"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3221" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Design/Solution </tspan></tspan><tspan class="TextPosition" x="2554" y="13813"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2023" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Principles</tspan></tspan></tspan></text>
+        <path fill="rgb(0,175,124)" stroke="none" d="M 15814,10949 C 15814,11112 15685,11273 15441,11415 15196,11556 14844,11674 14420,11755 13996,11837 13516,11880 13027,11880 12537,11880 12057,11837 11633,11755 11209,11674 10857,11556 10612,11415 10368,11273 10239,11112 10239,10949 10239,10786 10368,10625 10612,10484 10857,10342 11209,10224 11633,10143 12057,10061 12537,10018 13026,10018 13516,10018 13996,10061 14420,10143 14844,10224 15196,10342 15441,10484 15685,10625 15814,10786 15814,10949 L 15814,10949 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15814,10949 C 15814,11112 15685,11273 15441,11415 15196,11556 14844,11674 14420,11755 13996,11837 13516,11880 13027,11880 12537,11880 12057,11837 11633,11755 11209,11674 10857,11556 10612,11415 10368,11273 10239,11112 10239,10949 10239,10786 10368,10625 10612,10484 10857,10342 11209,10224 11633,10143 12057,10061 12537,10018 13026,10018 13516,10018 13996,10061 14420,10143 14844,10224 15196,10342 15441,10484 15685,10625 15814,10786 15814,10949 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11505" y="11090"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3043" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">E. Manage IT for value</tspan></tspan></tspan></text>
        </g>
       
       
-       <g id="id519">
+       <g id="id121">
         
-        <path fill="rgb(204,0,0)" stroke="none" d="M 5719,8647 L 5498,9944 5498,7350 5719,8647 Z "></path>
+        <path fill="rgb(164,156,80)" stroke="none" d="M 1878,8819 L 5123,8819 5900,10949 5123,13080 1878,13080 1878,8819 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 1878,8819 L 5123,8819 5900,10949 5123,13080 1878,13080 1878,8819 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2722" y="10357"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2334" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Uplift Delivery </tspan></tspan><tspan class="TextPosition" x="2847" y="10865"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2084" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">capabilities, </tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="2799" y="11373"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2181" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">in key areas, </tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="2587" y="11881"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2605" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">to best in class </tspan></tspan></tspan></text>
        </g>
       
       
-       <g id="id520">
+       <g id="id122">
         
-        <path fill="rgb(204,0,0)" stroke="none" d="M 5719,13643 L 5498,14940 5498,12346 5719,13643 Z "></path>
+        <path fill="rgb(235,231,145)" stroke="none" d="M 13200,17087 L 1666,17087 1666,13898 24733,13898 24733,17087 13200,17087 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 13200,17087 L 1666,17087 1666,13898 24733,13898 24733,17087 13200,17087 Z "></path>
        </g>
       
       
-       <g id="id521">
+       <g id="id123">
         
-        <path fill="rgb(119,119,119)" stroke="none" d="M 8298,16360 L 6335,16360 6335,11756 10260,11756 10260,16360 8298,16360 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 8298,16360 L 6335,16360 6335,11756 10260,11756 10260,16360 8298,16360 Z "></path>
-        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="6585" y="12225"><tspan id="id837.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="7538" y="12239"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="7538" y="12663"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
+        <path fill="rgb(164,156,80)" stroke="none" d="M 1878,14168 L 5123,14168 5900,15498 5123,16829 1878,16829 1878,14168 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 1878,14168 L 5123,14168 5900,15498 5123,16829 1878,16829 1878,14168 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2153" y="15160"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3472" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Manage IT differently </tspan></tspan><tspan class="TextPosition" x="2327" y="15668"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3125" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">to enable business </tspan></tspan><tspan class="TextPosition" x="2665" y="16176"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2449" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">transformation</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id124">
         
-         <g id="bullet-char-id837.bp" class="BulletChar">
-          <g transform="translate(6585,12225)" fill="rgb(119,119,119)" stroke="none">
+        <path fill="rgb(0,175,124)" stroke="none" d="M 8229,16695 L 6324,16695 6324,14301 10134,14301 10134,16695 8229,16695 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 8229,16695 L 6324,16695 6324,14301 10134,14301 10134,16695 8229,16695 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6620" y="15427"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3218" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">A. Position IT as part of </tspan></tspan><tspan class="TextPosition" x="7461" y="15851"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1793" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">the Business</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id125">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 17738,16695 L 15601,16695 15601,14301 19874,14301 19874,16695 17738,16695 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 17738,16695 L 15601,16695 15601,14301 19874,14301 19874,16695 17738,16695 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15913" y="15003"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3650" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">C. Share accountability for </tspan></tspan><tspan class="TextPosition" x="16377" y="15427"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2978" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">creating a technology </tspan></tspan><tspan class="TextPosition" x="16545" y="15851"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2641" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">profile that enables </tspan></tspan><tspan class="TextPosition" x="16008" y="16275"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3715" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">business model innovation</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id126">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 13061,16695 L 10944,16695 10944,14301 15177,14301 15177,16695 13061,16695 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 13061,16695 L 10944,16695 10944,14301 15177,14301 15177,16695 13061,16695 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11228" y="15427"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3666" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">B. Break out of our vicious </tspan></tspan><tspan class="TextPosition" x="11988" y="15851"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2402" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">investment cycle </tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id127">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 19801,9884 C 19801,10048 19672,10209 19428,10351 19183,10492 18831,10610 18407,10692 17983,10774 17503,10817 17014,10817 16524,10817 16044,10774 15620,10692 15196,10610 14844,10492 14599,10351 14355,10209 14226,10048 14226,9884 14226,9720 14355,9559 14599,9418 14844,9276 15196,9158 15620,9076 16044,8994 16524,8951 17014,8951 17503,8951 17983,8994 18407,9076 18831,9158 19183,9276 19428,9418 19672,9559 19801,9720 19801,9884 L 19801,9884 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 19801,9884 C 19801,10048 19672,10209 19428,10351 19183,10492 18831,10610 18407,10692 17983,10774 17503,10817 17014,10817 16524,10817 16044,10774 15620,10692 15196,10610 14844,10492 14599,10351 14355,10209 14226,10048 14226,9884 14226,9720 14355,9559 14599,9418 14844,9276 15196,9158 15620,9076 16044,8994 16524,8951 17014,8951 17503,8951 17983,8994 18407,9076 18831,9158 19183,9276 19428,9418 19672,9559 19801,9720 19801,9884 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15420" y="9813"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3186" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">C. Extend and optimise </tspan></tspan><tspan class="TextPosition" x="15716" y="10237"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2594" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sourcing approach</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id128">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 12110,12014 C 12110,12178 11981,12339 11737,12481 11492,12622 11140,12740 10716,12822 10292,12904 9812,12947 9323,12947 8833,12947 8353,12904 7929,12822 7505,12740 7153,12622 6908,12481 6664,12339 6535,12178 6535,12014 6535,11850 6664,11689 6908,11548 7153,11406 7505,11288 7929,11206 8353,11124 8833,11081 9322,11081 9812,11081 10292,11124 10716,11206 11140,11288 11492,11406 11737,11548 11981,11689 12110,11850 12110,12014 L 12110,12014 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12110,12014 C 12110,12178 11981,12339 11737,12481 11492,12622 11140,12740 10716,12822 10292,12904 9812,12947 9323,12947 8833,12947 8353,12904 7929,12822 7505,12740 7153,12622 6908,12481 6664,12339 6535,12178 6535,12014 6535,11850 6664,11689 6908,11548 7153,11406 7505,11288 7929,11206 8353,11124 8833,11081 9322,11081 9812,11081 10292,11124 10716,11206 11140,11288 11492,11406 11737,11548 11981,11689 12110,11850 12110,12014 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8346" y="11731"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1953" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">B. Create high </tspan></tspan><tspan class="TextPosition" x="7729" y="12155"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3186" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">performing and flexible </tspan></tspan><tspan class="TextPosition" x="8634" y="12579"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1377" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">workforce</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id129">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 12110,9884 C 12110,10048 11981,10209 11737,10351 11492,10492 11140,10610 10716,10692 10292,10774 9812,10817 9323,10817 8833,10817 8353,10774 7929,10692 7505,10610 7153,10492 6908,10351 6664,10209 6535,10048 6535,9884 6535,9720 6664,9559 6908,9418 7153,9276 7505,9158 7929,9076 8353,8994 8833,8951 9322,8951 9812,8951 10292,8994 10716,9076 11140,9158 11492,9276 11737,9418 11981,9559 12110,9720 12110,9884 L 12110,9884 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12110,9884 C 12110,10048 11981,10209 11737,10351 11492,10492 11140,10610 10716,10692 10292,10774 9812,10817 9323,10817 8833,10817 8353,10774 7929,10692 7505,10610 7153,10492 6908,10351 6664,10209 6535,10048 6535,9884 6535,9720 6664,9559 6908,9418 7153,9276 7505,9158 7929,9076 8353,8994 8833,8951 9322,8951 9812,8951 10292,8994 10716,9076 11140,9158 11492,9276 11737,9418 11981,9559 12110,9720 12110,9884 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7681" y="9601"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3282" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">A. Significantly improve </tspan></tspan><tspan class="TextPosition" x="7673" y="10025"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3299" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">solution delivery across </tspan></tspan><tspan class="TextPosition" x="8626" y="10449"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1393" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">the region</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id130">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 19801,12014 C 19801,12178 19672,12339 19428,12481 19183,12622 18831,12740 18407,12822 17983,12904 17503,12947 17014,12947 16524,12947 16044,12904 15620,12822 15196,12740 14844,12622 14599,12481 14355,12339 14226,12178 14226,12014 14226,11850 14355,11689 14599,11548 14844,11406 15196,11288 15620,11206 16044,11124 16524,11081 17014,11081 17503,11081 17983,11124 18407,11206 18831,11288 19183,11406 19428,11548 19672,11689 19801,11850 19801,12014 L 19801,12014 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 19801,12014 C 19801,12178 19672,12339 19428,12481 19183,12622 18831,12740 18407,12822 17983,12904 17503,12947 17014,12947 16524,12947 16044,12904 15620,12822 15196,12740 14844,12622 14599,12481 14355,12339 14226,12178 14226,12014 14226,11850 14355,11689 14599,11548 14844,11406 15196,11288 15620,11206 16044,11124 16524,11081 17014,11081 17503,11081 17983,11124 18407,11206 18831,11288 19183,11406 19428,11548 19672,11689 19801,11850 19801,12014 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15669" y="11943"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2689" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">D. Improve regional </tspan></tspan><tspan class="TextPosition" x="15492" y="12367"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3042" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">infrastructure delivery</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id131">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" stroke-dasharray="35,35" d="M 13099,13079 L 6323,13079 6323,8819 19874,8819 19874,13079 13099,13079 Z "></path>
+       </g>
+      
+      
+       <g id="id132">
+        
+        <path fill="rgb(235,231,145)" stroke="none" d="M 13200,8021 L 1666,8021 1666,4829 24733,4829 24733,8021 13200,8021 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 13200,8021 L 1666,8021 1666,4829 24733,4829 24733,8021 13200,8021 Z "></path>
+       </g>
+      
+      
+       <g id="id133">
+        
+        <path fill="rgb(164,156,80)" stroke="none" d="M 1878,5092 L 5123,5092 5900,6422 5123,7752 1878,7752 1878,5092 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 1878,5092 L 5123,5092 5900,6422 5123,7752 1878,7752 1878,5092 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2183" y="6083"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3413" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Transform Platforms </tspan></tspan><tspan class="TextPosition" x="2327" y="6591"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3125" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">to enable business </tspan></tspan><tspan class="TextPosition" x="3214" y="7099"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1350" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">strategy</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id134">
+        
+        <path fill="rgb(238,234,162)" stroke="none" d="M 2566,9240 C 2566,9296 2551,9351 2523,9400 2495,9449 2455,9489 2407,9517 2359,9545 2304,9560 2248,9560 2192,9560 2137,9545 2089,9517 2041,9489 2001,9449 1973,9400 1945,9351 1930,9296 1930,9240 1930,9184 1945,9129 1973,9080 2001,9031 2041,8991 2089,8963 2137,8935 2192,8920 2248,8920 2304,8920 2359,8935 2407,8963 2455,8991 2495,9031 2523,9080 2551,9129 2566,9184 2566,9240 L 2566,9240 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 2566,9240 C 2566,9296 2551,9351 2523,9400 2495,9449 2455,9489 2407,9517 2359,9545 2304,9560 2248,9560 2192,9560 2137,9545 2089,9517 2041,9489 2001,9449 1973,9400 1945,9351 1930,9296 1930,9240 1930,9184 1945,9129 1973,9080 2001,9031 2041,8991 2089,8963 2137,8935 2192,8920 2248,8920 2304,8920 2359,8935 2407,8963 2455,8991 2495,9031 2523,9080 2551,9129 2566,9184 2566,9240 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2151" y="9409"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="193" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">2</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id135">
+        
+        <path fill="rgb(238,234,162)" stroke="none" d="M 2566,14489 C 2566,14545 2551,14600 2523,14649 2495,14697 2455,14738 2407,14766 2359,14794 2304,14809 2248,14809 2192,14809 2137,14794 2089,14766 2041,14738 2001,14697 1973,14649 1945,14600 1930,14545 1930,14489 1930,14432 1945,14377 1973,14328 2001,14280 2041,14239 2089,14211 2137,14183 2192,14168 2248,14168 2304,14168 2359,14183 2407,14211 2455,14239 2495,14280 2523,14328 2551,14377 2566,14432 2566,14489 L 2566,14489 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 2566,14489 C 2566,14545 2551,14600 2523,14649 2495,14697 2455,14738 2407,14766 2359,14794 2304,14809 2248,14809 2192,14809 2137,14794 2089,14766 2041,14738 2001,14697 1973,14649 1945,14600 1930,14545 1930,14489 1930,14432 1945,14377 1973,14328 2001,14280 2041,14239 2089,14211 2137,14183 2192,14168 2248,14168 2304,14168 2359,14183 2407,14211 2455,14239 2495,14280 2523,14328 2551,14377 2566,14432 2566,14489 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2151" y="14657"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="193" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">3</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id136">
+        
+        <path fill="rgb(238,234,162)" stroke="none" d="M 2566,5417 C 2566,5473 2551,5528 2523,5577 2495,5626 2455,5666 2407,5694 2359,5722 2304,5737 2248,5737 2192,5737 2137,5722 2089,5694 2041,5666 2001,5626 1973,5577 1945,5528 1930,5473 1930,5417 1930,5361 1945,5306 1973,5257 2001,5208 2041,5168 2089,5140 2137,5112 2192,5097 2248,5097 2304,5097 2359,5112 2407,5140 2455,5168 2495,5208 2523,5257 2551,5306 2566,5361 2566,5417 L 2566,5417 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 2566,5417 C 2566,5473 2551,5528 2523,5577 2495,5626 2455,5666 2407,5694 2359,5722 2304,5737 2248,5737 2192,5737 2137,5722 2089,5694 2041,5666 2001,5626 1973,5577 1945,5528 1930,5473 1930,5417 1930,5361 1945,5306 1973,5257 2001,5208 2041,5168 2089,5140 2137,5112 2192,5097 2248,5097 2304,5097 2359,5112 2407,5140 2455,5168 2495,5208 2523,5257 2551,5306 2566,5361 2566,5417 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2151" y="5586"><tspan font-family="Arial Narrow, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="193" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">1</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id137">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 8259,7620 L 6354,7620 6354,5226 10164,5226 10164,7620 8259,7620 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 8259,7620 L 6354,7620 6354,5226 10164,5226 10164,7620 8259,7620 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6795" y="6140"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2929" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">A. Move to integrated </tspan></tspan><tspan class="TextPosition" x="6826" y="6564"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3122" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">enterprise architecture </tspan></tspan><tspan class="TextPosition" x="6914" y="6988"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2947" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">with new capabilities </tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id138">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 17998,7620 L 16091,7620 16091,5226 19905,5226 19905,7620 17998,7620 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 17998,7620 L 16091,7620 16091,5226 19905,5226 19905,7620 17998,7620 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="16245" y="6352"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">C. Optimise platform cost </tspan></tspan><tspan class="TextPosition" x="17462" y="6776"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1329" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">efficiency</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id139">
+        
+        <path fill="rgb(0,175,124)" stroke="none" d="M 13127,7620 L 11010,7620 11010,5226 15243,5226 15243,7620 13127,7620 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 13127,7620 L 11010,7620 11010,5226 15243,5226 15243,7620 13127,7620 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11606" y="6352"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3042" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">B. Maintain stable and </tspan></tspan><tspan class="TextPosition" x="12094" y="6776"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2322" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">secure platforms</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id140">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="21512" y="4689"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" text-decoration="underline" lengthAdjust="spacingAndGlyphs" textLength="1745" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Key Benefits</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="5947"><tspan id="id772.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="5961"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2546" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enabling business </tspan></tspan><tspan class="TextPosition" x="20570" y="6385"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1361" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">strategies</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="6795"><tspan id="id773.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="6809"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3411" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Addressing current risks</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="7219"><tspan id="id774.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="7233"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3633" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Cost reduction (short term </tspan></tspan><tspan class="TextPosition" x="20570" y="7657"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2001" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">and long term)</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="9763"><tspan id="id775.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="9777"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3314" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enablement of business </tspan></tspan><tspan class="TextPosition" x="20570" y="10201"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3282" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">transformation program</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="10611"><tspan id="id776.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="10625"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2993" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Closer alignment with </tspan></tspan><tspan class="TextPosition" x="20570" y="11049"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1249" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">business</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="11459"><tspan id="id777.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="11473"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2721" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Cost optimisation &amp; </tspan></tspan><tspan class="TextPosition" x="20570" y="11897"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1810" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">transparency</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="12307"><tspan id="id778.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="12321"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3603" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Increased responsiveness </tspan></tspan><tspan class="TextPosition" x="20570" y="12745"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1922" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">and flexibility </tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="13155"><tspan id="id779.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="13169"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3252" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Improved service levels</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="14851"><tspan id="id780.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="14865"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2882" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Increased innovation</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="15275"><tspan id="id781.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="15289"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3058" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enablement of flexible </tspan></tspan><tspan class="TextPosition" x="20570" y="15713"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3571" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">business operating model</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20319" y="16123"><tspan id="id782.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20570" y="16137"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3105" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Higher value/return for </tspan></tspan><tspan class="TextPosition" x="20570" y="16561"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1681" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">investments</tspan></tspan></tspan></text>
+        
+         <g id="bullet-char-id782.bp" class="BulletChar">
+          <g transform="translate(20319,16123)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 8263,16325 L 6300,16325 6300,11721 10225,11721 10225,16325 8263,16325 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 8263,16325 L 6300,16325 6300,11721 10225,11721 10225,16325 8263,16325 Z "></path>
-        <text class="SVGTextShape"><tspan id="id837" class="ListItem"><tspan class="TextPosition" x="6550" y="12190"><tspan id="id837.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="7503" y="12204"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="7503" y="12628"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id837.bp" class="BulletChar">
-          <g transform="translate(6550,12190)" fill="rgb(0,0,0)" stroke="none">
+         <g id="bullet-char-id781.bp" class="BulletChar">
+          <g transform="translate(20319,15275)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-        
-       </g>
-      
-      
-       <g id="id522">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 12926,16360 L 10961,16360 10961,11756 14890,11756 14890,16360 12926,16360 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 12926,16360 L 10961,16360 10961,11756 14890,11756 14890,16360 12926,16360 Z "></path>
-        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="11211" y="12225"><tspan id="id838.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="12164" y="12239"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="12164" y="12663"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id838.bp" class="BulletChar">
-          <g transform="translate(11211,12225)" fill="rgb(119,119,119)" stroke="none">
+         <g id="bullet-char-id780.bp" class="BulletChar">
+          <g transform="translate(20319,14851)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 12891,16325 L 10926,16325 10926,11721 14855,11721 14855,16325 12891,16325 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 12891,16325 L 10926,16325 10926,11721 14855,11721 14855,16325 12891,16325 Z "></path>
-        <text class="SVGTextShape"><tspan id="id838" class="ListItem"><tspan class="TextPosition" x="11176" y="12190"><tspan id="id838.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="12129" y="12204"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="12129" y="12628"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id838.bp" class="BulletChar">
-          <g transform="translate(11176,12190)" fill="rgb(0,0,0)" stroke="none">
+         <g id="bullet-char-id779.bp" class="BulletChar">
+          <g transform="translate(20319,13155)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-        
-       </g>
-      
-      
-       <g id="id523">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 17605,16360 L 15640,16360 15640,11756 19569,11756 19569,16360 17605,16360 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 17605,16360 L 15640,16360 15640,11756 19569,11756 19569,16360 17605,16360 Z "></path>
-        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="15890" y="12225"><tspan id="id839.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16843" y="12239"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1713" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Molecule and </tspan></tspan><tspan class="TextPosition" x="16843" y="12663"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2466" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">customer focus lifts </tspan></tspan><tspan class="TextPosition" x="16843" y="13087"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1873" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">our game from </tspan></tspan><tspan class="TextPosition" x="16843" y="13511"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1794" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">single product </tspan></tspan><tspan class="TextPosition" x="16843" y="13935"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2387" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">focus and capacity</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="15890" y="14345"><tspan id="id840.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16843" y="14359"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1714" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">≠ cross sales</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="15890" y="14769"><tspan id="id841.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16843" y="14783"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2146" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Default molecule </tspan></tspan><tspan class="TextPosition" x="16843" y="15207"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2066" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">for mass market</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="15890" y="15617"><tspan id="id842.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16843" y="15631"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2130" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Toolset needs to </tspan></tspan><tspan class="TextPosition" x="16843" y="16055"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2194" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">support molecule </tspan></tspan><tspan class="TextPosition" x="16843" y="16479"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="673" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">sales</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id842.bp" class="BulletChar">
-          <g transform="translate(15890,15617)" fill="rgb(119,119,119)" stroke="none">
+         <g id="bullet-char-id778.bp" class="BulletChar">
+          <g transform="translate(20319,12307)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-         <g id="bullet-char-id841.bp" class="BulletChar">
-          <g transform="translate(15890,14769)" fill="rgb(119,119,119)" stroke="none">
+         <g id="bullet-char-id777.bp" class="BulletChar">
+          <g transform="translate(20319,11459)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-         <g id="bullet-char-id840.bp" class="BulletChar">
-          <g transform="translate(15890,14345)" fill="rgb(119,119,119)" stroke="none">
+         <g id="bullet-char-id776.bp" class="BulletChar">
+          <g transform="translate(20319,10611)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-         <g id="bullet-char-id839.bp" class="BulletChar">
-          <g transform="translate(15890,12225)" fill="rgb(119,119,119)" stroke="none">
+         <g id="bullet-char-id775.bp" class="BulletChar">
+          <g transform="translate(20319,9763)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 17570,16325 L 15605,16325 15605,11721 19534,11721 19534,16325 17570,16325 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 17570,16325 L 15605,16325 15605,11721 19534,11721 19534,16325 17570,16325 Z "></path>
-        <text class="SVGTextShape"><tspan id="id839" class="ListItem"><tspan class="TextPosition" x="15855" y="12190"><tspan id="id839.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16808" y="12204"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1713" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Molecule and </tspan></tspan><tspan class="TextPosition" x="16808" y="12628"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2466" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">customer focus lifts </tspan></tspan><tspan class="TextPosition" x="16808" y="13052"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1873" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">our game from </tspan></tspan><tspan class="TextPosition" x="16808" y="13476"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1794" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">single product </tspan></tspan><tspan class="TextPosition" x="16808" y="13900"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2387" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">focus and capacity</tspan></tspan></tspan><tspan id="id840" class="ListItem"><tspan class="TextPosition" x="15855" y="14310"><tspan id="id840.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16808" y="14324"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1714" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">≠ cross sales</tspan></tspan></tspan><tspan id="id841" class="ListItem"><tspan class="TextPosition" x="15855" y="14734"><tspan id="id841.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16808" y="14748"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2146" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Default molecule </tspan></tspan><tspan class="TextPosition" x="16808" y="15172"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2066" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">for mass market</tspan></tspan></tspan><tspan id="id842" class="ListItem"><tspan class="TextPosition" x="15855" y="15582"><tspan id="id842.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16808" y="15596"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2130" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Toolset needs to </tspan></tspan><tspan class="TextPosition" x="16808" y="16020"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2194" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">support molecule </tspan></tspan><tspan class="TextPosition" x="16808" y="16444"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="673" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sales</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id842.bp" class="BulletChar">
-          <g transform="translate(15855,15582)" fill="rgb(0,0,0)" stroke="none">
+         <g id="bullet-char-id774.bp" class="BulletChar">
+          <g transform="translate(20319,7219)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-         <g id="bullet-char-id841.bp" class="BulletChar">
-          <g transform="translate(15855,14734)" fill="rgb(0,0,0)" stroke="none">
+         <g id="bullet-char-id773.bp" class="BulletChar">
+          <g transform="translate(20319,6795)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
-         <g id="bullet-char-id840.bp" class="BulletChar">
-          <g transform="translate(15855,14310)" fill="rgb(0,0,0)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-         <g id="bullet-char-id839.bp" class="BulletChar">
-          <g transform="translate(15855,12190)" fill="rgb(0,0,0)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-       </g>
-      
-      
-       <g id="id524">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 22271,16360 L 20306,16360 20306,11756 24236,11756 24236,16360 22271,16360 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 22271,16360 L 20306,16360 20306,11756 24236,11756 24236,16360 22271,16360 Z "></path>
-        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="20556" y="12225"><tspan id="id843.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20803" y="12239"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="20803" y="12663"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id843.bp" class="BulletChar">
-          <g transform="translate(20556,12225)" fill="rgb(119,119,119)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 22236,16325 L 20271,16325 20271,11721 24201,11721 24201,16325 22236,16325 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 22236,16325 L 20271,16325 20271,11721 24201,11721 24201,16325 22236,16325 Z "></path>
-        <text class="SVGTextShape"><tspan id="id843" class="ListItem"><tspan class="TextPosition" x="20521" y="12190"><tspan id="id843.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20768" y="12204"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="20768" y="12628"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id843.bp" class="BulletChar">
-          <g transform="translate(20521,12190)" fill="rgb(0,0,0)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-       </g>
-      
-      
-       <g id="id525">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 6335,3760 L 24337,3760 24337,4992 6335,4992 6335,3760 6335,3760 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 6335,3760 L 24337,3760 24337,4992 6335,4992 6335,3760 6335,3760 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6585" y="4243"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="3475" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in confidence]</tspan></tspan></tspan></text>
-        <path fill="rgb(234,234,234)" stroke="none" d="M 6300,3725 L 24302,3725 24302,4957 6300,4957 6300,3725 6300,3725 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 6300,3725 L 24302,3725 24302,4957 6300,4957 6300,3725 6300,3725 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6550" y="4208"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="3475" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in confidence]</tspan></tspan></tspan></text>
-       </g>
-      
-      
-       <g id="id526">
-        
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2561" y="4208"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2305" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Retail Bank </tspan></tspan><tspan class="TextPosition" x="2866" y="4716"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1694" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Purpose</tspan></tspan></tspan></text>
-       </g>
-      
-      
-       <g id="id527">
-        
-        <path fill="rgb(204,0,0)" stroke="none" d="M 5723,4114 L 5498,4926 5498,3302 5723,4114 Z "></path>
-       </g>
-      
-      
-       <g id="id528">
-        
-        <path fill="rgb(255,255,255)" stroke="none" d="M 23362,1044 L 21404,1044 21404,109 25319,109 25319,1044 23362,1044 Z "></path>
-        <path fill="none" stroke="rgb(255,255,255)" stroke-width="18" stroke-linejoin="miter" d="M 23362,1044 L 21404,1044 21404,109 25319,109 25319,1044 23362,1044 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="21609" y="746"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3505" fill="rgb(255,255,255)" stroke="none" style="white-space: pre">Work in Progress</tspan></tspan></tspan></text>
-        <path fill="rgb(234,234,234)" stroke="none" d="M 23327,1009 L 21369,1009 21369,74 25284,74 25284,1009 23327,1009 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 23327,1009 L 21369,1009 21369,74 25284,74 25284,1009 23327,1009 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="21574" y="711"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3505" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Work in Progress</tspan></tspan></tspan></text>
-       </g>
-      
-      
-       <g id="id529">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 6336,5361 L 15135,5361 15135,6791 6336,6791 6336,5361 6336,5361 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 6336,5361 L 15135,5361 15135,6791 6336,6791 6336,5361 6336,5361 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6586" y="6217"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3779" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in confidence]</tspan></tspan></tspan></text>
-        <path fill="rgb(234,234,234)" stroke="none" d="M 6301,5326 L 15100,5326 15100,6756 6301,6756 6301,5326 6301,5326 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 6301,5326 L 15100,5326 15100,6756 6301,6756 6301,5326 6301,5326 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6551" y="6182"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3779" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in confidence]</tspan></tspan></tspan></text>
-       </g>
-      
-      
-       <g id="id530">
-        
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2279" y="6254"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2869" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Differentiating </tspan></tspan><tspan class="TextPosition" x="2690" y="6762"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2047" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Strategies</tspan></tspan></tspan></text>
-       </g>
-      
-      
-       <g id="id531">
-        
-        <path fill="rgb(204,0,0)" stroke="none" d="M 5719,6031 L 5498,6728 5498,5335 5719,6031 Z "></path>
-       </g>
-      
-      
-       <g id="id532">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 15535,5334 L 24334,5334 24334,6764 15535,6764 15535,5334 15535,5334 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 15535,5334 L 24334,5334 24334,6764 15535,6764 15535,5334 15535,5334 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15785" y="6190"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3779" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in confidence]</tspan></tspan></tspan></text>
-        <path fill="rgb(234,234,234)" stroke="none" d="M 15500,5299 L 24299,5299 24299,6729 15500,6729 15500,5299 15500,5299 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 15500,5299 L 24299,5299 24299,6729 15500,6729 15500,5299 15500,5299 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15750" y="6155"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3779" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in confidence]</tspan></tspan></tspan></text>
-       </g>
-      
-      
-       <g id="id533">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 8298,11363 L 6335,11363 6335,7160 10260,7160 10260,11363 8298,11363 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 8298,11363 L 6335,11363 6335,7160 10260,7160 10260,11363 8298,11363 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7490" y="7643"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1616" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Distribution</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="7233" y="8067"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2129" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Network / Sales </tspan></tspan><tspan class="TextPosition" x="7444" y="8491"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1954" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Effectiveness:</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="6585" y="9325"><tspan id="id844.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="6832" y="9339"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="6832" y="9763"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id844.bp" class="BulletChar">
-          <g transform="translate(6585,9325)" fill="rgb(119,119,119)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 8263,11328 L 6300,11328 6300,7125 10225,7125 10225,11328 8263,11328 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 8263,11328 L 6300,11328 6300,7125 10225,7125 10225,11328 8263,11328 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7455" y="7608"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1616" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Distribution</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="7198" y="8032"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2129" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Network / Sales </tspan></tspan><tspan class="TextPosition" x="7409" y="8456"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1954" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Effectiveness:</tspan></tspan></tspan><tspan id="id844" class="ListItem"><tspan class="TextPosition" x="6550" y="9290"><tspan id="id844.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="6797" y="9304"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="6797" y="9728"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id844.bp" class="BulletChar">
-          <g transform="translate(6550,9290)" fill="rgb(0,0,0)" stroke="none">
+         <g id="bullet-char-id772.bp" class="BulletChar">
+          <g transform="translate(20319,5947)" fill="rgb(0,0,0)" stroke="none">
            <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
           </g>
          </g>
@@ -382,138 +343,34 @@
        </g>
       
       
-       <g id="id534">
+       <g id="id141">
         
-        <path fill="rgb(119,119,119)" stroke="none" d="M 12926,11363 L 10961,11363 10961,7160 14890,7160 14890,11363 12926,11363 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 12926,11363 L 10961,11363 10961,7160 14890,7160 14890,11363 12926,11363 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11517" y="7643"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2818" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Remote &amp; Electronic</tspan></tspan><tspan class="TextPosition" x="11496" y="8067"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3106" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Channels participating </tspan></tspan><tspan class="TextPosition" x="12457" y="8491"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1185" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">in Sales:</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="11211" y="9325"><tspan id="id845.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="11458" y="9339"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="11458" y="9763"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id845.bp" class="BulletChar">
-          <g transform="translate(11211,9325)" fill="rgb(119,119,119)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 12891,11328 L 10926,11328 10926,7125 14855,7125 14855,11328 12891,11328 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 12891,11328 L 10926,11328 10926,7125 14855,7125 14855,11328 12891,11328 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11482" y="7608"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2818" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Remote &amp; Electronic</tspan></tspan><tspan class="TextPosition" x="11461" y="8032"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3106" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Channels participating </tspan></tspan><tspan class="TextPosition" x="12422" y="8456"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1185" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">in Sales:</tspan></tspan></tspan><tspan id="id845" class="ListItem"><tspan class="TextPosition" x="11176" y="9290"><tspan id="id845.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="11423" y="9304"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="11423" y="9728"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id845.bp" class="BulletChar">
-          <g transform="translate(11176,9290)" fill="rgb(0,0,0)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-       </g>
-      
-      
-       <g id="id535">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 17570,11363 L 15605,11363 15605,7160 19534,7160 19534,11363 17570,11363 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 17570,11363 L 15605,11363 15605,7160 19534,7160 19534,11363 17570,11363 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="17026" y="7643"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1088" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Product</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="16865" y="8067"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1409" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Solutions:</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="15855" y="8901"><tspan id="id846.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16102" y="8915"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2050" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">What molecules</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="15855" y="9325"><tspan id="id847.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16102" y="9339"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2642" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">How to sell, fulfil and </tspan></tspan><tspan class="TextPosition" x="16102" y="9763"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="3043" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">service product bundles</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id847.bp" class="BulletChar">
-          <g transform="translate(15855,9325)" fill="rgb(119,119,119)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-         <g id="bullet-char-id846.bp" class="BulletChar">
-          <g transform="translate(15855,8901)" fill="rgb(119,119,119)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 17535,11328 L 15570,11328 15570,7125 19499,7125 19499,11328 17535,11328 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 17535,11328 L 15570,11328 15570,7125 19499,7125 19499,11328 17535,11328 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="16991" y="7608"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1088" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Product</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="16830" y="8032"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1409" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Solutions:</tspan></tspan></tspan><tspan id="id846" class="ListItem"><tspan class="TextPosition" x="15820" y="8866"><tspan id="id846.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16067" y="8880"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2050" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">What molecules</tspan></tspan></tspan><tspan id="id847" class="ListItem"><tspan class="TextPosition" x="15820" y="9290"><tspan id="id847.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="16067" y="9304"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2642" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">How to sell, fulfil and </tspan></tspan><tspan class="TextPosition" x="16067" y="9728"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="3043" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">service product bundles</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id847.bp" class="BulletChar">
-          <g transform="translate(15820,9290)" fill="rgb(0,0,0)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-         <g id="bullet-char-id846.bp" class="BulletChar">
-          <g transform="translate(15820,8866)" fill="rgb(0,0,0)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-       </g>
-      
-      
-       <g id="id536">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 22235,11363 L 20270,11363 20270,7160 24199,7160 24199,11363 22235,11363 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 22235,11363 L 20270,11363 20270,7160 24199,7160 24199,11363 22235,11363 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="21554" y="7643"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1361" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">Efficiency</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20520" y="8477"><tspan id="id848.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20767" y="8491"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="20767" y="8915"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id848.bp" class="BulletChar">
-          <g transform="translate(20520,8477)" fill="rgb(119,119,119)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 22200,11328 L 20235,11328 20235,7125 24164,7125 24164,11328 22200,11328 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 22200,11328 L 20235,11328 20235,7125 24164,7125 24164,11328 22200,11328 Z "></path>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="21519" y="7608"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1361" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Efficiency</tspan></tspan></tspan><tspan id="id848" class="ListItem"><tspan class="TextPosition" x="20485" y="8442"><tspan id="id848.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="20732" y="8456"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1921" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in </tspan></tspan><tspan class="TextPosition" x="20732" y="8880"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1474" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id848.bp" class="BulletChar">
-          <g transform="translate(20485,8442)" fill="rgb(0,0,0)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-       </g>
-      
-      
-       <g id="id537">
-        
-        <path fill="rgb(119,119,119)" stroke="none" d="M 6335,16602 L 24337,16602 24337,18363 6335,18363 6335,16602 6335,16602 Z "></path>
-        <path fill="none" stroke="rgb(119,119,119)" stroke-width="18" stroke-linejoin="miter" d="M 6335,16602 L 24337,16602 24337,18363 6335,18363 6335,16602 6335,16602 Z "></path>
-        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="6585" y="17071"><tspan id="id849.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="6832" y="17085"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="3475" fill="rgb(119,119,119)" stroke="none" style="white-space: pre">[Commercial in confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id849.bp" class="BulletChar">
-          <g transform="translate(6585,17071)" fill="rgb(119,119,119)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-        <path fill="rgb(234,234,234)" stroke="none" d="M 6300,16567 L 24302,16567 24302,18328 6300,18328 6300,16567 6300,16567 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="18" stroke-linejoin="miter" d="M 6300,16567 L 24302,16567 24302,18328 6300,18328 6300,16567 6300,16567 Z "></path>
-        <text class="SVGTextShape"><tspan id="id849" class="ListItem"><tspan class="TextPosition" x="6550" y="17036"><tspan id="id849.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="6797" y="17050"><tspan font-family="Arial Narrow, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="3475" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">[Commercial in confidence]</tspan></tspan></tspan></text>
-        
-         <g id="bullet-char-id849.bp" class="BulletChar">
-          <g transform="translate(6550,17036)" fill="rgb(0,0,0)" stroke="none">
-           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
-          </g>
-         </g>
-        
-       </g>
-      
-      
-       <g id="id538">
-        
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2337" y="17318"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2753" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Key Leverage </tspan></tspan><tspan class="TextPosition" x="2560" y="17826"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2306" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">capabilities</tspan></tspan></tspan></text>
-       </g>
-      
-      
-       <g id="id539">
-        
-        <path fill="rgb(204,0,0)" stroke="none" d="M 5723,17484 L 5498,18296 5498,16672 5723,17484 Z "></path>
-       </g>
-      
-      
-       <g id="id540">
-        
-        <path fill="rgb(227,160,92)" fill-opacity="0.251" stroke="none" d="M 20100,11627 C 20100,12522 19984,13401 19765,14177 19545,14952 19230,15596 18850,16044 18469,16491 18038,16727 17599,16727 17160,16727 16729,16491 16349,16044 15968,15596 15653,14952 15433,14177 15214,13401 15098,12522 15098,11627 15098,10731 15214,9852 15433,9076 15653,8301 15968,7657 16348,7209 16729,6762 17160,6526 17599,6526 18038,6526 18469,6762 18850,7209 19230,7657 19545,8301 19765,9076 19984,9852 20100,10731 20100,11626 L 20100,11627 Z "></path>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="106" stroke-linejoin="miter" d="M 20100,11627 C 20100,12522 19984,13401 19765,14177 19545,14952 19230,15596 18850,16044 18469,16491 18038,16727 17599,16727 17160,16727 16729,16491 16349,16044 15968,15596 15653,14952 15433,14177 15214,13401 15098,12522 15098,11627 15098,10731 15214,9852 15433,9076 15653,8301 15968,7657 16348,7209 16729,6762 17160,6526 17599,6526 18038,6526 18469,6762 18850,7209 19230,7657 19545,8301 19765,9076 19984,9852 20100,10731 20100,11626 L 20100,11627 Z "></path>
+        <path fill="rgb(227,160,92)" fill-opacity="0.251" stroke="none" d="M 11099,6426 C 11099,6759 10960,7087 10697,7376 10434,7665 10055,7905 9599,8072 9142,8239 8625,8327 8098,8327 7571,8327 7054,8239 6598,8072 6141,7905 5762,7665 5499,7376 5236,7087 5097,6759 5097,6426 5097,6092 5236,5764 5499,5475 5762,5186 6141,4946 6597,4779 7054,4612 7571,4524 8098,4524 8625,4524 9142,4612 9599,4779 10055,4946 10434,5186 10697,5475 10960,5764 11099,6092 11099,6425 L 11099,6426 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="106" stroke-linejoin="miter" d="M 11099,6426 C 11099,6759 10960,7087 10697,7376 10434,7665 10055,7905 9599,8072 9142,8239 8625,8327 8098,8327 7571,8327 7054,8239 6598,8072 6141,7905 5762,7665 5499,7376 5236,7087 5097,6759 5097,6426 5097,6092 5236,5764 5499,5475 5762,5186 6141,4946 6597,4779 7054,4612 7571,4524 8098,4524 8625,4524 9142,4612 9599,4779 10055,4946 10434,5186 10697,5475 10960,5764 11099,6092 11099,6425 L 11099,6426 Z "></path>
        </g>
       
      
     </g>
    </g>
   
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
   <g visibility="hidden">
    
   </g>

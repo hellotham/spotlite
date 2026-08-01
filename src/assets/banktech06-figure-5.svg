@@ -1,0 +1,463 @@
+<svg version="1.2" viewBox="214 514 25345 17517" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="25400" height="19050"></rect>
+  </clipPath>
+  
+ </defs>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <defs class="TextShapeIndex">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ </defs>
+ <defs class="EmbeddedBulletChars">
+  
+  
+  
+  
+  
+  
+  
+  <g id="bullet-char-template-8226" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 346,457 C 273,457 209,483 155,535 101,586 74,649 74,723 74,796 101,859 155,911 209,963 273,989 346,989 419,989 480,963 531,910 582,859 608,796 608,723 608,648 583,586 532,535 482,483 420,457 346,457 Z"></path>
+  </g>
+  
+  
+ </defs>
+ 
+ 
+  
+   
+  
+ 
+ 
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  
+   <g id="container-id18">
+    <g id="id18" class="Slide" clip-path="url(#presentation_clip_path)">
+     
+      
+      
+       <g id="id485">
+        
+        <path fill="rgb(218,218,218)" stroke="none" d="M 12980,17524 L 2178,17524 2178,11924 23782,11924 23782,17524 12980,17524 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12980,17524 L 2178,17524 2178,11924 23782,11924 23782,17524 12980,17524 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2428" y="12760"><tspan font-family="Times New Roman, serif" font-size="706px" font-weight="700" text-decoration="underline" lengthAdjust="spacingAndGlyphs" textLength="11605" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture Working Groups (AWG)</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id486">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1418" y="2288"><tspan font-family="Arial, sans-serif" font-size="1270px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="17432" fill="rgb(220,36,31)" stroke="none" style="white-space: pre">Strategic Architecture Forum is </tspan></tspan><tspan class="TextPosition" x="1418" y="3699"><tspan font-family="Arial, sans-serif" font-size="1270px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="19061" fill="rgb(220,36,31)" stroke="none" style="white-space: pre">established to govern architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id487">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 10391,8524 L 10391,7976 12975,7976 12975,7430 "></path>
+       </g>
+      
+      
+       <g id="id488">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 10479,7429 L 8082,7429 8082,4828 12875,4828 12875,7429 10479,7429 Z "></path>
+        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="8332" y="5399"><tspan id="id825.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="8826" y="5422"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="664" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">CIO</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="8332" y="5823"><tspan id="id826.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="8826" y="5846"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4021" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">GM Strat. &amp;Trans (Chair)</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="8332" y="6247"><tspan id="id827.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="8826" y="6270"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2312" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Chief Architect</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="8332" y="6671"><tspan id="id828.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="8826" y="6694"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1513" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HoT RBA</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="8332" y="7095"><tspan id="id829.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="8826" y="7118"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1933" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HoT Asia (?)</tspan></tspan></tspan></text>
+        
+         <g id="bullet-char-id829.bp" class="BulletChar">
+          <g transform="translate(8332,7095)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id828.bp" class="BulletChar">
+          <g transform="translate(8332,6671)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id827.bp" class="BulletChar">
+          <g transform="translate(8332,6247)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id826.bp" class="BulletChar">
+          <g transform="translate(8332,5823)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id825.bp" class="BulletChar">
+          <g transform="translate(8332,5399)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+        
+       </g>
+      
+      
+       <g id="id489">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15372,7429 L 12876,7429 12876,4828 17868,4828 17868,7429 15372,7429 Z "></path>
+        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="13126" y="5399"><tspan id="id830.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="13620" y="5422"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1864" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HoT Wealth</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="13126" y="5823"><tspan id="id831.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="13620" y="5846"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2001" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HoT Support</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="13126" y="6247"><tspan id="id832.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="13620" y="6270"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1669" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HoT BPSA</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="13126" y="6671"><tspan id="id833.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="13620" y="6694"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1455" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HoT Risk</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="13126" y="7095"><tspan id="id834.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="13620" y="7118"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2450" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HoT Operations</tspan></tspan></tspan></text>
+        
+         <g id="bullet-char-id834.bp" class="BulletChar">
+          <g transform="translate(13126,7095)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id833.bp" class="BulletChar">
+          <g transform="translate(13126,6671)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id832.bp" class="BulletChar">
+          <g transform="translate(13126,6247)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id831.bp" class="BulletChar">
+          <g transform="translate(13126,5823)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id830.bp" class="BulletChar">
+          <g transform="translate(13126,5399)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(353,353)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+        
+       </g>
+      
+      
+       <g id="id490">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 10391,9524 L 8452,9524 8452,8523 12329,8523 12329,9524 10391,9524 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8392" y="9193"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3997" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Heads of Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id491">
+        
+        <path fill="rgb(233,229,213)" stroke="none" d="M 8089,15455 L 6428,15455 6428,14454 9749,14454 9749,15455 8089,15455 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 8089,15455 L 6428,15455 6428,14454 9749,14454 9749,15455 8089,15455 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6747" y="14884"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2683" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Sales, Service and </tspan></tspan><tspan class="TextPosition" x="7454" y="15308"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1269" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Channel</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id492">
+        
+        <path fill="rgb(233,229,213)" stroke="none" d="M 15471,15455 L 13810,15455 13810,14454 17131,14454 17131,15455 15471,15455 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15471,15455 L 13810,15455 13810,14454 17131,14454 17131,15455 15471,15455 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="14554" y="14884"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1834" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Information </tspan></tspan><tspan class="TextPosition" x="14485" y="15308"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1971" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Management</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id493">
+        
+        <path fill="rgb(233,229,213)" stroke="none" d="M 8089,16721 L 6428,16721 6428,15720 9749,15720 9749,16721 8089,16721 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 8089,16721 L 6428,16721 6428,15720 9749,15720 9749,16721 8089,16721 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7484" y="16150"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1210" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Product </tspan></tspan><tspan class="TextPosition" x="6947" y="16574"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2284" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Manufacturing</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id494">
+        
+        <path fill="rgb(233,229,213)" stroke="none" d="M 15471,16721 L 13810,16721 13810,15720 17131,15720 17131,16721 15471,16721 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15471,16721 L 13810,16721 13810,15720 17131,15720 17131,16721 15471,16721 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="14622" y="16150"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1698" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Integration </tspan></tspan><tspan class="TextPosition" x="14856" y="16574"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1229" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Services</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id495">
+        
+        <path fill="rgb(233,229,213)" stroke="none" d="M 11780,15455 L 10119,15455 10119,14454 13440,14454 13440,15455 11780,15455 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11780,15455 L 10119,15455 10119,14454 13440,14454 13440,15455 11780,15455 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11155" y="15096"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1249" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Security</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id496">
+        
+        <path fill="rgb(233,229,213)" stroke="none" d="M 4392,15455 L 2729,15455 2729,14454 6054,14454 6054,15455 4392,15455 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 4392,15455 L 2729,15455 2729,14454 6054,14454 6054,15455 4392,15455 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3855" y="14672"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1073" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Shared </tspan></tspan><tspan class="TextPosition" x="3197" y="15096"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2390" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Processing, HR, </tspan></tspan><tspan class="TextPosition" x="3406" y="15520"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1971" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Procurement</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       
+        <g id="id497">
+         
+         <path fill="rgb(233,229,213)" stroke="none" d="M 20932,13325 L 18635,13325 18635,12324 23229,12324 23229,13325 20932,13325 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 20932,13325 L 18635,13325 18635,12324 23229,12324 23229,13325 20932,13325 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20247" y="12769"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1371" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Sub-Group</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="19526" y="13107"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2813" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Mainframe Computing</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id498">
+         
+         <path fill="rgb(233,229,213)" stroke="none" d="M 20932,14326 L 18635,14326 18635,13325 23229,13325 23229,14326 20932,14326 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 20932,14326 L 18635,14326 18635,13325 23229,13325 23229,14326 20932,14326 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20247" y="13770"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1371" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Sub-Group</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="19746" y="14108"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2372" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Storage Computing</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id499">
+         
+         <path fill="rgb(233,229,213)" stroke="none" d="M 20932,15327 L 18635,15327 18635,14326 23229,14326 23229,15327 20932,15327 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 20932,15327 L 18635,15327 18635,14326 23229,14326 23229,15327 20932,15327 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20246" y="14771"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1371" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Sub-Group</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="18804" y="15109"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4255" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Mid Range/Distributed Computing</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id500">
+         
+         <path fill="rgb(233,229,213)" stroke="none" d="M 20932,16328 L 18635,16328 18635,15327 23229,15327 23229,16328 20932,16328 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 20932,16328 L 18635,16328 18635,15327 23229,15327 23229,16328 20932,16328 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20247" y="15772"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1371" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Sub-Group</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="19640" y="16110"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2585" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">End User Computing</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id501">
+         
+         <path fill="rgb(233,229,213)" stroke="none" d="M 20932,17325 L 18635,17325 18635,16324 23229,16324 23229,17325 20932,17325 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 20932,17325 L 18635,17325 18635,16324 23229,16324 23229,17325 20932,17325 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20247" y="16769"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1371" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Sub-Group</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="20215" y="17107"><tspan font-family="Times New Roman, serif" font-size="282px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1434" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Networking</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id502">
+         
+         <path fill="rgb(233,229,213)" stroke="none" d="M 18639,14825 L 18639,17325 17873,17325 17873,12324 18639,12324 18639,14825 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 18639,14825 L 18639,17325 17873,17325 17873,12324 18639,12324 18639,14825 Z "></path>
+         <text class="SVGTextShape" transform="rotate(-90 18397 16684)"><tspan class="TextParagraph"><tspan class="TextPosition" x="18397" y="16684"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3718" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Technical Infrastructure</tspan></tspan></tspan></text>
+        </g>
+       
+      
+      
+       <g id="id503">
+        
+        <path fill="rgb(233,229,213)" stroke="none" d="M 11780,16725 L 10119,16725 10119,15724 13440,15724 13440,16725 11780,16725 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11780,16725 L 10119,16725 10119,15724 13440,15724 13440,16725 11780,16725 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11106" y="15942"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1347" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Imaging/</tspan></tspan><tspan class="TextPosition" x="11009" y="16366"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1541" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Document </tspan></tspan><tspan class="TextPosition" x="10794" y="16790"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1971" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Management</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id504">
+        
+        <path fill="rgb(233,229,213)" stroke="none" d="M 4392,16725 L 2729,16725 2729,15724 6054,15724 6054,16725 4392,16725 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 4392,16725 L 2729,16725 2729,15724 6054,15724 6054,16725 4392,16725 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3196" y="16154"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2391" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Tools, Methods, </tspan></tspan><tspan class="TextPosition" x="3075" y="16578"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2634" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Process, Portfolio</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id505">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12975,7429 L 8082,7429 8082,3924 17867,3924 17867,7429 12975,7429 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12643" y="4407"><tspan font-family="Times New Roman, serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="664" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">SAF</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id506">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12980,11924 L 12980,9677 12975,9677 12975,7430 "></path>
+       </g>
+      
+      
+       <g id="id507">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12980,11924 L 12980,10724 10391,10724 10391,9525 "></path>
+       </g>
+      
+      
+       <g id="id508">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 7851,4312 L 7131,4237 "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 7131,4237 L 6431,4237 "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="951" y="4477"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4068" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">New SAF membership </tspan></tspan><tspan class="TextPosition" x="951" y="4985"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4457" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">focusing on those HOT’s </tspan></tspan><tspan class="TextPosition" x="951" y="5493"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="5020" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">closest to business, strategy, </tspan></tspan><tspan class="TextPosition" x="951" y="6001"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3505" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">risk and operations</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id509">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 8015,8864 L 6831,8237 "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 6831,8237 L 5695,8237 "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1008" y="8477"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4185" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HOA’s accountable for </tspan></tspan><tspan class="TextPosition" x="1389" y="8985"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3422" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">ensuring QA on all </tspan></tspan><tspan class="TextPosition" x="1090" y="9493"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4021" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">SAF papers generated </tspan></tspan><tspan class="TextPosition" x="978" y="10001"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4244" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">from AWG’s aligned to </tspan></tspan><tspan class="TextPosition" x="1448" y="10509"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3304" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">strategic roadmap</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id510">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 17460,11863 L 20037,8043 "></path>
+        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="20482" y="8253"><tspan id="id835.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="21435" y="8279"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3116" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">AWG’s managed </tspan></tspan><tspan class="TextPosition" x="21435" y="8787"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2222" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">by a HoA or </tspan></tspan><tspan class="TextPosition" x="21435" y="9295"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1928" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enterprise </tspan></tspan><tspan class="TextPosition" x="21435" y="9803"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1798" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architect.</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="20482" y="10285"><tspan id="id836.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="21435" y="10311"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2680" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Not all AWG’s </tspan></tspan><tspan class="TextPosition" x="21435" y="10819"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2069" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">need to run </tspan></tspan><tspan class="TextPosition" x="21435" y="11327"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3022" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">simultaneously – </tspan></tspan><tspan class="TextPosition" x="21435" y="11835"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2634" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">will depend on </tspan></tspan><tspan class="TextPosition" x="21435" y="12343"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1669" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">priorities</tspan></tspan></tspan></text>
+        
+         <g id="bullet-char-id836.bp" class="BulletChar">
+          <g transform="translate(20482,10285)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(423,423)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+         <g id="bullet-char-id835.bp" class="BulletChar">
+          <g transform="translate(20482,8253)" fill="rgb(0,0,0)" stroke="none">
+           <use transform="scale(423,423)" xlink:href="#bullet-char-template-8226"></use>
+          </g>
+         </g>
+        
+       </g>
+      
+      
+       <g id="id511">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15745,9524 L 13807,9524 13807,8523 17683,8523 17683,9524 15745,9524 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="14687" y="9193"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2117" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">BU IT LT’s</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id512">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15745,8524 L 15745,7976 12975,7976 12975,7430 "></path>
+       </g>
+      
+      
+       <g id="id513">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15745,9525 L 15745,10724 12980,10724 12980,11924 "></path>
+       </g>
+      
+      
+       <g id="id514">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 17710,8406 L 20218,4643 "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20663" y="4879"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3634" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">HoT’s and HoA’s to </tspan></tspan><tspan class="TextPosition" x="20663" y="5387"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2868" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">ensure their BU </tspan></tspan><tspan class="TextPosition" x="20663" y="5895"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3574" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Leadership Team is </tspan></tspan><tspan class="TextPosition" x="20663" y="6403"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3433" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">across impacts and </tspan></tspan><tspan class="TextPosition" x="20663" y="6911"><tspan font-family="Times New Roman, serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4079" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">outcomes for there BU</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id515">
+        
+        <path fill="rgb(227,160,92)" fill-opacity="0.251" stroke="none" d="M 17503,16189 C 17503,16353 17410,16515 17235,16658 17059,16801 16806,16920 16502,17002 16197,17085 15852,17128 15501,17128 15149,17128 14804,17085 14499,17002 14195,16920 13942,16801 13766,16658 13591,16515 13498,16353 13498,16189 13498,16024 13591,15862 13766,15719 13942,15576 14195,15457 14499,15375 14804,15292 15149,15249 15501,15249 15852,15249 16197,15292 16502,15375 16806,15457 17059,15576 17235,15719 17410,15862 17503,16024 17503,16189 L 17503,16189 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="106" stroke-linejoin="miter" d="M 17503,16189 C 17503,16353 17410,16515 17235,16658 17059,16801 16806,16920 16502,17002 16197,17085 15852,17128 15501,17128 15149,17128 14804,17085 14499,17002 14195,16920 13942,16801 13766,16658 13591,16515 13498,16353 13498,16189 13498,16024 13591,15862 13766,15719 13942,15576 14195,15457 14499,15375 14804,15292 15149,15249 15501,15249 15852,15249 16197,15292 16502,15375 16806,15457 17059,15576 17235,15719 17410,15862 17503,16024 17503,16189 Z "></path>
+       </g>
+      
+     
+    </g>
+   </g>
+  
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+ 
+ 
+</svg>

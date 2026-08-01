@@ -23,22 +23,25 @@ retail bank's strategy boxes were blanked for a public audience and the surround
 left in place, with one column deliberately readable because it was the one I wanted to talk about.
 The slide is reproduced as it stood, redactions and all. Nothing has been removed from it since._
 
-_Slides are given one to a section, in order, at the numbering the deck uses. Where a slide is
-mostly text it is set as text; where it is a structure it is set as a table or a diagram; and four
-slides are genuine drawings and are reproduced as vector figures. Two repairs are worth naming.
-Slide 15 carried nine stray shapes at coordinates a thousand times outside the slide, invisible in
-PowerPoint but not to a converter measuring the drawing's extent, and it has been cropped back to
-the real slide canvas. Slide 20's roadmap is set as a table rather than a drawing, because the
-conversion broke words across lines in its labels and because the bars carry no text in the
-original anyway — only the themes, the years and one initiative are named on it._
+_Slides are given one to a section, in order, at the numbering the deck uses. Ten of them are
+drawings and are reproduced as vector figures, converted from the deck itself rather than
+photographed: slides 6, 13, 14, 15, 18, 19, 20, 23, 24 and 28. The rest are set as text._
 
-_The words on every slide are the deck's own, down to its ampersands and its abbreviations. Four
-things on the page are not. Sentences noting what a slide circles or rings describe the artwork
-rather than quote it. Three headings are split where two text boxes butt together in the source and
-run into one word — "Enterprise ArchitectureEnterprise Architecture Definitions", "Mediation and
-Transport RefreshRationale and Objectives", "SOA Working Groupestablish and govern". Slide 20 is
-described rather than quoted, for the reason above. And a stray superscript 2 on slide 4, pointing
-at a footnote that is not on the slide, is dropped._
+_Three repairs are worth naming. Slide 15 carried nine stray shapes at coordinates a thousand times
+outside the slide, invisible in PowerPoint but not to a converter measuring the drawing's extent,
+and it has been cropped back to the real slide canvas; slide 28 was cropped the same way, having
+carried six thousand units of empty space to the right of everything on it. On slide 20 the
+conversion broke two words across lines, leaving "Architectur e To Enable" and "Architectur e" in
+the theme boxes; both are rejoined, with the advance widths corrected so the text still sits where
+it did._
+
+_The words on every slide are the deck's own, down to its ampersands and its abbreviations. Three
+things on the page are not. Three headings are split where two text boxes butt together in the
+source and run into one word — "Enterprise ArchitectureEnterprise Architecture Definitions",
+"Mediation and Transport RefreshRationale and Objectives", "SOA Working Groupestablish and govern".
+A stray superscript 2 on slide 4 is dropped, a footnote marker pointing at a footnote that is not on
+the slide. And slide 14's closing line is quoted beneath its figure as well as appearing in it,
+because it is the sharpest thing in the deck._
 
 _One thing in the deck is worth flagging up front. Slide 5 reports Gartner's claim that "service
 oriented architecture" was coined in 1994 as a synonym for client/server. I had
@@ -176,35 +179,7 @@ Related terms include:
 
 ## 6 SOA definition as used in NAB — Integration Services Architecture Framework
 
-A Service is essentially any interface presented on an Information Bus – in the case of Integration
-this is expected to be an accessible Business Rule, Business Function or Business Process.
-
-```mermaid
-flowchart TD
-  IB[Integration Bus] --- SVC[Service]
-  SVC --- BR[Business Rule]
-  SVC --- BF[Business Function]
-  SVC --- BP[Business Process]
-```
-
-The Service Taxonomy defines how Services interact, how Services are governed, and the key expected
-reuse points. The layers run:
-
-```mermaid
-flowchart TD
-  P[Presentation Services] --- D[Distribution Services]
-  D --- I[Integrated Services]
-  I --- DM1[Domain Services]
-  I --- DM2[Domain Services]
-  I --- DM3[Domain Services]
-  DM1 --- T[Technical Services]
-  DM2 --- T
-  DM3 --- T
-```
-
-For example, it should not be possible to integrate directly from a presentation element to a core
-system. Equally, an enterprise level component should not be dependent (unnecessarily) on a channel
-identifier.
+![A diagram of the NAB service model. An Integration Bus runs along the top; below it a Service box branches to three coloured boxes, Business Rule, Business Function and Business Process. To the right a stacked service taxonomy, Presentation Services, Distribution Services, Integrated Services over three Domain Services, and Technical Services, sits beside notes that the taxonomy defines how services interact, how they are governed and the key expected reuse points](../../assets/banktech06-figure-1.svg)
 
 ## 7 Architectures : Service Taxonomy
 
@@ -289,37 +264,20 @@ _Repeated verbatim; SOA in the context of NAB Technology Strategy follows._
 
 ## 13 An Enterprise Architecture is a key component of the Technology Strategy
 
-| #   | Theme                                                        | Initiatives                                                                                                                                                                                                                       | Key Benefits                                                                                                                                                                           |
-| :-- | :----------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Transform Platforms to enable business strategy              | **A. Move to integrated enterprise architecture with new capabilities** · B. Maintain stable and secure platforms · C. Optimise platform cost efficiency                                                                          | Enabling business strategies · Addressing current risks · Cost reduction (short term and long term)                                                                                    |
-| 2   | Uplift Delivery capabilities, in key areas, to best in class | A. Significantly improve solution delivery across the region · B. Create high performing and flexible workforce · C. Extend and optimise sourcing approach · D. Improve regional infrastructure delivery · E. Manage IT for value | Enablement of business transformation program · Closer alignment with business · Cost optimisation & transparency · Increased responsiveness and flexibility · Improved service levels |
-| 3   | Manage IT differently to enable business transformation      | A. Position IT as part of the Business · B. Break out of our vicious investment cycle · C. Share accountability for creating a technology profile that enables business model innovation                                          | Increased innovation · Enablement of flexible business operating model · Higher value/return for investments                                                                           |
-
-Item 1A is circled on the slide.
+![Three horizontal bands, each opening with a numbered chevron. Band one, transform platforms to enable business strategy, holds three boxes of which A, move to integrated enterprise architecture with new capabilities, is ringed by a hand-drawn ellipse. Band two, uplift delivery capabilities to best in class, holds four ellipses around a central one, E, manage IT for value. Band three, manage IT differently to enable business transformation, holds three boxes. Key benefits are listed down the right of each band](../../assets/banktech06-figure-2.svg)
 
 ## 14 The IT Strategy defines 10 major Architecture Capabilities …
 
-| #   | Capability                                                  | What it must support                                                                                                                                                         |
-| :-- | :---------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Relationship Banker and "Shop" front-end platforms          | Support standard and integrated sales and servicing across multiple channels                                                                                                 |
-| 2   | Integrated and reusable front-end components                | Support standard and integrated sales and servicing across multiple products, channels, and customer segments · Support white labelling                                      |
-| 3   | Integrated customer information                             | Integrate and link existing customer information and management processes                                                                                                    |
-| 4   | Modular product components                                  | Ability to manufacture products with innovative features, including pricing, relationship bundling and external product sourcing · Integrated components, including workflow |
-| 5   | Common information integration and access                   | Application and information integration capabilities across systems and platforms and into third parties                                                                     |
-| 6   | Regional source of truth for financial and transaction data | Support decentralised P&L responsibility · Support mandatory compliance (eg Basel, IFRS, SOX, AML)                                                                           |
-| 7   | Shared processing and back-office utilities                 | Rationalise product environment (migrate products off legacy environments) · Rationalise support systems to create shared 'utilities' (eg document production)               |
-| 8   | Regional security and identity management                   | Structure & model to support security policy and security principles · SOX & IFRS compliance                                                                                 |
-| 9   | Comprehensive and accurate management information           | Common data sourcing and common reporting · Improved visibility of business performance                                                                                      |
-| 10  | Simplified regional infrastructure                          | Develop and operate shared infrastructure components · Standardise branch infrastructure to suit deployment of cross business unit applications and support cross sell       |
+![The ten architecture capabilities in two columns of green boxes numbered 1 to 10, each paired with the bullets it must support. A hand-drawn ellipse rings capabilities 1 to 5 in the left column. A banner across the foot reads that these essentially describe the key characteristics of a Services Oriented Architecture, but avoiding the use of jargon](../../assets/banktech06-figure-3.svg)
 
-Capabilities 1 to 5 are circled on the slide. The line along the bottom reads:
+The line along the bottom reads:
 
 > … Essentially describing the key characteristics of a Services Oriented Architecture, but avoiding
 > the use of jargon!
 
 ## 15 The 10 capabilities are mapped into an integrated Enterprise Architecture
 
-![The target enterprise architecture. Five horizontal layers, presentation and modular front end components, integration, support and information, transaction processing and infrastructure, cut by four business columns, wealth, retail, business, and finance and corporate. Named platforms sit in the layers, including the relationship-banker and Shop front-end platforms, regional integration services, core customer information, modular product manufacturing and administration, shared processing utilities and regionally interoperable infrastructure. Ten numbered lines connect them to the ten architecture capabilities listed on the right. Below, three thumbnails show the application, information and infrastructure architectures. Sourced from NAB Technology Strategy 2005](../../assets/banktech06-figure-1.svg)
+![The target enterprise architecture. Five horizontal layers, presentation and modular front end components, integration, support and information, transaction processing and infrastructure, cut by four business columns, wealth, retail, business, and finance and corporate. Named platforms sit in the layers, including the relationship-banker and Shop front-end platforms, regional integration services, core customer information, modular product manufacturing and administration, shared processing utilities and regionally interoperable infrastructure. Ten numbered lines connect them to the ten architecture capabilities listed on the right. Below, three thumbnails show the application, information and infrastructure architectures. Sourced from NAB Technology Strategy 2005](../../assets/banktech06-figure-4.svg)
 
 ## 16 Contents
 
@@ -353,57 +311,15 @@ _Repeated verbatim; Obtaining business buy in and alignment follows._
 
 ## 18 Strategic Architecture Forum is established to govern architecture
 
-```mermaid
-flowchart TD
-  SAF["SAF<br/>CIO · GM Strat. &amp;Trans (Chair) · Chief Architect<br/>HoT RBA · HoT Asia (?) · HoT Wealth<br/>HoT Support · HoT BPSA · HoT Risk · HoT Operations"]
-  SAF --- HOA[Heads of Architecture]
-  SAF --- BU[BU IT LTs]
-  HOA --- AWG["Architecture Working Groups (AWG)"]
-  BU --- AWG
-  AWG --- G1[Sales, Service and Channel]
-  AWG --- G2[Information Management]
-  AWG --- G3[Product Manufacturing]
-  AWG --- G4[Integration Services]
-  AWG --- G5[Security]
-  AWG --- G6[Shared Processing, HR, Procurement]
-  AWG --- G7[Imaging / Document Management]
-  AWG --- G8[Tools, Methods, Process, Portfolio]
-  AWG --- TI[Technical Infrastructure]
-  TI --- S1[Sub-Group Mainframe Computing]
-  TI --- S2[Sub-Group Storage Computing]
-  TI --- S3[Sub-Group Mid Range / Distributed Computing]
-  TI --- S4[Sub-Group End User Computing]
-  TI --- S5[Sub-Group Networking]
-```
-
-Integration Services is circled on the slide. The annotations read:
-
-- New SAF membership focusing on those HOT's closest to business, strategy, risk and operations
-- HOA's accountable for ensuring QA on all SAF papers generated from AWG's aligned to strategic
-  roadmap
-- HoT's and HoA's to ensure their BU Leadership Team is across impacts and outcomes for there BU
-- AWG's managed by a HoA or Enterprise Architect. Not all AWG's need to run simultaneously – will
-  depend on priorities
+![A governance chart. The Strategic Architecture Forum sits at the top listing its membership, the CIO, GM Strategy and Transformation as chair, the Chief Architect and six Heads of Technology. Below it, Heads of Architecture and business unit IT leadership teams feed a grey panel of Architecture Working Groups, eight named groups plus a Technical Infrastructure column carrying five sub-groups for mainframe, storage, mid range, end user computing and networking. Integration Services is ringed by a hand-drawn ellipse. Four annotations sit around the edges](../../assets/banktech06-figure-5.svg)
 
 ## 19 Explicit recognition of SOA in Retail Banking Business Strategy
 
-![A five-row grid, Retail Bank Purpose, Differentiating Strategies, Enablers and Closing the Gap Strategy, Design and Solution Principles, and Key Leverage capabilities, with columns for Distribution Network and Sales Effectiveness, Remote and Electronic Channels participating in Sales, Product Solutions, and Efficiency. Most cells read Commercial in confidence. The Product Solutions column is left readable and ringed by a hand-drawn ellipse, listing what molecules, how to sell fulfil and service product bundles, and beneath it that molecule and customer focus lifts our game from single product focus and capacity, is not cross sales, a default molecule for mass market, and that the toolset needs to support molecule sales. Marked Work in Progress](../../assets/banktech06-figure-2.svg)
+![A five-row grid, Retail Bank Purpose, Differentiating Strategies, Enablers and Closing the Gap Strategy, Design and Solution Principles, and Key Leverage capabilities, with columns for Distribution Network and Sales Effectiveness, Remote and Electronic Channels participating in Sales, Product Solutions, and Efficiency. Most cells read Commercial in confidence. The Product Solutions column is left readable and ringed by a hand-drawn ellipse, listing what molecules, how to sell fulfil and service product bundles, and beneath it that molecule and customer focus lifts our game from single product focus and capacity, is not cross sales, a default molecule for mass market, and that the toolset needs to support molecule sales. Marked Work in Progress](../../assets/banktech06-figure-6.svg)
 
 ## 20 Initiation of several key business initiatives delivering SOA components
 
-A 2006–2008 roadmap against four themes. The bars themselves carry no labels in the original except
-one, so only the structure can be reproduced.
-
-| #   | Theme                                           |
-| :-- | :---------------------------------------------- |
-| 1   | Transform Architecture To Enable Business Needs |
-| 2   | De-risk Our Architecture                        |
-| 3   | Reduce The Inherent Costs In Our Platforms      |
-| 4   | Redefine And Strengthen Our Governance          |
-
-Bars are keyed three ways: in-light / started project, new business initiatives, and suggested new
-initiatives. The single named bar runs the full width of theme 4 and reads **Develop Enterprise
-Architecture**. An ellipse rings the initiatives clustered under theme 1.
+![A roadmap across 2006, 2007 and 2008 against four numbered green theme boxes: transform architecture to enable business needs, de-risk our architecture, reduce the inherent costs in our platforms, and redefine and strengthen our governance. The bars carry no labels except one running the full width of theme four, develop enterprise architecture. A legend keys them three ways, in-light or started project, new business initiatives, and suggested new initiatives. An ellipse rings the cluster under theme one](../../assets/banktech06-figure-7.svg)
 
 ## 21 Contents
 
@@ -428,7 +344,7 @@ _Repeated verbatim; NAB approach to date in implementing SOA follows._
 
 ## 23 SOA is a key component of overall Enterprise Architecture work plan
 
-![A roadmap chart across 2005, 2006, 2007 and a Not Prioritised column, with five workstream rows, Information Architecture, Integration Services Architecture, Sales Service and Channels Architecture, Product Manufacturing Architecture, and Efficiency and Operations. Around forty initiatives are drawn as chevrons keyed by status: completed, EA Planning Forum funded, in progress, not started, and not a strategy priority or managed elsewhere. A large ellipse rings the Integration Services, Sales Service and Channels, and Product Manufacturing rows](../../assets/banktech06-figure-3.svg)
+![A roadmap chart across 2005, 2006, 2007 and a Not Prioritised column, with five workstream rows, Information Architecture, Integration Services Architecture, Sales Service and Channels Architecture, Product Manufacturing Architecture, and Efficiency and Operations. Around forty initiatives are drawn as chevrons keyed by status: completed, EA Planning Forum funded, in progress, not started, and not a strategy priority or managed elsewhere. A large ellipse rings the Integration Services, Sales Service and Channels, and Product Manufacturing rows](../../assets/banktech06-figure-8.svg)
 
 Three footnotes sit under the chart: initiative 1 was added after Portfolio Review and E2E
 de-scoping; 2 Imaging was added although it was originally in Doc Production; and 3 E2E Lending
@@ -436,7 +352,7 @@ Strategy is to be treated as Current State Assessment input to Origination and F
 
 ## 24 Integration Services Reference Architecture
 
-![The reference architecture as a block diagram. Four stacked core capabilities, Business Process Integration, Business Function, Mediation and Transport, sit above Hardware and Network Infrastructure, flanked on the left by vertical Management, Security and Identity, and Business Rules columns and on the right by Data Objects and Metadata Definition. Labelled beneath as supporting capabilities enabling the operational and security architectures, core capabilities governed by the integration architecture, and supporting capabilities enabling the information architecture. A thumbnail of the target enterprise architecture sits top left, zooming in on the regional integration services row](../../assets/banktech06-figure-4.svg)
+![The reference architecture as a block diagram. Four stacked core capabilities, Business Process Integration, Business Function, Mediation and Transport, sit above Hardware and Network Infrastructure, flanked on the left by vertical Management, Security and Identity, and Business Rules columns and on the right by Data Objects and Metadata Definition. Labelled beneath as supporting capabilities enabling the operational and security architectures, core capabilities governed by the integration architecture, and supporting capabilities enabling the information architecture. A thumbnail of the target enterprise architecture sits top left, zooming in on the regional integration services row](../../assets/banktech06-figure-9.svg)
 
 It provides a consistent language to evaluate, position and evolve integration capabilities and
 assets. This representation shows the "Level 0" capabilities. This is underpinned by another two
@@ -515,14 +431,7 @@ Engagement with the SOA AWG must be:
 
 ## 28 Innovation Lab
 
-Future proofing concepts of service orientated architecture, process architecture, business process
-management and portal technologies.
-
-| Stream                              | Scope                                                                                                                                                                                                                                                                 |
-| :---------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Business Process Development**    | Execute a full business process "round trip" lifecycle of the technology set. Services invoked by the process flows will be initially implemented as Java stubs to demonstrate the full horizontal integration set.                                                   |
-| **Statefull Service Orchestration** | Expand the round trip example to include specific interest areas, as defined by the SOA AWG. This area will focus on replacing stubs with service implementations (e.g. Business Rules Engine, web services etc). This will demonstrate the vertical integration set. |
-| **Banker Central Portal**           | Demonstrate the capture and presentation of business events throughout process execution, integrated into a portal framework. The business measures defined in process design to determine the business events that are to be monitored.                              |
+![On the left, the lab architecture: a Business Process Development panel with WB Modeler, Process Design, Real data and Business Prototypes around an orange cycle, a Service Orientated Architecture panel with WS Integration Developer, Service Orchestration, State, Business Process and EAR, and a Strategic Front End Architecture panel where a User feeds Service Mediation above three Business Services and three Technical Services. On the right, three streams are described, Business Process Development, Statefull Service Orchestration and Banker Central Portal](../../assets/banktech06-figure-10.svg)
 
 ## 29 thank you
 
