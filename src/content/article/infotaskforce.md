@@ -172,5 +172,7 @@ These things are worth keeping runnable.
 - Paul David Doherty, [the Infocom Fact Sheet](http://pdd.if-legends.org/infocom/fact-sheet.txt), the archivists' record of the
   interpreters, the games and the company.
 - [The InfoTaskForce interpreter and its release announcement](https://www.ifarchive.org/if-archive/infocom/interpreters/old/itf/README), in the Interactive
-  Fiction Archive.
+  Fiction Archive. The announcement opens "Hello, Sailors! InfoTaskForce is pleased to announce
+  the release of version 4.01 of its popular Infocom datafile interpreter." The plural is theirs,
+  against Zork's singular.
 - [The Z-Machine Standards Document](https://zspec.jaredreisinger.com/001-preface), for what became of the format afterwards.

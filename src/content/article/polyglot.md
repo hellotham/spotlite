@@ -166,9 +166,9 @@ the `end` of `end program` from column 12 to column 8.
 
 A comment from 2004 says it ran on a digital clock.
 
-In January 2001 the page was linked from Slashdot and several thousand people arrived at once.
-A comment on 25 January, signed Richard Stallman, said the proper name was GNU/Polyglot. One on
-16 February, signed Larry Wall, asked: "And Perl?"
+On 25 January 2001 the page was linked from Slashdot. Eleven comments arrived that day, one of
+them signed Slashdotter. Another was signed Richard Stallman and said the proper name was
+GNU/Polyglot. One on 16 February, signed Larry Wall, asked: "And Perl?"
 
 Kevin answered the question. The tenth anniversary edition, dated 1 December 2001 in the
 header, took us from seven languages to eight and fixed the machine code to run on Win32 as
@@ -193,6 +193,8 @@ outlasted nearly everything else I have built since.
 ## Sources
 
 - [Polyglot](https://ideology.com.au/polyglot/), the original page, with the source, the
-  download and thirty-two years of visitor comments.
+  download and thirty-two years of visitor comments. The Slashdot date comes from those comments
+  rather than from Slashdot: eleven of them landed on 25 January 2001 and one is signed
+  Slashdotter. The page records no traffic figure, so this article gives none.
 - [Rosetta Code: Polyglot](https://rosettacode.org/wiki/Polyglot), which reproduces the program and notes that the syntax
   highlighting comes out scrambled.
