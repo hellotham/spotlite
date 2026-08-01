@@ -1,0 +1,493 @@
+<svg version="1.2" viewBox="1233 2460 24118 16331" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="25400" height="19050"></rect>
+  </clipPath>
+  
+ </defs>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+   
+  
+ 
+ 
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  
+   <g id="container-id7">
+    <g id="id7" class="Slide" clip-path="url(#presentation_clip_path)">
+     
+      
+      
+       <g id="id48">
+        
+        <path fill="rgb(255,153,255)" stroke="none" d="M 21748,18326 L 18608,18326 18608,8721 24887,8721 24887,18326 21748,18326 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20262" y="9345"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2972" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">WM Projects</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id49">
+        
+        <path fill="rgb(178,178,178)" stroke="none" d="M 21843,15324 L 19164,15324 19164,9922 24521,9922 24521,15324 21843,15324 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21843,15324 L 19164,15324 19164,9922 24521,9922 24521,15324 21843,15324 Z "></path>
+       </g>
+      
+      
+       <g id="id50">
+        
+        <path fill="rgb(153,255,153)" stroke="none" d="M 12700,10522 L 9190,10522 9190,2924 16210,2924 16210,10522 12700,10522 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10966" y="3548"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3467" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">WM Enterprise </tspan></tspan><tspan class="TextPosition" x="11103" y="4141"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3193" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architectures</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id51">
+        
+        <path fill="rgb(153,255,153)" stroke="none" d="M 12700,18327 L 9190,18327 9190,12325 16210,12325 16210,18327 12700,18327 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10994" y="12949"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3412" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">WM Reference </tspan></tspan><tspan class="TextPosition" x="9892" y="13542"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="5615" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architectures (patterns)</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id52">
+        
+        
+       </g>
+      
+      
+       <g id="id53">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 15662,6224 L 15662,8523 14185,8523 14185,3924 15662,3924 15662,6224 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15662,6224 L 15662,8523 14185,8523 14185,3924 15662,3924 15662,6224 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 14763 7835)"><tspan class="TextParagraph"><tspan class="TextPosition" x="14763" y="7835"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3220" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Infrastructure</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="14914" y="8551"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id54">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 14185,6224 L 14185,8523 12708,8523 12708,3924 14185,3924 14185,6224 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 14185,6224 L 14185,8523 12708,8523 12708,3924 14185,3924 14185,6224 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 13286 7202)"><tspan class="TextParagraph"><tspan class="TextPosition" x="13286" y="7202"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1955" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Security</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="12804" y="7918"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id55">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 12708,6224 L 12708,8523 11231,8523 11231,3924 12708,3924 12708,6224 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12708,6224 L 12708,8523 11231,8523 11231,3924 12708,3924 12708,6224 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 11809 8193)"><tspan class="TextParagraph"><tspan class="TextPosition" x="11809" y="8193"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3935" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Data/Information</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="12318" y="8909"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id56">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 11232,6224 L 11232,8523 9754,8523 9754,3924 11232,3924 11232,6224 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11232,6224 L 11232,8523 9754,8523 9754,3924 11232,3924 11232,6224 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 10332 7573)"><tspan class="TextParagraph"><tspan class="TextPosition" x="10332" y="7573"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2697" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Application</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="10221" y="8289"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id57">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 12708,9794 L 9753,9794 9753,8524 15662,8524 15662,9794 12708,9794 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12708,9794 L 9753,9794 9753,8524 15662,8524 15662,9794 12708,9794 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10175" y="9060"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="5064" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Standards, Buy Lists, </tspan></tspan><tspan class="TextPosition" x="11441" y="9653"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2532" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Guidelines</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id58">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 10852,15625 L 10852,17523 10116,17523 10116,13726 10852,13726 10852,15625 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 10852,15625 L 10852,17523 10116,17523 10116,13726 10852,13726 10852,15625 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 10681 16975)"><tspan class="TextParagraph"><tspan class="TextPosition" x="10681" y="16975"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2698" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">E-Business</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id59">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 11593,15625 L 11593,17523 10857,17523 10857,13726 11593,13726 11593,15625 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11593,15625 L 11593,17523 10857,17523 10857,13726 11593,13726 11593,15625 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 11422 16479)"><tspan class="TextParagraph"><tspan class="TextPosition" x="11422" y="16479"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1706" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">SHAPE</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id60">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 12334,15625 L 12334,17523 11598,17523 11598,13726 12334,13726 12334,15625 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12334,15625 L 12334,17523 11598,17523 11598,13726 12334,13726 12334,15625 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 12163 16795)"><tspan class="TextParagraph"><tspan class="TextPosition" x="12163" y="16795"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2339" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Reporting</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id61">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 13074,15625 L 13074,17523 12337,17523 12337,13726 13074,13726 13074,15625 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 13074,15625 L 13074,17523 12337,17523 12337,13726 13074,13726 13074,15625 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 12903 16741)"><tspan class="TextParagraph"><tspan class="TextPosition" x="12903" y="16741"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2230" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Servicing</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id62">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 14547,15625 L 14547,17523 13078,17523 13078,13726 14547,13726 14547,15625 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 14547,15625 L 14547,17523 13078,17523 13078,13726 14547,13726 14547,15625 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 13714 16561)"><tspan class="TextParagraph"><tspan class="TextPosition" x="13714" y="16561"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1871" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Product </tspan></tspan><tspan class="TextPosition" x="13630" y="17154"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2038" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Services</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id63">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 15284,15625 L 15284,17523 14548,17523 14548,13726 15284,13726 15284,15625 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15284,15625 L 15284,17523 14548,17523 14548,13726 15284,13726 15284,15625 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 15113 15873)"><tspan class="TextParagraph"><tspan class="TextPosition" x="15113" y="15873"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="495" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">…</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id64">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 21654,15125 L 18975,15125 18975,9719 24333,9719 24333,15125 21654,15125 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21654,15125 L 18975,15125 18975,9719 24333,9719 24333,15125 21654,15125 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="19989" y="10343"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3330" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Programs (eg. </tspan></tspan><tspan class="TextPosition" x="20609" y="10936"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2091" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Amazon)</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id65">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 21471,12321 L 19716,12321 19716,11051 23226,11051 23226,12321 21471,12321 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21471,12321 L 19716,12321 19716,11051 23226,11051 23226,12321 21471,12321 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20453" y="11587"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2036" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Program </tspan></tspan><tspan class="TextPosition" x="20012" y="12180"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id66">
+        
+        <path fill="rgb(178,178,178)" stroke="none" d="M 21861,14922 L 19715,14922 19715,12721 24006,12721 24006,14922 21861,14922 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21861,14922 L 19715,14922 19715,12721 24006,12721 24006,14922 21861,14922 Z "></path>
+       </g>
+      
+      
+       <g id="id67">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 21563,14723 L 19344,14723 19344,12518 23781,12518 23781,14723 21563,14723 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21563,14723 L 19344,14723 19344,12518 23781,12518 23781,14723 21563,14723 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20585" y="13142"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1955" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Projects</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id68">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 21471,14526 L 19716,14526 19716,13256 23226,13256 23226,14526 21471,14526 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21471,14526 L 19716,14526 19716,13256 23226,13256 23226,14526 21471,14526 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20481" y="13792"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1980" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Solution </tspan></tspan><tspan class="TextPosition" x="20012" y="14385"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id69">
+        
+        <path fill="rgb(178,178,178)" stroke="none" d="M 21861,17929 L 19715,17929 19715,15724 24006,15724 24006,17929 21861,17929 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21861,17929 L 19715,17929 19715,15724 24006,15724 24006,17929 21861,17929 Z "></path>
+       </g>
+      
+      
+       <g id="id70">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 21563,17731 L 19344,17731 19344,15527 23781,15527 23781,17731 21563,17731 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21563,17731 L 19344,17731 19344,15527 23781,15527 23781,17731 21563,17731 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20585" y="16151"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1955" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Projects</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id71">
+        
+        <path fill="rgb(255,204,255)" stroke="none" d="M 21471,17533 L 19716,17533 19716,16263 23226,16263 23226,17533 21471,17533 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21471,17533 L 19716,17533 19716,16263 23226,16263 23226,17533 21471,17533 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20481" y="16799"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1980" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Solution </tspan></tspan><tspan class="TextPosition" x="20012" y="17392"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id72">
+        
+        <path fill="rgb(255,204,153)" stroke="none" d="M 21735,7320 L 18608,7320 18608,2924 24861,2924 24861,7320 21735,7320 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="19919" y="3548"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3631" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">WM IT Portfolio</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id73">
+        
+        <path fill="rgb(178,178,178)" stroke="none" d="M 21938,6521 L 19358,6521 19358,4122 24517,4122 24517,6521 21938,6521 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21938,6521 L 19358,6521 19358,4122 24517,4122 24517,6521 21938,6521 Z "></path>
+       </g>
+      
+      
+       <g id="id74">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 21640,6324 L 18974,6324 18974,3726 24305,3726 24305,6324 21640,6324 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21640,6324 L 18974,6324 18974,3726 24305,3726 24305,6324 21640,6324 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20621" y="4350"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2038" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Systems</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id75">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 21533,6125 L 19425,6125 19425,4855 23641,4855 23641,6125 21533,6125 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21533,6125 L 19425,6125 19425,4855 23641,4855 23641,6125 21533,6125 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="19730" y="5391"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3606" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Asset Lifecycle </tspan></tspan><tspan class="TextPosition" x="21010" y="5984"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1046" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Plan</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id76">
+        
+        <path fill="rgb(204,255,255)" stroke="none" d="M 4599,11324 L 1697,11324 1697,2924 7500,2924 7500,11324 4599,11324 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2479" y="3548"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4238" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">WM Business and </tspan></tspan><tspan class="TextPosition" x="3209" y="4141"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2779" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Technology</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id77">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 4302,5856 L 2549,5856 2549,4586 6055,4586 6055,5856 4302,5856 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 4302,5856 L 2549,5856 2549,4586 6055,4586 6055,5856 4302,5856 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3201" y="5122"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2202" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business </tspan></tspan><tspan class="TextPosition" x="3311" y="5715"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1982" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Strategy</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id78">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 4302,7126 L 2549,7126 2549,5856 6055,5856 6055,7126 4302,7126 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 4302,7126 L 2549,7126 2549,5856 6055,5856 6055,7126 4302,7126 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3201" y="6392"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2202" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business </tspan></tspan><tspan class="TextPosition" x="2843" y="6985"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id79">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 4297,8524 L 2544,8524 2544,7254 6050,7254 6050,8524 4297,8524 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 4297,8524 L 2544,8524 2544,7254 6050,7254 6050,8524 4297,8524 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3196" y="7790"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2202" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business </tspan></tspan><tspan class="TextPosition" x="3086" y="8383"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2421" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Unit MTVs</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id80">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 4297,9926 L 2544,9926 2544,8656 6050,8656 6050,9926 4297,9926 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 4297,9926 L 2544,9926 2544,8656 6050,8656 6050,9926 4297,9926 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3017" y="9489"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2560" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">IT Strategy</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id81">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 4297,11126 L 2544,11126 2544,9856 6050,9856 6050,11126 4297,11126 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 4297,11126 L 2544,11126 2544,9856 6050,9856 6050,11126 4297,11126 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3183" y="10392"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2228" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Migration </tspan></tspan><tspan class="TextPosition" x="3168" y="10985"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2257" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Roadmap</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id82">
+        
+        <path fill="rgb(204,255,255)" stroke="none" d="M 4599,18327 L 1697,18327 1697,11527 7500,11527 7500,18327 4599,18327 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2562" y="12151"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4073" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Group Enterprise </tspan></tspan><tspan class="TextPosition" x="3209" y="12744"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2779" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Technology</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id83">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 3699,14834 L 3699,16743 2080,16743 2080,12924 3699,12924 3699,14834 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 3699,14834 L 3699,16743 2080,16743 2080,12924 3699,12924 3699,14834 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 2729 16183)"><tspan class="TextParagraph"><tspan class="TextPosition" x="2729" y="16183"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2697" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Application</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="2618" y="16899"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id84">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 4476,17798 L 2051,17798 2051,16726 6901,16726 6901,17798 4476,17798 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 4476,17798 L 2051,17798 2051,16726 6901,16726 6901,17798 4476,17798 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2729" y="17460"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3494" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Methodologies</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id85">
+        
+        <path fill="none" stroke="rgb(178,178,178)" stroke-width="106" stroke-linejoin="miter" d="M 7801,7114 C 8629,7053 8060,6793 8891,6733 "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 7501,7124 L 7813,6954 7824,7272 7501,7124 Z "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 9190,6723 L 8878,6893 8867,6575 9190,6723 Z "></path>
+       </g>
+      
+      
+       <g id="id86">
+        
+        <path fill="none" stroke="rgb(178,178,178)" stroke-width="106" stroke-linejoin="miter" d="M 7753,14795 C 8652,13739 8022,7736 8972,6819 "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 7501,14927 L 7699,14632 7856,14909 7501,14927 Z "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 9190,6723 L 8972,7004 8835,6717 9190,6723 Z "></path>
+       </g>
+      
+      
+       <g id="id87">
+        
+        <path fill="none" stroke="rgb(178,178,178)" stroke-width="106" stroke-linejoin="miter" d="M 12700,10522 L 12700,12028 "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 12700,12325 L 12541,12007 12859,12007 12700,12325 Z "></path>
+       </g>
+      
+      
+       <g id="id88">
+        
+        <path fill="none" stroke="rgb(178,178,178)" stroke-width="106" stroke-linejoin="miter" d="M 16210,15326 C 18008,15326 16947,13742 18305,13544 "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 18609,13524 L 18303,13705 18280,13388 18609,13524 Z "></path>
+       </g>
+      
+      
+       <g id="id89">
+        
+        <path fill="none" stroke="rgb(178,178,178)" stroke-width="106" stroke-linejoin="miter" d="M 12700,10522 L 18344,13390 "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 18609,13524 L 18253,13522 18398,13238 18609,13524 Z "></path>
+       </g>
+      
+      
+       <g id="id90">
+        
+        <path fill="none" stroke="rgb(178,178,178)" stroke-width="106" stroke-linejoin="miter" d="M 21748,8722 C 21748,7671 21738,8231 21735,7622 "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 21735,7320 L 21895,7638 21577,7638 21735,7320 Z "></path>
+       </g>
+      
+      
+       <g id="id91">
+        
+        <path fill="none" stroke="rgb(178,178,178)" stroke-width="106" stroke-linejoin="miter" d="M 18609,5122 C 16809,5122 17869,6528 16515,6705 "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 16210,6723 L 16517,6544 16538,6861 16210,6723 Z "></path>
+       </g>
+      
+      
+       <g id="id92">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7518" y="5880"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1561" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Aligns, is </tspan></tspan><tspan class="TextPosition" x="7440" y="6304"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1717" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">supported </tspan></tspan><tspan class="TextPosition" x="8094" y="6728"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="410" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">by</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id93">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10984" y="11303"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1581" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Designed </tspan></tspan><tspan class="TextPosition" x="11452" y="11727"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="644" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">into</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id94">
+        
+        <path fill="none" stroke="rgb(178,178,178)" stroke-width="106" stroke-linejoin="miter" d="M 21748,8722 L 16489,6824 "></path>
+        <path fill="rgb(178,178,178)" stroke="none" d="M 16210,6723 L 16563,6681 16455,6981 16210,6723 Z "></path>
+       </g>
+      
+      
+       <g id="id95">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="16374" y="15704"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1894" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Re-used by</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id96">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15771" y="11330"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2167" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Implemented </tspan></tspan><tspan class="TextPosition" x="16649" y="11754"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="410" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">by</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id97">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="21947" y="7705"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1581" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Deployed </tspan></tspan><tspan class="TextPosition" x="22416" y="8129"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="644" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">into</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id98">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="17496" y="8327"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1992" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Exemptions</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id99">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="17082" y="4504"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="976" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Gaps, </tspan></tspan><tspan class="TextPosition" x="17023" y="4928"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1094" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">issues</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id100">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 5300,14834 L 5300,16743 3682,16743 3682,12924 5300,12924 5300,14834 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 5300,14834 L 5300,16743 3682,16743 3682,12924 5300,12924 5300,14834 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 4330 16197)"><tspan class="TextParagraph"><tspan class="TextPosition" x="4330" y="16197"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2724" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Information</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="4233" y="16913"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id101">
+        
+        <path fill="rgb(204,204,255)" stroke="none" d="M 6901,14834 L 6901,16743 5283,16743 5283,12924 6901,12924 6901,14834 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 6901,14834 L 6901,16743 5283,16743 5283,12924 6901,12924 6901,14834 Z "></path>
+        <text class="SVGTextShape" transform="rotate(-90 5931 16445)"><tspan class="TextParagraph"><tspan class="TextPosition" x="5931" y="16445"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3220" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Infrastructure</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="6082" y="17161"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2918" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Architecture</tspan></tspan></tspan></text>
+       </g>
+      
+     
+    </g>
+   </g>
+  
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+ 
+ 
+</svg>
