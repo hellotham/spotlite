@@ -23,9 +23,12 @@ retail bank's strategy boxes were blanked for a public audience and the surround
 left in place, with one column deliberately readable because it was the one I wanted to talk about.
 The slide is reproduced as it stood, redactions and all. Nothing has been removed from it since._
 
-_Slides are given one to a section, in order, at the numbering the deck uses. Ten of them are
-drawings and are reproduced as vector figures, converted from the deck itself rather than
-photographed: slides 6, 13, 14, 15, 18, 19, 20, 23, 24 and 28. The rest are set as text._
+_Slides are given one to a section, in order, at the numbering the deck uses, so the numbering below
+skips the five that are not reproduced: the contents slide reappears unchanged at 8, 11, 16 and 21
+to mark each section boundary, and 29 is a closing "thank you". Nothing is lost by leaving them out
+— slide 2 carries the contents in full. Of the twenty-four that remain, ten are drawings and are
+reproduced as vector figures, converted from the deck itself rather than photographed: slides 6, 13,
+14, 15, 18, 19, 20, 23, 24 and 28. The rest are set as text._
 
 _Three repairs are worth naming. Slide 15 carried nine stray shapes at coordinates a thousand times
 outside the slide, invisible in PowerPoint but not to a converter measuring the drawing's extent,
@@ -193,17 +196,6 @@ Business Functions and Business Processes tangibly change the business state fro
 perspective. This is a distinct business outcome. For example, a payment is made or a new account is
 opened.
 
-## 8 Contents
-
-- What is a Services Oriented Architecture (SOA)?
-- Positioning SOA against an overall Enterprise Architecture
-- SOA in the context of NAB Technology Strategy
-- Obtaining business buy in and alignment
-- NAB approach to date in implementing SOA
-
-_Repeated verbatim before each section; the section that follows is Positioning SOA against an
-overall Enterprise Architecture._
-
 ## 9 SOA in relation to Enterprise Architecture — Enterprise Architecture Definitions
 
 ANSI/IEEE Std 1471-2000 definition of architecture:
@@ -243,16 +235,6 @@ Definitions taken from TOGAF Version 8. Where does Service Oriented Architecture
 - **Services Oriented Application**
 - **Services Oriented Infrastructure**
 
-## 11 Contents
-
-- What is a Services Oriented Architecture (SOA)?
-- Positioning SOA against an overall Enterprise Architecture
-- SOA in the context of NAB Technology Strategy
-- Obtaining business buy in and alignment
-- NAB approach to date in implementing SOA
-
-_Repeated verbatim; SOA in the context of NAB Technology Strategy follows._
-
 ## 12 Drivers for NAB Technology Strategy (2005)
 
 | Key Business Drivers                                          | Key Technology Drivers                                                                            |
@@ -278,16 +260,6 @@ The line along the bottom reads:
 ## 15 The 10 capabilities are mapped into an integrated Enterprise Architecture
 
 ![The target enterprise architecture. Five horizontal layers, presentation and modular front end components, integration, support and information, transaction processing and infrastructure, cut by four business columns, wealth, retail, business, and finance and corporate. Named platforms sit in the layers, including the relationship-banker and Shop front-end platforms, regional integration services, core customer information, modular product manufacturing and administration, shared processing utilities and regionally interoperable infrastructure. Ten numbered lines connect them to the ten architecture capabilities listed on the right. Below, three thumbnails show the application, information and infrastructure architectures. Sourced from NAB Technology Strategy 2005](../../assets/banktech06-figure-4.svg)
-
-## 16 Contents
-
-- What is a Services Oriented Architecture (SOA)?
-- Positioning SOA against an overall Enterprise Architecture
-- SOA in the context of NAB Technology Strategy
-- Obtaining business buy in and alignment
-- NAB approach to date in implementing SOA
-
-_Repeated verbatim; Obtaining business buy in and alignment follows._
 
 ## 17 Key steps taken to obtain business buy in
 
@@ -320,16 +292,6 @@ _Repeated verbatim; Obtaining business buy in and alignment follows._
 ## 20 Initiation of several key business initiatives delivering SOA components
 
 ![A roadmap across 2006, 2007 and 2008 against four numbered green theme boxes: transform architecture to enable business needs, de-risk our architecture, reduce the inherent costs in our platforms, and redefine and strengthen our governance. The bars carry no labels except one running the full width of theme four, develop enterprise architecture. A legend keys them three ways, in-light or started project, new business initiatives, and suggested new initiatives. An ellipse rings the cluster under theme one](../../assets/banktech06-figure-7.svg)
-
-## 21 Contents
-
-- What is a Services Oriented Architecture (SOA)?
-- Positioning SOA against an overall Enterprise Architecture
-- SOA in the context of NAB Technology Strategy
-- Obtaining business buy in and alignment
-- NAB approach to date in implementing SOA
-
-_Repeated verbatim; NAB approach to date in implementing SOA follows._
 
 ## 22 Current NAB approach in implementing SOA — Activities undertaken
 
@@ -432,8 +394,6 @@ Engagement with the SOA AWG must be:
 ## 28 Innovation Lab
 
 ![On the left, the lab architecture: a Business Process Development panel with WB Modeler, Process Design, Real data and Business Prototypes around an orange cycle, a Service Orientated Architecture panel with WS Integration Developer, Service Orchestration, State, Business Process and EAR, and a Strategic Front End Architecture panel where a User feeds Service Mediation above three Business Services and three Technical Services. On the right, three streams are described, Business Process Development, Statefull Service Orchestration and Banker Central Portal](../../assets/banktech06-figure-10.svg)
-
-## 29 thank you
 
 ## Sources
 
