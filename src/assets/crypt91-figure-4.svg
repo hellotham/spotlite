@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="41 39 330 318" width="396" height="382" role="img" aria-label="The key schedule. A 64 bit key input enters a tall box divided by dotted lines into Bit 1, Bit 2 and, at the bottom, Bit 48. Each band feeds a Mux to its right, which also takes an input N from above, and emits K bit 1, K bit 2 and K bit 48. A bus marked 16 runs from the box to the first Mux">
+<style>.f{stroke:#000;fill:none}.t{fill:#000}.s{fill:#000;stroke:none}</style>
+<defs>
+<marker id="a0" viewBox="0 0 8.0 4.0" refX="8.0" refY="2.00" markerWidth="8.0" markerHeight="4.0" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path class="s" d="M0,0 L8.0,2.00 L0,4.0 Z"/></marker>
+</defs>
+<polyline class="f" points="129,74 134,64" stroke-width="1"/>
+<polyline class="f" points="314,114 319,104" stroke-width="1"/>
+<polyline class="f" points="239,114 244,104" stroke-width="1"/>
+<polyline class="f" points="229,149 254,149" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="229,109 254,109" stroke-width="1" marker-end="url(#a0)"/>
+<polygon class="f" points="114,349 229,349 229,89 114,89 114,349" stroke-width="1"/>
+<polyline class="f" points="309,329 334,329" stroke-width="1"/>
+<polyline class="f" points="309,109 334,109" stroke-width="1"/>
+<polyline class="f" points="254,294 284,294 284,309" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="94,69 169,69 169,89" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="309,149 334,149" stroke-width="1"/>
+<polyline class="f" points="229,329 254,329" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="254,74 284,74 284,89" stroke-width="1" marker-end="url(#a0)"/>
+<polygon class="f" points="254,344 309,344 309,309 254,309 254,344" stroke-width="1"/>
+<polygon class="f" points="254,169 309,169 309,134 254,134 254,169" stroke-width="1"/>
+<polygon class="f" points="254,124 309,124 309,89 254,89 254,124" stroke-width="1"/>
+<polyline class="f" points="114,309 229,309" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polyline class="f" points="114,169 229,169" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polyline class="f" points="114,129 229,129" stroke-width="1" stroke-dasharray="1 4.5"/>
+<text class="t" x="129" y="59" font-family="Times, serif" font-size="13.3" text-anchor="start">64</text>
+<text class="t" x="319" y="124" font-family="Times, serif" font-size="13.3" text-anchor="start">1</text>
+<text class="t" x="319" y="324" font-family="Times, serif" font-size="13.3" text-anchor="start">K bit 48</text>
+<text class="t" x="319" y="144" font-family="Times, serif" font-size="13.3" text-anchor="start">K bit 2</text>
+<text class="t" x="319" y="104" font-family="Times, serif" font-size="13.3" text-anchor="start">K bit 1</text>
+<text class="t" x="154" y="334" font-family="Times, serif" font-size="13.3" text-anchor="start">Bit 48</text>
+<text class="t" x="154" y="159" font-family="Times, serif" font-size="13.3" text-anchor="start">Bit 2</text>
+<text class="t" x="154" y="119" font-family="Times, serif" font-size="13.3" text-anchor="start">Bit 1</text>
+<text class="t" x="239" y="299" font-family="Times, serif" font-size="13.3" text-anchor="start">N</text>
+<text class="t" x="239" y="79" font-family="Times, serif" font-size="13.3" text-anchor="start">N</text>
+<text class="t" x="269" y="334" font-family="Times, serif" font-size="13.3" text-anchor="start">Mux</text>
+<text class="t" x="269" y="159" font-family="Times, serif" font-size="13.3" text-anchor="start">Mux</text>
+<text class="t" x="269" y="114" font-family="Times, serif" font-size="13.3" text-anchor="start">Mux</text>
+<text class="t" x="234" y="124" font-family="Times, serif" font-size="13.3" text-anchor="start">16</text>
+<text class="t" x="49" y="79" font-family="Times, serif" font-size="11.1" text-anchor="start">Input</text>
+<text class="t" x="49" y="69" font-family="Times, serif" font-size="11.1" text-anchor="start">64 bit key</text>
+</svg>

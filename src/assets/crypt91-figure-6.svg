@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 232" width="384" height="278" role="img" aria-label="Scatter plot of crypt() performance. Time in milliseconds against machine, seven points marked with crosses: H'ware at 0.006, RS/6000 at 1.2, 5000 at 1.8, Sparc1+ at 2.0, 2100 at 3.3, 9810 at 6.3 and 3/60 at 7.2. The two slowest machines in Table 5 are not plotted">
+<style>.f{stroke:#000;fill:none;stroke-width:1}.t{fill:#000;stroke:none}</style>
+<rect class="f" x="78.0" y="18.0" width="200.0" height="160.0"/>
+<line class="f" x1="78.0" y1="178.0" x2="83.0" y2="178.0"/>
+<text class="t" x="74.0" y="181.1" font-family="Times, serif" font-size="8.9" text-anchor="end">0</text>
+<line class="f" x1="78.0" y1="146.0" x2="83.0" y2="146.0"/>
+<text class="t" x="74.0" y="149.1" font-family="Times, serif" font-size="8.9" text-anchor="end">2</text>
+<line class="f" x1="78.0" y1="114.0" x2="83.0" y2="114.0"/>
+<text class="t" x="74.0" y="117.1" font-family="Times, serif" font-size="8.9" text-anchor="end">4</text>
+<line class="f" x1="78.0" y1="82.0" x2="83.0" y2="82.0"/>
+<text class="t" x="74.0" y="85.1" font-family="Times, serif" font-size="8.9" text-anchor="end">6</text>
+<line class="f" x1="78.0" y1="50.0" x2="83.0" y2="50.0"/>
+<text class="t" x="74.0" y="53.1" font-family="Times, serif" font-size="8.9" text-anchor="end">8</text>
+<line class="f" x1="78.0" y1="18.0" x2="83.0" y2="18.0"/>
+<text class="t" x="74.0" y="21.1" font-family="Times, serif" font-size="8.9" text-anchor="end">10</text>
+<line class="f" x1="78.0" y1="178.0" x2="78.0" y2="173.0"/>
+<text class="t" x="78.0" y="189.6" font-family="Times, serif" font-size="8.9" text-anchor="middle">H'ware</text>
+<line class="f" x1="111.3" y1="178.0" x2="111.3" y2="173.0"/>
+<text class="t" x="111.3" y="189.6" font-family="Times, serif" font-size="8.9" text-anchor="middle">RS/6000</text>
+<line class="f" x1="144.7" y1="178.0" x2="144.7" y2="173.0"/>
+<text class="t" x="144.7" y="189.6" font-family="Times, serif" font-size="8.9" text-anchor="middle">5000</text>
+<line class="f" x1="178.0" y1="178.0" x2="178.0" y2="173.0"/>
+<text class="t" x="178.0" y="189.6" font-family="Times, serif" font-size="8.9" text-anchor="middle">Sparc1+</text>
+<line class="f" x1="211.3" y1="178.0" x2="211.3" y2="173.0"/>
+<text class="t" x="211.3" y="189.6" font-family="Times, serif" font-size="8.9" text-anchor="middle">2100</text>
+<line class="f" x1="244.7" y1="178.0" x2="244.7" y2="173.0"/>
+<text class="t" x="244.7" y="189.6" font-family="Times, serif" font-size="8.9" text-anchor="middle">9810</text>
+<line class="f" x1="278.0" y1="178.0" x2="278.0" y2="173.0"/>
+<text class="t" x="278.0" y="189.6" font-family="Times, serif" font-size="8.9" text-anchor="middle">3/60</text>
+<path class="f" d="M74.8,174.7 L81.2,181.1 M74.8,181.1 L81.2,174.7"/>
+<path class="f" d="M108.1,155.6 L114.5,162.0 M108.1,162.0 L114.5,155.6"/>
+<path class="f" d="M141.5,146.0 L147.9,152.4 M141.5,152.4 L147.9,146.0"/>
+<path class="f" d="M174.8,142.8 L181.2,149.2 M174.8,149.2 L181.2,142.8"/>
+<path class="f" d="M208.1,122.0 L214.5,128.4 M208.1,128.4 L214.5,122.0"/>
+<path class="f" d="M241.5,74.0 L247.9,80.4 M241.5,80.4 L247.9,74.0"/>
+<path class="f" d="M274.8,59.6 L281.2,66.0 M274.8,66.0 L281.2,59.6"/>
+<text class="t" x="52.0" y="96.0" font-family="Times, serif" font-size="8.9" text-anchor="middle">Time</text>
+<text class="t" x="52.0" y="107.8" font-family="Times, serif" font-size="8.9" text-anchor="middle">(ms)</text>
+<text class="t" x="178.0" y="204.7" font-family="Times, serif" font-size="8.9" text-anchor="middle">Machine</text>
+</svg>

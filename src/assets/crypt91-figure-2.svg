@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="52 66 185 389" width="222" height="467" role="img" aria-label="Block diagram of the E expansion. A 32 bit input enters an E expansion box whose 48 bit output feeds a tall column of twelve salt boxes, Salt Box 1 at the top through to Salt Box 12 at the bottom. Salt bits salt[0], salt[1], salt[2] and salt[11] enter their boxes from the left">
+<style>.f{stroke:#000;fill:none}.t{fill:#000}.s{fill:#000;stroke:none}</style>
+<defs>
+<marker id="a0" viewBox="0 0 8.0 4.0" refX="8.0" refY="2.00" markerWidth="8.0" markerHeight="4.0" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path class="s" d="M0,0 L8.0,2.00 L0,4.0 Z"/></marker>
+</defs>
+<polyline class="f" points="99,374 114,374" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="89,184 114,184" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="89,169 114,169" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="89,154 114,154" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="164,129 174,119" stroke-width="1"/>
+<polyline class="f" points="174,389 174,419" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="169,114 169,144" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="114,369 229,369" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polyline class="f" points="114,194 229,194" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polyline class="f" points="114,179 229,179" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polyline class="f" points="114,164 229,164" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polygon class="f" points="114,144 229,144 229,389 114,389 114,144" stroke-width="1"/>
+<polygon class="f" points="114,114 229,114 229,74 114,74 114,114" stroke-width="1"/>
+<polyline class="f" points="89,99 114,99" stroke-width="1" marker-end="url(#a0)"/>
+<text class="t" x="149" y="94" font-family="Times, serif" font-size="11.1" text-anchor="start">E expansion</text>
+<text class="t" x="79" y="379" font-family="Times, serif" font-size="11.1" text-anchor="middle">salt[11]</text>
+<text class="t" x="74" y="189" font-family="Times, serif" font-size="11.1" text-anchor="middle">salt[2]</text>
+<text class="t" x="74" y="174" font-family="Times, serif" font-size="11.1" text-anchor="middle">salt[1]</text>
+<text class="t" x="74" y="159" font-family="Times, serif" font-size="11.1" text-anchor="middle">salt[0]</text>
+<text class="t" x="174" y="444" font-family="Times, serif" font-size="11.1" text-anchor="middle">Output</text>
+<text class="t" x="174" y="434" font-family="Times, serif" font-size="11.1" text-anchor="middle">48 bit</text>
+<text class="t" x="179" y="134" font-family="Times, serif" font-size="11.1" text-anchor="middle">48</text>
+<text class="t" x="169" y="384" font-family="Times, serif" font-size="11.1" text-anchor="middle">Salt Box 12</text>
+<text class="t" x="169" y="189" font-family="Times, serif" font-size="11.1" text-anchor="middle">Salt Box 3</text>
+<text class="t" x="169" y="174" font-family="Times, serif" font-size="11.1" text-anchor="middle">Salt Box 2</text>
+<text class="t" x="169" y="159" font-family="Times, serif" font-size="11.1" text-anchor="middle">Salt Box 1</text>
+<text class="t" x="64" y="109" font-family="Times, serif" font-size="11.1" text-anchor="start">Input</text>
+<text class="t" x="64" y="99" font-family="Times, serif" font-size="11.1" text-anchor="start">32 bit</text>
+</svg>

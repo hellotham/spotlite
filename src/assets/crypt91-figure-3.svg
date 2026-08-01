@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="28 76 429 116" width="515" height="139" role="img" aria-label="A blowup of one salt box. Forty-eight lines run down through a wide box, the leftmost labelled 1, then i, then 24 prime, then 48 at the right. Lines i and 24 prime cross over inside the box, drawn as dotted diagonals; the others run straight through. salt[i] enters from the left">
+<style>.f{stroke:#000;fill:none}.t{fill:#000}.s{fill:#000;stroke:none}</style>
+<defs>
+<marker id="a0" viewBox="0 0 8.0 4.0" refX="8.0" refY="2.00" markerWidth="8.0" markerHeight="4.0" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path class="s" d="M0,0 L8.0,2.00 L0,4.0 Z"/></marker>
+</defs>
+<polyline class="f" points="279,99 214,184" stroke-width="1" stroke-dasharray="1 4.5" marker-end="url(#a0)"/>
+<polyline class="f" points="214,99 279,184" stroke-width="1" stroke-dasharray="1 4.5" marker-end="url(#a0)"/>
+<polyline class="f" points="214,99 214,184" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="279,99 279,184" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="434,99 434,184" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="124,99 124,184" stroke-width="1" marker-end="url(#a0)"/>
+<polygon class="f" points="114,184 449,184 449,99 114,99 114,184" stroke-width="1"/>
+<polyline class="f" points="69,144 114,144" stroke-width="1" marker-end="url(#a0)"/>
+<text class="t" x="49" y="149" font-family="Times, serif" font-size="11.1" text-anchor="middle">salt[i]</text>
+<text class="t" x="214" y="94" font-family="Times, serif" font-size="11.1" text-anchor="middle">i</text>
+<text class="t" x="279" y="94" font-family="Times, serif" font-size="11.1" text-anchor="middle">24&#x27;</text>
+<text class="t" x="434" y="94" font-family="Times, serif" font-size="11.1" text-anchor="middle">48</text>
+<text class="t" x="124" y="94" font-family="Times, serif" font-size="11.1" text-anchor="middle">1</text>
+</svg>

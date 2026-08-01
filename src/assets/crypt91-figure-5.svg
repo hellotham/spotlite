@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="28 61 395 409" width="474" height="491" role="img" aria-label="Block diagram of the DES hardware. A 64 bit input enters IP, which feeds an Input box. Input, Feedback and Swapped Feedback sit in a row, wired by dotted paths, and feed the f box and a circled plus marked 32 bit XOR. The XOR feeds an Output box producing the 64 bit output. A note reads N.B. All buses are 32 bits unless specified">
+<style>.f{stroke:#000;fill:none}.t{fill:#000}.s{fill:#000;stroke:none}</style>
+<defs>
+<marker id="a0" viewBox="0 0 8.0 4.0" refX="8.0" refY="2.00" markerWidth="8.0" markerHeight="4.0" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path class="s" d="M0,0 L8.0,2.00 L0,4.0 Z"/></marker>
+</defs>
+<ellipse class="f" cx="221" cy="344" rx="14" ry="14" stroke-width="1"/>
+<polyline class="f" points="210,424 210,454" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="224,358 224,374 415,374 415,88 270,88 270,114" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="190,327 190,395" stroke-width="1" stroke-dasharray="1 4.5" marker-end="url(#a0)"/>
+<polyline class="f" points="224,375 224,395" stroke-width="1" marker-end="url(#a0)"/>
+<polygon class="f" points="171,423 254,423 254,395 171,395 171,423" stroke-width="1"/>
+<polyline class="f" points="68,80 99,80" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="323,155 323,100 389,100 389,100 389,114" stroke-width="1" stroke-dasharray="1 4.5" marker-end="url(#a0)"/>
+<polyline class="f" points="211,155 211,90 235,90 235,90 244,90 244,114" stroke-width="1" stroke-dasharray="1 4.5" marker-end="url(#a0)"/>
+<polyline class="f" points="149,95 149,114" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="115,95 115,114" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="244,139 244,154" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polyline class="f" points="259,309 259,324 234,334" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="114,139 114,154 349,154 349,139" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polyline class="f" points="114,154 114,294" stroke-width="1" stroke-dasharray="1 4.5"/>
+<polyline class="f" points="114,294 209,334" stroke-width="1" stroke-dasharray="1 4.5" marker-end="url(#a0)"/>
+<polyline class="f" points="349,89 349,114" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="259,169 259,199" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="389,139 389,169" stroke-width="1"/>
+<polyline class="f" points="269,139 269,169" stroke-width="1"/>
+<polyline class="f" points="149,139 149,169" stroke-width="1"/>
+<polyline class="f" points="149,169 389,169" stroke-width="1"/>
+<polygon class="f" points="99,94 164,94 164,69 99,69 99,94" stroke-width="1"/>
+<polygon class="f" points="224,309 289,309 289,199 224,199 224,309" stroke-width="1"/>
+<polygon class="f" points="339,139 404,139 404,114 339,114 339,139" stroke-width="1"/>
+<polygon class="f" points="224,139 289,139 289,114 224,114 224,139" stroke-width="1"/>
+<polygon class="f" points="99,139 164,139 164,114 99,114 99,139" stroke-width="1"/>
+<text class="t" x="198" y="411" font-family="Times, serif" font-size="11.1" text-anchor="start">Output</text>
+<text class="t" x="245" y="346" font-family="Times, serif" font-size="11.1" text-anchor="start">32 bit XOR</text>
+<text class="t" x="219" y="459" font-family="Times, serif" font-size="11.1" text-anchor="start">Output</text>
+<text class="t" x="219" y="445" font-family="Times, serif" font-size="11.1" text-anchor="start">64 bit</text>
+<text class="t" x="36" y="90" font-family="Times, serif" font-size="11.1" text-anchor="start">Input</text>
+<text class="t" x="36" y="79" font-family="Times, serif" font-size="11.1" text-anchor="start">64 bit</text>
+<text class="t" x="219" y="349" font-family="Times, serif" font-size="11.1" text-anchor="start">+</text>
+<text class="t" x="124" y="84" font-family="Times, serif" font-size="11.1" text-anchor="start">IP</text>
+<text class="t" x="254" y="239" font-family="Times, serif" font-size="11.1" text-anchor="start">f</text>
+<text class="t" x="119" y="129" font-family="Times, serif" font-size="11.1" text-anchor="start">Input</text>
+<text class="t" x="354" y="134" font-family="Times, serif" font-size="11.1" text-anchor="start">Feedback</text>
+<text class="t" x="354" y="124" font-family="Times, serif" font-size="11.1" text-anchor="start">Swapped</text>
+<text class="t" x="239" y="129" font-family="Times, serif" font-size="11.1" text-anchor="start">Feedback</text>
+<text class="t" x="316" y="399" font-family="Times, serif" font-size="11.1" text-anchor="start">N.B. All buses are</text>
+<text class="t" x="338" y="411" font-family="Times, serif" font-size="11.1" text-anchor="start">32 bits unless</text>
+<text class="t" x="339" y="422" font-family="Times, serif" font-size="11.1" text-anchor="start">specified</text>
+</svg>

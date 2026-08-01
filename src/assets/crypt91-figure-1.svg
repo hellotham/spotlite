@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="26 61 330 224" width="396" height="269" role="img" aria-label="Block diagram of the f function. A 32 bit input enters an E Expansion box; a 64 bit key and N enter a K block. Each sends a 48 bit bus to a circled plus marked 48 bit XOR. Its 48 bit output feeds S Boxes, then P permutation, then a 32 bit output. A note reads N.B. All buses are 32 bits unless specified">
+<style>.f{stroke:#000;fill:none}.t{fill:#000}.s{fill:#000;stroke:none}</style>
+<defs>
+<marker id="a0" viewBox="0 0 8.0 4.0" refX="8.0" refY="2.00" markerWidth="8.0" markerHeight="4.0" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path class="s" d="M0,0 L8.0,2.00 L0,4.0 Z"/></marker>
+</defs>
+<ellipse class="f" cx="191" cy="136" rx="10" ry="10" stroke-width="1"/>
+<polyline class="f" points="314,84 284,84" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="299,74 284,74" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="184,159 194,149" stroke-width="1"/>
+<polyline class="f" points="249,109 259,99" stroke-width="1"/>
+<polyline class="f" points="129,109 139,99" stroke-width="1"/>
+<polyline class="f" points="189,229 189,254" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="189,149 189,169" stroke-width="1" marker-end="url(#a0)"/>
+<polygon class="f" points="144,229 244,229 244,199 144,199 144,229" stroke-width="1"/>
+<polygon class="f" points="144,199 244,199 244,169 144,169 144,199" stroke-width="1"/>
+<polyline class="f" points="134,94 134,119 184,129" stroke-width="1" marker-end="url(#a0)"/>
+<polyline class="f" points="254,94 254,119 199,129" stroke-width="1" marker-end="url(#a0)"/>
+<polygon class="f" points="219,94 284,94 284,69 219,69 219,94" stroke-width="1"/>
+<polyline class="f" points="68,80 99,80" stroke-width="1" marker-end="url(#a0)"/>
+<polygon class="f" points="99,94 164,94 164,69 99,69 99,94" stroke-width="1"/>
+<text class="t" x="104" y="84" font-family="Times, serif" font-size="11.1" text-anchor="start">E Expansion</text>
+<text class="t" x="319" y="89" font-family="Times, serif" font-size="11.1" text-anchor="start">N</text>
+<text class="t" x="304" y="79" font-family="Times, serif" font-size="11.1" text-anchor="start">64 bit key</text>
+<text class="t" x="209" y="144" font-family="Times, serif" font-size="11.1" text-anchor="start">48 bit XOR</text>
+<text class="t" x="169" y="159" font-family="Times, serif" font-size="11.1" text-anchor="start">48</text>
+<text class="t" x="264" y="109" font-family="Times, serif" font-size="11.1" text-anchor="start">48</text>
+<text class="t" x="144" y="109" font-family="Times, serif" font-size="11.1" text-anchor="start">48</text>
+<text class="t" x="179" y="274" font-family="Times, serif" font-size="11.1" text-anchor="start">Output</text>
+<text class="t" x="179" y="264" font-family="Times, serif" font-size="11.1" text-anchor="start">32 bit</text>
+<text class="t" x="164" y="214" font-family="Times, serif" font-size="11.1" text-anchor="start">P permutation</text>
+<text class="t" x="174" y="189" font-family="Times, serif" font-size="11.1" text-anchor="start">S Boxes</text>
+<text class="t" x="189" y="139" font-family="Times, serif" font-size="11.1" text-anchor="start">+</text>
+<text class="t" x="234" y="84" font-family="Times, serif" font-size="11.1" text-anchor="start">K block</text>
+<text class="t" x="34" y="79" font-family="Times, serif" font-size="11.1" text-anchor="start">32 bit</text>
+<text class="t" x="36" y="90" font-family="Times, serif" font-size="11.1" text-anchor="start">Input</text>
+<text class="t" x="249" y="239" font-family="Times, serif" font-size="11.1" text-anchor="start">N.B. All buses are</text>
+<text class="t" x="269" y="251" font-family="Times, serif" font-size="11.1" text-anchor="start">32 bits unless</text>
+<text class="t" x="269" y="262" font-family="Times, serif" font-size="11.1" text-anchor="start">specified</text>
+</svg>

@@ -6,9 +6,18 @@ pubDate: 1991-01-21
 
 _This is a reproduction of a paper presented at the USENIX Winter '91 Conference in
 Dallas, Texas (pp. 269–279), written with Philip Leong. I have transcribed it from a scan
-of the proceedings: the figures have been redrawn, the tables set as tables, and the code
-re-typed. The wording is unchanged. There is a
-[postscript from 2026](#postscript-thirty-five-years-on) at the end, which is not._
+of the proceedings: the tables are set as tables and the code re-typed. The wording is
+unchanged. There is a [postscript from 2026](#postscript-thirty-five-years-on) at the end,
+which is not._
+
+_The six figures are the originals. The paper's own troff source survives, and with it the five
+xfig drawings it included and the `grap` block that draws the scatter plot, so the figures here
+are converted from the files the paper was typeset from rather than redrawn from the scan.
+Two things about them are worth stating. The type is a little larger relative to each drawing
+than in the proceedings, because the paper's Makefile shrank it to fit a three-inch column and
+nothing here needs to. And the scatter plot's vertical tick marks are placed at every second
+millisecond, which is a guess: `grap` chose them automatically and the source does not record
+what it chose._
 
 **Philip Leong** – University of Sydney \
 **Chris Tham** – State Bank of Victoria
@@ -266,16 +275,7 @@ The $f$ function forms the heart of DEA and a password encryption involves 25 ap
 of DEA each of which make 16 applications of $f$. Figure 1 shows a block diagram of the $f$
 function.
 
-```mermaid
-flowchart TB
-    IN["32-bit input"] --> E["E expansion"]
-    KEY["64-bit key"] --> KB["K block"]
-    E -- "48" --> XOR(("XOR"))
-    KB -- "48" --> XOR
-    XOR -- "48" --> S["S boxes"]
-    S --> P["P permutation"]
-    P --> OUT["32-bit output"]
-```
+![Block diagram of the f function. A 32 bit input enters an E Expansion box; a 64 bit key and N enter a K block. Each sends a 48 bit bus to a circled plus marked 48 bit XOR. Its 48 bit output feeds S Boxes, then P permutation, then a 32 bit output. A note reads N.B. All buses are 32 bits unless specified](../../assets/crypt91-figure-1.svg)
 
 **Figure 1:** The f function. All buses are 32 bits unless specified.
 
@@ -299,36 +299,13 @@ required. Hence the difference between the $E$ expansion of DES and `crypt` does
 the speed of this hardware encryption device. Figure 2 shows a block diagram of the $E$
 expansion and Figure 3 shows a blowup of a salt box.
 
-```mermaid
-flowchart TB
-    IN["32-bit input"] --> E["E expansion"]
-    E -- "48" --> B1["Salt box 1"]
-    B1 --> B2["Salt box 2"]
-    B2 --> B3["Salt box 3"]
-    B3 -. "salt boxes 4 to 11" .-> B12["Salt box 12"]
-    B12 --> OUT["48-bit output"]
-    S0["salt[0]"] --> B1
-    S1["salt[1]"] --> B2
-    S2["salt[2]"] --> B3
-    S11["salt[11]"] --> B12
-```
+![Block diagram of the E expansion. A 32 bit input enters an E expansion box whose 48 bit output feeds a tall column of twelve salt boxes, Salt Box 1 at the top through to Salt Box 12 at the bottom, ending in a 48 bit output. Salt bits salt[0], salt[1], salt[2] and salt[11] enter their boxes from the left](../../assets/crypt91-figure-2.svg)
 
 **Figure 2:** The E expansion
 
-```mermaid
-flowchart TB
-    A1["bit 1"] -. unchanged .-> B1["bit 1"]
-    Ai["bit i"] -- "salt[i] = 0" --> Bi["bit i"]
-    Ai -- "salt[i] = 1" --> Bj["bit i+24"]
-    Aj["bit i+24"] -- "salt[i] = 0" --> Bj
-    Aj -- "salt[i] = 1" --> Bi
-    A48["bit 48"] -. unchanged .-> B48["bit 48"]
-```
+![A blowup of one salt box. Forty-eight lines run down through a wide box, the leftmost labelled 1, then i, then 24 prime, then 48 at the right. Lines i and 24 prime cross over inside the box, drawn as dotted diagonals; the others run straight through. salt[i] enters from the left](../../assets/crypt91-figure-3.svg)
 
-**Figure 3:** The salt box. The 48-bit $E$ expansion output runs across the top, the salt
-box output across the bottom. Bits $i$ and $i+24$ cross over when salt bit $i$ is set and
-run straight through when it is clear; every other bit of the bus is untouched. The
-original figure draws the same thing as crossed wiring between two of the 48 lines.
+**Figure 3:** The Salt Box
 
 ### Key schedule
 
@@ -338,18 +315,7 @@ calculating the key schedule is generate all 16 key schedule values for each of 
 of output, and then use a 100164 1-of-16 multiplexor to select the desired output for any
 given iteration (see Figure 4).
 
-```mermaid
-flowchart LR
-    K["64-bit key input"] --> B1["Bit 1"]
-    K --> B2["Bit 2"]
-    K --> B48["Bit 48"]
-    N["Iteration number N"] --> M1
-    N --> M2
-    N --> M48
-    B1 -- "16" --> M1["Mux"] --> K1["K bit 1"]
-    B2 -- "16" --> M2["Mux"] --> K2["K bit 2"]
-    B48 -- "16" --> M48["Mux"] --> K48["K bit 48"]
-```
+![The key schedule. A 64 bit key input enters a tall box divided by dotted lines into Bit 1, Bit 2 and, at the bottom, Bit 48. Each band feeds a Mux to its right, which also takes an input N from above, and emits K bit 1, K bit 2 and K bit 48. A bus marked 16 runs from the box to the first Mux](../../assets/crypt91-figure-4.svg)
 
 **Figure 4:** The key schedule
 
@@ -371,20 +337,7 @@ which just involves crossing of wires.
 To complete the $f$ function we do the 32-bit XOR of the output of the above permutation
 with the leftmost 32 bits of the previous iteration.
 
-```mermaid
-flowchart TB
-    IN["64-bit input"] --> IP["IP"]
-    IP --> L1["Input latch"]
-    L1 --> F["f"]
-    FB["Feedback latch"] --> F
-    SFB["Swapped feedback latch"] --> F
-    F --> XOR(("32-bit XOR"))
-    L1 --> XOR
-    XOR --> O["Output latch"]
-    O --> OUT["64-bit output"]
-    O --> FB
-    O --> SFB
-```
+![Block diagram of the DES hardware. A 64 bit input enters IP, which feeds an Input box. Input, Feedback and Swapped Feedback sit in a row, wired by dotted paths, and feed the f box and a circled plus marked 32 bit XOR. The XOR feeds an Output box producing the 64 bit output. A note reads N.B. All buses are 32 bits unless specified](../../assets/crypt91-figure-5.svg)
 
 **Figure 5:** Block diagram of the DES hardware. All buses are 32 bits unless specified.
 
@@ -597,15 +550,12 @@ Figure 6 summarizes the results of this table in a scatter plot.
 
 **Table 5:** crypt() speed comparison
 
-```mermaid
-xychart-beta
-    title "crypt() performance"
-    x-axis ["H'ware", "RS/6000", "5000/200", "Sparc1+", "2100", "9810", "3/60 gcc", "3/60 cc", "3/50"]
-    y-axis "Time (ms)" 0 --> 16
-    bar [0.006, 1.2, 1.8, 2.0, 3.3, 6.3, 7.2, 9.5, 16.0]
-```
+![Scatter plot of crypt() performance, time in milliseconds against machine. Seven crosses rise from left to right: H'ware at 0.006, RS/6000 at 1.2, 5000 at 1.8, Sparc1+ at 2.0, 2100 at 3.3, 9810 at 6.3 and 3/60 at 7.2. The y axis runs 0 to 10, so the two slowest machines in Table 5 fall outside it and are not plotted](../../assets/crypt91-figure-6.svg)
 
-**Figure 6:** crypt() performance. The original is a scatter plot of the same figures.
+**Figure 6:** Scatter plot of crypt() performance. It plots seven of Table 5's nine rows: the
+two slowest, the Sun 3/60 under `cc -O4` at 9.5 ms and the Sun 3/50 at 16.0 ms, are left out.
+The plot is drawn on a grid running 0 to 6 across and 0 to 10 up, which has room for seven
+points and none above 10 ms.
 
 Table 6 demonstrates the speed difference between hardware and software implementations and also
 shows the time required to decode a password using a brute force search. The software times were
@@ -1003,4 +953,5 @@ things are done, and that nobody has any reason to think about.
 
 - [The paper as published](https://phwl.org/assets/papers/crypt_usenix91.pdf), from the site of
   my co-author Philip Leong.
-- A scan of the proceedings, which this reproduction was transcribed from.
+- [A scan of the proceedings](/spotlite/crypt-usenix91.pdf), which this reproduction was
+  transcribed from.
