@@ -32,6 +32,14 @@ the real slide canvas. Slide 20's roadmap is set as a table rather than a drawin
 conversion broke words across lines in its labels and because the bars carry no text in the
 original anyway — only the themes, the years and one initiative are named on it._
 
+_The words on every slide are the deck's own, down to its ampersands and its abbreviations. Four
+things on the page are not. Sentences noting what a slide circles or rings describe the artwork
+rather than quote it. Three headings are split where two text boxes butt together in the source and
+run into one word — "Enterprise ArchitectureEnterprise Architecture Definitions", "Mediation and
+Transport RefreshRationale and Objectives", "SOA Working Groupestablish and govern". Slide 20 is
+described rather than quoted, for the reason above. And a stray superscript 2 on slide 4, pointing
+at a footnote that is not on the slide, is dropped._
+
 _One thing in the deck is worth flagging up front. Slide 5 reports Gartner's claim that "service
 oriented architecture" was coined in 1994 as a synonym for client/server. I had
 [given a paper on client/server architectures that same year](/spotlite/article/auug-1994/), which I did
@@ -212,8 +220,14 @@ opened.
 
 ## 8 Contents
 
-_The running contents slide, repeated unchanged before each section. Positioning SOA against an
-overall Enterprise Architecture follows._
+- What is a Services Oriented Architecture (SOA)?
+- Positioning SOA against an overall Enterprise Architecture
+- SOA in the context of NAB Technology Strategy
+- Obtaining business buy in and alignment
+- NAB approach to date in implementing SOA
+
+_Repeated verbatim before each section; the section that follows is Positioning SOA against an
+overall Enterprise Architecture._
 
 ## 9 SOA in relation to Enterprise Architecture — Enterprise Architecture Definitions
 
@@ -234,12 +248,12 @@ building blocks, and for showing how the building blocks fit together. It should
 tools and provide a common vocabulary. It should also include a list of recommended standards and
 compliant products that can be used to implement the building blocks.
 
-| Architecture                   | Definition                                                                                                                                                                                            |
-| :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Business (or business process) | this defines the business strategy, governance, organisation, and key business processes.                                                                                                             |
-| Application                    | this kind of architecture provides a blueprint for the individual application systems to be deployed, their interactions, and their relationships to the core business processes of the organization. |
-| Information/data               | this describes the structure of an organization's logical and physical data assets and data management resources.                                                                                     |
-| Technology/Infrastructure      | this describes the software infrastructure intended to support the deployment of core, mission-critical applications. This type of software is sometimes referred to as "middleware".                 |
+| Architecture                                | Definition                                                                                                                                                                                            |
+| :------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Business (or business process) architecture | this defines the business strategy, governance, organisation, and key business processes.                                                                                                             |
+| Application architecture                    | this kind of architecture provides a blueprint for the individual application systems to be deployed, their interactions, and their relationships to the core business processes of the organization. |
+| Information/data architecture               | this describes the structure of an organization's logical and physical data assets and data management resources.                                                                                     |
+| Technology/Infrastructure architecture      | this describes the software infrastructure intended to support the deployment of core, mission-critical applications. This type of software is sometimes referred to as "middleware".                 |
 
 Definitions taken from TOGAF Version 8. Where does Service Oriented Architecture sit?
 
@@ -256,7 +270,13 @@ Definitions taken from TOGAF Version 8. Where does Service Oriented Architecture
 
 ## 11 Contents
 
-_Repeated unchanged. SOA in the context of NAB Technology Strategy follows._
+- What is a Services Oriented Architecture (SOA)?
+- Positioning SOA against an overall Enterprise Architecture
+- SOA in the context of NAB Technology Strategy
+- Obtaining business buy in and alignment
+- NAB approach to date in implementing SOA
+
+_Repeated verbatim; SOA in the context of NAB Technology Strategy follows._
 
 ## 12 Drivers for NAB Technology Strategy (2005)
 
@@ -269,11 +289,11 @@ _Repeated unchanged. SOA in the context of NAB Technology Strategy follows._
 
 ## 13 An Enterprise Architecture is a key component of the Technology Strategy
 
-| #   | Theme                                                        | Initiatives                                                                                                                                                                                                                       | Key Benefits                                                                                                                                                                             |
-| :-- | :----------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Transform Platforms to enable business strategy              | **A. Move to integrated enterprise architecture with new capabilities** · B. Maintain stable and secure platforms · C. Optimise platform cost efficiency                                                                          | Enabling business strategies · Addressing current risks · Cost reduction (short term and long term)                                                                                      |
-| 2   | Uplift Delivery capabilities, in key areas, to best in class | A. Significantly improve solution delivery across the region · B. Create high performing and flexible workforce · C. Extend and optimise sourcing approach · D. Improve regional infrastructure delivery · E. Manage IT for value | Enablement of business transformation program · Closer alignment with business · Cost optimisation and transparency · Increased responsiveness and flexibility · Improved service levels |
-| 3   | Manage IT differently to enable business transformation      | A. Position IT as part of the Business · B. Break out of our vicious investment cycle · C. Share accountability for creating a technology profile that enables business model innovation                                          | Increased innovation · Enablement of flexible business operating model · Higher value/return for investments                                                                             |
+| #   | Theme                                                        | Initiatives                                                                                                                                                                                                                       | Key Benefits                                                                                                                                                                           |
+| :-- | :----------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Transform Platforms to enable business strategy              | **A. Move to integrated enterprise architecture with new capabilities** · B. Maintain stable and secure platforms · C. Optimise platform cost efficiency                                                                          | Enabling business strategies · Addressing current risks · Cost reduction (short term and long term)                                                                                    |
+| 2   | Uplift Delivery capabilities, in key areas, to best in class | A. Significantly improve solution delivery across the region · B. Create high performing and flexible workforce · C. Extend and optimise sourcing approach · D. Improve regional infrastructure delivery · E. Manage IT for value | Enablement of business transformation program · Closer alignment with business · Cost optimisation & transparency · Increased responsiveness and flexibility · Improved service levels |
+| 3   | Manage IT differently to enable business transformation      | A. Position IT as part of the Business · B. Break out of our vicious investment cycle · C. Share accountability for creating a technology profile that enables business model innovation                                          | Increased innovation · Enablement of flexible business operating model · Higher value/return for investments                                                                           |
 
 Item 1A is circled on the slide.
 
@@ -288,7 +308,7 @@ Item 1A is circled on the slide.
 | 5   | Common information integration and access                   | Application and information integration capabilities across systems and platforms and into third parties                                                                     |
 | 6   | Regional source of truth for financial and transaction data | Support decentralised P&L responsibility · Support mandatory compliance (eg Basel, IFRS, SOX, AML)                                                                           |
 | 7   | Shared processing and back-office utilities                 | Rationalise product environment (migrate products off legacy environments) · Rationalise support systems to create shared 'utilities' (eg document production)               |
-| 8   | Regional security and identity management                   | Structure and model to support security policy and security principles · SOX and IFRS compliance                                                                             |
+| 8   | Regional security and identity management                   | Structure & model to support security policy and security principles · SOX & IFRS compliance                                                                                 |
 | 9   | Comprehensive and accurate management information           | Common data sourcing and common reporting · Improved visibility of business performance                                                                                      |
 | 10  | Simplified regional infrastructure                          | Develop and operate shared infrastructure components · Standardise branch infrastructure to suit deployment of cross business unit applications and support cross sell       |
 
@@ -303,7 +323,13 @@ Capabilities 1 to 5 are circled on the slide. The line along the bottom reads:
 
 ## 16 Contents
 
-_Repeated unchanged. Obtaining business buy in and alignment follows._
+- What is a Services Oriented Architecture (SOA)?
+- Positioning SOA against an overall Enterprise Architecture
+- SOA in the context of NAB Technology Strategy
+- Obtaining business buy in and alignment
+- NAB approach to date in implementing SOA
+
+_Repeated verbatim; Obtaining business buy in and alignment follows._
 
 ## 17 Key steps taken to obtain business buy in
 
@@ -311,7 +337,7 @@ _Repeated unchanged. Obtaining business buy in and alignment follows._
 
 - Alignment to enterprise architecture is now a necessary precondition for approval of new projects
 - Reconfirmation of Strategic Architecture Forum as the prime governance body for approval of major
-  architecture decisions and ensuring programs implement them
+  architecture decisions and ensuring programs implement agreed solutions
 
 **Head of Retail Banking Operations: conceptual discussion on SOA**
 
@@ -329,10 +355,10 @@ _Repeated unchanged. Obtaining business buy in and alignment follows._
 
 ```mermaid
 flowchart TD
-  SAF["SAF<br/>CIO · GM Strategy and Transformation (Chair) · Chief Architect<br/>HoT RBA · HoT Asia (?) · HoT Wealth<br/>HoT Support · HoT BPSA · HoT Risk · HoT Operations"]
+  SAF["SAF<br/>CIO · GM Strat. &amp;Trans (Chair) · Chief Architect<br/>HoT RBA · HoT Asia (?) · HoT Wealth<br/>HoT Support · HoT BPSA · HoT Risk · HoT Operations"]
   SAF --- HOA[Heads of Architecture]
   SAF --- BU[BU IT LTs]
-  HOA --- AWG[Architecture Working Groups]
+  HOA --- AWG["Architecture Working Groups (AWG)"]
   BU --- AWG
   AWG --- G1[Sales, Service and Channel]
   AWG --- G2[Information Management]
@@ -381,12 +407,18 @@ Architecture**. An ellipse rings the initiatives clustered under theme 1.
 
 ## 21 Contents
 
-_Repeated unchanged. NAB approach to date in implementing SOA follows._
+- What is a Services Oriented Architecture (SOA)?
+- Positioning SOA against an overall Enterprise Architecture
+- SOA in the context of NAB Technology Strategy
+- Obtaining business buy in and alignment
+- NAB approach to date in implementing SOA
+
+_Repeated verbatim; NAB approach to date in implementing SOA follows._
 
 ## 22 Current NAB approach in implementing SOA — Activities undertaken
 
 - Services Oriented Architecture is a key component of the overall Enterprise Architecture work plan
-  (funded via the Investment master plan as well as Technology Strategy)
+  (funded via the Investment master plan as well as Technology budget)
 - Integration Services Reference Architecture defined
 - Integration Services Cookbook (patterns and guidelines) defined for two major programs
 - Product evaluation to select key products for Mediation and Transport layer in Integration Services
