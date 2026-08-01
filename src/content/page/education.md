@@ -12,7 +12,8 @@ I am a lifelong learner. Here is a summary of my formal education and academic a
 
 - Presented several times to Tableau User Group in Sydney.
 - Presented to R-Ladies Sydney.
-- Presented at conferences including Bank.Tech.06, Microsoft Architecture Council, ACS NSW Branch Forum, and AUUG'93 and AUUG'94.
+- Presented at conferences including Microsoft Architecture Council, ACS NSW Branch Forum, and AUUG'93 and AUUG'94.
+- Presented ["Services Oriented Architecture: opportunities and challenges of embedding SOA in a Retail Bank"](/spotlite/article/banktech-2006/) at Bank.Tech.06 (Sydney, 27–28 July 2006), while Head of Architecture, Technology Australia, Retail Banking at NAB.
 - Presented "Distributed Client/Server Architectures and Transaction Processing on Open Systems" at [AUUG'94](/spotlite/article/auug-1994/) and, in revised form, at [Oracle OpenWorld '94](/spotlite/article/openworld-1994/), while at AT&T Global Information Solutions.
 - Presented ["Performance Tuning for Relational Database Applications"](/spotlite/article/auug-1993/) at AUUG'93, while at NCR Australia.
 - Co-authored technical paper ["UNIX Password Encryption considered insecure"](/spotlite/article/crypt-usenix91/) (USENIX Winter '91 Conference, Dallas, pp. 269–279).
