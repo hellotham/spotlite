@@ -1,5 +1,7 @@
 # Spotlite — CV and Portfolio Template for Astro
 
+[![Deploy to GitHub Pages](https://github.com/hellotham/spotlite/actions/workflows/deploy.yml/badge.svg)](https://github.com/hellotham/spotlite/actions/workflows/deploy.yml)
+
 ![screenshot](https://github.com/hellotham/spotlite/blob/main/src/assets/screenshot.png?raw=true)
 
 Spotlite generates a **professional CV — as two print-ready PDFs and as a browsable site —
