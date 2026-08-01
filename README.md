@@ -97,7 +97,6 @@ It is deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push t
 ├── astro.config.mjs
 ├── package.json
 ├── uno.config.ts
-├── AGENTS.md                 # Working notes for coding agents, incl. known traps
 ├── DESIGN.md                 # The Rosely design system
 ├── public/
 │   ├── cv.pdf               # Generated: full CV

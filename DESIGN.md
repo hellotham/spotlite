@@ -178,10 +178,12 @@ Both halves now live in `src/styles/mermaid.css`, including the light one that
 `themeVariables` also sets. That duplication is the point: Mermaid bakes its colours in at
 render time, and the integration can render the same diagram twice under racing conditions,
 so a diagram that lost the race kept the stock palette until something re-rendered it.
-Deciding appearance in CSS makes it independent of when a diagram was drawn. `AGENTS.md`
-covers the consequences, chiefly that every rule needs `!important` and one needs a cascade
-layer. Prefer extending that file over per-diagram `%%{init}%%` directives, which cannot vary
-by colour scheme.
+Deciding appearance in CSS makes it independent of when a diagram was drawn. Two consequences
+are worth knowing before editing it. Every rule needs `!important`, because Mermaid injects an
+id-scoped `<style>` into each SVG and an ID selector beats a class rule. And one rule needs a
+cascade layer, because Gantt paints `.vertText` from that same block and no class selector can
+outrank an ID one however many classes it carries. Prefer extending `src/styles/mermaid.css`
+over per-diagram `%%{init}%%` directives, which cannot vary by colour scheme.
 
 ### Syntax highlighting
 

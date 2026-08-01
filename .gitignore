@@ -29,3 +29,15 @@ coverage/
 # Working CV drafts, kept locally only. Anchored to the repo root so this cannot match
 # public/*.pdf — a bare *.pdf would silently stop the published downloads being tracked.
 /*.pdf
+
+# Agent tooling, kept in the ChristineTham/cv repository only. This is a template: it ships
+# the site, not the machinery for maintaining one particular copy of it. Those files describe
+# a two-repo backport workflow and a personal document archive that a forker has neither of,
+# so shipping them would hand every fork a hook that refuses their files.
+#
+# Ignored rather than merely deleted, because deleting does not stop them coming back: a
+# `cp -r` from cv is not an edit, so the sibling-repo hook never sees it. Remove these lines
+# if you fork this and want your own agent notes here.
+/.claude/
+/AGENTS.md
+/CLAUDE.md
