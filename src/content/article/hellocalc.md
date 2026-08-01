@@ -23,9 +23,9 @@ run the card through the slot, and carry your work around in your pocket as a st
 tape. I was completely captivated by it, and I think everything I have done since started
 there.
 
-After that the machines rather followed me around. When I began my first proper job at Bain &
-Company in 1986 they issued me with an HP-12C, which is the small brown financial calculator
-that still, more than forty years after it was introduced, refuses to die. When I moved to
+After that the machines rather followed me around. When I took a casual job at Bain & Company in
+1986, in my third year at university, they issued me with an HP-12C, which is the small brown
+financial calculator that still, more than forty years after it was introduced, refuses to die. When I moved to
 State Bank Victoria in 1990 I was given an HP-19B. In between and afterwards I bought my own,
 and I still have them: an HP 48SX, then an HP 48GX, later an HP 35s, and eventually an HP
 Prime.

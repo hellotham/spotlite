@@ -5,16 +5,16 @@ pubDate: 2026-07-05
 ---
 
 I am proud to showcase my latest AI vibe coding project: a port of the classic Unix game
-rogue, and its automated player rogomatic, to the browser as a modern web application.
+Rogue, and its automated player Rog-O-Matic, to the browser as a modern web application.
 
 ![Rogoweb running Rog-O-Matic in the browser: the VT100 terminal beside the live telemetry panel](../../assets/rogoweb.png)
 
 ## Rogue parties
 
-As a bit of context, when I was about halfway through uni the game rogue was introduced on our
+As a bit of context, when I was about halfway through uni the game Rogue was introduced on our
 university minicomputer. It instantly became a hit amongst the students, and the university had
 to ban it from being played during the day, so we students would gather after hours and have
-"rogue parties". To be honest, I was never really that good at the game compared to others, but
+"Rogue parties". To be honest, I was never really that good at the game compared to others, but
 I was part of the scene.
 
 If you have not met it, Rogue is the 1980 dungeon crawler by Michael Toy, Glenn Wichman and Ken
@@ -22,29 +22,29 @@ Arnold, and it is the game that gave the whole roguelike genre its name. You wan
 drawn in text characters, and everything is generated fresh each time, so nobody can memorise
 their way to victory.
 
-Then rogomatic was introduced, which is one of the earliest examples of AI actually working. It
-was an expert system that could train itself to play rogue well, built at Carnegie Mellon in
+Then Rog-O-Matic was introduced, which is one of the earliest examples of AI actually working. It
+was an expert system that could train itself to play Rogue well, built at Carnegie Mellon in
 1981 by Michael Mauldin and his colleagues, and it was startlingly good. Their
 [1983 paper](https://kilthub.cmu.edu/articles/journal_contribution/Rog-O-Matic_a_belligerent_expert_system/6609137/1) reports that over three weeks it scored a higher median than any of the
 fifteen best human players at Carnegie Mellon and the University of Texas at Austin.
 
-Naturally, we all started using it. Eventually rogomatic took up so much CPU time that it was
+Naturally, we all started using it. Eventually Rog-O-Matic took up so much CPU time that it was
 banned from the university computers too. We students wished we had personal Unix computers, so
-that we could play rogue and rogomatic all day long.
+that we could play Rogue and Rog-O-Matic all day long.
 
 ## Not a reimplementation
 
-So, as a trip down memory lane, I have recreated the experience of running rogue and rogomatic,
+So, as a trip down memory lane, I have recreated the experience of running Rogue and Rog-O-Matic,
 in the browser.
 
-I want to be clear about what this is, because I wrote recently about
-[rebuilding every HP calculator](/spotlite/article/hellocalc/) and that project was the exact
-opposite. Hello Calc is a reimplementation, with every function rewritten from scratch. This is
-not. This is the original source code, ported to run in WebAssembly as browser workers, with
-shared array buffers acting as the interprocess communication between the workers.
+I want to be clear about what this is, because
+[rebuilding every HP calculator](/spotlite/article/hellocalc/) was the exact opposite. Hello Calc is a
+reimplementation, with every function rewritten from scratch. This is not. This is the original
+source code, ported to run in WebAssembly as browser workers, with shared array buffers acting as
+the interprocess communication between the workers.
 
-That last part is the whole problem in a sentence. On Unix, rogue and rogomatic ran as two
-separate processes, with rogomatic launching rogue and talking to it through the standard input
+That last part is the whole problem in a sentence. On Unix, `rogue` and `rogomatic` ran as two
+separate processes, with `rogomatic` launching `rogue` and talking to it through the standard input
 and output pipes. A browser has none of that machinery. There are no processes, no `fork`, and
 no pipes.
 
@@ -64,7 +64,7 @@ The whole thing was coded using AI in about five days. I have written about the 
 length in [chapter three of my book](https://christham.net/aidou/software.html), but the short
 version is that I described what I wanted rather than how to do it.
 
-My intent was almost as short as the title of this article: port rogue and rogomatic to run in
+My intent was almost as short as the title of this article: port `rogue` and `rogomatic` to run in
 the browser. I added a constraint, that the original C code should keep working unchanged in
 spirit, and a check, that the bot could still run a game through to completion. The architecture
 you have just read about was the agent's answer, not mine. I would never have thought of it.
