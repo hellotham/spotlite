@@ -23,7 +23,7 @@ tags:
 
 - Founder and Junior Janitor of a boutique consultancy spanning business and IT strategy, enterprise architecture, operating models, strategic roadmaps, analytics and data science, digital products and content platforms.
 - Author of **AI-dō: The Way of AI**, and developer of **FinvestLens** and **HelloNotes**, two native Apple applications published as free software.
-- Successfully delivered multiple consulting engagements, including [Cochlear](https://hellotham.com/spotlite/work/cochlear/), [Transport for NSW](https://hellotham.com/spotlite/work/tfnsw/) and [Broadspectrum](https://hellotham.com/spotlite/work/broadspectrum/).
+- Successfully delivered multiple consulting engagements, including [Cochlear](/spotlite/work/cochlear/), [Transport for NSW](/spotlite/work/tfnsw/) and [Broadspectrum](/spotlite/work/broadspectrum/).
 
 ## Writing
 
