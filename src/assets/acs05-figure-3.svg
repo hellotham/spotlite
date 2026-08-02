@@ -1,0 +1,668 @@
+<svg version="1.2" viewBox="50 -127 23299 18717" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="25400" height="19050"></rect>
+  </clipPath>
+  
+ </defs>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <defs class="TextShapeIndex">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ </defs>
+ 
+ 
+ 
+ 
+  
+   
+  
+ 
+ 
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  
+   <g id="container-id24">
+    <g id="id24" class="Slide" clip-path="url(#presentation_clip_path)">
+     
+      
+      
+       <g id="id496">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="748" y="1505"><tspan font-family="Arial, sans-serif" font-size="706px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="3982" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">SOA Layers</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id497">
+        
+        <path fill="none" stroke="rgb(204,102,0)" stroke-width="53" stroke-linejoin="miter" d="M 16871,14252 L 2702,14252 "></path>
+       </g>
+      
+      
+       <g id="id498">
+        
+        <path fill="none" stroke="rgb(204,102,0)" stroke-width="53" stroke-linejoin="miter" d="M 22299,4926 L 2698,5005 "></path>
+       </g>
+      
+      
+       <g id="id499">
+        
+        <path fill="rgb(102,204,255)" stroke="none" d="M 11214,18114 L 9582,18114 9582,16165 12846,16165 12846,18114 11214,18114 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 11214,18114 L 9582,18114 9582,16165 12846,16165 12846,18114 11214,18114 Z "></path>
+       </g>
+      
+      
+       <g id="id500">
+        
+        <path fill="rgb(102,204,255)" stroke="none" d="M 15290,18114 L 13660,18114 13660,16165 16919,16165 16919,18114 15290,18114 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 15290,18114 L 13660,18114 13660,16165 16919,16165 16919,18114 15290,18114 Z "></path>
+       </g>
+      
+      
+       <g id="id501">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3553" y="17018"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5194" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Providing Resources </tspan></tspan><tspan class="TextPosition" x="3520" y="17695"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5227" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">and Implementations</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id502">
+        
+        <path fill="rgb(153,204,255)" stroke="none" d="M 11214,16166 L 9582,16166 9582,14252 12846,14252 12846,16166 11214,16166 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 11214,16166 L 9582,16166 9582,14252 12846,14252 12846,16166 11214,16166 Z "></path>
+       </g>
+      
+      
+       <g id="id503">
+        
+        <path fill="rgb(153,204,255)" stroke="none" d="M 15290,16166 L 13660,16166 13660,14252 16919,14252 16919,16166 15290,16166 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 15290,16166 L 13660,16166 13660,14252 16919,14252 16919,16166 15290,16166 Z "></path>
+       </g>
+      
+      
+       <g id="id504">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3708" y="15409"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5039" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service Enablement</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id505">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3114" y="12595"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5633" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Implementation-Based </tspan></tspan><tspan class="TextPosition" x="3960" y="13272"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="4787" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">and Utility Services</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id506">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3061" y="9619"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="5884" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Service Bus</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       
+        <g id="id507">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 18428,4361 L 18428,5322 "></path>
+        </g>
+       
+       
+        <g id="id508">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 20764,4361 L 20764,5322 "></path>
+        </g>
+       
+      
+      
+       <g id="id509">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3250" y="6303"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5602" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Composite Application</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id510">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="19036" y="14818"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1408" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Other </tspan></tspan><tspan class="TextPosition" x="18802" y="15495"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1877" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service </tspan></tspan><tspan class="TextPosition" x="18551" y="16172"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2378" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Providers</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id511">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3646" y="3927"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5132" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Composite Business </tspan></tspan><tspan class="TextPosition" x="6619" y="4604"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2159" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Services</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id512">
+        
+        <path fill="none" stroke="rgb(204,102,0)" stroke-width="53" stroke-linejoin="miter" d="M 16889,16166 L 2703,16166 "></path>
+       </g>
+      
+      
+       <g id="id513">
+        
+        <path fill="none" stroke="rgb(204,102,0)" stroke-width="53" stroke-linejoin="miter" d="M 22299,11126 L 2698,11126 "></path>
+       </g>
+      
+      
+       <g id="id514">
+        
+        <path fill="none" stroke="rgb(204,102,0)" stroke-width="53" stroke-linejoin="miter" d="M 22299,7523 L 2702,7523 "></path>
+       </g>
+      
+      
+       <g id="id515">
+        
+        <path fill="none" stroke="rgb(204,102,0)" stroke-width="53" stroke-linejoin="miter" d="M 22299,2725 L 2702,2805 "></path>
+       </g>
+      
+      
+       <g id="id516">
+        
+        <text class="SVGTextShape" transform="rotate(90 1338 8172)"><tspan class="TextParagraph"><tspan class="TextPosition" x="1338" y="8172"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="6165" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enterprise Service Bus</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id517">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 3103,6526 C 2699,6526 2295,6927 2295,7328 L 2295,14742 C 2295,15143 2699,15545 3103,15545 "></path>
+       </g>
+      
+      
+       <g id="id518">
+        
+        <path fill="rgb(255,255,255)" fill-opacity="0.541" stroke="none" d="M 10996,16603 L 20104,16603 20104,17542 10996,17542 10996,16603 10996,16603 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11247" y="17297"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="8605" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Internal and External Resources</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id519">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 19301,3637 C 19301,3782 19263,3926 19190,4052 19118,4179 19014,4284 18889,4357 18763,4430 18621,4468 18476,4468 18331,4468 18189,4430 18064,4357 17938,4284 17834,4179 17762,4052 17689,3926 17651,3782 17651,3637 17651,3491 17689,3347 17762,3221 17834,3094 17938,2989 18064,2916 18189,2843 18331,2805 18476,2805 18621,2805 18763,2843 18889,2916 19014,2989 19118,3094 19190,3221 19263,3347 19301,3491 19301,3636 L 19301,3637 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 19301,3637 C 19301,3782 19263,3926 19190,4052 19118,4179 19014,4284 18889,4357 18763,4430 18621,4468 18476,4468 18331,4468 18189,4430 18064,4357 17938,4284 17834,4179 17762,4052 17689,3926 17651,3782 17651,3637 17651,3491 17689,3347 17762,3221 17834,3094 17938,2989 18064,2916 18189,2843 18331,2805 18476,2805 18621,2805 18763,2843 18889,2916 19014,2989 19118,3094 19190,3221 19263,3347 19301,3491 19301,3636 L 19301,3637 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="17722" y="3805"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id520">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 21640,3637 C 21640,3782 21602,3926 21529,4052 21457,4179 21353,4284 21227,4357 21102,4430 20959,4468 20814,4468 20670,4468 20527,4430 20402,4357 20276,4284 20172,4179 20100,4052 20027,3926 19989,3782 19989,3637 19989,3491 20027,3347 20100,3221 20172,3094 20276,2989 20402,2916 20527,2843 20670,2805 20814,2805 20959,2805 21102,2843 21227,2916 21353,2989 21457,3094 21529,3221 21602,3347 21640,3491 21640,3636 L 21640,3637 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21640,3637 C 21640,3782 21602,3926 21529,4052 21457,4179 21353,4284 21227,4357 21102,4430 20959,4468 20814,4468 20670,4468 20527,4430 20402,4357 20276,4284 20172,4179 20100,4052 20027,3926 19989,3782 19989,3637 19989,3491 20027,3347 20100,3221 20172,3094 20276,2989 20402,2916 20527,2843 20670,2805 20814,2805 20959,2805 21102,2843 21227,2916 21353,2989 21457,3094 21529,3221 21602,3347 21640,3491 21640,3636 L 21640,3637 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20061" y="3805"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id521">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 19557,12212 C 19557,12358 19519,12502 19446,12628 19374,12754 19270,12860 19145,12933 19019,13006 18877,13044 18732,13044 18587,13044 18445,13006 18320,12933 18194,12860 18090,12754 18018,12628 17945,12502 17907,12358 17907,12212 17907,12066 17945,11922 18018,11796 18090,11670 18194,11564 18320,11491 18445,11418 18587,11380 18732,11380 18877,11380 19019,11418 19145,11491 19270,11564 19374,11670 19446,11796 19519,11922 19557,12066 19557,12212 L 19557,12212 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 19557,12212 C 19557,12358 19519,12502 19446,12628 19374,12754 19270,12860 19145,12933 19019,13006 18877,13044 18732,13044 18587,13044 18445,13006 18320,12933 18194,12860 18090,12754 18018,12628 17945,12502 17907,12358 17907,12212 17907,12066 17945,11922 18018,11796 18090,11670 18194,11564 18320,11491 18445,11418 18587,11380 18732,11380 18877,11380 19019,11418 19145,11491 19270,11564 19374,11670 19446,11796 19519,11922 19557,12066 19557,12212 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="17978" y="12381"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id522">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 21894,12212 C 21894,12358 21856,12502 21783,12628 21711,12754 21607,12860 21482,12933 21356,13006 21214,13044 21069,13044 20924,13044 20782,13006 20657,12933 20531,12860 20427,12754 20355,12628 20282,12502 20244,12358 20244,12212 20244,12066 20282,11922 20355,11796 20427,11670 20531,11564 20657,11491 20782,11418 20924,11380 21069,11380 21214,11380 21356,11418 21482,11491 21607,11564 21711,11670 21783,11796 21856,11922 21894,12066 21894,12212 L 21894,12212 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21894,12212 C 21894,12358 21856,12502 21783,12628 21711,12754 21607,12860 21482,12933 21356,13006 21214,13044 21069,13044 20924,13044 20782,13006 20657,12933 20531,12860 20427,12754 20355,12628 20282,12502 20244,12358 20244,12212 20244,12066 20282,11922 20355,11796 20427,11670 20531,11564 20657,11491 20782,11418 20924,11380 21069,11380 21214,11380 21356,11418 21482,11491 21607,11564 21711,11670 21783,11796 21856,11922 21894,12066 21894,12212 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20315" y="12381"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id523">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 12973,12212 C 12973,12358 12935,12502 12862,12628 12790,12754 12686,12860 12561,12933 12435,13006 12293,13044 12148,13044 12003,13044 11861,13006 11736,12933 11610,12860 11506,12754 11434,12628 11361,12502 11323,12358 11323,12212 11323,12066 11361,11922 11434,11796 11506,11670 11610,11564 11736,11491 11861,11418 12003,11380 12148,11380 12293,11380 12435,11418 12561,11491 12686,11564 12790,11670 12862,11796 12935,11922 12973,12066 12973,12212 L 12973,12212 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12973,12212 C 12973,12358 12935,12502 12862,12628 12790,12754 12686,12860 12561,12933 12435,13006 12293,13044 12148,13044 12003,13044 11861,13006 11736,12933 11610,12860 11506,12754 11434,12628 11361,12502 11323,12358 11323,12212 11323,12066 11361,11922 11434,11796 11506,11670 11610,11564 11736,11491 11861,11418 12003,11380 12148,11380 12293,11380 12435,11418 12561,11491 12686,11564 12790,11670 12862,11796 12935,11922 12973,12066 12973,12212 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11394" y="12381"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id524">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 11249,12212 C 11249,12358 11211,12502 11138,12628 11066,12754 10962,12860 10837,12933 10711,13006 10569,13044 10424,13044 10279,13044 10137,13006 10012,12933 9886,12860 9782,12754 9710,12628 9637,12502 9599,12358 9599,12212 9599,12066 9637,11922 9710,11796 9782,11670 9886,11564 10012,11491 10137,11418 10279,11380 10424,11380 10569,11380 10711,11418 10837,11491 10962,11564 11066,11670 11138,11796 11211,11922 11249,12066 11249,12212 L 11249,12212 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11249,12212 C 11249,12358 11211,12502 11138,12628 11066,12754 10962,12860 10837,12933 10711,13006 10569,13044 10424,13044 10279,13044 10137,13006 10012,12933 9886,12860 9782,12754 9710,12628 9637,12502 9599,12358 9599,12212 9599,12066 9637,11922 9710,11796 9782,11670 9886,11564 10012,11491 10137,11418 10279,11380 10424,11380 10569,11380 10711,11418 10837,11491 10962,11564 11066,11670 11138,11796 11211,11922 11249,12066 11249,12212 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9670" y="12381"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id525">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 17123,12212 C 17123,12358 17085,12502 17012,12628 16940,12754 16836,12860 16711,12933 16585,13006 16443,13044 16298,13044 16153,13044 16011,13006 15886,12933 15760,12860 15656,12754 15584,12628 15511,12502 15473,12358 15473,12212 15473,12066 15511,11922 15584,11796 15656,11670 15760,11564 15886,11491 16011,11418 16153,11380 16298,11380 16443,11380 16585,11418 16711,11491 16836,11564 16940,11670 17012,11796 17085,11922 17123,12066 17123,12212 L 17123,12212 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 17123,12212 C 17123,12358 17085,12502 17012,12628 16940,12754 16836,12860 16711,12933 16585,13006 16443,13044 16298,13044 16153,13044 16011,13006 15886,12933 15760,12860 15656,12754 15584,12628 15511,12502 15473,12358 15473,12212 15473,12066 15511,11922 15584,11796 15656,11670 15760,11564 15886,11491 16011,11418 16153,11380 16298,11380 16443,11380 16585,11418 16711,11491 16836,11564 16940,11670 17012,11796 17085,11922 17123,12066 17123,12212 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15544" y="12381"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id526">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 15399,12212 C 15399,12358 15361,12502 15288,12628 15216,12754 15112,12860 14987,12933 14861,13006 14719,13044 14574,13044 14429,13044 14287,13006 14162,12933 14036,12860 13932,12754 13860,12628 13787,12502 13749,12358 13749,12212 13749,12066 13787,11922 13860,11796 13932,11670 14036,11564 14162,11491 14287,11418 14429,11380 14574,11380 14719,11380 14861,11418 14987,11491 15112,11564 15216,11670 15288,11796 15361,11922 15399,12066 15399,12212 L 15399,12212 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 15399,12212 C 15399,12358 15361,12502 15288,12628 15216,12754 15112,12860 14987,12933 14861,13006 14719,13044 14574,13044 14429,13044 14287,13006 14162,12933 14036,12860 13932,12754 13860,12628 13787,12502 13749,12358 13749,12212 13749,12066 13787,11922 13860,11796 13932,11670 14036,11564 14162,11491 14287,11418 14429,11380 14574,11380 14719,11380 14861,11418 14987,11491 15112,11564 15216,11670 15288,11796 15361,11922 15399,12066 15399,12212 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13820" y="12381"><tspan font-family="Arial, sans-serif" font-size="423px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id527">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 10376,13044 L 10376,14208 "></path>
+       </g>
+      
+      
+       <g id="id528">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 12193,13044 L 12193,14208 "></path>
+       </g>
+      
+      
+       <g id="id529">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 14530,13044 L 14530,14208 "></path>
+       </g>
+      
+      
+       <g id="id530">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 16347,13044 L 16347,14208 "></path>
+       </g>
+      
+      
+       <g id="id531">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 18688,13044 L 18688,14208 "></path>
+       </g>
+      
+      
+       <g id="id532">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 21026,13044 L 21026,14208 "></path>
+       </g>
+      
+      
+       <g id="id533">
+        
+        <path fill="rgb(204,236,255)" stroke="none" d="M 15899,10522 L 9498,10522 9498,7920 22299,7920 22299,10522 15899,10522 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 15899,10522 L 9498,10522 9498,7920 22299,7920 22299,10522 15899,10522 Z "></path>
+       </g>
+      
+      
+       
+        <g id="id534">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 12638,9926 L 10301,9926 10301,9812 14975,9812 14975,9926 12638,9926 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 12638,9926 L 10301,9926 10301,9812 14975,9812 14975,9926 12638,9926 Z "></path>
+        </g>
+       
+       
+        <g id="id535">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 10839,9479 L 10839,9811 "></path>
+        </g>
+       
+       
+        <g id="id536">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 11750,9479 L 11750,9811 "></path>
+        </g>
+       
+       
+        <g id="id537">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 12626,9479 L 12626,9811 "></path>
+        </g>
+       
+       
+        <g id="id538">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 13599,9479 L 13599,9811 "></path>
+        </g>
+       
+       
+        <g id="id539">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 14508,9479 L 14508,9811 "></path>
+        </g>
+       
+       
+        <g id="id540">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 13907,9207 C 13907,9261 13893,9315 13866,9363 13838,9410 13799,9450 13752,9477 13706,9505 13652,9519 13598,9519 13544,9519 13490,9505 13444,9477 13397,9450 13358,9410 13330,9363 13303,9315 13289,9261 13289,9207 13289,9152 13303,9098 13330,9050 13358,9003 13397,8963 13444,8936 13490,8908 13544,8894 13598,8894 13652,8894 13706,8908 13752,8936 13799,8963 13838,9003 13866,9050 13893,9098 13907,9152 13907,9207 L 13907,9207 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 13907,9207 C 13907,9261 13893,9315 13866,9363 13838,9410 13799,9450 13752,9477 13706,9505 13652,9519 13598,9519 13544,9519 13490,9505 13444,9477 13397,9450 13358,9410 13330,9363 13303,9315 13289,9261 13289,9207 13289,9152 13303,9098 13330,9050 13358,9003 13397,8963 13444,8936 13490,8908 13544,8894 13598,8894 13652,8894 13706,8908 13752,8936 13799,8963 13838,9003 13866,9050 13893,9098 13907,9152 13907,9207 Z "></path>
+        </g>
+       
+       
+        <g id="id541">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 14816,9223 C 14816,9278 14802,9332 14775,9379 14747,9426 14708,9466 14662,9493 14615,9521 14561,9535 14507,9535 14453,9535 14399,9521 14353,9493 14306,9466 14267,9426 14239,9379 14212,9332 14198,9278 14198,9223 14198,9168 14212,9114 14239,9067 14267,9020 14306,8980 14353,8953 14399,8925 14453,8911 14507,8911 14561,8911 14615,8925 14662,8953 14708,8980 14747,9020 14775,9067 14802,9114 14816,9168 14816,9223 L 14816,9223 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 14816,9223 C 14816,9278 14802,9332 14775,9379 14747,9426 14708,9466 14662,9493 14615,9521 14561,9535 14507,9535 14453,9535 14399,9521 14353,9493 14306,9466 14267,9426 14239,9379 14212,9332 14198,9278 14198,9223 14198,9168 14212,9114 14239,9067 14267,9020 14306,8980 14353,8953 14399,8925 14453,8911 14507,8911 14561,8911 14615,8925 14662,8953 14708,8980 14747,9020 14775,9067 14802,9114 14816,9168 14816,9223 Z "></path>
+        </g>
+       
+       
+        <g id="id542">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 12058,9207 C 12058,9261 12044,9315 12017,9363 11989,9410 11950,9450 11904,9477 11857,9505 11803,9519 11749,9519 11695,9519 11641,9505 11595,9477 11548,9450 11509,9410 11481,9363 11454,9315 11440,9261 11440,9207 11440,9152 11454,9098 11481,9050 11509,9003 11548,8963 11595,8936 11641,8908 11695,8894 11749,8894 11803,8894 11857,8908 11904,8936 11950,8963 11989,9003 12017,9050 12044,9098 12058,9152 12058,9207 L 12058,9207 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12058,9207 C 12058,9261 12044,9315 12017,9363 11989,9410 11950,9450 11904,9477 11857,9505 11803,9519 11749,9519 11695,9519 11641,9505 11595,9477 11548,9450 11509,9410 11481,9363 11454,9315 11440,9261 11440,9207 11440,9152 11454,9098 11481,9050 11509,9003 11548,8963 11595,8936 11641,8908 11695,8894 11749,8894 11803,8894 11857,8908 11904,8936 11950,8963 11989,9003 12017,9050 12044,9098 12058,9152 12058,9207 Z "></path>
+        </g>
+       
+       
+        <g id="id543">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 12932,9207 C 12932,9261 12918,9315 12891,9363 12863,9410 12824,9450 12778,9477 12731,9505 12677,9519 12623,9519 12569,9519 12515,9505 12469,9477 12422,9450 12383,9410 12355,9363 12328,9315 12314,9261 12314,9207 12314,9152 12328,9098 12355,9050 12383,9003 12422,8963 12469,8936 12515,8908 12569,8894 12623,8894 12677,8894 12731,8908 12778,8936 12824,8963 12863,9003 12891,9050 12918,9098 12932,9152 12932,9207 L 12932,9207 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 12932,9207 C 12932,9261 12918,9315 12891,9363 12863,9410 12824,9450 12778,9477 12731,9505 12677,9519 12623,9519 12569,9519 12515,9505 12469,9477 12422,9450 12383,9410 12355,9363 12328,9315 12314,9261 12314,9207 12314,9152 12328,9098 12355,9050 12383,9003 12422,8963 12469,8936 12515,8908 12569,8894 12623,8894 12677,8894 12731,8908 12778,8936 12824,8963 12863,9003 12891,9050 12918,9098 12932,9152 12932,9207 Z "></path>
+        </g>
+       
+       
+        <g id="id544">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 11149,9207 C 11149,9261 11135,9315 11108,9363 11080,9410 11041,9450 10994,9477 10947,9505 10894,9519 10840,9519 10785,9519 10732,9505 10685,9477 10638,9450 10599,9410 10571,9363 10544,9315 10530,9261 10530,9207 10530,9152 10544,9098 10571,9050 10599,9003 10638,8963 10685,8936 10732,8908 10785,8894 10840,8894 10894,8894 10947,8908 10994,8936 11041,8963 11080,9003 11108,9050 11135,9098 11149,9152 11149,9207 L 11149,9207 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11149,9207 C 11149,9261 11135,9315 11108,9363 11080,9410 11041,9450 10994,9477 10947,9505 10894,9519 10840,9519 10785,9519 10732,9505 10685,9477 10638,9450 10599,9410 10571,9363 10544,9315 10530,9261 10530,9207 10530,9152 10544,9098 10571,9050 10599,9003 10638,8963 10685,8936 10732,8908 10785,8894 10840,8894 10894,8894 10947,8908 10994,8936 11041,8963 11080,9003 11108,9050 11135,9098 11149,9152 11149,9207 Z "></path>
+        </g>
+       
+      
+      
+       
+        <g id="id545">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 18838,9926 L 16501,9926 16501,9812 21175,9812 21175,9926 18838,9926 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 18838,9926 L 16501,9926 16501,9812 21175,9812 21175,9926 18838,9926 Z "></path>
+        </g>
+       
+       
+        <g id="id546">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 17039,9479 L 17039,9811 "></path>
+        </g>
+       
+       
+        <g id="id547">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 17950,9479 L 17950,9811 "></path>
+        </g>
+       
+       
+        <g id="id548">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 18826,9479 L 18826,9811 "></path>
+        </g>
+       
+       
+        <g id="id549">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 19799,9479 L 19799,9811 "></path>
+        </g>
+       
+       
+        <g id="id550">
+         
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 20708,9479 L 20708,9811 "></path>
+        </g>
+       
+       
+        <g id="id551">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 20107,9207 C 20107,9261 20093,9315 20066,9363 20038,9410 19999,9450 19952,9477 19906,9505 19852,9519 19798,9519 19744,9519 19690,9505 19644,9477 19597,9450 19558,9410 19530,9363 19503,9315 19489,9261 19489,9207 19489,9152 19503,9098 19530,9050 19558,9003 19597,8963 19644,8936 19690,8908 19744,8894 19798,8894 19852,8894 19906,8908 19952,8936 19999,8963 20038,9003 20066,9050 20093,9098 20107,9152 20107,9207 L 20107,9207 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 20107,9207 C 20107,9261 20093,9315 20066,9363 20038,9410 19999,9450 19952,9477 19906,9505 19852,9519 19798,9519 19744,9519 19690,9505 19644,9477 19597,9450 19558,9410 19530,9363 19503,9315 19489,9261 19489,9207 19489,9152 19503,9098 19530,9050 19558,9003 19597,8963 19644,8936 19690,8908 19744,8894 19798,8894 19852,8894 19906,8908 19952,8936 19999,8963 20038,9003 20066,9050 20093,9098 20107,9152 20107,9207 Z "></path>
+        </g>
+       
+       
+        <g id="id552">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 21016,9223 C 21016,9278 21002,9332 20975,9379 20947,9426 20908,9466 20862,9493 20815,9521 20761,9535 20707,9535 20653,9535 20599,9521 20553,9493 20506,9466 20467,9426 20439,9379 20412,9332 20398,9278 20398,9223 20398,9168 20412,9114 20439,9067 20467,9020 20506,8980 20553,8953 20599,8925 20653,8911 20707,8911 20761,8911 20815,8925 20862,8953 20908,8980 20947,9020 20975,9067 21002,9114 21016,9168 21016,9223 L 21016,9223 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 21016,9223 C 21016,9278 21002,9332 20975,9379 20947,9426 20908,9466 20862,9493 20815,9521 20761,9535 20707,9535 20653,9535 20599,9521 20553,9493 20506,9466 20467,9426 20439,9379 20412,9332 20398,9278 20398,9223 20398,9168 20412,9114 20439,9067 20467,9020 20506,8980 20553,8953 20599,8925 20653,8911 20707,8911 20761,8911 20815,8925 20862,8953 20908,8980 20947,9020 20975,9067 21002,9114 21016,9168 21016,9223 Z "></path>
+        </g>
+       
+       
+        <g id="id553">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 18258,9207 C 18258,9261 18244,9315 18217,9363 18189,9410 18150,9450 18103,9477 18057,9505 18003,9519 17949,9519 17895,9519 17841,9505 17794,9477 17748,9450 17709,9410 17681,9363 17654,9315 17640,9261 17640,9207 17640,9152 17654,9098 17681,9050 17709,9003 17748,8963 17794,8936 17841,8908 17895,8894 17949,8894 18003,8894 18057,8908 18103,8936 18150,8963 18189,9003 18217,9050 18244,9098 18258,9152 18258,9207 L 18258,9207 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 18258,9207 C 18258,9261 18244,9315 18217,9363 18189,9410 18150,9450 18103,9477 18057,9505 18003,9519 17949,9519 17895,9519 17841,9505 17794,9477 17748,9450 17709,9410 17681,9363 17654,9315 17640,9261 17640,9207 17640,9152 17654,9098 17681,9050 17709,9003 17748,8963 17794,8936 17841,8908 17895,8894 17949,8894 18003,8894 18057,8908 18103,8936 18150,8963 18189,9003 18217,9050 18244,9098 18258,9152 18258,9207 Z "></path>
+        </g>
+       
+       
+        <g id="id554">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 19132,9207 C 19132,9261 19118,9315 19091,9363 19063,9410 19024,9450 18978,9477 18931,9505 18877,9519 18823,9519 18769,9519 18715,9505 18669,9477 18622,9450 18583,9410 18555,9363 18528,9315 18514,9261 18514,9207 18514,9152 18528,9098 18555,9050 18583,9003 18622,8963 18669,8936 18715,8908 18769,8894 18823,8894 18877,8894 18931,8908 18978,8936 19024,8963 19063,9003 19091,9050 19118,9098 19132,9152 19132,9207 L 19132,9207 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 19132,9207 C 19132,9261 19118,9315 19091,9363 19063,9410 19024,9450 18978,9477 18931,9505 18877,9519 18823,9519 18769,9519 18715,9505 18669,9477 18622,9450 18583,9410 18555,9363 18528,9315 18514,9261 18514,9207 18514,9152 18528,9098 18555,9050 18583,9003 18622,8963 18669,8936 18715,8908 18769,8894 18823,8894 18877,8894 18931,8908 18978,8936 19024,8963 19063,9003 19091,9050 19118,9098 19132,9152 19132,9207 Z "></path>
+        </g>
+       
+       
+        <g id="id555">
+         
+         <path fill="rgb(102,204,255)" stroke="none" d="M 17349,9207 C 17349,9261 17335,9315 17308,9363 17280,9410 17241,9450 17194,9477 17147,9505 17094,9519 17040,9519 16985,9519 16932,9505 16885,9477 16838,9450 16799,9410 16771,9363 16744,9315 16730,9261 16730,9207 16730,9152 16744,9098 16771,9050 16799,9003 16838,8963 16885,8936 16932,8908 16985,8894 17040,8894 17094,8894 17147,8908 17194,8936 17241,8963 17280,9003 17308,9050 17335,9098 17349,9152 17349,9207 L 17349,9207 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 17349,9207 C 17349,9261 17335,9315 17308,9363 17280,9410 17241,9450 17194,9477 17147,9505 17094,9519 17040,9519 16985,9519 16932,9505 16885,9477 16838,9450 16799,9410 16771,9363 16744,9315 16730,9261 16730,9207 16730,9152 16744,9098 16771,9050 16799,9003 16838,8963 16885,8936 16932,8908 16985,8894 17040,8894 17094,8894 17147,8908 17194,8936 17241,8963 17280,9003 17308,9050 17335,9098 17349,9152 17349,9207 Z "></path>
+        </g>
+       
+      
+      
+       <g id="id556">
+        
+        <path fill="rgb(255,255,255)" stroke="none" d="M 15976,7125 L 9652,7125 9652,5220 22299,5220 22299,7125 15976,7125 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="miter" d="M 15976,7125 L 9652,7125 9652,5220 22299,5220 22299,7125 15976,7125 Z "></path>
+       </g>
+      
+      
+       <g id="id557">
+        
+        <path fill="rgb(255,255,153)" stroke="none" d="M 11487,5955 C 11487,6020 11470,6083 11437,6139 11404,6196 11357,6242 11301,6275 11244,6307 11179,6324 11114,6324 11049,6324 10984,6307 10928,6275 10871,6242 10824,6196 10791,6139 10758,6083 10741,6020 10741,5955 10741,5890 10758,5827 10791,5771 10824,5714 10871,5668 10928,5635 10984,5603 11049,5586 11114,5586 11179,5586 11244,5603 11301,5635 11357,5668 11404,5714 11437,5771 11470,5827 11487,5890 11487,5955 L 11487,5955 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 11487,5955 C 11487,6020 11470,6083 11437,6139 11404,6196 11357,6242 11301,6275 11244,6307 11179,6324 11114,6324 11049,6324 10984,6307 10928,6275 10871,6242 10824,6196 10791,6139 10758,6083 10741,6020 10741,5955 10741,5890 10758,5827 10791,5771 10824,5714 10871,5668 10928,5635 10984,5603 11049,5586 11114,5586 11179,5586 11244,5603 11301,5635 11357,5668 11404,5714 11437,5771 11470,5827 11487,5890 11487,5955 Z "></path>
+       </g>
+      
+      
+       <g id="id558">
+        
+        <path fill="rgb(255,255,153)" stroke="none" d="M 13499,6484 C 13499,6549 13482,6614 13448,6671 13415,6727 13368,6774 13310,6807 13253,6840 13188,6857 13122,6857 13055,6857 12990,6840 12933,6807 12875,6774 12828,6727 12795,6671 12761,6614 12744,6549 12744,6484 12744,6419 12761,6354 12795,6298 12828,6241 12875,6194 12933,6161 12990,6128 13055,6111 13122,6111 13188,6111 13253,6128 13310,6161 13368,6194 13415,6241 13448,6298 13482,6354 13499,6419 13499,6484 L 13499,6484 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 13499,6484 C 13499,6549 13482,6614 13448,6671 13415,6727 13368,6774 13310,6807 13253,6840 13188,6857 13122,6857 13055,6857 12990,6840 12933,6807 12875,6774 12828,6727 12795,6671 12761,6614 12744,6549 12744,6484 12744,6419 12761,6354 12795,6298 12828,6241 12875,6194 12933,6161 12990,6128 13055,6111 13122,6111 13188,6111 13253,6128 13310,6161 13368,6194 13415,6241 13448,6298 13482,6354 13499,6419 13499,6484 Z "></path>
+       </g>
+      
+      
+       <g id="id559">
+        
+        <path fill="rgb(255,255,153)" stroke="none" d="M 15416,6171 C 15416,6236 15399,6301 15366,6358 15333,6414 15286,6461 15230,6494 15173,6527 15108,6544 15043,6544 14978,6544 14913,6527 14857,6494 14800,6461 14753,6414 14720,6358 14687,6301 14670,6236 14670,6171 14670,6106 14687,6041 14720,5985 14753,5928 14800,5881 14857,5848 14913,5815 14978,5798 15043,5798 15108,5798 15173,5815 15230,5848 15286,5881 15333,5928 15366,5985 15399,6041 15416,6106 15416,6171 L 15416,6171 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 15416,6171 C 15416,6236 15399,6301 15366,6358 15333,6414 15286,6461 15230,6494 15173,6527 15108,6544 15043,6544 14978,6544 14913,6527 14857,6494 14800,6461 14753,6414 14720,6358 14687,6301 14670,6236 14670,6171 14670,6106 14687,6041 14720,5985 14753,5928 14800,5881 14857,5848 14913,5815 14978,5798 15043,5798 15108,5798 15173,5815 15230,5848 15286,5881 15333,5928 15366,5985 15399,6041 15416,6106 15416,6171 Z "></path>
+       </g>
+      
+      
+       <g id="id560">
+        
+        <path fill="rgb(255,255,153)" stroke="none" d="M 18794,6517 C 18794,6582 18777,6646 18744,6703 18711,6759 18664,6806 18608,6838 18551,6871 18486,6888 18421,6888 18356,6888 18291,6871 18235,6838 18178,6806 18131,6759 18098,6703 18065,6646 18048,6582 18048,6517 18048,6452 18065,6388 18098,6332 18131,6275 18178,6228 18235,6196 18291,6163 18356,6146 18421,6146 18486,6146 18551,6163 18608,6196 18664,6228 18711,6275 18744,6332 18777,6388 18794,6452 18794,6517 L 18794,6517 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 18794,6517 C 18794,6582 18777,6646 18744,6703 18711,6759 18664,6806 18608,6838 18551,6871 18486,6888 18421,6888 18356,6888 18291,6871 18235,6838 18178,6806 18131,6759 18098,6703 18065,6646 18048,6582 18048,6517 18048,6452 18065,6388 18098,6332 18131,6275 18178,6228 18235,6196 18291,6163 18356,6146 18421,6146 18486,6146 18551,6163 18608,6196 18664,6228 18711,6275 18744,6332 18777,6388 18794,6452 18794,6517 Z "></path>
+       </g>
+      
+      
+       <g id="id561">
+        
+        <path fill="rgb(255,255,153)" stroke="none" d="M 17018,5661 C 17018,5726 17001,5790 16968,5847 16935,5904 16887,5951 16830,5984 16773,6017 16708,6034 16643,6034 16577,6034 16512,6017 16455,5984 16398,5951 16350,5904 16317,5847 16284,5790 16267,5726 16267,5661 16267,5595 16284,5531 16317,5474 16350,5417 16398,5370 16455,5337 16512,5304 16577,5287 16643,5287 16708,5287 16773,5304 16830,5337 16887,5370 16935,5417 16968,5474 17001,5531 17018,5595 17018,5661 L 17018,5661 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 17018,5661 C 17018,5726 17001,5790 16968,5847 16935,5904 16887,5951 16830,5984 16773,6017 16708,6034 16643,6034 16577,6034 16512,6017 16455,5984 16398,5951 16350,5904 16317,5847 16284,5790 16267,5726 16267,5661 16267,5595 16284,5531 16317,5474 16350,5417 16398,5370 16455,5337 16512,5304 16577,5287 16643,5287 16708,5287 16773,5304 16830,5337 16887,5370 16935,5417 16968,5474 17001,5531 17018,5595 17018,5661 Z "></path>
+       </g>
+      
+      
+       <g id="id562">
+        
+        <path fill="rgb(255,255,153)" stroke="none" d="M 21397,5986 C 21397,6051 21380,6116 21346,6173 21313,6229 21266,6276 21208,6309 21151,6342 21086,6359 21020,6359 20953,6359 20888,6342 20831,6309 20773,6276 20726,6229 20693,6173 20659,6116 20642,6051 20642,5986 20642,5921 20659,5856 20693,5800 20726,5743 20773,5696 20831,5663 20888,5630 20953,5613 21020,5613 21086,5613 21151,5630 21208,5663 21266,5696 21313,5743 21346,5800 21380,5856 21397,5921 21397,5986 L 21397,5986 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 21397,5986 C 21397,6051 21380,6116 21346,6173 21313,6229 21266,6276 21208,6309 21151,6342 21086,6359 21020,6359 20953,6359 20888,6342 20831,6309 20773,6276 20726,6229 20693,6173 20659,6116 20642,6051 20642,5986 20642,5921 20659,5856 20693,5800 20726,5743 20773,5696 20831,5663 20888,5630 20953,5613 21020,5613 21086,5613 21151,5630 21208,5663 21266,5696 21313,5743 21346,5800 21380,5856 21397,5921 21397,5986 Z "></path>
+       </g>
+      
+      
+       <g id="id563">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 11487,5956 L 12744,6485 "></path>
+       </g>
+      
+      
+       <g id="id564">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 13498,6485 L 14671,6172 "></path>
+       </g>
+      
+      
+       <g id="id565">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 15416,6172 L 16267,5660 "></path>
+       </g>
+      
+      
+       <g id="id566">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 15416,6172 L 18049,6517 "></path>
+       </g>
+      
+      
+       <g id="id567">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 18794,6517 L 20642,5987 "></path>
+       </g>
+      
+      
+       <g id="id568">
+        
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 17017,5660 L 20642,5987 "></path>
+       </g>
+      
+     
+    </g>
+   </g>
+  
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+ 
+ 
+</svg>

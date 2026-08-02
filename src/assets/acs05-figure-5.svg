@@ -1,0 +1,261 @@
+<svg version="1.2" viewBox="14 -163 25188 17454" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="25400" height="19050"></rect>
+  </clipPath>
+  
+ </defs>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <defs class="TextShapeIndex">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ </defs>
+ 
+ 
+ 
+ 
+  
+   
+  
+ 
+ 
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  
+   <g id="container-id26">
+    <g id="id26" class="Slide" clip-path="url(#presentation_clip_path)">
+     
+      
+      
+       <g id="id679">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="748" y="1505"><tspan font-family="Arial, sans-serif" font-size="706px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="6690" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">SOA Maturity Model</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       
+        <g id="id680">
+         
+         <path fill="rgb(204,236,255)" stroke="none" d="M 16503,16792 L 8303,16792 8303,14252 24702,14252 24702,16792 16503,16792 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 16503,16792 L 8303,16792 8303,14252 24702,14252 24702,16792 16503,16792 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13437" y="15748"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="6132" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Technical Applications</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id681">
+         
+         <path fill="rgb(204,236,255)" stroke="none" d="M 17703,14265 L 10703,14265 10703,11725 24703,11725 24703,14265 17703,14265 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 17703,14265 L 10703,14265 10703,11725 24703,11725 24703,14265 17703,14265 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="14638" y="13221"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="6131" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Application Integration</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id682">
+         
+         <path fill="rgb(204,236,255)" stroke="none" d="M 19003,11734 L 13303,11734 13303,9194 24702,9194 24702,11734 19003,11734 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 19003,11734 L 13303,11734 13303,9194 24702,9194 24702,11734 19003,11734 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="14731" y="10690"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="8543" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Process Improvement</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id683">
+         
+         <path fill="rgb(204,236,255)" stroke="none" d="M 20203,9203 L 15703,9203 15703,6663 24703,6663 24703,9203 20203,9203 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 20203,9203 L 15703,9203 15703,6663 24703,6663 24703,9203 20203,9203 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="17715" y="8159"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4977" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Services</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id684">
+         
+         <path fill="rgb(204,236,255)" stroke="none" d="M 21303,6663 L 17903,6663 17903,4123 24702,4123 24702,6663 21303,6663 Z "></path>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="26" stroke-linejoin="miter" d="M 21303,6663 L 17903,6663 17903,4123 24702,4123 24702,6663 21303,6663 Z "></path>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="18627" y="5619"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="5351" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Federated Business</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id685">
+         
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8952" y="5155"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="8481" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Collaborative services creating </tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="5105" y="5832"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="12328" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">dynamic, collaborative business relationships</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id686">
+         
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5032" y="7761"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="10202" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Services directly implement business </tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="10539" y="8438"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4695" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">service capability</tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id687">
+         
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="4977" y="10253"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="7857" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service as a process creates </tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="3354" y="10930"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="9480" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">modular units of business process </tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id688">
+         
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3870" y="12428"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="6385" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Service increases loose </tspan></tspan><tspan class="TextPosition" x="7753" y="13105"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">coupling </tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="2746" y="13782"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="7509" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">and separation of concerns </tspan></tspan></tspan></text>
+        </g>
+       
+       
+        <g id="id689">
+         
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3612" y="15135"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4442" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Data integration,</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="3580" y="15812"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="4474" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">client neutrality, </tspan></tspan><tspan class="TextPosition" x="1607" y="16489"><tspan font-family="Arial, sans-serif" font-size="564px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="6447" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">shared internal services</tspan></tspan></tspan></text>
+        </g>
+       
+      
+     
+    </g>
+   </g>
+  
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+ 
+ 
+</svg>
