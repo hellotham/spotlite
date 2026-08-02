@@ -112,6 +112,25 @@ export default defineConfig({
       }
     }),
     presetTypography({
+      // A list marker is the only thing that distinguishes a list item from a paragraph,
+      // so WCAG 1.4.11's 3:1 for non-text contrast applies to it. The preset's defaults
+      // are shade keys into `theme.colors.gray` — `bullets: [300, 600]` — which measured
+      // 1.47:1 in light and 2.34:1 in dark against the white / zinc-900 panel the prose
+      // is painted on. The light value was, in practice, invisible.
+      //
+      // Passing strings rather than shade keys works because the preset resolves each
+      // entry as `gray[key] ?? theme[key] ?? key`, so an unrecognised value is emitted
+      // verbatim. The pair is the same one `text-accent` uses — Morning Glory Dark in
+      // light, Morning Glory in dark — which is also what the printed CV already paints
+      // its own markers in (`--cv-accent` in public/cv-print.css). Measures 5.6:1 and
+      // 6.9:1 respectively.
+      //
+      // `counters` is deliberately left alone. An ordered list's numerals are glyphs of
+      // text rather than decoration, the preset sets them a full four shades darker than
+      // the bullets for that reason, and they already clear 4.5:1 in both schemes.
+      colorScheme: {
+        bullets: ['#c02d5a', '#ec809e'] // morningGloryDark, morningGlory
+      },
       cssExtend: {
         // presetTypography wraps every inline <code> in literal backticks via
         // ::before/::after content. On a page that names `crypt()`, `login(1)` and
