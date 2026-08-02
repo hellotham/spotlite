@@ -10,12 +10,18 @@ I am a lifelong learner. Here is a summary of my formal education and academic a
 
 ## Papers / Conferences
 
-- Presented several times to Tableau User Group in Sydney.
-- Presented to R-Ladies Sydney.
-- Presented at conferences including Microsoft Architecture Council, ACS NSW Branch Forum, and AUUG'93 and AUUG'94.
+- Presented several times to the Tableau User Group in Sydney, and to R-Ladies Sydney. I have not been able to find copies of these presentations.
+- Wrote Section 13.2 (Manage Portfolio, Program, and Project) of [APQC's Process Classification Framework](/spotlite/article/apqc/), which APQC adopted in Version 7.0.0 (October 2015); Version 6.0.0 credits Transfield Services alongside Intel and IBM.
 - Presented ["Services Oriented Architecture: opportunities and challenges of embedding SOA in a Retail Bank"](/spotlite/article/banktech-2006/) at Bank.Tech.06 (Sydney, 27–28 July 2006), while Head of Architecture, Technology Australia, Retail Banking at NAB.
+- Presented ["The Role of Service Oriented Architecture within an Enterprise Architecture"](/spotlite/article/eac-2005/) at The Enterprise Architecture Conference 2005 (Sydney, 8–10 August 2005), while Head of Architecture, Distribution at NAB.
+- Presented ["The promise and pitfalls of implementing a Services Oriented Architecture"](/spotlite/article/msac-2005/) to the Microsoft Architect Council (Sydney, 3 August 2005).
+- Sat on the panel at an ACS NSW Branch Forum on SOA (June 2005), part of the society's "Education Across the Nation" series. [Kate Behan's background presentation](/spotlite/article/acs-2005/), which sourced its definition and rationale from my earlier SOA talk, is reproduced here.
+- Presented ["The promise and pitfalls of implementing a Services Oriented Architecture"](/spotlite/article/ark-2005/) at Ark Group's Planning and Implementing Service-Oriented Architecture conference (Sydney Marriott, 15–17 March 2005), while Head of Architecture, Distribution at NAB.
+- Wrote four articles for APC magazine's September 2004 issue, while Head of Architecture at MLC: a [digital TV software roundup](/spotlite/article/apc-2004/) (also reproduced as [APC's edit of it](/spotlite/article/apc-2004-edit/)), a [myHTPC workshop](/spotlite/article/apc-2004-workshop/) and a [remote controls tutorial](/spotlite/article/apc-2004-remotes/).
+- Presented ["Selling web services to senior management"](/spotlite/article/webservices-2004/) in July 2004, a case study of the architecture practice at MLC, while Head of Architecture there. The deck names no conference and nothing survives that records which one it was.
+- Presented ["Lessons Learnt from implementing and embedding an enterprise architecture team at National Wealth Management"](/spotlite/article/btell-2003/) at both BTELL Enterprise Architecture Conferences of 2003, in Sydney on 24 July and in Wellington over 4–6 November, while Manager, Architecture at National Wealth Management.
 - Presented "Distributed Client/Server Architectures and Transaction Processing on Open Systems" at [AUUG'94](/spotlite/article/auug-1994/) and, in revised form, at [Oracle OpenWorld '94](/spotlite/article/openworld-1994/), while at AT&T Global Information Solutions.
 - Presented ["Performance Tuning for Relational Database Applications"](/spotlite/article/auug-1993/) at AUUG'93, while at NCR Australia.
 - Co-authored technical paper ["UNIX Password Encryption considered insecure"](/spotlite/article/crypt-usenix91/) (USENIX Winter '91 Conference, Dallas, pp. 269–279).
-- Developed a method for distributed/parallel computation of options risk management, co-authored as ["Distributed Computing & Risk Management"](/spotlite/article/suntech-1990/) (SunTech Journal, Sun Microsystems, Vol. 3 No. 1, Winter 1990).
+- Developed a method for distributed/parallel computation of options risk management, co-authored as ["Distributed Computing & Risk Management"](/spotlite/article/suntech-1990/) (SunTech Journal, Sun Microsystems, Vol. 3 No. 1, Winter 1990), with [the longer manuscript we submitted](/spotlite/article/optech-1990/).
 - Honours thesis on a computer language for representing and processing music, ["Rubato: A Music Input and Performance System"](/spotlite/article/rubato/) (Basser Department of Computer Science, University of Sydney, 1987), for which I was awarded the University Medal in 1988.

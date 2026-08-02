@@ -49,6 +49,8 @@ export interface CvModel {
   headline: string
   contact: { label: string; value: string; href?: string }[]
   summary: string
+  /** The career told a decade at a time. Rendered on the home page and in both CVs. */
+  career: { intro: string; decades: string[] }
   achievements: { title: string; detail: string }[]
   roles: CvRole[]
   earlierRoles: CvRole[]
@@ -237,6 +239,7 @@ export const buildCv = async (variant: CvVariant): Promise<CvModel> => {
     headline: cvConfig.headline,
     contact,
     summary: cvConfig.summary,
+    career: cvConfig.career,
     achievements: cvConfig.achievements,
     education,
     competencies,

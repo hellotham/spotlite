@@ -47,17 +47,20 @@
 }
 
 .cv-bullets,
-.cv-achievements {
+.cv-achievements,
+.cv-career {
   list-style: disc;
 }
 
 .cv-bullets li,
-.cv-achievements li {
+.cv-achievements li,
+.cv-career li {
   padding-left: 0.6mm;
 }
 
 .cv-bullets li::marker,
-.cv-achievements li::marker {
+.cv-achievements li::marker,
+.cv-career li::marker {
   color: var(--cv-accent);
   font-size: 0.85em;
 }
@@ -191,6 +194,22 @@ body {
 .cv-achievements {
   margin: 0;
   padding-left: 4.5mm;
+}
+
+/* The career, a decade at a time. Sits under the profile summary rather than in a
+   section of its own, because a heading costs more vertical space than the four
+   lines it would label. */
+.cv-career-intro {
+  margin: 1.6mm 0 1mm;
+}
+
+.cv-career {
+  margin: 0;
+  padding-left: 4.5mm;
+}
+
+.cv-career li {
+  margin-bottom: 1.2mm;
 }
 
 .cv-achievements li {
@@ -386,8 +405,13 @@ html[data-cv-variant="onepage"] .cv-role {
   margin-bottom: 2.4mm;
 }
 
-html[data-cv-variant="onepage"] .cv-achievements li {
+html[data-cv-variant="onepage"] .cv-achievements li,
+html[data-cv-variant="onepage"] .cv-career li {
   margin-bottom: 0.7mm;
+}
+
+html[data-cv-variant="onepage"] .cv-career-intro {
+  margin: 1.2mm 0 0.8mm;
 }
 
 .cv-education-line {

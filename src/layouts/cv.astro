@@ -62,6 +62,24 @@ const { cv, variant, documentTitle } = Astro.props
       <section class='cv-section'>
         <h2>Profile</h2>
         <p class='cv-summary'>{cv.summary}</p>
+        {
+          /* The full CV only. The one-pager is a résumé: it already tells this story
+             through the role list, and the four lines cannot be added to it without
+             pushing the fitter below its legibility floor, which would mean dropping
+             roles to make room for a prose retelling of the same career. */
+        }
+        {
+          variant === 'full' && (
+            <>
+              <p class='cv-career-intro'>{cv.career.intro}</p>
+              <ul class='cv-career'>
+                {cv.career.decades.map((decade) => (
+                  <li>{decade}</li>
+                ))}
+              </ul>
+            </>
+          )
+        }
       </section>
 
       <section class='cv-section'>
