@@ -1,0 +1,336 @@
+<svg version="1.2" viewBox="1733 2741 21576 14217" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="25400" height="19050"></rect>
+  </clipPath>
+  
+ </defs>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+   
+  
+ 
+ 
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  
+   <g id="container-id9">
+    <g id="id9" class="Slide" clip-path="url(#presentation_clip_path)">
+     
+      
+      
+       <g id="id67">
+        
+        
+       </g>
+      
+      
+       <g id="id68">
+        
+        <path fill="rgb(201,251,111)" stroke="none" d="M 6385,16544 L 2183,16544 2183,4267 10587,4267 10587,16544 6385,16544 Z "></path>
+        <path fill="none" stroke="rgb(201,251,111)" stroke-width="35" stroke-linejoin="miter" d="M 6385,16544 L 2183,16544 2183,4267 10587,4267 10587,16544 6385,16544 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 6350,16509 L 2148,16509 2148,4232 10552,4232 10552,16509 6350,16509 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 6350,16509 L 2148,16509 2148,4232 10552,4232 10552,16509 6350,16509 Z "></path>
+       </g>
+      
+      
+       <g id="id69">
+        
+        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="2790" y="11936"><tspan id="id645.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="3319" y="11956"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="6171" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Higher cost associated with maintaining </tspan></tspan><tspan class="TextPosition" x="3319" y="12380"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="4238" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">distributed access to EBF’s</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="2790" y="12872"><tspan id="id646.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="3319" y="12892"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5565" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Minimal reusability across back-end </tspan></tspan><tspan class="TextPosition" x="3319" y="13316"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1288" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">systems</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="2790" y="13808"><tspan id="id647.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="3319" y="13828"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="6405" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Multiple EBF’s accessing the same back-</tspan></tspan><tspan class="TextPosition" x="3319" y="14252"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="6308" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">end systems - duplication of functionality </tspan></tspan><tspan class="TextPosition" x="3319" y="14676"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="6133" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">(and associated effort/costs to develop)</tspan></tspan></tspan></text>
+        
+         <g id="bullet-char-id647.bp" class="BulletChar">
+          <g transform="translate(2790,13808)" fill="rgb(0,0,0)" stroke="none">
+           <path d="M 187,-110 L 19,-39 19,-70 152,-125 19,-179 19,-210 187,-139 Z "></path>
+          </g>
+         </g>
+         <g id="bullet-char-id646.bp" class="BulletChar">
+          <g transform="translate(2790,12872)" fill="rgb(0,0,0)" stroke="none">
+           <path d="M 187,-110 L 19,-39 19,-70 152,-125 19,-179 19,-210 187,-139 Z "></path>
+          </g>
+         </g>
+         <g id="bullet-char-id645.bp" class="BulletChar">
+          <g transform="translate(2790,11936)" fill="rgb(0,0,0)" stroke="none">
+           <path d="M 187,-110 L 19,-39 19,-70 152,-125 19,-179 19,-210 187,-139 Z "></path>
+          </g>
+         </g>
+        
+       </g>
+      
+      
+       <g id="id70">
+        
+        <path fill="rgb(201,251,111)" stroke="none" d="M 18694,16544 L 14493,16544 14493,4267 22894,4267 22894,16544 18694,16544 Z "></path>
+        <path fill="none" stroke="rgb(201,251,111)" stroke-width="35" stroke-linejoin="miter" d="M 18694,16544 L 14493,16544 14493,4267 22894,4267 22894,16544 18694,16544 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 18659,16509 L 14458,16509 14458,4232 22859,4232 22859,16509 18659,16509 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 18659,16509 L 14458,16509 14458,4232 22859,4232 22859,16509 18659,16509 Z "></path>
+       </g>
+      
+      
+       <g id="id71">
+        
+        <text class="SVGTextShape"><tspan class="ListItem"><tspan class="TextPosition" x="15098" y="11936"><tspan id="id648.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="15627" y="11956"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5136" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Supports the delivery of reusable </tspan></tspan><tspan class="TextPosition" x="15627" y="12380"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="6367" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">aggregated services to multiple channels</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="15098" y="12872"><tspan id="id649.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="15627" y="12892"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="6581" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">EBF’s can access a business rules engine </tspan></tspan><tspan class="TextPosition" x="15627" y="13316"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5722" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">to minimise development effort when </tspan></tspan><tspan class="TextPosition" x="15627" y="13740"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="3496" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">business rules change</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="15098" y="14232"><tspan id="id650.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="15627" y="14252"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="5995" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">No need to maintain distributed EBF’s, </tspan></tspan><tspan class="TextPosition" x="15627" y="14676"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="4433" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">e.g. located on Advisers PC.</tspan></tspan></tspan><tspan class="ListItem"><tspan class="TextPosition" x="15098" y="15168"><tspan id="id651.bp" class="BulletPlaceholder"></tspan></tspan><tspan class="TextPosition" x="15627" y="15188"><tspan font-family="Arial, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="4921" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Integrates with the EAI services</tspan></tspan></tspan></text>
+        
+         <g id="bullet-char-id651.bp" class="BulletChar">
+          <g transform="translate(15098,15168)" fill="rgb(0,0,0)" stroke="none">
+           <path d="M 187,-110 L 19,-39 19,-70 152,-125 19,-179 19,-210 187,-139 Z "></path>
+          </g>
+         </g>
+         <g id="bullet-char-id650.bp" class="BulletChar">
+          <g transform="translate(15098,14232)" fill="rgb(0,0,0)" stroke="none">
+           <path d="M 187,-110 L 19,-39 19,-70 152,-125 19,-179 19,-210 187,-139 Z "></path>
+          </g>
+         </g>
+         <g id="bullet-char-id649.bp" class="BulletChar">
+          <g transform="translate(15098,12872)" fill="rgb(0,0,0)" stroke="none">
+           <path d="M 187,-110 L 19,-39 19,-70 152,-125 19,-179 19,-210 187,-139 Z "></path>
+          </g>
+         </g>
+         <g id="bullet-char-id648.bp" class="BulletChar">
+          <g transform="translate(15098,11936)" fill="rgb(0,0,0)" stroke="none">
+           <path d="M 187,-110 L 19,-39 19,-70 152,-125 19,-179 19,-210 187,-139 Z "></path>
+          </g>
+         </g>
+        
+       </g>
+      
+      
+       <g id="id72">
+        
+        <path fill="rgb(201,251,111)" stroke="none" d="M 11964,6932 L 12894,6932 12894,6350 13286,7514 12894,8679 12894,8096 11964,8096 11964,6932 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11964,6932 L 12894,6932 12894,6350 13286,7514 12894,8679 12894,8096 11964,8096 11964,6932 Z "></path>
+        <path fill="rgb(201,251,111)" stroke="none" d="M 11720,6932 L 11768,6932 11768,8096 11720,8096 11720,6932 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11720,6932 L 11768,6932 11768,8096 11720,8096 11720,6932 Z "></path>
+        <path fill="rgb(201,251,111)" stroke="none" d="M 11817,6932 L 11915,6932 11915,8096 11817,8096 11817,6932 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="35" stroke-linejoin="miter" d="M 11817,6932 L 11915,6932 11915,8096 11817,8096 11817,6932 Z "></path>
+       </g>
+      
+      
+       <g id="id73">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3093" y="3553"><tspan font-family="Arial, sans-serif" font-size="423px" font-style="italic" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="6821" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">- Typical Scenario without  EBF’s-</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id74">
+        
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15514" y="3553"><tspan font-family="Arial, sans-serif" font-size="423px" font-style="italic" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="6233" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">- Typical Scenario With EBF’s -</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id75">
+        
+        <path fill="rgb(255,255,255)" stroke="none" d="M 14696,5740 L 17192,5740 17192,4841 14696,4841 14696,5740 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 14696,5740 L 17192,5740 17192,4841 14696,4841 14696,5740 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="14831" y="5215"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2222" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enterprise Business</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="15360" y="5515"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1166" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Function 1</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 17400,5740 L 19893,5740 19893,4841 17400,4841 17400,5740 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 17400,5740 L 19893,5740 19893,4841 17400,4841 17400,5740 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="17533" y="5215"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2222" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enterprise Business</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="18062" y="5515"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1166" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Function 2</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 20101,5740 L 22595,5740 22595,4841 20101,4841 20101,5740 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 20101,5740 L 22595,5740 22595,4841 20101,4841 20101,5740 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20237" y="5215"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2222" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Enterprise Business</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20764" y="5515"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1166" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Function 3</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 14696,9782 L 17192,9782 17192,7985 14696,7985 14696,9782 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 14696,9782 L 17192,9782 17192,7985 14696,7985 14696,9782 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 14904,8659 L 16984,8659 16984,8210 14904,8210 14904,8659 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 14904,8659 L 16984,8659 16984,8210 14904,8210 14904,8659 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 14904,9558 L 16984,9558 16984,8884 14904,8884 14904,9558 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 14904,9558 L 16984,9558 16984,8884 14904,8884 14904,9558 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 15061,9078 L 15061,9360 15067,9375 15081,9390 15106,9405 15141,9420 15186,9432 15241,9447 15302,9456 15371,9468 15449,9476 15530,9486 15615,9491 15707,9495 15801,9498 15896,9500 15992,9500 16086,9498 16180,9495 16269,9491 16358,9486 16439,9476 16516,9468 16585,9456 16646,9447 16702,9432 16746,9420 16782,9405 16807,9390 16821,9375 16826,9360 16826,9078 16821,9064 16807,9048 16782,9033 16746,9021 16702,9006 16646,8994 16585,8982 16516,8974 16439,8965 16358,8955 16269,8950 16180,8943 16086,8940 15992,8940 15896,8940 15801,8940 15707,8943 15615,8950 15530,8955 15449,8965 15371,8974 15302,8982 15241,8994 15186,9006 15141,9021 15106,9033 15081,9048 15067,9064 15061,9078 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 15061,9078 L 15061,9360 15067,9375 15081,9390 15106,9405 15141,9420 15186,9432 15241,9447 15302,9456 15371,9468 15449,9476 15530,9486 15615,9491 15707,9495 15801,9498 15896,9500 15992,9500 16086,9498 16180,9495 16269,9491 16358,9486 16439,9476 16516,9468 16585,9456 16646,9447 16702,9432 16746,9420 16782,9405 16807,9390 16821,9375 16826,9360 16826,9078 16821,9064 16807,9048 16782,9033 16746,9021 16702,9006 16646,8994 16585,8982 16516,8974 16439,8965 16358,8955 16269,8950 16180,8943 16086,8940 15992,8940 15896,8940 15801,8940 15707,8943 15615,8950 15530,8955 15449,8965 15371,8974 15302,8982 15241,8994 15186,9006 15141,9021 15106,9033 15081,9048 15067,9064 15061,9078 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 15061,9078 L 15067,9093 15081,9108 15106,9123 15141,9138 15186,9154 15241,9165 15302,9177 15371,9186 15449,9195 15530,9204 15615,9210 15707,9216 15801,9219 15896,9219 15992,9219 16086,9219 16180,9216 16269,9210 16358,9204 16439,9195 16516,9186 16585,9177 16646,9165 16702,9154 16746,9138 16782,9123 16807,9108 16821,9093 16826,9078 "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 17400,9782 L 19893,9782 19893,7985 17400,7985 17400,9782 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 17400,9782 L 19893,9782 19893,7985 17400,7985 17400,9782 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 17608,8659 L 19686,8659 19686,8210 17608,8210 17608,8659 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 17608,8659 L 19686,8659 19686,8210 17608,8210 17608,8659 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 17608,9558 L 19686,9558 19686,8884 17608,8884 17608,9558 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 17608,9558 L 19686,9558 19686,8884 17608,8884 17608,9558 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 17763,9078 L 17763,9360 17768,9375 17782,9390 17810,9405 17843,9420 17887,9432 17943,9447 18004,9456 18073,9468 18151,9476 18231,9486 18320,9491 18408,9495 18503,9498 18597,9500 18694,9500 18788,9498 18882,9495 18973,9491 19060,9486 19142,9476 19218,9468 19287,9456 19348,9447 19403,9432 19448,9420 19484,9405 19508,9390 19525,9375 19528,9360 19528,9078 19525,9064 19508,9048 19484,9033 19448,9021 19403,9006 19348,8994 19287,8982 19218,8974 19142,8965 19060,8955 18973,8950 18882,8943 18788,8940 18694,8940 18597,8940 18503,8940 18408,8943 18320,8950 18231,8955 18151,8965 18073,8974 18004,8982 17943,8994 17887,9006 17843,9021 17810,9033 17782,9048 17768,9064 17763,9078 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 17763,9078 L 17763,9360 17768,9375 17782,9390 17810,9405 17843,9420 17887,9432 17943,9447 18004,9456 18073,9468 18151,9476 18231,9486 18320,9491 18408,9495 18503,9498 18597,9500 18694,9500 18788,9498 18882,9495 18973,9491 19060,9486 19142,9476 19218,9468 19287,9456 19348,9447 19403,9432 19448,9420 19484,9405 19508,9390 19525,9375 19528,9360 19528,9078 19525,9064 19508,9048 19484,9033 19448,9021 19403,9006 19348,8994 19287,8982 19218,8974 19142,8965 19060,8955 18973,8950 18882,8943 18788,8940 18694,8940 18597,8940 18503,8940 18408,8943 18320,8950 18231,8955 18151,8965 18073,8974 18004,8982 17943,8994 17887,9006 17843,9021 17810,9033 17782,9048 17768,9064 17763,9078 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 17763,9078 L 17768,9093 17782,9108 17810,9123 17843,9138 17887,9154 17943,9165 18004,9177 18073,9186 18151,9195 18231,9204 18320,9210 18408,9216 18503,9219 18597,9219 18694,9219 18788,9219 18882,9216 18973,9210 19060,9204 19142,9195 19218,9186 19287,9177 19348,9165 19403,9154 19448,9138 19484,9123 19508,9108 19525,9093 19528,9078 "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 20101,9782 L 22595,9782 22595,7985 20101,7985 20101,9782 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 20101,9782 L 22595,9782 22595,7985 20101,7985 20101,9782 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 20309,8659 L 22387,8659 22387,8210 20309,8210 20309,8659 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 20309,8659 L 22387,8659 22387,8210 20309,8210 20309,8659 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 20309,9558 L 22387,9558 22387,8884 20309,8884 20309,9558 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 20309,9558 L 22387,9558 22387,8884 20309,8884 20309,9558 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 20464,9078 L 20464,9360 20470,9375 20483,9390 20511,9405 20545,9420 20592,9432 20644,9447 20706,9456 20775,9468 20852,9476 20932,9486 21021,9491 21113,9495 21204,9498 21301,9500 21395,9500 21490,9498 21584,9495 21675,9491 21761,9486 21844,9476 21919,9468 21988,9456 22052,9447 22105,9432 22149,9420 22185,9405 22210,9390 22226,9375 22232,9360 22232,9078 22226,9064 22210,9048 22185,9033 22149,9021 22105,9006 22052,8994 21988,8982 21919,8974 21844,8965 21761,8955 21675,8950 21584,8943 21490,8940 21395,8940 21301,8940 21204,8940 21113,8943 21021,8950 20932,8955 20852,8965 20775,8974 20706,8982 20644,8994 20592,9006 20545,9021 20511,9033 20483,9048 20470,9064 20464,9078 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 20464,9078 L 20464,9360 20470,9375 20483,9390 20511,9405 20545,9420 20592,9432 20644,9447 20706,9456 20775,9468 20852,9476 20932,9486 21021,9491 21113,9495 21204,9498 21301,9500 21395,9500 21490,9498 21584,9495 21675,9491 21761,9486 21844,9476 21919,9468 21988,9456 22052,9447 22105,9432 22149,9420 22185,9405 22210,9390 22226,9375 22232,9360 22232,9078 22226,9064 22210,9048 22185,9033 22149,9021 22105,9006 22052,8994 21988,8982 21919,8974 21844,8965 21761,8955 21675,8950 21584,8943 21490,8940 21395,8940 21301,8940 21204,8940 21113,8943 21021,8950 20932,8955 20852,8965 20775,8974 20706,8982 20644,8994 20592,9006 20545,9021 20511,9033 20483,9048 20470,9064 20464,9078 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 20464,9078 L 20470,9093 20483,9108 20511,9123 20545,9138 20592,9154 20644,9165 20706,9177 20775,9186 20852,9195 20932,9204 21021,9210 21113,9216 21204,9219 21301,9219 21395,9219 21490,9219 21584,9216 21675,9210 21761,9204 21844,9195 21919,9186 21988,9177 22052,9165 22105,9154 22149,9138 22185,9123 22210,9108 22226,9093 22232,9078 "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="14893" y="10136"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2058" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Backend System A</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="17632" y="10136"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2067" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Backend System B</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20334" y="10136"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="2067" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Backend System C</tspan></tspan></tspan></text>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 15892,5740 L 15892,7985 "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 18594,5740 L 18594,7985 "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 21296,5740 L 21296,7985 "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 14748,7027 L 22648,7027 22648,6578 14748,6578 14748,7027 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" d="M 14748,7027 L 22648,7027 22648,6578 14748,6578 14748,7027 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="18068" y="6877"><tspan font-family="Arial, sans-serif" font-size="249px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1260" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Middleware</tspan></tspan></tspan></text>
+       </g>
+      
+      
+       <g id="id76">
+        
+        <path fill="rgb(255,255,255)" stroke="none" d="M 3176,5920 L 4993,5920 4993,4689 3176,4689 3176,5920 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 3176,5920 L 4993,5920 4993,4689 3176,4689 3176,5920 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3333" y="4928"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3979" y="5146"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="208" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">A3</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 2873,6452 L 4690,6452 4690,5222 2873,5222 2873,6452 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 2873,6452 L 4690,6452 4690,5222 2873,5222 2873,6452 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3030" y="5458"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3676" y="5676"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="208" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">A2</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 2570,6985 L 4387,6985 4387,5757 2570,5757 2570,6985 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 2570,6985 L 4387,6985 4387,5757 2570,5757 2570,6985 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2728" y="5993"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3374" y="6211"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="208" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">A1</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 2570,9971 L 4387,9971 4387,8662 2570,8662 2570,9971 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 2570,9971 L 4387,9971 4387,8662 2570,8662 2570,9971 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 2722,9153 L 4236,9153 4236,8826 2722,8826 2722,9153 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 2722,9153 L 4236,9153 4236,8826 2722,8826 2722,9153 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 2722,9807 L 4236,9807 4236,9317 2722,9317 2722,9807 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 2722,9807 L 4236,9807 4236,9317 2722,9317 2722,9807 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 2835,9461 L 2835,9663 2839,9674 2851,9686 2869,9696 2895,9707 2928,9716 2966,9727 3010,9736 3063,9742 3118,9749 3178,9755 3240,9759 3307,9762 3374,9766 3445,9766 3513,9766 3582,9766 3650,9762 3717,9759 3779,9755 3840,9749 3895,9742 3945,9736 3992,9727 4030,9716 4062,9707 4088,9696 4106,9686 4119,9674 4123,9663 4123,9461 4119,9448 4106,9436 4088,9428 4062,9417 4030,9406 3992,9397 3945,9389 3895,9382 3840,9376 3779,9369 3717,9365 3650,9360 3582,9358 3513,9358 3445,9358 3374,9358 3307,9360 3240,9365 3178,9369 3118,9376 3063,9382 3010,9389 2966,9397 2928,9406 2895,9417 2869,9428 2851,9436 2839,9448 2835,9461 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 2835,9461 L 2835,9663 2839,9674 2851,9686 2869,9696 2895,9707 2928,9716 2966,9727 3010,9736 3063,9742 3118,9749 3178,9755 3240,9759 3307,9762 3374,9766 3445,9766 3513,9766 3582,9766 3650,9762 3717,9759 3779,9755 3840,9749 3895,9742 3945,9736 3992,9727 4030,9716 4062,9707 4088,9696 4106,9686 4119,9674 4123,9663 4123,9461 4119,9448 4106,9436 4088,9428 4062,9417 4030,9406 3992,9397 3945,9389 3895,9382 3840,9376 3779,9369 3717,9365 3650,9360 3582,9358 3513,9358 3445,9358 3374,9358 3307,9360 3240,9365 3178,9369 3118,9376 3063,9382 3010,9389 2966,9397 2928,9406 2895,9417 2869,9428 2851,9436 2839,9448 2835,9461 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 2835,9461 L 2839,9472 2851,9482 2869,9493 2895,9502 2928,9513 2966,9522 3010,9530 3063,9537 3118,9544 3178,9550 3240,9555 3307,9559 3374,9561 3445,9561 3513,9561 3582,9561 3650,9559 3717,9555 3779,9550 3840,9544 3895,9537 3945,9530 3992,9522 4030,9513 4062,9502 4088,9493 4106,9482 4119,9472 4123,9461 "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 5144,9971 L 6961,9971 6961,8662 5144,8662 5144,9971 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 5144,9971 L 6961,9971 6961,8662 5144,8662 5144,9971 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 5296,9153 L 6810,9153 6810,8826 5296,8826 5296,9153 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 5296,9153 L 6810,9153 6810,8826 5296,8826 5296,9153 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 5296,9807 L 6810,9807 6810,9317 5296,9317 5296,9807 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 5296,9807 L 6810,9807 6810,9317 5296,9317 5296,9807 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 5409,9461 L 5409,9663 5413,9674 5425,9686 5443,9696 5469,9707 5501,9716 5540,9727 5586,9736 5637,9742 5691,9749 5752,9755 5815,9759 5881,9762 5947,9766 6018,9766 6087,9766 6157,9766 6224,9762 6291,9759 6354,9755 6414,9749 6468,9742 6519,9736 6565,9727 6604,9716 6636,9707 6663,9696 6681,9686 6693,9674 6697,9663 6697,9461 6693,9448 6681,9436 6663,9428 6636,9417 6604,9406 6565,9397 6519,9389 6468,9382 6414,9376 6354,9369 6291,9365 6224,9360 6157,9358 6087,9358 6018,9358 5947,9358 5881,9360 5815,9365 5752,9369 5691,9376 5637,9382 5586,9389 5540,9397 5501,9406 5469,9417 5443,9428 5425,9436 5413,9448 5409,9461 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 5409,9461 L 5409,9663 5413,9674 5425,9686 5443,9696 5469,9707 5501,9716 5540,9727 5586,9736 5637,9742 5691,9749 5752,9755 5815,9759 5881,9762 5947,9766 6018,9766 6087,9766 6157,9766 6224,9762 6291,9759 6354,9755 6414,9749 6468,9742 6519,9736 6565,9727 6604,9716 6636,9707 6663,9696 6681,9686 6693,9674 6697,9663 6697,9461 6693,9448 6681,9436 6663,9428 6636,9417 6604,9406 6565,9397 6519,9389 6468,9382 6414,9376 6354,9369 6291,9365 6224,9360 6157,9358 6087,9358 6018,9358 5947,9358 5881,9360 5815,9365 5752,9369 5691,9376 5637,9382 5586,9389 5540,9397 5501,9406 5469,9417 5443,9428 5425,9436 5413,9448 5409,9461 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 5409,9461 L 5413,9472 5425,9482 5443,9493 5469,9502 5501,9513 5540,9522 5586,9530 5637,9537 5691,9544 5752,9550 5815,9555 5881,9559 5947,9561 6018,9561 6087,9561 6157,9561 6224,9559 6291,9555 6354,9550 6414,9544 6468,9537 6519,9530 6565,9522 6604,9513 6636,9502 6663,9493 6681,9482 6693,9472 6697,9461 "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 7680,9952 L 9497,9952 9497,8643 7680,8643 7680,9952 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 7680,9952 L 9497,9952 9497,8643 7680,8643 7680,9952 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 7831,9133 L 9345,9133 9345,8806 7831,8806 7831,9133 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 7831,9133 L 9345,9133 9345,8806 7831,8806 7831,9133 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 7831,9788 L 9345,9788 9345,9297 7831,9297 7831,9788 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 7831,9788 L 9345,9788 9345,9297 7831,9297 7831,9788 Z "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 7946,9441 L 7946,9646 7949,9657 7960,9668 7979,9679 8005,9688 8037,9698 8078,9707 8122,9716 8172,9725 8227,9731 8287,9736 8350,9740 8417,9744 8485,9746 8554,9749 8625,9749 8693,9746 8762,9744 8826,9740 8891,9736 8950,9731 9006,9725 9056,9716 9101,9707 9139,9698 9174,9688 9198,9679 9218,9668 9228,9657 9232,9646 9232,9441 9228,9430 9218,9419 9198,9408 9174,9397 9139,9389 9101,9380 9056,9371 9006,9363 8950,9356 8891,9351 8826,9345 8762,9343 8693,9341 8625,9338 8554,9338 8485,9341 8417,9343 8350,9345 8287,9351 8227,9356 8172,9363 8122,9371 8078,9380 8037,9389 8005,9397 7979,9408 7960,9419 7949,9430 7946,9441 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 7946,9441 L 7946,9646 7949,9657 7960,9668 7979,9679 8005,9688 8037,9698 8078,9707 8122,9716 8172,9725 8227,9731 8287,9736 8350,9740 8417,9744 8485,9746 8554,9749 8625,9749 8693,9746 8762,9744 8826,9740 8891,9736 8950,9731 9006,9725 9056,9716 9101,9707 9139,9698 9174,9688 9198,9679 9218,9668 9228,9657 9232,9646 9232,9441 9228,9430 9218,9419 9198,9408 9174,9397 9139,9389 9101,9380 9056,9371 9006,9363 8950,9356 8891,9351 8826,9345 8762,9343 8693,9341 8625,9338 8554,9338 8485,9341 8417,9343 8350,9345 8287,9351 8227,9356 8172,9363 8122,9371 8078,9380 8037,9389 8005,9397 7979,9408 7960,9419 7949,9430 7946,9441 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 7946,9441 L 7949,9452 7960,9463 7979,9474 8005,9484 8037,9493 8078,9502 8122,9511 8172,9520 8227,9526 8287,9530 8350,9537 8417,9539 8485,9541 8554,9544 8625,9544 8693,9541 8762,9539 8826,9537 8891,9530 8950,9526 9006,9520 9056,9511 9101,9502 9139,9493 9174,9484 9198,9474 9218,9463 9228,9452 9232,9441 "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2714" y="10229"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1500" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Backend System A</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5314" y="10229"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Backend System B</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7839" y="10190"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1506" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Backend System C</tspan></tspan></tspan></text>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 8588,7006 L 8588,8643 "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 6053,7026 L 6053,8662 "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 3479,6985 L 3479,8662 "></path>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 5750,5940 L 7567,5940 7567,4712 5750,4712 5750,5940 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 5750,5940 L 7567,5940 7567,4712 5750,4712 5750,5940 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5907" y="4948"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6551" y="5166"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="214" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">B3</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 5447,6472 L 7264,6472 7264,5244 5447,5244 5447,6472 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 5447,6472 L 7264,6472 7264,5244 5447,5244 5447,6472 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5605" y="5480"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6248" y="5698"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="214" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">B2</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 5144,7004 L 6961,7004 6961,5776 5144,5776 5144,7004 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 5144,7004 L 6961,7004 6961,5776 5144,5776 5144,7004 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5302" y="6012"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5946" y="6230"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="214" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">B1</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 8324,5961 L 10140,5961 10140,4733 8324,4733 8324,5961 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 8324,5961 L 10140,5961 10140,4733 8324,4733 8324,5961 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8481" y="4969"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9125" y="5187"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="214" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">C3</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 8021,6494 L 9838,6494 9838,5266 8021,5266 8021,6494 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 8021,6494 L 9838,6494 9838,5266 8021,5266 8021,6494 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8178" y="5502"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8823" y="5720"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="214" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">C2</tspan></tspan></tspan></text>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 7718,7028 L 9535,7028 9535,5798 7718,5798 7718,7028 Z "></path>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" d="M 7718,7028 L 9535,7028 9535,5798 7718,5798 7718,7028 Z "></path>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7876" y="6036"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="1502" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Business Function</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8519" y="6254"><tspan font-family="Arial, sans-serif" font-size="181px" font-weight="700" lengthAdjust="spacingAndGlyphs" textLength="214" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">C1</tspan></tspan></tspan></text>
+       </g>
+      
+     
+    </g>
+   </g>
+  
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+  <g visibility="hidden">
+   
+  </g>
+ 
+ 
+</svg>

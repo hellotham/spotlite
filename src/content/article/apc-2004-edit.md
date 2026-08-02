@@ -173,7 +173,7 @@ to be best used through the keyboard or remote control.
 
 Contact: Nate \
 Online:
-[http://home.bigblue.net.au/mulin77/DigitalWatch/](http://home.bigblue.net.au/mulin77/DigitalWatch/) \
+[http://home.bigblue.net.au/<wbr>mulin77/<wbr>DigitalWatch/](http://home.bigblue.net.au/mulin77/DigitalWatch/) \
 Email: nate@bigblue.net.au \
 Price: Free (open source) \
 Verdict: 2.5 \

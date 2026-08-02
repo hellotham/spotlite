@@ -161,7 +161,7 @@ Optech trading systems feature:
 - Reliability and integrity. In order to ensure database consistency, the system rolls back all
   failed transactions. It logs all transactions to provide a complete audit trail. It applies
   automatic data-consistency checks as a guard against data
-  corruption/inconsistency/tampering. The system can automatically detect hardware/software
+  corruption/<wbr>inconsistency/<wbr>tampering. The system can automatically detect hardware/software
   failures in the network and compensate/readjust.
 - Interfaces to data feeds such as Reuters. These interfaces allow continuous monitoring of
   market activity and movement. Sophisticated data filters avoid use of anomalous data. Users

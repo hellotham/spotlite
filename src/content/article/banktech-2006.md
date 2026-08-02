@@ -105,7 +105,7 @@ Four definitions, quoted as they stood on the slide.
 
 _Service-Oriented Architecture (SOA) and Web Services: The Road to Enterprise Application
 Integration (EAI)_, Sun Developer Network
-(http://java.sun.com/developer/technicalArticles/WebServices/soa/)
+([http://java.sun.com/<wbr>developer/<wbr>technicalArticles/<wbr>WebServices/<wbr>soa/](http://java.sun.com/developer/technicalArticles/WebServices/soa/))
 
 > "SOA is a component model that inter-relates the different functional units of an application,
 > called services, through well-defined interfaces and contracts between these services". Defined as
@@ -124,7 +124,7 @@ Integration (EAI)_, Sun Developer Network
 
 _Develop a migration strategy from a legacy enterprise IT infrastructure to an SOA-based enterprise
 architecture_, Artem Papkov (artem@us.ibm.com)
-(http://www-128.ibm.com/developerworks/webservices/library/ws-migrate2soa/)
+([http://www-128.ibm.com/<wbr>developerworks/<wbr>webservices/<wbr>library/<wbr>ws-migrate2soa/](http://www-128.ibm.com/developerworks/webservices/library/ws-migrate2soa/))
 
 > A style of design, deployment, and management of both applications and software infrastructure in
 > which:
@@ -360,7 +360,7 @@ The SOA AWG's objective is to:
 - Ensure that optimised architecture decision making is attained with high level business buy-in
 - Give clear direction to programme and projects
 - Review key strategic architecture and solution design decisions – focussing on both "what"
-  (conceptual), "how" (physical/pragmatic/delivery/transition) and "why".
+  (conceptual), "how" (physical/<wbr>pragmatic/<wbr>delivery/<wbr>transition) and "why".
 
 Engagement with the SOA AWG must be:
 

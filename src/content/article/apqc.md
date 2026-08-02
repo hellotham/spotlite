@@ -11,93 +11,86 @@ I went into Transfield Services in 2011 to lead an IT strategy. What came out of
 architecture and a migration roadmap, and those became the business case for putting SAP across
 the group.
 
-I then joined the Quality team, on the global management system. That is the thing that carries
-quality and process standardisation across every country and every contract, and my part of it
-was standardising the enterprise business processes so they would line up with what SAP was
-about to impose on everybody.
+I then joined the Quality team, on the revitalisation of the Global Management System, led by
+Sarina Pickering. We were trying to standardise and realign enterprise business processes
+across the organisation to strengthen our ISO 9001 certification but also to align
+with the SAP implementation.
 
-Transfield had grown by acquisition and grown fast, 329 per cent by employee count, and by then
-it was more than 26,000 people across 20 industries and 11 countries. Every acquisition had
+Transfield Services had grown by acquisition and by that time it was earning more than A\$3
+billion in revenue, and it employed more than 26,000 people across 20 industries and 11
+countries. Every acquisition had
 arrived carrying its own words for its own work, which is no trouble at all until the group
-wants to compare two of its own businesses.
+wants to compare across businesses.
 
-## Why not write our own
+## APQC Process Classification Framework
 
-Because someone had already done it, and the whole value of a process taxonomy is that other
-people use it too. A taxonomy only you use is just your filing system.
+It is important to anchor our business process standardisation efforts around a process
+architecture and framework. This requires a robust taxonomy and classification of all
+processes within an organisation. We did not want to invent this taxonomy.
 
-So we took APQC's Process Classification Framework. APQC is a non-profit that has been doing
+So we tried to adopt APQC's Process Classification Framework. APQC is a non-profit that has been doing
 benchmarking research since the 1970s, and the PCF had been going since 1992, when eighty-odd
 organisations sat down to agree a common structure. It is a numbered hierarchy of what an
-organisation does, written to be independent of industry, region and size. When I met it there
+organisation does, written to be independent of industry, region and size. In 2011 there
 were twelve categories at the top and more than a thousand process elements underneath.
 
-## It did not fit
+## Adapting the PCF to Transfield Services
 
 We could not map all of our processes onto it.
 
-The PCF had grown up around manufacturing, and Transfield was a services business. Some of what
+The PCF had grown up around manufacturing, and Transfield Services was a services business. Some of what
 we did had no home in the framework at all. Project management was missing outright, and so were
 several of the support functions, strategy and the engagement between IT and the rest of the
 business among them.
 
-That is not a small gap for a group like ours. Jeff Varney's own account of the framework has
+So we engaged APQC's Jeff Varney as our adviser, to work through the issues with us. He was very
+helpful in resolving many of our issues and difficulties but he was also wise enough to
+realise there were true gaps in the current PCF that needed addressing.
+
+## Version 6.0.0
+
+Some of our gaps made it into PCF Version 6.0.0, which came out in July 2012,
+on the framework's twentieth anniversary.
+[APQC credited it](https://www.apqc.org/about-apqc/news-press-release/apqc-releases-updated-process-classification-framework-20th)
+to "significant input from APQC members, including Intel, IBM, and Transfield Services".
+
+However, a significant gap still remained. The PCF did not recognise project management
+in the framework. Projects were considered transient activities; they did not belong
+in a framework designed for processes within the value chain of an organisation.
+This was a problem for us, as project management was a core competency of Transfield
+Services, and part of the services we offered and therefore an intrinsic part of the
+value chain.
+
+## Version 7.0.0
+
+We petitioned APQC to include a section on project management in the PCF, and they asked us
+to provide a draft.
+
+I wrote what became Section 13.2 (Manage Portfolio, Program, and Project) based on PMBOK,
+the Project Management Body of Knowledge, which is the profession's own
+account of how portfolios, programmes and projects fit together. Our project managers were
+trained on PMBOK already. APQC accepted it, and it went into Version 7.0.0 in October 2015.
+
+Version 7.0.0 split the old category 4.0, Deliver Products and Services, which had been
+treating making a thing and performing a service as one category with two names. That took the
+framework from twelve categories to thirteen. The suggestion to split came from IBM, but our
+contribution fitted very well within the new structure. The business capabilities category
+stopped being 12.0 and became 13.0. Jeff
+[wrote the change up](https://www.apqc.org/blog/giving-services-their-proper-place-pcf) when the
+release came out.
+
+Jeff Varney's own account explained the rationale - to enable the framework to support
 services being delivered "through projects, continuous support functions, or discrete instances
 based upon a request for service or incident", which describes a company running maintenance and
-operations contracts across 20 industries fairly exactly. The taxonomy had no words for a good
-deal of what we sold.
+operations contracts across 20 industries fairly exactly.
 
-So we engaged APQC's Jeff Varney as our adviser, to work through the issues with us. Nobody has
-ever been thanked at a company meeting for agreeing a numbering scheme.
+## The end result
 
 The exercise itself came out well. APQC wrote it up as
 [a case study](https://www.apqc.org/resource-library/resource-listing/creating-process-framework-transfield-services)
 in May 2015 and reported a 30 per cent reduction in redundancy, which is a polite way of saying
 that a great many things the organisation thought were separate processes turned out to be the
 same process wearing different names.
-
-## Version 6.0.0
-
-Enough of what we had found went back the other way. When Version 6.0.0 came out in July 2012,
-on the framework's twentieth anniversary,
-[APQC credited it](https://www.apqc.org/about-apqc/news-press-release/apqc-releases-updated-process-classification-framework-20th)
-to "significant input from APQC members, including Intel, IBM, and Transfield Services".
-
-Seeing the company I was consulting to listed next to those two was a surprise.
-
-## Version 7.0.0
-
-For the next version we were in the discussions that produced a new top-level category.
-
-Version 7.0.0 split the old category 4.0, Deliver Products and Services, which had been
-treating making a thing and performing a service as one category with two names. That took the
-framework from twelve categories to thirteen. The suggestion was IBM's rather than ours, but it
-renumbered everything after it, which is how the business capabilities category stopped being
-12.0 and became 13.0. Jeff
-[wrote the change up](https://www.apqc.org/blog/giving-services-their-proper-place-pcf) when the
-release came out.
-
-Then APQC asked us to write 13.2.
-
-_Manage Portfolio, Program, and Project._ The thing that had been missing when we started, in
-other words. They asked us for it because project management at Transfield was not a support
-function, it was the work: a group running maintenance and operations contracts across 20
-industries does almost everything it does as a project, and the portfolio was how the business
-made its money.
-
-I wrote it from PMBOK, the Project Management Body of Knowledge, which is the profession's own
-account of how portfolios, programmes and projects fit together. Our project managers were
-trained on PMBOK already. There was no sense in handing them a second vocabulary for the same
-work. APQC accepted it, and it went into Version 7.0.0 in October 2015.
-
-## Who writes these things
-
-Nothing about the PCF came down from anywhere. It gets revised a section at a time by the people
-using it, and 13.2 reads the way it does because APQC asked a services group in Australia what
-it knew about running projects.
-
-My name is nowhere on it, which is exactly as it should be. But the section is a little better
-than it was.
 
 ## Sources
 
