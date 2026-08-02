@@ -11,12 +11,14 @@ import Work from '../components/work.astro'
 import Education from '../components/education.astro'
 import Superpowers from '../components/superpowers.astro'
 import TemplateCTA from '../components/templatecta.astro'
-import cv from '../cv.json' with { type: 'json' }
+import { loadCvProfile } from '../utils/cv'
 
 const { frontmatter } = Astro.props
 
 let social = await getCollection('social')
 social = social.sort((a, b) => a.data.order - b.data.order)
+
+const { copy } = await loadCvProfile()
 ---
 
 <Layout
@@ -65,16 +67,16 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 <slot />
 
                 {
-                  /* Also from cv.json, and for the same reason as the achievements below:
-                  it appears here and in both PDFs, so it is written once. */
+                  /* Also from src/content/cv/profile.md, and for the same reason as the
+                  achievements below: it appears here and in the CV, so it is written once. */
                 }
-                <p>{cv.career.intro}</p>
+                <p>{copy.career.intro}</p>
                 <ul>
-                  {cv.career.decades.map((decade) => <li>{decade}</li>)}
+                  {copy.career.decades.map((decade) => <li>{decade}</li>)}
                 </ul>
 
                 {
-                  /* Rendered from cv.json, not written in index.md. These three lines are
+                  /* Rendered from src/content/cv/profile.md, not written in index.md. These are
                   also the CV's key achievements, and when they lived in both places they
                   drifted — the home page and both PDFs named clients differently. One copy
                   is the whole point of the content model. */
@@ -82,7 +84,7 @@ social = social.sort((a, b) => a.data.order - b.data.order)
                 <h2>Key Achievements</h2>
                 <ul>
                   {
-                    cv.achievements.map((item) => (
+                    copy.achievements.map((item) => (
                       <li>
                         <strong>{item.title}</strong>: {item.detail}
                       </li>

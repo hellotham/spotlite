@@ -6,9 +6,7 @@ pubDate: 1991-03-18
 
 _Filed under the date we posted it to Usenet. Most of what happened to it happened later._
 
-Kevin Bungard, Peter Lisle and I wrote a program in 1991 that compiles and runs in eight
-languages. Seven of them were there from the start and the eighth arrived ten years later. It
-is probably the first code I ever published.
+Kevin Bungard, Peter Lisle and I wrote a program in 1991 that compiles and runs in eight languages. Seven of them were there from the start and the eighth arrived ten years later. It is probably the first code I ever published.
 
 Compile it and run it and it prints a single line:
 
@@ -16,27 +14,15 @@ Compile it and run it and it prints a single line:
 hello polyglots
 ```
 
-The same file, not one byte different between them, compiles as COBOL, as Pascal, as Fortran
-and as C, runs as a Perl script and as a Unix shell script, prints when it is handed to a
-PostScript interpreter, and, renamed to `.COM`, runs under MS-DOS directly as machine code.
+The same file, not one byte different between them, compiles as COBOL, as Pascal, as Fortran and as C, runs as a Perl script and as a Unix shell script, prints when it is handed to a PostScript interpreter, and, renamed to `.COM`, runs under MS-DOS directly as machine code.
 
 ## Where it came from
 
-In 1990 there was a running conversation in the rec.puzzles newsgroup about programs that work
-in more than one language at a time. Someone posted one that ran in two, someone else managed
-three. So the three of us tried it. My part was the shell script, which took an afternoon. The
-file we ended up with was dated 15 February 1991 in its own header and had seven languages in
-it. We posted it to the newsgroup on 18 March,
-from `metro`, a machine at Sydney University, back when Australian addresses still ended in
-`.oz.au`. I had that connection because I had broken into the university's password file, which
-is [a story in its own right](/spotlite/article/crypt-usenix91/#postscript-thirty-five-years-on).
+In 1990 there was a running conversation in the rec.puzzles newsgroup about programs that work in more than one language at a time. Someone posted one that ran in two, someone else managed three. So the three of us tried it. My part was the shell script, which took an afternoon. The file we ended up with was dated 15 February 1991 in its own header and had seven languages in it. We posted it to the newsgroup on 18 March, from `metro`, a machine at Sydney University, back when Australian addresses still ended in `.oz.au`. I had that connection because I had broken into the university's password file, which is [a story in its own right](/spotlite/article/crypt-usenix91/#postscript-thirty-five-years-on).
 
 ## How the trick works
 
-The code that is not meant for a particular compiler is commented out in that language. That is
-the whole idea. It works because every language has its own way of marking a comment, and no
-two of them quite agree. So if you are careful enough, you can write a line that is a genuine
-instruction in one language while every other compiler reads the same characters as a comment.
+The code that is not meant for a particular compiler is commented out in that language. That is the whole idea. It works because every language has its own way of marking a comment, and no two of them quite agree. So if you are careful enough, you can write a line that is a genuine instruction in one language while every other compiler reads the same characters as a comment.
 
 | Language    | What it ignores                                             |
 | ----------- | ----------------------------------------------------------- |
@@ -47,20 +33,13 @@ instruction in one language while every other compiler reads the same characters
 | PostScript  | Everything after a `%` on the line                          |
 | Shell, Perl | Everything after a `#` on the line                          |
 
-You can watch it happening along the left edge of the listing below. Almost every line begins
-with a `C`, which tells Fortran to skip it. Just to the right sits a `#`, which does the same
-for the shell and Perl, and then a `*`, which does it for COBOL. The block of text at the top
-is a valid comment in all eight languages at once and is also the documentation.
+You can watch it happening along the left edge of the listing below. Almost every line begins with a `C`, which tells Fortran to skip it. Just to the right sits a `#`, which does the same for the shell and Perl, and then a `*`, which does it for COBOL. The block of text at the top is a valid comment in all eight languages at once and is also the documentation.
 
 The two blank lines at the very beginning matter. Take them out and it stops working.
 
 ## The source
 
-This site normally colours code according to its language. I have set the listing out as plain
-text instead, because any highlighter has to pick one language and will then be wrong about the
-other seven. It is the current edition, which is why the header carries two dates. The program
-is in the public domain, and the page it came from credits the three of us and thanks George
-Janczuk.
+This site normally colours code according to its language. I have set the listing out as plain text instead, because any highlighter has to pick one language and will then be wrong about the other seven. It is the current edition, which is why the header carries two dates. The program is in the public domain, and the page it came from credits the three of us and thanks George Janczuk.
 
 ```text
 
@@ -149,52 +128,29 @@ C     *)
 C)pop%     program       polyglot.                                      *){*/}
 ```
 
-If you would like to run it, you can [download the original](https://ideology.com.au/polyglot/)
-and rename it to `polyglot.cob`, `.pas`, `.f77`, `.c`, `.ps`, `.sh`, `.com` or `.pl`, depending
-on which compiler you intend to point at it. If you move the file between Unix and Windows,
-check that the line endings survive.
+If you would like to run it, you can [download the original](https://ideology.com.au/polyglot/) and rename it to `polyglot.cob`, `.pas`, `.f77`, `.c`, `.ps`, `.sh`, `.com` or `.pl`, depending on which compiler you intend to point at it. If you move the file between Unix and Windows, check that the line endings survive.
 
 The Unix `file` command, asked what this is, answers: FORTRAN program text.
 
 ## What happened next
 
-On 26 August 1991 Peter Rigsbee ran it through Cray's own compilers under UNICOS. Fortran
-worked best, the C compiler issued a warning and worked anyway, and the Pascal compiler was
-"quite unhappy". In 2001 someone wrote in to report that it did not work on their Palm Pilot,
-and in 2009 a commenter calling himself DoubtfulBadger got it going on a mainframe by shifting
-the `end` of `end program` from column 12 to column 8.
+On 26 August 1991 Peter Rigsbee ran it through Cray's own compilers under UNICOS. Fortran worked best, the C compiler issued a warning and worked anyway, and the Pascal compiler was "quite unhappy". In 2001 someone wrote in to report that it did not work on their Palm Pilot, and in 2009 a commenter calling himself DoubtfulBadger got it going on a mainframe by shifting the `end` of `end program` from column 12 to column 8.
 
 A comment from 2004 says it ran on a digital clock.
 
-On 25 January 2001 the page was linked from Slashdot. Eleven comments arrived that day, one of
-them signed Slashdotter. Another was signed Richard Stallman and said the proper name was
-GNU/Polyglot. One on 16 February, signed Larry Wall, asked: "And Perl?"
+On 25 January 2001 the page was linked from Slashdot. Eleven comments arrived that day, one of them signed Slashdotter. Another was signed Richard Stallman and said the proper name was GNU/Polyglot. One on 16 February, signed Larry Wall, asked: "And Perl?"
 
-Kevin answered the question. The tenth anniversary edition, dated 1 December 2001 in the
-header, took us from seven languages to eight and fixed the machine code to run on Win32 as
-well as DOS. We felt smug about it, so we entered it in the International Obfuscated C Code
-Contest. When the results were announced some months later, we were not mentioned.
+Kevin answered the question. The tenth anniversary edition, dated 1 December 2001 in the header, took us from seven languages to eight and fixed the machine code to run on Win32 as well as DOS. We felt smug about it, so we entered it in the International Obfuscated C Code Contest. When the results were announced some months later, we were not mentioned.
 
 ## Still out there
 
-Rosetta Code keeps an entry for polyglot programs, and it opens by saying that the most famous
-example is ours. In 2008 Wolfram Rösler wrote in to say he had linked it from his Hello World
-collection. Every so often somebody asks whether they can put it in a Linux distribution, and
-the answer has always been yes.
+Rosetta Code keeps an entry for polyglot programs, and it opens by saying that the most famous example is ours. In 2008 Wolfram Rösler wrote in to say he had linked it from his Hello World collection. Every so often somebody asks whether they can put it in a Linux distribution, and the answer has always been yes.
 
-The comments on the original page start two days after we posted it and run through to December
-2023, which is thirty-two years of strangers finding it and leaving a note. Some are technical.
-Most are a variation on "you are all completely mad", which seems fair enough to me.
+The comments on the original page start two days after we posted it and run through to December 2023, which is thirty-two years of strangers finding it and leaving a note. Some are technical. Most are a variation on "you are all completely mad", which seems fair enough to me.
 
-One from 16 December 2004, signed Alan, says he rarely makes predictions about software, "but
-this will exist and be referenced 100+ years from now". I would not go that far. It has
-outlasted nearly everything else I have built since.
+One from 16 December 2004, signed Alan, says he rarely makes predictions about software, "but this will exist and be referenced 100+ years from now". I would not go that far. It has outlasted nearly everything else I have built since.
 
 ## Sources
 
-- [Polyglot](https://ideology.com.au/polyglot/), the original page, with the source, the
-  download and thirty-two years of visitor comments. The Slashdot date comes from those comments
-  rather than from Slashdot: eleven of them landed on 25 January 2001 and one is signed
-  Slashdotter. The page records no traffic figure, so this article gives none.
-- [Rosetta Code: Polyglot](https://rosettacode.org/wiki/Polyglot), which reproduces the program and notes that the syntax
-  highlighting comes out scrambled.
+- [Polyglot](https://ideology.com.au/polyglot/), the original page, with the source, the download and thirty-two years of visitor comments. The Slashdot date comes from those comments rather than from Slashdot: eleven of them landed on 25 January 2001 and one is signed Slashdotter. The page records no traffic figure, so this article gives none.
+- [Rosetta Code: Polyglot](https://rosettacode.org/wiki/Polyglot), which reproduces the program and notes that the syntax highlighting comes out scrambled.

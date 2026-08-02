@@ -1,5 +1,4 @@
-import { getCollection } from 'astro:content'
-import cvConfig from '../cv.json' with { type: 'json' }
+import { getCollection, getEntry } from 'astro:content'
 import superpowers from '../superpowers.json' with { type: 'json' }
 
 /**
@@ -8,7 +7,8 @@ import superpowers from '../superpowers.json' with { type: 'json' }
  * Curation here is deliberately DETERMINISTIC — recency, seniority and explicit
  * per-entry flags. A CV is a document of record, so nothing in this pipeline may
  * reword, summarise or infer a fact about the career. Editorial copy (headline,
- * summary, achievements) lives in src/cv.json where it can be reviewed directly.
+ * summary, career, achievements) lives in src/content/cv/profile.md, where it is written
+ * as prose and can be reviewed directly.
  */
 
 export type CvVariant = 'onepage' | 'full'
@@ -65,6 +65,124 @@ const COMPETENCY_SCALE_MAX = 7
 
 const escapeHtml = (value: string) =>
   value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+
+/**
+ * The editorial copy, read out of the profile entry's markdown body.
+ *
+ * The prose is markdown rather than frontmatter fields because a person writes and
+ * reviews it, and prose belongs in a document, not in a data structure. The cost is this
+ * parser, and the parser's job is to be loud: every section it cannot find is thrown,
+ * not skipped, because a silently empty Profile or a CV missing its achievements is the
+ * kind of fault that ships unnoticed.
+ */
+export interface CvCopy {
+  summary: string
+  career: { intro: string; decades: string[] }
+  achievements: { title: string; detail: string }[]
+}
+
+/** Join a wrapped paragraph back into one line. The source wraps for the writer, not the reader. */
+const unwrap = (text: string) =>
+  text
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .join(' ')
+    .trim()
+
+const blocksOf = (text: string) =>
+  text
+    .split(/\n\s*\n/)
+    .map((block) => block.trim())
+    .filter(Boolean)
+
+/** Markdown list items, re-joining the continuation lines a wrapped item leaves behind. */
+const listItems = (text: string) => {
+  const items: string[] = []
+  for (const raw of text.split('\n')) {
+    const line = raw.trim()
+    if (!line) continue
+    const bullet = line.match(/^[-*]\s+(.*)$/)
+    if (bullet) items.push(bullet[1])
+    else if (items.length) items[items.length - 1] += ` ${line}`
+  }
+  return items
+}
+
+const PROFILE_PATH = 'src/content/cv/profile.md'
+
+const required = (value: string, what: string) => {
+  if (!value.trim()) {
+    throw new Error(
+      `${PROFILE_PATH}: ${what} is missing or empty. The CV cannot be built without it.`
+    )
+  }
+  return value.trim()
+}
+
+export const parseCvCopy = (body: string): CvCopy => {
+  const sections = new Map<string, string>()
+  for (const chunk of body
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .split(/^##\s+/m)
+    .slice(1)) {
+    const newline = chunk.indexOf('\n')
+    sections.set(chunk.slice(0, newline).trim(), chunk.slice(newline + 1))
+  }
+
+  const section = (heading: string) => {
+    const found = sections.get(heading)
+    if (found === undefined) {
+      const seen = [...sections.keys()].map((key) => `"${key}"`).join(', ') || 'none'
+      throw new Error(`${PROFILE_PATH}: no "## ${heading}" section. Found: ${seen}.`)
+    }
+    return found
+  }
+
+  const careerBlocks = blocksOf(section('Career'))
+  const bulleted = (block: string) => /^[-*]\s/.test(block)
+  const decades = careerBlocks.filter(bulleted).flatMap(listItems).map(unwrap)
+  if (!decades.length) {
+    throw new Error(`${PROFILE_PATH}: "## Career" has no bulleted list under it.`)
+  }
+
+  const achievements = section('Key Achievements')
+    .split(/^###\s+/m)
+    .slice(1)
+    .map((chunk) => {
+      const newline = chunk.indexOf('\n')
+      const title = newline === -1 ? chunk : chunk.slice(0, newline)
+      const detail = newline === -1 ? '' : blocksOf(chunk.slice(newline + 1)).join(' ')
+      return {
+        title: required(title, 'an achievement heading'),
+        detail: required(unwrap(detail), `the paragraph under "### ${title.trim()}"`)
+      }
+    })
+  if (!achievements.length) {
+    throw new Error(`${PROFILE_PATH}: "## Key Achievements" has no "###" headings under it.`)
+  }
+
+  return {
+    summary: required(unwrap(blocksOf(section('Profile'))[0] ?? ''), 'the Profile paragraph'),
+    career: {
+      intro: required(
+        unwrap(careerBlocks.find((block) => !bulleted(block)) ?? ''),
+        'the Career introduction'
+      ),
+      decades
+    },
+    achievements
+  }
+}
+
+/** Reads the profile entry once, for both the CV builder and the home page. */
+export const loadCvProfile = async () => {
+  const profile = await getEntry('cv', 'profile')
+  if (!profile) {
+    throw new Error(`${PROFILE_PATH} is missing. The CV and the home page are built from it.`)
+  }
+  return { data: profile.data, copy: parseCvCopy(profile.body ?? '') }
+}
 
 /**
  * Bullets carry inline markdown (bold, italic, links, code). Rendering them as plain
@@ -170,6 +288,9 @@ const trimRole = (role: CvRole, maxBullets: number): CvRole => {
 }
 
 export const buildCv = async (variant: CvVariant): Promise<CvModel> => {
+  const { data, copy } = await loadCvProfile()
+  const cvConfig = { ...data, ...copy }
+
   const workEntries = await getCollection('work', ({ data }) => !data.omitFromCv)
   const educationEntries = await getCollection('education', ({ data }) => !data.omitFromCv)
 

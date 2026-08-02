@@ -4,40 +4,15 @@ description: A 1994 conference paper surveying how client/server systems were ac
 pubDate: 1994-12-13
 ---
 
-_This is a paper I gave at Oracle OpenWorld '94, written while I was an Architecture Consultant
-at [AT&T Global Information Solutions](/spotlite/work/ncr/). It is a revision of the paper I gave
-earlier that year at [AUUG'94](/spotlite/article/auug-1994/), which marks where the two diverge._
+_This is a paper I gave at Oracle OpenWorld '94, written while I was an Architecture Consultant at [AT&T Global Information Solutions](/spotlite/work/ncr/). It is a revision of the paper I gave earlier that year at [AUUG'94](/spotlite/article/auug-1994/), which marks where the two diverge._
 
-_I cannot pin down the conference date. AUUG keeps its own history and AUUG'94 is on the record to
-the day, but this Oracle event has left no trace I can find, and the name was not used for
-Oracle's flagship American conference until years later, so this was a regional one. The files
-give a bracket rather than a date. Oracle's paper template was made in July 1994 and my manuscript
-was written into it; the slide deck was created on the 19th of September, ten days after I gave
-the AUUG version; and the deck was printed and saved for the last time on Tuesday the 13th of
-December. The talk cannot have been before that, and the date on this article is that last save
-rather than the conference itself._
+_I cannot pin down the conference date. AUUG keeps its own history and AUUG'94 is on the record to the day, but this Oracle event has left no trace I can find, and the name was not used for Oracle's flagship American conference until years later, so this was a regional one. The files give a bracket rather than a date. Oracle's paper template was made in July 1994 and my manuscript was written into it; the slide deck was created on the 19th of September, ten days after I gave the AUUG version; and the deck was printed and saved for the last time on Tuesday the 13th of December. The talk cannot have been before that, and the date on this article is that last save rather than the conference itself._
 
-_Set from the Word manuscript, with the 1998 HTML export used as a cross-check. Compared as
-continuous text the two are identical: 37,967 characters each and not one difference. The only
-thing the export added was the section and figure numbering, which the manuscript leaves to an
-`AUTONUM` field and does not contain at all, and which the export got right. The AUUG'94 export
-of the same paper was not so lucky, and dropped a word from it._
+_Set from the Word manuscript, with the 1998 HTML export used as a cross-check. Compared as continuous text the two are identical: 37,967 characters each and not one difference. The only thing the export added was the section and figure numbering, which the manuscript leaves to an `AUTONUM` field and does not contain at all, and which the export got right. The AUUG'94 export of the same paper was not so lucky, and dropped a word from it._
 
-_The four figures are vector again, converted from the metafiles Word cached for each embedded
-object, in place of the 480-pixel GIFs. Two of them differ from those GIFs by more than
-resolution. In figure 3 the manuscript draws Business Logic green and Data Management pale blue
-where the GIF has dark blue and teal. In figure 1 the two LAN workstations are different clipart
-altogether: a green-screen desktop and a larger blue-screen machine with a mouse, where the GIF
-shows two identical green-screen PCs. Both are later revisions of the artwork, so what is here is
-what the paper was submitted with._
+_The four figures are vector again, converted from the metafiles Word cached for each embedded object, in place of the 480-pixel GIFs. Two of them differ from those GIFs by more than resolution. In figure 3 the manuscript draws Business Logic green and Data Management pale blue where the GIF has dark blue and teal. In figure 1 the two LAN workstations are different clipart altogether: a green-screen desktop and a larger blue-screen machine with a mouse, where the GIF shows two identical green-screen PCs. Both are later revisions of the artwork, so what is here is what the paper was submitted with._
 
-_Three faults in the HTML export are repaired here. A list item opened as
-`<pli>`, which closes nothing, splitting one sentence across the break. The back-end command
-list nested its tags wrongly, putting two commands inside one span and the third outside any
-— the front-end list in the same sentence shows the intent. And Figure 1's source reached
-into the AUUG'94 directory for a file byte-identical to the copy sitting beside it. The
-closing contact block is dropped, being a 1994 office address, phone, fax and email at a
-company that has not carried that name in thirty years. The words are otherwise as given._
+_Three faults in the HTML export are repaired here. A list item opened as `<pli>`, which closes nothing, splitting one sentence across the break. The back-end command list nested its tags wrongly, putting two commands inside one span and the third outside any — the front-end list in the same sentence shows the intent. And Figure 1's source reached into the AUUG'94 directory for a file byte-identical to the copy sitting beside it. The closing contact block is dropped, being a 1994 office address, phone, fax and email at a company that has not carried that name in thirty years. The words are otherwise as given._
 
 ## Abstract
 

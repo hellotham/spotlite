@@ -6,29 +6,33 @@ pubDate: 1987-11-01
 
 ![The University of Sydney crest: a lion passant above an open book on a white cross, flanked by stars of the Southern Cross, over a scroll reading Sidere Mens Eadem Mutato](../../assets/usyd-crest.svg)
 
-_Chris Tham, Computer Science Honours, 1987. Basser Department of Computer Science, Madsen
-Building F09, University of Sydney, NSW 2006, Australia._
+_Chris Tham, Computer Science Honours, 1987. Basser Department of Computer Science, Madsen Building F09, University of Sydney, NSW 2006, Australia._
 
-_This is my honours thesis, for which I was awarded the University Medal. It was written in
-troff, and in January 1998 I converted it to HTML with a perl script of my own called `m2h`;
-this is that HTML turned into Markdown. Two faults in the 1998 conversion are repaired here: an
-anchor in the contents whose quote never closed, and several lists opened as one kind and
-closed as the other. Its own numbering was off by one throughout, the footnotes and references
-being listed from two while cited from one, so both are renumbered against the text. The words
-are otherwise as submitted._
+_This is my honours thesis, for which I was awarded the University Medal. It was written in troff, and in January 1998 I converted it to HTML with a perl script of my own called `m2h`; this is that HTML turned into Markdown. Two faults in the 1998 conversion are repaired here: an anchor in the contents whose quote never closed, and several lists opened as one kind and closed as the other. Its own numbering was off by one throughout, the footnotes and references being listed from two while cited from one, so both are renumbered against the text. The words are otherwise as submitted._
+
+## How it came to be written
+
+I am delighted to have finally tracked down an electronic version of my honours thesis, for which I won the University Medal and graduated with first class honours from the University of Sydney in 1988.
+
+Unlike some of my classmates, I had low ambition and did not really want to pursue an academic career, nor was I particularly interested in working in commercial software development. I had an artistic temperament and was somewhat bohemian. (History would of course note that my career since then has taken surprising twists and turns.)
+
+So I did not want to write my honours thesis on typical academic topics, and I didn't want to work on AI, a hot topic during my time at uni. So I proposed to write on a topic of interest to me: making computers play music.
+
+The university was not very happy with my proposal. I was told it was an unusual topic. I wanted to write a computer language for representing and performing music, and I was cautioned that it would hurt my academic or professional career.
+
+Nevertheless, the university agreed to my proposal. They decided to support me with not just one but three supervisors: Associate Professor Allan Bromley, the famous historian of computing; a lecturer from the Department of Music who was managing the school's computer music lab; and a graduate student, a fellow muso.
+
+The graduate student turned out to be the most influential of all. He was none other than Bruce Ellis, of Mark V. Shaney fame, who went on to work at Bell Labs on Plan 9 (the successor to Unix) and at Lucent on Inferno.
+
+Bruce had taught an advanced compiler construction class that I had liked (we had to write a C compiler in LISP) and played in a band. To say that I was awe-struck was an understatement.
+
+Anyway, I remember writing all the code in a two-week coding frenzy, hardly sleeping during that time, and then writing the thesis afterwards in about a week. The thesis was typeset in troff using the mm macro package. I discovered bugs in mm, so in the end I had a personal copy that I modified and added extra macros to.
+
+_The thesis as submitted begins below._
 
 ## Rubato (Italian = robbed)
 
-> Over the centuries the cry of _Ancora rubato_ (robbed again) has echoed through the corridors
-> of opera-houses as the orchestral musicians opened their pay-packets. In time, the word became
-> so associated with the sight of players hanging about the stage door waiting to argue with the
-> manager that it seemed natural to apply it to hanging about while playing an expressive melody.
-> It is in fact the subtle art of flexing the rhythm in such a way as to enhance its
-> expressiveness, sometimes retarding, sometimes accelerating, but always preserving a coherent
-> musical shape. Its tasteful use almost invariably depends on an awareness of the relation
-> between a melody and its supporting harmony. Questions of rubato should usually not be worked
-> out but left to the inspiration of the moment. Abused, it can result in gross distortions of
-> the music.
+> Over the centuries the cry of _Ancora rubato_ (robbed again) has echoed through the corridors of opera-houses as the orchestral musicians opened their pay-packets. In time, the word became so associated with the sight of players hanging about the stage door waiting to argue with the manager that it seemed natural to apply it to hanging about while playing an expressive melody. It is in fact the subtle art of flexing the rhythm in such a way as to enhance its expressiveness, sometimes retarding, sometimes accelerating, but always preserving a coherent musical shape. Its tasteful use almost invariably depends on an awareness of the relation between a melody and its supporting harmony. Questions of rubato should usually not be worked out but left to the inspiration of the moment. Abused, it can result in gross distortions of the music.
 >
 > Anthony Hopkins, **Downbeat Music Guide**, Oxford University Press, London (1977)
 
@@ -1327,8 +1331,7 @@ The following are a brief summary of control flow statements available in _Rubat
 
 ##### 4.11.2.1 if-then-else
 
-> [!SYNTAX]
-> `if` <em>expression</em> `then` <em>statement1</em>
+> [!SYNTAX] `if` <em>expression</em> `then` <em>statement1</em>
 >
 > `if` <em>expression</em> `then` <em>statement1</em> `else` <em>statement2</em>
 
@@ -1338,8 +1341,7 @@ The _expression_ is evaluated. If the result is true (nonzero value) _statement1
 
 ##### 4.11.2.2 while-do
 
-> [!SYNTAX]
-> `while` <em>expression</em> `do` <em>statement</em>
+> [!SYNTAX] `while` <em>expression</em> `do` <em>statement</em>
 
 The _expression_ is evaluated. If the result is true, then _statement_ is executed. The _expression_ is then reevaluated. _Statement_ will be rexecuted until the _expression_ evaluates to false (0), at which point control will be passed onto the next statement after the **while-do** statement.
 
@@ -1347,8 +1349,7 @@ The _expression_ is evaluated. If the result is true, then _statement_ is execut
 
 ##### 4.11.2.3 do-while
 
-> [!SYNTAX]
-> `do` <em>statement</em> `while` <em>expression</em>
+> [!SYNTAX] `do` <em>statement</em> `while` <em>expression</em>
 
 The _statement_ is executed. The _expression_ is then evaluated. If the result is true, the _statement_ is reexecuted. This continues until the _expression_ evaluates to false. Control then passes to the next statement.
 
@@ -1356,8 +1357,7 @@ The _statement_ is executed. The _expression_ is then evaluated. If the result i
 
 ##### 4.11.2.4 repeat
 
-> [!SYNTAX]
-> `repeat` <em>expression</em> `do` <em>statement</em>
+> [!SYNTAX] `repeat` <em>expression</em> `do` <em>statement</em>
 
 The _statement_ is repeated _expression_ number of times.
 
@@ -1398,8 +1398,7 @@ The invocation of the procedure is called a _procedure call_, and the values and
 
 Parameters may be values, variables, notes, chords phrases or even other procedure names. A procedure binding (also called 'declaration') binds its parameters to local names and act as if the entities passed to the procedure has been bound locally within the procedure. If a parameter binding is subsequently changed within a procedure, this change is invisible to the outer block that invoked the procedure.
 
-> [!SYNTAX]
-> `procedure` <em>name</em>(<em>parameters</em>) <em>procedure_body</em>
+> [!SYNTAX] `procedure` <em>name</em>(<em>parameters</em>) <em>procedure_body</em>
 >
 > `procedure` <em>name</em>() <em>procedure_body</em>
 
@@ -1824,8 +1823,7 @@ The following types of statements are currently valid within a phrase or chord b
 
 #### 5.5.1 if-then-else
 
-> [!SYNTAX]
-> `if` _expression_ `then` _statement1_
+> [!SYNTAX] `if` _expression_ `then` _statement1_
 >
 > `if` _expression_ `then` _statement1_ `else` _statement2_
 
@@ -1835,8 +1833,7 @@ Evaluate _expression_. If result is nonzero, execute _statement1_, else execute 
 
 #### 5.5.2 repeat-do
 
-> [!SYNTAX]
-> `repeat` _expression_ `do` _statement_
+> [!SYNTAX] `repeat` _expression_ `do` _statement_
 
 Evaluate _expression_. If result is nonzero, execute _statement_ iteratively the number of times specified by _expression_.
 
@@ -1844,8 +1841,7 @@ Evaluate _expression_. If result is nonzero, execute _statement_ iteratively the
 
 #### 5.5.3 while-do
 
-> [!SYNTAX]
-> `while` _expression_ `do` _statement_
+> [!SYNTAX] `while` _expression_ `do` _statement_
 
 Evaluate _expression_. If result is nonzero, execute _statement_ and reevaluate _expression_ repeatedly until _expression_ evaluates to zero.
 
@@ -1853,8 +1849,7 @@ Evaluate _expression_. If result is nonzero, execute _statement_ and reevaluate 
 
 #### 5.5.4 do-while
 
-> [!SYNTAX]
-> `do` _statement_ `while` _expression_
+> [!SYNTAX] `do` _statement_ `while` _expression_
 
 Execute _statement_ and evaluate _expression_ repeatedly until _expression_ evaluates to zero.
 
@@ -1862,8 +1857,7 @@ Execute _statement_ and evaluate _expression_ repeatedly until _expression_ eval
 
 #### 5.5.5 tempo
 
-> [!SYNTAX]
-> `tempo` _expression1_ `=` _expression2_
+> [!SYNTAX] `tempo` _expression1_ `=` _expression2_
 
 _expression1_ must evaluate to the number of units used as a counting quantity. _expression2_ evaluates to the number of times the counting quantity must occur in one minute.
 
@@ -1871,8 +1865,7 @@ _expression1_ must evaluate to the number of units used as a counting quantity. 
 
 #### 5.5.6 default
 
-> [!SYNTAX]
-> `default` _pitch1_ `=` _pitch2_
+> [!SYNTAX] `default` _pitch1_ `=` _pitch2_
 >
 > `default` _attribute_
 
@@ -1882,8 +1875,7 @@ Changes the default value associated with note pitches or attributes. The first 
 
 #### 5.5.7 Assignment
 
-> [!SYNTAX]
-> _identifier_ `=` _object_
+> [!SYNTAX] _identifier_ `=` _object_
 
 Assigns (binds) object to identifier. Identifier assignments are 'strongly-typed', i.e. an object of a given type can only be assignmed to an identifier of the same type.
 
@@ -1891,8 +1883,7 @@ Assigns (binds) object to identifier. Identifier assignments are 'strongly-typed
 
 #### 5.5.8 Template and Procedure Calls
 
-> [!SYNTAX]
-> _identifier_ `(`<em>parameter_list</em>`)`
+> [!SYNTAX] _identifier_ `(`<em>parameter_list</em>`)`
 
 Invoke a template or procedure, depending on the type of the identifier. The syntax of a template or procedure call is deliberately made identical to the syntax of a function call.
 
@@ -1900,8 +1891,7 @@ Invoke a template or procedure, depending on the type of the identifier. The syn
 
 #### 5.5.9 return
 
-> [!SYNTAX]
-> `return` _expression_
+> [!SYNTAX] `return` _expression_
 
 Only valid within the context of a function body, this statement returns the value of the expression to the invoker of the function.
 
@@ -1913,8 +1903,7 @@ Identifiers may be defined within the body of a phrase or a chord and 'typed' to
 
 The syntax of an identifier definition is:
 
-> [!SYNTAX]
-> _type_ _identifier_
+> [!SYNTAX] _type_ _identifier_
 >
 > _type_ _identifier_ `=` _object_
 >
@@ -1948,8 +1937,7 @@ External definitions are like global definitions, except that they are preceeded
 
 ### 5.8 conductor
 
-> [!SYNTAX]
-> `conductor` _block_
+> [!SYNTAX] `conductor` _block_
 
 Every complete _Rubato_ program (merger of the individual source files linked together) must have one `conductor` definition. It represents the phrase or chord that is executed by the _Rubato_ machine when initially started up.
 
@@ -1963,8 +1951,7 @@ These 'statements' control the action of the compiler when parsing the source fi
 
 #### 5.9.1 $key
 
-> [!SYNTAX]
-> `$key` _pitch_ `major`
+> [!SYNTAX] `$key` _pitch_ `major`
 >
 > `$key` _pitch_ `minor`
 >
@@ -1978,8 +1965,7 @@ The alternative `$key` specification takes an <em>accidental_list</em>, which is
 
 #### 5.9.2 $default
 
-> [!SYNTAX]
-> `$default` _pitch1_ `=` _pitch2_
+> [!SYNTAX] `$default` _pitch1_ `=` _pitch2_
 
 This controls the default octave or initial transposition of note pitches coded up for the rest of the language. It forces the compiler to transpose all notes coded up by an offset equal to the pitch number of _pitch1_ subtracted from the pitch number of _pitch1_. Uppercase pitches and lowercase pitches can be transposed independently, allowing two octaves to be readily accessible without the use of INCPIT or DECPIT operators.
 
@@ -2315,8 +2301,7 @@ The debugger is a late addition to the executor. It basically emulates the facil
 
 Each note generated by the interpreter into the output file has the following format, on one line of the player file:
 
-> [!SYNTAX]
-> `t`_time_ `p`_pitch_ `u`_duration_ `l`_loudness_ `v`_channel_ `z`_patch_
+> [!SYNTAX] `t`_time_ `p`_pitch_ `u`_duration_ `l`_loudness_ `v`_channel_ `z`_patch_
 
 The _time_ of the note is the onset time, i.e. the time the note should start sounding given by the number of centiseconds into the piece. The _pitch_ of the note is the pitch number - 12. The _duration_ of the note is the length of time in which the note will sound, in centiseconds. The _loudness_ of the note corresponds to the note velocity. The _patch_ and _channel_ of the note corresponds with the equivalent attribute in the _Rubato_ language.
 

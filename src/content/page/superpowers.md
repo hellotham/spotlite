@@ -67,13 +67,13 @@ gantt
     Assertive (A)   :active, 0, 86
 ```
 
-| Trait    | Measure         | Description                                                                                       |
-| :------- | :-------------- | :------------------------------------------------------------------------------------------------ |
-| Energy   | 77% Extraverted | Energised by social interaction and tend to openly express enthusiasm and excitement              |
-| Mind     | 95% Intuitive   | Very imaginative and open-minded, focusing on hidden meanings and distant possibilities           |
-| Nature   | 57% Feeling     | Value emotional expression and sensitivity, prioritising empathy, social harmony, and cooperation |
-| Tactics  | 58% Prospecting | Very adaptable, easygoing and flexible, prioritising spontaneity over stability                   |
-| Identity | 86% Assertive   | Self-assured, even-tempered, and resistant to stress, refusing to worry too much                  |
+| Trait | Measure | Description |
+| :-- | :-- | :-- |
+| Energy | 77% Extraverted | Energised by social interaction and tend to openly express enthusiasm and excitement |
+| Mind | 95% Intuitive | Very imaginative and open-minded, focusing on hidden meanings and distant possibilities |
+| Nature | 57% Feeling | Value emotional expression and sensitivity, prioritising empathy, social harmony, and cooperation |
+| Tactics | 58% Prospecting | Very adaptable, easygoing and flexible, prioritising spontaneity over stability |
+| Identity | 86% Assertive | Self-assured, even-tempered, and resistant to stress, refusing to worry too much |
 
 At my core, I am driven by my values and my quest for authenticity. I have a strong sense of right and wrong, and I am not afraid to stand up for what I believe in. Coupled with my natural empathy, I am a powerful advocate for causes I care about.
 
@@ -83,13 +83,13 @@ I thrive in environments that value creativity, flexibility, and human connectio
 
 According to the [Open-Source Psychometrics Project](https://openpsychometrics.org/tests/IPIP-BFFM/results.php?r=4.9,5,4.6,3.1,5#_II) my results from the IPIP Big Five Factor Markers are in the table below. Each factor is scored from 1 to 5.
 
-| Factor                | Score | Description                                                                     |
-| :-------------------- | :---- | :------------------------------------------------------------------------------ |
-| Emotional stability   | 5.0   | Calm and even-tempered, rarely rattled by pressure or setbacks                  |
-| Intellect/Imagination | 5.0   | Curious and inventive, drawn to abstract ideas and new experiences              |
-| Extroversion          | 4.9   | Energised by people, outgoing and comfortable taking the floor                  |
-| Agreeableness         | 4.6   | Trusting and cooperative, inclined to accommodate others                        |
-| Conscientiousness     | 3.1   | Balanced between structure and spontaneity, preferring flexibility over routine |
+| Factor | Score | Description |
+| :-- | :-- | :-- |
+| Emotional stability | 5.0 | Calm and even-tempered, rarely rattled by pressure or setbacks |
+| Intellect/Imagination | 5.0 | Curious and inventive, drawn to abstract ideas and new experiences |
+| Extroversion | 4.9 | Energised by people, outgoing and comfortable taking the floor |
+| Agreeableness | 4.6 | Trusting and cooperative, inclined to accommodate others |
+| Conscientiousness | 3.1 | Balanced between structure and spontaneity, preferring flexibility over routine |
 
 ```mermaid
 xychart-beta

@@ -130,4 +130,44 @@ const passion = defineCollection({
   })
 })
 
-export const collections = { article, project, work, education, social, page, creation, passion }
+// The CV's editorial copy. Only parameters are validated here: the prose lives in the
+// body as markdown, because a person has to write and review it, and is parsed and
+// checked by parseCvCopy in src/utils/cv.ts.
+const cv = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/cv' }),
+  schema: z.object({
+    name: z.string(),
+    headline: z.string(),
+    contact: z.object({
+      email: z.string(),
+      phone: z.string(),
+      location: z.string(),
+      linkedin: z.string(),
+      website: z.string()
+    }),
+    onePage: z.object({
+      maxRoles: z.number(),
+      maxBulletsPerRole: z.number(),
+      minCompetencyLevel: z.number(),
+      earlierCareerHeading: z.string(),
+      maxEarlierRoles: z.number()
+    }),
+    full: z.object({
+      minCompetencyLevel: z.number(),
+      detailedRoles: z.number(),
+      maxBulletsPerEarlierRole: z.number()
+    })
+  })
+})
+
+export const collections = {
+  article,
+  project,
+  work,
+  education,
+  social,
+  page,
+  creation,
+  passion,
+  cv
+}

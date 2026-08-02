@@ -8,6 +8,12 @@ module.exports = {
   trailingComma: 'none',
   semi: false,
   printWidth: 100,
+  // Markdown paragraphs are written as one long line and soft-wrapped by the editor,
+  // rather than hard-wrapped at printWidth. Prose is not code: a hard wrap is invisible
+  // in the rendered page but very visible in a diff, where changing one word reflows
+  // the whole paragraph and buries the edit in a block of moved text. With `never`,
+  // prettier also maintains this, where `preserve` left every file however it was typed.
+  proseWrap: 'never',
   // pluginSearchDirs: [__dirname],
   plugins: [require.resolve('prettier-plugin-astro')],
   overrides: [

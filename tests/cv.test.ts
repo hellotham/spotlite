@@ -5,9 +5,12 @@ import { describe, expect, it, vi } from 'vitest'
 
 // src/utils/cv.ts imports astro:content for buildCv; the pure helpers under test here
 // do not touch it, but the module graph still has to resolve outside Astro.
-vi.mock('astro:content', () => ({ getCollection: vi.fn(async () => []) }))
+vi.mock('astro:content', () => ({
+  getCollection: vi.fn(async () => []),
+  getEntry: vi.fn(async () => undefined)
+}))
 
-const { formatDateRange, renderInline } = await import('../src/utils/cv')
+const { formatDateRange, renderInline, parseCvCopy } = await import('../src/utils/cv')
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -19,24 +22,58 @@ const readJson = (relativePath: string) =>
 const readText = (relativePath: string) => fs.readFileSync(path.join(rootDir, relativePath), 'utf8')
 
 describe('CV configuration', () => {
-  const cv = readJson('src/cv.json')
+  // The parameters are frontmatter and the copy is prose in the body, so this asserts
+  // against the built CV rather than the source format: what has to be true is that
+  // these details reach the document, not how the file happens to store them.
+  const rendered = readText('dist/cv/full/index.html')
+  const profile = readText('src/content/cv/profile.md')
 
   it('supplies the contact details a professional CV requires', () => {
     // These do not exist anywhere else in the repo: the site config has no email,
     // phone or location, and its `title` is a website tagline, not a CV headline.
-    expect(cv.name).toBeTruthy()
-    expect(cv.headline).toBeTruthy()
-    expect(cv.summary).toBeTruthy()
-    expect(cv.contact.email).toMatch(/@/)
-    expect(cv.contact.location).toBeTruthy()
-    expect(cv.contact.linkedin).toMatch(/^https:\/\//)
+    for (const field of ['email', 'phone', 'location', 'linkedin']) {
+      expect(profile).toMatch(new RegExp(`^\\s*${field}:\\s*\\S`, 'm'))
+    }
+    expect(rendered).toMatch(/@/)
+    expect(rendered).toContain('Sydney')
+    expect(rendered).toContain('linkedin.com/in/')
   })
 
   it('does not reuse the website tagline as the CV headline', () => {
     // "artist, consultant, cyclist, designer, musician, photographer, world traveller"
     // is site personality, not a professional headline.
     const siteConfig = readJson('src/config.json')
-    expect(cv.headline).not.toBe(siteConfig.title)
+    const headline = /headline:\s*'?([^'\n]+)'?/.exec(profile)?.[1]
+    expect(headline).toBeTruthy()
+    expect(headline).not.toBe(siteConfig.title)
+  })
+})
+
+describe('CV copy parsing', () => {
+  const body = readText('src/content/cv/profile.md').split(/^---$/m).slice(2).join('---')
+
+  it('reads the profile, career and achievements out of the markdown body', () => {
+    const copy = parseCvCopy(body)
+    expect(copy.summary).toMatch(/Hello Tham/)
+    expect(copy.career.intro).toMatch(/four decades/)
+    expect(copy.career.decades).toHaveLength(4)
+    expect(copy.career.decades[0]).toMatch(/first decade/)
+    // Wrapped source lines must come back as one line, not with the newlines in them.
+    expect(copy.career.decades[0]).not.toContain('\n')
+    expect(copy.achievements.length).toBeGreaterThanOrEqual(3)
+    expect(copy.achievements[0].title).toBeTruthy()
+    expect(copy.achievements[0].detail).toMatch(/\S/)
+  })
+
+  it('fails loudly rather than shipping a CV with a hole in it', () => {
+    // Each of these is a way the file can be edited into something that would other-
+    // wise build a CV with a section silently missing.
+    expect(() => parseCvCopy(body.replace(/^## Profile$/m, '## Summary'))).toThrow(/Profile/)
+    expect(() => parseCvCopy(body.replace(/^## Key Achievements$/m, '## Other'))).toThrow(
+      /Key Achievements/
+    )
+    expect(() => parseCvCopy(body.replace(/^- /gm, ''))).toThrow(/bulleted list/)
+    expect(() => parseCvCopy(body.replace(/^### .*$/gm, ''))).toThrow(/###/)
   })
 })
 

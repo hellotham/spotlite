@@ -4,8 +4,7 @@ pubDate: 2017-02-17T22:00:00.000Z
 description: Advice on how to have a satisfying career and life
 ---
 
-What is FOLO (Fear of Losing Out)? It is an advanced form of “Fear
-of Missing Out” (FOMO). Singaporeans often call it the “Kiasu” syndrome.
+What is FOLO (Fear of Losing Out)? It is an advanced form of “Fear of Missing Out” (FOMO). Singaporeans often call it the “Kiasu” syndrome.
 
 If you have FOMO, then you have an anxiety that someone somewhere is having a great party that you are missing out on because you forgot to check your email. It could also be a regret from a perceived wrong decision in the past that has now prevented you from achieving something or getting something.
 

@@ -202,7 +202,8 @@ const renderOnePager = async (browser, { url, output, label }) => {
     if (scale === null) {
       throw new Error(
         `${label}: content cannot be fitted to one page above the ${MIN_FIT_SCALE} legibility ` +
-          'floor. Reduce onePage.maxRoles / maxBulletsPerRole in src/cv.json, or trim content.'
+          'floor. Reduce onePage.maxRoles / maxBulletsPerRole in src/content/cv/profile.md,' +
+          ' or trim content.'
       )
     }
     console.log(`  ${label}: fitted at ${(scale * 100).toFixed(1)}% scale`)
