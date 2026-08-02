@@ -29,9 +29,12 @@ address as `www.newmagic.com.au` while linking it to `showshifter.com`._
 
 _**This is the edit and not the printed page.** It still carries "Price: To come" where a price
 should be and "page xx" where a cross-reference should be, so it was still in production when this
-copy was saved. I do not know which issue ran it, or whether the standfirst's "five of the best"
-means a fifth review was expected that I never wrote. The file does not say and I am not going to
-invent an answer._
+copy was saved. It ran in the September 2004 issue —
+[the invoice that closed the batch names it](/spotlite/article/apc-2004/) — and the standfirst's
+"five of the best" is no longer a mystery:
+[the brief has since surfaced](/spotlite/article/apc-2004/), and it commissioned five reviews, the
+fifth being MythTV on Linux, which is in neither of my drafts. The standfirst was written from
+the brief, not from the copy._
 
 ## Digital TV software
 
@@ -62,7 +65,7 @@ manufacturer supplied driver or the user-contributed BDA driver.
 
 ## Showshifter DVB
 
-![The ShowShifter DVB window at 1024 by 768. A purple menu down the left lists Television, Radio, Video Files, ShowGuide, DVD, JukeBox, CD, Picture Viewer and Enter Registration, with Television highlighted in orange. A television picture of an American football player in a red helmet plays in a framed panel on the right. The title bar reads showshifter DVB, beta version, and the status bar reads Sunday, 11 July 2004 12:47 PM](../../assets/apc04-figure-1.png)
+![The ShowShifter DVB window at 1024 by 768. A purple menu down the left lists Television, Radio, Video Files, ShowGuide, DVD, JukeBox, CD, Picture Viewer and Enter Registration, with Television highlighted in orange. A television picture of an American football player in a red helmet plays in a framed panel on the right. The title bar reads showshifter DVB, beta version, and the status bar reads Sunday, 11 July 2004 12:47 PM](../../assets/apc04-shot-1.png)
 
 _Showshifter DVB: lots of functionality in a visually appealing user interface suitable for TV
 resolutions_
@@ -104,7 +107,7 @@ Con: Limited hardware support. Crashed occasionally.
 
 ## myHTPC
 
-![The myHTPC front end at 1024 by 768, on a deep red rippled background with a large translucent myHTPC wordmark down the left. The heading reads my TV, above five stacked buttons: TV Guide, highlighted in green, then Live TV, Search, Recording schedule and Back. A clock in the bottom left reads Sunday, 11 July 2004 12:41 PM](../../assets/apc04-figure-2.png)
+![The myHTPC front end at 1024 by 768, on a deep red rippled background with a large translucent myHTPC wordmark down the left. The heading reads my TV, above five stacked buttons: TV Guide, highlighted in green, then Live TV, Search, Recording schedule and Back. A clock in the bottom left reads Sunday, 11 July 2004 12:41 PM](../../assets/apc04-shot-2.png)
 
 _myHTPC: a very nice-looking front end with integrated EPG and TV scheduling capabilities_
 
@@ -142,7 +145,7 @@ Con: Tricky to configure
 
 ## DigitalWatch 0.701
 
-![DigitalWatch showing an almost full-frame television picture of the same American football player, with no window chrome. A thin control strip across the bottom carries the DIGITALWATCH wordmark and a row of small buttons for contrast, brightness, zoom and close. The status line beneath reads 9 - 1 on the left and Nine Digital on the right](../../assets/apc04-figure-3.png)
+![DigitalWatch showing an almost full-frame television picture of the same American football player, with no window chrome. A thin control strip across the bottom carries the DIGITALWATCH wordmark and a row of small buttons for contrast, brightness, zoom and close. The status line beneath reads 9 - 1 on the left and Nine Digital on the right](../../assets/apc04-shot-3.png)
 
 _DigitalWatch: a minimalist user interface that is primarily oriented for watching TV_
 
@@ -182,7 +185,7 @@ Con: No in-built playback of TV recordings
 
 ## ProgDVB
 
-![The ProgDVB window with a Windows XP title bar, a menu bar and a toolbar. A channel tree down the left lists ABC, DIGITAL FORTY FOUR, Nine Network expanded to NINE DIGITAL, NINE GUIDE and NINE HD, then SBS NETWORK, Seven Network and Ten Sydney. A car advertisement plays in the video pane on the right above transport controls. The status bar reads TV, NINE DIGITAL, Quality 98%, Level 87%, and 20:30 SATURDAY NIGHT AT THE MOVIES](../../assets/apc04-figure-4.png)
+![The ProgDVB window with a Windows XP title bar, a menu bar and a toolbar. A channel tree down the left lists ABC, DIGITAL FORTY FOUR, Nine Network expanded to NINE DIGITAL, NINE GUIDE and NINE HD, then SBS NETWORK, Seven Network and Ten Sydney. A car advertisement plays in the video pane on the right above transport controls. The status bar reads TV, NINE DIGITAL, Quality 98%, Level 87%, and 20:30 SATURDAY NIGHT AT THE MOVIES](../../assets/apc04-shot-4.png)
 
 _DigitalWatch: a minimalist user interface that is primarily oriented for watching TV_
 
@@ -225,9 +228,11 @@ Con: Subtitles didn't work, no EPG support for Australia, no BDA driver support.
 ## Extra text – we won't have room to include this
 
 _That heading is the editor's, typed into the file above the boxout. Everything below it was cut.
-It is reproduced here because it is the only place the decision is recorded, and because the
-boxout itself is the one section of the piece that was mine from the start rather than reworked
-from a brief._
+It is reproduced here because it is the only place the decision is recorded — and because the
+boxout began as the brief's own questions to me, pasted into my first draft, and had only just
+finished becoming copy for readers when he cut it. An earlier version of this note claimed the
+boxout was mine from the start; the brief, which has since surfaced, says otherwise, and the
+account of the transformation is with [the manuscript](/spotlite/article/apc-2004/)._
 
 ### Boxout: What to look for
 
@@ -276,3 +281,5 @@ resolutions?
 - The word counts quoted in the preface are measured from the text rather than read from the file.
   Word's own counter reads 1,407 here against 2,107 for the manuscript, which matches neither
   measurement.
+- [Remote controls for your HTPC](/spotlite/article/apc-2004-remotes/), the third piece of the same
+  batch, which no edit of survives.
