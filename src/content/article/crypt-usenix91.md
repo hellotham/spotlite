@@ -584,4 +584,4 @@ It was cited often, and the two things it argues for both became ordinary practi
 ## Sources
 
 - [The paper as published](https://phwl.org/assets/papers/crypt_usenix91.pdf), from the site of my co-author Philip Leong.
-- [A scan of the proceedings](/spotlite/crypt-usenix91.pdf), which this reproduction was transcribed from.
+- A scan of the proceedings, which this reproduction was transcribed from.

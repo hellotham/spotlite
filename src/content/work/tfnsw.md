@@ -5,7 +5,13 @@ startyear: 2016
 endyear: 2019
 type: consulting
 image: ./tfnsw.jpg
-description: 'Strategic consulting spanning a multi-year enterprise application business case, mobile and web proofs of concept, a leave-request chatbot, KPI dashboards and machine learning for incident routing.'
+description: 'An enterprise applications business case, proofs of concept, and machine learning for incident routing.'
+priority: 2
+summary:
+  - 'Developed the financial model and engaged Finance stakeholders for the business case for a multi-year investment programme covering a suite of enterprise applications.'
+  - 'Led proofs of concept: a native iOS app in Swift authenticating via Azure AD against the Microsoft Graph API, a JavaScript front end embedded in a ServiceNow portal over a back-end SAP OData service, and a vendor-sponsored chatbot servicing leave requests.'
+  - 'Built management KPI dashboards in Tableau and custom SQL, and applied text-analysis machine learning with fast.ai and AWS SageMaker to predict the correct resolver group for IT incidents.'
+  - 'Mentored senior employees and participated in the Women in IT Leadership group.'
 tags:
   [
     'Business cases',

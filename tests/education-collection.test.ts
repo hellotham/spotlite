@@ -27,7 +27,12 @@ describe('education collection', () => {
       expect(content).toMatch(/^institution:\s+/m)
       expect(content).toMatch(/^degree:\s+/m)
       expect(content).toMatch(/^startyear:\s+\d+$/m)
-      expect(content).toMatch(/^image:\s+/m)
+      // `image` is deliberately NOT required. The schema marks it optional and EntityLogo
+      // draws a monogram of the institution's initials when it is absent, which is how an
+      // entity with no usable mark is meant to render. This assertion used to require one,
+      // which only held because every entry happened to have a logo to hand.
+      expect(content).toMatch(/^description:\s+/m)
+      expect(content).toMatch(/^summary:$/m)
       expect(content).not.toMatch(/^datespan:/m)
     }
   })

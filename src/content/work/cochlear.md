@@ -5,6 +5,10 @@ startyear: 2025
 type: consulting
 image: ./cochlear.png
 description: 'Enterprise architecture within Technology and Data Solutions: an architecture service model, EA metrics and LeanIX executive reporting, an AI reference architecture, and federated repository-centric governance.'
+priority: 1
+summary:
+  - 'Defined the enterprise architecture service model and the LeanIX-based EA metrics framework.'
+  - 'Shaped the AI architecture strategy and AI Reference Architecture, including agentic AI guardrails.'
 tags:
   [
     'Enterprise architecture',

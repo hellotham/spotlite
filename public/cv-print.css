@@ -325,15 +325,6 @@ body {
   flex: 1;
 }
 
-/* Optional, so it shares the free space with the company rather than replacing it —
-   the row reads correctly whether or not a role supplies a oneLiner. */
-.cv-earlier-oneliner {
-  color: var(--cv-muted);
-  font-style: italic;
-  flex: 2;
-  min-width: 0;
-}
-
 .cv-earlier-dates {
   margin-left: auto;
 }
@@ -418,7 +409,9 @@ html[data-cv-variant="onepage"] .cv-career-intro {
   display: flex;
   align-items: baseline;
   gap: 2mm;
-  margin: 0 0 0.9mm;
+  /* No bottom margin: the description sits directly beneath as a continuation of this
+     line, and .cv-education-entry carries the space between qualifications. */
+  margin: 0;
 }
 
 .cv-education-degree {
@@ -430,10 +423,50 @@ html[data-cv-variant="onepage"] .cv-career-intro {
   flex: 1;
 }
 
-.cv-earlier-more {
-  margin: 0.8mm 0 0;
+.cv-education-entry {
+  break-inside: avoid;
+  margin-bottom: 1.2mm;
+}
+
+/* The line above already carries the role or qualification, so this sits under it as a
+   continuation: quieter, and never separated from it across a break. */
+.cv-education-description,
+.cv-role-description {
+  margin: 0;
   color: var(--cv-muted);
-  font-size: 8.8pt;
+  font-size: 9.2pt;
+  orphans: 2;
+  widows: 2;
+}
+
+.cv-education-line {
+  break-after: avoid;
+}
+
+/*
+ * A role reduced to its description. The employer moves up onto the title line, which
+ * removes the .cv-company row: two lines for the same facts instead of four. With eight
+ * roles on the one-pager the scaffolding of the full form cost more height than the
+ * words it framed.
+ */
+.cv-role-compact {
+  margin-bottom: 1.4mm;
+  break-inside: avoid;
+}
+
+.cv-role-compact .cv-role-head {
+  margin-bottom: 0;
+}
+
+.cv-role-employer {
+  font-weight: 400;
+  color: var(--cv-accent);
+}
+
+/* The one-pager's achievements: the headings run together as one line of claims. */
+.cv-achievements-brief {
+  margin: 0;
+  font-weight: 500;
 }
 
 /* ---- One-page auto-fit ------------------------------------------------- */

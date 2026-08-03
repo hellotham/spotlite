@@ -5,6 +5,7 @@ startyear: 2011
 endyear: 2011
 type: consulting
 description: 'Developed social media workshop material and consulted on the business case for an online campus and a Western Sydney campus for the University of New England.'
+priority: 3
 tags: ['Business cases', 'Social media', 'Higher education']
 ---
 

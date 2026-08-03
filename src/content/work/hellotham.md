@@ -7,6 +7,10 @@ image: ./hellotham.png
 logo: ./hellotham-full.svg
 logoBackground: '#ffadd5'
 description: 'Boutique strategy consultancy, publishing AI-dō, a book on working with AI in practice, and two native Apple applications released as free software.'
+priority: 1
+summary:
+  - 'Consulting in IT strategy, architecture and analytics for Cochlear, Transport for NSW and Broadspectrum.'
+  - 'Author of **AI-dō: The Way of AI**; developer of **FinvestLens** and **HelloNotes**, free software.'
 tags:
   [
     'Strategy consulting',

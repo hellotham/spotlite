@@ -84,74 +84,105 @@ const { cv, variant, documentTitle } = Astro.props
 
       <section class='cv-section'>
         <h2>Key Achievements</h2>
-        <ul class='cv-achievements'>
-          {
-            cv.achievements.map((achievement) => (
-              <li>
-                <strong>{achievement.title}</strong> — {achievement.detail}
-              </li>
-            ))
-          }
-        </ul>
+        {
+          /* Same trade-off, and the same answer, as the career narrative above: at full
+             length this section is 71mm — a fifth of the one-pager — spent on prose that
+             restates the roles printed beneath it. Keeping it whole would mean cutting
+             role detail to make room for a summary of that same detail. So the one-pager
+             takes the headings alone. No new copy: an achievement's title is its own
+             short form, exactly as a role's description is. */
+        }
+        {
+          variant === 'full' ? (
+            <ul class='cv-achievements'>
+              {cv.achievements.map((achievement) => (
+                <li>
+                  <strong>{achievement.title}</strong> — {achievement.detail}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class='cv-achievements-brief'>
+              {cv.achievements.map((achievement) => achievement.title).join(' · ')}
+            </p>
+          )
+        }
       </section>
 
       <section class='cv-section'>
         <h2>Professional Experience</h2>
         {
-          cv.roles.map((role) => (
-            <div class='cv-role'>
-              <div class='cv-role-head'>
-                <h3 class='cv-role-title'>
-                  {role.role}
-                  {role.type === 'consulting' && <span class='cv-role-type'> (Consulting)</span>}
-                </h3>
-                <span class='cv-dates'>{role.dateRange}</span>
+          /* Two forms, chosen by what buildCv resolved the role to — never both, since a
+             role carries either bullets or a description. A role reduced to one sentence
+             does not need the four-line scaffolding a bulleted role needs, and at eight
+             roles that scaffolding was costing more vertical space than the words. */
+        }
+        {
+          cv.roles.map((role) =>
+            role.description ? (
+              <div class='cv-role cv-role-compact'>
+                <div class='cv-role-head'>
+                  <h3 class='cv-role-title'>
+                    {role.role}
+                    {role.type === 'consulting' && <span class='cv-role-type'> (Consulting)</span>}
+                    <span class='cv-role-employer'>, {role.company}</span>
+                  </h3>
+                  <span class='cv-dates'>{role.dateRange}</span>
+                </div>
+                <p class='cv-role-description' set:html={renderInline(role.description)} />
               </div>
-              <p class='cv-company'>{role.company}</p>
-              {role.bullets.length > 0 && (
-                <ul class='cv-bullets'>
-                  {role.bullets.map((bullet) => (
-                    <li set:html={renderInline(bullet)} />
-                  ))}
-                </ul>
-              )}
-              {role.subRoles.map((sub) => (
-                <div class='cv-subrole'>
-                  <h4 class='cv-subrole-title'>
-                    {sub.title}
-                    {sub.year && <span class='cv-subrole-year'> · {sub.year}</span>}
-                  </h4>
+            ) : (
+              <div class='cv-role'>
+                <div class='cv-role-head'>
+                  <h3 class='cv-role-title'>
+                    {role.role}
+                    {role.type === 'consulting' && <span class='cv-role-type'> (Consulting)</span>}
+                  </h3>
+                  <span class='cv-dates'>{role.dateRange}</span>
+                </div>
+                <p class='cv-company'>{role.company}</p>
+                {role.bullets.length > 0 && (
                   <ul class='cv-bullets'>
-                    {sub.bullets.map((bullet) => (
+                    {role.bullets.map((bullet) => (
                       <li set:html={renderInline(bullet)} />
                     ))}
                   </ul>
-                </div>
-              ))}
-            </div>
-          ))
+                )}
+                {role.subRoles.map((sub) => (
+                  <div class='cv-subrole'>
+                    <h4 class='cv-subrole-title'>
+                      {sub.title}
+                      {sub.year && <span class='cv-subrole-year'> · {sub.year}</span>}
+                    </h4>
+                    <ul class='cv-bullets'>
+                      {sub.bullets.map((bullet) => (
+                        <li set:html={renderInline(bullet)} />
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )
+          )
         }
 
         {
+          /* Roles the variant reduces to a listing — role, employer and years. Every one
+             of them appears in full in the other document, so nothing is hidden here. */
+        }
+        {
           cv.earlierRoles.length > 0 && (
             <div class='cv-earlier'>
-              <h3 class='cv-role-title'>Earlier career</h3>
+              <h3 class='cv-role-title'>{cv.earlierHeading}</h3>
               <ul class='cv-earlier-list'>
                 {cv.earlierRoles.map((role) => (
                   <li>
                     <span class='cv-earlier-role'>{role.role}</span>
                     <span class='cv-earlier-company'>{role.company}</span>
-                    {/* oneLiner is the documented condensed form for a role demoted to
-                        Earlier career. It was plumbed through buildCv but never rendered,
-                        so setting it in frontmatter silently did nothing. */}
-                    {role.oneLiner && <span class='cv-earlier-oneliner'>{role.oneLiner}</span>}
                     <span class='cv-dates cv-earlier-dates'>{role.dateRange}</span>
                   </li>
                 ))}
               </ul>
-              {cv.earlierCompanies.length > 0 && (
-                <p class='cv-earlier-more'>Earlier roles at {cv.earlierCompanies.join(', ')}.</p>
-              )}
             </div>
           )
         }
@@ -160,17 +191,21 @@ const { cv, variant, documentTitle } = Astro.props
       <section class='cv-section'>
         <h2>Education</h2>
         {
-          /* The one-pager compresses each qualification to a single line; the full CV
-        gives each its own block with awards. */
+          /* Education carries no priority — every qualification appears in both, at the
+             density the variant can afford: the one-pager takes the description, the
+             full CV the summary. */
         }
         {
           variant === 'onepage'
             ? cv.education.map((item) => (
-                <p class='cv-education-line'>
-                  <span class='cv-education-degree'>{item.degree}</span>
-                  <span class='cv-education-institution'>{item.institution}</span>
-                  <span class='cv-dates'>{item.dateRange}</span>
-                </p>
+                <div class='cv-education-entry'>
+                  <p class='cv-education-line'>
+                    <span class='cv-education-degree'>{item.degree}</span>
+                    <span class='cv-education-institution'>{item.institution}</span>
+                    <span class='cv-dates'>{item.dateRange}</span>
+                  </p>
+                  <p class='cv-education-description' set:html={renderInline(item.description)} />
+                </div>
               ))
             : cv.education.map((item) => (
                 <div class='cv-education'>

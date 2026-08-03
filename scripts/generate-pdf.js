@@ -11,8 +11,9 @@ import puppeteer from 'puppeteer'
  * The documents are ordinary Astro routes (/cv/onepage and /cv/full) built from the
  * same content collections as the site, so there is a single source of truth. They are
  * served over a real HTTP server rather than from the filesystem because the site is
- * built with `base: '/spotlite/'` and every asset URL is base-prefixed — loading the
- * page directly would 404 them all and silently produce an unstyled PDF.
+ * built under a non-root `base` and every asset URL is base-prefixed — loading the page
+ * directly would 404 them all and silently produce an unstyled PDF. (Named literally
+ * here once, this comment was only ever true in one of the two repositories.)
  *
  * Pagination is Chrome's own. An earlier version used Paged.js for CSS margin boxes,
  * but its at-rule parser broke on ordinary CSS (single-quoted strings, some @media
@@ -166,8 +167,9 @@ const printTo = (page, output, numbered) =>
  * Scale the one-pager down just enough to fit a single page.
  *
  * Hand-tuned font sizes silently overflow the moment content grows, so measure and
- * scale instead. Returns the applied scale, or null if one page is unreachable above
- * the legibility floor.
+ * scale instead. Returns { scale } when it fits, or { overshootMm } when one page is
+ * unreachable above the legibility floor — the overshoot at the floor is what tells an
+ * author how much has to go.
  */
 const fitOnePage = async (page) => {
   const applyScale = (scale) =>
@@ -180,30 +182,38 @@ const fitOnePage = async (page) => {
   // line breaking changes.
   for (let attempt = 0; attempt < 4; attempt += 1) {
     const contentMm = await measureContentMm(page)
-    if (contentMm <= PRINTABLE_MM) return scale
+    if (contentMm <= PRINTABLE_MM) return { scale }
 
     const required = scale * (PRINTABLE_MM / contentMm)
     // Shave a little extra so a borderline fit does not tip over into two pages.
     scale = Math.max(MIN_FIT_SCALE, required * 0.995)
     if (scale <= MIN_FIT_SCALE) {
       await applyScale(MIN_FIT_SCALE)
-      return (await measureContentMm(page)) <= PRINTABLE_MM ? MIN_FIT_SCALE : null
+      const atFloorMm = await measureContentMm(page)
+      return atFloorMm <= PRINTABLE_MM
+        ? { scale: MIN_FIT_SCALE }
+        : { overshootMm: atFloorMm - PRINTABLE_MM }
     }
     await applyScale(scale)
   }
 
-  return (await measureContentMm(page)) <= PRINTABLE_MM ? scale : null
+  const finalMm = await measureContentMm(page)
+  return finalMm <= PRINTABLE_MM ? { scale } : { overshootMm: finalMm - PRINTABLE_MM }
 }
 
 const renderOnePager = async (browser, { url, output, label }) => {
   const { page, problems } = await openPage(browser, url)
   try {
-    const scale = await fitOnePage(page)
-    if (scale === null) {
+    const { scale, overshootMm } = await fitOnePage(page)
+    if (scale === undefined) {
+      // Naming a knob here would be wrong: the one-pager no longer abridges anything.
+      // What it prints per role is that role's `priority`, and the fix is to demote a
+      // role — never to shorten a summary the author already judged minimal.
       throw new Error(
-        `${label}: content cannot be fitted to one page above the ${MIN_FIT_SCALE} legibility ` +
-          'floor. Reduce onePage.maxRoles / maxBulletsPerRole in src/content/cv/profile.md,' +
-          ' or trim content.'
+        `${label}: does not fit one page. At the ${MIN_FIT_SCALE} legibility floor it still ` +
+          `overflows by ${overshootMm.toFixed(1)}mm of ${PRINTABLE_MM}mm. Lower a role's ` +
+          '`priority` in src/content/work — priority 1 costs a summary, 2 costs a line, ' +
+          '3 costs almost nothing.'
       )
     }
     console.log(`  ${label}: fitted at ${(scale * 100).toFixed(1)}% scale`)

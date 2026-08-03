@@ -5,7 +5,12 @@ startyear: 2005
 endyear: 2007
 type: employment
 image: ./nab.png
-description: 'Head of Architecture across Distribution and Retail Banking, then Strategy Consultant, creating new architecture functions and contributing to the Australian region technology strategy.'
+description: 'Head of Architecture for Distribution, then for Retail Banking, then Strategy Consultant for the Australian region.'
+priority: 2
+summary:
+  - 'Head of Architecture, Distribution (2005): created a new architecture function for a business unit covering every distribution channel, delivered a sales, servicing and channels business architecture, and led the architecture stream of the Australian region technology strategy.'
+  - 'Head of Architecture, Retail Banking (2006): doubled the team and introduced a new operating model, delivering target architectures for document production, imaging and workflow, and electronic forms.'
+  - 'Strategy Consultant (2007): input to the Integrated Platform strategy consolidating technology and vendor diversity, strategy and architecture for the Corporate Centre functions, and the Australian region business process model.'
 tags:
   [
     'Enterprise architecture',

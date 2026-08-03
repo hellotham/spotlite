@@ -189,6 +189,103 @@ describe('Generated CV PDFs', () => {
     expect(pages).toBeLessThanOrEqual(5)
   })
 
+  // The tier table in src/utils/cv.ts is the whole curation policy, and it is easy to
+  // "fix" a fitting problem by quietly changing a cell. These assertions restate it
+  // independently and check it against the built HTML, so a change to the table has to
+  // be a deliberate change here too.
+  describe('the priority tiers', () => {
+    const html = {
+      full: readText('dist/cv/full/index.html'),
+      onepage: readText('dist/cv/onepage/index.html')
+    }
+    // Squash to lowercase alphanumerics: markup and whitespace differ between the source
+    // string and the rendered page, but the words do not. Two things must go first.
+    // Entities: squashing "Bain &amp; Company" leaves "bainampcompany", and that "amp"
+    // matches nothing. Tags: a bullet containing **FinvestLens** renders as <strong>, and
+    // squashing leaves the tag name embedded mid-sentence. A named list, never a wildcard
+    // `<[^>]+>` — that pattern eats real relational operators out of content.
+    const TAGS = /<\/?(?:a|em|strong|code|span|p|ul|li|div|section|header|article|h[1-6])\b[^>]*>/gi
+    const squash = (value: string) =>
+      value
+        .replace(TAGS, ' ')
+        .replace(/&(?:[a-z]+|#\d+);/gi, ' ')
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '')
+    // Mirror renderInline on the source side: links become their text, emphasis vanishes.
+    const asRendered = (text: string) =>
+      text.replace(/\[([^\]]+)\]\([^)\s]+\)/g, '$1').replace(/\*\*|`/g, '')
+    const carries = (variant: keyof typeof html, text: string) =>
+      squash(html[variant]).includes(squash(asRendered(text)))
+
+    const workDir = path.join(rootDir, 'src/content/work')
+    // Logo images live alongside the entries in this directory, so filter by extension
+    // rather than reading whatever is there.
+    const files = fs.readdirSync(workDir).filter((file) => file.endsWith('.md'))
+    const entries = files.map((file) => {
+      const source = fs.readFileSync(path.join(workDir, file), 'utf8')
+      const frontmatter = source.split(/^---$/m)[1]
+      const body = source.split(/^---$/m).slice(2).join('---')
+      return {
+        slug: file.replace(/\.md$/, ''),
+        company: frontmatter.match(/^company:\s*(.+)$/m)![1].trim(),
+        priority: Number(frontmatter.match(/^priority:\s*(\d)/m)?.[1]),
+        description: frontmatter.match(/^description:\s*['"](.+)['"]\s*$/m)?.[1],
+        // A body bullet stands in for the body: present means the role rendered in
+        // full. The LONGEST one, because a short bullet can be a substring of the
+        // description that legitimately prints at priority 3 — HP's "Technology
+        // infrastructure strategy" is inside its own description, so testing the first
+        // bullet reported the body as present when only the one-line form was.
+        longestBullet: (body.match(/^-\s+.+$/gm) ?? [])
+          .map((line) => line.replace(/^-\s+/, ''))
+          .sort((a, b) => b.length - a.length)[0],
+        hasSummary: /^summary:/m.test(frontmatter)
+      }
+    })
+
+    it('covers every role with a priority of 1, 2 or 3', () => {
+      expect(entries.length).toBeGreaterThan(0)
+      for (const entry of entries) expect([1, 2, 3]).toContain(entry.priority)
+    })
+
+    it('requires a summary at priority 1 and 2, and none at priority 3', () => {
+      for (const entry of entries) {
+        expect(entry.hasSummary, `${entry.slug} (priority ${entry.priority})`).toBe(
+          entry.priority < 3
+        )
+      }
+    })
+
+    it('prints the body in the full CV only at priority 1', () => {
+      for (const entry of entries) {
+        if (!entry.longestBullet) continue
+        expect(carries('full', entry.longestBullet), `${entry.slug} body in full CV`).toBe(
+          entry.priority === 1
+        )
+      }
+    })
+
+    it('prints the description where the tier table says, and nowhere else', () => {
+      for (const entry of entries) {
+        if (!entry.description) continue
+        const where = `${entry.slug} (priority ${entry.priority})`
+        expect(carries('full', entry.description), `${where} description in full CV`).toBe(
+          entry.priority === 3
+        )
+        expect(carries('onepage', entry.description), `${where} description on one-pager`).toBe(
+          entry.priority === 2
+        )
+      }
+    })
+
+    it('names every role in both documents, whatever its tier', () => {
+      // The tiers change how much is said about a role, never whether it is there.
+      for (const entry of entries) {
+        expect(carries('full', entry.company), `${entry.company} in full CV`).toBe(true)
+        expect(carries('onepage', entry.company), `${entry.company} on one-pager`).toBe(true)
+      }
+    })
+  })
+
   it('embeds real text rather than page images, so the PDFs can be parsed', () => {
     // The single most important ATS property: a scanned or rasterised CV extracts
     // nothing. Text-bearing PDFs carry font objects and text-showing operators.

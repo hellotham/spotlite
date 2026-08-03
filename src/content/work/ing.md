@@ -6,7 +6,8 @@ endyear: 2008
 type: employment
 image: ./ing.svg
 logo: ./ing-full.svg
-description: 'Established the IT Strategy and Architecture function of around twenty people, defined its governance model, and delivered technology roadmaps for key business units.'
+description: 'Established the IT Strategy and Architecture function of around twenty people, its governance and roadmaps.'
+priority: 3
 tags:
   [
     'Enterprise architecture',

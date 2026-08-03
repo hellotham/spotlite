@@ -23,40 +23,57 @@ const project = defineCollection({
 const work = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/work' }),
   schema: ({ image }) =>
-    z.object({
-      company: z.string(),
-      role: z.string(),
-      startyear: z.number(),
-      endyear: z.number().optional(),
-      type: z.enum(['employment', 'consulting']).default('employment'),
-      // Short summary shown on the list pages. The body's first line makes a poor
-      // teaser — entries that open with a heading or a lead-in like "Awarded:"
-      // read as fragments.
-      description: z.string().optional(),
-      // Capabilities, domains and technologies this role involved. Aggregated across
-      // the collection into the word cloud on /work, where a tag's size is how many
-      // roles carry it — so the vocabulary has to be reused deliberately between
-      // entries rather than reworded per entry ("IT strategy" and "Technology
-      // strategy" are distinct tags on purpose; "Analytics" vs "Data analytics"
-      // would be an accident).
-      tags: z.array(z.string()).optional().default([]),
-      // Optional: an entry with no real mark falls back to a text monogram.
-      image: image().optional(),
-      // Optional extended wordmark, used where there is room for it (the detail page
-      // header). Compact contexts — home page, list pages — keep the square `image`.
-      logo: image().optional(),
-      // Background of the logo tile, so a mark with its own solid background reads as a
-      // seamless circular logo rather than floating on a contrasting disc. Defaults to
-      // white, which suits both white-background and transparent marks.
-      logoBackground: z.string().optional(),
-      // CV curation. Deterministic overrides for the generated CV; the site ignores them.
-      // cvPriority raises a role in the one-pager shortlist (higher wins, default is recency).
-      cvPriority: z.number().optional(),
-      // Drop the role from the CV entirely (kept on the site).
-      omitFromCv: z.boolean().optional().default(false),
-      // Condensed single line used when the role falls into "Earlier career".
-      oneLiner: z.string().optional()
-    })
+    z
+      .object({
+        company: z.string(),
+        role: z.string(),
+        startyear: z.number(),
+        endyear: z.number().optional(),
+        type: z.enum(['employment', 'consulting']).default('employment'),
+        // Load-bearing in three places: the teaser on the list pages, the role page's
+        // meta description, and the CV itself. The body's first line makes a poor
+        // teaser — entries that open with a heading or a lead-in like "Awarded:"
+        // read as fragments — so this is written by hand, and has to read as all three.
+        description: z.string(),
+        // How much of this role each document carries. The body is always the website's,
+        // in full; the CV never truncates it. See src/utils/cv.ts.
+        //
+        //   priority   full CV        one-pager
+        //   1          the body       summary
+        //   2          summary        description
+        //   3          description    role, company and years only
+        //
+        // Summaries land on the one-pager for a priority 1 role, so they are the page's
+        // scarcest resource: keep them to about two bullets. If the one-pager stops
+        // fitting, lower a role's priority rather than shaving words.
+        priority: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+        // Condensed key points, written by hand from the body. Required at priority 1
+        // and 2, which is enforced below.
+        summary: z.array(z.string()).optional(),
+        // Capabilities, domains and technologies this role involved. Aggregated across
+        // the collection into the word cloud on /work, where a tag's size is how many
+        // roles carry it — so the vocabulary has to be reused deliberately between
+        // entries rather than reworded per entry ("IT strategy" and "Technology
+        // strategy" are distinct tags on purpose; "Analytics" vs "Data analytics"
+        // would be an accident).
+        tags: z.array(z.string()).optional().default([]),
+        // Optional: an entry with no real mark falls back to a text monogram.
+        image: image().optional(),
+        // Optional extended wordmark, used where there is room for it (the detail page
+        // header). Compact contexts — home page, list pages — keep the square `image`.
+        logo: image().optional(),
+        // Background of the logo tile, so a mark with its own solid background reads as a
+        // seamless circular logo rather than floating on a contrasting disc. Defaults to
+        // white, which suits both white-background and transparent marks.
+        logoBackground: z.string().optional()
+      })
+      // A priority 1 or 2 role has nowhere to fall back to if its summary is missing:
+      // the full CV would print an empty role at priority 2, and the one-pager at
+      // priority 1. Fail the build here instead, naming the field.
+      .refine((entry) => entry.priority === 3 || (entry.summary?.length ?? 0) > 0, {
+        message: 'summary is required at priority 1 and 2',
+        path: ['summary']
+      })
 })
 
 const education = defineCollection({
@@ -67,10 +84,13 @@ const education = defineCollection({
       degree: z.string(),
       startyear: z.number(),
       endyear: z.number().optional(),
-      // Short summary shown on the list pages. The body's first line makes a poor
-      // teaser — entries that open with a heading or a lead-in like "Awarded:"
-      // read as fragments.
-      description: z.string().optional(),
+      // As for work, load-bearing three times over: list-page teaser, meta description,
+      // and the line the one-pager carries. Terse — typically the awards, one line.
+      description: z.string(),
+      // Education carries no priority: every qualification is shown, and all of them
+      // behave as a work entry at priority 2 — the full CV takes the summary, the
+      // one-pager the description, the website the body. So this is always required.
+      summary: z.array(z.string()),
       // Optional: an entry with no real mark falls back to a text monogram.
       image: image().optional(),
       // As above: optional extended wordmark for the detail page header.
@@ -78,8 +98,7 @@ const education = defineCollection({
       // Background of the logo tile, so a mark with its own solid background reads as a
       // seamless circular logo rather than floating on a contrasting disc. Defaults to
       // white, which suits both white-background and transparent marks.
-      logoBackground: z.string().optional(),
-      omitFromCv: z.boolean().optional().default(false)
+      logoBackground: z.string().optional()
     })
 })
 
@@ -145,17 +164,15 @@ const cv = defineCollection({
       linkedin: z.string(),
       website: z.string()
     }),
+    // What each variant carries. How much of a *role* it carries is not settled here —
+    // that is the entry's own `priority`, so it can be judged against the role rather
+    // than against a global count.
     onePage: z.object({
-      maxRoles: z.number(),
-      maxBulletsPerRole: z.number(),
       minCompetencyLevel: z.number(),
-      earlierCareerHeading: z.string(),
-      maxEarlierRoles: z.number()
+      earlierCareerHeading: z.string()
     }),
     full: z.object({
-      minCompetencyLevel: z.number(),
-      detailedRoles: z.number(),
-      maxBulletsPerEarlierRole: z.number()
+      minCompetencyLevel: z.number()
     })
   })
 })

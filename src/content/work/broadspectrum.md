@@ -5,7 +5,13 @@ startyear: 2011
 endyear: 2016
 type: consulting
 image: ./broadspectrum.png
-description: "Facilitated and co-developed IT strategy across successive engagements, led architecture and design as interim executive manager, established a data analytics capability, and contributed to APQC's global Process Classification Framework."
+description: 'IT strategy, interim architecture leadership, a data analytics capability, and APQC’s process framework.'
+priority: 2
+summary:
+  - 'Facilitated and co-developed the IT strategy, its roadmap and the input to the Board paper, leading the “Flexible Edges” and “Analytics” themes — Tableau and AWS Redshift analytics, and IoT sensor monitoring.'
+  - 'Interim Executive Manager, Architecture and Design: reviewed the position, defined SAP strategy and technical relationship management, assisted in recruiting the permanent appointment, and set the FY2015–18 architecture initiatives.'
+  - 'Established a data analytics capability in operations and business development, evaluated field service management mobility solutions, and developed a strategic technology architecture and migration roadmap.'
+  - 'Contributed Section 13.2 of APQC’s global Process Classification Framework; the underlying standardisation across a group of more than 26,000 people was published by APQC as a case study reporting a 30 per cent reduction in process redundancy.'
 tags:
   [
     'IT strategy',

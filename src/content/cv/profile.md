@@ -10,20 +10,18 @@ contact:
   linkedin: https://www.linkedin.com/in/christham
   website: https://christham.net/
 
-# How much of the career each variant carries. Dials, not copy: raise or lower them and
-# the generator re-fits. The one-pager fails the build rather than shrink below a legible
-# size, so if it stops fitting, reduce maxRoles or maxBulletsPerRole.
+# How much of each *role* a variant carries is set per role, by the `priority` field in
+# src/content/work — not here. These are what is left: the competency cut-off, and the
+# heading above the roles the one-pager reduces to a single line.
+#
+# The one-pager fails the build rather than shrink below a legible size. If it stops
+# fitting, lower a role's priority in src/content/work; do not shave words.
 onePage:
-  maxRoles: 3
-  maxBulletsPerRole: 2
   minCompetencyLevel: 6
   earlierCareerHeading: Earlier career
-  maxEarlierRoles: 4
 
 full:
   minCompetencyLevel: 5
-  detailedRoles: 3
-  maxBulletsPerEarlierRole: 4
 ---
 
 <!--

@@ -4,11 +4,15 @@ import superpowers from '../superpowers.json' with { type: 'json' }
 /**
  * Builds the CV model from the site's content collections.
  *
- * Curation here is deliberately DETERMINISTIC — recency, seniority and explicit
- * per-entry flags. A CV is a document of record, so nothing in this pipeline may
- * reword, summarise or infer a fact about the career. Editorial copy (headline,
- * summary, career, achievements) lives in src/content/cv/profile.md, where it is written
- * as prose and can be reviewed directly.
+ * Curation here is deliberately DETERMINISTIC, and it never abridges. A CV is a document
+ * of record, so nothing in this pipeline may reword, summarise, truncate or infer a fact
+ * about the career: every shorter form a variant prints was written by hand as the
+ * entry's `summary` or `description`. Earlier versions of this file trimmed bullet lists
+ * to fit, which is how a role came to end mid-thought under a sub-heading promising five
+ * more. Choosing between hand-written forms is the only curation left here.
+ *
+ * Editorial copy (headline, summary, career, achievements) lives in
+ * src/content/cv/profile.md, where it is written as prose and can be reviewed directly.
  */
 
 export type CvVariant = 'onepage' | 'full'
@@ -27,16 +31,22 @@ export interface CvRole {
   endYear?: number
   dateRange: string
   type: 'employment' | 'consulting'
+  /** Achievement bullets: the markdown body at priority 1, the hand-written summary at 2. */
   bullets: string[]
+  /** Successive roles at one employer. Carried only where the variant prints the body. */
   subRoles: CvSubRole[]
-  oneLiner?: string
+  /** The single-line form, printed where the variant carries neither body nor summary. */
+  description?: string
 }
 
 export interface CvEducation {
   institution: string
   degree: string
   dateRange: string
+  /** The summary, in the full CV. Empty on the one-pager, which prints the description. */
   notes: string[]
+  /** The one-line form, printed on the one-pager. */
+  description: string
 }
 
 export interface CvCompetency {
@@ -57,8 +67,8 @@ export interface CvModel {
   education: CvEducation[]
   competencies: CvCompetency[]
   competencyScaleMax: number
-  /** Companies beyond the listed earlier roles, summarised in one trailing line. */
-  earlierCompanies: string[]
+  /** The heading above `earlierRoles`, from profile.md. Empty when there are none. */
+  earlierHeading: string
 }
 
 const COMPETENCY_SCALE_MAX = 7
@@ -242,10 +252,6 @@ const parseBody = (body: string) => {
   return { topBullets, subRoles }
 }
 
-/** Total bullets across a role, used to trim the one-pager without dropping roles. */
-const bulletCount = (role: CvRole) =>
-  role.bullets.length + role.subRoles.reduce((sum, sub) => sum + sub.bullets.length, 0)
-
 const byRecency = <T extends { endYear?: number; startYear: number }>(a: T, b: T) => {
   const endA = a.endYear ?? Number.MAX_SAFE_INTEGER
   const endB = b.endYear ?? Number.MAX_SAFE_INTEGER
@@ -253,81 +259,77 @@ const byRecency = <T extends { endYear?: number; startYear: number }>(a: T, b: T
   return b.startYear - a.startYear
 }
 
+/** Which of an entry's three hand-written forms a document prints. */
+type CvDetail = 'body' | 'summary' | 'description' | 'listing'
+
 /**
- * Flatten a role to a single list of bullets for the one-pager.
+ * The curation policy, entire.
  *
- * Sub-role headings are dropped rather than partially filled: trimming mid-way through
- * one leaves a heading above a fragment of its list — Torrens rendered "Undergraduate
- * subjects" followed by one of its five subjects, which reads as truncation rather
- * than a summary. Roles written entirely as sub-roles fall back to their bullets so
- * they are never left blank.
+ * A table rather than a chain of conditionals because it has to be legible from both
+ * directions — "what does the one-pager do with a priority 2 role" and "where does a
+ * summary end up" — and because every cell is a deliberate editorial decision rather
+ * than a fallback. `listing` prints the role, employer and years and nothing else.
+ *
+ * Note what the diagonal means for writing: a summary is read on the one-pager at
+ * priority 1 and in the full CV at priority 2, so it has to work at both densities.
+ * Education carries no priority — every qualification is shown, and all of them behave
+ * as priority 2.
  */
-const flattenRole = (role: CvRole, maxBullets: number): CvRole => {
-  const source =
-    role.bullets.length > 0 ? role.bullets : role.subRoles.flatMap((sub) => sub.bullets)
-  return { ...role, bullets: source.slice(0, maxBullets), subRoles: [] }
-}
-
-/** Trim a role to at most `maxBullets`, preferring the earliest (most senior) entries. */
-const trimRole = (role: CvRole, maxBullets: number): CvRole => {
-  if (bulletCount(role) <= maxBullets) return role
-
-  let remaining = maxBullets
-  const bullets = role.bullets.slice(0, remaining)
-  remaining -= bullets.length
-
-  const subRoles: CvSubRole[] = []
-  for (const sub of role.subRoles) {
-    if (remaining <= 0) break
-    const kept = sub.bullets.slice(0, remaining)
-    remaining -= kept.length
-    subRoles.push({ ...sub, bullets: kept })
-  }
-
-  return { ...role, bullets, subRoles }
+const CV_DETAIL: Record<1 | 2 | 3, Record<CvVariant, CvDetail>> = {
+  1: { full: 'body', onepage: 'summary' },
+  2: { full: 'summary', onepage: 'description' },
+  3: { full: 'description', onepage: 'listing' }
 }
 
 export const buildCv = async (variant: CvVariant): Promise<CvModel> => {
   const { data, copy } = await loadCvProfile()
   const cvConfig = { ...data, ...copy }
 
-  const workEntries = await getCollection('work', ({ data }) => !data.omitFromCv)
-  const educationEntries = await getCollection('education', ({ data }) => !data.omitFromCv)
+  const workEntries = await getCollection('work')
+  const educationEntries = await getCollection('education')
 
-  const allRoles: CvRole[] = workEntries
-    .map((entry) => {
-      const { topBullets, subRoles } = parseBody(entry.body ?? '')
-      return {
-        company: entry.data.company,
-        role: entry.data.role,
-        startYear: entry.data.startyear,
-        endYear: entry.data.endyear,
-        dateRange: formatDateRange(entry.data.startyear, entry.data.endyear),
-        type: entry.data.type,
-        bullets: topBullets,
-        subRoles,
-        oneLiner: entry.data.oneLiner,
-        cvPriority: entry.data.cvPriority
-      }
-    })
-    .sort(byRecency)
+  // Both documents carry every role. The split is presentational only: a role reduced
+  // to a listing goes to the "Earlier career" block, which sets it as one line rather
+  // than as a heading with nothing beneath it. Partitioned here, while the tier is in
+  // hand, so `detail` never has to travel on the model the layout sees.
+  const roles: CvRole[] = []
+  const earlierRoles: CvRole[] = []
+
+  for (const entry of workEntries) {
+    const detail = CV_DETAIL[entry.data.priority][variant]
+    const { topBullets, subRoles } = parseBody(entry.body ?? '')
+    const role: CvRole = {
+      company: entry.data.company,
+      role: entry.data.role,
+      startYear: entry.data.startyear,
+      endYear: entry.data.endyear,
+      dateRange: formatDateRange(entry.data.startyear, entry.data.endyear),
+      type: entry.data.type,
+      // The schema guarantees a summary wherever `detail` can be 'summary', so an
+      // empty list here would be a schema bug rather than a content one.
+      bullets:
+        detail === 'body' ? topBullets : detail === 'summary' ? (entry.data.summary ?? []) : [],
+      subRoles: detail === 'body' ? subRoles : [],
+      description: detail === 'description' ? entry.data.description : undefined
+    }
+    ;(detail === 'listing' ? earlierRoles : roles).push(role)
+  }
+
+  roles.sort(byRecency)
+  earlierRoles.sort(byRecency)
 
   // Map before sorting: collection entries expose startyear/endyear on `data`, so the
   // shared comparator only applies once they are normalised.
   const education: CvEducation[] = educationEntries
-    .map((entry) => {
-      const { topBullets, subRoles } = parseBody(entry.body ?? '')
-      return {
-        institution: entry.data.institution,
-        degree: entry.data.degree,
-        startYear: entry.data.startyear,
-        endYear: entry.data.endyear,
-        dateRange: formatDateRange(entry.data.startyear, entry.data.endyear),
-        // Awards and scholarships are detail for the full CV; the one-pager keeps
-        // education to degree, institution and dates.
-        notes: variant === 'full' ? [...topBullets, ...subRoles.flatMap((sub) => sub.bullets)] : []
-      }
-    })
+    .map((entry) => ({
+      institution: entry.data.institution,
+      degree: entry.data.degree,
+      startYear: entry.data.startyear,
+      endYear: entry.data.endyear,
+      dateRange: formatDateRange(entry.data.startyear, entry.data.endyear),
+      notes: variant === 'full' ? entry.data.summary : [],
+      description: entry.data.description
+    }))
     .sort(byRecency)
 
   const contact = [
@@ -367,44 +369,10 @@ export const buildCv = async (variant: CvVariant): Promise<CvModel> => {
     competencyScaleMax: COMPETENCY_SCALE_MAX
   }
 
-  if (variant === 'full') {
-    // The full CV keeps every role, but weights detail towards current work: without
-    // this an engagement from 2011 could carry more bullets than the role held today.
-    const roles = allRoles.map((role, index) =>
-      index < cvConfig.full.detailedRoles
-        ? role
-        : trimRole(role, cvConfig.full.maxBulletsPerEarlierRole)
-    )
-    return { ...base, roles, earlierRoles: [], earlierCompanies: [] }
-  }
-
-  // One-pager: keep the most recent roles in detail, and fold the remainder into a
-  // single "Earlier career" block so the full history is still represented.
-  const ranked = [...allRoles].sort((a, b) => {
-    const priorityA = (a as CvRole & { cvPriority?: number }).cvPriority ?? 0
-    const priorityB = (b as CvRole & { cvPriority?: number }).cvPriority ?? 0
-    if (priorityA !== priorityB) return priorityB - priorityA
-    return byRecency(a, b)
-  })
-
-  const featured = ranked.slice(0, cvConfig.onePage.maxRoles)
-  const featuredKeys = new Set(featured.map((role) => `${role.company}:${role.startYear}`))
-
-  const remaining = allRoles.filter(
-    (role) => !featuredKeys.has(`${role.company}:${role.startYear}`)
-  )
-
-  // A 40-year history cannot list every role on one page. Name the most recent of the
-  // remainder in full and reduce the rest to a trailing list of employers, so nothing
-  // is hidden — the complete history is in the full CV.
-  const maxEarlier = cvConfig.onePage.maxEarlierRoles
-
   return {
     ...base,
-    roles: featured
-      .sort(byRecency)
-      .map((role) => flattenRole(role, cvConfig.onePage.maxBulletsPerRole)),
-    earlierRoles: remaining.slice(0, maxEarlier),
-    earlierCompanies: remaining.slice(maxEarlier).map((role) => role.company)
+    roles,
+    earlierRoles,
+    earlierHeading: earlierRoles.length > 0 ? cvConfig.onePage.earlierCareerHeading : ''
   }
 }

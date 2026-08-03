@@ -7,6 +7,10 @@ image: ./torrens.svg
 logo: ./torrens-full.svg
 logoBackground: '#eb6025'
 description: 'Lecturer in Information Systems teaching undergraduate and masters students, twice awarded the Learning and Teaching Merit Award.'
+priority: 1
+summary:
+  - 'Lecturer in Information Systems in the School of Business, teaching five undergraduate and masters subjects.'
+  - 'Awarded the Learning and Teaching Merit Award twice, with perfect student satisfaction scores.'
 tags:
   [
     'Teaching',
