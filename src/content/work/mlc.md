@@ -39,6 +39,7 @@ tags:
 - Introduced the Smart Client approach for AdviserCentral, built on Microsoft .NET and web services for horizontal and vertical integration.
 - Introduced a composite application, web services and business process orchestration approach for the Strategic Desktop, using the Siebel portal, IBM HATS and TIBCO.
 - Architecture representative on the BT team for Integra, the MLC and NAFM integration.
+- Presented [Getting technology right for advisers](/spotlite/article/advisers-2003/) in September 2003 on behalf of the CIO of National Wealth Management, on the shift to holistic advice and the platform behind it.
 - Developed the business case for replacing the unit pricing system (Unison/Zenith), and participated in the programme review of the AdvisorCo/360 adviser workbench initiative, at CEO level in conjunction with the CIO.
 
 ## Technology introduced
