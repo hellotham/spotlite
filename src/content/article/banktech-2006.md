@@ -2,6 +2,13 @@
 title: 'Services Oriented Architecture in a Retail Bank (BankTech.06)'
 description: The talk I gave at BankTech.06 on embedding SOA in a retail bank, reproduced from the slide deck, including the observation that NAB's ten architecture capabilities described an SOA while carefully avoiding the word.
 pubDate: 2006-07-27
+categories:
+  - 'Conference papers'
+  - 'Career'
+tags:
+  - 'Service oriented architecture'
+  - 'Banking'
+  - 'NAB'
 ---
 
 _This is the talk I gave at BankTech.06 in Sydney on the 27th and 28th of July 2006, when I was Head of Architecture, Technology Australia, Retail Banking at [NAB](/spotlite/work/nab/). It is reproduced from the PowerPoint deck, and **that makes it necessarily brief**. A deck is scaffolding for a person standing in front of it, not a paper: the argument lives in what was said between the slides, and none of that was recorded. There are no speaker notes in the file. What follows is therefore the skeleton of a talk rather than the talk, and it reads like one — telegraphic where I would have been discursive, and silent exactly where the interesting part was._

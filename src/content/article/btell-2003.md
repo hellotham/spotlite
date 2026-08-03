@@ -2,6 +2,14 @@
 title: 'Lessons Learnt from implementing and embedding an enterprise architecture team at National Wealth Management'
 description: The talk I gave twice in 2003 — Sydney in July, Wellington in November — at BTELL's Enterprise Architecture Conference, on five years of implementing and embedding the architecture team at National Wealth Management, reproduced from the deck the conference CDs distributed.
 pubDate: 2003-07-24
+categories:
+  - 'Conference papers'
+  - 'Career'
+tags:
+  - 'Enterprise architecture'
+  - 'Architecture practice'
+  - 'Wealth management'
+  - 'MLC'
 ---
 
 _This is the talk I gave twice in the second half of 2003, on what five years of building an architecture team had taught us. The first delivery was at BTELL's Enterprise Architecture Conference in Sydney — the programme on the conference CD lists it as the 2.00pm case study on day one, the 24th of July 2003, on a bill that also carried John Zachman and Clive Finkelstein. The second was the same conference's Wellington run, held over the 4th to the 6th of November 2003, where the programme lists it as the 3.30 case study on day one. I was at [MLC](/spotlite/work/mlc/), and the deck introduces me as Manager, Architecture at National Wealth Management — NWM being the division of the National that MLC sat inside after the 2000 acquisition. The Sydney programme splits the difference and bills the talk as "at MLC"._

@@ -2,6 +2,14 @@
 title: 'Hello Calc: a homage to every HP calculator'
 description: I have rebuilt thirty-five HP calculators, from the 1972 HP-35 to the HP Prime, as a single web app. Not an emulator, but a reimplementation in TypeScript.
 pubDate: 2026-07-20
+categories:
+  - 'Written for this site'
+  - 'Software'
+tags:
+  - 'Calculators'
+  - 'Hewlett-Packard'
+  - 'Free software'
+  - 'macOS'
 ---
 
 Writing about [the HP 48 and the two programs I wrote for it](/spotlite/article/hp48/) sent me back through things I had not looked at in thirty years, and left me wanting to do something rather more ambitious.

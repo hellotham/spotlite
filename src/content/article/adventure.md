@@ -2,6 +2,14 @@
 title: 'Colossal Cave Adventure, rebuilt over breakfast'
 description: Colossal Cave Adventure ported to strictly typed TypeScript over a few breakfasts, and checked against the original's own ninety-five test transcripts. Then a second model laid out the cave map the first one could not.
 pubDate: 2026-07-04
+categories:
+  - 'Written for this site'
+  - 'Software'
+  - 'Computing history'
+tags:
+  - 'Games'
+  - 'Free software'
+  - 'Curiosities'
 ---
 
 I have always loved text adventures. I was one of the five in the [InfoTaskForce](/spotlite/article/infotaskforce/), the group at the University of Sydney that worked out how Infocom's virtual machine ran their games.

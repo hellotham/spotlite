@@ -1,34 +1,31 @@
 ---
-import { getCollection } from 'astro:content'
-
 /**
- * Word cloud of the capabilities, domains and technologies across the work history.
+ * Word cloud of a tag vocabulary, sized by how many entries carry each tag.
  *
- * A tag's size is the number of roles that carry it, so the cloud shows where a career
- * actually concentrated rather than what any single entry claims. Weights come from the
- * `tags` field on the work collection — see src/content.config.ts for why the vocabulary
- * has to be reused deliberately between entries.
+ * The caller counts and passes the tags, because two collections use this — the work
+ * history and the articles — and their weights mean different things. A tag's size is
+ * the number of entries carrying it, so the cloud shows where a body of work actually
+ * concentrated rather than what any single entry claims. That only holds if the
+ * vocabulary is reused deliberately between entries; see src/content.config.ts and
+ * src/utils/articles.ts for why.
  *
  * The cloud is a decoration: it is `aria-hidden`, and the same tags are published as an
  * ordered list for assistive technology and for the search index. Making 45 drifting
  * labels focusable would add a long, unordered tab sequence that leads nowhere, and the
  * list conveys the same information — including the counts, which the sizes only imply.
  */
-const work = await getCollection('work')
-
-const counts = new Map<string, number>()
-for (const entry of work) {
-  // Deduplicate within an entry: a tag repeated in one role must not inflate its weight.
-  for (const tag of new Set(entry.data.tags)) {
-    counts.set(tag, (counts.get(tag) ?? 0) + 1)
-  }
+interface Props {
+  /** Already counted and sorted heaviest first — the spiral relies on that order. */
+  tags: { text: string; count: number }[]
+  /** Sentence describing what the cloud shows, read out before the list. */
+  caption: string
+  /** Singular noun for what is being counted, e.g. "role" or "article". */
+  unit: string
 }
 
-const tags = [...counts.entries()]
-  .map(([text, count]) => ({ text, count }))
-  .sort((a, b) => b.count - a.count || a.text.localeCompare(b.text))
+const { tags, caption, unit } = Astro.props
 
-const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
+const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
 ---
 
 {
@@ -41,12 +38,11 @@ const roleWord = (count: number) => (count === 1 ? 'role' : 'roles')
         data-tags={JSON.stringify(tags)}
       />
       <figcaption class='sr-only'>
-        Capabilities, domains and technologies across this work history, sized by the number of
-        roles each one appears in.
+        {caption}
         <ul>
           {tags.map((tag) => (
             <li>
-              {tag.text} — {tag.count} {roleWord(tag.count)}
+              {tag.text} — {tag.count} {unitWord(tag.count)}
             </li>
           ))}
         </ul>

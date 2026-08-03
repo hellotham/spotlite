@@ -2,6 +2,13 @@
 title: 'Spotlite: the modern CV template'
 description: The template this site runs on, and what I learnt rebuilding it with two AI platforms.
 pubDate: 2026-07-28
+categories:
+  - 'Written for this site'
+  - 'Software'
+tags:
+  - 'Astro'
+  - 'Free software'
+  - 'Web development'
 ---
 
 ![screenshot](../../assets/screenshot.png)

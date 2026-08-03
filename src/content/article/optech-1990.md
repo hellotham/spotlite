@@ -2,6 +2,15 @@
 title: 'Distributed Computing and Risk Management: the original manuscript'
 description: The longer version of our 1990 Optech paper, with the sections SunTech Journal cut, the libraries described one at a time, and the figures as we drew them.
 pubDate: 1990-01-01
+categories:
+  - 'Conference papers'
+  - 'Software'
+tags:
+  - 'Options pricing'
+  - 'Risk management'
+  - 'Distributed systems'
+  - 'UNIX'
+  - 'Optech'
 ---
 
 _This is the article Tim Posney and I wrote, before SunTech Journal edited it for the page. [The magazine's version is here](/spotlite/article/suntech-1990/): it is shorter, its spelling was Americanised, and its editor reworked very nearly every sentence. Two sections went entirely, and the descriptions of the applications and libraries were cut back to their names. Where something was dropped, this article says so._

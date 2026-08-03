@@ -2,6 +2,14 @@
 title: "Digital TV software: APC's edit"
 description: The same 2004 roundup after APC's Dan Warne had been through it, a third shorter, with a co-author added, the boxout cut and two of my mistakes fixed.
 pubDate: 2004-07-11
+categories:
+  - 'Published articles'
+  - 'Audio and video'
+tags:
+  - 'Home theatre PC'
+  - 'Digital television'
+  - 'Software review'
+  - 'APC magazine'
 ---
 
 _This is [the manuscript](/spotlite/article/apc-2004/) after APC's editor had been through it. Dan Warne saved this file at half past three on the afternoon of Sunday the 11th of July 2004, three hours after I finished mine, working in Word on a Mac where I had been on Windows. Its creation stamp is identical to the manuscript's, so it is my file carried forward rather than a rewrite from scratch, at revision 28 against my 25._

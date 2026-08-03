@@ -3,7 +3,7 @@ order: 20
 layout: ../layouts/articles.astro
 title: Writing on Life, the Universe and Everything.
 shorttitle: Articles
-description: Some of my long-form thoughts on life, the universe, and everything, collected in chronological order.
+description: Conference papers, magazine writing and pieces written for this site, grouped by where they were published and what they are about.
 ---
 
-These articles are where I explore thoughts on various topics. The collection is arranged chronologically so you can follow how these perspectives have evolved over time.
+Four decades of writing in one place: papers delivered at conferences, articles that ran in magazines and on other sites, and pieces written here and nowhere else. The first three groups below say where something was published, the rest say what it is about, so most articles sit in two of them. The cloud underneath is the subject vocabulary across the lot.

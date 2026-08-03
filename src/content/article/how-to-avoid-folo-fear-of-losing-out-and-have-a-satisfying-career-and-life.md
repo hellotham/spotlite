@@ -2,6 +2,11 @@
 title: How to Avoid FOLO (Fear of Losing Out)
 pubDate: 2017-02-17T22:00:00.000Z
 description: Advice on how to have a satisfying career and life
+categories:
+  - 'Written for this site'
+  - 'Career'
+tags:
+  - 'Working life'
 ---
 
 What is FOLO (Fear of Losing Out)? It is an advanced form of “Fear of Missing Out” (FOMO). Singaporeans often call it the “Kiasu” syndrome.

@@ -2,6 +2,14 @@
 title: 'Rubato: A Music Input and Performance System'
 description: My 1987 honours thesis at the University of Sydney. A language for writing music down that reads like music rather than like code, and a system that performs it.
 pubDate: 1987-11-01
+categories:
+  - 'Conference papers'
+  - 'Software'
+tags:
+  - 'Music'
+  - 'Compilers'
+  - 'Programming languages'
+  - 'University of Sydney'
 ---
 
 ![The University of Sydney crest: a lion passant above an open book on a white cross, flanked by stars of the Southern Cross, over a scroll reading Sidere Mens Eadem Mutato](../../assets/usyd-crest.svg)

@@ -1,0 +1,37 @@
+/* Bare URLs in prose must be allowed to break.
+ *
+ * Several of the reproduced articles cite their sources the way the web did in 2005 — by
+ * printing the address in full, as the link text. One of them is 68 characters with no space
+ * in it, and a browser will not break a word at a slash unless it is told to, so at 375px it
+ * ran 44px past the right edge and took the whole page into horizontal scroll with it. The
+ * layout was blameless; a single unbreakable word is wider than the phone.
+ *
+ * This is not a defect in any one article. Any piece that quotes an address in full does the
+ * same thing, and the archive is full of writing from an era when that was simply how you
+ * cited a page. So the rule belongs here rather than in a rewritten sentence — and rewriting
+ * would mean altering what was published, which the reproductions do not do.
+ *
+ * `break-word` rather than `anywhere`: both break the long word, but `anywhere` also feeds the
+ * break opportunities into intrinsic width, which lets a table column collapse to a single
+ * character. The price tables in the MCE build articles need their columns to keep asking for
+ * a sensible width, so they get the gentler of the two.
+ *
+ * Inline `code` needs the same treatment for the same reason. The 2005 conference write-ups
+ * put their reading lists in code spans rather than links — the addresses were for typing into
+ * a browser, not clicking — and those overflowed too, one of them past 640px as well as 375px.
+ *
+ * Plain prose needs it too, which took a third case to notice: the Sony DVP-NS905V review
+ * lists a remote control's buttons as "Group/Title/Track/Chapter/Index/Angle/Hour/Min/Sec",
+ * one word to a browser and 410px wide inside a 343px column. Links and code were never the
+ * category — unbroken strings were — so the rule goes on the container and inherits.
+ *
+ * Fenced blocks are unaffected without needing to be excluded. `overflow-wrap` only applies
+ * where wrapping is permitted at all, and a `pre` sets `white-space: pre`, so the Shiki
+ * listings keep their line breaks and go on scrolling sideways inside their own box. That
+ * matters: wrapping them would silently rewrite the configuration files the APC workshop
+ * article reproduces.
+ */
+
+.prose {
+  overflow-wrap: break-word;
+}

@@ -2,6 +2,14 @@
 title: 'UNIX Password Encryption Considered Insecure'
 description: Our 1991 USENIX paper showing that DES-based UNIX password encryption could be brute-forced, with an ECL hardware design that encrypted a password in 6 microseconds.
 pubDate: 1991-01-21
+categories:
+  - 'Conference papers'
+  - 'Software'
+tags:
+  - 'Security'
+  - 'Cryptography'
+  - 'UNIX'
+  - 'USENIX'
 ---
 
 _This is a reproduction of a paper presented at the USENIX Winter '91 Conference in Dallas, Texas (pp. 269–279), written with Philip Leong. I have transcribed it from a scan of the proceedings: the tables are set as tables and the code re-typed. The wording is unchanged. There is a [postscript from 2026](#postscript-thirty-five-years-on) at the end, which is not._

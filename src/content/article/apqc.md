@@ -2,6 +2,14 @@
 title: "APQC's process framework, and the section I wrote"
 description: We picked a global process taxonomy off the shelf, could not make our own work fit inside it, and were eventually asked to write one of its sections ourselves.
 pubDate: 2015-10-22
+categories:
+  - 'Written for this site'
+  - 'Career'
+tags:
+  - 'Process frameworks'
+  - 'Technology strategy'
+  - 'Broadspectrum'
+  - 'APQC'
 ---
 
 _Filed under the date APQC announced Version 7.0.0. The work behind it started in 2011, on the first of my [Transfield Services](/spotlite/work/broadspectrum/) engagements._

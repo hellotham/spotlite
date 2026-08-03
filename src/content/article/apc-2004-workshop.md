@@ -2,6 +2,13 @@
 title: 'The ultimate Windows HTPC'
 description: The myHTPC workshop from my July 2004 APC batch, reproduced from the manuscript that went to the magazine — the piece that was commissioned at the highest rate, abandoned on day one under an XMLTV heading, and finished across one long weekend.
 pubDate: 2004-07-11
+categories:
+  - 'Published articles'
+  - 'Audio and video'
+tags:
+  - 'Home theatre PC'
+  - 'Windows'
+  - 'APC magazine'
 ---
 
 _This is the fourth piece of the batch I wrote for [APC](<https://en.wikipedia.org/wiki/APC_(magazine)>) in July 2004, and the one the commission valued most: the workshop brief, archived with [the roundup](/spotlite/article/apc-2004/), asked for 1,400 words at AUD\$500 against the roundup's 1,300 at \$400, same Sunday-6pm deadline, same TwinHan card on loan. The invoice that closed the batch bills it in full — "myHTPC/DABDig Workshop, 1400 words, \$500" — for the September 2004 issue. It is reproduced from the manuscript as it went to APC; no edit of it survives, and no printed page either._

@@ -2,6 +2,15 @@
 title: 'Reverse engineering Infocom games - the first open source Z-Machine interpreter'
 description: In 1987 five of us at Sydney University took Infocom's virtual machine apart to see how it worked. We did not expect it to matter to anyone else.
 pubDate: 1992-09-01
+categories:
+  - 'Written for this site'
+  - 'Software'
+  - 'Computing history'
+tags:
+  - 'Reverse engineering'
+  - 'Games'
+  - 'Free software'
+  - 'Usenet'
 ---
 
 _Filed under the date we finally released the interpreter properly, although the story starts five years earlier and what became of it carries on long after._

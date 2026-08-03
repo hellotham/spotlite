@@ -2,6 +2,12 @@
 title: A celebration of 50 Years of Unix
 description: A beautiful operating system, still healthy after 50 years.
 pubDate: 2020-06-10T00:00:00.000Z
+categories:
+  - 'Written for this site'
+  - 'Computing history'
+tags:
+  - 'UNIX'
+  - 'Free software'
 ---
 
 Recently Unix celebrated its 50th birthday. We don't know the exact date but we do know it was sometime in late 1970. That's one reason why the Unix system clock starts from 1970.

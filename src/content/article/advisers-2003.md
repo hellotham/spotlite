@@ -2,6 +2,13 @@
 title: 'Getting technology right for advisers'
 description: A September 2003 talk on National Wealth Management's technology for financial advisers — the shift to holistic advice, the business system behind it, and AdviserCentral.
 pubDate: 2003-09-18
+categories:
+  - 'Conference papers'
+  - 'Career'
+tags:
+  - 'Wealth management'
+  - 'Technology strategy'
+  - 'MLC'
 ---
 
 _This is a talk given in September 2003 on behalf of Geoff Wenborn, then Chief Information Officer of National Wealth Management, whose name is on the title slide. Geoff could not attend and asked me to deliver it; I built the deck from his ideas, so it is best read as a joint effort with me presenting for him. I was Manager, Architecture at [MLC](/spotlite/work/mlc/) at the time._

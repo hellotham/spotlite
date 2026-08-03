@@ -2,6 +2,14 @@
 title: 'Rogoweb: Rogue and Rog-O-Matic, alive in the browser'
 description: The 1980 game Rogue and the expert system built to play it, both compiled to WebAssembly and running side by side in a browser tab. The original C, not a rewrite.
 pubDate: 2026-07-05
+categories:
+  - 'Written for this site'
+  - 'Software'
+  - 'Computing history'
+tags:
+  - 'Games'
+  - 'Free software'
+  - 'UNIX'
 ---
 
 I was halfway through my degree at the University of Sydney when Rogue appeared on the Unix machines in the Basser Department of Computer Science. It was an immediate hit with the students, and the university banned it from being played during the day. So we played after hours instead, at sessions we called Rogue parties. I was never much good at it compared with the others.

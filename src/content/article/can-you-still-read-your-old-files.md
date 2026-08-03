@@ -2,6 +2,13 @@
 title: Can you still read the files you made thirty years ago?
 description: What it took to recover my own conference papers from Word 2.0 and PowerPoint 4.0, and what it taught me about who is actually keeping my archive readable.
 pubDate: 2026-08-01
+categories:
+  - 'Written for this site'
+  - 'Computing history'
+tags:
+  - 'File formats'
+  - 'Preservation'
+  - 'Curiosities'
 ---
 
 I have been putting my old conference papers onto this website.

@@ -2,6 +2,14 @@
 title: 'Electronic Commerce and the Consumer'
 description: A 1997 talk on why consumers were hesitating over online shopping, what that meant for bank delivery channels, and the privacy law Australia did not yet have.
 pubDate: 1997-08-14
+categories:
+  - 'Conference papers'
+  - 'Career'
+tags:
+  - 'Electronic commerce'
+  - 'Privacy'
+  - 'Banking'
+  - 'Hewlett-Packard'
 ---
 
 _This is a talk I gave at the Finance Industry Reform conference in Sydney in 1997, while a Senior Consultant at [Hewlett-Packard Australia](/spotlite/work/hp/). I had forgotten it entirely; it surfaced in August 2026 in a backup of my home machine, and it is listed under "Publications" in the CV I was keeping at the time._

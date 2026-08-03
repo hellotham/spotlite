@@ -2,6 +2,13 @@
 title: 'Remote controls for your HTPC'
 description: The third piece of my July 2004 APC batch, a Girder and TIRA tutorial with two boxouts, reproduced from the manuscript as it left my hands — with the draft's self-written brief and what changed between the two versions on the way to the deadline.
 pubDate: 2004-07-11
+categories:
+  - 'Published articles'
+  - 'Audio and video'
+tags:
+  - 'Home theatre PC'
+  - 'Remote controls'
+  - 'APC magazine'
 ---
 
 _This is the third piece of the batch I wrote for [APC](<https://en.wikipedia.org/wiki/APC_(magazine)>) in July 2004, alongside [the digital TV software roundup](/spotlite/article/apc-2004/) and a myHTPC workshop: a tutorial on controlling a home theatre PC with any infra-red remote, Girder and a TIRA receiver, with two boxouts. It is reproduced from the Word manuscript as it left my hands on the 11th of July 2004 — the same Sunday afternoon I finished the roundup, with the same 6pm deadline hanging over both. The invoice that closed the batch bills this piece too — "HTPC Remote control article/tutorial", 750 words, \$250, for the September 2004 issue, under terms that paid on publication — but no printed page survives in my files, so the manuscript is the record._

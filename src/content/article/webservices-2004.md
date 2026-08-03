@@ -2,6 +2,14 @@
 title: 'Selling web services to senior management'
 description: The case-study talk I gave in July 2004 as Head of Architecture at MLC, on the journey from hard-to-justify EAI business cases to web services and the architecture that became our SOA — given at a conference the deck does not name.
 pubDate: 2004-07-13
+categories:
+  - 'Conference papers'
+  - 'Career'
+tags:
+  - 'Web services'
+  - 'Enterprise architecture'
+  - 'Architecture practice'
+  - 'MLC'
 ---
 
 _This is the talk I gave in mid 2004 on how MLC came to adopt web services, reproduced from the deck. The title slide bills me as Head of Architecture, MLC, and slide 2 states the deck's purpose in its own words: "a case study of the journey that MLC undertook on the road to defining and implementing a target architecture based on Services Oriented Architecture (SOA) and web services" — the architecture practice profiled for an outside audience. Which conference it was given at is not recorded in anything that survives: the deck names no event, carries no organiser's branding, and searching the public record turns up nothing, so I will not guess._

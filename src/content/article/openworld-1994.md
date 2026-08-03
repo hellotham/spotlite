@@ -2,6 +2,15 @@
 title: 'Distributed Client/Server Architectures and Transaction Processing on Open Systems'
 description: A 1994 conference paper surveying how client/server systems were actually being built on open systems, from remote presentation through to distributed databases, and where transactions fit.
 pubDate: 1994-12-13
+categories:
+  - 'Conference papers'
+  - 'Software'
+tags:
+  - 'Client/server'
+  - 'Transaction processing'
+  - 'Distributed systems'
+  - 'Databases'
+  - 'NCR'
 ---
 
 _This is a paper I gave at Oracle OpenWorld '94, written while I was an Architecture Consultant at [AT&T Global Information Solutions](/spotlite/work/ncr/). It is a revision of the paper I gave earlier that year at [AUUG'94](/spotlite/article/auug-1994/), which marks where the two diverge._

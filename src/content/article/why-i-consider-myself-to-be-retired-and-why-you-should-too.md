@@ -2,6 +2,12 @@
 title: Why I consider myself to be Retired, and why you should too
 description: There is no shame in retiring early, and potentially many benefits.
 pubDate: 2019-01-19T22:00:00.000Z
+categories:
+  - 'Written for this site'
+  - 'Career'
+tags:
+  - 'Working life'
+  - 'Retirement'
 ---
 
 When I turned 50, I announced my professional retirement. We had calculated that we have accumulated enough savings to live out the rest of our lives in comfortable obscurity, in “shabby poor” circumstances, and that was fine by us. I could devote the rest of my life in creative pursuits, the occasional travel, and lots of gazing at sunsets and long walks.

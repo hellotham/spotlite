@@ -2,10 +2,21 @@ import { defineCollection } from 'astro:content'
 import { z } from 'astro/zod'
 import { rssSchema } from '@astrojs/rss'
 import { glob, file } from 'astro/loaders'
+import { CATEGORY_NAMES } from './utils/articles'
 
 const article = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/article' }),
-  schema: rssSchema
+  // rssSchema supplies title, description, pubDate and the rest of the feed's fields.
+  // The taxonomy is added on top; see src/utils/articles.ts for why categories are a
+  // closed set and tags are not.
+  schema: rssSchema.extend({
+    // At least one: an uncategorised article appears in no grid cell and is reachable
+    // only from the feed, which is how a piece quietly stops being findable.
+    categories: z.array(z.enum(CATEGORY_NAMES)).min(1),
+    // Weighted into the cloud on /articles by how many articles carry each one, so the
+    // vocabulary has to be reused between entries rather than reworded per entry.
+    tags: z.array(z.string()).default([])
+  })
 })
 
 const project = defineCollection({

@@ -2,6 +2,13 @@
 title: 'AI-dō: the way of AI, grounded in practice'
 description: I have written a book about working with AI well. It is free to read, and it argues that the model you pick matters far less than the work you do around it.
 pubDate: 2026-07-24
+categories:
+  - 'Written for this site'
+  - 'Career'
+tags:
+  - 'Artificial intelligence'
+  - 'Books'
+  - 'Working life'
 ---
 
 I have written a book. It is called AI-dō, it is free to read, and it is about what separates good work with AI from slop.

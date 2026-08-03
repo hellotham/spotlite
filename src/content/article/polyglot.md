@@ -2,6 +2,13 @@
 title: 'hello polyglots: one program, eight languages'
 description: A program three of us wrote in 1991 that compiles and runs in eight languages, and what became of it.
 pubDate: 1991-03-18
+categories:
+  - 'Written for this site'
+  - 'Software'
+tags:
+  - 'Programming languages'
+  - 'Usenet'
+  - 'Curiosities'
 ---
 
 _Filed under the date we posted it to Usenet. Most of what happened to it happened later._
