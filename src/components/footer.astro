@@ -10,20 +10,35 @@ const year = new Date().getFullYear()
 
 <footer class='mt-32 flex-none'>
   <Container fullWidth={true}>
-    <div class='pb-16 pt-10 border-t border-border dark:border-border/40'>
-      <div class='flex flex-col gap-6 items-center justify-between md:flex-row'>
-        <div class='text-sm text-primary font-medium flex flex-wrap gap-x-6 gap-y-1'>
-          {
-            pages.map((item) => (
-              <a class='ui-hover-accent' href={`${import.meta.env.BASE_URL}${item.id}/`}>
-                {item.data.shorttitle}
-              </a>
-            ))
-          }
+    <div class='pt-10 border-t border-border dark:border-border/40'>
+      {
+        /* The rule above stays full-bleed — that is what fullWidth is for. The text does
+           not: these two wrappers repeat the standard Container's inner structure
+           (max-w-7xl, then the same gutters), so the links and the copyright land on the
+           same left and right edges as every other block on the page. Without them the
+           footer ran the full width of the viewport, which at 1600px put the first link
+           472px to the left of the body text and the copyright 320px to its right. */
+      }
+      <div class='mx-auto pb-16 max-w-7xl lg:px-8'>
+        {
+          /* No base `px-4` here: the fullWidth Container above already supplies it, and
+             adding a second one indented the footer 32px below 640px where every other
+             block sits at 16px. From `sm` up these override it anyway. */
+        }
+        <div class='flex flex-col gap-6 items-center justify-between lg:px-12 sm:px-8 md:flex-row'>
+          <div class='text-sm text-primary font-medium flex flex-wrap gap-x-6 gap-y-1'>
+            {
+              pages.map((item) => (
+                <a class='ui-hover-accent' href={`${import.meta.env.BASE_URL}${item.id}/`}>
+                  {item.data.shorttitle}
+                </a>
+              ))
+            }
+          </div>
+          <p class='text-sm text-secondary'>
+            &copy; {year} Chris Tham. All rights reserved.
+          </p>
         </div>
-        <p class='text-sm text-secondary'>
-          &copy; {year} Chris Tham. All rights reserved.
-        </p>
       </div>
     </div>
   </Container>
