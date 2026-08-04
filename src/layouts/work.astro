@@ -6,7 +6,7 @@ import PageContent from '../components/pagecontent.astro'
 import EntityLogo from '../components/entitylogo.astro'
 import WordCloud from '../components/wordcloud.astro'
 import { formatDateRange } from '../utils/timeline'
-import { countTags } from '../utils/articles'
+import { countLinkedTags } from '../utils/tags'
 
 const { frontmatter } = Astro.props
 
@@ -42,9 +42,9 @@ const sortedWork = work.sort((a, b) => {
         <slot />
       </PageContent>
       <WordCloud
-        tags={countTags(work)}
+        tags={countLinkedTags(work)}
         unit='role'
-        caption='Capabilities, domains and technologies across this work history, sized by the number of roles each one appears in.'
+        caption='Capabilities, domains and technologies across this work history, sized by the number of roles each one appears in. Each one leads to the roles that involved it, and to anything written on the subject.'
       />
       <div class='mt-16 sm:mt-20'>
         <div class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'>

@@ -22,11 +22,13 @@
  * it exists on the page only after the script has run, so it is also the one the search
  * index and a reader without JavaScript never see.
  */
+import TagList from './taglist.astro'
+
 interface Props {
   /**
    * Already counted and sorted heaviest first — the spiral relies on that order. A tag
-   * with an `href` is rendered as a link; without one it is inert, which is what the work
-   * history needs, its tags having no pages to lead to.
+   * with an `href` is rendered as a link; without one the cloud stays inert, which is what
+   * a caller whose tags have no pages would need.
    */
   tags: { text: string; count: number; href?: string }[]
   /** Sentence describing what the cloud shows, read out before the list. */
@@ -54,22 +56,11 @@ const linked = tags.some((tag) => tag.href)
       {linked ? (
         <figcaption class='mt-8'>
           <p class='text-sm text-secondary'>{caption}</p>
-          <ul class='mt-4 flex flex-wrap gap-2'>
-            {tags.map((tag) => (
-              <li>
-                <a
-                  href={tag.href}
-                  aria-label={`${tag.text} — ${tag.count} ${unitWord(tag.count)}`}
-                  class='text-sm text-secondary px-3 py-1 ui-focus-ring border border-border rounded-full inline-flex gap-1.5 transition items-baseline hover:text-accent dark:border-border/40 hover:bg-heavenlyPink/50 dark:hover:bg-grapeade/30'
-                >
-                  <span>{tag.text}</span>
-                  <span class='text-xs text-graniteGray tabular-nums dark:text-opalGray'>
-                    {tag.count}
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <TagList
+            tags={tags as { text: string; href: string; count: number }[]}
+            unit={unit}
+            class='mt-4'
+          />
         </figcaption>
       ) : (
         <figcaption class='sr-only'>

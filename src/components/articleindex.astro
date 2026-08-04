@@ -17,12 +17,27 @@ import type { CollectionEntry } from 'astro:content'
 interface Props {
   /** Already filtered and sorted by the caller — this renders them in the order given. */
   articles: CollectionEntry<'article'>[]
+  /**
+   * Spacing above the list, supplied by the caller: it sits directly under a page header
+   * on a category page and under a section heading on a tag page, and those want different
+   * gaps. Baking one in meant the tag page got both.
+   */
+  class?: string
+  /**
+   * Level for each article's own heading. A category page puts this list straight under
+   * its `h1`, so the titles are `h2`; a tag page puts it under a "Writing" section
+   * heading, which is itself an `h2`, so there they have to be `h3`. Hard-coding it gave
+   * the tag page two `h2`s in a row, one nested inside the other's section.
+   */
+  headingLevel?: 2 | 3
 }
 
-const { articles } = Astro.props
+const { articles, class: className, headingLevel = 2 } = Astro.props
+
+const Heading = `h${headingLevel}` as 'h2' | 'h3'
 ---
 
-<div class='mt-16 sm:mt-20'>
+<div class:list={[className]}>
   <div class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'>
     <div class='flex flex-col space-y-16'>
       {
@@ -40,13 +55,13 @@ const { articles } = Astro.props
                   {article.data.pubDate.toDateString()}
                 </time>
               )}
-              <h2 class='text-base text-accent tracking-tight font-semibold font-serif'>
+              <Heading class='text-base text-accent tracking-tight font-semibold font-serif'>
                 <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
                 <a href={`${import.meta.env.BASE_URL}article/${article.id}/`}>
                   <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
                   <span class='relative z-10'>{article.data.title}</span>
                 </a>
-              </h2>
+              </Heading>
               <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
                 {article.data.description}
               </p>

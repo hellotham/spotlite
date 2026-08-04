@@ -1,17 +1,16 @@
 /**
- * The article taxonomy: a small, closed set of categories, and an open set of tags.
+ * Article categories: a small, closed set, and one axis of a two-axis taxonomy.
  *
  * Standard blog practice, and the split does real work here. **Categories** answer two
  * questions a reader of a CV site actually asks — where was this published, and what is
- * it about — so they are few, fixed, and browsable as their own pages. An article
- * usually carries two, one of each kind. **Tags** are subject matter, open-ended, and
- * exist to be counted: the cloud on /articles sizes each by how many articles carry it,
- * which only means something if the vocabulary is reused deliberately between entries
- * rather than reworded per article. "Enterprise architecture" and "Architecture" would
- * be two tags and half the weight.
+ * it about — so they are few, fixed, and browsable as their own pages. An article usually
+ * carries two, one of each kind. **Tags** are the other axis: subject matter, open-ended,
+ * and shared with the work history, which is why they live in `src/utils/tags.ts` and this
+ * file no longer mentions them again.
  *
  * Adding a category is a deliberate act: it appears in the grid, gets a route, and every
- * article has to be reconsidered against it. Adding a tag is not.
+ * article has to be reconsidered against it. Adding a tag is not — though it does now get
+ * a page, which is a reason to reuse the vocabulary rather than reword it.
  */
 
 export interface ArticleCategory {
@@ -116,82 +115,8 @@ export const categoryBySlug = (slug: string) => ARTICLE_CATEGORIES.find((c) => c
 export const categoryByName = (name: string) => ARTICLE_CATEGORIES.find((c) => c.name === name)
 
 /**
- * Tally a tag vocabulary across entries, heaviest first.
- *
- * Shared by the work history and the articles because the word cloud's spiral places
- * labels in the order it is given them — the heaviest tag has to arrive first or it does
- * not get the centre. Tags are de-duplicated within an entry: one entry repeating a tag
- * must not inflate its weight.
+ * Tags are the other half of the taxonomy and live in `src/utils/tags.ts`, because the work
+ * history is tagged from the same vocabulary — nothing about a role should have to import
+ * from a module named for articles to describe itself. Categories stay here: they are a
+ * closed set, article-only, and each one is a route.
  */
-export const countTags = (entries: { data: { tags?: string[] } }[]) => {
-  const counts = new Map<string, number>()
-  for (const entry of entries) {
-    for (const tag of new Set(entry.data.tags ?? [])) {
-      counts.set(tag, (counts.get(tag) ?? 0) + 1)
-    }
-  }
-  return [...counts.entries()]
-    .map(([text, count]) => ({ text, count }))
-    .sort((a, b) => b.count - a.count || a.text.localeCompare(b.text))
-}
-
-/**
- * URL segment for a tag.
- *
- * Tags are free prose — "Client/server", "SA-CD", "Home theatre" — so this has to survive
- * punctuation without leaving an empty or doubled segment. Decompose first: NFKD splits an
- * accented letter into a letter plus a combining mark, so dropping the marks keeps the
- * letter. Stripping before normalising would discard the whole character.
- */
-export const tagSlug = (tag: string) =>
-  tag
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-
-/** URL of a tag's own page, under the category pages rather than beside them. */
-export const tagHref = (tag: string) => `${import.meta.env.BASE_URL}articles/tag/${tagSlug(tag)}/`
-
-/**
- * Group entries by tag, keyed by the slug each tag will be published under.
- *
- * Two distinct tags reducing to the same segment is a naming mistake — "Client/server" and
- * "Client server" would be one page claiming to be about whichever name it happened to
- * keep — so this throws rather than merging them, or suffixing one, or dropping it. The
- * vocabulary is hand-written and small; a collision is meant to be fixed at the source,
- * and a build that fails naming both tags is what makes that possible.
- */
-export const groupByTag = <T extends { data: { tags?: string[] } }>(entries: T[]) => {
-  const bySlug = new Map<string, { tag: string; slug: string; entries: T[] }>()
-
-  for (const entry of entries) {
-    for (const tag of new Set(entry.data.tags ?? [])) {
-      const slug = tagSlug(tag)
-      if (!slug) throw new Error(`The tag "${tag}" leaves no usable URL segment.`)
-
-      const group = bySlug.get(slug)
-      if (!group) {
-        bySlug.set(slug, { tag, slug, entries: [entry] })
-      } else if (group.tag === tag) {
-        group.entries.push(entry)
-      } else {
-        throw new Error(
-          `The tags "${group.tag}" and "${tag}" both reduce to "${slug}". Rename one of them.`
-        )
-      }
-    }
-  }
-
-  return [...bySlug.values()].sort((a, b) => a.tag.localeCompare(b.tag))
-}
-
-/**
- * The article tag vocabulary, each entry carrying the URL of its own page.
- *
- * Separate from countTags because the work history uses the same cloud and its tags have
- * no pages: passing an href there would produce links to routes that do not exist.
- */
-export const countArticleTags = (entries: { data: { tags?: string[] } }[]) =>
-  countTags(entries).map((tag) => ({ ...tag, href: tagHref(tag.text) }))

@@ -4,7 +4,8 @@ import Layout from './layout.astro'
 import Container from '../components/container.astro'
 import PageContent from '../components/pagecontent.astro'
 import WordCloud from '../components/wordcloud.astro'
-import { ARTICLE_CATEGORIES, countArticleTags } from '../utils/articles'
+import { ARTICLE_CATEGORIES } from '../utils/articles'
+import { countLinkedTags } from '../utils/tags'
 
 /**
  * The articles index: a grid of categories, then the tag cloud.
@@ -36,7 +37,7 @@ const cells = ARTICLE_CATEGORIES.map((category) => ({
   count: counts.get(category.name) ?? 0
 })).filter((cell) => cell.count > 0)
 
-const tags = countArticleTags(articles)
+const tags = countLinkedTags(articles)
 const articleWord = (count: number) => (count === 1 ? 'article' : 'articles')
 ---
 

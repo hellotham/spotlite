@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../../layouts/layout.astro'
+import Container from '../../components/container.astro'
+import ArticleIndex from '../../components/articleindex.astro'
+import RoleIndex from '../../components/roleindex.astro'
+import { tagIndex, taggedWith } from '../../utils/tags'
+
+/**
+ * One page per tag, showing everything carrying it — the articles and the roles.
+ *
+ * At the site root rather than under /articles/, because the vocabulary is shared and a
+ * third of it is work-only: "SAP" filed under /articles/ would name a page that lists no
+ * articles at all. The static `tag` segment beats the catch-all page route at
+ * src/pages/[...page].astro, which would otherwise claim the same URL.
+ *
+ * The two sections are the point rather than an accident of storage. Six articles about
+ * enterprise architecture and the six roles that practised it are one subject seen twice,
+ * and a reader arriving from either cloud is asking the same question of both.
+ *
+ * Categories stay article-only and are the other axis: an article is filed under where it
+ * was published and what it is about, and tagged with its subjects, which cut across both.
+ */
+export async function getStaticPaths() {
+  const [articles, roles] = await Promise.all([getCollection('article'), getCollection('work')])
+
+  // Both collections at once: the slugs have to be unique across the whole vocabulary, or
+  // two pages would compete for one URL.
+  return tagIndex([...articles, ...roles]).map(({ tag, slug }) => ({
+    params: { tag: slug },
+    props: {
+      tag,
+      articles: taggedWith(articles, tag).sort((a, b) =>
+        a.data.pubDate && b.data.pubDate ? +b.data.pubDate - +a.data.pubDate : 0
+      ),
+      roles: taggedWith(roles, tag).sort(
+        (a, b) =>
+          (b.data.endyear ?? 9999) - (a.data.endyear ?? 9999) || b.data.startyear - a.data.startyear
+      )
+    }
+  }))
+}
+
+const { tag, articles, roles } = Astro.props
+
+const count = (n: number, noun: string) => `${n} ${n === 1 ? noun : `${noun}s`}`
+const parts = [
+  articles.length > 0 && count(articles.length, 'article'),
+  roles.length > 0 && count(roles.length, 'role')
+].filter(Boolean)
+
+// Whichever side the tag actually has. Most tags are on articles, a third are work-only,
+// and a back link to /articles/ from a tag with no articles would be a dead end.
+const back =
+  articles.length > 0
+    ? { href: `${import.meta.env.BASE_URL}articles/`, label: 'All articles' }
+    : { href: `${import.meta.env.BASE_URL}work/`, label: 'Work history' }
+
+const description = `Everything tagged ${tag} — ${parts.join(' and ')}, across the writing and the work.`
+---
+
+<Layout title={tag} description={description} itemPage={true} collectionPage={true}>
+  <Container class='mt-16 sm:mt-32'>
+    <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+      <header class='max-w-2xl'>
+        <a
+          href={back.href}
+          class='text-sm text-accent font-medium ui-focus-ring rounded-lg inline-flex items-center hover:underline'
+        >
+          <span class='i-heroicons-chevron-left mr-1 h-4 w-4 stroke-current' aria-hidden='true'
+          ></span>
+          {back.label}
+        </a>
+        <p class='text-sm text-secondary tracking-wide font-medium mt-4 uppercase'>Tagged</p>
+        <h1 class='text-4xl text-primary tracking-tight font-bold font-serif mt-1 sm:text-5xl'>
+          {tag}
+        </h1>
+        <!-- One expression, not two: adjacent expressions on separate lines render with no
+             space between them, which reads as "51articles." -->
+        <p class='text-base text-secondary mt-6'>{`${parts.join(' and ')}, newest first.`}</p>
+      </header>
+
+      {
+        articles.length > 0 && (
+          <section class='mt-16 sm:mt-20'>
+            <h2 class='text-sm text-secondary tracking-wide font-medium uppercase'>Writing</h2>
+            <ArticleIndex {articles} class='mt-8' headingLevel={3} />
+          </section>
+        )
+      }
+
+      {
+        roles.length > 0 && (
+          <section class='mt-16 sm:mt-20'>
+            <h2 class='text-sm text-secondary tracking-wide font-medium uppercase'>Work</h2>
+            <RoleIndex {roles} class='mt-8' headingLevel={3} />
+          </section>
+        )
+      }
+    </div>
+  </Container>
+</Layout>

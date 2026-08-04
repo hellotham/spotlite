@@ -1,0 +1,52 @@
+---
+/**
+ * A row of tags as links.
+ *
+ * Used in three places that must look the same, because they are the same thing: the
+ * visible index under each word cloud, and the tags on an article and on a role. The
+ * cloud's version is also the accessible and search-indexed form of the cloud itself —
+ * see wordcloud.astro for why that matters more than it sounds.
+ *
+ * A count is optional. Under a cloud it earns its place, because the cloud's whole claim
+ * is that size means frequency and the number is what makes that checkable. On a detail
+ * page it would be noise: the reader is looking at one article, not comparing subjects.
+ */
+interface Props {
+  /** Rendered in the order given — the caller decides whether that is weight or alphabet. */
+  tags: { text: string; href: string; count?: number }[]
+  /** Singular noun for the count, e.g. "role" or "article". Only used in the label. */
+  unit?: string
+  class?: string
+}
+
+const { tags, unit = 'entry', class: className } = Astro.props
+
+const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
+
+// The count sits in a second span, so the visible pill stays "Music 51" while the label
+// spells out what the number counts. Without it a screen reader reads "Music 51", which
+// could be a year, a rank or a track number.
+const label = (tag: { text: string; count?: number }) =>
+  tag.count === undefined ? tag.text : `${tag.text} — ${tag.count} ${unitWord(tag.count)}`
+---
+
+<ul class:list={['gap-2 flex flex-wrap', className]}>
+  {
+    tags.map((tag) => (
+      <li>
+        <a
+          href={tag.href}
+          aria-label={label(tag)}
+          class='text-sm text-secondary px-3 py-1 ui-focus-ring border border-border rounded-full inline-flex gap-1.5 transition items-baseline hover:text-accent dark:border-border/40 hover:bg-heavenlyPink/50 dark:hover:bg-grapeade/30'
+        >
+          <span>{tag.text}</span>
+          {tag.count !== undefined && (
+            <span class='text-xs text-graniteGray tabular-nums dark:text-opalGray'>
+              {tag.count}
+            </span>
+          )}
+        </a>
+      </li>
+    ))
+  }
+</ul>

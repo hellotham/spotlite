@@ -4,7 +4,8 @@ import Layout from '../../layouts/layout.astro'
 import Container from '../../components/container.astro'
 import ArticleIndex from '../../components/articleindex.astro'
 import WordCloud from '../../components/wordcloud.astro'
-import { ARTICLE_CATEGORIES, countArticleTags } from '../../utils/articles'
+import { ARTICLE_CATEGORIES } from '../../utils/articles'
+import { countLinkedTags } from '../../utils/tags'
 
 /**
  * One page per article category.
@@ -31,7 +32,7 @@ const { category, articles } = Astro.props
 // Linked to the site-wide tag pages, not to a category-scoped view of the tag: a tag is
 // the cross-cutting axis, and "Music" inside the DVD reviews is the same subject as
 // "Music" inside the SA-CD ones.
-const tags = countArticleTags(articles)
+const tags = countLinkedTags(articles)
 const articleWord = (count: number) => (count === 1 ? 'article' : 'articles')
 ---
 
@@ -58,7 +59,7 @@ const articleWord = (count: number) => (count === 1 ? 'article' : 'articles')
         </p>
       </header>
 
-      <ArticleIndex {articles} />
+      <ArticleIndex {articles} class='mt-16 sm:mt-20' />
 
       <WordCloud
         tags={tags}

@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { formatDateRange } from '../utils/timeline'
+
+/**
+ * A dated list of roles, ruled down the left, for the tag pages.
+ *
+ * Deliberately the same shape as articleindex.astro: a tag page shows articles and roles
+ * one under the other, and they are the same subject seen from two sides, so they should
+ * not look like two different websites. What differs is only what a role has instead of a
+ * title — a company and a position — and that its date is a range.
+ *
+ * Not to be confused with work.astro, which is the compact sidebar card listing every role
+ * with its logo and fetching the collection itself.
+ */
+interface Props {
+  /** Already filtered and sorted by the caller — this renders them in the order given. */
+  roles: CollectionEntry<'work'>[]
+  /** Spacing above the list, supplied by the caller. See articleindex.astro. */
+  class?: string
+  /** Level for each role's own heading, for the same reason as articleindex.astro. */
+  headingLevel?: 2 | 3
+}
+
+const { roles, class: className, headingLevel = 2 } = Astro.props
+
+const Heading = `h${headingLevel}` as 'h2' | 'h3'
+---
+
+<div class:list={[className]}>
+  <div class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'>
+    <div class='flex flex-col space-y-16'>
+      {
+        roles.map((role) => (
+          <article class='md:grid md:grid-cols-4 md:items-baseline'>
+            <div class='group flex flex-col items-start relative md:col-span-3'>
+              <time class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray md:hidden'>
+                <span class='flex items-center inset-y-0 left-0 absolute' aria-hidden='true'>
+                  <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
+                </span>
+                {formatDateRange(role.data.startyear, role.data.endyear)}
+              </time>
+              <Heading class='text-base text-accent tracking-tight font-semibold font-serif'>
+                <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                <a href={`${import.meta.env.BASE_URL}work/${role.id}/`}>
+                  <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                  <span class='relative z-10'>{role.data.company}</span>
+                </a>
+              </Heading>
+              <p class='text-sm text-primary font-medium mt-1 relative z-10'>
+                {role.data.role}
+                {role.data.type === 'consulting' && ' (Consulting)'}
+              </p>
+              <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
+                {role.data.description}
+              </p>
+              <div
+                aria-hidden='true'
+                class='text-sm text-accent font-medium mt-4 flex items-center relative z-10'
+              >
+                Read more
+                <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />
+              </div>
+            </div>
+            <time class='text-sm text-graniteGray mb-3 mt-1 flex hidden items-center order-first relative z-10 dark:text-opalGray md:block'>
+              {formatDateRange(role.data.startyear, role.data.endyear)}
+            </time>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</div>

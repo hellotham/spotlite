@@ -4,7 +4,9 @@ import { getCollection, render } from 'astro:content'
 import Layout from '../../layouts/layout.astro'
 import Container from '../../components/container.astro'
 import EntityLogo from '../../components/entitylogo.astro'
+import TagList from '../../components/taglist.astro'
 import { formatDateRange } from '../../utils/timeline'
+import { tagHref } from '../../utils/tags'
 
 export async function getStaticPaths() {
   const workEntries = await getCollection('work')
@@ -67,6 +69,17 @@ const { Content } = await render(work)
           <div class='mt-8 prose dark:prose-invert'>
             <Content />
           </div>
+          {
+            work.data.tags.length > 0 && (
+              <footer class='mt-12 pt-8 border-t border-border dark:border-border/40'>
+                <h2 class='text-sm text-secondary tracking-wide font-medium uppercase'>Tagged</h2>
+                <TagList
+                  class='mt-4'
+                  tags={work.data.tags.map((tag) => ({ text: tag, href: tagHref(tag) }))}
+                />
+              </footer>
+            )
+          }
         </article>
       </div>
     </div>
