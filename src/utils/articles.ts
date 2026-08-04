@@ -48,6 +48,13 @@ export const ARTICLE_CATEGORIES: readonly ArticleCategory[] = [
     kind: 'provenance'
   },
   {
+    name: 'Academic work',
+    slug: 'academic-work',
+    blurb:
+      'Assignments written for assessment rather than for readers, reproduced from the manuscripts they were submitted as.',
+    kind: 'provenance'
+  },
+  {
     name: 'Audio and video',
     slug: 'audio-and-video',
     blurb: 'Home theatre, digital audio, and the measurements behind the arguments about them.',
@@ -71,6 +78,13 @@ export const ARTICLE_CATEGORIES: readonly ArticleCategory[] = [
     slug: 'sa-cd',
     blurb:
       'Super Audio CD releases reviewed for SA-CD.net between 2003 and 2009, on the performance and the disc in equal measure.',
+    kind: 'subject'
+  },
+  {
+    name: 'Finance',
+    slug: 'finance',
+    blurb:
+      'Markets, instruments and the institutions that trade them — including one bank I was working inside when it failed.',
     kind: 'subject'
   },
   {
