@@ -134,3 +134,64 @@ export const countTags = (entries: { data: { tags?: string[] } }[]) => {
     .map(([text, count]) => ({ text, count }))
     .sort((a, b) => b.count - a.count || a.text.localeCompare(b.text))
 }
+
+/**
+ * URL segment for a tag.
+ *
+ * Tags are free prose — "Client/server", "SA-CD", "Home theatre" — so this has to survive
+ * punctuation without leaving an empty or doubled segment. Decompose first: NFKD splits an
+ * accented letter into a letter plus a combining mark, so dropping the marks keeps the
+ * letter. Stripping before normalising would discard the whole character.
+ */
+export const tagSlug = (tag: string) =>
+  tag
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+
+/** URL of a tag's own page, under the category pages rather than beside them. */
+export const tagHref = (tag: string) => `${import.meta.env.BASE_URL}articles/tag/${tagSlug(tag)}/`
+
+/**
+ * Group entries by tag, keyed by the slug each tag will be published under.
+ *
+ * Two distinct tags reducing to the same segment is a naming mistake — "Client/server" and
+ * "Client server" would be one page claiming to be about whichever name it happened to
+ * keep — so this throws rather than merging them, or suffixing one, or dropping it. The
+ * vocabulary is hand-written and small; a collision is meant to be fixed at the source,
+ * and a build that fails naming both tags is what makes that possible.
+ */
+export const groupByTag = <T extends { data: { tags?: string[] } }>(entries: T[]) => {
+  const bySlug = new Map<string, { tag: string; slug: string; entries: T[] }>()
+
+  for (const entry of entries) {
+    for (const tag of new Set(entry.data.tags ?? [])) {
+      const slug = tagSlug(tag)
+      if (!slug) throw new Error(`The tag "${tag}" leaves no usable URL segment.`)
+
+      const group = bySlug.get(slug)
+      if (!group) {
+        bySlug.set(slug, { tag, slug, entries: [entry] })
+      } else if (group.tag === tag) {
+        group.entries.push(entry)
+      } else {
+        throw new Error(
+          `The tags "${group.tag}" and "${tag}" both reduce to "${slug}". Rename one of them.`
+        )
+      }
+    }
+  }
+
+  return [...bySlug.values()].sort((a, b) => a.tag.localeCompare(b.tag))
+}
+
+/**
+ * The article tag vocabulary, each entry carrying the URL of its own page.
+ *
+ * Separate from countTags because the work history uses the same cloud and its tags have
+ * no pages: passing an href there would produce links to routes that do not exist.
+ */
+export const countArticleTags = (entries: { data: { tags?: string[] } }[]) =>
+  countTags(entries).map((tag) => ({ ...tag, href: tagHref(tag.text) }))

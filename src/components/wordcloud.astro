@@ -11,12 +11,24 @@
  *
  * The cloud is a decoration: it is `aria-hidden`, and the same tags are published as an
  * ordered list for assistive technology and for the search index. Making 45 drifting
- * labels focusable would add a long, unordered tab sequence that leads nowhere, and the
- * list conveys the same information — including the counts, which the sizes only imply.
+ * labels focusable would add a long tab sequence over moving targets, and the list conveys
+ * the same information — including the counts, which the sizes only imply.
+ *
+ * That holds even where the tags are links. Pass an `href` with a tag and its label
+ * becomes clickable where it is drawn, but only to the pointer: the labels stay out of the
+ * tab order, and the list stops being `sr-only` and becomes the visible, keyboard-reachable
+ * index of the same pages. Two routes to the same hundred links would mean tabbing through
+ * all of them twice, and the cloud is the worse of the two to tab through — it drifts, and
+ * it exists on the page only after the script has run, so it is also the one the search
+ * index and a reader without JavaScript never see.
  */
 interface Props {
-  /** Already counted and sorted heaviest first — the spiral relies on that order. */
-  tags: { text: string; count: number }[]
+  /**
+   * Already counted and sorted heaviest first — the spiral relies on that order. A tag
+   * with an `href` is rendered as a link; without one it is inert, which is what the work
+   * history needs, its tags having no pages to lead to.
+   */
+  tags: { text: string; count: number; href?: string }[]
   /** Sentence describing what the cloud shows, read out before the list. */
   caption: string
   /** Singular noun for what is being counted, e.g. "role" or "article". */
@@ -26,6 +38,8 @@ interface Props {
 const { tags, caption, unit } = Astro.props
 
 const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
+
+const linked = tags.some((tag) => tag.href)
 ---
 
 {
@@ -37,16 +51,38 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
         class='min-h-[240px] w-full relative'
         data-tags={JSON.stringify(tags)}
       />
-      <figcaption class='sr-only'>
-        {caption}
-        <ul>
-          {tags.map((tag) => (
-            <li>
-              {tag.text} — {tag.count} {unitWord(tag.count)}
-            </li>
-          ))}
-        </ul>
-      </figcaption>
+      {linked ? (
+        <figcaption class='mt-8'>
+          <p class='text-sm text-secondary'>{caption}</p>
+          <ul class='mt-4 flex flex-wrap gap-2'>
+            {tags.map((tag) => (
+              <li>
+                <a
+                  href={tag.href}
+                  aria-label={`${tag.text} — ${tag.count} ${unitWord(tag.count)}`}
+                  class='text-sm text-secondary px-3 py-1 ui-focus-ring border border-border rounded-full inline-flex gap-1.5 transition items-baseline hover:text-accent dark:border-border/40 hover:bg-heavenlyPink/50 dark:hover:bg-grapeade/30'
+                >
+                  <span>{tag.text}</span>
+                  <span class='text-xs text-graniteGray tabular-nums dark:text-opalGray'>
+                    {tag.count}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </figcaption>
+      ) : (
+        <figcaption class='sr-only'>
+          {caption}
+          <ul>
+            {tags.map((tag) => (
+              <li>
+                {tag.text} — {tag.count} {unitWord(tag.count)}
+              </li>
+            ))}
+          </ul>
+        </figcaption>
+      )}
     </figure>
   )
 }
@@ -57,7 +93,12 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
   interface Tag {
     text: string
     count: number
+    href?: string
   }
+
+  const SVG_NS = 'http://www.w3.org/2000/svg'
+  /** Widens each label's click target past the glyph strokes themselves. */
+  const HIT_PAD = 3
 
   interface TagNode extends Tag {
     /** Half-extent of the label's box at its largest pulse, plus the separation gap. */
@@ -94,6 +135,8 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
     const data: Tag[] = JSON.parse(container.getAttribute('data-tags') || '[]')
     if (data.length === 0) return
 
+    const linked = data.some((tag) => tag.href)
+    let pointerHeld = false
     let animationRunning = false
     let animationFrameId: number | null = null
     let observer: IntersectionObserver | null = null
@@ -147,7 +190,17 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
         .join('g')
         .attr('class', (_d, i) => `wc-tag wc-c${i % PALETTE_SIZE}`)
 
-      const labels = groups
+      // Where a tag has a page of its own, wrap its label in a link so it is clickable
+      // where it is drawn; where it has none — the work history — the wrapper is an inert
+      // <g> and the cloud behaves exactly as it did. tabindex="-1" keeps the links out of
+      // the tab order on purpose: the container is aria-hidden, and an element a keyboard
+      // can reach but a screen reader cannot see is worse than either alone.
+      const hosts = groups
+        .append((d) => document.createElementNS(SVG_NS, d.href ? 'a' : 'g'))
+        .attr('href', (d) => d.href ?? null)
+        .attr('tabindex', (d) => (d.href ? -1 : null))
+
+      const labels = hosts
         .append('text')
         .attr('text-anchor', 'middle')
         .attr('dominant-baseline', 'central')
@@ -168,6 +221,22 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
       if (shrink < 1) {
         labels.style('font-size', (d) => `${fontFor(d.count) * shrink}px`)
         boxes = measure()
+      }
+
+      // Give each link a rectangular hit area, sized from the box just measured. An SVG
+      // <text> is hit only where a glyph is actually painted, so without this the gaps
+      // inside the letters are misses and a thirteen-pixel label is barely clickable at
+      // all. fill="none" with pointer-events="all" takes the pointer across the whole box
+      // while painting nothing, so the rectangle can sit above the label without hiding it.
+      if (linked) {
+        hosts
+          .append('rect')
+          .attr('x', (_d, i) => boxes[i].x - HIT_PAD)
+          .attr('y', (_d, i) => boxes[i].y - HIT_PAD)
+          .attr('width', (_d, i) => boxes[i].width + HIT_PAD * 2)
+          .attr('height', (_d, i) => boxes[i].height + HIT_PAD * 2)
+          .attr('fill', 'none')
+          .attr('pointer-events', 'all')
       }
 
       const nodes: TagNode[] = data.map((d, i) => {
@@ -323,6 +392,15 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
       const animate = (time: number) => {
         if (!animationRunning) return
 
+        // Hold still while the pointer is over a clickable cloud. The drift alone is only
+        // a few pixels a second, but the separation pass can shove a label further than
+        // that in a single frame, and a link that slides out from under the cursor as it
+        // is clicked is the one thing a decoration must not do once it is also a control.
+        if (pointerHeld) {
+          animationFrameId = requestAnimationFrame(animate)
+          return
+        }
+
         nodes.forEach((n) => {
           n.vx += (Math.random() - 0.5) * brownianStrength + (n.homeX - n.x) * n.spring
           n.vy += (Math.random() - 0.5) * brownianStrength + (n.homeY - n.y) * n.spring
@@ -402,6 +480,16 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
     render()
     window.addEventListener('resize', render)
 
+    // On the container rather than the labels: render() replaces everything inside it on
+    // every resize, so a listener bound to a label would be discarded and rebound each
+    // time, while the container itself survives for the life of the page.
+    const hold = () => (pointerHeld = true)
+    const release = () => (pointerHeld = false)
+    if (linked) {
+      container.addEventListener('pointerenter', hold)
+      container.addEventListener('pointerleave', release)
+    }
+
     // ClientRouter swaps the container on every navigation, so dataset.initialized cannot
     // see the previous element and setup runs again. Without this the old closure's
     // resize handler, observer and rAF loop all survive into the next page.
@@ -414,6 +502,8 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
       observer?.disconnect()
       observer = null
       window.removeEventListener('resize', render)
+      container.removeEventListener('pointerenter', hold)
+      container.removeEventListener('pointerleave', release)
     }
 
     container.dataset.initialized = 'true'
@@ -478,5 +568,18 @@ const unitWord = (count: number) => (count === 1 ? unit : `${unit}s`)
     max-width: 100%;
     height: auto;
     overflow: visible;
+  }
+
+  /* Only present where the tags have pages of their own, so these are anchored on the
+     link and leave the work cloud untouched. Underline rather than a colour change: the
+     six fills are each contrast-checked against their own background, and a hover colour
+     would be a seventh to check in both themes for no gain in clarity. */
+  #wordcloud a {
+    cursor: pointer;
+  }
+  #wordcloud a:hover text {
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.14em;
   }
 </style>

@@ -167,7 +167,9 @@ Motion is a weak spring back to the spiral position, stiffer for larger labels, 
 
 ### Charts are decorative; their data is not
 
-Every visualisation is `aria-hidden` and paired with an accessible text equivalent — an `sr-only` list for the word cloud, a real table beside the psychometric charts, per-bubble `aria-label`s and a keyboard-reachable modal for the superpowers. The text equivalent is also what the search index picks up, so it is never optional.
+Every visualisation is `aria-hidden` and paired with an accessible text equivalent — a list for the word cloud, a real table beside the psychometric charts, per-bubble `aria-label`s and a keyboard-reachable modal for the superpowers. The text equivalent is also what the search index picks up, so it is never optional. That last point is sharper than it sounds for anything drawn by a script: the chart does not exist in the built HTML at all, so the text equivalent is not a fallback for the visualisation — it **is** the visualisation as far as Pagefind and a reader without JavaScript are concerned.
+
+Which is what decides where a link goes when a chart becomes navigable. The article tag cloud is clickable — every label leads to that tag's page — and the labels are still `aria-hidden` and still out of the tab order, carrying `tabindex="-1"`; the text equivalent stops being `sr-only` and becomes the visible index instead. The cloud is the worse of the two to reach a link through: it drifts, it is absent until the script has run, and putting focusable elements inside an `aria-hidden` subtree hides from a screen reader something a keyboard can still land on. So the pointer gets the picture and everything else gets the list, and neither is a lesser copy of the other. A label's hit area is a transparent `rect` rather than the glyphs, because an SVG `<text>` is hit only where it is painted and the gaps inside the letters would otherwise be misses; the drift pauses while the pointer is over the cloud, since a link that slides out from under the cursor is the one thing a decoration must not do once it is also a control.
 
 ## 6. Motion & Animation
 

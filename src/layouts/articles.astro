@@ -4,7 +4,7 @@ import Layout from './layout.astro'
 import Container from '../components/container.astro'
 import PageContent from '../components/pagecontent.astro'
 import WordCloud from '../components/wordcloud.astro'
-import { ARTICLE_CATEGORIES, countTags } from '../utils/articles'
+import { ARTICLE_CATEGORIES, countArticleTags } from '../utils/articles'
 
 /**
  * The articles index: a grid of categories, then the tag cloud.
@@ -36,7 +36,7 @@ const cells = ARTICLE_CATEGORIES.map((category) => ({
   count: counts.get(category.name) ?? 0
 })).filter((cell) => cell.count > 0)
 
-const tags = countTags(articles)
+const tags = countArticleTags(articles)
 const articleWord = (count: number) => (count === 1 ? 'article' : 'articles')
 ---
 
@@ -82,7 +82,7 @@ const articleWord = (count: number) => (count === 1 ? 'article' : 'articles')
       <WordCloud
         tags={tags}
         unit='article'
-        caption='Subjects across these articles, sized by the number of articles each one appears in.'
+        caption='Subjects across these articles, sized by the number of articles each one appears in. Each one has a page of its own.'
       />
     </div>
   </Container>
