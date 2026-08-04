@@ -4,4 +4,8 @@ description: Colossal Cave Adventure, the game that founded interactive fiction,
 link: https://christham.net/adventure/
 image: ./adventure.png
 featured: true
+tags:
+  - 'Games'
+  - 'Free software'
+  - 'Web development'
 ---

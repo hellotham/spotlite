@@ -11,13 +11,12 @@ summary:
   - 'Established the architecture function, re-establishing strategic control over a fully outsourced IT operation; its governance processes and its solution architecture role were both later adopted as standards across NAB.'
   - 'Led MLC’s IT strategy in 1999 and its application architecture stream in 2001, oversaw the introduction of AdviserCentral, Compass, Masterkey and Siebel, and helped define the Enterprise Medium Term Vision and business case for the $200m Amazon Programme.'
 tags:
-  [
-    'Enterprise architecture',
-    'Solution architecture',
-    'Architecture governance',
-    'IT strategy',
-    'Wealth management'
-  ]
+  - 'Enterprise architecture'
+  - 'Solution architecture'
+  - 'Architecture governance'
+  - 'Technology strategy'
+  - 'Wealth management'
+  - 'Service oriented architecture'
 ---
 
 - Established the architecture function at MLC, re-establishing strategic control over technology from a fully outsourced IT operation managed by IBM GSA.

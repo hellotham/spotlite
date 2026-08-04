@@ -4,4 +4,7 @@ description: My adventures learning how to build websites and apps in 2020 using
 link: https://learning-jamstack.hellotham.com
 image: ./learningjamstack.png
 featured: false
+tags:
+  - 'Web development'
+  - 'Static site generators'
 ---

@@ -4,6 +4,8 @@ import { Image } from 'astro:assets'
 import Layout from './layout.astro'
 import Container from '../components/container.astro'
 import PageContent from '../components/pagecontent.astro'
+import TagList from '../components/taglist.astro'
+import { tagHref } from '../utils/tags'
 
 const { frontmatter } = Astro.props
 
@@ -51,6 +53,10 @@ let projects = await getCollection('project')
                   <span class='i-heroicons-link-solid flex-none h-6 w-6' />
                   <span class='ml-2'>{site.data.link}</span>
                 </p>
+                <TagList
+                  class='mt-4 relative z-20'
+                  tags={site.data.tags.map((tag) => ({ text: tag, href: tagHref(tag) }))}
+                />
               </li>
             ))
           }

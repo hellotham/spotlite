@@ -14,7 +14,7 @@ summary:
   - 'Contributed Section 13.2 of APQC’s global Process Classification Framework; the underlying standardisation across a group of more than 26,000 people was published by APQC as a case study reporting a 30 per cent reduction in process redundancy.'
 tags:
   [
-    'IT strategy',
+    'Technology strategy',
     'Enterprise architecture',
     'Strategic roadmaps',
     'Operating models',

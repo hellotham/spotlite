@@ -13,7 +13,7 @@ tags:
     'Systems analysis',
     'Options pricing',
     'Financial modelling',
-    'Risk analysis',
+    'Risk management',
     'Distributed systems'
   ]
 ---

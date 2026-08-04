@@ -7,7 +7,12 @@ type: employment
 image: ./ncr.png
 description: 'Consulted to organisations including St. George Bank, Franklins, Rockmans and Telstra.'
 priority: 3
-tags: ['Solution architecture', 'Retail', 'Retail banking']
+tags:
+  - 'Solution architecture'
+  - 'Retail'
+  - 'Banking'
+  - 'UNIX'
+  - 'Databases'
 ---
 
 - Joined in February 1992 as a UNIX and Relational Databases Technical Consultant in the Systems Engineering Division, supporting the NCR System 3000 platform, NCR's UNIX SVR4 MP-RAS, the relational databases running on it — Oracle, Sybase, Informix and Ingres — and NCR TOP END.

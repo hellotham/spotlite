@@ -7,7 +7,7 @@ categories:
   - 'DVD reviews'
 tags:
   - 'DVD'
-  - 'Action Thriller'
+  - 'Thriller'
 ---
 
 _This review was written by me for **MichaelDVD**, an Australian DVD review site that is no longer online. A capture of the site is held by the Internet Archive: **[browse it there](https://web.archive.org/web/20220217040146/http://www.michaeldvd.com.au/)**. It is reproduced here from my own copy of the site, as part of the record of what I have written._

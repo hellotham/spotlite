@@ -6,7 +6,7 @@ categories:
   - 'Conference papers'
   - 'Software'
 tags:
-  - 'Security'
+  - 'Cybersecurity'
   - 'Cryptography'
   - 'UNIX'
   - 'USENIX'
@@ -15,6 +15,8 @@ tags:
 _This is a reproduction of a paper presented at the USENIX Winter '91 Conference in Dallas, Texas (pp. 269–279), written with Philip Leong. I have transcribed it from a scan of the proceedings: the tables are set as tables and the code re-typed. The wording is unchanged. There is a [postscript from 2026](#postscript-thirty-five-years-on) at the end, which is not._
 
 _The six figures are the originals. The paper's own troff source survives, and with it the five xfig drawings it included and the `grap` block that draws the scatter plot, so the figures here are converted from the files the paper was typeset from rather than redrawn from the scan. Two things about them are worth stating. The type is a little larger relative to each drawing than in the proceedings, because the paper's Makefile shrank it to fit a three-inch column and nothing here needs to. And the scatter plot's vertical tick marks are placed at every second millisecond, which is a guess: `grap` chose them automatically and the source does not record what it chose._
+
+**[Download the original scanned paper (PDF, 647 KB)](/spotlite/crypt-usenix91.pdf)**
 
 **Philip Leong** – University of Sydney \
 **Chris Tham** – State Bank of Victoria
@@ -592,4 +594,5 @@ It was cited often, and the two things it argues for both became ordinary practi
 ## Sources
 
 - [The paper as published](https://phwl.org/assets/papers/crypt_usenix91.pdf), from the site of my co-author Philip Leong.
-- A scan of the proceedings, which this reproduction was transcribed from.
+- [A scan of the proceedings](/spotlite/crypt-usenix91.pdf), which this reproduction was transcribed from.
+- **[The CS3 cryptography coursework (ZIP, 25 KB)](/spotlite/crypt.zip)**, recovered from a 1992 floppy backup. Not the code behind this paper, which was written years later against `crypt(3)`, but the classical ciphers and the standard attacks on them — Caesar, Vigenère, Beaufort, Kasiski examination, index of coincidence — which is where the interest started.

@@ -14,7 +14,11 @@ const current = Astro.url.pathname
       <li>
         <a
           class:list={[
-            'relative block px-3 py-2 transition-colors duration-200 ui-focus-ring rounded-md',
+            // Tighter on the desktop row only. At exactly 1024px the menu becomes a
+            // single centred line flanked by the avatar and the theme toggle, and eight
+            // items at px-3 pushed the toggle ten pixels off the right edge. Mobile wraps
+            // and has the room, so it keeps the larger tap target.
+            'relative block px-3 py-2 transition-colors duration-200 ui-focus-ring rounded-md lg:px-2.5',
             current == `${import.meta.env.BASE_URL}${item.id}/` ||
             current == `${import.meta.env.BASE_URL}${item.id}`
               ? 'text-accent'

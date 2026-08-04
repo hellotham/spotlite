@@ -4,4 +4,9 @@ description: A homage to every HP calculator, from the 1972 HP-35 to the HP Prim
 link: https://christham.net/hellocalc/
 image: ./hellocalc.png
 featured: true
+tags:
+  - 'Calculators'
+  - 'Hewlett-Packard'
+  - 'Free software'
+  - 'Web development'
 ---

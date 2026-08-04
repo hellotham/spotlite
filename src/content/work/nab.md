@@ -12,14 +12,13 @@ summary:
   - 'Head of Architecture, Retail Banking (2006): doubled the team and introduced a new operating model, delivering target architectures for document production, imaging and workflow, and electronic forms.'
   - 'Strategy Consultant (2007): input to the Integrated Platform strategy consolidating technology and vendor diversity, strategy and architecture for the Corporate Centre functions, and the Australian region business process model.'
 tags:
-  [
-    'Enterprise architecture',
-    'Business architecture',
-    'Technology strategy',
-    'Operating models',
-    'Team leadership',
-    'Retail banking'
-  ]
+  - 'Enterprise architecture'
+  - 'Business architecture'
+  - 'Technology strategy'
+  - 'Operating models'
+  - 'Team leadership'
+  - 'Banking'
+  - 'Service oriented architecture'
 ---
 
 ## Strategy Consultant (2007)

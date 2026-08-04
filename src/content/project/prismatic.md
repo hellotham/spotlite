@@ -4,4 +4,6 @@ description: A collaboration between Greg Allardice and myself exploring alterna
 link: https://prismaticpath.com
 image: ./prismatic.png
 featured: false
+tags:
+  - 'Web development'
 ---

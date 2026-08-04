@@ -6,6 +6,8 @@ endyear: 1983
 description: 'Aggregate 488 out of 500, ranked in the top 1% of the state.'
 summary:
   - 'Aggregate mark of 488 out of 500, ranked in the top 1% of New South Wales.'
+tags:
+  - 'Mathematics'
 ---
 
 Six subjects, weighted towards mathematics and science — which is what took me into the combined Engineering/Science degree at [Sydney](/spotlite/education/usyd/) the following year.

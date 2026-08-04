@@ -7,6 +7,9 @@ image: ./sia.png
 description: 'Graduate Diploma in Applied Finance and Investment.'
 summary:
   - 'Graduate Diploma in Applied Finance and Investment, with a High Distinction in Foreign Exchange.'
+tags:
+  - 'Options pricing'
+  - 'Treasury'
 ---
 
 Eight subjects across the securities industry, foreign exchange, futures and options trading, money markets and fixed interest, taken part time from the second semester of 1990 while working as a Treasury analyst, and completed in 1992. I became an Associate of the Institute on graduating.

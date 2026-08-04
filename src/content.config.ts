@@ -3,19 +3,30 @@ import { z } from 'astro/zod'
 import { rssSchema } from '@astrojs/rss'
 import { glob, file } from 'astro/loaders'
 import { CATEGORY_NAMES } from './utils/articles'
+import { TAG_NAMES } from './utils/tags'
+
+/**
+ * Subjects, shared by every collection that carries them.
+ *
+ * A closed enum on purpose. Tags are counted into the word clouds and every distinct one
+ * publishes a page at /tag/<slug>/, so a typo or a reworded synonym does not degrade
+ * gracefully — it silently splits a subject across two pages, each claiming to be the
+ * whole of it. Failing the build naming the offending value is the only version of this
+ * that stays true a year later. See src/utils/tags.ts to add one.
+ */
+const tags = z.array(z.enum(TAG_NAMES)).default([])
 
 const article = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/article' }),
   // rssSchema supplies title, description, pubDate and the rest of the feed's fields.
-  // The taxonomy is added on top; see src/utils/articles.ts for why categories are a
-  // closed set and tags are not.
+  // The taxonomy is added on top: categories in src/utils/articles.ts are article-only,
+  // and tags in src/utils/tags.ts are shared with every other tagged collection. Both
+  // are closed sets now — see the note on `tags` above for why that had to happen.
   schema: rssSchema.extend({
     // At least one: an uncategorised article appears in no grid cell and is reachable
     // only from the feed, which is how a piece quietly stops being findable.
     categories: z.array(z.enum(CATEGORY_NAMES)).min(1),
-    // Weighted into the cloud on /articles by how many articles carry each one, so the
-    // vocabulary has to be reused between entries rather than reworded per entry.
-    tags: z.array(z.string()).default([])
+    tags
   })
 })
 
@@ -27,7 +38,8 @@ const project = defineCollection({
       description: z.string(),
       link: z.url(),
       image: image(),
-      featured: z.boolean().optional()
+      featured: z.boolean().optional(),
+      tags
     })
 })
 
@@ -61,13 +73,7 @@ const work = defineCollection({
         // Condensed key points, written by hand from the body. Required at priority 1
         // and 2, which is enforced below.
         summary: z.array(z.string()).optional(),
-        // Capabilities, domains and technologies this role involved. Aggregated across
-        // the collection into the word cloud on /work, where a tag's size is how many
-        // roles carry it — so the vocabulary has to be reused deliberately between
-        // entries rather than reworded per entry ("IT strategy" and "Technology
-        // strategy" are distinct tags on purpose; "Analytics" vs "Data analytics"
-        // would be an accident).
-        tags: z.array(z.string()).optional().default([]),
+        tags,
         // Optional: an entry with no real mark falls back to a text monogram.
         image: image().optional(),
         // Optional extended wordmark, used where there is room for it (the detail page
@@ -109,7 +115,8 @@ const education = defineCollection({
       // Background of the logo tile, so a mark with its own solid background reads as a
       // seamless circular logo rather than floating on a contrasting disc. Defaults to
       // white, which suits both white-background and transparent marks.
-      logoBackground: z.string().optional()
+      logoBackground: z.string().optional(),
+      tags
     })
 })
 
@@ -147,7 +154,8 @@ const creation = defineCollection({
     parent: z.string().optional(),
     description: z.string(),
     action: z.string().optional(),
-    link: z.string().optional()
+    link: z.string().optional(),
+    tags
   })
 })
 

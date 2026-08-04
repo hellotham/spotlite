@@ -16,7 +16,7 @@ tags:
   [
     'Business cases',
     'Financial modelling',
-    'Machine learning',
+    'Artificial intelligence',
     'Chatbots',
     'Swift',
     'iOS',

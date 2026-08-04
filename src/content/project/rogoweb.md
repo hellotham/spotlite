@@ -4,4 +4,9 @@ description: The classic 1980 Unix game Rogue and its automated player Rog-O-Mat
 link: https://christham.net/rogoweb/
 image: ./rogoweb.png
 featured: true
+tags:
+  - 'Games'
+  - 'Free software'
+  - 'UNIX'
+  - 'Web development'
 ---

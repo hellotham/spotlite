@@ -3,60 +3,136 @@ import { getCollection } from 'astro:content'
 import Layout from '../../layouts/layout.astro'
 import Container from '../../components/container.astro'
 import ArticleIndex from '../../components/articleindex.astro'
-import RoleIndex from '../../components/roleindex.astro'
+import EntryIndex from '../../components/entryindex.astro'
+import type { Entry } from '../../components/entryindex.astro'
 import { tagIndex, taggedWith } from '../../utils/tags'
+import { formatDateRange } from '../../utils/timeline'
 
 /**
- * One page per tag, showing everything carrying it — the articles and the roles.
+ * One page per tag, showing everything carrying it across every tagged collection.
  *
- * At the site root rather than under /articles/, because the vocabulary is shared and a
- * third of it is work-only: "SAP" filed under /articles/ would name a page that lists no
- * articles at all. The static `tag` segment beats the catch-all page route at
- * src/pages/[...page].astro, which would otherwise claim the same URL.
+ * At the site root, not under /articles/, because the vocabulary is shared by five
+ * collections and much of it never touches an article: "SAP" filed under /articles/ would
+ * name a page that lists no articles at all. The static `tag` segment beats the catch-all
+ * page route at src/pages/[...page].astro, which would otherwise claim the same URL.
  *
- * The two sections are the point rather than an accident of storage. Six articles about
- * enterprise architecture and the six roles that practised it are one subject seen twice,
- * and a reader arriving from either cloud is asking the same question of both.
+ * The sections are the point rather than an accident of storage. The articles about
+ * enterprise architecture, the roles that practised it and the qualifications behind it
+ * are one subject seen from several sides, and a reader arriving from any cloud is asking
+ * the same question of all of them.
  *
  * Categories stay article-only and are the other axis: an article is filed under where it
- * was published and what it is about, and tagged with its subjects, which cut across both.
+ * was published and what it is about, and tagged with subjects that cut across everything.
  */
 export async function getStaticPaths() {
-  const [articles, roles] = await Promise.all([getCollection('article'), getCollection('work')])
+  const [articles, roles, projects, education, creations] = await Promise.all([
+    getCollection('article'),
+    getCollection('work'),
+    getCollection('project'),
+    getCollection('education'),
+    getCollection('creation')
+  ])
 
-  // Both collections at once: the slugs have to be unique across the whole vocabulary, or
-  // two pages would compete for one URL.
-  return tagIndex([...articles, ...roles]).map(({ tag, slug }) => ({
-    params: { tag: slug },
-    props: {
-      tag,
-      articles: taggedWith(articles, tag).sort((a, b) =>
-        a.data.pubDate && b.data.pubDate ? +b.data.pubDate - +a.data.pubDate : 0
-      ),
-      roles: taggedWith(roles, tag).sort(
-        (a, b) =>
-          (b.data.endyear ?? 9999) - (a.data.endyear ?? 9999) || b.data.startyear - a.data.startyear
-      )
-    }
-  }))
+  const byYearDesc = (
+    a: { data: { endyear?: number; startyear: number } },
+    b: { data: { endyear?: number; startyear: number } }
+  ) => (b.data.endyear ?? 9999) - (a.data.endyear ?? 9999) || b.data.startyear - a.data.startyear
+
+  // Every collection at once: slugs have to be unique across the whole vocabulary, or two
+  // pages would compete for one URL and the winner would depend on route ordering.
+  return tagIndex([...articles, ...roles, ...projects, ...education, ...creations]).map(
+    ({ tag, slug }) => ({
+      params: { tag: slug },
+      props: {
+        tag,
+        articles: taggedWith(articles, tag).sort((a, b) =>
+          a.data.pubDate && b.data.pubDate ? +b.data.pubDate - +a.data.pubDate : 0
+        ),
+        roles: taggedWith(roles, tag)
+          .sort(byYearDesc)
+          .map((role): Entry => ({
+            href: `${import.meta.env.BASE_URL}work/${role.id}/`,
+            title: role.data.company,
+            subtitle: role.data.role + (role.data.type === 'consulting' ? ' (Consulting)' : ''),
+            description: role.data.description,
+            meta: formatDateRange(role.data.startyear, role.data.endyear),
+            cta: 'Read more'
+          })),
+        education: taggedWith(education, tag)
+          .sort(byYearDesc)
+          .map((item): Entry => ({
+            href: `${import.meta.env.BASE_URL}education/${item.id}/`,
+            title: item.data.institution,
+            subtitle: item.data.degree,
+            description: item.data.description,
+            meta: formatDateRange(item.data.startyear, item.data.endyear),
+            cta: 'Read more'
+          })),
+        projects: taggedWith(projects, tag)
+          .sort((a, b) => a.data.title.localeCompare(b.data.title))
+          .map((project): Entry => ({
+            href: project.data.link,
+            title: project.data.title,
+            description: project.data.description,
+            cta: 'Visit the site',
+            external: true
+          })),
+        creations: taggedWith(creations, tag)
+          .sort((a, b) => a.data.item.localeCompare(b.data.item))
+          .map((creation): Entry => ({
+            href: creation.data.link ?? '',
+            title: creation.data.item,
+            subtitle: creation.data.parent,
+            description: creation.data.description,
+            cta: creation.data.action ?? 'Open',
+            external: true
+          }))
+      }
+    })
+  )
 }
 
-const { tag, articles, roles } = Astro.props
+const { tag, articles, roles, education, projects, creations } = Astro.props
 
-const count = (n: number, noun: string) => `${n} ${n === 1 ? noun : `${noun}s`}`
-const parts = [
-  articles.length > 0 && count(articles.length, 'article'),
-  roles.length > 0 && count(roles.length, 'role')
-].filter(Boolean)
+const plural = (n: number, noun: string) => `${n} ${n === 1 ? noun : `${noun}s`}`
 
-// Whichever side the tag actually has. Most tags are on articles, a third are work-only,
-// and a back link to /articles/ from a tag with no articles would be a dead end.
-const back =
+// Declared in the order the sections appear, so the summary line reads in the order the
+// reader is about to scroll through.
+const sections = [
+  { key: 'writing', heading: 'Writing', noun: 'article', count: articles.length },
+  { key: 'work', heading: 'Work', noun: 'role', count: roles.length },
+  { key: 'education', heading: 'Education', noun: 'qualification', count: education.length },
+  { key: 'projects', heading: 'Projects', noun: 'project', count: projects.length },
+  { key: 'creations', heading: 'Creations', noun: 'recording', count: creations.length }
+].filter((section) => section.count > 0)
+
+const entriesFor = (key: string): Entry[] =>
+  key === 'work'
+    ? roles
+    : key === 'education'
+      ? education
+      : key === 'projects'
+        ? projects
+        : creations
+
+const summary = sections.map((s) => plural(s.count, s.noun))
+const list =
+  summary.length > 1 ? `${summary.slice(0, -1).join(', ')} and ${summary.at(-1)}` : summary[0]
+
+// Back to whichever side the tag actually has. Most tags reach an article, but a good
+// share never do, and a link to /articles/ from one of those is a dead end.
+const home =
   articles.length > 0
-    ? { href: `${import.meta.env.BASE_URL}articles/`, label: 'All articles' }
-    : { href: `${import.meta.env.BASE_URL}work/`, label: 'Work history' }
+    ? { href: 'articles/', label: 'All articles' }
+    : roles.length > 0
+      ? { href: 'work/', label: 'Work history' }
+      : projects.length > 0
+        ? { href: 'projects/', label: 'Projects' }
+        : education.length > 0
+          ? { href: 'education/', label: 'Education' }
+          : { href: 'creations/', label: 'Creations' }
 
-const description = `Everything tagged ${tag} — ${parts.join(' and ')}, across the writing and the work.`
+const description = `Everything tagged ${tag} — ${list}, across the writing, the work and everything else.`
 ---
 
 <Layout title={tag} description={description} itemPage={true} collectionPage={true}>
@@ -64,38 +140,40 @@ const description = `Everything tagged ${tag} — ${parts.join(' and ')}, across
     <div class='mx-auto max-w-2xl lg:max-w-5xl'>
       <header class='max-w-2xl'>
         <a
-          href={back.href}
+          href={`${import.meta.env.BASE_URL}${home.href}`}
           class='text-sm text-accent font-medium ui-focus-ring rounded-lg inline-flex items-center hover:underline'
         >
           <span class='i-heroicons-chevron-left mr-1 h-4 w-4 stroke-current' aria-hidden='true'
           ></span>
-          {back.label}
+          {home.label}
         </a>
-        <p class='text-sm text-secondary tracking-wide font-medium mt-4 uppercase'>Tagged</p>
+        <p class='text-sm text-secondary tracking-wide font-medium mt-4 uppercase'>
+          <a
+            href={`${import.meta.env.BASE_URL}tags/`}
+            class='ui-focus-ring rounded hover:text-accent hover:underline'>Tagged</a
+          >
+        </p>
         <h1 class='text-4xl text-primary tracking-tight font-bold font-serif mt-1 sm:text-5xl'>
           {tag}
         </h1>
         <!-- One expression, not two: adjacent expressions on separate lines render with no
              space between them, which reads as "51articles." -->
-        <p class='text-base text-secondary mt-6'>{`${parts.join(' and ')}, newest first.`}</p>
+        <p class='text-base text-secondary mt-6'>{`${list}.`}</p>
       </header>
 
       {
-        articles.length > 0 && (
+        sections.map((section) => (
           <section class='mt-16 sm:mt-20'>
-            <h2 class='text-sm text-secondary tracking-wide font-medium uppercase'>Writing</h2>
-            <ArticleIndex {articles} class='mt-8' headingLevel={3} />
+            <h2 class='text-sm text-secondary tracking-wide font-medium uppercase'>
+              {section.heading}
+            </h2>
+            {section.key === 'writing' ? (
+              <ArticleIndex {articles} class='mt-8' headingLevel={3} />
+            ) : (
+              <EntryIndex entries={entriesFor(section.key)} class='mt-8' headingLevel={3} />
+            )}
           </section>
-        )
-      }
-
-      {
-        roles.length > 0 && (
-          <section class='mt-16 sm:mt-20'>
-            <h2 class='text-sm text-secondary tracking-wide font-medium uppercase'>Work</h2>
-            <RoleIndex {roles} class='mt-8' headingLevel={3} />
-          </section>
-        )
+        ))
       }
     </div>
   </Container>

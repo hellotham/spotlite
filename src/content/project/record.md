@@ -4,4 +4,8 @@ description: Explore my LP collection. Will eventually be integrated into the pe
 link: https://christham-net.netlify.app/
 image: ./record.png
 featured: false
+tags:
+  - 'Music'
+  - 'Vinyl'
+  - 'Web development'
 ---

@@ -4,4 +4,7 @@ description: Rosely is my attempt at building a design system. This currently in
 link: https://rosely.hellotham.com
 image: ./rosely.png
 featured: false
+tags:
+  - 'Design systems'
+  - 'Web development'
 ---

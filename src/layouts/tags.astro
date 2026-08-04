@@ -1,0 +1,86 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from './layout.astro'
+import Container from '../components/container.astro'
+import PageContent from '../components/pagecontent.astro'
+import TagList from '../components/taglist.astro'
+import { TAG_GROUPS, countTags, tagHref } from '../utils/tags'
+
+/**
+ * The whole vocabulary, in one page, grouped as it is declared.
+ *
+ * The clouds show where the work concentrated and the tag pages show what is under one
+ * word, but neither lets you see the vocabulary itself — a cloud sizes by weight, so the
+ * singletons are unreadable, and there are a lot of singletons. This is the plain list,
+ * which is the only view that answers "is there already a word for this?" before someone
+ * invents a second one.
+ *
+ * Grouped rather than alphabetised for that reason: near-synonyms are invisible in an
+ * alphabetical list and obvious when they sit three lines apart under one heading. The
+ * groups are declared in src/utils/tags.ts and carry no other behaviour.
+ */
+const { frontmatter } = Astro.props
+
+const collections = await Promise.all([
+  getCollection('article'),
+  getCollection('work'),
+  getCollection('project'),
+  getCollection('education'),
+  getCollection('creation')
+])
+
+const counts = new Map(countTags(collections.flat()).map((tag) => [tag.text, tag.count]))
+
+// A canonical tag with nothing carrying it is a real state — a word declared ahead of the
+// content, or left behind when its last entry was retagged — and it has no page, so it
+// must not be rendered as a link to one.
+const groups = Object.entries(TAG_GROUPS).map(([name, tags]) => ({
+  name,
+  used: (tags as readonly string[])
+    .filter((tag) => counts.has(tag))
+    .map((tag) => ({ text: tag, href: tagHref(tag), count: counts.get(tag)! })),
+  unused: (tags as readonly string[]).filter((tag) => !counts.has(tag))
+}))
+
+const total = counts.size
+const entries = collections.flat().filter((entry) => (entry.data.tags ?? []).length > 0).length
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  itemPage={true}
+  collectionPage={true}
+>
+  <Container class='mt-16 sm:mt-32'>
+    <div class='mx-auto max-w-2xl lg:max-w-5xl'>
+      <PageContent {frontmatter}>
+        <slot />
+      </PageContent>
+
+      <!-- One expression, not two: adjacent expressions on separate lines render with no
+           space between them, which reads as "152tags". -->
+      <p class='text-sm text-secondary mt-8'>
+        {`${total} tags in use, across ${entries} entries.`}
+      </p>
+
+      <div class='mt-16 space-y-12 sm:mt-20'>
+        {
+          groups.map((group) => (
+            <section>
+              <h2 class='text-sm text-secondary tracking-wide font-medium uppercase'>
+                {group.name}
+              </h2>
+              <TagList tags={group.used} unit='entry' class='mt-4' />
+              {group.unused.length > 0 && (
+                <p class='text-sm text-graniteGray mt-3 dark:text-opalGray'>
+                  Declared but unused: {group.unused.join(', ')}.
+                </p>
+              )}
+            </section>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</Layout>

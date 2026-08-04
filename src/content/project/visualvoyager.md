@@ -4,4 +4,7 @@ description: This is my photography website, for exploring the world we live in,
 link: https://visualvoyager.net
 image: ./visualvoyager.png
 featured: true
+tags:
+  - 'Photography'
+  - 'Web development'
 ---

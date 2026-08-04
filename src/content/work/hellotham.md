@@ -17,7 +17,7 @@ tags:
     'Enterprise architecture',
     'Operating models',
     'Strategic roadmaps',
-    'Data science',
+    'Data analytics',
     'Digital products',
     'Swift',
     'macOS',

@@ -18,7 +18,211 @@
  * between them.
  */
 
-/** The shape both collections satisfy — nothing here needs to know which one it has. */
+/**
+ * The canonical vocabulary.
+ *
+ * Every tag on every entry must appear here, and `src/content.config.ts` enforces it with
+ * a Zod enum, so a typo or a reworded synonym fails the build naming the offender rather
+ * than quietly publishing a second page and splitting the entries between them. That
+ * enforcement is the whole point: the vocabulary is only worth counting if it is reused
+ * deliberately, and before it was closed "IT strategy" and "Technology strategy" had
+ * drifted apart across two roles at the same bank.
+ *
+ * Grouped rather than alphabetical, because the failure mode this guards against is a
+ * near-synonym, and near-synonyms are invisible in an alphabetical list of 152 strings —
+ * "Data analytics" and "Data science" sorted three apart and still took a year to notice.
+ * Read the group before adding to it. The groups have no behaviour beyond ordering the
+ * index at /tags/; moving a tag between them changes nothing else.
+ *
+ * `.claude/skills/tags` reviews this against what the content actually uses, and covers
+ * how to add, merge or rename one — a rename is a content edit as well as a list edit,
+ * and doing only half of it fails the build, which is the intended outcome.
+ */
+export const TAG_GROUPS = {
+  'Music and recordings': [
+    'Album review',
+    'Arrangement',
+    'CD',
+    'Chamber music',
+    'Choral',
+    'Classical',
+    'Country',
+    'DSD',
+    'DVD-Audio',
+    'Electronic music',
+    'Glenn Gould',
+    'IsoMike',
+    'Jazz',
+    'Loudness war',
+    'Melba Recordings',
+    'Multichannel',
+    'Music',
+    'Musical',
+    'New age',
+    'Opera',
+    'Orchestral',
+    'Piano',
+    'Pop and rock',
+    'SACD',
+    'Vinyl',
+    'Wagner',
+    'World music'
+  ],
+  'Film and television': [
+    'Action',
+    'Comedy',
+    'Documentary',
+    'Drama',
+    'DVD',
+    'Science Fiction',
+    'Thriller'
+  ],
+  'Audio and video hardware': [
+    'Denon',
+    'Digital audio',
+    'Digital television',
+    'DVD player',
+    'Hardware review',
+    'Home theatre',
+    'Home theatre PC',
+    'Linn',
+    'Measurement',
+    'NAD',
+    'Performance',
+    'Pioneer',
+    'Remote controls',
+    'Signal processing',
+    'Sony'
+  ],
+  'Architecture and strategy': [
+    'AI architecture',
+    'Architecture governance',
+    'Architecture practice',
+    'Business architecture',
+    'Business cases',
+    'Digital adoption',
+    'Digital products',
+    'Enterprise architecture',
+    'Infrastructure strategy',
+    'Knowledge management',
+    'LeanIX',
+    'Operating models',
+    'Process frameworks',
+    'Reference architecture',
+    'Service oriented architecture',
+    'Solution architecture',
+    'Strategic roadmaps',
+    'Strategy consulting',
+    'Technical debt',
+    'Technology strategy'
+  ],
+  'Software and computing': [
+    'AWS',
+    'Agentic AI',
+    'Artificial intelligence',
+    'Assembly language',
+    'Astro',
+    'Chatbots',
+    'Client/server',
+    'Compilers',
+    'Computer science',
+    'Cryptography',
+    'Cybersecurity',
+    'Data analytics',
+    'Data centres',
+    'Databases',
+    'Design systems',
+    'Distributed systems',
+    'Electronic commerce',
+    'Embedded systems',
+    'File formats',
+    'Free software',
+    'Games',
+    'Information systems',
+    'IoT',
+    'Networking',
+    'Preservation',
+    'Privacy',
+    'Programming languages',
+    'Reverse engineering',
+    'SAP',
+    'ServiceNow',
+    'Software development',
+    'Software review',
+    'Static site generators',
+    'Swift',
+    'Systems administration',
+    'Systems analysis',
+    'Tableau',
+    'Transaction processing',
+    'UNIX',
+    'Web development',
+    'Web services',
+    'Windows',
+    'iOS',
+    'macOS'
+  ],
+  Finance: [
+    'Banking',
+    'Bond',
+    'Financial modelling',
+    'Insurance',
+    'Options pricing',
+    'Retail',
+    'Risk management',
+    'Treasury',
+    'Wealth management'
+  ],
+  'Working life': [
+    'Design thinking',
+    'Higher education',
+    'Mentoring',
+    'Retirement',
+    'Social media',
+    'Teaching',
+    'Team leadership',
+    'Working life'
+  ],
+  'Institutions and publications': [
+    'APC magazine',
+    'APQC',
+    'AUUG',
+    'Broadspectrum',
+    'Hewlett-Packard',
+    'MLC',
+    'Macquarie University',
+    'NAB',
+    'NCR',
+    'Optech',
+    'USENIX',
+    'University of Sydney',
+    'Usenet'
+  ],
+  'Interests and elsewhere': [
+    'Books',
+    'Buddhism',
+    'Calculators',
+    'Curiosities',
+    'Cycling',
+    'Family',
+    'Mathematics',
+    'Photography',
+    'Travel'
+  ]
+} as const satisfies Record<string, readonly string[]>
+
+/** Flat, in group order. */
+export const CANONICAL_TAGS: readonly string[] = Object.values(TAG_GROUPS).flat()
+
+/** For the Zod enum that validates frontmatter across every tagged collection. */
+export const TAG_NAMES = CANONICAL_TAGS as [string, ...string[]]
+
+/** The group a tag belongs to, for the index at /tags/. */
+export const groupOf = (tag: string) =>
+  (Object.entries(TAG_GROUPS).find(([, tags]) => (tags as readonly string[]).includes(tag)) ??
+    [])[0]
+
+/** The shape every tagged collection satisfies — nothing here needs to know which one it has. */
 export interface Tagged {
   data: { tags?: string[] }
 }

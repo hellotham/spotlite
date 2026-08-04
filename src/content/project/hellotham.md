@@ -4,4 +4,7 @@ description: I founded a boutique strategic consulting company called Hello Tham
 link: https://hellotham.com
 image: ./hellotham.png
 featured: true
+tags:
+  - 'Web development'
+  - 'Strategy consulting'
 ---

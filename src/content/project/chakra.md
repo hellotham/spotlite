@@ -4,4 +4,7 @@ description: This site showcases example Chakra components (based on MerakiUI bu
 link: https://my-chakra-components.vercel.app/
 image: ./chakra.png
 featured: false
+tags:
+  - 'Web development'
+  - 'Design systems'
 ---

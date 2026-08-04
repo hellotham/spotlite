@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content'
 import Layout from './layout.astro'
 import PageContent from '../components/pagecontent.astro'
+import TagList from '../components/taglist.astro'
+import { tagHref } from '../utils/tags'
 
 const { frontmatter } = Astro.props
 
@@ -75,6 +77,13 @@ const creationsList = sections.map((section) => ({
                                   {item.action}
                                   <span class='i-heroicons-chevron-right ml-1 h-4 w-4 stroke-current' />
                                 </div>
+                                <TagList
+                                  class='mt-4 relative z-20'
+                                  tags={item.tags.map((tag: string) => ({
+                                    text: tag,
+                                    href: tagHref(tag)
+                                  }))}
+                                />
                               </article>
                             ))}
                           </div>

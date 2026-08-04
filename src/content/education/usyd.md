@@ -8,6 +8,10 @@ description: 'University Medal, the E. Trenchard Miller Memorial Scholarship, an
 summary:
   - 'Honours thesis **Rubato**, a language for writing music down that reads like music rather than like code, coupled to a system that performs it. Graded First Class with the University Medal.'
   - 'Held the E. Trenchard Miller Memorial Scholarship from 1984 to 1987, and was awarded a University Postgraduate Research Award upon graduation.'
+tags:
+  - 'University of Sydney'
+  - 'Computer science'
+  - 'Mathematics'
 ---
 
 Admitted in 1984 as a candidate for the combined Bachelor of Science and Bachelor of Electrical Engineering, and chose not to complete the engineering half — which is why the electrical and drafting subjects sit alongside the computer science below. High Distinctions in all three years of computer science, and in first year physics and chemistry.

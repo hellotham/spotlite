@@ -4,4 +4,8 @@ description: A site dedicated to the students of Sydney University Computer Scie
 link: https://hons87.github.io
 image: ./hons87.png
 featured: false
+tags:
+  - 'University of Sydney'
+  - 'Computer science'
+  - 'Web development'
 ---

@@ -1,0 +1,101 @@
+---
+/**
+ * A dated list of entries, ruled down the left, for everything on a tag page that is not
+ * an article: roles, projects, qualifications and recordings.
+ *
+ * One component rather than four because a tag page stacks them and they are the same
+ * subject seen from different sides — they should not look like four different websites.
+ * The caller normalises its collection into `Entry`, which is where the differences
+ * actually live: a role has a company and a position, a recording has a title and where
+ * it is hosted, and only some of them lead off-site.
+ *
+ * Articles keep their own articleindex.astro, because the category pages use it too and
+ * it is the one shape that has to stay identical across two pages.
+ */
+export interface Entry {
+  /** Where the title links. May be off-site. */
+  href: string
+  /** The heading: a company, a project, an institution, a piece. */
+  title: string
+  /** A line under the title: the role, the degree, the host. */
+  subtitle?: string
+  description: string
+  /** Shown to the right on wide screens: a year range, or nothing. */
+  meta?: string
+  /** Wording of the affordance — "Read more", "Visit the site", "Watch". */
+  cta: string
+  /** Off-site links get rel/target and a different icon, so the jump is not a surprise. */
+  external?: boolean
+}
+
+interface Props {
+  entries: Entry[]
+  /** Spacing above the list, supplied by the caller. See articleindex.astro. */
+  class?: string
+  /** Level for each entry's own heading, for the same reason as articleindex.astro. */
+  headingLevel?: 2 | 3
+}
+
+const { entries, class: className, headingLevel = 2 } = Astro.props
+
+const Heading = `h${headingLevel}` as 'h2' | 'h3'
+---
+
+<div class:list={[className]}>
+  <div class='md:pl-6 md:border-l md:border-barelyPink md:dark:border-grapeade/40'>
+    <div class='flex flex-col space-y-16'>
+      {
+        entries.map((entry) => (
+          <article class='md:grid md:grid-cols-4 md:items-baseline'>
+            <div class='group flex flex-col items-start relative md:col-span-3'>
+              {entry.meta && (
+                <p class='text-sm text-graniteGray mb-3 pl-3.5 flex items-center order-first relative z-10 dark:text-opalGray md:hidden'>
+                  <span class='flex items-center inset-y-0 left-0 absolute' aria-hidden='true'>
+                    <span class='rounded-full bg-barelyPink h-4 w-0.5 dark:bg-morningGlory' />
+                  </span>
+                  {entry.meta}
+                </p>
+              )}
+              <Heading class='text-base text-accent tracking-tight font-semibold font-serif'>
+                <div class='bg-heavenlyPink/50 opacity-0 scale-95 transition absolute z-0 sm:rounded-2xl dark:bg-grapeade/30 group-hover:opacity-100 group-hover:scale-100 -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                <a
+                  href={entry.href}
+                  target={entry.external ? '_blank' : undefined}
+                  rel={entry.external ? 'noopener noreferrer' : undefined}
+                >
+                  <span class='absolute z-20 sm:rounded-2xl -inset-x-4 -inset-y-6 sm:-inset-x-6' />
+                  <span class='relative z-10'>{entry.title}</span>
+                </a>
+              </Heading>
+              {entry.subtitle && (
+                <p class='text-sm text-primary font-medium mt-1 relative z-10'>{entry.subtitle}</p>
+              )}
+              <p class='text-sm text-graniteGray mt-2 relative z-10 dark:text-opalGray'>
+                {entry.description}
+              </p>
+              <div
+                aria-hidden='true'
+                class='text-sm text-accent font-medium mt-4 flex items-center relative z-10'
+              >
+                {entry.cta}
+                <span
+                  class:list={[
+                    'ml-1 h-4 w-4 stroke-current',
+                    entry.external
+                      ? 'i-heroicons-arrow-top-right-on-square'
+                      : 'i-heroicons-chevron-right'
+                  ]}
+                />
+              </div>
+            </div>
+            {entry.meta && (
+              <p class='text-sm text-graniteGray mb-3 mt-1 flex hidden items-center order-first relative z-10 dark:text-opalGray md:block'>
+                {entry.meta}
+              </p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</div>
