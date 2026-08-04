@@ -28,7 +28,7 @@ This is a made-for-video feature, presented in the original aspect ratio of 1.33
 
 The film itself appears to be somewhat grainy with slightly desaturated colours. It has some dirt and scratches but no major marks. I would rate the sharpness, detail and black levels to be below average.
 
-The video transfer appears to have a number of glitches. I originally started noting the approximate timer locations of these but I gave up after encountering the fifth. Suffice to say you will encounter a video glitch in the transfer ever 5 minutes or so. The transfer itself seems almost designed to show off what video/MPEG artefacts are - I can detect examples of pixelation, colour smearing, posterisation, shimmering (**17:45
+The video transfer appears to have a number of glitches. I originally started noting the approximate timer locations of these but I gave up after encountering the fifth. Suffice to say you will encounter a video glitch in the transfer ever 5 minutes or so. The transfer itself seems almost designed to show off what video/MPEG artefacts are - I can detect examples of pixelation, colour smearing, posterisation, shimmering (17:45
 
 ## The audio transfer
 

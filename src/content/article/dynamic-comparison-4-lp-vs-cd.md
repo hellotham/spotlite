@@ -37,7 +37,7 @@ I selected the following songs from the following albums:
 - _Mick's Blessings_ from **_Café Bleu_** ( **The Style Council** ) LP ( Polydor 817 535-1) 1984 Australian PolyGram pressing, purchased new Original CD release ( Polydor 817 535-2) 1984 PolyGram made in Germany , purchased new "Digitally Remastered" CD re-release ( Polydor 557 915-2) 2000 Universal made in the EU, purchased new
 - _What's New_ from **What's New** ( **Linda Ronstadt** and **The Nelson Riddle Orchestra** ) LP (Asylum 9 60260) 1983 USA WEA pressing, purchased second hand DVD-Audio (Elektra/Asylum/Rhino 8122-78341-9) 2002 Warner Strategic Marketing made in Germany , purchased new
 - _Genesis Ch.1.V.32_ from **_I Robot_** ( **The Alan Parsons Project** ) LP (Arista Code 304 AL.7002) 1977 Australian EMI pressing, purchased second hand DVD-Audio (Classic HDAD 2003) 2004 Classic USA release, purchased new
-- _More Than This_ from **_Avalon_** ( **Roxy** **Music** ) LP (EG 2311 154) 1982 Australian PolyGram pressing, purchased second hand Hybrid SACD (Virgin ROXYSACD 9) 2003 Virgin made in Holland , purchased new
+- _More Than This_ from **_Avalon_** ( **Roxy Music** ) LP (EG 2311 154) 1982 Australian PolyGram pressing, purchased second hand Hybrid SACD (Virgin ROXYSACD 9) 2003 Virgin made in Holland , purchased new
 
 Notice that most of the LPs are second hand. LPs deteriorate with every play, so this comparison is potentially biased against LPs.
 

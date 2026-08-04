@@ -18,7 +18,7 @@ _1981 · directed by John Glen._
 
 ## The film
 
-_**For Your Eyes Only**_ is definitely one of the better Bond films featuring **Roger Moore** as James Bond. In fact, I would even go as far to say that I would nominate either this film or _The Spy Who Loved Me_ as my personal favourite Roger Moore Bond film.
+_<strong>For Your Eyes Only</strong>_ is definitely one of the better Bond films featuring **Roger Moore** as James Bond. In fact, I would even go as far to say that I would nominate either this film or _The Spy Who Loved Me_ as my personal favourite Roger Moore Bond film.
 
 First of all, the film has taken all the classic elements of a Bond flick and mixed them in reasonable proportions: exotic locations, an exciting ski sequence, a car chase and underwater scenes, lots of explosions, and of course beautiful women (including, as discovered later, **Caroline Cossey** - a male-to-female transsexual with a stage name of **Tula** - as one of the bikini-clad beauties lounging around Hector Gonzalez's villa and swimming pool).
 

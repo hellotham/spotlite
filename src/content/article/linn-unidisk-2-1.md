@@ -263,9 +263,9 @@ In terms of smoothness in pans and movement on screen, the Unidisk reminded me s
 
 One advantage the Unidisk has in being a later generation player is that I could detect no instances of the dreaded chroma upsampling bug, so it looks like ESS has fixed the problem once and for all.
 
-However, the player does not handle 4:2:0 interlaced chroma upsampling well. Strictly speaking this is not a bug, but it is annoying nevertheless as you can see it in many R1 animated menus with lots of red, such as the R1 Special Edition of _**Hunt For Red October**_. This puts the player at a disadvantage compared to Faroudja-based progressive scan DVD players such as the DVD-RP82 since the Faroudja chipset resamples and filters the chroma channel and hence "masks" the problem.
+However, the player does not handle 4:2:0 interlaced chroma upsampling well. Strictly speaking this is not a bug, but it is annoying nevertheless as you can see it in many R1 animated menus with lots of red, such as the R1 Special Edition of _<strong>Hunt For Red October</strong>_. This puts the player at a disadvantage compared to Faroudja-based progressive scan DVD players such as the DVD-RP82 since the Faroudja chipset resamples and filters the chroma channel and hence "masks" the problem.
 
-This player must implement a fairly large memory buffer that minimizes the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _**Fried Green Tomatoes**_ R4. However, on DVDs that split a film across several titles (including the above-mentioned _**Fried Green Tomatoes**_), I noticed that title transitions still incur a slight pause.
+This player must implement a fairly large memory buffer that minimizes the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _<strong>Fried Green Tomatoes</strong>_ R4. However, on DVDs that split a film across several titles (including the above-mentioned _<strong>Fried Green Tomatoes</strong>_), I noticed that title transitions still incur a slight pause.
 
 In summary, the player currently provides State Of The Art video playback quality through the analog video outputs. It will be interesting to see what the DVI/HDCP output quality will be like once Linn enables the port.
 
@@ -291,7 +291,7 @@ The player fully supports conversion from PAL to NTSC and NTSC to PAL. The NTSC 
 
 The player can be set to convert from Dolby Digital/dts/MPEG to PCM on the digital out connections. However, this is an all or nothing proposition - you can't enable dts to PCM but not Dolby Digital to PCM for example.
 
-Although the player seems to recognize MPEG )|( Multi-channel tracks I couldn't get it to output MPEG 5.1 (from my R4 copy of _**Fly Away Home**_) either through the analogue outputs (it downmixes to 2 channels) or via the digital output (it converts to 2 channel PCM). This is not a serious omission given that very few MPEG )|( Multi-channel DVDs have been released.
+Although the player seems to recognize MPEG )|( Multi-channel tracks I couldn't get it to output MPEG 5.1 (from my R4 copy of _<strong>Fly Away Home</strong>_) either through the analogue outputs (it downmixes to 2 channels) or via the digital output (it converts to 2 channel PCM). This is not a serious omission given that very few MPEG )|( Multi-channel DVDs have been released.
 
 ## CDR & Video CD
 
@@ -350,7 +350,7 @@ Unfortunately, the player does not have any bass management, channel level setti
 
 Linn also assumes that you will never use the in built Dolby Digital and dts decoders in the player. In fact, they seem to have deliberately limited the player by implementing decoding into two channels only, thus forcing you to use an external surround processor if you ever want to watch movies in surround sound. In any case, the 2 channel decoding is rather mediocre. This seems strange to me, since the player obviously has enough processing power and analog circuitry to do it right. Perhaps Linn wanted to ensure that decoding DVD audio formats does not compromise video playback, or perhaps it was a deliberate limitation to distinguish the player from the Unidisk 1.1 (although I have no idea if the Unidisk 1.1 implements multi-channel Dolby Digital and dts decoding).
 
-Subjectively, I did not notice any issues with audio synchronization (on both analogue and digital outputs) on the test discs (_**Wedding Singer**_ R4 second remastered edition and also _**Matrix**_ R1).
+Subjectively, I did not notice any issues with audio synchronization (on both analogue and digital outputs) on the test discs (_<strong>Wedding Singer</strong>_ R4 second remastered edition and also _<strong>Matrix</strong>_ R1).
 
 In summary, this player has audio playback quality that justifies it's high price tag, sounding better than any player I have reviewed to date.
 

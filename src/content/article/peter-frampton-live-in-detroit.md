@@ -24,7 +24,7 @@ For those of you who know as little about Peter Frampton as me, here are some qu
 
 The song/track listing for the concert is:
 
-So, did I ended up enjoying the concert? Yes, I did, and I even ended up recognising 1-2 songs (particularly _Baby I Love Your Way_). Peter looks relaxed and confident, there were no obvious fluffs in the band's performance, and all the songs were quite listenable. I really liked the guitar and keyboard solos. The concert was also shot well, no long lingering static shots, although I did find the constant changing of camera angles, panning and zooming to be a bit distracting at times. I wasn't quite sure why the DVD was rated M for Coarse Language but I did catch Peter saying "f**king b*d" once.
+So, did I ended up enjoying the concert? Yes, I did, and I even ended up recognising 1-2 songs (particularly _Baby I Love Your Way_). Peter looks relaxed and confident, there were no obvious fluffs in the band's performance, and all the songs were quite listenable. I really liked the guitar and keyboard solos. The concert was also shot well, no long lingering static shots, although I did find the constant changing of camera angles, panning and zooming to be a bit distracting at times. I wasn't quite sure why the DVD was rated M for Coarse Language but I did catch Peter saying "fking b*d" once.
 
 ## The video transfer
 

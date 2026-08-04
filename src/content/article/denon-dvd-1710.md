@@ -177,7 +177,7 @@ The Custom setting is divided into four groups (the settings in **bold** are als
 
 ## Video Playback
 
-I calibrated the player by adjusting the display settings of my Sony VPL-VW11HT LCD projector (and leaving the Picture Mode of the DVD player on "Standard") using the [**_Digital Video Essentials_**](http://www.videoessentials.com) test discs (both NTSC and PAL), as well as using the older title (_**[Video Essentials](http://www.videoessentials.com)**_).. The player's video output must be close to reference levels, for my adjusted settings were very close to the default settings.
+I calibrated the player by adjusting the display settings of my Sony VPL-VW11HT LCD projector (and leaving the Picture Mode of the DVD player on "Standard") using the [**_Digital Video Essentials_**](http://www.videoessentials.com) test discs (both NTSC and PAL), as well as using the older title (_<strong>[Video Essentials](http://www.videoessentials.com)</strong>_).. The player's video output must be close to reference levels, for my adjusted settings were very close to the default settings.
 
 I only tested the player in progressive scan mode (for both PAL and NTSC titles). I did briefly put the player in interlaced mode to verify that it outputs interlaced video correctly.
 
@@ -272,7 +272,7 @@ Some of the brightness/coarseness are softened somewhat when listening to high r
 
 I did not test Dolby Digital decoding but given that the player downmixes everything to 2.0 channels I would not really recommend using this player's internal decoders. It will decode MPEG-2 Audio into Linear PCM and this seems to be handled reasonably well.
 
-Audio synchronization (on both analogue and digital outputs) is excellent, and the usual problem sequences (on _**Wedding Singer**_ R4 second remastered edition and also _**Matrix**_ R1) played perfectly, as well as a A/V timing clock test on DVE.
+Audio synchronization (on both analogue and digital outputs) is excellent, and the usual problem sequences (on _<strong>Wedding Singer</strong>_ R4 second remastered edition and also _<strong>Matrix</strong>_ R1) played perfectly, as well as a A/V timing clock test on DVE.
 
 Like all other Denon players that I have tested to date, the DVD-1710 does not handle material encoded with [0dBFS](http://www.audioholics.com/techtips/specsformats/0dbfsdigitalplayback.php)+ levels, resulting in distorted waveforms.
 

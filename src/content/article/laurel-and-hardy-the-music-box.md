@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-I have to admit up front - the only reason I am reviewing this DVD is because of a mistake — my mistake. When the list of available DVD titles came up, my eyes came across "_**Music Box**_" and I searched [IMDB](http://www.imdb.com) and decided this must be the 1990 movie about a Hungarian immigrant accused of being a war criminal directed by **Costa-Gavras**_._ I thought it was probably worth watching. Needless to say no one was more surprised than I when I finally received the DVD.
+I have to admit up front - the only reason I am reviewing this DVD is because of a mistake — my mistake. When the list of available DVD titles came up, my eyes came across "_<strong>Music Box</strong>_" and I searched [IMDB](http://www.imdb.com) and decided this must be the 1990 movie about a Hungarian immigrant accused of being a war criminal directed by <strong>Costa-Gavras</strong>_._ I thought it was probably worth watching. Needless to say no one was more surprised than I when I finally received the DVD.
 
 **Stan Laurel** and **Oliver Hardy** are, of course, the famous comedy duo that have made numerous films from the 1920s till the 1940s. Their film career has spanned the transition from silent films to "talkies" and this DVD presents three well known sound shorts (produced by **Hal Roach**) circa 1932-33. The "official" web site for Laurel and Hardy is [www.laurel-and-hardy.com](http://www.laurel-and-hardy.com).
 
@@ -32,7 +32,7 @@ Cast: Stan Laurel, Oliver Hardy, Billy Gilbert, Lilyan Irene, Sam Lufkin, Charli
 
 Laurel and Hardy are to deliver a piano to a house which sits atop an enormous flight of stairs. Their attempts to carry the piano up the stairs results in it rolling and crashing into the street below several times, often with Ollie in tow. They finally succeed in getting the piano in the house, where they make a shambles of the living room. The owner of the house, Professor Theordore Von Schwarzenhoffen, returns and is outraged at what he finds. He attacks the piano with an axe, but regrets his actions when he discovers it was a present from his wife.
 
-The _**Music Box**_ is the only Laurel and Hardy film to be honored with an Academy Award, for "Best Short Subject," 1931-32.
+The _<strong>Music Box</strong>_ is the only Laurel and Hardy film to be honored with an Academy Award, for "Best Short Subject," 1931-32.
 
 ### Towed in a Hole
 

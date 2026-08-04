@@ -14,7 +14,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-_**The Jazz Channel Presents: Jeffery Osborne**_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
+_<strong>The Jazz Channel Presents: Jeffery Osborne</strong>_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
 
 Despite what the title may suggest, this is not really a jazz concert - instead, it is heart thumpin' funky music with groovy synth sounds, screaming electric guitars, deep rhythmic electric bass, silky sweet female backup singers and a solid drum track that brings back memories of the good ol' late 70s and early 80s. To illustrate what I mean, let me just quote from the first song on this concert (_We Party Hearty_):
 
@@ -82,7 +82,7 @@ There appears to be no significant differences between the R1 and R4 versions of
 
 ## Summary
 
-_**The Jazz Channel Presents: Jeffrey Osborne**_ is a great concert presented on a DVD with a superb video and audio transfer. The extras are nothing special, but welcomed anyway.
+_<strong>The Jazz Channel Presents: Jeffrey Osborne</strong>_ is a great concert presented on a DVD with a superb video and audio transfer. The extras are nothing special, but welcomed anyway.
 
 ### [Ratings (out of 5)](../ReviewersGuide/RatingsGuide.html)
 

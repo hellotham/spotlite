@@ -58,7 +58,7 @@ As far as I know, this disc is not available in Region 1. The R4 DVD is actually
 
 ## Summary
 
-_**Paul Weller: Live at the Royal Albert Hall**_ is an enjoyable concert presented on a DVD with a superior video and audio transfer. The DVD has no extra features whatsoever but does have animated menus.
+_<strong>Paul Weller: Live at the Royal Albert Hall</strong>_ is an enjoyable concert presented on a DVD with a superior video and audio transfer. The DVD has no extra features whatsoever but does have animated menus.
 
 ### [Ratings (out of 5)](../ReviewersGuide/RatingsGuide.html)
 

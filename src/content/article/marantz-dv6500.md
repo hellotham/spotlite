@@ -77,7 +77,7 @@ This is a pretty average looking remote control. The buttons are reasonably well
 
 On the plus side, the _Group_ button is usable without requiring a video display, the _Sound__M_\_ode_button is used to select between multiple audio tracks and layers on SA-CD, and the _Search__M_\_ode_ button is nice, but requires the video display to be active to be usable.
 
-## **Video and Audio****M****easurements & Testing**
+## **Video and AudioMeasurements & Testing**
 
 Performing measurements and tests on a DVD player using tools at our disposal is somewhat objective, but still results in a certain amount of subjective decision-making in terms of scoring and evaluation. As such, we recommend that these test results be used as a guideline only. For the review of this DVD player, the performance was based on the player in conjunction with the display monitor. We used the Sony VPL-VW11HT projector which was calibrated as close as possible to ISF reference standards using the SMART III calibration software. For the test and evaluation of the JLTi we used selections from Digital Video Essentials, the Microsoft WHQL 3.0 DVD Test Annex and the Silicon Optix HQV Technology benchmark DVD test discs in addition to various test clips from popular movies.
 
@@ -87,29 +87,29 @@ All final test scores were derived using the JLTi component video output in prog
 
 ### **Perfect Score is 130**
 
-The player performed very poorly on HQV as a progressive scan player, failing nearly every single test (including Film 3:2 cadence detection). The score: only **20****/130** which is the _lowest_ performance to date on DVD players tested in our Benchmark.
+The player performed very poorly on HQV as a progressive scan player, failing nearly every single test (including Film 3:2 cadence detection). The score: only **20/130** which is the _lowest_ performance to date on DVD players tested in our Benchmark.
 
-| **Test**                        | **M****ax****Points** | **Results*** | **Pass/Fail** |
-| :------------------------------ | :-------------------- | :----------- | :------------ |
-| Color Bar                       | 10                    | 5            | Pass          |
-| Jaggies #1                      | 5                     | 0            | Fail          |
-| Jaggies #2                      | 5                     | 0            | Fail          |
-| Flag                            | 10                    | 0            | Fail          |
-| Detail                          | 10                    | 0            | Fail          |
-| Noise                           | 10                    | 0            | Fail          |
-| Motion adaptive Noise Reduction | 10                    | 0            | Fail          |
-| Film Detail                     | 10                    | 0            | Fail          |
-| Cadence 2:2 Video               | 5                     | 0            | Fail          |
-| Cadence 2:2:2:4 DV Cam          | 5                     | 0            | Fail          |
-| Cadence 2:3:3:2 DV Cam          | 5                     | 0            | Fail          |
-| Cadence 3:2:3:2:2 Vari-speed    | 5                     | 0            | Fail          |
-| Cadence 5:5 Animation           | 5                     | 0            | Fail          |
-| Cadence 6:4 Animation           | 5                     | 0            | Fail          |
-| Cadence 8:7 animation           | 5                     | 0            | Fail          |
-| Cadence 24fps film              | 5                     | 0            | Fail          |
-| Scrolling Horizontal            | 10                    | 5            | Pass          |
-| Scrolling Rolling               | 10                    | 10           | Pass          |
-| **Total Points**                | **130**               | **20**       |               |
+| **Test**                        | **MaxPoints** | **Results*** | **Pass/Fail** |
+| :------------------------------ | :------------ | :----------- | :------------ |
+| Color Bar                       | 10            | 5            | Pass          |
+| Jaggies #1                      | 5             | 0            | Fail          |
+| Jaggies #2                      | 5             | 0            | Fail          |
+| Flag                            | 10            | 0            | Fail          |
+| Detail                          | 10            | 0            | Fail          |
+| Noise                           | 10            | 0            | Fail          |
+| Motion adaptive Noise Reduction | 10            | 0            | Fail          |
+| Film Detail                     | 10            | 0            | Fail          |
+| Cadence 2:2 Video               | 5             | 0            | Fail          |
+| Cadence 2:2:2:4 DV Cam          | 5             | 0            | Fail          |
+| Cadence 2:3:3:2 DV Cam          | 5             | 0            | Fail          |
+| Cadence 3:2:3:2:2 Vari-speed    | 5             | 0            | Fail          |
+| Cadence 5:5 Animation           | 5             | 0            | Fail          |
+| Cadence 6:4 Animation           | 5             | 0            | Fail          |
+| Cadence 8:7 animation           | 5             | 0            | Fail          |
+| Cadence 24fps film              | 5             | 0            | Fail          |
+| Scrolling Horizontal            | 10            | 5            | Pass          |
+| Scrolling Rolling               | 10            | 10           | Pass          |
+| **Total Points**                | **130**       | **20**       |               |
 
 *All tests were done with the component video output at 480p.
 
@@ -153,7 +153,7 @@ Unfortunately, the player did not fare as well on the modded 5.1 Front Left/Righ
 | IMD + Noise, %:                                | 0.012        | 0.012        | 0.013        |
 | Stereo crosstalk, dB:                          | -95.7        | -94.7        | -93.8        |
 
-**M\****odded player test results**
+**Modded player test results**
 
 First of all, the output voltage is around -3dB below reference (no doubt due to the op amp analogue stage being bypassed), resulting in a slightly higher noise floor and correspondingly lower dynamic range, plus higher THD+N, IMD+N and stereo crosstalk.The following graphs are all based on measurement of the player playing back test tones at 96kHz 24-bit. In these graphs, the cyan plot is the modded Front Left/Right output, the green plot is the unmodded 2ch output, and the white plot is the E-MU 1212M measuring itself in loopback mode.The modded Front Left/Right outputs seem to attenuate both high and low frequencies more aggressively than the unmodded 2ch output, with the frequency response down -1dB at 30 Hz, and also -1.5dB at 20kHz:
 
@@ -251,7 +251,7 @@ The scoring below is based on each piece of equipment doing the duty it is desig
 
 Performance × Price Factor/Value = Rating
 
-_**Audioholics.com note:** The ratings indicated below are based on subjective listening and objective testing of the product in question. The rating scale is based on performance/value ratio. If you notice better performing products in future reviews that have lower numbers in certain areas, be aware that the value factor is most likely the culprit. Other Audioholics reviewers may rate products solely based on performance, and each reviewer has his/her own system for ratings._
+_<strong>Audioholics.com note:</strong> The ratings indicated below are based on subjective listening and objective testing of the product in question. The rating scale is based on performance/value ratio. If you notice better performing products in future reviews that have lower numbers in certain areas, be aware that the value factor is most likely the culprit. Other Audioholics reviewers may rate products solely based on performance, and each reviewer has his/her own system for ratings._
 
 ### Audioholics Rating Scale
 

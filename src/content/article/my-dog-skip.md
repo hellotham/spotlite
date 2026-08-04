@@ -18,7 +18,7 @@ _2000 · directed by Jay Russell._
 
 ## The film
 
-_**My Dog Skip**_ is an enthralling film that will please anyone who has fond memories of growing up with a dog, or anyone who enjoys a gentle and laid-back story about a boy growing up and his relationship with his dog. It's about childhood, loyalty and love. By the time I've reached the closing credits, my eyes were streaming with tears of joy. All in all I strongly recommend this film.
+_<strong>My Dog Skip</strong>_ is an enthralling film that will please anyone who has fond memories of growing up with a dog, or anyone who enjoys a gentle and laid-back story about a boy growing up and his relationship with his dog. It's about childhood, loyalty and love. By the time I've reached the closing credits, my eyes were streaming with tears of joy. All in all I strongly recommend this film.
 
 Set in Yazoo, Mississippi around the time of World War II, this film is quintessentially American and features scenes that look like they have been lifted out of a painting by **Norman Rockwell**, adventures and escapades that could have been written by **Mark Twain** and an emotional and sentimental musical score (by **William Ross**) with shades of **Aaron Copland**.
 
@@ -30,7 +30,7 @@ Throughout the film, we get to hear voice-over narration (**Harry Connick Jr.**)
 
 What I really liked about this film is that it deals with the more serious issues in a very understated way and never over-preaches, which is most unusual for an American film. For example, instead of making a big deal about racism in the South, the film simply shows Willie making friends with a black boy, then Skip wandering through both the white and black sections of the town so that we can see the difference in lifestyle and affluence, two lines at the cinema segregated by race, and finally at the end we see Willie and his friends watching a baseball game featuring black player Waldo Grace (**Jerome Jerald**). That's it - no lectures on why racism is bad, finger pointing or holier-than-thou attitudes. Instead we are gently reminded that even though people may be differentiated by race and economic status - at the end of the day there are more similarities than differences.
 
-_**My Dog Skip**_ is loosely based on a bestselling autobiographical book of the same name published by **William Weaks Morris** in 1995. The real Willie Morris was born in 1934 in Jackson, Mississippi, but when he was six months old his parents moved to Yazoo City. After studying at institutions such as the University of Texas at Austin and Oxford University (as a Rhodes Scholar no less), he became in 1967 the youngest ever editor-in-chief at _Harper_'s (the oldest magazine in the United States). He returned to Mississippi in 1980 as a writer-in-residence at the University of Mississippi.
+_<strong>My Dog Skip</strong>_ is loosely based on a bestselling autobiographical book of the same name published by **William Weaks Morris** in 1995. The real Willie Morris was born in 1934 in Jackson, Mississippi, but when he was six months old his parents moved to Yazoo City. After studying at institutions such as the University of Texas at Austin and Oxford University (as a Rhodes Scholar no less), he became in 1967 the youngest ever editor-in-chief at _Harper_'s (the oldest magazine in the United States). He returned to Mississippi in 1980 as a writer-in-residence at the University of Mississippi.
 
 He wrote more than a dozen books including two autobiographies and is particularly well known for the books and articles in which he compares his experiences and his long and complex southern heritage to America's own history. A sense of history, place and family are significant themes in much of his writing.
 
@@ -108,7 +108,7 @@ The Region 4 version is an easy choice due to PAL over NTSC - the extra language
 
 ## Summary
 
-_**My Dog Skip**_ is a really touching and enjoyable film that I would recommend to anyone, young or old. It is presented on an unusual DVD two complete transfers of the film and extras on a double sided disc (but featuring different foreign language audio tracks and subtitles on each side). The video and audio quality is superb, and is of reference quality. The extras are mainly limited to two audio commentary tracks and some deleted scenes, but are quite satisfactory.
+_<strong>My Dog Skip</strong>_ is a really touching and enjoyable film that I would recommend to anyone, young or old. It is presented on an unusual DVD two complete transfers of the film and extras on a double sided disc (but featuring different foreign language audio tracks and subtitles on each side). The video and audio quality is superb, and is of reference quality. The extras are mainly limited to two audio commentary tracks and some deleted scenes, but are quite satisfactory.
 
 | Rating  | Score       |
 | :------ | :---------- |

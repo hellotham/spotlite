@@ -18,7 +18,7 @@ _2000 · directed by Davis Guggenheim._
 
 ## The film
 
-I still haven't decided yet whether I like _**Gossip**_. The premise is quite good - three college roommates attending a communications class decide to start a malicious false rumour just to see how far and fast it spreads - and how much embellishment it will accumulate. When the victim of the rumour starts believing in it herself the situation turns ugly.
+I still haven't decided yet whether I like _<strong>Gossip</strong>_. The premise is quite good - three college roommates attending a communications class decide to start a malicious false rumour just to see how far and fast it spreads - and how much embellishment it will accumulate. When the victim of the rumour starts believing in it herself the situation turns ugly.
 
 However, the execution of the premise together with the "surprise" ending is somewhat flawed and problematic. I do like the pace of the film - it is well-directed and in the general the acting is uniformly strong.
 

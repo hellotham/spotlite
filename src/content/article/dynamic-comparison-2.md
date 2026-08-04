@@ -15,7 +15,7 @@ tags:
 
 _This article was written by me and **published on Audioholics**, where it remains: **[read it there](https://www.audioholics.com/audio-technologies/dynamic-comparison-of-cd-dvd-a-sacd-part-2)**. Audioholics asked permission to run it. It is republished here for information, as part of the record of what I have written._
 
-My previous comparison of 2-channel recordings of the title track of **Diana Krall's** **The Look Of Love** on CD, DVD-A (Group 2 - MLP 2.0 96/24) and SACD (2-channel) versions yielded a surprise in terms of the relative dynamics: the CD version was noticeably more "compressed" in dynamics than the DVD-A version, which in turn was also compressed relative to SACD.
+My previous comparison of 2-channel recordings of the title track of **Diana Krall's The Look Of Love** on CD, DVD-A (Group 2 - MLP 2.0 96/24) and SACD (2-channel) versions yielded a surprise in terms of the relative dynamics: the CD version was noticeably more "compressed" in dynamics than the DVD-A version, which in turn was also compressed relative to SACD.
 
 I have yet to read any literature on the respective formats which would hint at this result that I began to doubt whether this might be an anomaly of the way I did the three recordings. I did use different gains for each recording, and I wondered whether a different gain setting may have contributed to altering the dynamics of the three recordings.
 

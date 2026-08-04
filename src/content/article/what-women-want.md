@@ -18,7 +18,7 @@ _2000._
 
 ## The film
 
-Successful advertising hot shot Nick Marshall (**Mel Gibson**) has a (supposedly) rare talent: he knows _**What Women Want**_. No, this is not because he is gay, although from the lines this character utters later on in the film I'm having my doubts. Actually, he's a bit of an obnoxious ladies' man who thinks he is God's gift to women (well, quite a lot of women do think that **Mel Gibson** is a gift from God but that is another story). His mum worked as a Las Vegas showgirl, and he was brought up surrounded up beautiful females who mollycoddled him. As a result, he expects females to fawn all over him, but deep inside he's just your average man's man: insensitive, uncaring and cruel if you believe the film's scriptwriter.
+Successful advertising hot shot Nick Marshall (**Mel Gibson**) has a (supposedly) rare talent: he knows _<strong>What Women Want</strong>_. No, this is not because he is gay, although from the lines this character utters later on in the film I'm having my doubts. Actually, he's a bit of an obnoxious ladies' man who thinks he is God's gift to women (well, quite a lot of women do think that **Mel Gibson** is a gift from God but that is another story). His mum worked as a Las Vegas showgirl, and he was brought up surrounded up beautiful females who mollycoddled him. As a result, he expects females to fawn all over him, but deep inside he's just your average man's man: insensitive, uncaring and cruel if you believe the film's scriptwriter.
 
 He thinks he is in line for promotion to Creative Director, but at the last moment his boss Dan Wanamaker (**Alan Alda**) decides to hire a woman instead: the interestingly named Darcy McGuire (**Helen Hunt**). The rationale is that women are now the big spenders and more and more advertising is targetting women, so Dan is afraid his firm will be left in the cold unless he gets a Creative Director who understands how women think.
 
@@ -135,7 +135,7 @@ For once, we seem to get more extras than R1, so I will unequivocally declare th
 
 ## Summary
 
-_**What Women Want**_ is a fairly predictable but quite funny and watchable romantic comedy. It is presented on a disc with a slightly problematic video transfer but fairly decent audio transfer, and a very pleasing collection of extras. We even get an Australian sourced extra not present on the Region 1 disc.
+_<strong>What Women Want</strong>_ is a fairly predictable but quite funny and watchable romantic comedy. It is presented on a disc with a slightly problematic video transfer but fairly decent audio transfer, and a very pleasing collection of extras. We even get an Australian sourced extra not present on the Region 1 disc.
 
 ### [Ratings (out of 5)](RatingsGuide.html)
 

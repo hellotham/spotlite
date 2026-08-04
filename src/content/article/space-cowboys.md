@@ -18,7 +18,7 @@ _2000._
 
 ## The film
 
-I can just imagine what the selling pitch of _**Space Cowboys**_ would be like ...
+I can just imagine what the selling pitch of _<strong>Space Cowboys</strong>_ would be like ...
 
 _\[Scene: at two deck chairs next to a pool in a plush Beverly Hills Hotel ...\]_
 
@@ -158,7 +158,7 @@ Apart from the higher bitrate Dolby Digital audio track, I don't think the addit
 
 ## Summary
 
-_**Space Cowboys**_ is an enjoyable romp, even if it does take a few liberties with the plot and scientific accuracy. I am still waiting for a decent space exploration movie (as opposed to science fiction) featuring some strong female characters, and unfortunately **Marcia Gay Harden** plays no more than a token role. The film is presented on a DVD with above average video and audio transfers, plus a strong collection of supplemental featurettes.
+_<strong>Space Cowboys</strong>_ is an enjoyable romp, even if it does take a few liberties with the plot and scientific accuracy. I am still waiting for a decent space exploration movie (as opposed to science fiction) featuring some strong female characters, and unfortunately **Marcia Gay Harden** plays no more than a token role. The film is presented on a DVD with above average video and audio transfers, plus a strong collection of supplemental featurettes.
 
 ### [Ratings (out of 5)](RatingsGuide.html)
 

@@ -18,7 +18,7 @@ _1965 · directed by Robert Wise._
 
 ## The film
 
-_**The Sound of Music**_ is definitely one of my favourite things - a film that I can watch over and over again (certain scenes never fail to bring tears to my face - it's become a conditioned reflex). Judging by the success of the recent Australian revival of the stage musical version, and the even more recent _[Sing-a-Long-a-Sound-of-Music](http://www.singalongaworldwide.com)_ show (which shameless borrows the concept of audience participation from the _Rocky Horror Picture Show_) I am not alone in my adulation of this timeless classic.
+_<strong>The Sound of Music</strong>_ is definitely one of my favourite things - a film that I can watch over and over again (certain scenes never fail to bring tears to my face - it's become a conditioned reflex). Judging by the success of the recent Australian revival of the stage musical version, and the even more recent _[Sing-a-Long-a-Sound-of-Music](http://www.singalongaworldwide.com)_ show (which shameless borrows the concept of audience participation from the _Rocky Horror Picture Show_) I am not alone in my adulation of this timeless classic.
 
 The film is based on a Broadway stage musical, which in turn is based on two German films, which are in turn based on the true story of **Maria von Trapp**, as documented in her book _The Story of the Trapp Family Singers_. The film had its world premiere on March 2, 1965 before an ecstatic audience at the Rivoli Theater in New York and the rest is as they say ... history.
 

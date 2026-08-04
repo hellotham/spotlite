@@ -434,7 +434,7 @@ The "Other Setup" sub menu contains the following parameters:
 
 ## Video Playback
 
-I calibrated the player by adjusting the display settings of my Sony VPL-VW11HT LCD projector (and leaving the Picture Mode of the DVD player on "Standard") using the [**_Digital Video Essentials_**](http://www.videoessentials.com) test discs (both NTSC and PAL), as well as using the older title (_**[Video Essentials](http://www.videoessentials.com)**_).. The player's video output must be close to reference levels, for my adjusted settings were very close to the default settings.
+I calibrated the player by adjusting the display settings of my Sony VPL-VW11HT LCD projector (and leaving the Picture Mode of the DVD player on "Standard") using the [**_Digital Video Essentials_**](http://www.videoessentials.com) test discs (both NTSC and PAL), as well as using the older title (_<strong>[Video Essentials](http://www.videoessentials.com)</strong>_).. The player's video output must be close to reference levels, for my adjusted settings were very close to the default settings.
 
 I only tested the player in progressive scan mode (for both PAL and NTSC titles). I did briefly put the player in interlaced mode to verify that it outputs interlaced video correctly. I was not able to test the HDMI or DVI/HDCP digital video outputs due to the lack of suitable equipment to connect the player to.
 
@@ -452,7 +452,7 @@ There has also been a lot of discussion of the so-called "macro-blocking" proble
 
 The fast forward/fast reverse buttons give you multiple playback speeds (2X, 4X, 8X and 16X) which you can cycle by pressing the button repeatedly. You will exit fast forward/rewind operation by pressing "Play." The Pause button is a bit unconventional in that pressing it again whilst in Pause mode will advance to the next frame instead of reverting back to Play (I couldn't find a way of moving to the previous frame). Pressing the forward/rewind buttons when the player is paused will activate several speeds of slow scans (1/2, 1/4, 1/6 and 1/8). To exit Pause mode, you have to press the Play button. Once I got used to it, the buttons are surprisingly effective in cueing up to the right spot.
 
-As with other upmarket Denon DVD players, this player includes a memory buffer that minimizes the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _**Fried Green Tomatoes**_ R4. The only time I noticed a layer change was watching the time elapsed counter very closely, as this sometimes does not count up as smoothly in the vicinity of a layer change. However, on DVDs that split a film across several titles (including the above-mentioned _**Fried Green Tomatoes**_), I noticed that title transitions still incur a pause (and a fairly long one at that). The player did stumble on the "worst case scenario" layer change on the Microsoft WHQL DVD Test Annex 3.0 Disc 2 (this layer change occurs during scrolling titles encoded at the maximum permissible bit rate) - it paused for around half a second. Still, better than the 3-4 seconds I've seen on other players.
+As with other upmarket Denon DVD players, this player includes a memory buffer that minimizes the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _<strong>Fried Green Tomatoes</strong>_ R4. The only time I noticed a layer change was watching the time elapsed counter very closely, as this sometimes does not count up as smoothly in the vicinity of a layer change. However, on DVDs that split a film across several titles (including the above-mentioned _<strong>Fried Green Tomatoes</strong>_), I noticed that title transitions still incur a pause (and a fairly long one at that). The player did stumble on the "worst case scenario" layer change on the Microsoft WHQL DVD Test Annex 3.0 Disc 2 (this layer change occurs during scrolling titles encoded at the maximum permissible bit rate) - it paused for around half a second. Still, better than the 3-4 seconds I've seen on other players.
 
 In summary, the DVD-3910 has excellent video quality, apart from the crushing of below black signals and above-reference whites.
 
@@ -490,7 +490,7 @@ Both conversions result in occasional deinterlacing errors resulting in occasion
 
 The player can be set to convert from Dolby Digital/dts/MPEG to PCM on the digital out connections. However, this is an all or nothing proposition - you can't enable dts to PCM but not Dolby Digital to PCM for example.
 
-I was surprised that the player successfully recognized and decoded the MPEG )|( 5.1 multi-channel audio track in my R4 copy of _**Fly Away Home**_ - especially since previous generation players downmixed this track to 2 channels.
+I was surprised that the player successfully recognized and decoded the MPEG )|( 5.1 multi-channel audio track in my R4 copy of _<strong>Fly Away Home</strong>_ - especially since previous generation players downmixed this track to 2 channels.
 
 ## Other formats
 
@@ -563,7 +563,7 @@ Dolby Digital and dts decoding are excellent, courtesy of the SHARC processing .
 
 Needless to say, I had no problems connecting the optical digital audio output to my amplifier. I did not try the HDMI or IEEE1394 digital outputs due to the lack of suitable equipment that can receive such signals, and unfortunately although my Denon AVC-A1SE has an upgraded digital board that accepts Denon Link, I only have the original Denon Link and not the Second Edition implemented on this player so I did not try to hook the player up via Denon Link. In any case, the player's analog audio outputs sound noticeable superior to the internal D/A converters in my AVC-A1SE that there would be no point in doing the link.
 
-Audio synchronization (on both analogue and digital outputs) is excellent, and the usual problem sequences (on _**Wedding Singer**_ R4 second remastered edition and also _**Matrix**_ R1) played perfectly, as well as a A/V timing clock test on DVE.
+Audio synchronization (on both analogue and digital outputs) is excellent, and the usual problem sequences (on _<strong>Wedding Singer</strong>_ R4 second remastered edition and also _<strong>Matrix</strong>_ R1) played perfectly, as well as a A/V timing clock test on DVE.
 
 Like all other Denon players that I have tested to date, the DVD-3910 does not handle material encoded with [0dBFS](http://www.audioholics.com/techtips/specsformats/0dbfsdigitalplayback.php)+ levels, resulting in distorted waveforms.
 

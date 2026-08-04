@@ -212,7 +212,7 @@ The specs are not terribly impressive, with only a 100dB S/N ratio and 95dB dyna
 
 The player of course will downmix Dolby Digital into 2.0 and will only support dts on the digital out. There is a "3D surround" mode but I did not engage it - this is a proprietary virtual surround processing mode embedded in the MT1379.
 
-Subjectively, the player exhibited some with audio synchronization on known "problem" discs (_**Wedding Singer**_ R4 second remastered edition and also _**Matrix**_ R1). The audio was definitely not synchronized during **Steve Buscemi**'s wedding speech in the former but within acceptable tolerances when Neo is being scolded by his manager for being late at work in the latter.
+Subjectively, the player exhibited some with audio synchronization on known "problem" discs (_<strong>Wedding Singer</strong>_ R4 second remastered edition and also _<strong>Matrix</strong>_ R1). The audio was definitely not synchronized during **Steve Buscemi**'s wedding speech in the former but within acceptable tolerances when Neo is being scolded by his manager for being late at work in the latter.
 
 ## Disc Compatibility Tests
 

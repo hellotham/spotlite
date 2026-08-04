@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-_**Arthur**_ is the story of Arthur Bach (**Dudley Moore**), a young man who was born with the proverbial silver spoon in his mouth and so far has led a life of unrelentless luxury where his every desire would be fulfilled. Not having experienced anything as remotely dull as responsibility, pain, or even an honest hard day's work, he ends up being drunk all the time to avoid the necessity of growing up.
+_<strong>Arthur</strong>_ is the story of Arthur Bach (**Dudley Moore**), a young man who was born with the proverbial silver spoon in his mouth and so far has led a life of unrelentless luxury where his every desire would be fulfilled. Not having experienced anything as remotely dull as responsibility, pain, or even an honest hard day's work, he ends up being drunk all the time to avoid the necessity of growing up.
 
 His father Stanford Bach (**Thomas Barbour**) thinks he is a spineless weakling and wants him to marry Susan Johnson (**Jill Eikenberry**), the daughter of self-made tycoon Burt Johnson (**Stephen Elliot**), in order to further consolidate the family's power and wealth. If Arthur refuses the marriage, he will be disinherited and he will lose his share of the family fortune - a cool \$700 million (OK, maybe that's not a lot by today's standards, but remember this movie was made in the early eighties).
 

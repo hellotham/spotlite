@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-When _**Desperately Seeking Susan**_ was first released in 1985, the big attraction was the fact that it was **Madonna**'s first movie. A lot of people saw the movie just to find out whether she could act, and many commented that she was simply playing herself. More than 15 years later, with the benefit of hindsight from witnessing numerous attempts by Madonna to reinvent her image, it is probably more accurate to say Madonna was simply playing a role that was consistent with her public image at that time.
+When _<strong>Desperately Seeking Susan</strong>_ was first released in 1985, the big attraction was the fact that it was **Madonna**'s first movie. A lot of people saw the movie just to find out whether she could act, and many commented that she was simply playing herself. More than 15 years later, with the benefit of hindsight from witnessing numerous attempts by Madonna to reinvent her image, it is probably more accurate to say Madonna was simply playing a role that was consistent with her public image at that time.
 
 When I first saw this film in its original theatrical run, I remembered it as a somewhat quirky and offbeat romantic comedy but definitely watchable. Viewing it again on DVD, I am not as impressed. Maybe this is just one of those films that one cannot watch more than once, or perhaps the thrill of seeing Madonna on the big screen just isn't there anymore. It does feature one of my favourite Madonna songs - _Into The Groove_ - and it was nice to hear it again after all these years.
 

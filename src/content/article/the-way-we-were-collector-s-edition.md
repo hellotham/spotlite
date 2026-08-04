@@ -18,7 +18,7 @@ _1973 · directed by Sydney Pollack._
 
 ## The film
 
-They just don't make movies like _**The Way We Were**_ anymore - a sentimental, some would say even corny, love story along the lines of _Love Story_. Have you ever noticed that these days filmmakers seldom make pure romantic dramas without at least combining it with either action or comedy? It's almost as they are afraid of being labelled "soppy".
+They just don't make movies like _<strong>The Way We Were</strong>_ anymore - a sentimental, some would say even corny, love story along the lines of _Love Story_. Have you ever noticed that these days filmmakers seldom make pure romantic dramas without at least combining it with either action or comedy? It's almost as they are afraid of being labelled "soppy".
 
 Well, this film at least is not afraid of being labelled soppy, or sentimental, or corny. It has a strangely appealing (to me, at least) melancholic feel about it that you only find in movies made in the seventies - the sort of melancholy I sometimes experience sitting say in a porch or a balcony watching the rain and I can almost hear the violins surging in the background playing _Memories_ ...
 
@@ -106,7 +106,7 @@ All in all, I would rate both versions as essentially the same, apart from PAL v
 
 ## Summary
 
-I can't say I'm too displeased with _**The Way We Were**_ - one of the classic romance films of all time presented on a DVD with the usual high standards of audio and video quality we've come to expect from Columbia Tristar, plus a reasonable collection of extras.
+I can't say I'm too displeased with _<strong>The Way We Were</strong>_ - one of the classic romance films of all time presented on a DVD with the usual high standards of audio and video quality we've come to expect from Columbia Tristar, plus a reasonable collection of extras.
 
 ### [Ratings (out of 5)](RatingsGuide.html)
 

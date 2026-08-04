@@ -44,7 +44,7 @@ What do I mean by "no compromise"? There has been a few other "universal" player
 
 ## What's In The Box
 
-Pioneer have clearly considered what happens when you succumb to the beauty of this unit, buy it, and bring it home. They know that you may need to justify it to your significant other, so they've gone to the trouble of tucking five DVDs into the box with the player so you have something to show immediately (that's very thoughtful). They also include five free DVD rentals, too, for after you've watched the included discs. The included titles depend on when you buy the unit - my first unit included _**Snow White**_ (single disc version), but the review unit had _**Atlantis**_ instead. There's a nice range of titles included, so you're likely to find something you feel like watching.
+Pioneer have clearly considered what happens when you succumb to the beauty of this unit, buy it, and bring it home. They know that you may need to justify it to your significant other, so they've gone to the trouble of tucking five DVDs into the box with the player so you have something to show immediately (that's very thoughtful). They also include five free DVD rentals, too, for after you've watched the included discs. The included titles depend on when you buy the unit - my first unit included _<strong>Snow White</strong>_ (single disc version), but the review unit had _<strong>Atlantis</strong>_ instead. There's a nice range of titles included, so you're likely to find something you feel like watching.
 
 Also included in the box with the player are the remote (batteries **are** included), basic cables (enough to get connected), a power cord, and a comprehensive instruction manual.
 
@@ -229,7 +229,7 @@ Although I didn't test it, this player offers the ability to convert NTSC into P
 
 ## CDR & Video CD
 
-This player digested CD-Rs and Video CD (I tested _**Joe vs The Volcano**_ - commercially pressed Video CD bought in Singapore) without breaking stride. The only thing it didn't handle perfectly was a multi-session CD-R - it could only see the first session, but that's not surprising - most players are limited to the first session.
+This player digested CD-Rs and Video CD (I tested _<strong>Joe vs The Volcano</strong>_ - commercially pressed Video CD bought in Singapore) without breaking stride. The only thing it didn't handle perfectly was a multi-session CD-R - it could only see the first session, but that's not surprising - most players are limited to the first session.
 
 This player is specified as supporting CD-R, CD-RW, DVD-R, and DVD-RW. Rather an improvement from earlier DVD players which weren't specified as supporting CD-R at all, and could be fussy about which colour media they'd accept.
 

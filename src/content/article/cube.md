@@ -71,7 +71,7 @@ The music is non-melodic and sounds vaguely avant-garde or electronic and suited
 
 ## The extras
 
-Given that _**Cube**_ was a limited release low budget film, and not a lot of effort seems to have been spent on the transfer (such as the lack of 16x9 enhancement), I was pleasantly surprised by the amount of extras on this disc.
+Given that _<strong>Cube</strong>_ was a limited release low budget film, and not a lot of effort seems to have been spent on the transfer (such as the lack of 16x9 enhancement), I was pleasantly surprised by the amount of extras on this disc.
 
 ### Main Menu Audio & Animation
 

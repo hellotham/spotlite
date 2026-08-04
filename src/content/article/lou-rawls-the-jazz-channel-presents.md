@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-_**The Jazz Channel Presents: Lou Rawls**_ is another in a series of TV specials featuring concerts by black jazz musicians produced by **BET on Jazz**.
+_<strong>The Jazz Channel Presents: Lou Rawls</strong>_ is another in a series of TV specials featuring concerts by black jazz musicians produced by **BET on Jazz**.
 
 Born in Chicago in 1935, **Lou Rawls**'s musical career has spanned over 40 years, 60-plus albums, three Grammy wins, 13 Grammy nominations, one platinum album, five gold albums and a gold single. His music has elements of gospel, blues, soul and pop packaged together with a wonderful singing voice that can be sweet, soft, strong and smooth all at the same time. No wonder that at the height of his career, he was one of the highest paid black performing artists around, and even today the power of his voice is unmistakable in this concert held in an intimate jazz club.
 
@@ -72,7 +72,7 @@ There appears to be no significant differences between the R1 and R4 versions of
 
 ## Summary
 
-_**The Jazz Channel Presents: Lou Rawls**_ is an enjoyable if somewhat short concert by a good performer. It is presented on a DVD with an acceptable video and audio transfer with some extras.
+_<strong>The Jazz Channel Presents: Lou Rawls</strong>_ is an enjoyable if somewhat short concert by a good performer. It is presented on a DVD with an acceptable video and audio transfer with some extras.
 
 ### [Ratings (out of 5)](../ReviewersGuide/RatingsGuide.html)
 

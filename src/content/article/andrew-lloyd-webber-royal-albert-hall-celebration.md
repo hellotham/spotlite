@@ -18,7 +18,7 @@ _1998 · directed by Pimlott, Stephen (stage) Mallet, David (video)._
 
 ## The film
 
-_**Andrew Lloyd Webber - The Royal Albert Hall Celebration**_ is a special concert put together in 1998 to celebrate the 50th birthday of noted musical theatre composer **Andrew Lloyd Webber**.
+_<strong>Andrew Lloyd Webber - The Royal Albert Hall Celebration</strong>_ is a special concert put together in 1998 to celebrate the 50th birthday of noted musical theatre composer **Andrew Lloyd Webber**.
 
 Recent visitors to this planet who may not have heard of Andrew (rest assured most inhabitants of Earth will have attended one of his musicals or at least have heard of his name) will be interested to know that Andrew is the composer of some of the most popular musicals of recent times, including:
 

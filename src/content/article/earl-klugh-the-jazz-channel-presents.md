@@ -18,7 +18,7 @@ _2000 · directed by Waymer Johnson._
 
 ## The film
 
-_**The Jazz Channel Presents: Earl Klugh**_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
+_<strong>The Jazz Channel Presents: Earl Klugh</strong>_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
 
 Acoustic jazz guitarist **Earl Wilbert Klugh, Jr.** was born on 16 September 1954 in Detroit, Michigan, USA. Early influences include **Chet Atkins**, **Burt Bacharach**, the **Beatles** and **Sergio Mendes**. While still in his mid-teens he recorded with **Yusef Lateef** and **George Benson**. He was also member of **Chick Corea**'s famous group **Return To Forever** before embarking on a solo career in the mid-1970s. Some of his early albums feature a collaboration with pianist/composer **Bob James**. He has had a very successful career, having released nearly 30 albums.
 
@@ -84,7 +84,7 @@ There appears to be no significant differences between the R1 and R4 versions of
 
 ## Summary
 
-_**The Jazz Channel Presents: Earl Klugh**_ is a very enjoyable and listenable concert presented on a DVD with an above average video and audio transfer. The extras are limited to a single featurette.
+_<strong>The Jazz Channel Presents: Earl Klugh</strong>_ is a very enjoyable and listenable concert presented on a DVD with an above average video and audio transfer. The extras are limited to a single featurette.
 
 | Rating  | Score        |
 | :------ | :----------- |

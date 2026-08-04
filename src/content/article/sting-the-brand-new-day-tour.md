@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-_**Sting - Brand New Day LIVE from the Universal Amphitheatre**_ is concert featuring **Sting** supported by a five-piece band and three backup singers. In addition, **Stevie Wonder** does a surprise harmonica solo in _Brand New Day_ as well as a duet with **Cheb Mami** singing Arabic accompanied by **Abdel Nasser Haoua** playing the Darabukka (think of a Middle Eastern version of the congo drum and you'll be close) in _Desert Rose_.
+_<strong>Sting - Brand New Day LIVE from the Universal Amphitheatre</strong>_ is concert featuring **Sting** supported by a five-piece band and three backup singers. In addition, **Stevie Wonder** does a surprise harmonica solo in _Brand New Day_ as well as a duet with **Cheb Mami** singing Arabic accompanied by **Abdel Nasser Haoua** playing the Darabukka (think of a Middle Eastern version of the congo drum and you'll be close) in _Desert Rose_.
 
 Sting was born **Gordon Matthew Sumner** in Wallsend, England in 1951. He got his nickname whilst he was in the band **Phoenix Jazzmen** because the trombone player **Gordon Solomon** remarked that he looked like a bee. He plays guitar, bass guitar, mandolin, piano, harmonica, saxophone, and pan flute but prefers bass guitar. Most people remember Sting as the lead singer in **Police** and as a solo artist, but prior to joining the Police he has worked in various jobs including as a ditch digger and a school teacher. Prior to joining the Police, Sting was in various jazz bands.
 
@@ -80,7 +80,7 @@ This DVD is the same the world over. This particular DVD is in the PAL format an
 
 ## Summary
 
-_**Sting - Brand New Day LIVE**_ is a reasonably enjoyable concert. Although the audio transfer is excellent, the video transfer unfortunately has numerous artefacts (mainly shimmering) that appear to be interent in the video material itself. The only significant extra is a backstage tour/interview featurette.
+_<strong>Sting - Brand New Day LIVE</strong>_ is a reasonably enjoyable concert. Although the audio transfer is excellent, the video transfer unfortunately has numerous artefacts (mainly shimmering) that appear to be interent in the video material itself. The only significant extra is a backstage tour/interview featurette.
 
 ### [Ratings (out of 5)](../ReviewersGuide/RatingsGuide.html)
 

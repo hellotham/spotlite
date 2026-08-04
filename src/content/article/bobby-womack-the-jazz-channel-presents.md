@@ -18,7 +18,7 @@ _2000 · directed by Waymer Johnson._
 
 ## The film
 
-_**The Jazz Channel Presents: Bobby Womack**_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
+_<strong>The Jazz Channel Presents: Bobby Womack</strong>_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
 
 **Bobby Womack** was born in Cleveland, Ohio in 1944. He started his musical career early (in the 1950s) along with his brothers in a group called the **Womack Brothers** which was later renamed to the **Valentinos**. Bobby then joined **Sam Cooke**'s band as a guitarist and, after Sam's death, concentrated on songwriting and session work with artists like **Aretha Franklin**, **Ray Charles**, **Jimi Hendrix** and **Wilson Pickett**. He also had some success as a solo artist in the 1960s and 1970s and more recently in his comeback records _Poet_ and _Poet II_.
 
@@ -78,7 +78,7 @@ There appears to be no significant differences between the R1 and R4 versions of
 
 ## Summary
 
-_**The Jazz Channel Presents: Bobby Womack**_ is a listenable concert presented on a DVD with an slightly above average video and audio transfer. The extras are nothing special, but welcomed anyway.
+_<strong>The Jazz Channel Presents: Bobby Womack</strong>_ is a listenable concert presented on a DVD with an slightly above average video and audio transfer. The extras are nothing special, but welcomed anyway.
 
 | Rating  | Score        |
 | :------ | :----------- |

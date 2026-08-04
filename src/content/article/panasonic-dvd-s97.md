@@ -72,11 +72,11 @@ Pressing the **Setup** button on the remote control brings up the menu system fo
 
 There are six tabs or setting categories: _Disc, Video, Audio, HDMI, Display_ and _Others_. In addition, there is also a _Quick Setup_ wizard which allows you to set common settings over a set of dialogs. The Quick Setup menu page is activated if you enter _Setup_ when the player is brand new (or after reinitialization to factory settings).
 
-The _**Disc**_tab allows you to set the default language for the audio track, subtitle track, disc menus and parental control rating limit. You can select 'Original' for the default audio track, and 'Automatic' for the subtitle track. If your preferred language is English, French, German, Italian, Spanish, Portugese, Swedish or Dutch, you can directly select it from a list, otherwise, you have to type the four digit code associated with the language.
+The _<strong>Disc</strong>_tab allows you to set the default language for the audio track, subtitle track, disc menus and parental control rating limit. You can select 'Original' for the default audio track, and 'Automatic' for the subtitle track. If your preferred language is English, French, German, Italian, Spanish, Portugese, Swedish or Dutch, you can directly select it from a list, otherwise, you have to type the four digit code associated with the language.
 
-The _**Video**_tab allows setting of TV aspect ratio, TV Type, Time Delay, Convert from PAL, Still Mode, NTSC Disc Output and Picture/Video Output. The TV Type setting is interesting in that it allows you to specify the type of video display connected to the player (Standard Direct View TV, CRT Projector, LCD TV/Projector, Projection TV, Plasma TV). Some experimentation revealed that this setting subtly alters brightness, contrast and gamma settings for the video output, so I would recommend leaving this at the 'Standard' setting and instead calibrate your video display based on a calibration disc such as Digital Video Essentials or AVIA. The Time Delay setting allows you to adjust for A/V sync (in increments of 20ms from 0-100ms) - a very useful feature if your AV receiver or processor does not have this setting and you experience sync issues.
+The _<strong>Video</strong>_tab allows setting of TV aspect ratio, TV Type, Time Delay, Convert from PAL, Still Mode, NTSC Disc Output and Picture/Video Output. The TV Type setting is interesting in that it allows you to specify the type of video display connected to the player (Standard Direct View TV, CRT Projector, LCD TV/Projector, Projection TV, Plasma TV). Some experimentation revealed that this setting subtly alters brightness, contrast and gamma settings for the video output, so I would recommend leaving this at the 'Standard' setting and instead calibrate your video display based on a calibration disc such as Digital Video Essentials or AVIA. The Time Delay setting allows you to adjust for A/V sync (in increments of 20ms from 0-100ms) - a very useful feature if your AV receiver or processor does not have this setting and you experience sync issues.
 
-The _**Audio**_tab governs what sort of formats are allowable on the digital output (PCM 96/192kHz, Dolby Digital, DTS, MPEG) as well as DRC for Dolby Digital. It also allows you to specify whether you want to hear audio whilst in search mode (non 1X playback speed). Interestingly, the player allows output of 192kHz through the digital outputs, which is non-standard (when I enabled it, I received static noise through my Cary Cinema 6 surround processor, even though the Cary also claims to support 192kHz - presumably using an incompatible signaling format).
+The _<strong>Audio</strong>_tab governs what sort of formats are allowable on the digital output (PCM 96/192kHz, Dolby Digital, DTS, MPEG) as well as DRC for Dolby Digital. It also allows you to specify whether you want to hear audio whilst in search mode (non 1X playback speed). Interestingly, the player allows output of 192kHz through the digital outputs, which is non-standard (when I enabled it, I received static noise through my Cary Cinema 6 surround processor, even though the Cary also claims to support 192kHz - presumably using an incompatible signaling format).
 
 The 'Speaker' settings allow you to specify speaker presence and size, time alignment, and channel balance. Unfortunately, you have to specify time delay settings in milliseconds rather than distance (therefore it assumes you know the speed of sound and are handy with a calculator 舑 _1ms per foot of delay for those of you who want to ballpark it)._ Also, it assumes the Front Left/Right and Surround Left/Right pairs are equidistant. Furthermore, you cannot adjust the balance between the Front Left/Right speakers, nor can you adjust for time delay for the subwoofer.
 
@@ -142,7 +142,7 @@ I was surprised that Panasonic decided to include dedicated remote buttons for p
 
 ## Audioholics/HQV Bench Testing Summary of Test Results
 
-**Perfect Score is 130 DVD-S97 score: 85/130**very respectable and very typical of Faroudja FLI-2310-equipped players. The player performed adequately as a progressive scan player in Auto1 mode, failing only on unusual cadence sequences (although the player will detect 2:2 cadence in Auto2 mode).
+<strong>Perfect Score is 130 DVD-S97 score: 85/130</strong>very respectable and very typical of Faroudja FLI-2310-equipped players. The player performed adequately as a progressive scan player in Auto1 mode, failing only on unusual cadence sequences (although the player will detect 2:2 cadence in Auto2 mode).
 
 Performing measurements and tests on a DVD player using tools at our disposal is somewhat objective, but still results in a certain amount of subjective decision-making in terms of scoring and evaluation. As such, we recommend that these test results be used as a guideline only. For the review of this DVD player, the performance was based on the player in conjunction with the display monitor. We used the Sony VPL-VW11HT projector which was calibrated as close as possible to ISF reference standards using the SMART III calibration software. For the test and evaluation of the DVD-S97 we used selections from AVIA, Digital Video Essentials, the Microsoft WHQL 3.0 DVD Test Annex and the Silicon Optix _HQV Technology Benchmark DVD_ test discs in addition to various test clips from popular movies.
 
@@ -172,7 +172,7 @@ All final test scores were derived using the component video output in progressi
 
 *All tests were done with the component video output at 480p.
 
-### ******Comments on Audioholics DVD Torture Tests******
+### **Comments on Audioholics DVD Torture Tests**
 
 For the full list of features and testing, please see the new DVD Player Features and Benchmark Comparisons Chart.
 
@@ -302,7 +302,7 @@ The scoring below is based on each piece of equipment doing the duty it is desig
 
 Performance × Price Factor/Value = Rating
 
-_**Audioholics.com note:** The ratings indicated below are based on subjective listening and objective testing of the product in question. The rating scale is based on performance/value ratio. If you notice better performing products in future reviews that have lower numbers in certain areas, be aware that the value factor is most likely the culprit. Other Audioholics reviewers may rate products solely based on performance, and each reviewer has his/her own system for ratings._
+_<strong>Audioholics.com note:</strong> The ratings indicated below are based on subjective listening and objective testing of the product in question. The rating scale is based on performance/value ratio. If you notice better performing products in future reviews that have lower numbers in certain areas, be aware that the value factor is most likely the culprit. Other Audioholics reviewers may rate products solely based on performance, and each reviewer has his/her own system for ratings._
 
 ### Audioholics Rating Scale
 

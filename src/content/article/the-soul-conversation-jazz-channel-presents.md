@@ -18,7 +18,7 @@ _2000 · directed by Waymer Johnson._
 
 ## The film
 
-_**The Jazz Channel Presents: Soul Conversation**_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
+_<strong>The Jazz Channel Presents: Soul Conversation</strong>_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
 
 Soul Conversation is a collaboration between two jazz guitarists: **Mark Whifield** and **JK**. Mark released his first album when he was 23, after studying at the Berklee College of Music in Boston. JK is the son of French mime **Claude Kipnis**. He moved to New York at the age of 11 from Paris. Initially self-taught, he also studied jazz for a while at the University of Miami and was a session player for a number of years. The result of the partnership: electro retro funk grooves to acoustic ballads, with some progressive R&B and smooth jazz thrown in.
 
@@ -80,7 +80,7 @@ There appears to be no significant differences between the R1 and R4 versions of
 
 ## Summary
 
-_**The Jazz Channel Presents: Soul Conversation featuring Mark Whitfield and JK**_ is a listenable if somewhat predictable instrumental jazz concert featuring two guitarists. It is presented on a DVD with an above average video and audio transfer. The extras are nothing special, but welcomed anyway.
+_<strong>The Jazz Channel Presents: Soul Conversation featuring Mark Whitfield and JK</strong>_ is a listenable if somewhat predictable instrumental jazz concert featuring two guitarists. It is presented on a DVD with an above average video and audio transfer. The extras are nothing special, but welcomed anyway.
 
 | Rating  | Score        |
 | :------ | :----------- |

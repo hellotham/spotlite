@@ -17,7 +17,7 @@ _This article was written by me and **published on Audioholics**, where it remai
 
 Recently I bought an [Audiotrak Prodigy 7.1](https://www.audiotrak.net/prodigy71.htm) soundcard for my HTPC. This is a soundcard based on the Via Envy24HT "Vinyl Audio" controller and a [Wolfson WM8770](https://www.wolfsonmicro.com/products/WM8770/) CODEC supporting 96/24 A/D converters with 102dB dynamic range, and 8 channels of 192/24 D/A converters with 106dB dynamic range.
 
-I also have a very old copy of Cool Edit lying around, and I thought it might be interesting to record and compare CD, DVD-A and SACD (2 channel only) versions of **Diana Krall's** **_The Look Of Love_** (Verve) to see if I can gain any insights on the relative performance of each version in terms of dynamics and ultrasonic frequency content.
+I also have a very old copy of Cool Edit lying around, and I thought it might be interesting to record and compare CD, DVD-A and SACD (2 channel only) versions of **Diana Krall's _The Look Of Love_** (Verve) to see if I can gain any insights on the relative performance of each version in terms of dynamics and ultrasonic frequency content.
 
 Why that particular album? Well, "jimby" from Universal Music assures me that The Look Of Love was entirely recorded, mixed and mastered using analog equipment, and this is one of the few titles that are duplicated across all three consumer audio delivery formats. I did not want to use a recording that was originally recorded in either DSD or PCM as that would favour one format over the other. Also, I have been told the DVD-A and SACD were transferred off the same analog master, with as much commonality in the transfer chain as possible.
 

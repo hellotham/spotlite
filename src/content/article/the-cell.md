@@ -18,7 +18,7 @@ _2000 · directed by Tarsem Singh._
 
 ## The film
 
-Ever since I heard about _**The Cell**_, I have been eagerly awaiting to see what it is like. I heard it had some pretty surreal scenes but not much of a plot. That turned out to be a pretty accurate summary of the film.
+Ever since I heard about _<strong>The Cell</strong>_, I have been eagerly awaiting to see what it is like. I heard it had some pretty surreal scenes but not much of a plot. That turned out to be a pretty accurate summary of the film.
 
 There is really not much of a plot - this film is supported and survives mainly on the basis of the spectacular (and on occasion quite disturbing) visual effects, costumes and scenes depicting the imagery inside a schizophrenic human mind. Indeed, what little there is in the plot is highly derivative and reminiscent of other films. The quote on the front cover of the DVD package says _"The Matrix meets Silence of The Lambs"_. Well, those are not just the two films that the plot has referenced or borrowed from - certain scenes reminded me strongly of _2001: A Space Odyssey_, _Twin Peaks_, _The Thirteenth Floor_, _Coma_ and number of other films.
 

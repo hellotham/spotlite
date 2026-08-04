@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-_**The Rocky Horror Picture Show**_ is probably _THE_ ultimate cult movie. Based on a musical (_The Rocky Horror Show_), it was made into a movie that premiered in London on 14 August 1975 (and in the US around a month later). It was not an initial box office success, but over the years attracted a core group of fans who would watch the movie over and over again.
+_<strong>The Rocky Horror Picture Show</strong>_ is probably _THE_ ultimate cult movie. Based on a musical (_The Rocky Horror Show_), it was made into a movie that premiered in London on 14 August 1975 (and in the US around a month later). It was not an initial box office success, but over the years attracted a core group of fans who would watch the movie over and over again.
 
 What turned the movie from simply another quirky film with an unusually loyal set of devotees to a true cult phenomeneon can be summed up in two words: **audience participation**. Some fans started attending the movie dressed up as their favourite characters, and others started the trend of responding to lines in the dialogue by "calling back" lines that either provide a commentary on the dialogue, or are funny one-liners in their own right, or take the plot to a completely new direction. Some theatres started running midnight sessions catering for audience participation screenings and pretty soon the phenomeneon replicated around the world and developed into the full blown audience participation ritual that we know and love today.
 
@@ -148,7 +148,7 @@ These show the relevant segments of the movie (in a non-16x9 enhanced letterboxe
 
 ### Featurette - _Misprint Ending_ (1:46)
 
-During _**Rocky Horror**_'s initial theatrical run, certain prints were mistakenly struck with picture from _Superheroes_ but audio from the the Criminologist. This is a reconstruction of how that "misprint" appeared. It is presented in a non-16x9 enhanced letterboxed aspect ratio.
+During _<strong>Rocky Horror</strong>_'s initial theatrical run, certain prints were mistakenly struck with picture from _Superheroes_ but audio from the the Criminologist. This is a reconstruction of how that "misprint" appeared. It is presented in a non-16x9 enhanced letterboxed aspect ratio.
 
 ### Photo Gallery
 

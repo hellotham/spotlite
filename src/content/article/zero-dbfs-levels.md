@@ -85,7 +85,7 @@ I played back the CD in the following players/configurations (all via the analog
 - Panasonic DVD-RP82, analog outputs, no upsampling
 - Panasonic DVD-RP82, analog outputs, upsampling algorithm 1 (Remaster 1)
 
-**Ed\****itorial Note** Please note the purpose of these tests is NOT to critique the design or performance of any of these players, nor to single out any particular manufacturer for deficiencies in their designs. It is to illustrate that the hardware is in fact designed to meet the maximum limits of Redbook (0dBFS levels) and what happens to the majority of consumer digital playback systems when they are operated beyond specification. Unfortunately a bulk of today's mainstream / pop music recordings exceed specification limits because recording levels were set too high during the mastering process.
+**Editorial Note** Please note the purpose of these tests is NOT to critique the design or performance of any of these players, nor to single out any particular manufacturer for deficiencies in their designs. It is to illustrate that the hardware is in fact designed to meet the maximum limits of Redbook (0dBFS levels) and what happens to the majority of consumer digital playback systems when they are operated beyond specification. Unfortunately a bulk of today's mainstream / pop music recordings exceed specification limits because recording levels were set too high during the mastering process.
 
 ## Issues with 0dBFS+ Levels on Digital Playback p2
 

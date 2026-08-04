@@ -146,7 +146,7 @@ Given the presence of both Dolby Pro Logic IIx and DTS NEO:6, I was very tempted
 
 I listened to a CD that's encoded with Dolby Surround using Dolby Pro Logic IIx Music mode: Wendy Carlos' All-New 25th Anniversary **Switched-On Bach 2000** (Telarc Digital CD-80323). The experience was exhilarating - the decoded surround mix was at least as immersive as any multi-channel SA-CD or DVD-Audio I have heard, with plenty of directional cues across the rear channels.
 
-Both Dolby Pro Logic IIx and DTS NEO:6 work best on music with lots of ambience and reverb. I next turned to **Josh Groban'**s self titled debut album (WEA Reprise 9362481542). Again this worked very well - I was almost convinced I was listening to a discrete surround mix. DTS NEO:6 seemed to exert a touch more magic on this disc than Dolby Pro Logic IIx, with the resultant mix having more body and presence.
+Both Dolby Pro Logic IIx and DTS NEO:6 work best on music with lots of ambience and reverb. I next turned to <strong>Josh Groban'</strong>s self titled debut album (WEA Reprise 9362481542). Again this worked very well - I was almost convinced I was listening to a discrete surround mix. DTS NEO:6 seemed to exert a touch more magic on this disc than Dolby Pro Logic IIx, with the resultant mix having more body and presence.
 
 Dolby Pro Logic IIx had its revenge on Tangerine Dream's **Optical Race** (Private Music VPCD 6803) 舑 it managed to render this with a bit more sophistication and polish than DTS NEO:6 - the latter making the music a bit recessed and front centred.
 
@@ -154,7 +154,7 @@ Dolby Pro Logic IIx had its revenge on Tangerine Dream's **Optical Race** (Priva
 
 The Cinema 6 is a very good Dolby Digital and DTS decoder. In particular, DTS soundtracks really sounded fantastic, particularly in 6.1 ES-Discrete mode, such as the audio tracks from the Extended Edition of **_The Lord of Rings_** Trilogy (New Line Platinum Series N5549, N6932, N6504). I kept hearing little details, like foley effects in the background, and the omnipresent musical score, that I've never noticed before. There's a sense of clarity and crispness in the decoding that is bound to bring a smile to home theater fans (and perhaps even a few gasps during loud scenes).
 
-But even standard DTS 5.1 audio tracks from a variety of DVDs sounded excellent, at both normal and half bit rates. I tried several DTS tracks on Music DVDs, including **The** **Jazz Channel Presents Jeffrey Osborne** (Warner Vision 8573862162), **Laura Pausini Live 2001-2002 World Tour** (Warner Vision 5046610912) and **Pat Metheny Group Speaking of Now Live** (Eagle Eye Media EE 19023) - all sounded superb, and in each case the DTS 5.1 had an edge over Dolby Digital 5.1 in terms of audio quality.
+But even standard DTS 5.1 audio tracks from a variety of DVDs sounded excellent, at both normal and half bit rates. I tried several DTS tracks on Music DVDs, including **The Jazz Channel Presents Jeffrey Osborne** (Warner Vision 8573862162), **Laura Pausini Live 2001-2002 World Tour** (Warner Vision 5046610912) and **Pat Metheny Group Speaking of Now Live** (Eagle Eye Media EE 19023) - all sounded superb, and in each case the DTS 5.1 had an edge over Dolby Digital 5.1 in terms of audio quality.
 
 Normal Dolby Digital 5.1 and 2.0 decoding were also handled with considerable flair. The Cinema 6 seemed to give DTS a bit of an unfair advantage by decoding DTS tracks louder and bassier than Dolby Digital, but once the differences were accounted for Dolby Digital soundtracks did sound very good. For example, the Dolby Digital 2.0 256 kbps audio track on Ana Torroja and Miguel Bosè's **Girados en concierto** (Warner Music Vision 8573864392) was handled very well, sounding only a little bit harsher than the CD version (WEA 84915-2).
 
@@ -337,7 +337,7 @@ The scoring below is based on each piece of equipment doing the duty it is desig
 
 Performance × Price Factor/Value = Rating
 
-_**Audioholics.com note:** The ratings indicated below are based on subjective listening and objective testing of the product in question. The rating scale is based on performance/value ratio. If you notice better performing products in future reviews that have lower numbers in certain areas, be aware that the value factor is most likely the culprit. Other Audioholics reviewers may rate products solely based on performance, and each reviewer has his/her own system for ratings._
+_<strong>Audioholics.com note:</strong> The ratings indicated below are based on subjective listening and objective testing of the product in question. The rating scale is based on performance/value ratio. If you notice better performing products in future reviews that have lower numbers in certain areas, be aware that the value factor is most likely the culprit. Other Audioholics reviewers may rate products solely based on performance, and each reviewer has his/her own system for ratings._
 
 ### Audioholics Rating Scale
 

@@ -19,7 +19,7 @@ _Eight of the charts below are no longer served by Audioholics. They have been r
 
 After doing the four articles on comparisons of various formats and recordings based on measurements derived using my soundcard, I did not think there was any need to do another, but my friend Dan Banquer alerted me to one of his favourite recordings, which was originally released on CD but subsequently remastered by Mobile Fidelity and released as a Hybrid SACD.
 
-**Patricia Barber's** **_Café Blue_** is regarded by many audiophiles as an excellent recording, both the original CD release and the Mobile Fidelity Hybrid SACD. It was recorded at the Chicago Recording Company in 1994. The original recording engineer was Jim Anderson, and he also participated in the Mobile Fidelity remaster in 2002.
+**Patricia Barber's _Café Blue_** is regarded by many audiophiles as an excellent recording, both the original CD release and the Mobile Fidelity Hybrid SACD. It was recorded at the Chicago Recording Company in 1994. The original recording engineer was Jim Anderson, and he also participated in the Mobile Fidelity remaster in 2002.
 
 Dan was so keen on me doing the comparisons between the CD and SACD versions that he sent me a CD-R copy of the original CD release, plus the Hybrid SACD for me to do my tests!
 
@@ -81,7 +81,7 @@ Using the first track (_What A Shame_), here are the relative differences using 
 
 As you can see, the SCD-XA777ES reproduces both the CD-R and the CD layer of the Hybrid disc reasonably faithfully compared to the digital rips (except with a higher noise floor). The statistics also confirm how close the CD and SACD layers are. The SACD layer is obviously slightly louder, and this could account for me finding Patricia's vocals a bit more engaging on SACD.
 
-_**Track 11 (Nardis)**_
+_<strong>Track 11 (Nardis)</strong>_
 
 Here is a close-up showing that the SACD has much higher peaks on Track 11 ( _Nardis_):
 
@@ -120,7 +120,7 @@ Close up of an excerpt from Track 11 from
 
 CD layer (digitally ripped using EAC) showing signs of digital clipping as well as 0dBFS+ levels
 
-### _**Spectral Comparisons**_
+### _<strong>Spectral Comparisons</strong>_
 
 Here is how the Track 1 of the CD-R looks like:
 
@@ -154,7 +154,7 @@ The SACD layer surprisingly also show no frequency components above 22.05kHz exc
 
 _[![Figure 11 from the original article, Dynamic Comparison SACD vs CD - Part 5](../../assets/ah-dynamic-5-chart4-1.png)](https://www.audioholics.com/audio-technologies/chart4-1.jpg/image) Track 1 of the_ SA _CD layer (recorded using soundcard at 96/24)_
 
-### _**Frequency analysis**_
+### _<strong>Frequency analysis</strong>_
 
 This is confirmed by doing a frequency analysis around 3:45 into the track. This is the CD-R:
 
