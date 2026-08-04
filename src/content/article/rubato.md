@@ -18,6 +18,8 @@ _Chris Tham, Computer Science Honours, 1987. Basser Department of Computer Scien
 
 _This is my honours thesis, for which I was awarded the University Medal. It was written in troff, and in January 1998 I converted it to HTML with a perl script of my own called `m2h`; this is that HTML turned into Markdown. Two faults in the 1998 conversion are repaired here: an anchor in the contents whose quote never closed, and several lists opened as one kind and closed as the other. Its own numbering was off by one throughout, the footnotes and references being listed from two while cited from one, so both are renumbered against the text. The words are otherwise as submitted._
 
+_The project's own files turned up later, on a floppy I archived in December 1992: the troff source this was set from, three earlier drafts of it, and the C and assembly for the player — the MPU-401 code that was to drive the JX-8P. The compiler is not in it. The design below anticipates a compiler and a player, and only the player survives._
+
 ## How it came to be written
 
 I am delighted to have finally tracked down an electronic version of my honours thesis, for which I won the University Medal and graduated with first class honours from the University of Sydney in 1988.
