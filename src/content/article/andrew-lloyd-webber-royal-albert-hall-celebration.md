@@ -69,13 +69,13 @@ The song list for the concert is:
 | Whistle Down The Wind | WHISTLE DOWN THE WIND | Lottie Mayor with Andrew Lloyd Webber |
 | The Jellicle Ball | CATS | Orchestra |
 
-I was expecting (and even looking forward to) performances by the likes of **Sarah Brightman**, **Michael Ball**, and **Elaine Page**- after all, these are artists associated to Andrew and in some cases have been made famous by their stage performances on the songs. However, I must admit I was surprised by the inclusion of artists such as **Tina Arena**, **Donny Osmond**, **Boyzone**and **Bonnie Tyler**. However, everyone gave really credible and good performances.
+I was expecting (and even looking forward to) performances by the likes of **Sarah Brightman**, **Michael Ball**, and **Elaine Page** - after all, these are artists associated to Andrew and in some cases have been made famous by their stage performances on the songs. However, I must admit I was surprised by the inclusion of artists such as **Tina Arena**, **Donny Osmond**, **Boyzone** and **Bonnie Tyler**. However, everyone gave really credible and good performances.
 
-I don't know some of the artists featured here, but my vote for the Coolest Name for an Artist I Have Never Heard Of Before is **Ben De'ath**- especially as the name is attached to a boy with the sweetest voice and the most angelic face yet.
+I don't know some of the artists featured here, but my vote for the Coolest Name for an Artist I Have Never Heard Of Before is **Ben De'ath** - especially as the name is attached to a boy with the sweetest voice and the most angelic face yet.
 
 The weakest link is probably **Antonio Banderas** - despite his devastatingly handsome good looks and his ability to carry off his tune, his voice is not as powerful or compelling as the others. Noticeably absent from the concert was "Mr. Phantom" himself **Michael Crawford**.
 
-The highlight for me was **Glenn Close**- even though I vaguely knew she had appeared on Broadway I never suspected her to be this good - she was awesome in her performances of selections from _Sunset Boulevard_.
+The highlight for me was **Glenn Close** - even though I vaguely knew she had appeared on Broadway I never suspected her to be this good - she was awesome in her performances of selections from _Sunset Boulevard_.
 
 All in all, this is a must-have concert if you are a fan of Andrew Lloyd Webber. Even if you can't stand the man, I would still recommend that you have at least a look.
 

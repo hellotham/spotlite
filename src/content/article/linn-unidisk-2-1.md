@@ -253,7 +253,7 @@ I calibrated the player by adjusting the display settings of my Sony VPL-VW11HT 
 
 I only tested the player in progressive scan mode (for both PAL and NTSC titles) using component video output. I did briefly put the player in interlaced mode to verify that it outputs interlaced video correctly. The DVI/HDCP port was not active at the time of review, so I am unable to comment on that feature.
 
-The review unit is multi-region enabled and I had no difficulty playing a number of Region 1, 2 and 4 discs (including R1 RCE discs). Even discs that do not play properly on my other players - the Pioneer DV-626D - (including _When Harry Met Sally_and the layer change of several discs including _Fried Green Tomatoes_) and the Panasonic DVD-RP82 (_Live At The Basement: Eric Bibb_) play perfectly fine on the Unidisk 2.1. I am not sure whether retail units will be multi-region enabled out of the box.
+The review unit is multi-region enabled and I had no difficulty playing a number of Region 1, 2 and 4 discs (including R1 RCE discs). Even discs that do not play properly on my other players - the Pioneer DV-626D - (including _When Harry Met Sally_ and the layer change of several discs including _Fried Green Tomatoes_) and the Panasonic DVD-RP82 (_Live At The Basement: Eric Bibb_) play perfectly fine on the Unidisk 2.1. I am not sure whether retail units will be multi-region enabled out of the box.
 
 As you would expect from a player at this price, the display quality is stunning and certainly as good as or better than any other player that I have tested to date. The output is quite "sharp", with minimal ringing, and the player seem to have the capability of extracting even the smallest amount of detail from DVDs.
 
@@ -265,7 +265,7 @@ One advantage the Unidisk has in being a later generation player is that I could
 
 However, the player does not handle 4:2:0 interlaced chroma upsampling well. Strictly speaking this is not a bug, but it is annoying nevertheless as you can see it in many R1 animated menus with lots of red, such as the R1 Special Edition of _**Hunt For Red October**_. This puts the player at a disadvantage compared to Faroudja-based progressive scan DVD players such as the DVD-RP82 since the Faroudja chipset resamples and filters the chroma channel and hence "masks" the problem.
 
-This player must implement a fairly large memory buffer that minimizes the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _**Fried Green Tomatoes**_R4. However, on DVDs that split a film across several titles (including the above-mentioned _**Fried Green Tomatoes**_), I noticed that title transitions still incur a slight pause.
+This player must implement a fairly large memory buffer that minimizes the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _**Fried Green Tomatoes**_ R4. However, on DVDs that split a film across several titles (including the above-mentioned _**Fried Green Tomatoes**_), I noticed that title transitions still incur a slight pause.
 
 In summary, the player currently provides State Of The Art video playback quality through the analog video outputs. It will be interesting to see what the DVI/HDCP output quality will be like once Linn enables the port.
 
@@ -338,11 +338,11 @@ Every format sounded good on this player, even MP3. Indeed, this player is proba
 
 I have a few titles duplicated across formats. The player handles CDs so well, and so close to the high resolution equivalent on DVD-A or SACD, that it seriously begs the question: why bother with investing in these new, high resolution formats? However, a careful listen reveals that there is a harshness about playing CDs that isn't present on the newer formats. And listening to the best DVD-As and SACDs revealed new layers of detail and presence that are submerged in the CD version.
 
-**Joni Mitchell**'s _Both Sides Now_- one of my favourite "test" discs on CD and DVD-A - sounded great on CD, despite the lack of HDCD decoding. The MLP 5.1 version sounded marginally better, though not by much. However, the MLP 2.0 version was a revelation - the additional complexity and micro-dynamics in **Joni**'s voice and the timbre of the strings floored me - it was like listening to a completely different recording, and it was like cotton balls have been removed from my ears.
+**Joni Mitchell**'s _Both Sides Now_ - one of my favourite "test" discs on CD and DVD-A - sounded great on CD, despite the lack of HDCD decoding. The MLP 5.1 version sounded marginally better, though not by much. However, the MLP 2.0 version was a revelation - the additional complexity and micro-dynamics in **Joni**'s voice and the timbre of the strings floored me - it was like listening to a completely different recording, and it was like cotton balls have been removed from my ears.
 
-Similarly, **John William**'s soundtrack to the movie _A.I._- a disc that can often sound murky and harsh on lesser players - is handled with aplomb, sweet sounding in the softer passages and appropriately menacing in the darker fast paced ones. There is no trace of sibilance in the vocal tracks.
+Similarly, **John William**'s soundtrack to the movie _A.I._ - a disc that can often sound murky and harsh on lesser players - is handled with aplomb, sweet sounding in the softer passages and appropriately menacing in the darker fast paced ones. There is no trace of sibilance in the vocal tracks.
 
-The player was essentially faultless playing both multi-channel and stereo tracks on Super Audio CDs, with a very similar overall sound compared to my own player the Sony SCD-XA777ES. Listening to _The Girl From Ipanema_from the SACD version of _Getz/Gilberto_, I felt that the player handled the cymbals with more accuracy than the XA777ES, capturing the overall character of the cymbals without making them sound "hollow" which a lot of other players tend to do.
+The player was essentially faultless playing both multi-channel and stereo tracks on Super Audio CDs, with a very similar overall sound compared to my own player the Sony SCD-XA777ES. Listening to _The Girl From Ipanema_ from the SACD version of _Getz/Gilberto_, I felt that the player handled the cymbals with more accuracy than the XA777ES, capturing the overall character of the cymbals without making them sound "hollow" which a lot of other players tend to do.
 
 There were only two extremely minor criticisms I can make to the overall sound. Linn seems to value smoothness above everything else, and as a consequence extreme high frequencies can sound a bit featureless or "over-filtered" compared to my other players. Secondly, I felt that the player appeared to sound ever so slightly less dynamic and "punchy" compared to the XA777ES. I was unable to ascertain whether the slight reduction in "bite" is due to the player being more accurate, or because it is yet another trade-off to get that "smooth" sound. Or perhaps it is simply another sign that the player still isn't performing optimally and further burn-in is required. Certainly, the dynamics and bite kept improving the longer I kept the player and towards the end I didn't think it was an issue.
 
@@ -350,13 +350,13 @@ Unfortunately, the player does not have any bass management, channel level setti
 
 Linn also assumes that you will never use the in built Dolby Digital and dts decoders in the player. In fact, they seem to have deliberately limited the player by implementing decoding into two channels only, thus forcing you to use an external surround processor if you ever want to watch movies in surround sound. In any case, the 2 channel decoding is rather mediocre. This seems strange to me, since the player obviously has enough processing power and analog circuitry to do it right. Perhaps Linn wanted to ensure that decoding DVD audio formats does not compromise video playback, or perhaps it was a deliberate limitation to distinguish the player from the Unidisk 1.1 (although I have no idea if the Unidisk 1.1 implements multi-channel Dolby Digital and dts decoding).
 
-Subjectively, I did not notice any issues with audio synchronization (on both analogue and digital outputs) on the test discs (_**Wedding Singer**_R4 second remastered edition and also _**Matrix**_R1).
+Subjectively, I did not notice any issues with audio synchronization (on both analogue and digital outputs) on the test discs (_**Wedding Singer**_ R4 second remastered edition and also _**Matrix**_ R1).
 
 In summary, this player has audio playback quality that justifies it's high price tag, sounding better than any player I have reviewed to date.
 
 ## Disc Compatibility Tests
 
-��� I tested the player against a number of discs to highlight potential problems: _Specific Tests_
+I tested the player against a number of discs to highlight potential problems: _Specific Tests_
 
 | **Disc** | **What Is Tested** | **Results** |
 | :-- | :-- | :-- |

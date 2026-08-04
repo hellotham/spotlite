@@ -28,7 +28,7 @@ The music pieces performed in the concert are:
 | :-- | :-- |
 | 1. Sonata – Reinecke 2. Sonata – Prokofiev 3. La Flûte de Pan – Mouquet 4. Fantaisie – Taffanel 5. Andante et Rondo – Doppler | 1. Jeanne’s Song – Overton 2. Il Pastore Svizzero – Morlacchi 3. Danny Boy – Traditional 4. The Flight of the Bumble-bee – Rimsky-Korsakov |
 
-In this concert, James is accompanied by **Phillip Moll** on the piano. In two of the pieces - _Andante et Rondo_(**Doppler**) and _Jeanne's Song_(**Overton**), James is joined by his wife **Jeanne** (also an accomplished flautist in her own right).
+In this concert, James is accompanied by **Phillip Moll** on the piano. In two of the pieces - _Andante et Rondo_ (**Doppler**) and _Jeanne's Song_ (**Overton**), James is joined by his wife **Jeanne** (also an accomplished flautist in her own right).
 
 I have to admit that I am not a fan of the flute and am unfamiliar with the repertoire. I did not recognise any of the music pieces on this apart from the last two. To be honest, the first time I watched this concert I was bored. Then I watched the fascinating _South Bank Show_ documentary in which James is interviewed by **Melvyn Bragg** and that really perked my interest as well as educated me on the intricacies of flute playing technique such as single/double tonguing ("No Virginia, these are not sexual techniques!"). After that, I had to rewatch the concert again and this time I enjoyed it a lot more. Needless to say, James' performance and technique in this concert is flawless and superb, but I didn't need to tell you that, did I?
 

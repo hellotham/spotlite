@@ -33,7 +33,7 @@ So, basically the movie is trying to tell us both Paul and Dora are 'losers' who
 
 I really enjoyed _Clueless_, and the cast list sounded really promising, so I had high expectations for this movie. Unfortunately, I was disappointed. The movie tries so hard to ensure we get the message that the two characters are 'losers' that it makes it hard for me to feel any real empathy for them. I think there is a difference between being nice but naive to just being plain dumb and in this case the characters are so clueless and apathetic about their situations that I started feeling they deserve everything they are getting.
 
-Cameo appearances by **Andy Dick**(_NewsRadio_'s Matthew Brock) and **David Spade**(_Just Shoot Me!_'s Dennis Finch) fail to generate any real excitement. **Dan Ackroyd**'s role as Mr. Tanneck is so small it borders on being a cameo appearance (he only appears in two scenes).
+Cameo appearances by **Andy Dick** (_NewsRadio_'s Matthew Brock) and **David Spade** (_Just Shoot Me!_'s Dennis Finch) fail to generate any real excitement. **Dan Ackroyd**'s role as Mr. Tanneck is so small it borders on being a cameo appearance (he only appears in two scenes).
 
 In summary, the movie wanted to say "nice guys finish first" but end up saying "nice guys ought to finish last" instead. So, the real 'loser' is probably the movie itself.
 
@@ -43,7 +43,7 @@ True to the adage that bad movies get good video transfers, this is a near perfe
 
 The movie is presented in it's original aspect ratio of 1.85:1 with 16x9 enhancement. The film source is extremely clean and free of dirt or grain, and the transfer by Sony Pictures DVD Center is excellent, with no sign of MPEG artefacts apart from slight "ringing" around the titles during the opening credits. Sharpness, colour saturation and shadow level is basically reference quality.
 
-The disc comes with no less than 17 subtitle tracks ranging from English to the Scandinavian languages (all four) and even Hindi and Arabic. Even the trailer
+The disc comes with no less than 17 subtitle tracks ranging from English to the Scandinavian languages (all four) and even Hindi and Arabic. Even the trailer is subti
 
 ## The audio transfer
 
@@ -75,7 +75,7 @@ The music video is presented in a letter-boxed non-16x9 enhanced aspect ratio.
 
 ### Biographies - Cast & Crew
 
-This is a set of stills featuring short biographies of **Amy Heckerling**, **Jason Biggs,** **Mena Suvari**, and **Greg Kinnear**.
+This is a set of stills featuring short biographies of **Amy Heckerling**, **Jason Biggs, Mena Suvari**, and **Greg Kinnear**.
 
 ## Region 4 versus Region 1
 

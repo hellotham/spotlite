@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 The NAD brand has long been synonymous with good performance and value for money - it is the brand that many knowledgable consumers have gravitated to when they have hi-fi aspirations but lo-fi budgets. Started by a group of audio retailers and distributors who were annoyed by the lack of affordable good quality electronic components, NAD had a simple and very successful formula: brilliantly simple and elegant designs, over-speced components and a low price due to the use of outsourced manufacturing in the Far East. NAD sells a full range of audio and home theatre components as well as all-in-one systems, and their philosophy of plain looks, good performance and budget-conscious pricing apply across their entire range.
 
-The **T 513**is NAD's newest and lowest priced DVD player, replacing the T 512. The new model adds both PAL and NTSC Progressive Scan and component video output (whilst retaining support for SCART RGB and composite. In addition, the player now supports WMA (audio only) files as well as JPEG/Kodak Picture CD images in addition to MP3.
+The **T 513** is NAD's newest and lowest priced DVD player, replacing the T 512. The new model adds both PAL and NTSC Progressive Scan and component video output (whilst retaining support for SCART RGB and composite. In addition, the player now supports WMA (audio only) files as well as JPEG/Kodak Picture CD images in addition to MP3.
 
 The full list of formats supported are:
 
@@ -117,15 +117,15 @@ I would have liked to see a black level setting (IRE 0/7.5).
 
 ## Video Playback
 
-I calibrated the player by adjusting the display settings of my Sony VPL-VW11HT LCD projector (and leaving the Picture Mode of the DVD player on "Standard") using the [**_Digital Video Essentials_**](http://www.videoessentials.com) test disc (PAL/NTSC) plus the older _Video Essentials_(NTSC). The player's video output must be close to reference levels, for the optimal adjusted settings were the same as the default settings.
+I calibrated the player by adjusting the display settings of my Sony VPL-VW11HT LCD projector (and leaving the Picture Mode of the DVD player on "Standard") using the [**_Digital Video Essentials_**](http://www.videoessentials.com) test disc (PAL/NTSC) plus the older _Video Essentials_ (NTSC). The player's video output must be close to reference levels, for the optimal adjusted settings were the same as the default settings.
 
 I only tested the player in progressive scan mode (for both PAL and NTSC titles). I did briefly put the player in interlaced mode to verify that it outputs interlaced video correctly.
 
-The review unit is multi-region enabled and I had no difficulty playing a number of Region 1, 2 and 4 discs (including R1 RCE discs). Even discs that do not play properly on my old player - the Pioneer DV-626D - (including _When Harry Met Sally_and the layer change of several discs including _Fried Green Tomatoes_) play perfectly fine on the DVD-2900. I am not sure whether retail units will be multi-region enabled out of the box.
+The review unit is multi-region enabled and I had no difficulty playing a number of Region 1, 2 and 4 discs (including R1 RCE discs). Even discs that do not play properly on my old player - the Pioneer DV-626D - (including _When Harry Met Sally_ and the layer change of several discs including _Fried Green Tomatoes_) play perfectly fine on the DVD-2900. I am not sure whether retail units will be multi-region enabled out of the box.
 
 Given that this is effectively an "entry level" player for NAD that is not too dissimilar to bargain priced players, the quality of the video output is only average. However, unless you are very very picky (and have a very high resolution display) you will probably not notice most of the problems and the player should perform adequately on most TVs (especially if progressive scan is not used).
 
-The player performed okay on most of the tests in _Digital Video Essentials_. It passed through all the picture resolution patterns (Title 13) with no problems. It also performed adequate on the _Snell and Wilcox Anamorphic Zone Plate_motion patterns (Title 16). It performed the A/V timing test in Title 11 with no issues, indicating that the player should not have any problems with lip sync and audio synchronization.
+The player performed okay on most of the tests in _Digital Video Essentials_. It passed through all the picture resolution patterns (Title 13) with no problems. It also performed adequate on the _Snell and Wilcox Anamorphic Zone Plate_ motion patterns (Title 16). It performed the A/V timing test in Title 11 with no issues, indicating that the player should not have any problems with lip sync and audio synchronization.
 
 Resolution of still images are perfect, and the player pixelates on very fast moving low level detail (as evidenced by the computer generated animation in _Digital Video Essential_'s video montage - Title 17 Chapter 2). For example, there's quite a lot of shimmering and moire patterns around Daryl's tie (worn by Freddy) at **20:52**-**21:37** in the R4 edition of _Double Take_.
 
@@ -135,7 +135,7 @@ Slow pans were reasonably smooth and marred only by the occasional micro-stutter
 
 At first I did not notice any signs of chroma issues, such as the chroma upsampling error or interlaced chroma upsampling artefacts. However, upon very close inspection during the (animated) main menu of the Region 1 release of _Saturday Night Fever_, I did notice that there are vestiges of jagginess in the pulsating red boxes - so, the MediaTek MT1379 is probably applying some sort of filter on the chroma channels. Slight jagginess can also be noticed due to interlaced chroma upsampling, for example the animated menu for the R1 edition of _The Hunt For Red October_.
 
-One annoying fault I did notice is presence of colour banding on bright backgrounds that are rapidly changing in luminosity - this is noticeable in the fast motion sequence of clouds on top the a mountainside scenery at the beginning of the _Digital Video Essentials_video montage. and during the opening titles of the R4 edition of the remake of _The Thomas Crown Affair_. Once I noticed it I saw it everywhere, particularly during scene fade ins and fade outs.
+One annoying fault I did notice is presence of colour banding on bright backgrounds that are rapidly changing in luminosity - this is noticeable in the fast motion sequence of clouds on top the a mountainside scenery at the beginning of the _Digital Video Essentials_ video montage. and during the opening titles of the R4 edition of the remake of _The Thomas Crown Affair_. Once I noticed it I saw it everywhere, particularly during scene fade ins and fade outs.
 
 In summary then, the player's video output quality is by no means "State Of The Art", but it's close enough, at least on the basics such as resolution, colour accuracy and smoothness. Many of the faults exhibited by this player are only noticeable to the trained eye, on a high resolution display.
 
@@ -212,11 +212,11 @@ The specs are not terribly impressive, with only a 100dB S/N ratio and 95dB dyna
 
 The player of course will downmix Dolby Digital into 2.0 and will only support dts on the digital out. There is a "3D surround" mode but I did not engage it - this is a proprietary virtual surround processing mode embedded in the MT1379.
 
-Subjectively, the player exhibited some with audio synchronization on known "problem" discs (_**Wedding Singer**_R4 second remastered edition and also _**Matrix**_R1). The audio was definitely not synchronized during **Steve Buscemi**'s wedding speech in the former but within acceptable tolerances when Neo is being scolded by his manager for being late at work in the latter.
+Subjectively, the player exhibited some with audio synchronization on known "problem" discs (_**Wedding Singer**_ R4 second remastered edition and also _**Matrix**_ R1). The audio was definitely not synchronized during **Steve Buscemi**'s wedding speech in the former but within acceptable tolerances when Neo is being scolded by his manager for being late at work in the latter.
 
 ## Disc Compatibility Tests
 
-��� I tested the player against a number of discs to highlight potential problems: _Specific Tests_
+I tested the player against a number of discs to highlight potential problems: _Specific Tests_
 
 | **Disc** | **What Is Tested** | **Results** |
 | :-- | :-- | :-- |

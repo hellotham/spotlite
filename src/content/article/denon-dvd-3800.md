@@ -302,9 +302,9 @@ Basically, I only hooked up the component video, analogue stereo, and analogue m
 
 I then selected a number of discs for which I have multiple copies of. These include:
 
-- _Logan's Run_(NTSC)
-- _Best of Sessions from West 54th Street, Vol. 1_(NTSC)
-- _Pleasantville_(PAL)
+- _Logan's Run_ (NTSC)
+- _Best of Sessions from West 54th Street, Vol. 1_ (NTSC)
+- _Pleasantville_ (PAL)
 
 By standing well away from both players, I was able to use the same remote control to trigger the same operations on both players simultaneously - this include opening and closing door trays, menu navigation and chapter selection. Thus I could ensure that both players were playing exactly the same material simultaneously, and I can use the input selector on the AVC-A1SE+ to rapidly switch between the two players.
 
@@ -312,21 +312,21 @@ Using the same technique (but on different remotes), I was also able to compare 
 
 Like it's sister the DVD-A1, the overall picture quality of the DVD-3800 is slightly soft, especially compared to the Panasonic DVD-RP82. However, in return for the softness, the DVD-3800 offers less visible artefacts such as ringing or shimmering. It also presents additional detail than I can see on the RP82 and even my home theatre PC running PowerDVD.
 
-For example, the RP82 displays moire patterns around Daryl's tie (worn by Freddy) in the R4 edition of _Double Take_around **20:52**-**21:37** . This same scene on the HTPC does not show any moire patterns. However, the tie pattern detail has also been smoothened out, making the tie look somewhat bland. On the DVD-3800, the tie pattern is clearly resolved down to the finest detail with minimal moire effects.
+For example, the RP82 displays moire patterns around Daryl's tie (worn by Freddy) in the R4 edition of _Double Take_ around **20:52**-**21:37** . This same scene on the HTPC does not show any moire patterns. However, the tie pattern detail has also been smoothened out, making the tie look somewhat bland. On the DVD-3800, the tie pattern is clearly resolved down to the finest detail with minimal moire effects.
 
 The DVD-3800 is also noticeably smoother in fast pans than the RP82, which displays noticeable judder during the first few minutes of **Andrea Bocelli**'s _Cieli Di Toscana_ (where we get to see the shops and alleys of the West End district of London panning across the screen from the perspective of the side window of a moving car). This is a real torture test for an MPEG decoder, as the entire scene is a relatively fast pan from right to left.On the DVD-A1 I get a much smoother (though not completely smooth) and a more detailed set of frames.
 
-Switching between the DVD-A1 and the DVD-3800 on NTSC titles such as _Logan's Run_and the _Best of Sessions from West 54th Vol. 1_revealed absolutely no difference in terms of picture quality. I really could not tell them apart. So it looks like the additional 2 bits of Video DAC resolution on the DVD-A1 does not actually translate to any perceptible increase in quality on my system.
+Switching between the DVD-A1 and the DVD-3800 on NTSC titles such as _Logan's Run_ and the _Best of Sessions from West 54th Vol. 1_ revealed absolutely no difference in terms of picture quality. I really could not tell them apart. So it looks like the additional 2 bits of Video DAC resolution on the DVD-A1 does not actually translate to any perceptible increase in quality on my system.
 
 However, on the PAL title (_Pleasantville_), the picture on the DVD-A1 looked slightly softer than the DVD-3800. Based on this title, I would have to say I prefer the picture quality of the DVD-3800. I am unable to account for this slight difference and why it only occurs on PAL and not NTSC. Perhaps the DVD-A1 and DVD-3800 has slightly different firmware settings for the MPEG encoder for PAL.
 
 Unfortunately, the review unit exhibits the ["chroma upsampling error"](http://www.hometheaterhifi.com/volume_8_2/dvd-benchmark-special-report-chroma-bug-4-2001.html) common on many DVD players, in fact the same error as on the review unit of the DVD-A1. Both review units are early production units. Denon has recently announced both a hardware and software fix for the problem and I've been told by the Denon product manager at Audio Products Australia (**Steve Ismay**) that currently shipping players should not have this problem, but I would urge you to check before you buy, especially if your display is sensitive to this "bug." (Some displays have circuitry that effectively "masks" the problem by resampling the chroma information. Sony's Digital Reality Creation or DRC is a well known example.) If you are an existing owner and you experience the chroma bug, please contact your dealer.
 
-The review unit is also multi-region enabled and I had no difficulty playing a number of Region 1, 2 and 4 discs (including R1 RCE discs). Even discs that do not play properly on my old player - the Pioneer DV-626D - (including _When Harry Met Sally_and the layer change of several discs including _Fried Green Tomatoes_) play perfectly fine on the DVD-3800. I am not sure whether retail units will be multi-region enabled out of the box.
+The review unit is also multi-region enabled and I had no difficulty playing a number of Region 1, 2 and 4 discs (including R1 RCE discs). Even discs that do not play properly on my old player - the Pioneer DV-626D - (including _When Harry Met Sally_ and the layer change of several discs including _Fried Green Tomatoes_) play perfectly fine on the DVD-3800. I am not sure whether retail units will be multi-region enabled out of the box.
 
 The fast forward/fast reverse buttons give you multiple playback speeds (2X, 4X, 8X and 16X) which you can cycle by pressing the button repeatedly. You will exit fast forward/rewind operation by pressing "Play." The Pause button is a bit unconventional in that pressing it again whilst in Pause mode will advance to the next frame instead of reverting back to Play (I can't find a way of moving to the previous frame). Pressing the forward/rewind buttons when the player is paused will activate several speeds of slow scans (1/2, 1/4, 1/6 and 1/8). To exit Pause mode, you have to press the Play button. Once I got used to it, the buttons are surprisingly effective in cueing up to the right spot.
 
-As with other upmarket Denon DVD players, this player includes a memory buffer that minimises the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _Fried Green Tomatoes_R4. The only time I noticed a layer change was watching the time elapsed counter very closely and this sometimes does not count up as smoothly in the vicinity of a layer change. However, on DVDs that split a film across several titles (including the above mentioned _Fried Green Tomatoes_), I noticed that title transitions still incur a slight pause.
+As with other upmarket Denon DVD players, this player includes a memory buffer that minimises the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _Fried Green Tomatoes_ R4. The only time I noticed a layer change was watching the time elapsed counter very closely and this sometimes does not count up as smoothly in the vicinity of a layer change. However, on DVDs that split a film across several titles (including the above mentioned _Fried Green Tomatoes_), I noticed that title transitions still incur a slight pause.
 
 So overall (apart from the chroma upsampling error), I rate the picture quality of the DVD-3800 as excellent and pretty much reference quality. If you only care about video quality and the player will be connected to your surround processor using the digital output, my recommendation is to get the DVD-3800 instead of the DVD-A1 and save yourself A\$4,000 - I doubt you will notice the difference between the two players.
 
@@ -413,9 +413,9 @@ In comparison, the same material on the DVD-3800 sounded a bit dull, muffled or 
 
 Now that my curiosity has been aroused, I decided to do the same side-by-side comparisons using the same material playing on both players, using the same methodology as I employed for the video playback comparisons.
 
-Unfortunately, I did not have many duplicate copies of the same titles, but I managed to find two copies of **José Cura** _Verismo_(DVD-Audio). Plus, I could directly compare the audio playback quality from the DVD-Videos that I mentioned above.
+Unfortunately, I did not have many duplicate copies of the same titles, but I managed to find two copies of **José Cura** _Verismo_ (DVD-Audio). Plus, I could directly compare the audio playback quality from the DVD-Videos that I mentioned above.
 
-Switching between the two players on _Verismo_destroyed the illusion that one player is louder than the other. In fact, both players sounded about equal in levels, however the DVD-3800 does seem to "blur" transients and dynamics to the extent that it may seem subjectively "softer" than the DVD-A1. The blurring effect is very minor, but just enough to be noticeable.
+Switching between the two players on _Verismo_ destroyed the illusion that one player is louder than the other. In fact, both players sounded about equal in levels, however the DVD-3800 does seem to "blur" transients and dynamics to the extent that it may seem subjectively "softer" than the DVD-A1. The blurring effect is very minor, but just enough to be noticeable.
 
 The effect is replicated on the DVD-Videos, and seem to consistent whether the material is in MLP, Linear PCM or Dolby Digital.
 
@@ -429,7 +429,7 @@ The DVD-3800 also supports the Microsoft HDCD format. HDCDs are normal CDs that 
 
 The DVD-3800 has the same "quirk" as the DVD-A1 in that the subwoofer output is about 10-15dB lower than the other channels, which can be verified when calibrating the player using the Video Essentials disc, and also using the player's test tone generator. I corrected this by increasing the LFE channel level on the AVC-A1SE+ by +12dB.
 
-Subjectively, I did not notice any issues with audio synchronization (on both analog and digital outputs) on the test discs (_Wedding Singer_R4 second remastered edition and also _Matrix_R1). I did not notice any issues with audio synchronization on other discs, but I did not have an opportunity to test the player for an extended period of time with lots of discs so I am not sure whether the occasional audio mis-sync that I noticed on the DVD-A1 is also present on this player.
+Subjectively, I did not notice any issues with audio synchronization (on both analog and digital outputs) on the test discs (_Wedding Singer_ R4 second remastered edition and also _Matrix_ R1). I did not notice any issues with audio synchronization on other discs, but I did not have an opportunity to test the player for an extended period of time with lots of discs so I am not sure whether the occasional audio mis-sync that I noticed on the DVD-A1 is also present on this player.
 
 ## Disc Compatibility Tests
 

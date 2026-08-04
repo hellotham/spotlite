@@ -22,7 +22,7 @@ _**The Sound of Music**_ is definitely one of my favourite things - a film that 
 
 The film is based on a Broadway stage musical, which in turn is based on two German films, which are in turn based on the true story of **Maria von Trapp**, as documented in her book _The Story of the Trapp Family Singers_. The film had its world premiere on March 2, 1965 before an ecstatic audience at the Rivoli Theater in New York and the rest is as they say ... history.
 
-_The Sound Of Music_was nominated for ten Academy Awards and won five of them, including Best Film, Best Director and Best Music, and Best Sound. It won a number of other awards including two Golden Globes. In 1989, the film was voted the all-time favorite motion picture from The People's Choice Awards.
+_The Sound Of Music_ was nominated for ten Academy Awards and won five of them, including Best Film, Best Director and Best Music, and Best Sound. It won a number of other awards including two Golden Globes. In 1989, the film was voted the all-time favorite motion picture from The People's Choice Awards.
 
 In order not to slow down the review process, I've abridged and adapted the "official" synopsis of the story from the Fox [web page](http://www.foxhome.com/soundofmusic):
 
@@ -32,7 +32,7 @@ In the meantime, the Captain has been considering remarrying - to Baroness Schra
 
 Who will the Captain marry? Will Max ever convince the Captain to allow the children and Maria to perform in the upcoming Salzburg Music Festival? How will the Captain, a fiercely patriotric Austrian, be impacted by the impending Anschluss and Nazi occupation of Austria? If you do not know the answers to these questions, then you are one of very few people in the world who have not watched this film and I urge you to give it a go.
 
-Of course, _The Sound of Music_is much more than the story of a postulant and a retired sea captain with seven children - this film features a wondrous and beloved collection of songs that most people are familiar with.
+Of course, _The Sound of Music_ is much more than the story of a postulant and a retired sea captain with seven children - this film features a wondrous and beloved collection of songs that most people are familiar with.
 
 My favourite scene is just after the Captain has a big fight with Maria. He then walks back to the house, but is intrigued by the sound of the children singing to the Baroness and Max. The sight of him being moved and joining into the singing always bring tears to eyes everytime I watch this film.
 
@@ -52,7 +52,7 @@ The film source is relatively clean but unfortunately exhibits a very high amoun
 
 The film includes over ten subtitle tracks including English. I turned on the English subtitle track whilst listening to the director's commentary and it seems to be an English for Hearing Impaired track as it documents non-verbal auditory events as well as names the character speaking a particular line in ambiguous situations.
 
-As this is a single sided dual layered disc, the **RSDL** layer change occurs at **98:31**just prior to Chapter 35 (_Entr'Acte_). From a timing perspective, this is the perfect spot for the layer change.
+As this is a single sided dual layered disc, the **RSDL** layer change occurs at **98:31** just prior to Chapter 35 (_Entr'Acte_). From a timing perspective, this is the perfect spot for the layer change.
 
 ## The audio transfer
 
@@ -62,7 +62,7 @@ In general the sound quality reflects the age of the film, with some roll-off of
 
 In any musical like this, it is important that every single line of dialogue is clearly enunciated and that the song lyrics are easy to pick up. The film is superb in this respect (no wonder it won an Academy Award for Best Sound!) and the audio transfer does not disappoint. I also did not have any issues with audio synchronisation.
 
-One unusual point to note about the dialogue is that it is positioned where the characters appear to be on screen, as opposed to more modern films in which the dialogue is normally directed to the centre speaker at all times (regardless of where the characters are actually positioned on screen). Director **Robert Wise**obviously has the speaker arrangement in mind when he made the film because he often frames the characters fairly close to where the five front speakers would be positioned.
+One unusual point to note about the dialogue is that it is positioned where the characters appear to be on screen, as opposed to more modern films in which the dialogue is normally directed to the centre speaker at all times (regardless of where the characters are actually positioned on screen). Director **Robert Wise** obviously has the speaker arrangement in mind when he made the film because he often frames the characters fairly close to where the five front speakers would be positioned.
 
 If you have a very large screen TV or a front projector and your front speakers roughly align with the dimensions of the screen you are in luck, just sit back and enjoy watching the movie. If you have a smaller screen display and your front speakers are placed well beyond the screen dimensions, don't be surprised if you start hearing a character's voice coming from beyond the confines of the screen - a very disconcerting effect when I was watching the film on our 21" TV.
 
@@ -82,7 +82,7 @@ The menus are rather pleasing and are 16x9 enhanced, but are not animated (thoug
 
 ### Booklet
 
-This is an eight page full colour booklet featuring a brief article on the transition of the story from the real life experiences of **Maria Augusta Kutschera**(who later married **Captain Georg von Trapp**) to the Broadway musical to the film (from genesis to premiere to subsequent acclaim), together with colour pictures of various scenes in the film. It is identical to the Region 1 DVD booklet, but seems to be better put together (the page layout looks better and the colours seem slightly brighter). The last two pages of the booklet lists the chapter titles of the film, but omits the chapter titles of the _"From Fact to Phenomeneon"_ documentary (because the Region 4 DVD does not break the featurette into chapters).
+This is an eight page full colour booklet featuring a brief article on the transition of the story from the real life experiences of **Maria Augusta Kutschera** (who later married **Captain Georg von Trapp**) to the Broadway musical to the film (from genesis to premiere to subsequent acclaim), together with colour pictures of various scenes in the film. It is identical to the Region 1 DVD booklet, but seems to be better put together (the page layout looks better and the colours seem slightly brighter). The last two pages of the booklet lists the chapter titles of the film, but omits the chapter titles of the _"From Fact to Phenomeneon"_ documentary (because the Region 4 DVD does not break the featurette into chapters).
 
 ### Audio Commentary-_Robert Wise (Director)_
 
@@ -94,7 +94,7 @@ In between the songs, Robert Wise provides a very listenable commentary on the c
 
 ### Featurette-_Original 1965 Documentary:Salzberg Sight and Sound_ (13:49)
 
-This is a on location "making of" documentary combined with a brief tour of Salzberg made during the shooting of the film, as told from the perspective of **Charmain Carr**(Liesl von Trapp) as a "tourist" visiting the city. I found it quite charming (and I really liked Charmain's hot pink dress!). It is introduced by a much older Charmain.
+This is a on location "making of" documentary combined with a brief tour of Salzberg made during the shooting of the film, as told from the perspective of **Charmain Carr** (Liesl von Trapp) as a "tourist" visiting the city. I found it quite charming (and I really liked Charmain's hot pink dress!). It is introduced by a much older Charmain.
 
 The documentary shows it's age, with numerous scratches and film marks present in the film source, and some evidence of deteriorating colour. The transfer quality is approximately laserdisc quality (main artefact noticeable is colour smearing) and judging from the shimmering may also have been upconverted from NTSC to PAL. It is presented in full frame.
 
@@ -104,7 +104,7 @@ This is a very extensive restrospective documentary on the film (originally prod
 
 It starts off with a brief biography of **Maria Augusta Kutschera** and **Captain Georg von Trapp**. It shows closeups of black and white photographs of the real von Trapps interspersed with excerpts from the film. Comparisons between the real life events and the events depicted in the film are made. The story then progresses into the von Trapps' arrival into America and the publishing of the book, excerpts from the German film _Die Trapp Familie_, and the making of the Broadway stage musical, and finally the making of the film and it's success. The documentary ends with the von Trapp family today being interviewed in their hotel/residence in Stowe, Vermont.
 
-The documentary includes various interviews with some of the von Trapp children (who are now quite mature!) and grandchildren - including **Rosemarie Trapp**, **Eleonore von Trapp-Campbell**, **Elisabeth von Trapp-Hall**, **Francoise von Trapp-Gibson**, **George von Trapp**and **Johannes von Trapp**. It also includes interviews with **Theodore Chapin**, **James Hammerstein**, **Richard Zanuck** (studio executive), **Ernest Lehman**(screenwriter), **Saul Chaplin**(associate producer), **Robert Wise**(director), **Julie Andrews**(Maria), **Christopher Plummer**(Captain), **Charmain Carr**(Liesl), **Nicholas Hammond**(Friedrich), **Dee Dee Wood**(choreographer), **Irwin Kostal**(additional music and conductor), **Anna Lee**(Sister Margaretha), **Portia Nelson**(Sister Berthe), **Marni Nixon**(Sister Sophia), **Maurice Zuberano**(production illustrator), **Betty Levin-Chaplin**(script supervisor), and **William Reynolds**(film editor).
+The documentary includes various interviews with some of the von Trapp children (who are now quite mature!) and grandchildren - including **Rosemarie Trapp**, **Eleonore von Trapp-Campbell**, **Elisabeth von Trapp-Hall**, **Francoise von Trapp-Gibson**, **George von Trapp** and **Johannes von Trapp**. It also includes interviews with **Theodore Chapin**, **James Hammerstein**, **Richard Zanuck** (studio executive), **Ernest Lehman** (screenwriter), **Saul Chaplin** (associate producer), **Robert Wise** (director), **Julie Andrews** (Maria), **Christopher Plummer** (Captain), **Charmain Carr** (Liesl), **Nicholas Hammond** (Friedrich), **Dee Dee Wood** (choreographer), **Irwin Kostal** (additional music and conductor), **Anna Lee** (Sister Margaretha), **Portia Nelson** (Sister Berthe), **Marni Nixon** (Sister Sophia), **Maurice Zuberano** (production illustrator), **Betty Levin-Chaplin** (script supervisor), and **William Reynolds** (film editor).
 
 The featurette comes with Dutch, French, Italian and Spanish subtitles. The transfer is presented in full frame. It is a bit soft and grainy in places, but is otherwise quite acceptable. Unfortunately the transfer has a glitch (omission of the opening and closing titles which are present in the Region 1 version of the featurette) so where the closing credits normally appear we just get music playing over a background picture.
 
@@ -141,7 +141,7 @@ This features the following radio commercials, played against a background still
 
 ### Audio-Only Track-_1973 Reissue Interview-Julie Andrews & Robert Wise_ (7:28)
 
-This features a **Steve Gray**interviewing **Julie Andrews**and **Robert Wise**. Julie talks about how she was casted, provides a brief synopsis of the film, and talks about her memories of the shooting of the film. Robert talks about the success of the film and his experiences casting and directing it.
+This features a **Steve Gray** interviewing **Julie Andrews** and **Robert Wise**. Julie talks about how she was casted, provides a brief synopsis of the film, and talks about her memories of the shooting of the film. Robert talks about the success of the film and his experiences casting and directing it.
 
 ### Audio-Only Track-_On Location Interviews; J Andrews_ (11:22)_,C Plummer_ (5:02)_,P Wood_ (6:20)
 
@@ -153,9 +153,9 @@ This is a retrospective audio only interview featuring **Daniel Truhitte**, who 
 
 ### Audio-Only Track-_Ernest Lehman: Master Storyteller_ (33:30)
 
-This is an audio only documentary featuring **Ernest Lehman**reminiscing about his part in the making of the film, together with a restropective voice-over that fills in the gap between his commentary. I quite liked this one, as I didn't realise how significant his involvement was even to the extent of influencing the choice of director and the casting. It also provides a historical insight in the resurrection of Twentieth Century Fox as a major studio from the brink of oblivion.
+This is an audio only documentary featuring **Ernest Lehman** reminiscing about his part in the making of the film, together with a restropective voice-over that fills in the gap between his commentary. I quite liked this one, as I didn't realise how significant his involvement was even to the extent of influencing the choice of director and the casting. It also provides a historical insight in the resurrection of Twentieth Century Fox as a major studio from the brink of oblivion.
 
-Ernest talks about his experiences in collaborating with **Richard Zanuck**to bring to film to production, trying to persuade **William Wyler**to direct the film (he initially accepted but later then decided to direct another film) and eventually managed to get **Robert Wise**.
+Ernest talks about his experiences in collaborating with **Richard Zanuck** to bring to film to production, trying to persuade **William Wyler** to direct the film (he initially accepted but later then decided to direct another film) and eventually managed to get **Robert Wise**.
 
 ## Censorship
 
@@ -181,7 +181,7 @@ The major extras missing on R4 are the stills gallery which contain some quite i
 
 ## Summary
 
-**\_The Sound of Music _**is one of my favourite films. It is presented on a Special Edition two-disc set crammed with extras, but unfortunately has a rather disappointing video transfer and an above average audio transfer.
+**_The Sound of Music_** is one of my favourite films. It is presented on a Special Edition two-disc set crammed with extras, but unfortunately has a rather disappointing video transfer and an above average audio transfer.
 
 I really hope that one of these days Fox or someone else will take the opportunity to redo the transfer for this well-loved classic and give it a video and audio transfer quality that it so richly deserves.
 

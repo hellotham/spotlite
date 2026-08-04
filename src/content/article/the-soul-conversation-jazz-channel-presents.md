@@ -18,7 +18,7 @@ _2000 · directed by Waymer Johnson._
 
 ## The film
 
-_**The Jazz Channel Presents: Soul Conversation**_is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
+_**The Jazz Channel Presents: Soul Conversation**_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
 
 Soul Conversation is a collaboration between two jazz guitarists: **Mark Whifield** and **JK**. Mark released his first album when he was 23, after studying at the Berklee College of Music in Boston. JK is the son of French mime **Claude Kipnis**. He moved to New York at the age of 11 from Paris. Initially self-taught, he also studied jazz for a while at the University of Miami and was a session player for a number of years. The result of the partnership: electro retro funk grooves to acoustic ballads, with some progressive R&B and smooth jazz thrown in.
 
@@ -28,11 +28,11 @@ In this concert, Mark and JK are backed by four other musicians. All the songs p
 | :-- | :-- |
 | 1. Whatever It Takes 2. Hand To Mouth 3. Talk To Me 4. Reflections Of You | 1. Miami Sunset 2. On The Edge 3. In The Backseat |
 
-I was really hoping to enjoy this disc, as this is the first "Jazz Channel Presents" disc that seem to feature music that I would regard as jazz, ie. full of improvisations and riffs. Mark and JK are obviously good guitarists, but the music is just a trifle predictable for me (I can tell when a riff is coming and also in which direction it is likely to go) and almost descends into the sort of muzak inhabited by the likes of **Acoustic Alchemy**(if you haven't not heard of Acoustic Alchemy, let me give you a hint: airlines love to schedule their songs as part of "in flight entertainment"). Is it my imagination, or is the audience in the BET Studio a little bit more sparse compared to the other discs in the series?
+I was really hoping to enjoy this disc, as this is the first "Jazz Channel Presents" disc that seem to feature music that I would regard as jazz, ie. full of improvisations and riffs. Mark and JK are obviously good guitarists, but the music is just a trifle predictable for me (I can tell when a riff is coming and also in which direction it is likely to go) and almost descends into the sort of muzak inhabited by the likes of **Acoustic Alchemy** (if you haven't not heard of Acoustic Alchemy, let me give you a hint: airlines love to schedule their songs as part of "in flight entertainment"). Is it my imagination, or is the audience in the BET Studio a little bit more sparse compared to the other discs in the series?
 
-My favourite track of the lot is _Reflections of You_, a moderately listenable ballad. _Miami Sunset_ features a pretty groovy electric piano solo and _On The Edge_has a good saxophone solo. In fact, Mark and JK looks like they might be in danger of being overshadowed by their backing musicians! The last track _In The Backseat_has a bit of a blues feel about it. All in all, it's a pretty short concert - just barely over an hour.
+My favourite track of the lot is _Reflections of You_, a moderately listenable ballad. _Miami Sunset_ features a pretty groovy electric piano solo and _On The Edge_ has a good saxophone solo. In fact, Mark and JK looks like they might be in danger of being overshadowed by their backing musicians! The last track _In The Backseat_ has a bit of a blues feel about it. All in all, it's a pretty short concert - just barely over an hour.
 
-The publicity machines will no doubt try and convince you that **Soul Conversation**are guitar legends in the making. Trust me, not only are the conversations between Mark and JK pretty patchy, but the the music can be pretty soulless at times. The end titles are superimposed towards the end of the last track, but in this case I don't care.
+The publicity machines will no doubt try and convince you that **Soul Conversation** are guitar legends in the making. Trust me, not only are the conversations between Mark and JK pretty patchy, but the the music can be pretty soulless at times. The end titles are superimposed towards the end of the last track, but in this case I don't care.
 
 ## The video transfer
 
@@ -80,7 +80,7 @@ There appears to be no significant differences between the R1 and R4 versions of
 
 ## Summary
 
-_\**The Jazz Channel Presents: Soul Conversation featuring Mark Whitfield and JK **_ is a listenable if somewhat predictable instrumental jazz concert featuring two guitarists. It is presented on a DVD with an above average video and audio transfer. The extras are nothing special, but welcomed anyway.
+_**The Jazz Channel Presents: Soul Conversation featuring Mark Whitfield and JK**_ is a listenable if somewhat predictable instrumental jazz concert featuring two guitarists. It is presented on a DVD with an above average video and audio transfer. The extras are nothing special, but welcomed anyway.
 
 | Rating  | Score        |
 | :------ | :----------- |

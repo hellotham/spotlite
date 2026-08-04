@@ -30,7 +30,7 @@ Truman does have a few neuroses - an abhorrence of water (because his "father" s
 
 Will Truman ever learn the truth? Will he be able to leave the studio and perhaps even reunite with Sylvia?
 
-I don't normally like actor **Jim Carrey **or the kind of films he stars in, but I was fascinated by _**The Truman Show**_. Australian-born director **Peter Weir**gives us a very tightly filmed movie that continually stretches the boundary between fantasy and reality. Unusual camera angles remind us that we are supposedly watching reality TV from hidden cameras, but this is never taken to the extreme that the film becomes uncomfortable to watch.
+I don't normally like actor **Jim Carrey** or the kind of films he stars in, but I was fascinated by _**The Truman Show**_. Australian-born director **Peter Weir** gives us a very tightly filmed movie that continually stretches the boundary between fantasy and reality. Unusual camera angles remind us that we are supposedly watching reality TV from hidden cameras, but this is never taken to the extreme that the film becomes uncomfortable to watch.
 
 I like the subtle touches in the film - including the "fake" opening titles corresponding to the opening titles of the TV show, the obviously fake magazine titles and product names, the surreal product placement scenes, right down to the cameos of typical avid viewers of the TV show - though the depictions of the latter are somewhat unrealistic. I mean, who stays in the bath for what must be weeks on end? And surely those two old ladies can't be clutching that cute little Truman pillow 24 hours a day?
 
@@ -48,7 +48,7 @@ The film source is relatively clean, apart from slight grain during the opening 
 
 There is one subtitle track on this disc - English - and it's pretty average as subtitle tracks go.
 
-As mentioned earlier, this is a single sided dual layer disc (**RSDL**) and the layer change occurs just before Chapter 15 at **53:06**. This is a somewhat annoying change as the freeze on Marlon hugging Meryl is qu
+As mentioned earlier, this is a single sided dual layer disc (**RSDL**) and the layer change occurs just before Chapter 15 at **53:06**. This is a somewhat annoying change as the freeze on Marlon hugging Meryl is quite
 
 ## The audio transfer
 
@@ -84,7 +84,7 @@ Looks like the clear winner is Region 4.
 
 ## Summary
 
-_**The Truman Show**_is a brilliant piece of film making featuring a very subdued Jim Carrey as the unwitting hero of a TV show. It is presented on a DVD with an excellent video transfer that is close to demo quality and an above average audio track, but is sadly lacking in substantial extras.
+_**The Truman Show**_ is a brilliant piece of film making featuring a very subdued Jim Carrey as the unwitting hero of a TV show. It is presented on a DVD with an excellent video transfer that is close to demo quality and an above average audio track, but is sadly lacking in substantial extras.
 
 ### [Ratings (out of 5)](RatingsGuide.html)
 

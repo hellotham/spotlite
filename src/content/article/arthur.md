@@ -20,7 +20,7 @@ _**Arthur**_ is the story of Arthur Bach (**Dudley Moore**), a young man who was
 
 His father Stanford Bach (**Thomas Barbour**) thinks he is a spineless weakling and wants him to marry Susan Johnson (**Jill Eikenberry**), the daughter of self-made tycoon Burt Johnson (**Stephen Elliot**), in order to further consolidate the family's power and wealth. If Arthur refuses the marriage, he will be disinherited and he will lose his share of the family fortune - a cool \$700 million (OK, maybe that's not a lot by today's standards, but remember this movie was made in the early eighties).
 
-The only person he truly cares for is his butler Hobson, played magnificently by the late **Sir John Gielgud**who deservedly won an Academy Award for his performance in this movie. We get the feeling that Hobson played the role of Arthur's father in a way that his real father never did, and therefore the scenes between Arthur and Hobson are particularly poignant towards the end.
+The only person he truly cares for is his butler Hobson, played magnificently by the late **Sir John Gielgud** who deservedly won an Academy Award for his performance in this movie. We get the feeling that Hobson played the role of Arthur's father in a way that his real father never did, and therefore the scenes between Arthur and Hobson are particularly poignant towards the end.
 
 Just when Arthur has almost resigned himself to become respectable and marry someone he can't stand, he meets poor, struggling waitress-who-wants-to-be-an-actress Linda Marolla (**Liza Minelli**) as while shoplifting a tie at Bergdorf Goodman (birthday present for unemployed Dad played by **Barney Martin**) . He starts to fall in love with her, but which shall it be - love or money?
 
@@ -28,7 +28,7 @@ Arthur is a delightful comedy. The movie starts off with Arthur and his chaffeur
 
 I particularly liked Geraldine Fitzgerald as Martha Bach - the perfect example of a matriach, combining gentleness and sweetness with absolute ruthlessness.
 
-I was initially introduced to Arthur not through the movie itself, but through the soundtrack, featuring music composed by **Burt Bacharach**and his then wife **Carole Bayer Sager**. I found the soundtrack album (yes, it's a genuine vinyl LP - they didn't make CDs in those days) in a record store and was so captivated by it I bought it. The title song sung by **Christopher Cross**deserves the popularity it received and is still vibrant and easy to listen to today, nearly 20 years after it was written.
+I was initially introduced to Arthur not through the movie itself, but through the soundtrack, featuring music composed by **Burt Bacharach** and his then wife **Carole Bayer Sager**. I found the soundtrack album (yes, it's a genuine vinyl LP - they didn't make CDs in those days) in a record store and was so captivated by it I bought it. The title song sung by **Christopher Cross** deserves the popularity it received and is still vibrant and easy to listen to today, nearly 20 years after it was written.
 
 ## The video transfer
 
@@ -40,7 +40,7 @@ The start of the movie (when Arthur and his chaffeur are cruising the streets of
 
 Colour saturation is below the quality of a recent film but is actually quite good for a movie originally released in 1981. I suspect colour correction has been applied during the transfer. Liza Minelli's outfits in particular stand out and are vividly saturated with primary colours.
 
-The DVD comes with a reasonable selection of subtitle tracks. I turned on the "English for the hearing impaired" during the beginning of the movie. I would rate the selection of captions as below average in terms of completeness and accuracy for a "hard of hearing" track but probably about average if it was just a normal subtitle track (I apply a
+The DVD comes with a reasonable selection of subtitle tracks. I turned on the "English for the hearing impaired" during the beginning of the movie. I would rate the selection of captions as below average in terms of completeness and accuracy for a "hard of hearing" track but probably about average if it was just a normal subtitle track (I apply a higher s
 
 ## The audio transfer
 

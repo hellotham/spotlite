@@ -18,9 +18,9 @@ _1996 · directed by Anthony Minghella._
 
 ## The film
 
-_**The English Patient**_won numerous awards when it was released in 1996 - nine Oscars (including Best Picture, Best Director, Best Supporting Actress, Best Cinematography, Best Music and Best Sound), two Golden Globes (Best Film and Best Original Score), six BAFTA awards (including Best Film, Best Screenplay, Best Cinematography, Best Editing and Best Supporting Actress). Although it has been available as a Region 1 DVD since 1998, Region 4 fans of this film have had to wait till now. So, is the wait worthwhile and is the film still worth watching five years later?
+_**The English Patient**_ won numerous awards when it was released in 1996 - nine Oscars (including Best Picture, Best Director, Best Supporting Actress, Best Cinematography, Best Music and Best Sound), two Golden Globes (Best Film and Best Original Score), six BAFTA awards (including Best Film, Best Screenplay, Best Cinematography, Best Editing and Best Supporting Actress). Although it has been available as a Region 1 DVD since 1998, Region 4 fans of this film have had to wait till now. So, is the wait worthwhile and is the film still worth watching five years later?
 
-Well, all I can say after watching it is that I don't think you will be disappointed, either in the quality of the firm nor the quality of the transfer on DVD. The film is as moving and as powerful as I recalled it, and the screenplay by **Anthony Minghella**is a masterpiece in its poetic imagery, subtlely, scintillating wit and cohesiveness - the last trait all the more surprising given the rather disjointed nature of the novel (by **Michael Ondaatje**) from which it is based. Anthony reduces the multiple storylines of the novel into two intertwining and connected stories - each one of which would have been worthy of a great film in its own right.
+Well, all I can say after watching it is that I don't think you will be disappointed, either in the quality of the firm nor the quality of the transfer on DVD. The film is as moving and as powerful as I recalled it, and the screenplay by **Anthony Minghella** is a masterpiece in its poetic imagery, subtlely, scintillating wit and cohesiveness - the last trait all the more surprising given the rather disjointed nature of the novel (by **Michael Ondaatje**) from which it is based. Anthony reduces the multiple storylines of the novel into two intertwining and connected stories - each one of which would have been worthy of a great film in its own right.
 
 The first story is set in the 1930s just prior to World War II, and it is about a grand and ultimately destructive adulterous love affair between Count Almásy (**Ralph Fiennes**) - a Hungarian pilot engaged in mapping the Sahara Desert as part of a Royal Geographic Society expedition - and Katharine Clifton (**Kristin Scott Thomas**) - the wife of another member of the expedition. The first half of the film is the delicious build up to the affair, and the latter half of the film explores the dramatic consequences of the affair. **Colin Firth** ("Mr. Darcy" of the BBC mini-series of _Pride and Prejudice_) plays a cameo role as Katharine's husband Geoffrey.
 
@@ -42,7 +42,7 @@ The video transfer is superior to the Region 1 release of this title, which was 
 
 There is only one subtitle track - English for the Hard of Hearing. I must say I am very impressed by the quality of this track, not only is every line of dialogue faithfully transcribed (including the lyrics to songs) but the track provides very detailed descriptions of non-dialogue elements of the audio (eg. "Ethereal Music Playing", "Orchestral Music swells"). The subtitle contains far more detail in terms of descriptions of auditory cues in comparison with the corresponding subtitle track on the Region 1 disc.
 
-This is a single sided dual layered disc (**RSDL**). The layer change occurs rather late at at the transition from Chapter 18 to 19 (**92:44**). This is very well
+This is a single sided dual layered disc (**RSDL**). The layer change occurs rather late at at the transition from Chapter 18 to 19 (**92:44**). This is very well time
 
 ## The audio transfer
 
@@ -60,7 +60,7 @@ Needless to say, dialogue synchronisation is not an issue on this disc. All in a
 
 ## The extras
 
-One advantage of the deferred release of this title into Region 4 (apart from the fact that we get a better transfer) is the addition of features. In comparison with the bare bones Region 1, we do get some extras, however they are fairly limited and not very compelling. It is a real pity that we don't get the extras featured on the Criterion laserdisc, such as the audio commentary by director **Anthony Minghella**, producer **Saul Zaentz**and author **Michael Ondaatje**, the 24-minute making-of featurette, and a collection of deleted scenes with video commentary by director **Anthony Minghella**.
+One advantage of the deferred release of this title into Region 4 (apart from the fact that we get a better transfer) is the addition of features. In comparison with the bare bones Region 1, we do get some extras, however they are fairly limited and not very compelling. It is a real pity that we don't get the extras featured on the Criterion laserdisc, such as the audio commentary by director **Anthony Minghella**, producer **Saul Zaentz** and author **Michael Ondaatje**, the 24-minute making-of featurette, and a collection of deleted scenes with video commentary by director **Anthony Minghella**.
 
 ### Main Menu Audio & Animation
 
@@ -86,9 +86,9 @@ The featurette is presented in full frame, with fim excerpts presented in pan-an
 
 Rather disappointingly, this is presented in 1.33:1 (pan&scan?) and Dolby Digital 2.0. Again, the transfer is a bit on the soft side.
 
-### Trailers - _The Talented Mr. Ripley_(2.00), _Chocolat_(2.13)
+### Trailers - _The Talented Mr. Ripley_ (2.00), _Chocolat_ (2.13)
 
-_Talented Mr. Ripley_is presented in 1.85:1 with 16x9 enhancement, and Dolby Digital 2.0. _Chocolat_is presented in 1.33:1 and Dolby Digital 2.0.
+_Talented Mr. Ripley_ is presented in 1.85:1 with 16x9 enhancement, and Dolby Digital 2.0. _Chocolat_ is presented in 1.33:1 and Dolby Digital 2.0.
 
 ### Biographies-Cast & Crew
 

@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-_**The Rocky Horror Picture Show**_is probably _THE_ultimate cult movie. Based on a musical (_The Rocky Horror Show_), it was made into a movie that premiered in London on 14 August 1975 (and in the US around a month later). It was not an initial box office success, but over the years attracted a core group of fans who would watch the movie over and over again.
+_**The Rocky Horror Picture Show**_ is probably _THE_ ultimate cult movie. Based on a musical (_The Rocky Horror Show_), it was made into a movie that premiered in London on 14 August 1975 (and in the US around a month later). It was not an initial box office success, but over the years attracted a core group of fans who would watch the movie over and over again.
 
 What turned the movie from simply another quirky film with an unusually loyal set of devotees to a true cult phenomeneon can be summed up in two words: **audience participation**. Some fans started attending the movie dressed up as their favourite characters, and others started the trend of responding to lines in the dialogue by "calling back" lines that either provide a commentary on the dialogue, or are funny one-liners in their own right, or take the plot to a completely new direction. Some theatres started running midnight sessions catering for audience participation screenings and pretty soon the phenomeneon replicated around the world and developed into the full blown audience participation ritual that we know and love today.
 
@@ -42,7 +42,7 @@ I could not detect MPEG artefacts present in the transfer apart from slight post
 
 The film comes with several foreign language subtitle tracks and a "participation prompter" track, but these are selectable only via the menu system and not from the subtitle selection button on the DVD player.
 
-This is a single sided dual layer disc (**RSDL**, also known as DVD 9). The layer change occurs at **47:20** just after a closeup of television static and the screen pauses for the layer change when Janet is reclining in her bed prior to Dr. Frank-
+This is a single sided dual layer disc (**RSDL**, also known as DVD 9). The layer change occurs at **47:20** just after a closeup of television static and the screen pauses for the layer change when Janet is reclining in her bed prior to Dr. Frank-N-Furter a
 
 ## The audio transfer
 
@@ -68,9 +68,9 @@ The menus feature extensive audio and animation effects, and are 16x9 enhanced (
 
 I have two gripes about the menus and the navigation. Firstly is the disablement of the audio track selection and subtitle selection buttons on the DVD player, so there is no way to switch between audio tracks or to select subtitle tracks outside of the menus. This wouldn't be so bad except for the second gripe, which is that there seems to be no way of combining the selection of various special features on the first disc. Ie., I can't seem to turn on the Multi-View experience, the participation prompter and the audience participation track _AT THE SAME TIME_, even though these utilise completely different DVD features (and therefore in theory can be enabled independently of each other) - namely, seamless branching, audio track selection and subtitle selection.
 
-### Audio Commentary -_Richard O'Brien (Writer) & Patricia Quinn (Actor)_
+### Audio Commentary - _Richard O'Brien (Writer) & Patricia Quinn (Actor)_
 
-This is a fairly entertaining and informative commentary. Richard and Patricia were extremely chatty and talked about all sorts of things, including the real story behind why Richard got to sing Science Fiction at the beginning of the movie instead of Patricia, various anecdotes about the cast and crew, and pointing out various goofs and mistakes in the movie along the way. Parts of the commentary was similar to the audio commentary for _Spinal Tap_- Richard and Patricia kept noting which member of the cast and crew have since died.
+This is a fairly entertaining and informative commentary. Richard and Patricia were extremely chatty and talked about all sorts of things, including the real story behind why Richard got to sing Science Fiction at the beginning of the movie instead of Patricia, various anecdotes about the cast and crew, and pointing out various goofs and mistakes in the movie along the way. Parts of the commentary was similar to the audio commentary for _Spinal Tap_ - Richard and Patricia kept noting which member of the cast and crew have since died.
 
 ### Seamless Branching - _Multi-View Theatrical Experience_
 
@@ -118,17 +118,17 @@ I particularly liked Susan Sarandon making a face just after the camera started 
 
 ### Featurette - _Rocky on VH1 (Excerpts - Behind-The-Music/Where Are They Now_)
 
-This consists of interviews with various people, including **Richard O'Brien**, **Susan Sarandon**, **Barry Bostwick**, **Patricia Quinn**and **Meatloaf Aday**. The absence of **Tim Curry**here was rather conspicuous. All interviews were done in full-frame 4:3 aspect ratio.
+This consists of interviews with various people, including **Richard O'Brien**, **Susan Sarandon**, **Barry Bostwick**, **Patricia Quinn** and **Meatloaf Aday**. The absence of **Tim Curry** here was rather conspicuous. All interviews were done in full-frame 4:3 aspect ratio.
 
 I was amused by **Richard O'Brien**'s references to the transvestitic elements of Fredericks of Hollywood advertising in film magazines of the period (Fredericks of Hollywood sells rather outlandish lingerie and Richard hypothesised that a large part of the postal sales are probably to cross-dressers). That would explain why when I visited a Fredericks of Hollywood store in Dayton, Ohio many years ago most of the "customers" browsing the merchandise were male.
 
-I also liked **Richard O'Brien**doing impromptu renditions of _Time Warp_, _Eddie_, _Over at the Frankenstein Place_and _Superheroes_accompanied by his guitar whilst taking us on a tour around the "Rocky Castle" (Oakley Court) - which now looks like it's been converted to a boutique hotel/B&B. Incidentally, there is an audio glitch in **3:11**of this segment.
+I also liked **Richard O'Brien** doing impromptu renditions of _Time Warp_, _Eddie_, _Over at the Frankenstein Place_ and _Superheroes_ accompanied by his guitar whilst taking us on a tour around the "Rocky Castle" (Oakley Court) - which now looks like it's been converted to a boutique hotel/B&B. Incidentally, there is an audio glitch in **3:11** of this segment.
 
 In most of the interviews, the interviewees were obviously responding to questions from a non-visible interviewer and I wished they had retained the interview questions instead of just stitching the replies.
 
-### Music Video -_Hot Patootie_ (4:59)
+### Music Video - _Hot Patootie_ (4:59)
 
-This is a presentation of the _Hot Patootie_scene from the film in pan-and-scan 4:3 aspect ratio, together with pop-up text boxes providing a commentary on the making of the scene, background information on **Meatloaf** and other anecdotal information. The information provided was quite interesting, but is similar to that provided in **Meatloaf**'s interview above. After a while, I found the "pop" sound everytime a text box appears on the screen to be intensely annoying.
+This is a presentation of the _Hot Patootie_ scene from the film in pan-and-scan 4:3 aspect ratio, together with pop-up text boxes providing a commentary on the making of the scene, background information on **Meatloaf** and other anecdotal information. The information provided was quite interesting, but is similar to that provided in **Meatloaf**'s interview above. After a while, I found the "pop" sound everytime a text box appears on the screen to be intensely annoying.
 
 ### Alternate Credit Ending (3:47)
 
@@ -136,9 +136,9 @@ This is the US version ending (minus _Superheroes_) segueing into the full versi
 
 ### Featurette - _Rocky Horror Double Feature Video Show_ (36:26)
 
-This is a retrospective documentary featuring interviews with writer/actor **Richard O'Brien**, director **Jim Sharman**, producer **Lou Adler**, **Patricia Quinn**, **Little Nell**, **Meatloaf**, **Tim Curry**, **Susan Sarandon**, **Barry Bostwick**, **Sal Piro**(fan club president), and various other crew members that was created for the 20th anniversary video rerelease. It is presented in a full frame non-16x9 enhanced aspect ratio.
+This is a retrospective documentary featuring interviews with writer/actor **Richard O'Brien**, director **Jim Sharman**, producer **Lou Adler**, **Patricia Quinn**, **Little Nell**, **Meatloaf**, **Tim Curry**, **Susan Sarandon**, **Barry Bostwick**, **Sal Piro** (fan club president), and various other crew members that was created for the 20th anniversary video rerelease. It is presented in a full frame non-16x9 enhanced aspect ratio.
 
-### Theatrical Trailers -_2_
+### Theatrical Trailers - _2_
 
 These both feature a set of lips (with accompanying female voice) providing voice-over spliced with various scenes from the film. Both trailers are presented in a 4:3 aspect ratio. The second trailer (**3:01**) is significantly longer than the first (**0:32**).
 
@@ -148,7 +148,7 @@ These show the relevant segments of the movie (in a non-16x9 enhanced letterboxe
 
 ### Featurette - _Misprint Ending_ (1:46)
 
-During _**Rocky Horror**_'s initial theatrical run, certain prints were mistakenly struck with picture from _Superheroes_but audio from the the Criminologist. This is a reconstruction of how that "misprint" appeared. It is presented in a non-16x9 enhanced letterboxed aspect ratio.
+During _**Rocky Horror**_'s initial theatrical run, certain prints were mistakenly struck with picture from _Superheroes_ but audio from the the Criminologist. This is a reconstruction of how that "misprint" appeared. It is presented in a non-16x9 enhanced letterboxed aspect ratio.
 
 ### Photo Gallery
 
@@ -171,7 +171,7 @@ The Region 4 version of this disc misses out on;
 
 The Region 1 version of this disc misses out on;
 
-- Nothing of consequence (additional foreign language subtitles)__
+- Nothing of consequence (additional foreign language subtitles)
 
 It would have been nice to have included the US version of the movie on the Region 4 disc, but I don't think it's a big deal since it doesn't contain any additional scenes but is missing one scene. Omitting the mono soundtrack was a different matter as it would have been nice to be able to hear how it originally sounded when first released. The missing DVD-ROM extras sounds nice but not overly compelling. I am not sure why these extras were omitted since Disc One only has 5-6 Gb of files which is significantly below the maximum capacity of an RSDL disc (just under 9 Gb).
 

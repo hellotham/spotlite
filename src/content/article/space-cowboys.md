@@ -18,23 +18,23 @@ _2000._
 
 ## The film
 
-I can just imagine what the selling pitch of _**Space Cowboys**_would be like ...
+I can just imagine what the selling pitch of _**Space Cowboys**_ would be like ...
 
 _\[Scene: at two deck chairs next to a pool in a plush Beverly Hills Hotel ...\]_
 
-_"I have this great idea for a new movie. It's a new space flick with a twist, combining elements from_The Right Stuff<em>, </em>Armageddon<em>, </em>Deep Impact _and_Apollo 13<em>. Add in a bit of conspiracy a la </em>L.A. Confidential<em>, throw in a few references to the Cold War, and package it with a few allusions to Western movies. We can even have a outer space version of a ride into the sunset."</em>
+_"I have this great idea for a new movie. It's a new space flick with a twist, combining elements from_ The Right Stuff<em>, </em>Armageddon<em>, </em>Deep Impact _and_ Apollo 13<em>. Add in a bit of conspiracy a la </em>L.A. Confidential<em>, throw in a few references to the Cold War, and package it with a few allusions to Western movies. We can even have a outer space version of a ride into the sunset."</em>
 
 _"I'm not sure about this. Hasn't this sort of thing been done to death? What's the twist?"_
 
 _"We use big name aging Hollywood stars to play the role of the astronauts."_
 
-_"You mean it's going to be like_Cocoon<em>?"</em>
+_"You mean it's going to be like_ Cocoon<em>?"</em>
 
-_"Kind of. It's also going to be a buddy movie, and two of the characters will have a love/hate relationship, like in_Grumpy Old Men<em>."</em>
+_"Kind of. It's also going to be a buddy movie, and two of the characters will have a love/hate relationship, like in_ Grumpy Old Men<em>."</em>
 
 _"Gee, I don't know about this ..."_
 
-_"Just think about it. Getting people like **Clint Eastwood**and **James Garner**to play it won't cost as much as using **Keanu**, **Tom**or **Brad**. With the money we save we can throw in **James Cromwell**, **Donald Sutherland**, and **Tommy Lee Jones**, promote the "star studded" cast list, and the public will lap it up."_
+_"Just think about it. Getting people like **Clint Eastwood** and **James Garner** to play it won't cost as much as using **Keanu**, **Tom** or **Brad**. With the money we save we can throw in **James Cromwell**, **Donald Sutherland**, and **Tommy Lee Jones**, promote the "star studded" cast list, and the public will lap it up."_
 
 _"Sounds good. Give Clint a ring, will you?"_
 
@@ -62,7 +62,7 @@ The only MPEG artefact that I can notice is Gibb's effect ringing permeating thr
 
 There is an English for the Hard of Hearing subtitle track but I did not engage it.
 
-This is a single sided dual layered disc (RSDL). The layer change occurs in the middle of a chapter at **67:58** rather than just between chapters. The screen freezes on Frank's face just after he's re
+This is a single sided dual layered disc (RSDL). The layer change occurs in the middle of a chapter at **67:58** rather than just between chapters. The screen freezes on Frank's face just after he's receive
 
 ## The audio transfer
 
@@ -98,8 +98,8 @@ This is the standard Canyon trailer featuring a rather loud audio track.
 
 This is a list of film highlights (represented as a submenu linking to a set of stills) for the following cast:
 
-- **Clint Eastwood**(Frank Corvin)
-- **Tommy Lee Jones**(Hawk Hawkins)
+- **Clint Eastwood** (Frank Corvin)
+- **Tommy Lee Jones** (Hawk Hawkins)
 - **James Garner** (Tank Sullivan)
 - **Donald Sutherland** (Jerry O'Neill)
 - **James Cromwell** (Bob Gerson)
@@ -123,13 +123,13 @@ The audio track for this feature appears to be slightly missynchronised, and the
 
 ### Featurette-_The Effects_ (7:11)
 
-This is an interview with Visual Effects Supervisor **Michael Owens**from ILM and Global Effects expert **Chris Gilman**. This is presented in 1.33:1 with excerpts from the film presented in pan and scan. The soundtrack is in Dolby Digital 2.0.
+This is an interview with Visual Effects Supervisor **Michael Owens** from ILM and Global Effects expert **Chris Gilman**. This is presented in 1.33:1 with excerpts from the film presented in pan and scan. The soundtrack is in Dolby Digital 2.0.
 
 There are some video glitches around **3:59**, **4:27** and **4:30**.
 
 ### Featurette-_Back At The Ranch - A Look Behind The Scenes_ (28:12)
 
-This is a fairly substantial behind the scenes and making of documentary featuring interviews with **Clint Eastwood**, **Tommy Lee Jones**, **James Garner**, **Donald Sutherland**as well as director of photography **Jack Green**, Production Designer **Henry Bumstead**, NASA scientific consultants **Kathryn Clark**(Chief Scientist), **Brian Welch**(Director of Media Services), **Gregory Johnson**(Astronaut), and writers **Ken Kaufman**and **Howard Klausner**. The featurette is presented in 1.33:1 with excerpts from the film presented in pan and scan. The soundtrack is in Dolby Digital 2.0.
+This is a fairly substantial behind the scenes and making of documentary featuring interviews with **Clint Eastwood**, **Tommy Lee Jones**, **James Garner**, **Donald Sutherland** as well as director of photography **Jack Green**, Production Designer **Henry Bumstead**, NASA scientific consultants **Kathryn Clark** (Chief Scientist), **Brian Welch** (Director of Media Services), **Gregory Johnson** (Astronaut), and writers **Ken Kaufman** and **Howard Klausner**. The featurette is presented in 1.33:1 with excerpts from the film presented in pan and scan. The soundtrack is in Dolby Digital 2.0.
 
 ### Theatrical Trailer
 
@@ -158,7 +158,7 @@ Apart from the higher bitrate Dolby Digital audio track, I don't think the addit
 
 ## Summary
 
-_**Space Cowboys**_is an enjoyable romp, even if it does take a few liberties with the plot and scientific accuracy. I am still waiting for a decent space exploration movie (as opposed to science fiction) featuring some strong female characters, and unfortunately **Marcia Gay Harden** plays no more than a token role. The film is presented on a DVD with above average video and audio transfers, plus a strong collection of supplemental featurettes.
+_**Space Cowboys**_ is an enjoyable romp, even if it does take a few liberties with the plot and scientific accuracy. I am still waiting for a decent space exploration movie (as opposed to science fiction) featuring some strong female characters, and unfortunately **Marcia Gay Harden** plays no more than a token role. The film is presented on a DVD with above average video and audio transfers, plus a strong collection of supplemental featurettes.
 
 ### [Ratings (out of 5)](RatingsGuide.html)
 

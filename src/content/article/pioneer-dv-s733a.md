@@ -207,7 +207,7 @@ Unfortunately, I was not able to directly compare between the two players, but i
 
 The NTSC progressive scan capability of this player (PAL progressive is not supported "out of the box") can be switched on and off using the Setup menu, but only when the disc is stopped and not on the fly, making A/B comparisons difficult. I am disappointed by the quality of the progressive output, since I can detect occasional combing errors - mainly when navigating through menus but even during watching a movie (_Toy Story_). It looks like Pioneer has not improved the progressive scan implementation on this model over the previous generation in terms of correctly handling 2/3 inverse pulldown and differentiating between film and video modes.
 
-I also tried _GalaxyQuest_(R1 dts) - a known problem disc in terms of incorrect usage of the progressive flag in the animated menus and theatrical trailer - and the player combed however was smart enough not to remain in film/video mode exclusively, however it just wasn't quick enough switching modes. If you have a display capable of line-doubling/deinterlacing or if you have an external line doubler, I would recommend not using the progressive scan output of this player.
+I also tried _GalaxyQuest_ (R1 dts) - a known problem disc in terms of incorrect usage of the progressive flag in the animated menus and theatrical trailer - and the player combed however was smart enough not to remain in film/video mode exclusively, however it just wasn't quick enough switching modes. If you have a display capable of line-doubling/deinterlacing or if you have an external line doubler, I would recommend not using the progressive scan output of this player.
 
 Incidentally, the video settings feature of this player allow you to "tweak" settings for progressive scan. I tried changing them, in particular switching between "Auto1" and "Auto2". Different settings will cause some combing artefacts to disappear (only to be reappear elsewhere) and there was no combination that resulted in no combing artefacts.
 
@@ -229,7 +229,7 @@ Although I didn't test it, this player offers the ability to convert NTSC into P
 
 ## CDR & Video CD
 
-This player digested CD-Rs and Video CD (I tested _\** Joe vs The Volcano**_ - commercially pressed Video CD bought in Singapore) without breaking stride. The only thing it didn't handle perfectly was a multi-session CD-R - it could only see the first session, but that's not surprising - most players are limited to the first session.
+This player digested CD-Rs and Video CD (I tested _**Joe vs The Volcano**_ - commercially pressed Video CD bought in Singapore) without breaking stride. The only thing it didn't handle perfectly was a multi-session CD-R - it could only see the first session, but that's not surprising - most players are limited to the first session.
 
 This player is specified as supporting CD-R, CD-RW, DVD-R, and DVD-RW. Rather an improvement from earlier DVD players which weren't specified as supporting CD-R at all, and could be fussy about which colour media they'd accept.
 
@@ -257,15 +257,15 @@ I noticed, while listening to a DVD-Audio disc, that the silences between songs 
 
 Let's start with the good qualities. I thought the internal Dolby Digital decoding was quite reasonable - better than the mediocre decoding that I experienced on the Sony DVP-NS905V as well as my Pioneer DV-626D but still below par compared to the processing on my Denon AVR-3300 (low level detail tends to be submerged). MP3 playback was fairly decent, sounding fairly close to the CD equivalent.
 
-Super Audio CD performance on a few SACDs that I tried (**Celine Dion**- _All The Way ..._, **James Taylor**- _Hourglass_, **Warren Bernhardt**- _So Real_, **Jerry Goldsmith**- _Film Music_) was reasonable compared to my reference player, the Sony SCD-XA777ES. I would describe the sonic character of the player as "loose and relaxed." The music was pleasant enough to listen to, but lacks punchiness and "slam" in comparison to the XA777ES.
+Super Audio CD performance on a few SACDs that I tried (**Celine Dion** - _All The Way ..._, **James Taylor** - _Hourglass_, **Warren Bernhardt** - _So Real_, **Jerry Goldsmith** - _Film Music_) was reasonable compared to my reference player, the Sony SCD-XA777ES. I would describe the sonic character of the player as "loose and relaxed." The music was pleasant enough to listen to, but lacks punchiness and "slam" in comparison to the XA777ES.
 
-**dts**decoding was a mixed bag - I was very impressed with the **dts**decoding on the soundtrack to the R4 release of _Gladiator_where it sounded much fuller and dynamic than on the Denon receiver. However, the **dts**decoding on _Atlantis_("free" title included with the player) was disappointing and sounded somewhat flat, uninvolving and lacking in low level detail compared to the decoding done by the Denon.
+**dts** decoding was a mixed bag - I was very impressed with the **dts** decoding on the soundtrack to the R4 release of _Gladiator_ where it sounded much fuller and dynamic than on the Denon receiver. However, the **dts** decoding on _Atlantis_ ("free" title included with the player) was disappointing and sounded somewhat flat, uninvolving and lacking in low level detail compared to the decoding done by the Denon.
 
 I was also able to test out a DVD-Video disc containing a 96/24 PCM audio track (_Casino Royale_, Classic Records) to compare between 96/24 processing on the player and the Denon receiver - these discs are sometimes called Digital Audio Discs or "DAD"s. The player sounded slightly harsher and less punchy compared to the Denon receiver.
 
 Now for the bad points. I found the CD playback quality to be dull, lifeless, uninvolving, and lacking in "punchiness" and dynamics, even with "Legato Pro" (upsampling), "Hi Bit" (word expansion from 16 to 24 bits) and "CD Digital Direct" setup options turned on.
 
-Unfortunately, DVD Audio playback quality was not significantly better. PaulC dropped by with his Toshiba SD-900E and we all agreed that the 733 sounded somewhat "dull" and "lifeless" compared to the 900E - a common expression being bandied around was "something seemed to be missing" on the disc that we did the comparison with (**Pat Metheny Group**- _Imaginary Day_). I felt even the CD version on the SCD-XA777ES seemed more listenable than the "Advanced Resolution Stereo" track on the DVD-Audio on the 733 - despite the loss of resolution. On the plus side, however, the player will downsample MLP 2.0 tracks to either 48/24 or 44.1/24 on the digital out - at least on the few discs that I tried.
+Unfortunately, DVD Audio playback quality was not significantly better. PaulC dropped by with his Toshiba SD-900E and we all agreed that the 733 sounded somewhat "dull" and "lifeless" compared to the 900E - a common expression being bandied around was "something seemed to be missing" on the disc that we did the comparison with (**Pat Metheny Group** - _Imaginary Day_). I felt even the CD version on the SCD-XA777ES seemed more listenable than the "Advanced Resolution Stereo" track on the DVD-Audio on the 733 - despite the loss of resolution. On the plus side, however, the player will downsample MLP 2.0 tracks to either 48/24 or 44.1/24 on the digital out - at least on the few discs that I tried.
 
 **TR**: Chris's comments made me re-visit the audio performance of the player. I realised, to my chagrin, that I hadn't listened to any CDs on it (the CD-Rs I tried were filled with MP3s, and I don't expect MP3s to sound all that good). So I listened to a CD, then another, and another, comparing the sound with that of a dedicated CD-only player. And I was disappointed. Oh, it sounds perfectly acceptable, but there's some slight degradation to the dynamics - the attack on the opening notes of a string instrument can sound a little blurred, for example. I wonder if there's some noise reduction circuitry at work (and can it be removed?)? I don't like to admit that I'm wrong, but I must - Chris's criticism here is valid.
 
@@ -376,5 +376,3 @@ I am really impressed with this player. I've bought a number of players, of a va
 | **Telephone:** | (03) 9586 6300 |
 | **Facsimile:** | (03) 9587 1495 |
 | **Email:** | sales@pioneeraus.com.au |
-
-� [Tony Rogers](mailto:TonyR@michaeldvd.com.au?subject=DV-S733A%20Review) and [Chris Tham](mailto:ChrisT@michaeldvd.com.au?subject=DV-S733A%20Review)

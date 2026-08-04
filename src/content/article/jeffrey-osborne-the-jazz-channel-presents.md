@@ -14,7 +14,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-_**The Jazz Channel Presents: Jeffery Osborne**_is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
+_**The Jazz Channel Presents: Jeffery Osborne**_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
 
 Despite what the title may suggest, this is not really a jazz concert - instead, it is heart thumpin' funky music with groovy synth sounds, screaming electric guitars, deep rhythmic electric bass, silky sweet female backup singers and a solid drum track that brings back memories of the good ol' late 70s and early 80s. To illustrate what I mean, let me just quote from the first song on this concert (_We Party Hearty_):
 
@@ -22,13 +22,13 @@ When we party, we party high. When we boogie, we boogie woogie.
 
 And I am not ashamed to admit that I enjoyed every minute of it.
 
-**Jeffrey Osborne**(born in Providence, Rhode Island in 1948, the youngest of 12 siblings) began his professional singing career in 1969 with a popular funk and soul group called **Love Men Ltd**, which eventually became **LTD**. Jeffrey then went on to pursue a solo career that resulted in five gold and platinum albums as well as Top 40 hits such as "_Don't You Get So Mad_," "_Stay With Me Tonight_" and "_Love Power_," which he performed with **Dionne Warwick**.
+**Jeffrey Osborne** (born in Providence, Rhode Island in 1948, the youngest of 12 siblings) began his professional singing career in 1969 with a popular funk and soul group called **Love Men Ltd**, which eventually became **LTD**. Jeffrey then went on to pursue a solo career that resulted in five gold and platinum albums as well as Top 40 hits such as "_Don't You Get So Mad_," "_Stay With Me Tonight_" and "_Love Power_," which he performed with **Dionne Warwick**.
 
 In this concert, Jeff is backed by a five piece band and two backup singers. The track listing for this DVD is:
 
 My favourite song in this concert is the beautiful romantic ballad _On the Wings of Love_, which starts off with Jeffrey accompanied by only the acoustic guitar, and as the song progresses the rest of the band joins in one at a time. It's a beautifully touching performance, although I did think the ending (with Jeff doing some microphone tricks with the reverb turned up to the max) was a bit over-the-top.
 
-Jeff has an electric stage presence and I love the way he engages with the audience and makes them a part of the show, from the chorus of "oohs" in _Stay With Me Tonight_to the sing-a-long session in _That's For Sure_and finally getting selected members of the audience to help him sing the _Woo Woo Song_. The audience look like they really really enjoyed the concert. So did I. I got so wrapped up I started singing along with the rest of the audience! (Aren't you glad you weren't in my living room then!)
+Jeff has an electric stage presence and I love the way he engages with the audience and makes them a part of the show, from the chorus of "oohs" in _Stay With Me Tonight_ to the sing-a-long session in _That's For Sure_ and finally getting selected members of the audience to help him sing the _Woo Woo Song_. The audience look like they really really enjoyed the concert. So did I. I got so wrapped up I started singing along with the rest of the audience! (Aren't you glad you weren't in my living room then!)
 
 The end titles are superimposed towards the end of You Should Be Mine (The Woo Woo Song). Although I would ordinarily object to this, in this case it's acceptable as he's clearly wrapping up the end of the _Woo Woo Song_.
 
@@ -42,13 +42,13 @@ In terms of MPEG artefacts, I can detect occasional aliasing and slight ringing,
 
 Surprisingly, this DVD actually comes with several subtitle tracks. I was hoping that one of the subtitle tracks would be in English and that the song lyrics would be transcribed onto the track. But alas, no such luck! The subtitle tracks here contain translations of Jeff's stage banter into various foreign languages but do not include translations of the lyrics to the songs. Just for fun, I turned on the Italian subtitle track for a brief period. The translation was pretty comprehensive and accurate - they even translated brief interjections in the middle of songs. In the last track, they even got the audience names right (let me remember, there was Chiki, Lois, A.J., Steve, ...)
 
-This disc is labelled DVD9 indicating that it is a single sided dual layer disc (**RSDL**). The layer change occurs at **57:35** minutes into the concert. It did disrupt the concert, but at least it was between songs (near the transition between Chapters 9 an
+This disc is labelled DVD9 indicating that it is a single sided dual layer disc (**RSDL**). The layer change occurs at **57:35** minutes into the concert. It did disrupt the concert, but at least it was between songs (near the transition between Chapters 9 and 10). Giv
 
 ## The audio transfer
 
 This DVD has three audio tracks: Dolby Digital 5.1 at 448Kbps, DTS 5.1 (unknown bitrate) and Dolby Digital 2.0 at 224Kbps. I listened to the DTS 5.1 soundtrack in its entirety, and in addition listened to a fair proportion (say about half an hour's worth) of the Dolby Digital 5.1 track.
 
-The DTS track is actually more like a 4.0 track since the centre channel was not engaged during the entire concert. The soundstage is very front-focused, with the rear surround speakers mainly carrying ambience information. The original audio source must have been in stereo and then remixed into 5.1, but the remix was done well - the "oohs" from the audience in _Stay With Me Tonight_came appropriately from the rear speakers as opposed to the music coming from the front.
+The DTS track is actually more like a 4.0 track since the centre channel was not engaged during the entire concert. The soundstage is very front-focused, with the rear surround speakers mainly carrying ambience information. The original audio source must have been in stereo and then remixed into 5.1, but the remix was done well - the "oohs" from the audience in _Stay With Me Tonight_ came appropriately from the rear speakers as opposed to the music coming from the front.
 
 I loved the DTS track - it sounded very "live" and made me feel like I was physically present at the concert. Every subtle detail in the mix seems to have been captured, right down to the slight FM-like "buzz" I can hear in the background in some tracks. When Jeff switches from the stage microphone to a wireless one for the audience participation section of the _Woo Woo Song_, I can detect a slight change in the timbre due to the different microphone characteristics.
 

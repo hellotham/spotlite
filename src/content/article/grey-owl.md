@@ -16,19 +16,19 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-**\_Grey Owl _**is based on the real-life biography of **Archie Grey Owl**(played by Mr. 007, **Pierce Brosnan**) - a member of the Ojibway Indian tribe who worked as a trapper and a guide in the Canadian wilderness. However, Archie eventually gave up killing beavers for fur, became a forest ranger and started writing books and giving lectures on the Canadian north. He talked about the need for balance between civilization and nature and awoke a concern for preserving the environment in an era (1930s) when the word 'conservationist' probably didn't even exist. He gained international recognition through his books and lectures and in his lifetime became the most well-known Red Indian in the world.
+**_Grey Owl_** is based on the real-life biography of **Archie Grey Owl** (played by Mr. 007, **Pierce Brosnan**) - a member of the Ojibway Indian tribe who worked as a trapper and a guide in the Canadian wilderness. However, Archie eventually gave up killing beavers for fur, became a forest ranger and started writing books and giving lectures on the Canadian north. He talked about the need for balance between civilization and nature and awoke a concern for preserving the environment in an era (1930s) when the word 'conservationist' probably didn't even exist. He gained international recognition through his books and lectures and in his lifetime became the most well-known Red Indian in the world.
 
 However, there is one small, teensy-weensy, tiny little problem - **Archie Grey Owl** is a fake. Not only was he not born an Ojibway Indian (or even a part-Apache as he later claimed), he did not have a single drop of Red Indian blood in his veins. He was born Archibald Belaney in Hastings, England in 1888. He emigrated to Canada in 1906 and took the name of Grey Owl.
 
 Just in case you think I have revealed a massive plot spoiler - relax. Archie's "secret" is revealed in the opening scenes of the film, and the rest of the story is a flashback of Archie talking about his life story to the reporter who uncovered his real past.
 
-They say that behind a great man is a great woman ... and Archie's story is no exception. The film deals with Archie's relationship with Anahareo (nicknamed "Pony") - an attractive, "town-bred��, half-blood Mohawk working as a waitress in Temagami. Pony (played by **Annie Galipeau**) is intrigued by Archie's clean and simple lifestyle and wants to rediscover her own heritage. Archie at first pretends that he finds her a nuisance but gradually falls in love with her. Pony was responsible for many of the turning points in Archie's life - she convinced him to stop trapping and to write and lecture instead. She also sowed the seed of his conservationist "message".
+They say that behind a great man is a great woman ... and Archie's story is no exception. The film deals with Archie's relationship with Anahareo (nicknamed "Pony") - an attractive, "town-bred’’, half-blood Mohawk working as a waitress in Temagami. Pony (played by **Annie Galipeau**) is intrigued by Archie's clean and simple lifestyle and wants to rediscover her own heritage. Archie at first pretends that he finds her a nuisance but gradually falls in love with her. Pony was responsible for many of the turning points in Archie's life - she convinced him to stop trapping and to write and lecture instead. She also sowed the seed of his conservationist "message".
 
 The film conveniently glosses over some of the less pleasant aspects of the real Archie - his drinking binges and bigamy. However, there is no denying the soundness of his plea for preservation nor his powerful charisma.
 
 Directed by **Richard Attenborough** (director of _Gandhi_ and executive producer of _Dances with Wolves_), **_Grey Owl_** has interesting parallels with both those films. Like _Gandhi_, **_Grey Owl_** is a film based on the true story of a man with a powerful vision. Both films are structured with a circular storyline - an ending that ties back to the opening scene.
 
-Like the real Archie, the film is somewhat flawed but its strengths overcome its weaknesses. I quite enjoyed the film, especially the part where he visits his aunts (**Renée Asherson**as Carrie Belaney and **Stephanie Cole**as Ada Belaney) in his hometown in England and we get to see the genesis of his adult life.
+Like the real Archie, the film is somewhat flawed but its strengths overcome its weaknesses. I quite enjoyed the film, especially the part where he visits his aunts (**Renée Asherson** as Carrie Belaney and **Stephanie Cole** as Ada Belaney) in his hometown in England and we get to see the genesis of his adult life.
 
 ## The video transfer
 
@@ -42,7 +42,7 @@ Apart from the annoyance of pan & scan, the transfer is actually not too bad. It
 
 The film source is reasonably clean of marks, apart from a black mark at **17:01**. Medium level grain is present occasionally in some scenes, particularly in low-light conditions but otherwise grain is not an issue. The transfer is relatively devoid of artefacts (apart from a minor video glitch at **15:41**).
 
-The film is mastered somewhat unusually on this single sided double layered disc (**RSDL**) - instead of mastering the feature as a single title spanning two layers (with a layer change inserted at some point in the title) the DVD is mastered as two titles of exactly the same length (**56:36**) - one on each layer - and joined together using seamless branching. Instead of a freeze frame during a layer change, we get a completely blank screen. Fortunately, this happens in between scenes, but it left me with a sneaking suspicion tha
+The film is mastered somewhat unusually on this single sided double layered disc (**RSDL**) - instead of mastering the feature as a single title spanning two layers (with a layer change inserted at some point in the title) the DVD is mastered as two titles of exactly the same length (**56:36**) - one on each layer - and joined together using seamless branching. Instead of a freeze frame during a layer change, we get a completely blank screen. Fortunately, this happens in between scenes, but it left me with a sneaking suspicion that part o
 
 ## The audio transfer
 
@@ -70,11 +70,11 @@ The main menu features animation and audio, and is presented Full Frame. The sub
 
 This is an extremely short promotional featurette featuring excerpts from the film, on-location shots and interviews with:
 
-- **Pierce Brosnan**("Grey Owl")
-- **Richard Attenborough**(Director/Producer)
-- **Donald Smith**(Author of _"From the Land of Shadows"_)
-- **Jake Eberts**(Producer)
-- **Annie Galipeau**("Pony")
+- **Pierce Brosnan** ("Grey Owl")
+- **Richard Attenborough** (Director/Producer)
+- **Donald Smith** (Author of _"From the Land of Shadows"_)
+- **Jake Eberts** (Producer)
+- **Annie Galipeau** ("Pony")
 
 The featurette is presented in Full Frame format (apart from excerpts from the film which are presented at 1.85:1 letterboxed) with Dolby Digital 2.0 audio.
 
@@ -82,11 +82,11 @@ The featurette is presented in Full Frame format (apart from excerpts from the f
 
 This features edited excerpts of interviews (bits of these were used in the promotional featurette above) with:
 
-- **Pierce Brosnan**("Grey Owl")
-- **Annie Galipeau**("Pony")
-- **Richard Attenborough**(Director/Producer)
-- **Jake Eberts**(Producer)
-- **Donald Smith**(Author of _"From the Land of Shadows"_)
+- **Pierce Brosnan** ("Grey Owl")
+- **Annie Galipeau** ("Pony")
+- **Richard Attenborough** (Director/Producer)
+- **Jake Eberts** (Producer)
+- **Donald Smith** (Author of _"From the Land of Shadows"_)
 
 Each interview is in a chapter of its own, and in addition the menu allows direct access to each chapter. Interestingly, we are provided with a synopsis of the topics covered in each interview. The topics for Pierce Brosnan, for example are:
 

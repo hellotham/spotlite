@@ -18,13 +18,13 @@ _1981 · directed by John Glen._
 
 ## The film
 
-_**For Your Eyes Only**_is definitely one of the better Bond films featuring **Roger Moore** as James Bond. In fact, I would even go as far to say that I would nominate either this film or _The Spy Who Loved Me_as my personal favourite Roger Moore Bond film.
+_**For Your Eyes Only**_ is definitely one of the better Bond films featuring **Roger Moore** as James Bond. In fact, I would even go as far to say that I would nominate either this film or _The Spy Who Loved Me_ as my personal favourite Roger Moore Bond film.
 
-First of all, the film has taken all the classic elements of a Bond flick and mixed them in reasonable proportions: exotic locations, an exciting ski sequence, a car chase and underwater scenes, lots of explosions, and of course beautiful women (including, as discovered later, **Caroline Cossey**- a male-to-female transsexual with a stage name of **Tula**- as one of the bikini-clad beauties lounging around Hector Gonzalez's villa and swimming pool).
+First of all, the film has taken all the classic elements of a Bond flick and mixed them in reasonable proportions: exotic locations, an exciting ski sequence, a car chase and underwater scenes, lots of explosions, and of course beautiful women (including, as discovered later, **Caroline Cossey** - a male-to-female transsexual with a stage name of **Tula** - as one of the bikini-clad beauties lounging around Hector Gonzalez's villa and swimming pool).
 
-Secondly, the plot is actually more realistic and down-to-earth compared to some of the more outrageous Roger Moore Bond films. Compared to _Moonraker_preceeding it, and _A View To A Kill_and _Octopussy_following it, it is surprisingly devoid of megalomaniacs intent on destroying the world through some far-fetched scheme. This film is also unusual in that it does not have a great emphasis on gadgets and is a bit closer in spirit to **Ian Fleming**'s novels than some of the campier Moore extravaganzas (although the film itself is not based on a Fleming novel but loosely based on two short stories - _For Your Eyes Only_and _Risico_).
+Secondly, the plot is actually more realistic and down-to-earth compared to some of the more outrageous Roger Moore Bond films. Compared to _Moonraker_ preceeding it, and _A View To A Kill_ and _Octopussy_ following it, it is surprisingly devoid of megalomaniacs intent on destroying the world through some far-fetched scheme. This film is also unusual in that it does not have a great emphasis on gadgets and is a bit closer in spirit to **Ian Fleming**'s novels than some of the campier Moore extravaganzas (although the film itself is not based on a Fleming novel but loosely based on two short stories - _For Your Eyes Only_ and _Risico_).
 
-The pre-titles opening sequence has James Bond paying a visit to the grave of his dead wife (a reference to _On Her Majesty's Secret Service_) and then fighting for his life in a helicopter that is being remote controlled by none other than Ernst Stavro Blofeld played by **John Hollis**(_Austin Power_fans will no doubt recognise Blofeld as one of inpirations for the Dr. Evil character). Needless to say, he succeeds not only in wrestling back control of the helicopter, but dispatching Blofeld to a very long drop down a chimney! We are then treated to **Sheena Easton**singing the theme song in the opening titles sequence (the first vocalist to actually appear in the opening credits of a Bond film).
+The pre-titles opening sequence has James Bond paying a visit to the grave of his dead wife (a reference to _On Her Majesty's Secret Service_) and then fighting for his life in a helicopter that is being remote controlled by none other than Ernst Stavro Blofeld played by **John Hollis** (_Austin Power_ fans will no doubt recognise Blofeld as one of inpirations for the Dr. Evil character). Needless to say, he succeeds not only in wrestling back control of the helicopter, but dispatching Blofeld to a very long drop down a chimney! We are then treated to **Sheena Easton** singing the theme song in the opening titles sequence (the first vocalist to actually appear in the opening credits of a Bond film).
 
 After that, the film proper opens with a British surveillance ship carrying the ATAC (Automatic Targetting Attack Communicator) system sinking as a result of an accidental (?) collision with a mine. Needless to say, the Russkies are keen to get hold of this top-secret military device and 007 is dispatched to make sure it does not fall into the wrong hands.
 
@@ -32,19 +32,19 @@ Next, we see Melina Havelock (**Carole Bouquet**) arriving by seaplane to meet h
 
 Of course, there are still enough plot holes to sink ... well, a ship. Why o why do the sharks ignore the bleeding Bond and Havelock being towed over coral, but head straight to a goon who falls into the sea? What on Earth prompted Melina to leave a valuable oxygen tank at the bottom of the sea in one scene so that they can conveniently retrieve it later while trying to escape? The answer of course is that we are watching a Bond film, so shut up already.
 
-Any scenes featuring the cutesy and ever so fluffy Bibi (**Lynn-Holly Johnson**) are rather excruciating to watch. I am surprised that Roger Moore seems so reluctant to give in to her girlish charms, and when I think of it, his behaviour is quite out of character for James Bond. **Sean Connery**probably would not only have gladly have obliged her, but wouldn't hesitate to use her as a human shield for any would be assailants!
+Any scenes featuring the cutesy and ever so fluffy Bibi (**Lynn-Holly Johnson**) are rather excruciating to watch. I am surprised that Roger Moore seems so reluctant to give in to her girlish charms, and when I think of it, his behaviour is quite out of character for James Bond. **Sean Connery** probably would not only have gladly have obliged her, but wouldn't hesitate to use her as a human shield for any would be assailants!
 
 Interesting trivia related to this film include:
 
 - This is the first Bond film not featuring M (**Bernard Lee**), who died while preparing for the role. The role was not recasted as mark of respect, and the script was changed to say M was on leave.
-- The character of Countess Lisl was played by Australia-born **Cassandra Harris**who, at the time of filming, was married to future Bond actor **Pierce Brosnan**.
-- The ending of the film features **Janet Brown**doing an impersonation of **Dame Margaret Thatcher**(referred to only as 'the Prime Minister' in the film). Although Janet does a great job playing Margaret, I think the less said about this scene the better.
+- The character of Countess Lisl was played by Australia-born **Cassandra Harris** who, at the time of filming, was married to future Bond actor **Pierce Brosnan**.
+- The ending of the film features **Janet Brown** doing an impersonation of **Dame Margaret Thatcher** (referred to only as 'the Prime Minister' in the film). Although Janet does a great job playing Margaret, I think the less said about this scene the better.
 
 ## The video transfer
 
 Consistent with all the other James Bond Special Edition DVDs, this disc features a high quality video transfer from an immaculate film print. The transfer itself is presented in a 2.35:1 aspect ratio with 16x9 enhancement.
 
-The transfer features excellent sharpness and detail (an example of which is the screen display in **31:53-31:59**which is clearly readable), with colour saturation good, but a couple of notches short of reference quality.
+The transfer features excellent sharpness and detail (an example of which is the screen display in **31:53-31:59** which is clearly readable), with colour saturation good, but a couple of notches short of reference quality.
 
 Some film grain is present throughout the feature, but was not major enough to cause annoyance.
 
@@ -62,7 +62,7 @@ Given that the film was released originally with a Dolby Stereo track, obviously
 
 However, in comparison with the Region 1 version of the DVD, the audio track on this disc appears to be mastered at a lower level and generally lack dynamics and bass. I found this surprising as the audio track in both R1 and R4 versions have been encoded at the same bitrate, so I would have thought they would sound very similar (apart from the 4% speedup inherent in PAL transfers). The Region 1 audio track is by no means perfect, but the Region 4 transfer in comparison sounds rather disappointing, with explosions that generally lack "punch" and music that sounds a little bit more "muffled".
 
-The music score by **Bill Conti**is quite listenable and even hummable but does sound dated, featuring lots of brass and disco beats. The title song, sung by **Sheena Easton**, still sounds great after all these years though.
+The music score by **Bill Conti** is quite listenable and even hummable but does sound dated, featuring lots of brass and disco beats. The title song, sung by **Sheena Easton**, still sounds great after all these years though.
 
 ## The extras
 
@@ -80,13 +80,13 @@ This booklet is identical to the R1 booklet, right down to the chapter titles (w
 
 ### Featurette - _Inside For Your Eyes Only_ (28:33)
 
-This is a retrospective documentary featuring **Michael Wilson**(executive producer), **John Glen**(Director), **Arthur Wooster**(2nd unit director), Peter Lamont (production designer), **Roger Moore**(James Bond), **Dana Broccoli**, **Topol**(Colombo), **Lynn-Holly Johnson**(Bibi), **Rick Sylvester**(stuntman), **Chris Corbould**(special effects designer), and **Willy Bogner Jr.** (ski unit director). Made in 1999 and narrated by Patric MacNee, the documentary is presented in a 4:3 aspect ratio (with excerpts from the film in 2.35:1 letterbox aspect ratio).
+This is a retrospective documentary featuring **Michael Wilson** (executive producer), **John Glen** (Director), **Arthur Wooster** (2nd unit director), Peter Lamont (production designer), **Roger Moore** (James Bond), **Dana Broccoli**, **Topol** (Colombo), **Lynn-Holly Johnson** (Bibi), **Rick Sylvester** (stuntman), **Chris Corbould** (special effects designer), and **Willy Bogner Jr.** (ski unit director). Made in 1999 and narrated by Patric MacNee, the documentary is presented in a 4:3 aspect ratio (with excerpts from the film in 2.35:1 letterbox aspect ratio).
 
 I found the documentary quite watchable, and it was quite interesting to see how the cast and crew looks like almost 20 years after the production of the film. It does feature some on-location camera footage taken during the shooting of the film, so it is not just a "talking heads" documentary. The quality of the video transfer is quite good, apart from some minor pixelation here and there.
 
 ### Audio Commentary - _John Glen (Director) et al_
 
-This is a commentary featuring various cast and crew members with **David Nailer**introducing each speaker and announcing each change of topic. Most of the beginning of the commentary is about cast and crew members reminiscing about other cast and crew members. The commentary does not seem to be closely related to the accompanying video images and in at least one instance the commentary introduces a scene at least half a minute before the actual scene appears, so I am wondering whether the participants were even watching the movie at the time or was it a series of separate interviews which was later edited together (I suspect the latter). I liked the plot comparisons between this film and _From Russia With Love_(another of my favourite Bond movies) and I agree with the plot parallels and similarities. The commentary even includes a short monologue on the history of the evolution of deep sea diving suits.
+This is a commentary featuring various cast and crew members with **David Nailer** introducing each speaker and announcing each change of topic. Most of the beginning of the commentary is about cast and crew members reminiscing about other cast and crew members. The commentary does not seem to be closely related to the accompanying video images and in at least one instance the commentary introduces a scene at least half a minute before the actual scene appears, so I am wondering whether the participants were even watching the movie at the time or was it a series of separate interviews which was later edited together (I suspect the latter). I liked the plot comparisons between this film and _From Russia With Love_ (another of my favourite Bond movies) and I agree with the plot parallels and similarities. The commentary even includes a short monologue on the history of the evolution of deep sea diving suits.
 
 ### Audio Commentary - _Michael G. Wilson (Executive Producer) et al_
 
@@ -102,7 +102,7 @@ This features the audio track of two radio commercials featuring the film played
 
 ### Music Video - _For Your Eyes Only-Sheena Easton_ (2:38)
 
-This so-called music video is simply the opening titles of the film minus the opening titles. It is presented in a 2.35:1 aspect ratio (but curiously _without_16x9 enhancement) and Dolby Digital 2.0 surround audio.
+This so-called music video is simply the opening titles of the film minus the opening titles. It is presented in a 2.35:1 aspect ratio (but curiously _without_ 16x9 enhancement) and Dolby Digital 2.0 surround audio.
 
 ### Storyboard Comparisons - _The Snow Mobile Chase_ (1:10)
 

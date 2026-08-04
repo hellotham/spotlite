@@ -144,14 +144,14 @@ The set-up menu is accessed by pressing the Setup button. You get a choice of th
 2. Custom (allows access to all setup parameters)
 3. Initialise (reset settings to default)
 
-The Custom setting is divided into four groups (the settings in **bold**are also available in Quick mode):
+The Custom setting is divided into four groups (the settings in **bold** are also available in Quick mode):
 
 1. Language
 
 - Dialog (default: Original)
 - Subtitle (default: Off)
 - Disc Menu (default: English)
-- **OSD**(default: English)
+- **OSD** (default: English)
 
 2. Display
 
@@ -166,9 +166,9 @@ The Custom setting is divided into four groups (the settings in **bold**are also
 
 - Dynamic Range Control (default: On, Off)
 - LPCM Select (default: Off, On for downsampling 96 to 48kHz)
-- **Dolby Digital**(default: On, Off)
-- **DTS**(default: On, Off)
-- **MPEG**(default: Off, On)
+- **Dolby Digital** (default: On, Off)
+- **DTS** (default: On, Off)
+- **MPEG** (default: Off, On)
 
 4. Ratings
 
@@ -181,7 +181,7 @@ I calibrated the player by adjusting the display settings of my Sony VPL-VW11HT 
 
 I only tested the player in progressive scan mode (for both PAL and NTSC titles). I did briefly put the player in interlaced mode to verify that it outputs interlaced video correctly.
 
-The review unit is multi-region enabled and I had no difficulty playing a number of Region 1, 2 and 4 discs (including R1 RCE discs). Even discs that do not play properly on my old player - the Pioneer DV-626D - (including _When Harry Met Sally_and the layer change of several discs including _Fried Green Tomatoes_) play perfectly fine on the player. I am not sure whether retail units will be multi-region enabled out of the box.
+The review unit is multi-region enabled and I had no difficulty playing a number of Region 1, 2 and 4 discs (including R1 RCE discs). Even discs that do not play properly on my old player - the Pioneer DV-626D - (including _When Harry Met Sally_ and the layer change of several discs including _Fried Green Tomatoes_) play perfectly fine on the player. I am not sure whether retail units will be multi-region enabled out of the box.
 
 The player delivers a fairly decent video output performance and quality that is only a few notches below state of the art. I put it through the usual battery of tests, consisting of various discs known for causing problems in other players as well as Microsoft's WHQL DVD Test Annex 3.0, and it passes almost all the tests except for the deinterlacing ones (more about this in the section on progressive scan).
 
@@ -237,7 +237,7 @@ The player also had no problems with various recordable DVDs that I threw at it.
 In addition, the player had no problems recognizing the following types of commercially pressed discs:
 
 - Video CD ("_James Bond: The Man With The Golden Gun_")
-- DVD-Video containing PCM 96/24 audio track (also known as a "Digital Audio Disc" or DAD) (The Alan Parsons Project "_I Robot_")
+- DVD-Video containing PCM 96/24 audio track (also known as a "Digital Audio Disc" or DAD) (The Alan Parsons Project "_I Robot_ ")
 
 ## WMA/MP3 and JPEG Playback
 
@@ -272,7 +272,7 @@ Some of the brightness/coarseness are softened somewhat when listening to high r
 
 I did not test Dolby Digital decoding but given that the player downmixes everything to 2.0 channels I would not really recommend using this player's internal decoders. It will decode MPEG-2 Audio into Linear PCM and this seems to be handled reasonably well.
 
-Audio synchronization (on both analogue and digital outputs) is excellent, and the usual problem sequences (on _**Wedding Singer**_R4 second remastered edition and also _**Matrix**_R1) played perfectly, as well as a A/V timing clock test on DVE.
+Audio synchronization (on both analogue and digital outputs) is excellent, and the usual problem sequences (on _**Wedding Singer**_ R4 second remastered edition and also _**Matrix**_ R1) played perfectly, as well as a A/V timing clock test on DVE.
 
 Like all other Denon players that I have tested to date, the DVD-1710 does not handle material encoded with [0dBFS](http://www.audioholics.com/techtips/specsformats/0dbfsdigitalplayback.php)+ levels, resulting in distorted waveforms.
 
@@ -280,7 +280,7 @@ In summary, I think the player delivers acceptable sound quality in 2 channel mo
 
 ## Disc Compatibility Tests
 
-��� I tested the player against a number of discs to highlight potential problems: _Specific Tests_
+I tested the player against a number of discs to highlight potential problems: _Specific Tests_
 
 | **Disc** | **What Is Tested** | **Results** |
 | :-- | :-- | :-- |

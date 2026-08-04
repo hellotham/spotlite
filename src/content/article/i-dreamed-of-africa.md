@@ -16,9 +16,9 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-**_I Dreamed Of Africa_**, not to be confused with _Out Of Africa_(1985) or even _I Dreamed Of Jeannie_(1965), is the story of Kuki Gallmann (played by **Kim Basinger**) starting from just before she moved to Kenya, Africa, with her husband Paolo (**Vincent Perez**) and son Emanuele (**Liam Aiken**) but prior to the establishment of the _Gallman Memorial Foundation_([www.gallmannkenya.org](http://www.gallmannkenya.org)).
+**_I Dreamed Of Africa_**, not to be confused with _Out Of Africa_ (1985) or even _I Dreamed Of Jeannie_ (1965), is the story of Kuki Gallmann (played by **Kim Basinger**) starting from just before she moved to Kenya, Africa, with her husband Paolo (**Vincent Perez**) and son Emanuele (**Liam Aiken**) but prior to the establishment of the _Gallman Memorial Foundation_ ([www.gallmannkenya.org](http://www.gallmannkenya.org)).
 
-As you can probably guess, there is actually a real life person called **Kuki Gallmann**, and this movie is based on her autobiography (with the same title as the movie). She has also published a follow up book called _African Nights_and a collection of poetry called _Il Colore del Vento_. In addition to being a successful author, she is also a staunch wildlife conservationist.
+As you can probably guess, there is actually a real life person called **Kuki Gallmann**, and this movie is based on her autobiography (with the same title as the movie). She has also published a follow up book called _African Nights_ and a collection of poetry called _Il Colore del Vento_. In addition to being a successful author, she is also a staunch wildlife conservationist.
 
 The film starts with Paolo and Kuki emerging from a restaurant with a group of friends and the group hops into Paolo's car to go to a bar. During the journey, they were involved in a horrible car accident (not Paolo's fault, though) resulting in the death of Kuki's friend, a broken leg and bruises for Kuki and minor injuries for Paolo. As Kuki slowly recovers, she and Paolo got to know each other better and eventually they fell in love. Paolo also develops a good relationship with Kuki's son Emanuele (shortened to Ema for much of the movie).
 
@@ -46,7 +46,7 @@ The transfer is relatively free of MPEG or other video artefacts, apart from a s
 
 The disc comes with no less than 17 subtitle tracks ranging from English to the Scandinavian languages (all four) and even Hindi and Arabic. Even the commentary track is subtitled in German and Dutch.
 
-This is a single sided dual layer disc (RDSL) and the layer change occurs at **52:50**. It does occur in the middle of a scene, so whether this change is objectionable or not will depend on your DVD player. On mine, it shows up as a minor freeze but acceptable. However, I did
+This is a single sided dual layer disc (RDSL) and the layer change occurs at **52:50**. It does occur in the middle of a scene, so whether this change is objectionable or not will depend on your DVD player. On mine, it shows up as a minor freeze but acceptable. However, I did notice a
 
 ## The audio transfer
 
@@ -68,7 +68,7 @@ This is the standard Dolby Digital "City" trailer.
 
 ### Isolated Musical Score
 
-This contains both original music composed by **Maurice Jarre**as well as other music (I distinctly recall an aria from Mozart's _Le Nozze di Figaro_just before the car crash and apparently a Strauss song was used when they were releasing snakes in the river just before the end). Maurice Jarre's music sounds a bit like a cross between Beethoven's _Pastoral Symphony_(No. 6) and the theme from _Lawrence of Arabia_, but is nevertheless quite pleasant to listen to. I particularly like the fact that he sprinkles the soundtrack with a vague Italian flavour at the beginning of the movie but starts introducing congo drums to give the theme an African feel later on. The first half of the movie is neo-Western classical, and the later half of the movie is more African music inspired.
+This contains both original music composed by **Maurice Jarre** as well as other music (I distinctly recall an aria from Mozart's _Le Nozze di Figaro_ just before the car crash and apparently a Strauss song was used when they were releasing snakes in the river just before the end). Maurice Jarre's music sounds a bit like a cross between Beethoven's _Pastoral Symphony_ (No. 6) and the theme from _Lawrence of Arabia_, but is nevertheless quite pleasant to listen to. I particularly like the fact that he sprinkles the soundtrack with a vague Italian flavour at the beginning of the movie but starts introducing congo drums to give the theme an African feel later on. The first half of the movie is neo-Western classical, and the later half of the movie is more African music inspired.
 
 ### Theatrical Trailer
 
@@ -76,7 +76,7 @@ This is the US Theatrical release trailer presented in a letterboxed 1.85:1 aspe
 
 ### Featurette - HBO Making Of
 
-This is a typical promotional documentary featuring interviews with the director and main actors as well as some stills and a short interview of the real Kuki Gallmann. It is **15:03**minutes long, and is presented in a full frame 4:3 aspect ratio (apart from excepts from the movie, which are presented in a letterboxed 1.85:1 aspect ratio, non-16x9 enhanced). It is subtitled in German and Dutch.
+This is a typical promotional documentary featuring interviews with the director and main actors as well as some stills and a short interview of the real Kuki Gallmann. It is **15:03** minutes long, and is presented in a full frame 4:3 aspect ratio (apart from excepts from the movie, which are presented in a letterboxed 1.85:1 aspect ratio, non-16x9 enhanced). It is subtitled in German and Dutch.
 
 I found it instructive to compare Hollywood hype against reality by contrasting Kim's interview (in which she gushes about how much she wanted to do the movie because she really identified with Kuki and how she felt she understood Kuki) against the real Kuki's comment on Kim, as [quoted](http://www.susangranger.com/discovering.htm) by Susan Granger: "I don't know her, and she doesn't know me. If I'd been given the task of interpreting you in a movie, I would have come and met you, right? I would have made it my business to get to know you."
 
@@ -86,7 +86,7 @@ This is a fairly informative commentary, in which Hugh talks, amongst other thin
 
 ### Biographies-Cast & Crew
 
-This is a set of stills featuring short biographies and filmographies of **Hugh Hudson**, **Kim Basinger,** **Vincent Pérez**, **Liam Aitken**and **Eva Marie Saint**.
+This is a set of stills featuring short biographies and filmographies of **Hugh Hudson**, **Kim Basinger, Vincent Pérez**, **Liam Aitken** and **Eva Marie Saint**.
 
 ## Region 4 versus Region 1
 

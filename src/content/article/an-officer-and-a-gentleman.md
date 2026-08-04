@@ -18,7 +18,7 @@ _1981._
 
 ## The film
 
-��� Plot Synopsis Here
+Plot Synopsis Here
 
 Richard Gere .... Zack Mayo Debra Winger .... Paula Pokrifki David Keith .... Sid Worley Robert Loggia .... Byron Mayo Lisa Blount .... Lynette Pomeroy Lisa Eilbacher .... Casey Seeger Louis Gossett Jr. .... Sgt. Emil Foley Tony Plana .... Emiliano Della Serra Harold Sylvester .... Perryman David Caruso .... Topper Daniels Victor French .... Joe Pokrifki Grace Zabriskie .... Esther Pokrifki Tommy Petersen .... Young Zack Mara Scott-Wood .... Bunny David Greenfield .... Schneider Some of the music in the video version has been changed - namely the ZZ Top, Pat Benatar, Dire Straits, and Van Morrison songs.
 
@@ -70,27 +70,27 @@ Director - Taylor Hackford Screenplay - Douglas Day Stewart Producer - Martin El
 
 ## The video transfer
 
-��� Optional General Comments
+Optional General Comments
 
-��� Aspect Ratio/16x9 Status
+Aspect Ratio/16x9 Status
 
-��� Sharpness/Shadow Detail/Grain/Low Level Noise
+Sharpness/Shadow Detail/Grain/Low Level Noise
 
-��� C
+Colour
 
 ## The audio transfer
 
-��� Optional General Comments
+Optional General Comments
 
-��� Audio Tracks
+Audio Tracks
 
-��� Dialogue/Audio Sync
+Dialogue/Audio Sync
 
-��� Music
+Music
 
-��� Surround Channel Usage
+Surround Channel Usage
 
-��� Subwoofer
+Subwoofer
 
 ## The extras
 
@@ -100,15 +100,15 @@ Director - Taylor Hackford Screenplay - Douglas Day Stewart Producer - Martin El
 
 ## Censorship
 
-��� As far as we are aware, there are no censorship issues with this DVD.
+As far as we are aware, there are no censorship issues with this DVD.
 
 ## Region 4 versus Region 1
 
-��� R4 vs R1 Comparison Here
+R4 vs R1 Comparison Here
 
 ## Summary
 
-��� Summary Here
+Summary Here
 
 ### [Ratings (out of 5)](RatingsGuide.html)
 

@@ -28,7 +28,7 @@ At that time Katie was a outspoken campus eccentric who is the President of the 
 
 We then return back to the "present" of the nightclub. Katie takes the very sleepy Hubbell back to her place and gradually an unlikely love relationship develops between the two characters. The rest of the film is about them struggling to maintain their relationship in spite of their differences and ultimately neither of them are really willing or able to change their character for the other. The film covers a fairly lengthy and eventful set of years, ranging from pre-World War II to the McCarthy era of anti-Communist paranoia of the fifties and it's impact on Hollywood - and finally to the "present" day (presumably the seventies).
 
-How will it end? Well, if you have never watched the film before I won't spoil the ending for you. Movie buffs may be interested in spotting a very young **Lois Chiles**(_Moonraker_and _Death on the Nile_) as Carol Ann and **James Woods**(_Against All Odds_, _Any Given Sunday_) as Frankie McVeigh.
+How will it end? Well, if you have never watched the film before I won't spoil the ending for you. Movie buffs may be interested in spotting a very young **Lois Chiles** (_Moonraker_ and _Death on the Nile_) as Carol Ann and **James Woods** (_Against All Odds_, _Any Given Sunday_) as Frankie McVeigh.
 
 ## The video transfer
 
@@ -64,12 +64,12 @@ This main message promoted in this trailer seems to be that we will finally get 
 
 This is a fairly lengthly restrospective documentary (though not quite the 70 minutes as claimed on the packaging) featuring excerpts from the film (presented at 2.35:1 letterboxed with no 16x9 enhancement) together with interviews (presented in full frame) with:
 
-- **Barbra Streisand**("Katie")
-- **Arthur Laurents**(screenwriter)
-- **Sydney Pollack**(director)
-- **Ray Stark**(producer)
-- **Marvin Hamlisch**(music composer)
-- **Alan**and **Marilyn Bergman**(lyricists)
+- **Barbra Streisand** ("Katie")
+- **Arthur Laurents** (screenwriter)
+- **Sydney Pollack** (director)
+- **Ray Stark** (producer)
+- **Marvin Hamlisch** (music composer)
+- **Alan** and **Marilyn Bergman** (lyricists)
 
 What I really liked about this documentary is that it shows quite a lot of deleted scenes, some of which are quite intriguing. I would have liked to be able to individually select each deleted scene from the menu, not to mention being able to watch a version of the film with some of the more critical deleted scenes added back in, but I respect director Sydney Pollack's final decision to omit these scenes. Notably absent from this documentary is **Robert Redford**.
 
@@ -83,9 +83,9 @@ This is one of the few commentaries that I have listened to (featuring director 
 
 This features stills highlighting the talent profiles and filmographies of:
 
-- **Sydney Pollack**(director and producer)
-- **Barbra Streisand**("Katie")
-- **Robert Redford**("Hubbell")
+- **Sydney Pollack** (director and producer)
+- **Barbra Streisand** ("Katie")
+- **Robert Redford** ("Hubbell")
 
 ## Censorship
 
@@ -95,7 +95,7 @@ As far as we are aware, there are no censorship issues with this DVD.
 
 The Region 4 version misses out on:
 
-- bonus trailers for _“The Prince Of Tides,”_ _“The Mirror Has Two Faces”_ and _“For Pete’s Sake.”_
+- bonus trailers for _“The Prince Of Tides,” “The Mirror Has Two Faces”_ and _“For Pete’s Sake.”_
 - some foreign language subtitles
 
 The Region 1 version misses out on:

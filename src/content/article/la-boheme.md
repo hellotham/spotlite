@@ -16,14 +16,14 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-**\_ La Bohème_** is, and always will be, one of my favourite operas. I don't mind viewing or listening to this opera again and again, and I own at least two different CD recordings:
+**_La Bohème_** is, and always will be, one of my favourite operas. I don't mind viewing or listening to this opera again and again, and I own at least two different CD recordings:
 
-1. the 1959 recording featuring **Renata Tebaldi**and **Carlo Bergonzi**with **Tullio Serafin**conducting the _Orchestra dell'Accademia di Santa Cecilia_, Rome (Decca catalogue number 448725), and
-2. the 1972 recording featuring **Luciano Pavarotti**and **Mirella Freni**with **Herbert von Karajan**conducting the _Berliner Philharmoniker_(Decca catalogue number 421049).
+1. the 1959 recording featuring **Renata Tebaldi** and **Carlo Bergonzi** with **Tullio Serafin** conducting the _Orchestra dell'Accademia di Santa Cecilia_, Rome (Decca catalogue number 448725), and
+2. the 1972 recording featuring **Luciano Pavarotti** and **Mirella Freni** with **Herbert von Karajan** conducting the _Berliner Philharmoniker_ (Decca catalogue number 421049).
 
 Over the years I have been fortunate enough to have seen quite a few different productions in the Sydney Opera House as well as on video/TV, including the one featured on this disc.
 
-**\_ La Bohème_** in many respects is the "perfect" opera for beginners as well as connoisseurs alike. Broken into four acts each lasting less than 30 minutes, it does not require the audience to have super-human levels of stamina (try watching the entire _Ring_ cycle in one sitting!). It has a more than half decent plot (from the novel "_Scènes de la vie de bohème_" by **Henri Murger**, loosely based on his own experiences). The music by **Giacomo Puccini**and the libretto by **Luigi Illica**and **Giuseppe Giacosa**is of course superb. And lastly, it is a _real_ opera because at least one character dies (an opera with no deaths, a friend of mine once wryly noted, would be called "operetta"!).
+**_La Bohème_** in many respects is the "perfect" opera for beginners as well as connoisseurs alike. Broken into four acts each lasting less than 30 minutes, it does not require the audience to have super-human levels of stamina (try watching the entire _Ring_ cycle in one sitting!). It has a more than half decent plot (from the novel "_Scènes de la vie de bohème_" by **Henri Murger**, loosely based on his own experiences). The music by **Giacomo Puccini** and the libretto by **Luigi Illica** and **Giuseppe Giacosa** is of course superb. And lastly, it is a _real_ opera because at least one character dies (an opera with no deaths, a friend of mine once wryly noted, would be called "operetta"!).
 
 Each time I watch or listen to this opera, I cannot help but start reaching for the tissues to wipe the tears in my eyes, from the beautifully touching love arias in Act One to the heart-wrenching cries of "Mimi!" from Rodolfo at the very end (perfectly timed with the musical score to create maximum dramatic impact). At the same time, it is a genuinely funny comedy, especially during the horse play scenes between the bohemians in Acts One and Four, the street scene in Act Two and even the quarrel between Marcello and Musetta in Act Three. What is truly amazing is Puccini's ability to somehow make me laugh and cry at the SAME time as he managed to mingle the comedic, romantic and tragic elements together not just once but in each of the four acts.
 
@@ -44,11 +44,11 @@ However, I will reproduce the following four-line summary, by [Rick Bogart](mail
 
 This is a rather stylish version of **_La Bohème_**, and it moves forward the timeline from the 1830s to 1957/8 to make it more appealing to a younger generation of audience perhaps not familiar with the operatic art form. Produced by **Baz Lurhmann** fresh from his acclaimed **_Strictly Ballroom_** and a few years prior to the successful **_Romeo + Juliet_**, it showcases his creative talent, impeccable timing and attention to detail. For example, Baz resolves a plot inconsistency (at the end of Act Two, none of the bohemians have enough money to pay for the evening meal and yet presumably Marcello has since he was the only one who did not buy anything earlier on) by showing Marcello being robbed by a street urchin after his attempts at flirting with the prostitutes.
 
-The production features a fairly young and good looking cast, again adding to the appeal. For once, I can actually relax and enjoy looking at singers that passably resemble their characters and not have to suspend disbelief by looking at a stout Mimi who is more likely to die from an overdose of chocolates rather than from tuberculosis, or a Rodolfo who looks like he is old enough to be Mimi's father rather than her lover. **David Hobson**and **Cheryl Barker**are a well-matched couple, and exhibit significant amounts of on-stage chemistry, especially in Act Four.
+The production features a fairly young and good looking cast, again adding to the appeal. For once, I can actually relax and enjoy looking at singers that passably resemble their characters and not have to suspend disbelief by looking at a stout Mimi who is more likely to die from an overdose of chocolates rather than from tuberculosis, or a Rodolfo who looks like he is old enough to be Mimi's father rather than her lover. **David Hobson** and **Cheryl Barker** are a well-matched couple, and exhibit significant amounts of on-stage chemistry, especially in Act Four.
 
 The sets are also quite attractive, from the rotating combination of the garret interior and rooftop in Acts One and Four, to the deliberately spartan and "constructive" look of Act Three. The sets, backgrounds, and costumes of everyone except the main characters are deliberately greyish and monochromatic giving the impression that we are watching a 1950s black and white movie and allowing the eyes to focus on the colourful main characters.
 
-The orchestra, under the baton of **Julian Smith**, delivers an acceptable if somewhat lacklustre performance. The young cast obviously could do with a little bit more experience and polish in their singing voices (my biggest disappointment was with **David Hobson**'s voice which needs a lot more strength even though he looks rather handsome as Rodolfo!), but to their credit all have above average acting abilities (and believe me, for an opera like this, acting is just as important as the ability to carry a tune). I was particularly impressed by **Roger Lemke**'s performance as Marcello and **Christine Douglas**(Musetta) delivers a more than adequate rendition of _Quando men vo_.
+The orchestra, under the baton of **Julian Smith**, delivers an acceptable if somewhat lacklustre performance. The young cast obviously could do with a little bit more experience and polish in their singing voices (my biggest disappointment was with **David Hobson**'s voice which needs a lot more strength even though he looks rather handsome as Rodolfo!), but to their credit all have above average acting abilities (and believe me, for an opera like this, acting is just as important as the ability to carry a tune). I was particularly impressed by **Roger Lemke**'s performance as Marcello and **Christine Douglas** (Musetta) delivers a more than adequate rendition of _Quando men vo_.
 
 Overall, I'm fairly satisfied with the quality of this production. It is a perfect and gentle introduction to the world of opera for beginners, and a more than adequate performance for rabid fanatics like me.
 
@@ -62,7 +62,7 @@ As an example of the detail in this transfer, check out the sweat on **David Hob
 
 Colour saturation is acceptable, and the rather greyish/mono-chromatic look of the sets is by design. Trust me, it looked like that live in the Sydney Opera House, I was there! In Acts One/Two, the four bohemian buddies wear brightly coloured outfits which looks really vibrant on screen, creating an illusion of full-colour characters walking around against a background of black-and-white, kind of like the movie _Pleasantville_. Shadow detail is good on the spotlit area (check out the detail of Rodolfo's jacket in Act 1), and mediocre elsewhere.
 
-Apart from the video glitch mentioned above, the transfer is relatively clean of MPEG or video artefacts. Occasionally the camera focus can be a little bit soft, but never annoyingly so. Acts One and Four features a rotating set with the interior of the garret on one side and the roof-top with the "L'Amour" neon lights on the other. Stage hands were used to rotate the set during the middle of the act to provide a quick change of scenery. In the opera hall, the rotation is fairly unobtrusive and can even be entertaining. On video, however, every effort should have been made to avoid capturing the stage hands on camera. Unfortunately, they didn't quite succeed all the time, especially during **31:06**and **83:29**.
+Apart from the video glitch mentioned above, the transfer is relatively clean of MPEG or video artefacts. Occasionally the camera focus can be a little bit soft, but never annoyingly so. Acts One and Four features a rotating set with the interior of the garret on one side and the roof-top with the "L'Amour" neon lights on the other. Stage hands were used to rotate the set during the middle of the act to provide a quick change of scenery. In the opera hall, the rotation is fairly unobtrusive and can even be entertaining. On video, however, every effort should have been made to avoid capturing the stage hands on camera. Unfortunately, they didn't quite succeed all the time, especially during **31:06** and **83:29**.
 
 Act Four looks soft and over-exposed in comparison to previous acts, with a yellowish tone throughout due to the bright stage lights. An attempt was made to compensate for this by the use of aggressive edge-enhancement, resulting in some posterisation and minor ringing artefacts.
 
@@ -72,7 +72,7 @@ This disc does not feature subtitle tracks, but does have the English subtitles 
 
 The subtitle text is presumably the same as, or close to, the _surtitles_ used in the opera hall during live performances, and is about average in terms of the quality of the translation, but substantially _below average_ in terms of the completeness of the translation. Unfortunately, some of the most lyrical and poetic qualities of the libretto, particularly during the love arias and duets, have not been captured in the subtitles. My suggestion if you are watching this DVD: learn Italian, or have access to an English translation of the libretto.
 
-The packaging
+The packaging does not
 
 ## The audio transfer
 
@@ -96,7 +96,7 @@ This is a set of stills presenting an adequate synopsis of each of the four acts
 
 ### Biographies-Cast & Crew
 
-This is a set of stills presenting some biographical notes on **Baz Luhrmann**, **David Hobson**and **Cheryl Barker**.
+This is a set of stills presenting some biographical notes on **Baz Luhrmann**, **David Hobson** and **Cheryl Barker**.
 
 ## Region 4 versus Region 1
 

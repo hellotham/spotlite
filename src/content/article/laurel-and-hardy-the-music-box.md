@@ -18,9 +18,9 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 I have to admit up front - the only reason I am reviewing this DVD is because of a mistake — my mistake. When the list of available DVD titles came up, my eyes came across "_**Music Box**_" and I searched [IMDB](http://www.imdb.com) and decided this must be the 1990 movie about a Hungarian immigrant accused of being a war criminal directed by **Costa-Gavras**_._ I thought it was probably worth watching. Needless to say no one was more surprised than I when I finally received the DVD.
 
-**Stan Laurel**and **Oliver Hardy**are, of course, the famous comedy duo that have made numerous films from the 1920s till the 1940s. Their film career has spanned the transition from silent films to "talkies" and this DVD presents three well known sound shorts (produced by **Hal Roach**) circa 1932-33. The "official" web site for Laurel and Hardy is [www.laurel-and-hardy.com](http://www.laurel-and-hardy.com).
+**Stan Laurel** and **Oliver Hardy** are, of course, the famous comedy duo that have made numerous films from the 1920s till the 1940s. Their film career has spanned the transition from silent films to "talkies" and this DVD presents three well known sound shorts (produced by **Hal Roach**) circa 1932-33. The "official" web site for Laurel and Hardy is [www.laurel-and-hardy.com](http://www.laurel-and-hardy.com).
 
-Stan Laurel was born **Arthur Stanley Jefferson**on 16 June 1890 in Ulverston, England and died on 23 February 1965. Oliver Hardy was born **Norvell Hardy**on 18 January 1892 in Harlem, Georgia and died on 7 August 1957.
+Stan Laurel was born **Arthur Stanley Jefferson** on 16 June 1890 in Ulverston, England and died on 23 February 1965. Oliver Hardy was born **Norvell Hardy** on 18 January 1892 in Harlem, Georgia and died on 7 August 1957.
 
 The following descriptions of the three films are taken from [Laurel and Hardy Central](http://members.aol.com/lhcentral/). Note that the DVD packaging errorneously refer to Busy Bodies and Towed in a Hole as "silent shorts" but they are actually sound shorts (each around 20 minutes in length) and are presented on the DVD with dialogue.
 
@@ -32,7 +32,7 @@ Cast: Stan Laurel, Oliver Hardy, Billy Gilbert, Lilyan Irene, Sam Lufkin, Charli
 
 Laurel and Hardy are to deliver a piano to a house which sits atop an enormous flight of stairs. Their attempts to carry the piano up the stairs results in it rolling and crashing into the street below several times, often with Ollie in tow. They finally succeed in getting the piano in the house, where they make a shambles of the living room. The owner of the house, Professor Theordore Von Schwarzenhoffen, returns and is outraged at what he finds. He attacks the piano with an axe, but regrets his actions when he discovers it was a present from his wife.
 
-The _**Music Box**_is the only Laurel and Hardy film to be honored with an Academy Award, for "Best Short Subject," 1931-32.
+The _**Music Box**_ is the only Laurel and Hardy film to be honored with an Academy Award, for "Best Short Subject," 1931-32.
 
 ### Towed in a Hole
 
@@ -56,9 +56,9 @@ The sound shorts presented on this DVD have been lovingly preserved (transferred
 
 In general, I was pleasantly surprised by the quality of the transfers. Shadow detail and sharpness are probably below average compared to say a 1950s black & white film, but quite good considering the film source. The transfer is reasonably detailed - for example I can read (with some difficulty) lettering on the piano crate and wagon.
 
-The B&W version of _The Music Box_suffers from some telecine wobble during the opening titles, but mercifully the actual feature itself is quite stable.
+The B&W version of _The Music Box_ suffers from some telecine wobble during the opening titles, but mercifully the actual feature itself is quite stable.
 
-The colour version of _The Music Box_suffers from colour smearing throughout the entire feature, and generally looks less sharp and detailed than the B&W version. The transfer also seems to have cropped the right edge of the film slightly.
+The colour version of _The Music Box_ suffers from colour smearing throughout the entire feature, and generally looks less sharp and detailed than the B&W version. The transfer also seems to have cropped the right edge of the film slightly.
 
 I would say I greatly prefer the B&W version over the colour version, and I am by no means a purist. The difference in quality is rather like comparing a live TV broadcast against a VHS recording. The colour version suffers from what I can only describe as "colourisation artefacts", of which I can quote several glaring examples:
 
@@ -66,11 +66,11 @@ I would say I greatly prefer the B&W version over the colour version, and I am b
 - The piano crate around Laurel's hands from around **2:00** to **2:10** seems to be black & white instead of colour
 - Professor Schwarzenhoffen's skin seems to be very greenish around **9:45**.
 
-The quality of the transfer for the additional sound shorts (_Towed in a Hole_and _Busy Bodies_) are similar to that for the _Music Box_. There's a glaring film mark in **10:40** in _Towed in a Hole_and telecine wobble around **4:17** in _Busy Bodies_.
+The quality of the transfer for the additional sound shorts (_Towed in a Hole_ and _Busy Bodies_) are similar to that for the _Music Box_. There's a glaring film mark in **10:40** in _Towed in a Hole_ and telecine wobble around **4:17** in _Busy Bodies_.
 
 There appear to be no MPEG artefacts present in the transfer, although with the colour version it's hard to tell since the transfer is rather blurry.
 
-All three shorts seem t
+All three shorts seem to be subti
 
 ## The audio transfer
 
@@ -86,7 +86,7 @@ You can either regard this DVD has a three feature DVD with minimal extras, or a
 
 ### Menu
 
-These are well presented and looks really sharp. They are non-animated. Curiously, the menus for the _Towed in a Hole_and _Busy Bodies_seem to default to subtitling on.
+These are well presented and looks really sharp. They are non-animated. Curiously, the menus for the _Towed in a Hole_ and _Busy Bodies_ seem to default to subtitling on.
 
 ### Photo Gallery - _Hats Off_
 

@@ -16,7 +16,7 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-**\_EarthScapes _**is a set of time lapse and slow motion cinematography of various landscapes and terrains set to the music of various New Age composers. It is produced, photographed and edited by **David Fortney**. Personally, I thought that titling this "Earth" scapes is a bit ambitious given that the film was entirely shot in the North American continent, but I will resist from making remarks about the myopia and parochial attitudes of Americans.
+**_EarthScapes_** is a set of time lapse and slow motion cinematography of various landscapes and terrains set to the music of various New Age composers. It is produced, photographed and edited by **David Fortney**. Personally, I thought that titling this "Earth" scapes is a bit ambitious given that the film was entirely shot in the North American continent, but I will resist from making remarks about the myopia and parochial attitudes of Americans.
 
 Since there is no "plot" as such in this feature, I will simply list the following details for each chapter. There is no thematic connection across chapters.
 
@@ -28,7 +28,7 @@ This is a made-for-video feature, presented in the original aspect ratio of 1.33
 
 The film itself appears to be somewhat grainy with slightly desaturated colours. It has some dirt and scratches but no major marks. I would rate the sharpness, detail and black levels to be below average.
 
-The video transfer appears to have a number of glitches. I originally started noting the approximate timer locations of these but I gave up after encountering the fifth. Suffice to say you will encounter a video glitch in the transfer ever 5 minutes or so. The transfer itself seems almost designed to show off what video/MPEG artefacts are - I can detect examples of pixelation, colour smearing, posterisation, shimmering (**17:4
+The video transfer appears to have a number of glitches. I originally started noting the approximate timer locations of these but I gave up after encountering the fifth. Suffice to say you will encounter a video glitch in the transfer ever 5 minutes or so. The transfer itself seems almost designed to show off what video/MPEG artefacts are - I can detect examples of pixelation, colour smearing, posterisation, shimmering (**17:45
 
 ## The audio transfer
 
@@ -48,7 +48,7 @@ This DVD is the same the world over and is formatted for NTSC displays.
 
 ## Summary
 
-**\_ EarthScapes_** contains some spectacular cinematography of various landscapes set to some nice New Age music. It is presented on a minimalist DVD with a poor video transfer and equally poor audio transfer. The DVD has no extra features whatsoever.
+**_EarthScapes_** contains some spectacular cinematography of various landscapes set to some nice New Age music. It is presented on a minimalist DVD with a poor video transfer and equally poor audio transfer. The DVD has no extra features whatsoever.
 
 ### [Ratings (out of 5)](../ReviewersGuide/RatingsGuide.html)
 

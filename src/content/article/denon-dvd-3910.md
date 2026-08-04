@@ -270,7 +270,7 @@ Denon has been hard at work fixing most of the operational issues in earlier DVD
 
 The Picture Adjustment settings have been significantly improved over previous generations. After pressing the "Picture Adjust" button on the remote control, you have access to no less than three groups of image quality settings that you can store into five memories for instant recall.
 
-The settings you can store into memory are (**bold**is the default):
+The settings you can store into memory are (**bold** is the default):
 
 - Contrast (-6, ..., **0**, ..., +6)
 - Brightness (**0**, ..., +12)
@@ -407,7 +407,7 @@ The "Audio Setup" sub menu contains the following parameters:
 
 - Audio Channel - **Multi-channel**, 2 channel SRS Off, 2 channel SRS On (SRS TruSurround only works on DVD and VCD audio tracks)
 - Digital Out - **Normal**, PCM (force audio format conversion through SP/DIF)
-- LPCM (44.1kHz/48kHz) - **Off**(no downsampling), On (downsampling)
+- LPCM (44.1kHz/48kHz) - **Off** (no downsampling), On (downsampling)
 - Source Direct - **Off**, On (audio DSP bypass mode)
 - Bass Enhancer (2 channel) - **Off**, On (routes low frequencies to subwoofer)
 - Compression - **Off**, On (Dolby Digital dynamic range compression)
@@ -442,7 +442,7 @@ Compared to budget DVD players, the initial picture quality may been just a bit 
 
 I was not able to determine the MPEG encoder used in the player as Denon has covered up the chip markings with a sticky paper label. Denon claims the player is using the latest generation ESS Vibratto, and certainly based on the discs I tried the behaviour of the decoder on various scenes were identical to those of players based on the Vibratto, particularly in terms of being able to display silky smooth slow pans, and successfully avoiding shimmering and moire patterns that seem to plague many decoders.
 
-Another piece of good news: the player shows no signs of the dreaded chroma upsampling error or the interlaced chroma upsampling problem. Saturated colours had completely smooth edges and were streak free on all different tests on Microsoft's DVD Test Annex 3.0 and also on the usual NTSC and PAL discs that in the past have exhibited the problem on previous Denon players: _Saturday Night Fever_R1, _The Hunt For Red October_R1 and _Unconditional Love_R4. Yeah!
+Another piece of good news: the player shows no signs of the dreaded chroma upsampling error or the interlaced chroma upsampling problem. Saturated colours had completely smooth edges and were streak free on all different tests on Microsoft's DVD Test Annex 3.0 and also on the usual NTSC and PAL discs that in the past have exhibited the problem on previous Denon players: _Saturday Night Fever_ R1, _The Hunt For Red October_ R1 and _Unconditional Love_ R4. Yeah!
 
 And now for not so good news: the player does not seem to pass PLUGE (below black) correctly, no matter what combination of HDMI/DVI Black Level or Picture Adjust Black IRE setting I used. Also, the player seems to crush above reference whites. I even tried initializing the player back to default settings (and yes, I did turn it off and on just in case). I suspect this is a firmware problem, as owners have reported that they have managed to get the player to pass PLUGE and avoid crushing whites. I asked for, and received a firmware update but unfortunately it did not fix the problem.
 
@@ -452,7 +452,7 @@ There has also been a lot of discussion of the so-called "macro-blocking" proble
 
 The fast forward/fast reverse buttons give you multiple playback speeds (2X, 4X, 8X and 16X) which you can cycle by pressing the button repeatedly. You will exit fast forward/rewind operation by pressing "Play." The Pause button is a bit unconventional in that pressing it again whilst in Pause mode will advance to the next frame instead of reverting back to Play (I couldn't find a way of moving to the previous frame). Pressing the forward/rewind buttons when the player is paused will activate several speeds of slow scans (1/2, 1/4, 1/6 and 1/8). To exit Pause mode, you have to press the Play button. Once I got used to it, the buttons are surprisingly effective in cueing up to the right spot.
 
-As with other upmarket Denon DVD players, this player includes a memory buffer that minimizes the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _**Fried Green Tomatoes**_R4. The only time I noticed a layer change was watching the time elapsed counter very closely, as this sometimes does not count up as smoothly in the vicinity of a layer change. However, on DVDs that split a film across several titles (including the above-mentioned _**Fried Green Tomatoes**_), I noticed that title transitions still incur a pause (and a fairly long one at that). The player did stumble on the "worst case scenario" layer change on the Microsoft WHQL DVD Test Annex 3.0 Disc 2 (this layer change occurs during scrolling titles encoded at the maximum permissible bit rate) - it paused for around half a second. Still, better than the 3-4 seconds I've seen on other players.
+As with other upmarket Denon DVD players, this player includes a memory buffer that minimizes the "freeze" effect of a layer change transition. Layer changes are extremely smooth on this player and will be unnoticeable for most discs, even problem ones like _**Fried Green Tomatoes**_ R4. The only time I noticed a layer change was watching the time elapsed counter very closely, as this sometimes does not count up as smoothly in the vicinity of a layer change. However, on DVDs that split a film across several titles (including the above-mentioned _**Fried Green Tomatoes**_), I noticed that title transitions still incur a pause (and a fairly long one at that). The player did stumble on the "worst case scenario" layer change on the Microsoft WHQL DVD Test Annex 3.0 Disc 2 (this layer change occurs during scrolling titles encoded at the maximum permissible bit rate) - it paused for around half a second. Still, better than the 3-4 seconds I've seen on other players.
 
 In summary, the DVD-3910 has excellent video quality, apart from the crushing of below black signals and above-reference whites.
 
@@ -506,7 +506,7 @@ The player also had no problems with various recordable DVDs that I threw at it 
 In addition, the player had no problems recognizing the following types of commercially pressed discs:
 
 - Video CD ("_James Bond: The Man With The Golden Gun_")
-- DVD-Video containing PCM 96/24 audio track (also known as a "Digital Audio Disc" or DAD) (The Alan Parsons Project "_I Robot_")
+- DVD-Video containing PCM 96/24 audio track (also known as a "Digital Audio Disc" or DAD) (The Alan Parsons Project "_I Robot_ ")
 
 ## MP3 and JPEG Playback
 
@@ -544,15 +544,15 @@ The player seems equally adept at various formats, and the various DVD-Audio, SA
 Discs tested include:
 
 - Fourplay (DVD-Audio)
-- Pat Metheny Group: _Imaginary Day_(DVD-Audio)
-- The Alan Parsons Project: _I Robot_(DVD-Audio and DVD-Video with a Linear PCM 96/24 2.0 audio track)
+- Pat Metheny Group: _Imaginary Day_ (DVD-Audio)
+- The Alan Parsons Project: _I Robot_ (DVD-Audio and DVD-Video with a Linear PCM 96/24 2.0 audio track)
 - Getz/Gilberto (SACD 2 channel)
 - Alfred Brendel: Chopin Polonaises (SACD 2 channel)
-- Chris Botti: _Night Sessions_(SACD multi-channel)
-- James Taylor: _Hourglass_(SACD multi-channel)
-- Joni Mitchell: _Shadows and Light_(HDCD)
-- Mike Oldfield: _Ommadawn_(HDCD)
-- Michael Brecker: _The Nearness of You_(CD, as well as ripped into MP3 and WMA files)
+- Chris Botti: _Night Sessions_ (SACD multi-channel)
+- James Taylor: _Hourglass_ (SACD multi-channel)
+- Joni Mitchell: _Shadows and Light_ (HDCD)
+- Mike Oldfield: _Ommadawn_ (HDCD)
+- Michael Brecker: _The Nearness of You_ (CD, as well as ripped into MP3 and WMA files)
 - CD-R recordings made from various LPs
 
 In comparison with cheaper players (such as the entry level DVD-1710 or my Panasonic DVD-RP82), the DVD-3910 doesn't have the strident brightness that tends to cause listener fatigue. In comparison with more expensive players (such as my Sony SCD-XA777ES or the Linn Unidisk 1.2 or even Denon's previous flagship the DVD-A1), the DVD-3910's overall delivery did not sound as natural or liquid, and perhaps did not extract low level detail as convincingly as others. But these are all very minor criticisms, and these "faults" as such are only noticeable in close comparisons with other players.
@@ -563,7 +563,7 @@ Dolby Digital and dts decoding are excellent, courtesy of the SHARC processing .
 
 Needless to say, I had no problems connecting the optical digital audio output to my amplifier. I did not try the HDMI or IEEE1394 digital outputs due to the lack of suitable equipment that can receive such signals, and unfortunately although my Denon AVC-A1SE has an upgraded digital board that accepts Denon Link, I only have the original Denon Link and not the Second Edition implemented on this player so I did not try to hook the player up via Denon Link. In any case, the player's analog audio outputs sound noticeable superior to the internal D/A converters in my AVC-A1SE that there would be no point in doing the link.
 
-Audio synchronization (on both analogue and digital outputs) is excellent, and the usual problem sequences (on _**Wedding Singer**_R4 second remastered edition and also _**Matrix**_R1) played perfectly, as well as a A/V timing clock test on DVE.
+Audio synchronization (on both analogue and digital outputs) is excellent, and the usual problem sequences (on _**Wedding Singer**_ R4 second remastered edition and also _**Matrix**_ R1) played perfectly, as well as a A/V timing clock test on DVE.
 
 Like all other Denon players that I have tested to date, the DVD-3910 does not handle material encoded with [0dBFS](http://www.audioholics.com/techtips/specsformats/0dbfsdigitalplayback.php)+ levels, resulting in distorted waveforms.
 

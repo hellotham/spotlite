@@ -16,9 +16,9 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-When _**Desperately Seeking Susan**_was first released in 1985, the big attraction was the fact that it was **Madonna**'s first movie. A lot of people saw the movie just to find out whether she could act, and many commented that she was simply playing herself. More than 15 years later, with the benefit of hindsight from witnessing numerous attempts by Madonna to reinvent her image, it is probably more accurate to say Madonna was simply playing a role that was consistent with her public image at that time.
+When _**Desperately Seeking Susan**_ was first released in 1985, the big attraction was the fact that it was **Madonna**'s first movie. A lot of people saw the movie just to find out whether she could act, and many commented that she was simply playing herself. More than 15 years later, with the benefit of hindsight from witnessing numerous attempts by Madonna to reinvent her image, it is probably more accurate to say Madonna was simply playing a role that was consistent with her public image at that time.
 
-When I first saw this film in its original theatrical run, I remembered it as a somewhat quirky and offbeat romantic comedy but definitely watchable. Viewing it again on DVD, I am not as impressed. Maybe this is just one of those films that one cannot watch more than once, or perhaps the thrill of seeing Madonna on the big screen just isn't there anymore. It does feature one of my favourite Madonna songs - _Into The Groove_- and it was nice to hear it again after all these years.
+When I first saw this film in its original theatrical run, I remembered it as a somewhat quirky and offbeat romantic comedy but definitely watchable. Viewing it again on DVD, I am not as impressed. Maybe this is just one of those films that one cannot watch more than once, or perhaps the thrill of seeing Madonna on the big screen just isn't there anymore. It does feature one of my favourite Madonna songs - _Into The Groove_ - and it was nice to hear it again after all these years.
 
 Desperately Seeking Susan is a story about amnesia and mistaken identities. It also contrasts the different lifestyles of its two central characters: Roberta (**Rosanna Arquette**) the bored and relatively well-to-do suburban wife, and Susan (**Madonna**) the penniless but street smart, punkish, in-your-face wild girl.
 
@@ -40,7 +40,7 @@ Fortunately the film source is relatively clean and free of grain, and there are
 
 The disc has a number of foreign language subtitle tracks and hard of hearing tracks. I turned on the English for the Hard of Hearing track. This was quite comprehensive, transcribing even the names and lyrics of songs and the audio track of TV programmes as well as detailing auditory cues in the film.
 
-This is a single sided dual layer disc (**RSDL**) and the layer change occurs at **45:21
+This is a single sided dual layer disc (**RSDL**) and the layer change occurs at **45:21** at
 
 ## The audio transfer
 
@@ -54,7 +54,7 @@ The track seemed to have both the high and low end rolled off, as the musical so
 
 For a DVD that is not being marketed as a Special Edition or Collector's Edition, this disc has an above average selection of extras, including an alternative ending, the original theatrical trailer and a director/producer commentary. Surprisingly, the presence of the commentary is not mentioned in the cover.
 
-What could have made the extras well ... extra special would have been the inclusion of the music video for _Into The Groove_, cast & crew biographies and production notes but all in all I am pretty pleased with what _is_included.
+What could have made the extras well ... extra special would have been the inclusion of the music video for _Into The Groove_, cast & crew biographies and production notes but all in all I am pretty pleased with what _is_ included.
 
 ### Menu
 
@@ -78,7 +78,7 @@ The quality of the video and audio transfer is rather poor, and looks like it mi
 
 ### Audio Commentary - _Susan Seidelman (Dir), Barbara Boyle, et al_
 
-This features comments from director **Susan Seidelman**, producers **Midge Sanford**and **Sarah Pilsbury**, and studio vice president and executive responsible for the film **Barbara Boyle**. This is noteworthy because the creative and production team appears to be entirely female, which explains why the film focuses almost entirely on the two leading female characters and the male roles seem so two-dimensional.
+This features comments from director **Susan Seidelman**, producers **Midge Sanford** and **Sarah Pilsbury**, and studio vice president and executive responsible for the film **Barbara Boyle**. This is noteworthy because the creative and production team appears to be entirely female, which explains why the film focuses almost entirely on the two leading female characters and the male roles seem so two-dimensional.
 
 With these many people commenting on the film, I wished that there was some indication of who is saying what. It's reasonably easy to distinguish between the voices, but I quickly forgot which voice belonged to who. Perhaps a silhouette of the commentary team as in _Ghostbusters_, or transcribing the commentary onto a subtitle track as in _Contact_, would have been nice.
 

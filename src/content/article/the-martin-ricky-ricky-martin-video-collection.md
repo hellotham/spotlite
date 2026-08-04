@@ -22,7 +22,7 @@ I must admit, I wasn't exactly looking forward to reviewing this disc. I have no
 
 However, after watching the music videos, I have learnt to appreciate Ricky just a little bit more. Well, for one thing, he is devastatingly spunky and handsome, even to my jaded eyes. Secondly, the selection of songs here does exhibit some emotional/melodic range. And thirdly, I think he sings a lot better in Spanish than he does in English. We are treated to both English and Spanish versions of two songs (_Livin' La Vida Loca_ and _She's All I Ever Had_), and in both cases I found the Spanish versions to be far superior to the English ones.
 
-Born in Puerto Rico, Ricky Martin shot into worldwide fame when his song _La Copa de la Vida_(The Cup of Life) was selected as the official song of the World Cup France '98. His performance of the same song in the 41st annual Grammy Awards was so electrifying that it quickly captured fans from around the world. In that same night, his song _Vuelve_won the Grammy for Best Latin Pop Performance.
+Born in Puerto Rico, Ricky Martin shot into worldwide fame when his song _La Copa de la Vida_ (The Cup of Life) was selected as the official song of the World Cup France '98. His performance of the same song in the 41st annual Grammy Awards was so electrifying that it quickly captured fans from around the world. In that same night, his song _Vuelve_ won the Grammy for Best Latin Pop Performance.
 
 Released in 1999, _Ricky Martin_, Ricky's English language debut album, debuted at #1 on the Billboard 200 album chart and subsequently became the #1 album in ten international markets including the United States, Canada, Australia, Japan, Spain, Norway, Finland, New Zealand, and the pan-European Music Media chart. This collection of music videos feature selected songs from that album, including _Livin' La Vida Loca_ which became the #1 single in five international markets including the United States, the United Kingdom, Canada, New Zealand, and Ireland.
 
@@ -32,7 +32,7 @@ This disc contains the following music videos:
 | :-- | :-- |
 | 1. _Livin' La Vida Loca_ (English) 2. _She's All I Ever Had_ (English) 3. _La Bomba_ (Spanish) 4. _Perdido Sin Tí_ (Spanish) 5. _Livin' La Vida Loca_ (Spanish) | 1. _Vuelve_ (Spanish) 2. _María_ (Spanglish) 3. _Bella (She's All I Ever Had)_ (Spanish) 4. _The Cup Of Life_ (Live Grammy Performance) (The Official Song of The World Cup, France '98) |
 
-I quite enjoyed watching the music videos. They are quite stylish and somewhat reminiscent of various films I like, including _What Dreams May Come_and _Wings of Desire_.
+I quite enjoyed watching the music videos. They are quite stylish and somewhat reminiscent of various films I like, including _What Dreams May Come_ and _Wings of Desire_.
 
 ## The video transfer
 
@@ -70,7 +70,7 @@ The menus are pretty basic and static.
 
 This consists of a set of 10 stills contain text of various font sizes and colours accompanied by photo cut-outs of Ricky. The text reads like it may have been lifted from the liner notes accompanying the "Ricky Martin" album, since it references songs that are not on this disc.
 
-### Featurette-_Behind The Scenes_(15:55)
+### Featurette-_Behind The Scenes_ (15:55)
 
 This is a short documentary featuring Ricky Martin talking about his background, and his self-titled English album, interspersed with various excerpts from his music videos. I was surprised by how conversant he was in English as I had the impression he was a poor English speaker.
 

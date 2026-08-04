@@ -18,13 +18,13 @@ _1995 · directed by Simon Langton._
 
 ## The film
 
-_**Pride and Prejudice**_is a superb and lavish six-episode mini-series adaptation of one of the most beloved novels (by **Jane Austen**) in English literature. Produced by the BBC as a "period drama" (in association with the A&E Network in the US), it was very popular amongst many viewers throughout the world and enjoyed a high degree of critical acclaim. Although it was nominated for several Emmy and BAFTA TV awards, it only managed to win two (a BAFTA Best Actress for **Jennifer Ehle**and an Emmy for Costume Design). _Pride and Prejudice_was part of a plethora of film and TV adaptations of Austen works that surfaced in 1995-96, including _Sense and Sensibility_, _Persuasion_and _Emma_(_Clueless_was a thinly disguised modernised version of _Emma_).
+_**Pride and Prejudice**_ is a superb and lavish six-episode mini-series adaptation of one of the most beloved novels (by **Jane Austen**) in English literature. Produced by the BBC as a "period drama" (in association with the A&E Network in the US), it was very popular amongst many viewers throughout the world and enjoyed a high degree of critical acclaim. Although it was nominated for several Emmy and BAFTA TV awards, it only managed to win two (a BAFTA Best Actress for **Jennifer Ehle** and an Emmy for Costume Design). _Pride and Prejudice_ was part of a plethora of film and TV adaptations of Austen works that surfaced in 1995-96, including _Sense and Sensibility_, _Persuasion_ and _Emma_ (_Clueless_ was a thinly disguised modernised version of _Emma_).
 
-_Pride and Prejudice_was first shown on Australian television on 2 March 1996. Although the US NTSC version (which is actually multi-region coded) of the DVD has been available since 1998, and the Region 2 DVD set has been out since late 2000, Region 4 fans of this mini-series have had to wait till May 2001 for the 2-disc DVD set. So, is the wait worthwhile?
+_Pride and Prejudice_ was first shown on Australian television on 2 March 1996. Although the US NTSC version (which is actually multi-region coded) of the DVD has been available since 1998, and the Region 2 DVD set has been out since late 2000, Region 4 fans of this mini-series have had to wait till May 2001 for the 2-disc DVD set. So, is the wait worthwhile?
 
-**Jane Austen**was born 16 December 1775 at Steventon, Hampshire, England (near Basingstoke). She was the seventh child (out of eight) and the second daughter (out of two), of the **Rev. George Austen**, 1731-1805 (the local rector, or Church of England clergyman), and his wife **Cassandra**, 1739-1827 (née Leigh). She started writing at an early age (from about 1787 onwards) and early versions of the novels eventually published as _Sense and Sensibility_, _Pride and Prejudice_and _Northanger Abbey_were all begun and worked on from 1795 to 1799. Jane Austen published four of her six novels in her lifetime, and the two others were published together soon after her death in 1817. She died on Friday, 18 July 1817, aged 41 (probably from Addison's disease) and was buried in Winchester Cathedral. Many have speculated to what extent Jane's private life mirrored that of her famous heroines, but in the end neither she nor her sister **Cassandra**ever married.
+**Jane Austen** was born 16 December 1775 at Steventon, Hampshire, England (near Basingstoke). She was the seventh child (out of eight) and the second daughter (out of two), of the **Rev. George Austen**, 1731-1805 (the local rector, or Church of England clergyman), and his wife **Cassandra**, 1739-1827 (née Leigh). She started writing at an early age (from about 1787 onwards) and early versions of the novels eventually published as _Sense and Sensibility_, _Pride and Prejudice_ and _Northanger Abbey_ were all begun and worked on from 1795 to 1799. Jane Austen published four of her six novels in her lifetime, and the two others were published together soon after her death in 1817. She died on Friday, 18 July 1817, aged 41 (probably from Addison's disease) and was buried in Winchester Cathedral. Many have speculated to what extent Jane's private life mirrored that of her famous heroines, but in the end neither she nor her sister **Cassandra** ever married.
 
-Structured into six episodes of just under an hour each, the story of _Pride and Prejudice_revolves around the Bennet family and in particular Elizabeth Bennet (**Jennifer Ehle**), a witty and captivating twenty-year old woman known as "Lizzie" to her family and friends. Besides Lizzie, Mr. (**Benjamin Whitrow**) and Mrs. (**Alison Steadman**) Bennet has four other daughters, all of a marriagable age:
+Structured into six episodes of just under an hour each, the story of _Pride and Prejudice_ revolves around the Bennet family and in particular Elizabeth Bennet (**Jennifer Ehle**), a witty and captivating twenty-year old woman known as "Lizzie" to her family and friends. Besides Lizzie, Mr. (**Benjamin Whitrow**) and Mrs. (**Alison Steadman**) Bennet has four other daughters, all of a marriagable age:
 
 - Jane (**Susannah Harker**) who is the prettiest and eldest,
 - Mary (**Lucy Briers**) the pious and studious one,
@@ -46,7 +46,7 @@ You can find the annotated and hyperlinked web-based text of the novel [here](ht
 
 ## The video transfer
 
-Given that this mini-series should be regarded as one of BBC's Crown jewels (personally, I'm still waiting for _Brideshead Revisited_to come to DVD) I would have thought they would have spared no expense in ensuring that we get the best possible transfer quality. Alas, this is not so, and I am rather disappointed and I think the many fans of this production really deserve better.
+Given that this mini-series should be regarded as one of BBC's Crown jewels (personally, I'm still waiting for _Brideshead Revisited_ to come to DVD) I would have thought they would have spared no expense in ensuring that we get the best possible transfer quality. Alas, this is not so, and I am rather disappointed and I think the many fans of this production really deserve better.
 
 Surprisingly (given that this is a TV production), we do get a widescreen 16x9 enhanced transfer. So, are we seeing more of the picture than was originally broadcast on TV, or are we seeing a version with the tops and bottom cropped off? I'm not sure - some of scenes where the tops of the characters' heads have been cropped off would indicate that we are watching a cropped off version, and yet the exterior scenes of Rosings (**29:20**-**29:36**) seem perfectly framed for 1.78:1. At least one fan site seems to indicate that we do get to see detail on the sides not present in the VHS version. I suspect the original aspect ratio may well have been 1.66:1 (excerpts from mini-series presented in the accompanying "Making of" featurette seems to be consistently presented in 1.66:1, and there is a part in the featurette where we get to see scenes in the film being edited on a monitor - **22:06**-**22:13** and **22:23**-**22.37** - these seem to be presented in what looks like 1.66:1) which is then cropped off for the DVD but broadcasted on the TV centre-cut.
 
@@ -74,24 +74,24 @@ I have to make a comment about the DVD packaging - the copy I received was packa
 
 ### Menu
 
-This is 16x9 enhanced but pretty basic. The main menu has the famous theme song of the mini-series (performed by **Melvyn Tan**on the fortepiano) playing in the background, and the scene selection menus surprisingly feature scene animations (and quite well done too).
+This is 16x9 enhanced but pretty basic. The main menu has the famous theme song of the mini-series (performed by **Melvyn Tan** on the fortepiano) playing in the background, and the scene selection menus surprisingly feature scene animations (and quite well done too).
 
 ### Featurette-Making Of (26:36)
 
 This all-too-short featurette is divided into several sections (the script, the producer, the design, the casting, the choreographer and the editing) and features excerpts from the mini-series intermingled with interviews with cast and crew members, including the following:
 
-- **Sue Birtwistle**(producer)
-- **Andrew Davies**(screenwriter)
-- **Gerry Scott**(production designer)
-- **Dinah Collin**(costume designer)
-- **Simon Langton**(director)
-- **David Bamber**("Mr. Collins")
-- **Alison Steadman**("Mrs. Bennet")
-- **Jane Gibson**(choreographer)
+- **Sue Birtwistle** (producer)
+- **Andrew Davies** (screenwriter)
+- **Gerry Scott** (production designer)
+- **Dinah Collin** (costume designer)
+- **Simon Langton** (director)
+- **David Bamber** ("Mr. Collins")
+- **Alison Steadman** ("Mrs. Bennet")
+- **Jane Gibson** (choreographer)
 
 The featurette is presented in full frame, apart from scene excerpts which appear to be in 1.66:1 aspect ratio.
 
-I was disappointed to find out the **Colin Firth**did NOT actually jump into the lake at "Pemberly" (in reality Lyme Park) - but then I don't think I'll like to try out those murky waters either!
+I was disappointed to find out the **Colin Firth** did NOT actually jump into the lake at "Pemberly" (in reality Lyme Park) - but then I don't think I'll like to try out those murky waters either!
 
 ## Censorship
 

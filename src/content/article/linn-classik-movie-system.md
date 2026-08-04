@@ -20,7 +20,7 @@ The Danish manufacturer Bang & Olufsen was the first manufacturer to emphasize t
 
 Still, I was surprised to discover than Scottish manufacturer Linn has now also entered into the arena with the Classik range. Surprised, because the whole concept of "lifestyle" systems (with the implicit but never acknowledged understanding that these systems sacrifice quality for design style) seem alien to the philosophy of specialist "audiophile" manufacturers. Indeed some manufacturers seem to revel in the fact that their equipment sounds good but looks ugly - as if daring their customers (almost invariably male) to test the "wife acceptance factor."
 
-And in the totem pole of exclusive and revered audio manufacturers, Linn is right up there. For many years, the Linn Sondek LP12 turntable was _the_record player to buy, and even now (an updated version of the LP12 is still manufactured today) some will say it is the best turntable money can buy. Since then, Linn has expanded into offering the full range of audio equipment including CD players, amplifiers, speakers and even cables and recordings.
+And in the totem pole of exclusive and revered audio manufacturers, Linn is right up there. For many years, the Linn Sondek LP12 turntable was _the_ record player to buy, and even now (an updated version of the LP12 is still manufactured today) some will say it is the best turntable money can buy. Since then, Linn has expanded into offering the full range of audio equipment including CD players, amplifiers, speakers and even cables and recordings.
 
 Still, I did not expect Linn to release a lifestyle system, but then I did not expect Linn to ever release a CD player (given founder **Ivor Tiefenbrun**'s vitriolic anti-CD bashing when the format was initially launched) which just goes to show how wrong I can be. Linn's rationale, as explained in the [www.classik.com](http://www.classik.com)web site, is that most lifestyle systems today (meaning those produced by their competitors) "disappoint" when performing their primary function - reproducing sound. Linn wanted to offer a "no compromise" lifestyle system - something that sounds as good as "audiophile-quality" separate components, but at a fraction of the size (though sadly not a fraction of the price) and looks good as well.
 
@@ -191,7 +191,7 @@ I don't like the manual very much either. It omits documenting key aspects of th
 
 "If when viewing a DVD the screen image flickers, choose a different option; either AUTO (suitable for most DVDs), HI-RES (high resolution) or N-FLICKER (non-flicker)."
 
-Helpful, no? After reading that, I _still_have no idea what this setting is supposed to do. It would seem to imply that the unit upconverts to HDTV or progressive scan (neither of which it does). I suspect this setting applies different parameters to the vertical aliasing filter in the Video DAC.
+Helpful, no? After reading that, I _still_ have no idea what this setting is supposed to do. It would seem to imply that the unit upconverts to HDTV or progressive scan (neither of which it does). I suspect this setting applies different parameters to the vertical aliasing filter in the Video DAC.
 
 ## Set-Up Menu
 
@@ -284,7 +284,7 @@ I also evaluated the player's Dolby Digital and dts decoder as well as digital o
 
 The unit performed reasonably well as a standalone home entertainment system complete with Unik/Afekt speakers in a 5.1 speaker configuration. The built-in amplifiers are probably under-powered for reference level listening, and the speakers are a little too boomy and dull for my taste but more than adequate for low level listening and brings a reasonable degree of excitement to action movies.
 
-I also tested the player subjectively for audio synchronization by playing the usual problem discs such as _The Wedding Singer_R4 (remaster #2) and _Matrix_R1. This player is one of the better players I have encountered in terms of audio synchronization and I did not notice any issues on both discs.
+I also tested the player subjectively for audio synchronization by playing the usual problem discs such as _The Wedding Singer_ R4 (remaster #2) and _Matrix_ R1. This player is one of the better players I have encountered in terms of audio synchronization and I did not notice any issues on both discs.
 
 By the way, the unit has a number of surround modes (including Stereo+Sub, Phantom, 3 Stereo, As Mix) but these are only applicable for DVDs and CDs. Also, Dolby Pro Logic decoding is only available for DVDs and CDs, and in particular you cannot apply Dolby Pro Logic to TV and VCR audio sources which is a pity as occasionally TV programs and video tapes are surround encoded. From this I deduce that the unit does not digitise audio inputs from external sources. Whilst this reflects a "purist" attitude that would be consistent with Linn's philosophy, it does reduce the usefulness of the unit to the lifestyle target market.
 

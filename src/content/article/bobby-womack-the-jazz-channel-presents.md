@@ -18,9 +18,9 @@ _2000 · directed by Waymer Johnson._
 
 ## The film
 
-_**The Jazz Channel Presents: Bobby Womack**_is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
+_**The Jazz Channel Presents: Bobby Womack**_ is another in a series of TV specials featuring concerts by black musicians produced by **BET on Jazz**.
 
-**Bobby Womack**was born in Cleveland, Ohio in 1944. He started his musical career early (in the 1950s) along with his brothers in a group called the **Womack Brothers**which was later renamed to the **Valentinos**. Bobby then joined **Sam Cooke**'s band as a guitarist and, after Sam's death, concentrated on songwriting and session work with artists like **Aretha Franklin**, **Ray Charles**, **Jimi Hendrix**and **Wilson Pickett**. He also had some success as a solo artist in the 1960s and 1970s and more recently in his comeback records _Poet_and _Poet II_.
+**Bobby Womack** was born in Cleveland, Ohio in 1944. He started his musical career early (in the 1950s) along with his brothers in a group called the **Womack Brothers** which was later renamed to the **Valentinos**. Bobby then joined **Sam Cooke**'s band as a guitarist and, after Sam's death, concentrated on songwriting and session work with artists like **Aretha Franklin**, **Ray Charles**, **Jimi Hendrix** and **Wilson Pickett**. He also had some success as a solo artist in the 1960s and 1970s and more recently in his comeback records _Poet_ and _Poet II_.
 
 In this concert, Bobby is backed by a 10 piece band and 2 backup singers. The track listing for this DVD is:
 
@@ -28,9 +28,9 @@ In this concert, Bobby is backed by a 10 piece band and 2 backup singers. The tr
 | :-- | :-- |
 | 1. Nobody Wants You When You're Down and Out 2. Daylight 3. I Wish He Didn't Trust Me So Much 4. That's The Way I Feel About 'Cha 5. Love Has Finally Come At Last 6. Woman's Gotta Have It 7. You're Welcome To Stop On By 8. A Change Is Gonna Come 9. Looking For A Love To Call My Own | 1. If You Think You're Lonely Now 2. No Matter How High I Get 3. Facts Of Life/He'll Be There When The Sun Goes Down 4. Across 110th Street 5. I'm Through Trying To Prove My Love To You 6. I Can Understand It 7. Amen/This Little Light of Mine |
 
-Bobby has a pretty dynamic stage presence, and I quite enjoyed the songs in the latter half of the concert. He talks a fair bit in between songs, but unfortunately I found it quite difficult to quite follow exactly what he was saying. I even turned on the Italian subtitles to try and find out what he was trying to say in English! He does a fair bit of name dropping between chapters 7 and 8 (**Al Green**, **Marvin Gaye**, **Sam Cooke**, **Curtis Mayfield**amongst others).
+Bobby has a pretty dynamic stage presence, and I quite enjoyed the songs in the latter half of the concert. He talks a fair bit in between songs, but unfortunately I found it quite difficult to quite follow exactly what he was saying. I even turned on the Italian subtitles to try and find out what he was trying to say in English! He does a fair bit of name dropping between chapters 7 and 8 (**Al Green**, **Marvin Gaye**, **Sam Cooke**, **Curtis Mayfield** amongst others).
 
-Bobby joined by **Val Young**singing in _You're Welcome To Stop On By_, and by **Richard Rossi**playing a sax solo in _No Matter How High I Get_. The end titles are superimposed towards the end of _Amen/This Little Light of Mine_, which I found mildly annoying.
+Bobby joined by **Val Young** singing in _You're Welcome To Stop On By_, and by **Richard Rossi** playing a sax solo in _No Matter How High I Get_. The end titles are superimposed towards the end of _Amen/This Little Light of Mine_, which I found mildly annoying.
 
 ## The video transfer
 

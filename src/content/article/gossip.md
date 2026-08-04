@@ -68,7 +68,7 @@ I have never seen this trailer before, and it's pretty cool, featuring droplets 
 
 ### Biographies-Cast, Listing-Cast and Crew<em></em>
 
-This is a still listing the cast and crew. It links into separate stills listing other films featuring **James Marden**, **Joshua Jackson**, **Lena Headey**, **Kate Hudson**and **Sharon Lawrence**.
+This is a still listing the cast and crew. It links into separate stills listing other films featuring **James Marden**, **Joshua Jackson**, **Lena Headey**, **Kate Hudson** and **Sharon Lawrence**.
 
 ### Audio Commentary-_Davis Guggenheim (Dir) & James Marsden (Actor)_
 
@@ -90,9 +90,9 @@ We start off with three deleted scenes removed to tighten the pace of the film. 
 
 Then we get the original unedited footage of Naomi and Beau making out in the bedroom above the party. Is it just me, or is this extremely boring and non-gratifying?
 
-Finally, we get another deleted scene in which Derrick calls his parents and tries to ask them for help but they cruelly deny him. This scene was cut because the director didn't want the audience to have sympathy for Derrick (too bad, because the commentary reveals how the director asked actor **James Marsden**to milk maximum sympathy from the audience).
+Finally, we get another deleted scene in which Derrick calls his parents and tries to ask them for help but they cruelly deny him. This scene was cut because the director didn't want the audience to have sympathy for Derrick (too bad, because the commentary reveals how the director asked actor **James Marsden** to milk maximum sympathy from the audience).
 
-_Trivia_: Originally director **Davis Guggenheim**'s parents **Marion**and director **Charles Guggenheim**did the voices for Derrick's parents but unfortunately their voices can't be heard on the scene.
+_Trivia_: Originally director **Davis Guggenheim**'s parents **Marion** and director **Charles Guggenheim** did the voices for Derrick's parents but unfortunately their voices can't be heard on the scene.
 
 ### Theatrical Trailer (2:01)
 

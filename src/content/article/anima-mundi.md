@@ -16,15 +16,15 @@ _This review was written by me for **MichaelDVD**, an Australian DVD review site
 
 ## The film
 
-**\_Anima Mundi _**is yet another result of the collaboration of director **Godfrey Reggio**and composer **Philip Glass**, whose previous films include _Koyaanisqatsi_(1983) and _Powaqqatsi_(1988). Unlike the _-qatsi_films though, which are feature length (over 90 minutes) in duration, _**Anima Mundi**_is a relatively short film (**29:46** minutes). The team is currently trying to raise money to produce another _-qatsi_film, _Naqoyqatsi_, scheduled for release in 2002.
+**_Anima Mundi_** is yet another result of the collaboration of director **Godfrey Reggio** and composer **Philip Glass**, whose previous films include _Koyaanisqatsi_ (1983) and _Powaqqatsi_ (1988). Unlike the _-qatsi_ films though, which are feature length (over 90 minutes) in duration, _**Anima Mundi**_ is a relatively short film (**29:46** minutes). The team is currently trying to raise money to produce another _-qatsi_ film, _Naqoyqatsi_, scheduled for release in 2002.
 
-For those of you are familiar with the _-qatsi_films, you will know exactly what to expect from _**Anima Mundi**_. To those of you yet to see either of the _-qatsi_films, I strongly urge you to track down either of them, though they may be hard to find these days. As far as I know, neither film is available on DVD or video as of 15 January 2001. I have an old PAL video of _Koyaanisqatsi_bought in the UK over 12 years ago - I suspect this is long out of print although there are rumours that _Koyaanisqatsi_may be out on DVD in Australia in the near future. The closest equivalent to _**Anima Mundi**_available on DVD is probably _Baraka_(1992), directed by **Ron Fricke**(who was also responsible for the cinematography in _Koyaanisqatsi_).
+For those of you are familiar with the _-qatsi_ films, you will know exactly what to expect from _**Anima Mundi**_. To those of you yet to see either of the _-qatsi_ films, I strongly urge you to track down either of them, though they may be hard to find these days. As far as I know, neither film is available on DVD or video as of 15 January 2001. I have an old PAL video of _Koyaanisqatsi_ bought in the UK over 12 years ago - I suspect this is long out of print although there are rumours that _Koyaanisqatsi_ may be out on DVD in Australia in the near future. The closest equivalent to _**Anima Mundi**_ available on DVD is probably _Baraka_ (1992), directed by **Ron Fricke** (who was also responsible for the cinematography in _Koyaanisqatsi_).
 
 All of the above films share a common set of characteristics. Basically, the films consist of a sequence of beautifully shot images and scenes of natural landscapes, objects, animals or people accompanied by music but no dialogue, kind of like a wordless documentary. The set of images and scenes can be in real-time, slow motion or speeded up (using time lapse photography).
 
-Each of the _-qatsi_films have tried to project an underlying apocalyptic message through the montage of images. _Koyaanisatsi_, subtitled "Life Out of Balance", is about the collision of urban life/technology with the natural environment. _Powaqqatsi_continues the theme but focuses more on the Third World natives and how they seek to master both nature and technology, and the new film _Naqoyqatsi_will deal with how man seeks to conquer nature through technology and civilization. Unlike the _-qatsi_films, however, _**Anima Mundi**_is more plotless in nature. If it does project a message, it is probably more a celebration of the incredible diversity of biological life on this planet rather than an apocalyptic theme.
+Each of the _-qatsi_ films have tried to project an underlying apocalyptic message through the montage of images. _Koyaanisatsi_, subtitled "Life Out of Balance", is about the collision of urban life/technology with the natural environment. _Powaqqatsi_ continues the theme but focuses more on the Third World natives and how they seek to master both nature and technology, and the new film _Naqoyqatsi_ will deal with how man seeks to conquer nature through technology and civilization. Unlike the _-qatsi_ films, however, _**Anima Mundi**_ is more plotless in nature. If it does project a message, it is probably more a celebration of the incredible diversity of biological life on this planet rather than an apocalyptic theme.
 
-Someone who doesn't know Italian might be tempted to think _**Anima Mundi**_translates into "Animal World" but _Anima_= Soul and _Mundi_= World so the translation is actually "The Soul Of The World".
+Someone who doesn't know Italian might be tempted to think _**Anima Mundi**_ translates into "Animal World" but _Anima_ = Soul and _Mundi_ = World so the translation is actually "The Soul Of The World".
 
 There are only 5 chapters in the presentation of this film on DVD. Each chapter seems to concentrate on a specific "theme":
 
@@ -34,7 +34,7 @@ There are only 5 chapters in the presentation of this film on DVD. Each chapter 
 - Chapter 4 is about the variety of underwater life - plants and fish.
 - The final Chapter seems to be about motion and the food chain - lots of pictures of animals in motion (filmed in slow motion) or running from predators that are hunting them. The film then ends with the closing credits which are part of this chapter.
 
-Because of it's shorter duration, _**Anima Mundi **\_may be a more gentler introduction to these type of dialogue-less documentaries, but I find _**Anima Mundi**_not as satisfying to watch as the _-qatsi_films.
+Because of it's shorter duration, _**Anima Mundi**_ may be a more gentler introduction to these type of dialogue-less documentaries, but I find _**Anima Mundi**_ not as satisfying to watch as the _-qatsi_ films.
 
 The ending of Anima Mundi contains the following quote, translated into several different languages (my guess based on the alphabets and words used would be, in order: Italian, Chinese - Mandarin, French, Arabic, Spanish, Japanese, German, Hebrew and English):
 
@@ -54,7 +54,7 @@ Fortunately, colour saturation seems to be acceptable, with a tendency towards a
 
 The film source itself is not pristine, but acceptable. There are minor film artefacts (mainly dust and scratches) throughout the entire presentation. There is a blue mark on the right edge of the screen at 15:12 that looks like a film artefact but I am not sure. There is some telecine wobble present in the transfer.
 
-The transfer rate hovers at or below 5Mb/s. There is a lot of MPEG ringing in the titles at the beginnin
+The transfer rate hovers at or below 5Mb/s. There is a lot of MPEG ringing in the titles at the beginning, but su
 
 ## The audio transfer
 
@@ -62,7 +62,7 @@ There is only one audio track on this disc, PCM 2.0 at 48kHz/16 bits resolution.
 
 As the audio track is in 2 channels, the surround channels and sub-woofer are not activated during the presentation. However, if you can force your audio decoder to apply Dolby Pro-Logic decoding on the PCM stream, you should be able to recover some surround information as the film was released in Dolby Stereo. On my system, I can detect some ambience reproduced in the surround speakers when I switch Dolby Pro Logic decoding on.
 
-The music by **Philip Glass**will either enthral or annoy you, depending on your attitude towards minimalist music. If you haven't heard **Philip Glass **compositions before, he tends to reuse the same stock phrases and chords over and over again in a loop, so the orchestration and polyphony plays a larger role in the appreciation of the music as opposed to melodic or harmonic progression. I find the music in _**Anima Mundi**_fairly representative of his work, and suits the film well. However, it does not compare in inventiveness or intensity with the soundtracks to the_-qatsi _films.
+The music by **Philip Glass** will either enthral or annoy you, depending on your attitude towards minimalist music. If you haven't heard **Philip Glass** compositions before, he tends to reuse the same stock phrases and chords over and over again in a loop, so the orchestration and polyphony plays a larger role in the appreciation of the music as opposed to melodic or harmonic progression. I find the music in _**Anima Mundi**_ fairly representative of his work, and suits the film well. However, it does not compare in inventiveness or intensity with the soundtracks to the _-qatsi_ films.
 
 ## The extras
 
@@ -74,7 +74,7 @@ This DVD is the same the world over and is formatted for NTSC displays.
 
 ## Summary
 
-**\_ Anima Mundi_**, for me, is a nice short film for fans of the -qatsi genre of non-verbal documentaries. It is presented on a minimalist DVD with a poor video transfer and mediocre audio transfer. The DVD has no extra features whatsoever.
+**_Anima Mundi_**, for me, is a nice short film for fans of the -qatsi genre of non-verbal documentaries. It is presented on a minimalist DVD with a poor video transfer and mediocre audio transfer. The DVD has no extra features whatsoever.
 
 ### [Ratings (out of 5)](../ReviewersGuide/RatingsGuide.html)
 

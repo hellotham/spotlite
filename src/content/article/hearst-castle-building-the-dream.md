@@ -38,6 +38,8 @@ The only artefacts I can detect are a slight case of telecine wobble during the 
 
 The English subtitles were fairly accurate and tend to follow the narrative closely.
 
+Given th
+
 ## The audio transfer
 
 There is only one audio track, in English, which is encoded in Dolby Digital 5.1 at a bitrate of 384Kb/s. The audio quality of the track is good, but nothing to crow about.
@@ -79,7 +81,7 @@ This DVD is the same the world over and is formatted for NTSC displays.
 
 ## Summary
 
-**\_ Hearst Castle: Building The Dream _**is a short, fairly watchable documentary on the history leading to the construction of the castle and brief introduction to the castle, but it does not substitute for actually visiting the castle. It has impressive cinematography, but those of us expecting a more extensive tour of the castle will be bitterly disappointed. It is presented on a DVD with an more than acceptable video and audio transfer but limited extras.
+**_Hearst Castle: Building The Dream_** is a short, fairly watchable documentary on the history leading to the construction of the castle and brief introduction to the castle, but it does not substitute for actually visiting the castle. It has impressive cinematography, but those of us expecting a more extensive tour of the castle will be bitterly disappointed. It is presented on a DVD with an more than acceptable video and audio transfer but limited extras.
 
 ### [Ratings (out of 5)](../ReviewersGuide/RatingsGuide.html)
 
